@@ -1,0 +1,30 @@
+---
+layout: post
+title: An update to dutch.lbx in babelbib
+date: 2011-08-27 20:41:14.000000000 +02:00
+type: post
+published: true
+status: publish
+categories:
+- LaTeX
+tags: []
+meta:
+  _edit_last: '15754637'
+author:
+  login: pbelmans
+  email: pieterbelmans@gmail.com
+  display_name: pbelmans
+  first_name: ''
+  last_name: ''
+---
+<p>This afternoon I decided to check out <a href="http://ctan.org/pkg/biber"><code>biber</code></a> and <a href="http://ctan.org/pkg/biblatex"><code>babelbib</code></a>, transforming some of my projects I've done to this combination. But as most of my writing is done in Dutch I quickly encountered some issues with the current version (i.e., <a href="https://sourceforge.net/projects/biblatex/files/biblatex-1.6/">version 1.6 of <code>biblatex</code></a>):</p>
+<ul>
+<li>spelling mistakes</li>
+<li>inconsistencies</li>
+<li>there are still English words in the translated text</li>
+<li>incomplete translations (although the parts that were missing won't show up in your every day scenario, it's rather nit-picky)</li>
+<li>boring implementation of ordinal numbers (1e and 19e instead of 1ste and 19de)</li>
+</ul>
+<p>As I've done before in <a href="http://pbelmans.wordpress.com/2011/03/15/a-correct-implementation-of-the-dutch-language-in-babelbib/" title="A correct implementation of the Dutch language in babelbib">A correct implementation of the Dutch language in <code>babelbib</code></a>, I have updated the necessary files. And in my current GitHub mania, I have uploaded this little project to <a href="https://github.com/pbelmans/dutch.lbx">github.com/pbelmans/dutch.lbx</a>.</p>
+<p>I have filed a contribution request at <a href="http://sourceforge.net/projects/biblatex"><code>biblatex</code>'s SourceForge project page</a> (GitHub is definitely superior SourceForge by the way) hoping it will be accepted in version 1.7 of <code>biblatex</code>, but in the meanwhile you can use this fix directly if you want. Just place <a href="https://github.com/pbelmans/dutch.lbx/blob/master/dutch.lbx"><code>dutch.lbx</code></a> in <code>$TEXMFHOME/tex/latex/biblatex/lbx/</code> creating the directories as you go (as discussed in <a href="http://pbelmans.wordpress.com/2011/07/23/adding-texmf-to-tex-live-2011s-directories-or-installing-beamer-themes/" title="Adding ~/.texmf to TeX Live 2011′s directories, or installing beamer themes">Adding <code>~/.texmf</code> to TeX Live 2011′s directories, or installing <code>beamer</code> themes</a>). It should automatically supersede the <code>dutch.lbx</code> that's present in <code>$TEXMF/tex/latex/biblatex/lbx</code>.</p>
+<p>Of course, any contributions or remarks are always welcome, but I suspect the majority of my readers don't speak Dutch.</p>

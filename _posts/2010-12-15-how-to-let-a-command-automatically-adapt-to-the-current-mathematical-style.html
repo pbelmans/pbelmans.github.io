@@ -1,0 +1,52 @@
+---
+layout: post
+title: How to let a command automatically adapt to the current mathematical style
+date: 2010-12-15 14:33:43.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- LaTeX
+tags: []
+meta:
+  _edit_last: '15754637'
+author:
+  login: pbelmans
+  email: pieterbelmans@gmail.com
+  display_name: pbelmans
+  first_name: ''
+  last_name: ''
+---
+<p>Maybe you know, maybe you don't, but LaTeX offers 4 different mathematical styles. There's <code>displaystyle</code>, <code>textstyle</code>, <code>scriptstyle</code> and <code>scriptscriptstyle</code>. The first corresponds to math in block environments, <em>i.e.</em>, in display mode such as in an <code>equation</code> or <code>displaymath</code> environment, the second occurs when typesetting inline math as is the case with <code>$...$</code> and the third and fourth occur in superscript and multiple superscript. You've (hopefully) noticed that for instance <code>\sum</code> gets expanded differently depending on the current style: in displaystyle the super- and subscript are added above and below of the sum symbol while in textstyle they are placed to the right of it.</p>
+<p>You can adapt the way a macro is expanded depending on the style of math that is being typeset at that moment. The <code>\mathchoice</code> macro provides this functionality: <code>\mathchoice{D}{T}{S}{SS}</code> expands to <code>D</code> in displaystyle, <code>T</code> in textstyle and (as you hopefully can guess) <code>S</code> and <code>SS</code> in respectively scriptstyle and scriptscriptstyle.</p>
+<p>One possible example of this is a macro providing a function environment to write a function in its two-part notation. An example<br />
+$latex f\colon\mathbb{R}\rightarrow\mathbb{R}^+:x\mapsto x^2.$</p>
+<p>But in displaystyle it would be appropriate to use an <code>array</code> environment to align the domain with the argument and the codomain with the image. The result would be<br />
+$latex f\colon\begin{array}{ccc}\mathbb{R}&amp;\longrightarrow&amp;\mathbb{R}^+ \\ x&amp;\longmapsto&amp;x^2\end{array}.$</p>
+<p>So how to achieve this?
+<pre><code>\makeatletter
+\newcommand\function@textstyle[5]{#1\colon#2\rightarrow#3:#4\mapsto#5}
+\newcommand\function[5]{% raw %}{%
+  \mathchoice
+    {#1\colon\ 
+      \begin{array}{ccc}
+        #2&amp;~\longrightarrow~&amp;#3 \
+        #4&amp;~\longmapsto~&amp;#5
+      \end{array}
+    }
+  {\function@textstyle{#1}{#2}{#3}{#4}{#5}}
+  {\function@textstyle{#1}{#2}{#3}{#4}{#5}}
+  {\function@textstyle{#1}{#2}{#3}{#4}{#5}}
+}{% endraw %}
+\makeatother</code></pre>
+<p>Note the use of <code>\colon</code>, a normal colon in math mode is an <em>operator</em>, <em>e.g.</em>, the ideal quotient<br />
+$latex \textstyle[I:J].$</p>
+<p>For experimentation purposes I've added a <code>\makeatletter</code>, the <code>\function@textstyle</code> command now shouldn't be directly callable for an unknowing user, which is what I wanted to accomplish.</p>
+<p>Anyway, the results parse to the two examples I've given, when you call it as <code>\function{f}{\mathbb{R}}{\mathbb{R}^+}{x}{x^2}</code>. The order of arguments is:
+<ol>
+<li>function name,</li>
+<li>domain,</li>
+<li>codomain,</li>
+<li>argument,</li>
+<li>image.</li>
+</ol>

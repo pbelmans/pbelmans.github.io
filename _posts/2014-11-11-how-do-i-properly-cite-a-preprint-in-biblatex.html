@@ -1,0 +1,61 @@
+---
+layout: post
+title: How do I properly cite a preprint in `biblatex`?
+date: 2014-11-11 21:50:48.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- LaTeX
+- math
+- meta
+tags: []
+meta:
+  _edit_last: '15754637'
+  geo_public: '0'
+  _publicize_pending: '1'
+author:
+  login: pbelmans
+  email: pieterbelmans@gmail.com
+  display_name: pbelmans
+  first_name: ''
+  last_name: ''
+---
+<p>This question has been nagging me for a while, and thanks to TeX - LaTeX Stack Exchange I have found an answer: <a href="http://tex.stackexchange.com/a/50039">Audrey's answer to the question <q>What should BibTeX for arXiv entries look like?</q></a> references the file <a href="http://archive.cs.uu.nl/mirror/CTAN/macros/latex/contrib/biblatex/doc/examples/biblatex-examples.bib"><tt>biblatex-examples.bib</tt></a> where the entries <code>baez/article</code> and <code>baez/online</code> indicate how it should be done. If you are referencing an article, which also has a preprint, it should be like (this part I knew)</p>
+<pre><code><small>@article{baez/article,
+  author       = {Baez, John C. and Lauda, Aaron D.},
+  title        = {Higher-Dimensional Algebra V: 2-Groups},
+  journaltitle = {Theory and Applications of Categories},
+  date         = 2004,
+  volume       = 12,
+  pages        = {423-491},
+  version      = 3,
+  eprint       = {math/0307200v3},
+  eprinttype   = {arxiv},
+  langid       = {english},
+  langidopts   = {variant=american},
+  annotation   = {An \texttt{article} with \texttt{eprint} and
+                  \texttt{eprinttype} fields. Note that the arXiv reference is
+                  transformed into a clickable link if \texttt{hyperref} support
+                  has been enabled.  Compare \texttt{baez\slash online}, which
+                  is the same item given as an \texttt{online} entry},
+}</small></code></pre>
+<p>and if it's only a preprint without a published version (and not occurring in some conference proceedings or something), one uses the <code>@online</code> field (which settles my questions)</p>
+<pre><code><small>@online{baez/online,
+  author       = {Baez, John C. and Lauda, Aaron D.},
+  title        = {Higher-Dimensional Algebra V: 2-Groups},
+  date         = {2004-10-27},
+  version      = 3,
+  langid       = {english},
+  langidopts   = {variant=american},
+  eprinttype   = {arxiv},
+  eprint       = {math/0307200v3},
+  annotation   = {An \texttt{online} reference from arXiv. Note the
+                  \texttt{eprint} and \texttt{eprinttype} fields. Compare
+                  \texttt{baez\slash article} which is the same item given as an
+                  \texttt{article} entry with eprint information},
+}</small></code></pre>
+<p>without any other frizzles such as <code>url</code> fields or something.</p>
+<p>Actually, it is best to also use the <code>eprintclass</code> field for arXiv preprints, which is the main subject class under which a preprint is catalogued. This would mean you'd have to add <code>eprintclass = {math.QA}</code>.</p>
+<p><small>Tomorrow I will leave for the <a href="http://www.math.uni-bielefeld.de/birep/meetings/auslander2014/workshop.php">Auslander Auslander Memorial Workshop</a>, and I don't know whether I will feel like producing a long post on Thursday, which as you might have noticed has been something that I started doing since the first week of October. I have some drafts, but I guess you'll have to wait for those.</p>
+<p>Maybe I will even try live blogging the event (or discuss the talks in the evening, or something, or write down some things during my longish train ride back). Who knows?</small></p>

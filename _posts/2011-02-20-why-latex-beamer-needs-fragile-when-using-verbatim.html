@@ -1,0 +1,41 @@
+---
+layout: post
+title: Why LaTeX beamer needs fragile when using verbatim
+date: 2011-02-20 10:34:21.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- LaTeX
+tags: []
+meta:
+  _edit_last: '15754637'
+author:
+  login: pbelmans
+  email: pieterbelmans@gmail.com
+  display_name: pbelmans
+  first_name: ''
+  last_name: ''
+---
+<p>While preparing my slides for the upcoming Dutch LaTeX course I'll be giving (if you're interested, contact me) for our <a href="http://acmantwerp.acm.org">ACM Student Chapter</a> I got puzzled by the fact <code>beamer</code> requires me to use <code>[fragile]</code> as the option to every slide containing verbatim text. I decided to figure it out.</p>
+<p>First, <em>what does fragile mean</em>? It has to do with expansion and execution: TeX does these at the same time, first it reads an token, expands it so that only low-level tokens are left and then executes it. But this cycle isn't always followed: for instance when moving text around this behaviour changes.</p>
+<p><em>When will TeX move text</em>? For instance when creating a table of contents: the <code>\section{}</code>'s are scattered throughout your document, but in the end they all end up in your table of contents. When expanding and executing a <code>\section{}</code> command it will write the current section's title and number to a <code>.toc</code> file. A second pass then fills in the table of contents, based on the data that was written in the first pass.</p>
+<p>A command that is not fragile is called <em>robust</em> by the way.</p>
+<p>So, <em>why is this a problem</em>? The meaning of code changes during TeX's process and only when the typesetting is done, the actual meaning can be determined. So when writing to data to a file, some expansions must not occur, because they are dependent on the current situation (in the table of contents case: when we're typesetting the table of contents, as opposed to typesetting the actual <code>\section{}</code>'s). Examples of these are:
+<ul>
+<li>commands with optional arguments</li>
+<li>line breaks</li>
+<li>footnotes</li>
+<li>inline math</li>
+</ul>
+<p><em>How should I deal with these issues</em>? Just prefix it with <code>\protect</code>, your fragile command is now <em>protected</em>. But this is not the point of this post. I was interested in <em>why <code>beamer</code> so desperately needs the <code>[fragile]</code> option when typesetting slides containing verbatim text</em>.</p>
+<p>Section 12.9 of the manual states the following on the issue:</p>
+<blockquote><p>If you wish to use a <code>{verbatim}</code> environment in a frame, you have to add the option <code>[fragile]</code> to the <code>{frame}</code> environment. In this case, [...] and the <code>\end{frame}</code> must be alone on a single line. Using this option will cause the <em>frame contents to be written to an external file and the read back</em>.</p></blockquote>
+<p>Not really a satisfactory answer, it only states what we already knew about fragile commands and their usage. And it signifies some of the weird things going on with <code>beamer</code>: somehow the whitespace in front of <code>\end{frame}</code> got a special meaning. Rather scary, don't you think?</p>
+<p>But we're not interested in TeX voodoo, we want an explanation for <code>[fragile]</code>. A closer inspection of Section 8.1 which defines <code>{frame}</code> reveals the following:</p>
+<blockquote><p>If a frame contains fragile text, different internal mechanisms are used to typeset the frame to ensure that inside the frame the character codes can be reset. The price of switching to another internal mechanism is that either you cannot use overlays or an external file needs to be written and read back (which is not always desirable).</p>
+<p>In detail, the following happens when this option is given for normal (pdf)LaTeX: The contents of the frame is scanned and then written to a special file named <code>⟨<i>jobname</i>⟩.vrb</code> or, if a label has been assigned to the frame, <code>⟨<i>jobname</i>⟩.⟨<i>current frame number</i>⟩.vrb</code>. Then, the frame is started anew and the content of this file is read back. Since, upon reading of a file, the character codes can be modified, this allows you to use both verbatim text and overlays.</p>
+<p>To determine the end of the frame, the following rule is used: The first occurence of a single line containing exactly <code>\end{⟨<i>frame environment name</i>⟩}</code> ends the frame. The <code>⟨<i>environment name</i>⟩</code> is normally <code>frame</code>, but it can be changed using the <code>environment</code> option. This special rule is needed since the frame contents is, after all, not interpreted when it is gathered.</p></blockquote>
+<p>Now we're getting somewhere: <code>beamer</code>'s internal magic is really, well, quite magical. It fiddles with character codes, the stuff that makes TeX work like you expect it to. But TeX is highly adaptable, no one imposes that your syntax should be <code>\command{parameter}</code>, it can easily be changed to <code>|code[parameter]</code>. There are two cases I can come up with right now where this is a good idea: verbatim text and packages performing magic. <code>beamer</code> is one of the latter, but it should work together with verbatim text as well, hence the hassle.</p>
+<p>An example of <code>beamer</code>'s use of character codes are the greater-than and less-than symbol: they are active characters for <code>beamer</code>. They are for instance used when changing the mode of the presentation (something you do when you're both creating a presentation and handouts). Now verbatim text also changes the (local) meaning of these characters. And this is exactly why you need the <code>[fragile]</code> option.</p>
+<p>A downside of this construction is an extended build time: all fragile frames are written to a file (you can read these files when building your document, that's how I found out in the first place) and then read again. But the <code>singleslide</code> option seems to eliminate this for frames without <code>\pause</code>'s or other kinds of overlays. Hurray!</p>

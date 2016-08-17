@@ -1,0 +1,26 @@
+---
+layout: post
+title: Brute forcing first species counterpoint
+date: 2014-12-07 22:02:11.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- music
+tags: []
+meta:
+  _edit_last: '15754637'
+  geo_public: '0'
+  _publicize_pending: '1'
+author:
+  login: pbelmans
+  email: pieterbelmans@gmail.com
+  display_name: pbelmans
+  first_name: ''
+  last_name: ''
+---
+<p>The last post in the <a href="https://pbelmans.wordpress.com/category/music/">music category</a> dates from almost 3 years ago. And even longer ago I started a not so long-lived series on <a href="https://pbelmans.wordpress.com/2011/08/15/computational-composition-the-kick-start/">computational composition using Strasheela</a>. Time to change this situation.</p>
+<p>Last week as a programming finger exercise I decided to implement a brute-force first species counterpoint solver in Python, enumerating <em>all</em> legal solutions and then <em>scoring</em> them. The first part is finished now, and can be seen at <a href="https://github.com/pbelmans/counterpoint">GitHub</a>.</p>
+<p>There are several directions in which I would like to take this little project. First of all it needs to be faster, which might be feasible by multi-threading (something I'd like to try just for getting some experience with multi-threading in Python). Observe that the code certainly hasn't been written with speed in mind, I went for conceptually clear code not some super-fast C-type implementation. Then of course, I want to implement the scoring system. But before that, there are some rules that aren't implemented yet (e.g. hidden fifths and octaves come to mind) and some of the rules have an ugly implementation.</p>
+<p>Going to second species will be a significantly harder task: one has to interpret the function of a note correctly.</p>
+<p>Feel free to chime in with suggestions! I have discovered a <a href="https://github.com/AlexNisnevich/melody.py">similar project</a> and I should definitely try to implement something like <a href="http://melodypy.com/">melodypy.com</a> but for now you'll have to look at plaintext and hear the notes in your head.</p>

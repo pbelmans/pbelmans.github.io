@@ -1,0 +1,214 @@
+---
+layout: post
+title: A correct implementation of the Dutch language in babelbib
+date: 2011-03-15 08:44:38.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- LaTeX
+tags: []
+meta:
+  _edit_last: '15754637'
+author:
+  login: pbelmans
+  email: pieterbelmans@gmail.com
+  display_name: pbelmans
+  first_name: ''
+  last_name: ''
+---
+<p>When preparing slides for my (Dutch) LaTeX course I decided to mention <a href="http://ctan.org/pkg/babelbib"><code>babelbib</code></a>: this is a package for <em>localizing your bibliographies</em>. Maybe you've never given much thought to languages in bibliographies, but the main issue that the title of the work that's being referenced often is in a language that is not the document's language and needs another hyphenation. And you probably want your bibliographical information such as version numbers, visited on dates, months of publication or words as <cite>editor</cite> in that same document's language. No problem if both the works you're referencing and your own documents are in English, but when writing a (in our case) Dutch document it rarely happens all your sources are in Dutch. At least in mathematics and computer science it does :).</p>
+<p>So I decided to learn my "students" (and myself) about this interesting package. But as I was constructing examples I discovered the implementation is incorrect:</p>
+<ul>
+<li>months are capitalized;</li>
+<li>not all available languages are translated (hence not available as an option within <code>babelbib</code>);</li>
+<li>the capitalization of some other terms was incorrect (German and Dutch differ greatly with respect to this);</li>
+<li>both shortened and full ordinal numbers (the linguistic meaning of the word, not everything is mathematics) are not handled correctly (which seems the case for most languages).</li>
+</ul>
+<p>This fact is mentioned in the manual's todo section and I mailed the author about it, but in the meanwhile, here is my fix. I am not sure about some abbrevations, but the main issues are correct now. The following file is a replacement for <code>dutch.bdf</code>:[sourcecode language="tex" wraplines="false" toolbar="false" collapse="true"]{% raw %}%%<br />
+%% This is file `dutch.bdf',<br />
+%% generated with the docstrip utility.<br />
+%%<br />
+%% The original source files were:<br />
+%%<br />
+%% babelbib.dtx  (with options: `latex,dutch')<br />
+%%<br />
+%%   babelbib package<br />
+%%<br />
+%%   Copyright  2003--2009 Harald Harders<br />
+%%<br />
+%%   This program can be redistributed and/or modified under the terms<br />
+%%   of the LaTeX Project Public License Distributed from CTAN<br />
+%%   archives in directory macros/latex/base/lppl.txt; either<br />
+%%   version 1 of the License, or any later version.<br />
+%%<br />
+%%   h.harders@tu-bs.de<br />
+%%<br />
+\ProvidesFile{dutch.bdf}<br />
+  [2009/10/10 v1.29  babelbib: multilingual bibliographies (HH)]<br />
+\newcommand\bibsdutch[1][dutch]{%<br />
+  \def\biblanguagename{#1}%<br />
+  \def\btxetalshort##1{\protect\foreignlanguage{#1}{et.~al.##1{}}}%<br />
+  \def\btxetallong##1{\protect\foreignlanguage{#1}{en anderen}}%<br />
+  \def\btxandshort##1{\protect\foreignlanguage{#1}{en}}%<br />
+  \def\btxandlong##1{\protect\foreignlanguage{#1}{en}}%<br />
+  \def\btxandcomma##1{,}%<br />
+  \def\btxinlong##1{\protect\foreignlanguage{#1}{in}}%<br />
+  \def\btxinshort##1{\protect\foreignlanguage{#1}{in}}%<br />
+  \def\btxofseriesshort##1{\protect\foreignlanguage{#1}{van}}%<br />
+  \def\btxinseriesshort##1{\protect\foreignlanguage{#1}{in}}%<br />
+  \def\btxofserieslong##1{\protect\foreignlanguage{#1}{van}}%<br />
+  \def\btxinserieslong##1{\protect\foreignlanguage{#1}{in}}%<br />
+  \def\btxeditorshort##1{\protect\foreignlanguage{#1}{red##1{}}}%<br />
+  \def\btxeditorlong##1{\protect\foreignlanguage{#1}{redactie}}%<br />
+  \def\btxeditorsshort##1{\protect\foreignlanguage{#1}{red.##1{}}}%<br />
+  \def\btxeditorslong##1{\protect\foreignlanguage{#1}{redactie}}%<br />
+  \def\btxvolumeshort##1{\protect\foreignlanguage{#1}{vol##1{}}}%<br />
+  \def\btxvolumelong##1{\protect\foreignlanguage{#1}{volume}}%<br />
+  \def\btxnumbershort##1{\protect\foreignlanguage{#1}{nr##1{}}}%<br />
+  \def\btxnumberlong##1{\protect\foreignlanguage{#1}{nummer}}%<br />
+  \def\btxeditionshort##1{\protect\foreignlanguage{#1}{druk}}%<br />
+  \def\btxeditionlong##1{\protect\foreignlanguage{#1}{uitgave}}%<br />
+  \def\btxchaptershort##1{\protect\foreignlanguage{#1}{hfdst##1{}}}%<br />
+  \def\btxchapterlong##1{\protect\foreignlanguage{#1}{hoofdstuk}}%<br />
+  \def\btxpageshort##1{\protect\foreignlanguage{#1}{pag##1{}}}%<br />
+  \def\btxpagelong##1{\protect\foreignlanguage{#1}{pagina}}%<br />
+  \def\btxpagesshort##1{\protect\foreignlanguage{#1}{pag##1{}}}%<br />
+  \def\btxpageslong##1{\protect\foreignlanguage{#1}{pagina's}}%<br />
+  \def\btxmastthesis##1{\protect\foreignlanguage{#1}{scriptie}}%<br />
+  \def\btxphdthesis##1{\protect\foreignlanguage{#1}{proefschrift}}%<br />
+  \def\btxtechrepshort##1{\protect\foreignlanguage{#1}{tech.~rapp##1{}}}%<br />
+  \def\btxtechreplong##1{\protect\foreignlanguage{#1}{technisch rapport}}%<br />
+  \def\btxmonjanlong##1{\protect\foreignlanguage{#1}{januari}~}%<br />
+  \def\btxmonfeblong##1{\protect\foreignlanguage{#1}{februari}~}%<br />
+  \def\btxmonmarlong##1{\protect\foreignlanguage{#1}{maart}~}%<br />
+  \def\btxmonaprlong##1{\protect\foreignlanguage{#1}{april}~}%<br />
+  \def\btxmonmaylong##1{\protect\foreignlanguage{#1}{mei}~}%<br />
+  \def\btxmonjunlong##1{\protect\foreignlanguage{#1}{juni}~}%<br />
+  \def\btxmonjullong##1{\protect\foreignlanguage{#1}{juli}~}%<br />
+  \def\btxmonauglong##1{\protect\foreignlanguage{#1}{augustus}~}%<br />
+  \def\btxmonseplong##1{\protect\foreignlanguage{#1}{september}~}%<br />
+  \def\btxmonoctlong##1{\protect\foreignlanguage{#1}{oktober}~}%<br />
+  \def\btxmonnovlong##1{\protect\foreignlanguage{#1}{november}~}%<br />
+  \def\btxmondeclong##1{\protect\foreignlanguage{#1}{december}~}%<br />
+  \def\btxmonjanshort##1{\protect\foreignlanguage{#1}{jan##1{}}}%<br />
+  \def\btxmonfebshort##1{\protect\foreignlanguage{#1}{feb##1{}}}%<br />
+  \def\btxmonmarshort##1{\protect\foreignlanguage{#1}{mrt##1{}}}%<br />
+  \def\btxmonaprshort##1{\protect\foreignlanguage{#1}{apr##1{}}}%<br />
+  \def\btxmonmayshort##1{\protect\foreignlanguage{#1}{mei##1{}}}%<br />
+  \def\btxmonjunshort##1{\protect\foreignlanguage{#1}{jun##1{}}}%<br />
+  \def\btxmonjulshort##1{\protect\foreignlanguage{#1}{jul##1{}}}%<br />
+  \def\btxmonaugshort##1{\protect\foreignlanguage{#1}{aug##1{}}}%<br />
+  \def\btxmonsepshort##1{\protect\foreignlanguage{#1}{sep##1{}}}%<br />
+  \def\btxmonoctshort##1{\protect\foreignlanguage{#1}{okt##1{}}}%<br />
+  \def\btxmonnovshort##1{\protect\foreignlanguage{#1}{nov##1{}}}%<br />
+  \def\btxmondecshort##1{\protect\foreignlanguage{#1}{dec##1{}}}%<br />
+  \def\Btxinlong##1{\protect\foreignlanguage{#1}{In}}%<br />
+  \def\Btxinshort##1{\protect\foreignlanguage{#1}{In}}%<br />
+  \def\Btxeditorshort##1{\protect\foreignlanguage{#1}{Red##1{}}}%<br />
+  \def\Btxeditorlong##1{\protect\foreignlanguage{#1}{Redactie}}%<br />
+  \def\Btxeditorsshort##1{\protect\foreignlanguage{#1}{Red##1{}}}%<br />
+  \def\Btxeditorslong##1{\protect\foreignlanguage{#1}{Redactie}}%<br />
+  \def\Btxvolumeshort##1{\protect\foreignlanguage{#1}{Vol##1{}}}%<br />
+  \def\Btxvolumelong##1{\protect\foreignlanguage{#1}{Volume}}%<br />
+  \def\Btxnumbershort##1{\protect\foreignlanguage{#1}{Nr##1{}}}%<br />
+  \def\Btxnumberlong##1{\protect\foreignlanguage{#1}{Nummer}}%<br />
+  \def\Btxeditionshort##1{\protect\foreignlanguage{#1}{Druk}}%<br />
+  \def\Btxeditionlong##1{\protect\foreignlanguage{#1}{Uitgave}}%<br />
+  \def\Btxchaptershort##1{\protect\foreignlanguage{#1}{Hfdst##1{}}}%<br />
+  \def\Btxchapterlong##1{\protect\foreignlanguage{#1}{Hoofdstuk}}%<br />
+  \def\Btxpageshort##1{\protect\foreignlanguage{#1}{Pag##1{}}}%<br />
+  \def\Btxpagelong##1{\protect\foreignlanguage{#1}{Pagina}}%<br />
+  \def\Btxpagesshort##1{\protect\foreignlanguage{#1}{Pags##1{}}}%<br />
+  \def\Btxpageslong##1{\protect\foreignlanguage{#1}{Pagina's}}%<br />
+  \def\Btxtechrepshort##1{\protect\foreignlanguage{#1}{Tech.\ rapp##1{}}}%<br />
+  \def\Btxtechreplong##1{\protect\foreignlanguage{#1}{Technisch rapport}}%<br />
+  \def\btxurldatecomment##1{\protect\foreignlanguage{#1}{, bezocht op ##1}}%<br />
+  \def\btxfnamespaceshort{\,}%<br />
+  \def\btxfnamespacelong{ }%<br />
+  \def\btxnumeralshort##1{\btxnumeraldutch{#1}{##1}}%<br />
+  \def\btxnumerallong##1{\btxnumeraldutchlong{#1}{##1}}%<br />
+  \def\btxprintmonthyearnum##1##2{##1/##2}%<br />
+  \def\btxkeywordlanguage##1{{\protect\selectlanguage{#1}##1}}%<br />
+  \ifbbbblanguagenames<br />
+    \def\btxlanguagenameamerican{\protect\foreignlanguage{#1}{engels}}%<br />
+    \def\btxlanguagenameaustrian{\protect\foreignlanguage{#1}{duits}}%<br />
+    \def\btxlanguagenamebrazil{\protect\foreignlanguage{#1}{portugees}}%<br />
+    \def\btxlanguagenamebrazilian{\protect\foreignlanguage{#1}{portugees}}%<br />
+    \def\btxlanguagenamebritish{\protect\foreignlanguage{#1}{engels}}%<br />
+    \def\btxlanguagenamebulgarian{\protect\foreignlanguage{#1}{bulgaars}}%<br />
+    \def\btxlanguagenamecanadian{\protect\foreignlanguage{#1}{engels}}%<br />
+    \def\btxlanguagenamecanadien{\protect\foreignlanguage{#1}{frans}}%<br />
+    \def\btxlanguagenamecatalan{\protect\foreignlanguage{#1}{catalaans}}%<br />
+    \def\btxlanguagenamecroatian{\protect\foreignlanguage{#1}{kroatisch}}%<br />
+    \def\btxlanguagenameczech{\protect\foreignlanguage{#1}{tsjechisch}}%<br />
+    \def\btxlanguagenamedanish{\protect\foreignlanguage{#1}{deens}}%<br />
+    \def\btxlanguagenamedutch{\protect\foreignlanguage{#1}{nederlands}}%<br />
+    \def\btxlanguagenameenglish{\protect\foreignlanguage{#1}{engels}}%<br />
+    \def\btxlanguagenameesperanto{\protect\foreignlanguage{#1}{esperanto}}%<br />
+    \def\btxlanguagenamefinnish{\protect\foreignlanguage{#1}{fins}}%<br />
+    \def\btxlanguagenamefrancais{\protect\foreignlanguage{#1}{frans}}%<br />
+    \def\btxlanguagenamefrench{\protect\foreignlanguage{#1}{frans}}%<br />
+    \def\btxlanguagenamefrenchb{\protect\foreignlanguage{#1}{frans}}%<br />
+    \def\btxlanguagenamegerman{\protect\foreignlanguage{#1}{duits}}%<br />
+    \def\btxlanguagenamegermanb{\protect\foreignlanguage{#1}{duits}}%<br />
+    \def\btxlanguagenamegreek{\protect\foreignlanguage{#1}{grieks}}%<br />
+    \def\btxlanguagenamehebrew{\protect\foreignlanguage{#1}{hebreeuws}}%<br />
+    \def\btxlanguagenamehungarian{\protect\foreignlanguage{#1}{hongaars}}%<br />
+    \def\btxlanguagenameicelandic{\protect\foreignlanguage{#1}{ijslands}}%<br />
+    \def\btxlanguagenameirish{\protect\foreignlanguage{#1}{iers}}%<br />
+    \def\btxlanguagenameitalian{\protect\foreignlanguage{#1}{italiaans}}%<br />
+    \def\btxlanguagenamelatin{\protect\foreignlanguage{#1}{latijn}}%<br />
+    \def\btxlanguagenamenaustrian{\protect\foreignlanguage{#1}{duits}}%<br />
+    \def\btxlanguagenamengerman{\protect\foreignlanguage{#1}{duits}}%<br />
+    \def\btxlanguagenamenorsk{\protect\foreignlanguage{#1}{noors}}%<br />
+    \def\btxlanguagenamenynorsk{\protect\foreignlanguage{#1}{nieuw-noors}}%<br />
+    \def\btxlanguagenamepolish{\protect\foreignlanguage{#1}{pools}}%<br />
+    \def\btxlanguagenameportuges{\protect\foreignlanguage{#1}{portugees}}%<br />
+    \def\btxlanguagenameportuguese{\protect\foreignlanguage{#1}{portugees}}%<br />
+    \def\btxlanguagenamerussian{\protect\foreignlanguage{#1}{russisch}}%<br />
+    \def\btxlanguagenamescottish{\protect\foreignlanguage{#1}{schots}}%<br />
+    \def\btxlanguagenameserbian{\protect\foreignlanguage{#1}{servisch}}%<br />
+    \def\btxlanguagenamespanish{\protect\foreignlanguage{#1}{spaans}}%<br />
+    \def\btxlanguagenameswedish{\protect\foreignlanguage{#1}{zweeds}}%<br />
+    \def\btxlanguagenameturkish{\protect\foreignlanguage{#1}{turks}}%<br />
+    \def\btxlanguagenameUKenglish{\protect\foreignlanguage{#1}{engels}}%<br />
+    \def\btxlanguagenameUSenglish{\protect\foreignlanguage{#1}{engels}}%<br />
+  \fi<br />
+}<br />
+\AtBeginDocument{%<br />
+  \ifbbbbfixlanguage<br />
+  \else<br />
+    \bbbbaddto{dutch}{bibsdutch}<br />
+  \fi<br />
+  \bbbbaddto{dutch}{btxifchangecaseoff}<br />
+}</p>
+<p>\endinput<br />
+%%<br />
+%% End of file `dutch.bdf'.[/sourcecode]{% endraw %}</p>
+<p>The file <code>babelbib.sty</code> should contain the definitions of <code>\btxnumeraldutch</code> and <code>\btxnumeraldutchlong</code>, which are given by:[sourcecode language="tex" wraplines="false" toolbar="false"]{% raw %}\DeclareRobustCommand\btxnumeraldutch[2]{%<br />
+  \foreignlanguage{#1}{%<br />
+    \ifnumber{#2}{%<br />
+      \expandafter\btx@parsenum#2\@empty\@empty\@empty<br />
+      \btxnumeralfont{%<br />
+        \ifx\btx@digitb\@empty<br />
+          \ifcase\btx@digita de\or ste\else de\fi<br />
+        \else<br />
+          \ifnum\btx@digita=1 de\else ste\fi<br />
+        \fi<br />
+      }%<br />
+    }{#2}%<br />
+  }%<br />
+}<br />
+\DeclareRobustCommand\btxnumeraldutchlong[2]{%<br />
+  \foreignlanguage{#1}{%<br />
+    \ifnumber{#2}{%<br />
+      \ifcase#2 nulde\or eerste\or tweede\or derde\or<br />
+        vierde\or vijfde\or zesde\or zevende\or<br />
+        achtste\or negende\or tiende\else<br />
+        \btxnumeraldutch{#1}{#2}%<br />
+      \fi}{#2}<br />
+  }%<br />
+  }[/sourcecode]{% endraw %}</p>
+<p>These can be placed after the definition of <code>\btxnumeralenglish</code>. Now everything works as expected (provided you work with decimal version numbers and the correct month abbrevations in your BibTeX file).</p>
+<p>I should definitely start using <code>biblatex</code>, its implementation of languages seems (more) correct given its <code>dutch.lbx</code>. And I should find myself a decent and consequent indentation style for TeX.</p>

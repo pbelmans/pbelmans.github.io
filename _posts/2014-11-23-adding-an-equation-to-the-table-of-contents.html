@@ -1,0 +1,27 @@
+---
+layout: post
+title: Adding an equation to the table of contents
+date: 2014-11-23 16:11:53.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- LaTeX
+tags: []
+meta:
+  _edit_last: '15754637'
+  geo_public: '0'
+  _publicize_pending: '1'
+author:
+  login: pbelmans
+  email: pieterbelmans@gmail.com
+  display_name: pbelmans
+  first_name: ''
+  last_name: ''
+---
+<p>Next week I'll be giving a lecture on spectral sequences in algebraic geometry, and in the notes I'm preparing I wanted to put the spectral sequence below the title of the corresponding section in the table of contents. The <code>\addcontentsline</code> command was known to me, but <code>\addtocontents</code> wasn't, and there is one caveat in using it: you need to make sure you put <code>\par</code> at the end of the what you are adding (if it is actual text), forcing the next item to get its own paragraph.</p>
+<p>So the macro</p>
+<pre><code style="font-size:.85em;">\newcommand\tocequation[1]{\addtocontents{toc}{\vspace{.7em}#1\par}}</code></pre>
+<p>does the trick (change the vertical spacing to your liking), and using it just requires to say <code>\tocequation{$a^2+b^2=c^2$}</code> after the corresponding <code>\section</code>. A small excerpt of the result is</p>
+<p><img src="{{ site.baseurl }}/assets/toc.png" alt="Table of contents containing an equation" /></p>
+<p>The final results will be posted somewhere next week. I'll be posting a follow-up blogpost on some nitpickery regarding the notation for Čech cohomology later.</p>

@@ -1,0 +1,28 @@
+---
+layout: post
+title: 'New feature for the Stacks project: detailed tag edits'
+date: 2015-07-01 17:40:42.000000000 +02:00
+type: post
+published: true
+status: publish
+categories:
+- computer-science
+- LaTeX
+- math
+- Stacks project
+tags: []
+meta:
+  _edit_last: '15754637'
+  geo_public: '0'
+  _publicize_job_id: '12219441473'
+author:
+  login: pbelmans
+  email: pieterbelmans@gmail.com
+  display_name: pbelmans
+  first_name: ''
+  last_name: ''
+---
+<p>Because of the heat wave currently keeping Belgium in its grip (preventing me from doing research...) I decided to finally make the last fixes for a new feature for the Stacks project that has been in the make now for a while: detailed tag edits.</p>
+<p>Git has a feature called <a href="http://git-scm.com/docs/git-blame"><code>git blame</code></a>, that tells you when a certain line in a file was last edited and by whom. Starting from this idea Johan has built <a href="https://github.com/stacks/stacks-history"><code>stacks-history</code></a> that collects all this information throughout the lifetime of the Stacks project for all tags. If you add a little processing code to get this in the database in a meaningful format and some new website code, and you can check exactly when a tag has been changed!</p>
+<p>If you want to see it in action, point your browsers to the <a href="http://stacks.math.columbia.edu/tag/00DE/history">history page for the tensor-Hom adjunction</a>.</p>
+<p>It's not perfect (it might misinterpret some changes etc.) so if you spot mistakes, please do tell. And if you have suggestions to make this feature (or the Stacks project in general) better, please do tell!</p>

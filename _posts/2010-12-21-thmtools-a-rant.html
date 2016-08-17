@@ -1,0 +1,40 @@
+---
+layout: post
+title: 'thmtools: a rant'
+date: 2010-12-21 08:05:18.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- LaTeX
+tags: []
+meta:
+  _edit_last: '15754637'
+  _oembed_4c5370763f3aa7fcb2ef41318ab4b683: '{{unknown}}'
+  _oembed_bbdcc3029ebede3524037c6efee5dd43: '{{unknown}}'
+  _oembed_0d16ac066952f56195de345137a5fe7d: '{{unknown}}'
+author:
+  login: pbelmans
+  email: pieterbelmans@gmail.com
+  display_name: pbelmans
+  first_name: ''
+  last_name: ''
+---
+<p>First some preliminary statements:</p>
+<ul>
+<li>this is a rant about how I had to get <code>thmtools</code> working, it's not about the package itself (which is great)</li>
+<li>I <strong>hate</strong> Ubuntu's TeX Live, it's outdated as hell and there's no way to update it</li>
+<li>I should've been studying my algebraic geometry exam, but I got so angry about what was going wrong I decided to get it working regardless of how long it would take (which was almost three senseless and long hours of swearing and messing around)</li>
+<li>this post discusses how to do it using Ubuntu's sucky TeX Live, I hope you don't suffer from the same problems as I did</li>
+</ul>
+<p>I only wanted <code>\listoftheorems</code>-ish functionality. That's all. Seems like a reasonable wish, right? :-)</p>
+<p>First I started using <a href="http://ctan.org/pkg/ntheorem"><code>ntheorem</code></a>. But it was impossible to get the theorem styles matching with what I wanted (basically the result from using <code>definition</code> as defined in <a href="http://ctan.org/pkg/amsthm"><code>amsthm</code></a>. Then I found out about <a href="http://ctan.org/pkg/thmtools"><code>thmtools</code></a>, which could provide me with the same functionality.</p>
+<p>So far so good. I quickly rewrote my <code>\newtheorem</code>'s to <code>\declaretheorem</code>, using <code>[style=definition,numberwithin=chapter]</code> as options. Everything looked fine (that is, exactly the same as before, given the amount of time I spent at fixing typographical issues and bad boxes, that was important and unachievable within <code>ntheorem</code>) but <code>\listoftheorems</code> kept displaying <em>all</em> theorems (all 260 of them...), even with <code>[onlynamed]</code> specified!</p>
+<p>Then I realized the manual (which is <em>beautiful</em>, all manuals should be like this) is for a 2010 version, while a quick peek in my <code>texmf</code> folder revealed I was working with version <code>0.1beta</code> from 2008. Ding! Found it. So I manually installed the newest version.</p>
+<p>But, Ubuntu's TeX Live was fucked up. It also contains an ancient (2008) version of <a href="http://ctan.org/pkg/nameref"><code>nameref</code></a>, part of <a href="http://ctan.org/pkg/nameref"><code>hyperref</code></a>. Can you feel it coming? One of the most complex packages is being dragged into the problem. The actual error I got was
+<pre><code>! Undefined control sequence.
+ \NR@gettitle</code></pre>
+<p>Not really the most insightful one. But some fiddling around learnt me that <code>thmtools</code> needs functionality from a newer version of <code>nameref</code>. Now there are two solutions: update <code>hyperref</code> (by hand, as <code>tlmgr --update</code> doesn't work on Ubuntu's TeX Live) and <strong>all its dependencies</strong> or perform a little hack. I went for the first, but given the laborious nature of updating all dependencies I quickly gave up. Just open <code>$TEXMFf/tex/latex/thmtools/autoref.sty</code> and comment line 98. Everything works now. As I'm not using <code>autoref</code> (I should've been, but changing it now is too much work) this is no problem at all.</p>
+<p>And you thought it was all happy sunshine now? Forget it. My theorem styles were wrong. The body font was set to italic. Apparently, in the new version, you have to set the theorem style for <em>each new environment</em>. Just linking it all together with the option <code>[sibling=theorem]</code> wasn't enough, although <code>amsthm</code> and <em>the 0.1beta version</em> inherited the theorem style from the previous definitions. True, that's bad behaviour, but I relied on it. So you have to add <code>style=definition</code> as well to every <code>\declaretheorem</code>. The manual isn't really explicit about this unfortunately.</p>
+<p>But, now it works! I'm sorry if this post isn't written in a clear way, but I'm feeling too pumped up now to write anything more coherent or howto-style. Expect an actual howto on this cool package, as I've tweaked the output of <code>\listoftheorems</code>, regardless of the manual stating "<cite>There’s currently no interface to change the look of the list. If you’re daring, [...]</cite>".</p>
+<p>And let me repeat this: <strong><code>thmtools</code> is a nice package</strong>. It's just too new and radical (for Ubuntu's TeX Live). But the manual is great, the functionality is great, my own code is <em>much</em> cleaner now. If only Ubuntu's TeX Live was up to date... Next time I install Ubuntu I will manually install TeX Live, no more repository versions for me.</p>

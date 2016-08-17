@@ -1,0 +1,53 @@
+---
+layout: post
+title: What are Chern classes?
+date: 2014-10-09 11:21:03.000000000 +02:00
+type: post
+published: true
+status: publish
+categories:
+- math
+tags: []
+meta:
+  _wpas_skip_facebook: '1'
+  _wpas_skip_google_plus: '1'
+  _wpas_skip_twitter: '1'
+  _wpas_skip_linkedin: '1'
+  _wpas_skip_tumblr: '1'
+  _wpas_skip_path: '1'
+  _edit_last: '15754637'
+  geo_public: '0'
+  _publicize_pending: '1'
+author:
+  login: pbelmans
+  email: pieterbelmans@gmail.com
+  display_name: pbelmans
+  first_name: ''
+  last_name: ''
+---
+<p>This year we are continuing <a href="http://win.ua.ac.be/~pbelmans/seminar/">ANAGRAMS</a>, the local student seminar (<a href="http://pbelmans.wordpress.com/2014/01/29/announcing-a-seminar/">previously announced on my weblog</a>). The first series of lectures we are starting with will be about Chern classes, and I will try to blog more regularly about the things we discuss. Hence in this post I will outline the motivation and interpretation of Chern classes (the gory details will not be discussed here).</p>
+<h2>Characteristic classes</h2>
+<p>People like vector bundles. They are easy-to-understand coherent sheaves, we have some obvious candidates (tangent and cotangent bundles, line bundles) and there are many interesting constructions for them (duals, direct sums, tensor products, symmetric products, exterior products, ...), but nevertheless they carry significant amounts of geometric information. Even if you don't like vector bundles as such, some seemingly totally non-vector bundleish questions such as "how many lines lie on a cubic surface" can be rephrased in terms of vector bundles and then we can actually solve them!</p>
+<p>So <em>what is there to know</em> about vector bundles? We know that locally they are just copies of the structure sheaf, so the main question to ask about your vector bundle is whether it is globally (non)trivial. Continuing this train of thought one should ask, whenever a vector bundle is non-trivial, whether we can say <em>in which sense it is non-trivial</em>. This admittedly vague statement will be made more precise (but not too precise) in the next section.</p>
+<p>So how can we <em>quantify information about vector bundles</em>? Using characteristic classes! So what are they? Depending on which context you are working in (differential geometry, complex geometry, algebraic geometry) you have different <em>cohomology theories</em> associated to the space on which you are considering vector bundles. There is Betti cohomology, the Chow ring, de Rham cohomology, ... The characteristic class of your vector bundle is then an element in this cohomology theory, which then measures something about the vector bundle: how non-trivial it is, and in which sense it is non-trivial. If you are lucky then you can interpret the characteristic class of your bundle, and draw an interesting conclusion.</p>
+<p>To summarise: pick your favourite cohomology ring associated to your variety, this is a graded ring. Then the characteristic classes of your vector bundle (there are possibly multiple non-zero classes) all lie in one particular piece of this graded ring.</p>
+<h2>Chern classes</h2>
+<p>Let $latex X$ be a smooth projective variety over some algebraically closed field (one can get by with much less). If one takes the Chow ring $latex \mathrm{CH}^\bullet(X)$ for the receptacle of this characteristic classes mumbo-jumbo one obtains <em>Chern classes</em>. The Chow ring is defined in terms of cycles on $latex X$, and hence our Chern classes describe something in terms of the subvarieties: $latex \mathrm{c}_i(\mathcal{F})$ is an element of $latex \mathrm{CH}^i(X)$, hence defines some cycle of codimension $latex i$.</p>
+<p>One can interpret these Chern classes in terms of <em>degeneracy loci</em>. Recall that we were trying to measure in which sense a vector bundle is non-trivial, and for ease of statement we will assume that our vector bundle is globally generated. If we denote $latex r=\mathrm{rk}(\mathcal{F})$, then for any $latex k=1,\dotsc,r$ we can consider global sections $latex s_1,\dotsc,s_{r-k+1}$. If we evaluate these in a point we get $latex r-k+1$ vectors of length $latex r$, hence we can ask whether these are linearly (in)dependent. The degeneracy locus of our set of global sections is then exactly the set of points in which the evaluations become linearly dependent, hence they degenerate.</p>
+<p>Of course one has to choose these sections sufficiently generally in order to make the codimension of the degeneracy locus correct, but one can prove that if the codimension is correct and the vector bundle is globally generated, then the degeneracy locus is independent of the choice! This can then be one way of defining the Chern classes of a vector bundle.</p>
+<h2>Example</h2>
+<p>During the series of lectures I intend to have people discuss some "numbers you should recognise". Hence you have to explain why e.g. the number 2875 is interesting from the viewpoint of an enumerative geometer. As the toy example to introduce vector bundles in enumerative geometry I will do the number 27, which is as everyone should know, the number of lines on a smooth cubic surface.</p>
+<p>How can we phrase the question</p>
+<blockquote><p>
+How many lines lie on a cubic surface?
+</p></blockquote>
+<p>in terms of vector bundles, and therefore apply Chern class machinery to try and solve it? The Grassmannian $latex G=\mathrm{Grass}(2,4)$ parametrising lines in $latex \mathbb{P}^3$ or planes in $latex \mathbb{A}^4$ is a smooth projective variety (more specifically: it is a quadric hypersurface in $latex \mathbb{P}^5$) that comes equipped with a <em>tautological bundle</em> $latex \mathcal{F}$ (not to be confused with the canonical bundle, which is the highest exterior power of the cotangent bundle).</p>
+<p>This tautological bundle has rank 2, and is a <em>subbundle</em> of the trivial vector bundle $latex \mathcal{O}_G^{\oplus 4}$, obtained by taking as the fiber in each point the 2-dimensional subspace (of the 4-dimensional vector space) that corresponds to the point of the Grassmannian. The inclusion $latex \mathcal{F}\hookrightarrow\mathcal{O}_G^{\oplus 4}$ dualises to a surjection $latex \mathcal{O}_G^{\oplus 4,\vee}\twoheadrightarrow\mathcal{F}^\vee$, which corresponds to <em>restricting a linear function on $latex \mathbb{P}^3$ to the line</em>. Taking $latex d$th symmetric powers of this surjection corresponds to restricting a homogeneous degree $latex d$ polynomial on $latex \mathbb{P}^3$ to the line.</p>
+<p>Now let $latex X$ be the hypersurface defined by a cubic, to this corresponds a $latex f$, a section of $latex \mathrm{Sym}^3(\mathcal{O}_G^{\oplus 4})$ which is mapped to $latex \mathrm{Sym}^3(\mathcal{F}^\vee)$ by the symmetric cube of the map from the previous paragraph. Hence we get a global section of the symmetric cube of our tautological bundle, which describes exactly <em>the set of lines in $latex \mathbb{P}^3$ on which $latex f$ vanishes</em>!</p>
+<p>Now, <em>assuming this set is finite</em>, we can apply some intersection theory machinery (see section 14.1 of Fulton's bible) which says that inside the correct Chow group the zero locus of our global section is described by the top Chern class of our vector bundle! Hence it is completely determined in terms of Chern classes, and if we can compute this particular Chern class (and its degree) we know exactly how big this set is. To see why this is the case: observe that</p>
+<p>$latex \mathrm{rk}(\mathrm{Sym}^3(\mathcal{F}^\vee))={2+3-1 \choose 3}=4=\mathrm{dim}(G)$,</p>
+<p>hence the top Chern class of this vector bundle lands precisely where it should land.</p>
+<p>To determine this top Chern class $latex \mathrm{c}_4(\mathrm{Sym}^3\mathcal{F}^\vee)$ one has to study how Chern classes behave with respect to symmetric powers and express it in terms of $latex \mathcal{F}^\vee$ only, which gives</p>
+<p>$latex \mathrm{c}_4(\mathrm{Sym}^3\mathcal{F}^\vee)=9\mathrm{c}_2(\mathcal{F}^\vee)^2+18\mathrm{c}_1(\mathcal{F}^\vee)^2\mathrm{c}_2(\mathcal{F}^\vee)$.</p>
+<p>Now we have to interpret the values in the right-hand side, which can either be done using general Schubert calculus on a Grassmannian variety (the moduli interpretation of these varieties gives strong tools to compute things on these varieties), or in this small case one can resort to explicit interpretations. Either way, the products turn out to be 1 in both cases, hence there are <strong>27 lines on a cubic surface</strong>.</p>
+<p>This is certainly not the only thing Chern classes are good for, but I think it's a nice example of showing how constructions with vector bundles are reflected by operations on Chern classes, and how enumerative geometry can be rephrased in terms of intersection theory.</p>

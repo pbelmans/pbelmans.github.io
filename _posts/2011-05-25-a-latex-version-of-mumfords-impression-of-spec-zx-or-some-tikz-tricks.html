@@ -1,0 +1,137 @@
+---
+layout: post
+title: A LaTeX version of Mumford's impression of Spec Z[x], or some TikZ tricks
+date: 2011-05-25 08:36:55.000000000 +02:00
+type: post
+published: true
+status: publish
+categories:
+- LaTeX
+- math
+tags: []
+meta:
+  _edit_last: '15754637'
+  twitter_cards_summary_img_size: a:7:{i:0;i:562;i:1;i:365;i:2;i:2;i:3;s:24:"width="562"
+    height="365"";s:4:"bits";i:8;s:8:"channels";i:3;s:4:"mime";s:10:"image/jpeg";}
+  geo_public: '0'
+author:
+  login: pbelmans
+  email: pieterbelmans@gmail.com
+  display_name: pbelmans
+  first_name: ''
+  last_name: ''
+---
+<p><ins datetime="2012-12-14T21:57:26+00:00" style="text-decoration:none;"><strong>Notice:</strong> The post <a href="http://pbelmans.wordpress.com/2012/12/14/an-atlas-of-the-affine-line-over-the-integer/">An atlas of the affine line over the integers</a> and the page <a href="http://pbelmans.wordpress.com/atlas/">An atlas for $latex \mathrm{Spec}\,\mathbb{Z}[x]$</a> might be interesting if you came here by your favourite search engine.</ins><br />
+<hr />
+<p>As promised on Twitter I decided to draw a TeX version of Mumford's drawing of an elusive object: $latex \mathrm{Spec}\,\mathbb{Z}[x]$</p>
+<p>This can be considered as the first non-trivial example in scheme theory. Mumford's treasure map tries to depict how we could (but we can't or shouldn't for a myriad of reasons) visualize its geometry. The meaning behind it, as found in the mimeographed notes named The Red Book, is discussed thoroughly at <a href="http://www.neverendingbooks.org/mumfords-treasure-map">neverendingbooks.org's series on Brave New Geometries</a>.</p>
+<p>So in case you don't know the drawing, we're talking about<br />
+<img src="{{ site.baseurl }}/assets/mumforddrawing.jpg" alt="Original version of Mumford's impression of Spec Z[x]" /><br />
+The entire series (and by extension the weblog) is a must-read for every math student by the way! As a matter of fact, it was the strangeness and all the layers of meaning in this picture that first got me started in mathematics when I was still a CS student.</p>
+<p>Anyhow, I won't go into any details concerning the drawing's many layers of meaning, the neverending author has done this better than I ever could. Although I would like to discuss one little remark he made when we were discussing this (and other) visualizations a few days ago which he didn't make explicitly in his own posts. A summary:</p>
+<blockquote><p>By connecting the points into a (smooth) curve, you suggest that <em>local information is important</em>. As in analysis the value in a point tells us something about the values near that point, for a certain amount of nearness. But the points corresponding to different prime numbers are by no means related to each other! There is a vast vacuum between to vertical lines and horizontal lines / curves, which we decided to fill by putting some (smooth) curve in there. Yet the information in one point conveys <em>nothing</em> about the values which look like they are near. We cannot say that consecutive primes are near, the smallest known prime (for the moment that would be 2) is as related to 3 as to the biggest Mersenne prime known nowadays which is 2<sup>43112609</sup>-1.</p></blockquote>
+<p>I'm not saying this is a wonderful new insight, but of the entire talk I had with Lieven Le Bruyn on this subject, if I should stress one thing, it's this. Most other features of the drawing have a scheme-theoretical interpretation associated with, but this important remark stresses how this is nothing but an <em>impression</em> which is bound to fail on many aspects.</p>
+<p>So we're going to reproduce that particular drawing? Kind of, but I will be basing myself on the second version, which is a bit less sketchy. It looks like<br />
+<img src="{{ site.baseurl }}/assets/mumford-21.png" alt="An improved version of Mumford's impression of Spec Z[x]" /></p>
+<p>It's not <em>that</em> hard to reproduce this, but there are two non-trivial aspects to this: the construction of the curved line and the doodles in at the top and right edges.</p>
+<h3>Curved paths and relative tangents</h3>
+<p>The manual has a nice introduction to the construction of curved paths, using the <code>.. controls (x,y) and (z,w) ..</code> construction. The example that's given is
+<pre>\draw (0,0) .. controls (1,1) and (2,1) .. (2,0)</pre>
+<p>which says<br />
+<blockquote>draw me a line from <code>(0,0)</code> to <code>(2,0)</code> but don't make it straight, make it a curve with tangents <code>(1,1)</code> at the origin and <code>(2,1)</code> at the end point.</p></blockquote>
+<p>Well, my nice discovery when drawing Mumford's map was that you can <em>specify the tangents relatively</em>! So the example from the manual becomes
+<pre>\draw (0,0) .. controls ++ (1,1) and ++ (1,0) .. (2,0)</pre>
+<p>Not a great improvement in this case, but when your coordinates become more difficult (which they did in my case) it's a relief to be able to specify your tangents relative from the current position. And the only part where this is mentioned (or better: used implicitly) in the manual is in the introduction to the chapter on Mathematical and Object-Oriented Engines and it is used in exactly the same way as I did, but it is rather easily overlooked.</p>
+<h3>Doodles</h3>
+<p>The other non-trivial part are the doodles. It took me a while to find it in the enormous TikZ manual, but using the <code>decorations.pathmorphing</code> library which contains a <code>random steps</code> decoration it's rather easy. At first I was trying to implement this like I implemented <a href="http://pbelmans.wordpress.com/2010/12/27/an-h-tree-in-tikz/" title="An H-tree in TikZ">H-tree fractals</a>, but this failed miserably. The random number generator didn't work the way I wanted (it seemed like it was reseeded every time) and it was hard to determine where you should go after having drawn the first part of the line. But using <code>random steps</code> we can connect two points using a jagged line, that is generated at random (wonder, oh wonder). To create a full-fledged doodle, we iterate this procedure a couple of times. In case of the linear doodle in the lower-right corner this is done 6 times, in the quadratic doodle above it, 11 times. For the reason behind this, see neverendingbooks.org.</p>
+<p>So a modified snippet from the result would be<br />
+[sourcecode language="latex"]<br />
+\usetikzlibrary{decorations.pathmorphing}</p>
+<p>\begin{tikzpicture}[generic/.style = {thick, decorate, decoration = {random steps, segment length = 2.5mm, amplitude = 2mm}, rounded corners}]<br />
+\foreach \k in {0,...,10} {<br />
+  \draw[generic] (0,0) -- ++ (1,0);<br />
+}<br />
+\end{tikzpicture}[/sourcecode]I should find a way to get rid of the explicit loop though. Of course a macro would be possible, but there might be a more TikZ-y way.</p>
+<h3>Results</h3>
+<p>So, I'm interested in your result! Well, here it is:<img src="{{ site.baseurl }}/assets/mumford-mine.png" alt="My rendering of Mumford's Spec Z[x]" />I tried to adhere to the original version as much as possible. And the code to produce this:[sourcecode language="latex" collapse="true" wraplines="false"]\begin{tikzpicture}<br />
+  [line/.style = {very thick},<br />
+   generic/.style = {thick, decorate, decoration = {random steps, segment length = 2.5mm, amplitude = 2mm}, rounded corners},<br />
+   font = \scriptsize]<br />
+  % logarithmic x-axis<br />
+  \newcommand\primelog[1]{-30/(#1^.2)}<br />
+  \pgfmathsetseed{1002}</p>
+<p>  % how high do we want our picture to go?<br />
+  \def\height{6}<br />
+  % how many primes should we depict?<br />
+  \def\primes{2,3,5,7,11,13,17,19}</p>
+<p>  % the square containing our picture<br />
+  \draw ({\primelog{2}-1.5},-.5)<br />
+        -- ({\primelog{25}+1.5},-.5)<br />
+        -- ({\primelog{25}+1.5},\height-.5)<br />
+        -- ({\primelog{2}-1.5},\height-.5)<br />
+        -- cycle;</p>
+<p>  % vertical lines<br />
+  \foreach \p in \primes {<br />
+    \draw[line] ({\primelog{\p}},-1) -- ++ (0,\height+1);<br />
+  }</p>
+<p>  % we only name a few of the vertical lines end their generic points<br />
+  \foreach \p in {2,3,5,7} {<br />
+    \ifthenelse{\p&lt;7}{\node at ({\primelog{\p}+0.2},\height-1.5) [right] {$[(\p)]$};}{}<br />
+    \node at ({\primelog{\p}},-1) [below] {$\mathbb{V}((\p))$};<br />
+    \foreach \k in {0,...,8} {<br />
+      \draw[generic] ({\primelog{\p}},\height-1) -- ++ (0,-1);<br />
+    }<br />
+  }<br />
+  \node at ({\primelog{11}},-1) [below] {\phantom{$\mathbb{V}$}$\ldots$\phantom{$\mathbb{V}$}}; % TODO ugly hack</p>
+<p>  % generic point<br />
+  \node at ({\primelog{27}},\height-2.3) {$[(0)]$ generic point};<br />
+  \foreach \k in {0,...,6} {<br />
+    \draw[generic] ({\primelog{25}+1},\height-1) -- ++ (0,-1) -- ++ (-.3,.7) -- ++ (-.7,.3) -- ++ (1,0) -- ++ (-.4,-.4);<br />
+  }</p>
+<p>  % linear (p,x)<br />
+  \foreach \p in {2,3,5} {<br />
+    \draw[fill] ({\primelog{\p}},0) circle (2pt) node [above right] {$[(\p,X)]$};<br />
+  }<br />
+  \foreach \p in {7,11,13,17,19,23} {<br />
+    \draw[fill] ({\primelog{\p}},0) circle (2pt);<br />
+  }<br />
+  \draw[line] ({\primelog{2}-1},0) -- ({\primelog{25}+1.5},0);<br />
+  \node at ({\primelog{25}+.5},0.3) {$(X)$};<br />
+  \foreach \k in {0,...,5} {<br />
+    \draw[generic, decoration = {amplitude = 1mm}] ({\primelog{25}},0) -- ++ (1,0);<br />
+  }</p>
+<p>  % the linear points<br />
+  \foreach \p/\k/\h/\pos in {2/1/2/left, 3/1/1/right, 5/1/0.8/right, 3/2/3/right, 5/2/1.6/below right, 5/3/2.4/above right, 5/4/3.2/right} {<br />
+    \draw[fill] ({\primelog{\p}},\h) circle (2pt) node [\pos] {$[(\p,X+\k)]$};<br />
+  }<br />
+  \foreach \h in {1,2,3,5,6,7} {<br />
+    \draw[fill] ({\primelog{7}},4/8*\h) circle (2pt);<br />
+  }</p>
+<p>  % x^2+1<br />
+  \draw[line]<br />
+    ({\primelog{2}},2)<br />
+    .. controls ++ (0,1) and ++ (-1,0) ..<br />
+    ({\primelog{3}},2+1/10)<br />
+    .. controls ++ (1,0) and ++ (-1,0) ..<br />
+    ({\primelog{5}},12/5)<br />
+    .. controls ++ (.5,0) and ++ (-.5,0) ..<br />
+    ({\primelog{7}},16/8+1/10)<br />
+    -- ++ (0.5,0);<br />
+  \draw[line]<br />
+    ({\primelog{2}},2)<br />
+    .. controls ++ (0,-1) and ++ (-1,0) ..<br />
+    ({\primelog{3}},2-1/10)<br />
+    .. controls ++ (1,0) and ++ (-1,0) ..<br />
+    ({\primelog{5}},8/5)<br />
+    .. controls ++ (.5,0) and ++ (-.5,0) ..<br />
+    ({\primelog{7}},16/8-1/10)<br />
+    -- ({\primelog{25}+1.5},16/8-1/10);<br />
+  \draw[densely dashed] ({\primelog{3}},2) ellipse [x radius = 4pt, y radius = 6pt];<br />
+  \draw[densely dashed] ({\primelog{7}},2) ellipse [x radius = 4pt, y radius = 6pt];</p>
+<p>  \node at ({\primelog{25}+.5},2.3) {$(X^2+1)$};<br />
+  \foreach \k in {0,...,10} {<br />
+    \draw[generic] ({\primelog{25}},16/8-1/10) -- ++ (1,0);<br />
+  }<br />
+\end{tikzpicture}[/sourcecode]I'm not saying this is the most elegant code, but it was a nice exercise so far.</p>
+<p>Remark how the second (i.e., the printed) version (wrongly) depicts the doodle corresponding to $latex (2)$ with curls, which I believe to be wrong. Only the generic point captures information coming from all directions.</p>
+<p>Now comes the possibility for generalization: use Sage to produce certain parts of the picture, depicting the behavior of other polynomials, for instance cyclotomic polynomials. This will have to wait a while as my exams are nearing but, but I would like to thank Lieven Le Bruyn so far for his explanation, motivation and inspiration. And his scan of the original mimeographed version.</p>

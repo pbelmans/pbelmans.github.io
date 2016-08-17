@@ -1,0 +1,73 @@
+---
+layout: post
+title: 'Computational composition: the kick start'
+date: 2011-08-15 17:57:50.000000000 +02:00
+type: post
+published: true
+status: publish
+categories:
+- computer-science
+- meta
+- music
+tags: []
+meta:
+  _edit_last: '15754637'
+  tagazine-media: a:7:{s:7:"primary";s:0:"";s:6:"images";a:0:{}s:6:"videos";a:0:{}s:11:"image_count";s:1:"0";s:6:"author";s:8:"15754637";s:7:"blog_id";s:8:"15229912";s:9:"mod_stamp";s:19:"2011-08-18
+    12:34:46";}
+author:
+  login: pbelmans
+  email: pieterbelmans@gmail.com
+  display_name: pbelmans
+  first_name: ''
+  last_name: ''
+---
+<p>This will be a series of posts about computational composition. The following section is an overview of my personal views and experiences with this subject and can be safely skipped.</p>
+<h3>Introduction</h3>
+<p>The <a href="http://pbelmans.wordpress.com/about/">About me</a> (and the blog's tag line) suggests an interest in computational composition and I promised myself to consider this blog as the place to really start my discovery of this subject. That promise was made almost a year ago. Fast forward to today, now is the moment I finally found the time (I had plenty in July though) and energy (I had none in July unfortunately) to begin.</p>
+<p>Having studied musical analysis, strict and free counterpoint, ornamental chorales and harmony, combined with my background as a computer scientist, there always has been an interest in both <em>stochastic</em> and <em>computational</em> (or call it algorithmic) composition. Back in high school I wrote something like a bachelor's thesis on stochastic composition, analyzing <a href="http://en.wikipedia.org/wiki/Iannis_Xenakis">Iannis Xenakis</a>' Achorripsis. But it has been quiet the few last years, not having a real goal to pursue in my study.</p>
+<p>A year ago I decided to put the lessons learnt in my Artificial Intelligence course that academic year to a use and write my own little counterpoint tool, capable of solving the kind of exercises I've been doing for a few years now. A couple days into my project (mere hours before getting my first 'first species' counterpoint output) I discovered <a href="http://strasheela.sourceforge.net/">Strasheela</a> and a world opened. Everything I was thinking about (and about a thousand times more) was already available in this project. That was around the time I registered this blog at <a href="http://wordpress.com">WordPress.com</a>, with the vague idea to delve deeper into Strasheela. For a myriad of reasons, that didn't happen back then, but now the moment has come to take up this initial goal.</p>
+<p>Okay, interesting. Tell me more!</p>
+<h3>Strasheela?</h3>
+<p>Let me quote the website.</p>
+<blockquote><p>Strasheela is a highly expressive constraint-based music composition system. The Strasheela user declaratively states a music theory and the computer generates music which complies with this theory. A theory is formulated as a constraint satisfaction problem (CSP) by a set of rules (constraints) applied to a music representation in which some aspects are expressed by variables (unknowns). Music constraint programming is style-independent and is well-suited for highly complex theories (e.g. a fully-fledged theory of harmony). User-interface is the programming language Oz. The results can be output into various formats including MIDI, Csound, and Lilypond.</p></blockquote>
+<p>So this is exactly what I intended to make (and much more): a (generic) system capable of solving counterpoint exercises. But some words in this description might be unfamiliar. A small dictionary:</p>
+<dl>
+<dt><a href="http://en.wikipedia.org/wiki/Counterpoint">counterpoint</a></dt>
+<dd>A framework of writing music. Given a set of rules and guidelines one writes music, satisfying these rules and trying to sound as good as possible. The focus in counterpoint is on equally important melodies, interacting in an interesting polyphonic manner. It is a highly theoretical view of composition, the actual musical value is (in strict counterpoint) less focused on. In order to write classical music one follows a counterpoint course to learn a lot of rules, try to gain some intuition into composing and forget most rules afterwards, the <em>strict</em> means really <strong>strict</strong> :).</dd>
+<dt><a href="http://en.wikipedia.org/wiki/Constraint_satisfaction">constraint</a></dt>
+<dd>A rule that must be fulfilled for a solution to be a correct solution, in the case of counterpoint "no parallel fifths" is an important constraint. Other constraints are for instance the range of a voice, the allowed steps in a melody, etc.</dd>
+<dt><a href="http://en.wikipedia.org/wiki/Constraint_satisfaction_problem">constraint satisfaction proble</a>m</dt>
+<dd>A set of constraints ask for a solution fulfilling them. For instance counterpoint can be considered as a set of constraints, so CSP's is what we'll be talking about.</dd>
+<dt><a href="http://mozart-oz.org/">Oz (and Mozart)</a></dt>
+<dd>citing the offical website (emphasis mine):</p>
+<blockquote><p>The Mozart Programming System is an advanced development platform for intelligent, distributed applications. The system is the result of a decade of research in programming language design and implementation, <strong>constraint-based inference</strong>, distributed computing, and human-computer interfaces. As a result, Mozart is unequalled in expressive power and functionality. [...]</p>
+<p>Mozart is based on the Oz language, which supports declarative programming, object-oriented programming, <strong>constraint programming</strong>, and concurrency as part of a coherent whole. For distribution, Mozart provides a true network transparent implementation with support for network awareness, openness, and fault tolerance. Mozart supports multi-core programming with its network transparent distribution and is an ideal platform for both general-purpose distributed applications as well as for <strong>hard problems requiring sophisticated optimization and inferencing abilities</strong>. [...]</p>
+</blockquote>
+<p>Basically it is just another programming language (and environment), but one with special facilities for our problem.
+</dd>
+<dt><a href="http://en.wikipedia.org/wiki/MIDI">MIDI</a></dt>
+<dd>The familiar bleeps, suggesting something like music. Actually it's a whole device-control language, but let's stick with the 90s bleeps in games.</dd>
+<dt><a href="http://csound.sourceforge.net/">Csound</a></dt>
+<dd>A programming language, designed to program sound. I guess I won't be using this too often, so let's stick with "MIDI two point oh" as a description.</dd>
+<dt><a href="http://lilypond.org/">Lilypond</a></dt>
+<dd>A mark-up language, just like TeX, designed to typeset music. It's pretty awesome and I have played a bit with it, maybe I'll show the few exercises I wrote in it this year.</dd>
+</dl>
+<h3>Goal of this series</h3>
+<p>Dive into the world of Strasheela and computational composition. Hopefully it will be successful and interesting, to both myself and the world (aim high). There are some possible goals at this moment (from least to most ambitious):</p>
+<ol>
+<li>reproduce my exercises for my counterpoint class, comparing the obtained results;</li>
+<li>extend my knowledge of counterpoint, harmony, chorales using Strasheela;</li>
+<li>use Strasheela to actually compose music.</li>
+</ol>
+<p>For the moment, I'll stick with the first. That seems ambitious enough. The provided examples only cover two-voice first species counterpoint and a kind of two-voice florid counterpoint, so I have a lot of programming ahead.</p>
+<p>Expect more posts on this subject, starting with two "Getting started" posts coming soon.</p>
+<p><small>Unfortunately, the installation at <a href="http://wordpress.com">WordPress.com</a> doesn't offer the plug-ins necessary to make series management easy. I'll do my best to keep everything as coherent as possible.</small></p>
+<h3>The Strasheela series</h3>
+<ol>
+<li><a href="http://pbelmans.wordpress.com/2011/08/15/computational-composition-the-kick-start/">Computational composition: the kick start</a></li>
+<li><a href="http://pbelmans.wordpress.com/2011/08/16/installing-the-mozart-programming-system/">Installing the Mozart Programming System</a></li>
+<li><a href="http://pbelmans.wordpress.com/2011/08/16/installing-strasheela/">Installing Strasheela</a></li>
+<li><a href="http://pbelmans.wordpress.com/2011/08/18/development-of-the-fuxian-counterpoint-project-is-now-available-at-github/">Development of the Fuxian counterpoint project is now available at GitHub</a></li>
+<li><a href="http://pbelmans.wordpress.com/2011/09/17/struggling-with-oz/">Struggling with Oz</a></li>
+<li><a href="http://pbelmans.wordpress.com/2011/09/24/counterpoint-in-gregorian-modes/">Counterpoint in Gregorian modes</a></li>
+</ol>

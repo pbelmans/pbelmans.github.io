@@ -1,0 +1,54 @@
+---
+layout: post
+title: 'Perfect groups of infinite commutator length: example'
+date: 2012-09-14 21:39:32.000000000 +02:00
+type: post
+published: true
+status: publish
+categories:
+- math
+tags: []
+meta:
+  _edit_last: '15754637'
+  _oembed_9d49c7c96642164cb7382ca544846762: '{{unknown}}'
+author:
+  login: pbelmans
+  email: pieterbelmans@gmail.com
+  display_name: pbelmans
+  first_name: ''
+  last_name: ''
+---
+<p>Having introduced the notion of a quasimorphism in the <a href="http://pbelmans.wordpress.com/2012/09/11/perfect-groups-of-infinite-commutator-length-setup/" title="Perfect groups of infinite commutator length: setup">previous post</a> we can now give an example of a group having infinite commutator length.</p>
+<h2>Homogenization</h2>
+<p>Recall that we have reduced our problem to given an example of a perfect group $latex G$ admitting an unbounded homogeneous quasimorphism. To make things easier we give a procedure to create an unbounded homogeneous quasimorphism out of every unbounded quasimorphism. Let's first quote a lemma from your favorite real analysis course.</p>
+<p><strong>Lemma</strong> If $latex (u_n)_n$ is a real sequence such that for all $latex p,q\in\mathbb{N}$ there exists a $latex c\geq 0$ such that $latex |u_{p+q}-u_p-u_q|\leq c$ then the sequence $latex (u_n/n)_n$ converges.</p>
+<p>To see how this lemma applies to the situation of inhomogeneous quasimorphisms, consider $latex p_1,p_2\in\mathbb{N}$ and remark that $latex |q(g^{p_1+p_2})-q(g^{p_1})-q(g^{p_2})|\leq\mathrm{D}(q)$. So we can define the <strong>homogenization</strong> of a quasimorphism $latex q$ by setting $latex \overline{q}(g)=\lim_{n\to+\infty}q(g^n)/n$. Let's check this definition.</p>
+<p><strong>Lemma</strong> $latex \overline{q}$ is a homogeneous quasimorphism and it is uniformly close to the original quasimorphism in the sense that $latex |\overline{q}(g)-q(g)|\leq\mathrm{D}(q)$.</p>
+<p><em>Proof:</em> Take $latex g\in G$, dividing $latex |q(g^n)-nq(g)|\leq(n-1)\mathrm{D}(q)$ by $latex n$ and letting $latex n$ tend to infinity we get that the homogenization is uniformly close to the original quasimorphism. Writing the homogenization as $latex \overline{q}=(\overline{q}-q)+q$ where the first term is a bounded map from $latex G$ to the reals and hence a quasimorphism and the second is a quasimorphism by assumption we get that the homogenization is at least again a quasimorphism.</p>
+<p>To prove homogeneity, we consider $latex p&gt;0$ first. For $latex g\in G$ we have $latex \overline{q}(g^p)=\lim_{n\to+\infty}q(g^{np})/n$ which by unboundedness of the quasimorphism converges to $latex p\overline{q}(g)$. For $latex p=0$ there is nothing to prove, as $latex q(1_G)/n$ immediately converges to zero. For negative values of $latex p$ we can show that $latex \overline{q}(g^p)=-\overline{q}(g^{-p})$. To see this, write $latex h=g^p$ and consider $latex |\overline{q}(1_G)-(\overline{q}(h^n)+\overline{q}(h^{-n}))|\leq\mathrm{D}(\overline{q})$. Now applying the positive case to $latex h^n$ and $latex h^{-n}=(h^{-1})^n$ to get a factor $latex n$ outside, dividing both sides by this factor and taking the limit we get the desired equality. This rather boring check is done now: the homogenization really gives us a homogeneous quasimorphism. QED</p>
+<h2>Example</h2>
+<p>Having all this machinery in place we're ready for our conclusion. We need an infinite perfect group, and show that it admits an unbounded quasimorphism. Our first candidate could be $latex \mathrm{SL}_2(k)$ for $latex k$ any infinite field, as long as it has more than 3 elements it will be perfect. Unfortunately, these groups will not do. Let's introduce a group which is probably well-known in dynamics, differential geometry and topology circles, but which is entirely new to me. So let</p>
+<p>$latex \mathrm{Homeo}_{\mathbb{Z}}(\mathbb{R})=\{ f\in\textrm{Homeo}_+(\mathbb{R})\mid\forall n\in\mathbb{Z},\forall x\in\mathbb{R}\colon f(x+n)=f(x)+n \}$</p>
+<p>where $latex \mathrm{Homeo}_+(\mathbb{R})$ is the group of increasing homeomorphisms of the real line, equipped with the Euclidean topology. If I had a blackboard I would draw a squiggly increasing line from the lower left corner to the upper right corner. And we require these homeomorphisms to fulfil a certain periodicity condition, what happens in $latex [0,1]$ determines everything. The group multiplication is given by the composition of functions in the order we write them. This rather convoluted way of describing the group actually is beneficial for introducing our quasimorphism:</p>
+<p><strong>Lemma</strong> $latex q\colon\textrm{Homeo}_{\mathbb{Z}}(\mathbb{R})\to\mathbb{R}:f\mapsto f(0)$ is an unbounded quasimorphism.</p>
+<p><em>Proof:</em> Take $latex f,g\in G$. Denoting $latex \lfloor x\rfloor$ for the integer part of $latex x\in\mathbb{R}$ we have</p>
+<p>$latex \lfloor g(0)\rfloor\leq g(0)&lt;\lfloor g(0)\rfloor +1$</p>
+<p>and multiplying by $latex f$ on the left we get</p>
+<p>$latex f(\lfloor g(0)\rfloor)\leq f(g(0))&lt;f(0)+g(0)-1$</p>
+<p>and</p>
+<p>$latex f(\lfloor g(0)\rfloor+1)=f(0)+\lfloor g(0)\rfloor+1\leq f(0)+g(0)+1$.</p>
+<p>Interpreting these in terms of our proposed mapping we get</p>
+<p>$latex |q(fg)-q(f)-q(g)|\leq 1$</p>
+<p>so it is a quasimorphism. Now take $latex \tau&gt;0$ and define $latex f_\tau\colon\mathbb{R}\to\mathbb{R}:x\mapsto x+\tau$. We have $latex q(f_\tau)=\tau$, so our quasimorphism is unbounded. QED</p>
+<p>What I haven&#039;t done is proving that $latex \mathrm{Homeo}_{\mathbb{Z}}(\mathbb{R})$ is perfect, which was out of the scope of the lecture. This is apparently a result by Mather-Thurston, and in some of the papers given in the next section it is hinted at, but I haven&#039;t found the actual result written in full detail somewhere.</p>
+<h2>Further reading</h2>
+<p>My exposure to quasimorphisms and commutator length is limited to a 1.5 hour seminar talk and some reading on my own, so by no means am I capable of suggesting the relevant literature in any decent sense. But I have found the following to be interesting:</p>
+<ol>
+<li><a href="http://www.ams.org/notices/200402/what-is.pdf">What is... a quasimorphism?</a> by Dieter Kotschick is a paper in the well-known What is... series by the American Mathematical Society, explaining quasimorphisms and hinting at other applications of the notion.</li>
+<li><a href="http://arxiv.org/pdf/1105.4443v3.pdf">Commutator length of annulus diﬀeomorphisms</a> by Emmanuel Militon, who gave the talk, this paper contains a lot more detail and background on what these notions all mean (i.e. everything is phrased in terms of translation numbers etc., instead of this rather straightforward but ad-hoc approach).</li>
+<li><a href="http://www.math.ethz.ch/~bgabi/ghys%20groups%20acting%20on%20the%20circle.pdf">Groups acting on the circle</a> by Etienne Ghys is a nice overview paper, which really explains what the subject is about.</li>
+<li><a href="http://arxiv.org/pdf/0911.1341.pdf">On quasi-homomorphisms and commutators in the special linear group over a Euclidean ring</a> by Masato Mimura hints at other examples of groups with infinite commutator length, but is mostly concerned with stable commutator length, for which we have the next resource.</li>
+<li><a href="http://www.ams.org/notices/200809/tx080901100p.pdf">What is... stable commutator length?</a> by Danny Calegari is another paper in the What is... series by the AMS that might be of interest.</li>
+<li><a href="http://www.its.caltech.edu/~dannyc/scl/toc.html">scl</a> by Danny Calegari is an entire book about the subject of stable commutator length, for those who cannot get enough of it.</li>
+</ol>
+<p>With this I conclude my trip into what is apparently called quantitative topology. Time to get back to algebraic geometry and number theory :).</p>

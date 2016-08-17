@@ -1,0 +1,59 @@
+---
+layout: post
+title: What are exceptional collections and semi-orthogonal decompositions?
+date: 
+type: post
+published: false
+status: draft
+categories:
+- random
+tags: []
+meta:
+  _edit_last: '15754637'
+  geo_public: '0'
+author:
+  login: pbelmans
+  email: pieterbelmans@gmail.com
+  display_name: pbelmans
+  first_name: ''
+  last_name: ''
+---
+<p>I would like to make the analogy with <em>bases</em> and <em>subspaces</em> in <em>vectorspaces</em> (and explain how hard this analogy fails). The vectorspace in this case is a triangulated category, often from a geometric (i.e. $latex \mathbf{D}^{\mathrm{b}}(X)$ for some variety or scheme $latex X$) or algebraic (i.e. $latex \mathbf{D}^{\mathrm{b}}(A)$ for some algebra $latex A$) origin. We want to study this triangulated category, and understand how much of the geometry or algebra is reflected in the properties of this category.</p>
+<p>Let's write down the definitions.</p>
+<p><strong>Definition</strong> TODO</p>
+<p>The following table could summarise the situation in the geometric case, for which the whole setup works out more nicely than in the full generality of triangulated categories.</p>
+<table>
+<tr>
+<th>linear algebra</th>
+<th>triangulated categories</th>
+</tr>
+<tr>
+<td>vectorspace $latex V$</td>
+<td>derived category $latex \mathbf{D}^{\mathrm{b}}(X)$</td>
+</tr>
+<tr>
+<td>subspace $latex W\subseteq V$</td>
+<td>admissible subcategory $latex \mathcal{T}\subseteq\mathbf{D}^{\mathrm{b}}(X)$</td>
+</tr>
+<tr>
+<td>basis $latex \{v_1,\dotsc,v_n\}$</td>
+<td>full exceptional collection</td>
+</tr>
+<tr>
+<td>automorphisms of the vectorspace</td>
+<td>$latex \mathrm{Aut}(\mathbf{D}^{\mathrm{b}}(X))$</td>
+</tr>
+<tr>
+<td>base change group</td>
+<td>braid group $latex \mathrm{B}_n$</td>
+</tr>
+</table>
+<h2>Pathologies</h2>
+<p>* triangulated dimension does not correspond to length of bases<br />
+* geometric dimension does not correspond to length of bases<br />
+* triangulated dimension does not equal geometric dimension (yet)<br />
+* automorphisms are not known for Calabi-Yau varieties<br />
+* lengths of maximal exceptional collections don't have to agree<br />
+* exceptional collections don't satisfy the Jordan-Hölder property<br />
+* Kuznetsov's base change "=" field extension, only works well for sufficiently nice extensions</p>
+<p>SOD = categorical analogue of cell decomposition</p>

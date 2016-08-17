@@ -1,0 +1,61 @@
+---
+layout: post
+title: 'An extension to our \function macro: injective and surjective functions using
+  optional parameters'
+date: 2010-12-24 09:34:29.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- LaTeX
+tags: []
+meta:
+  _edit_last: '15754637'
+author:
+  login: pbelmans
+  email: pieterbelmans@gmail.com
+  display_name: pbelmans
+  first_name: ''
+  last_name: ''
+---
+<p>Remember from a while ago that I've explained <code>\mathchoice</code> and discussed a macro for flexible function notation. If you don't, I refer you to <a href="/2010/12/15/how-to-let-a-command-automatically-adapt-to-the-current-mathematical-style/">How to let a command automatically adapt to the current mathematical style</a>? Today I'm going to extend its functionality. When using the macro in real life I felt the need to display injective and surjective maps. And I needed both a function and a map macro. The first only mentions the name, domain and codomain while the latter displays how elements are mapped. I'll solve both issues (not that the second is an issue though).</p>
+<p>What I wanted is an optional parameter, indicating whether a map is injective or surjective. The easiest but maybe semantically speaking not the cleanest one is just specifying the kind of arrow through the optional parameter. I've opted for this approach, TeX isn't a semantic mark-up language, but in my solution the non-semantic approach happens nicely. First a word on how TeX handles optional parameter. It handles them in an awful way. It basically boils down to saying "hey, there is an extra parameter" and specifying a default value for it. Now either the optional parameter or the default is assigned to the first variable. That's all there is.</p>
+<p>The optional parameter will be either <code>twohead</code> or <code>hook</code>, indicating surjective respectively injective. The macro<br />
+[sourcecode language="latex" light="true" wraplines="false"]<br />
+\newcommand*\map@arrow[1][]{\csname#1rightarrow\endcsname{}}<br />
+[/sourcecode]<br />
+now expands to the correct <code>\rightarrow</code>: either <code>\twoheadrightarrow</code> or <code>\hookrightarrow</code>. We've defined a command that takes one parameter, the default value is empty and it expands to the control sequence corresponding to the desired command. Notice how you only have to specify the optional prefix to <code>rightarrow</code>, <code>\csname \endcsname</code> is macro expansion at its best.</p>
+<p>So we've arrived at<br />
+[sourcecode language="latex" wraplines="false"]<br />
+\makeatletter<br />
+\newcommand*\map@arrow[1][]{\csname#1rightarrow\endcsname{}}</p>
+<p>\newcommand*\function@textstyle[4][]{#2\colon#3\map@arrow[#1]#4}<br />
+\newcommand*\function[4][]{% raw %}{%<br />
+  \mathchoice<br />
+  {\function@textstyle[long#1]{#2}{#3}{#4}}<br />
+  {\function@textstyle[#1]{#2}{#3}{#4}}<br />
+  {\function@textstyle[#1]{#2}{#3}{#4}}<br />
+  {\function@textstyle[#1]{#2}{#3}{#4}}<br />
+}<br />
+\newcommand*\map@textstyle[6][]{#2\colon#3\rightarrow#4:#5\mapsto#6}<br />
+\newcommand*\map[6][]{%<br />
+  \mathchoice<br />
+    {#2\colon\<br />
+      \begin{array}{ccc}<br />
+        #3&amp;~\map@arrow[long#1]~&amp;#4 \\<br />
+        #5&amp;~\longmapsto~&amp;#6<br />
+      \end{array}<br />
+    }<br />
+  {\map@textstyle[#1]{#2}{#3}{#4}{#5}{#6}}<br />
+  {\map@textstyle[#1]{#2}{#3}{#4}{#5}{#6}}<br />
+  {\map@textstyle[#1]{#2}{#3}{#4}{#5}{#6}}<br />
+}<br />
+\makeatother{% endraw %}<br />
+[/sourcecode]</p>
+<p>Notice that in display style, the <em>long</em> versions of arrows are used. But there is no <code>\longtwoheadrightarrow</code> nor <code>\longhookrightarrow</code>! <a href="http://newsgroups.derkeiler.com/Archive/Comp/comp.text.tex/2007-07/msg00467.html">Let's make them then</a>:<br />
+[sourcecode language="latex" light="true" wraplines="false"]<br />
+\newcommand*\longhookrightarrow{\ensuremath{\lhook\joinrel\relbar\joinrel\rightarrow}}<br />
+\newcommand*\longtwoheadrightarrow{\ensuremath{\relbar\joinrel\twoheadrightarrow}}<br />
+[/sourcecode]</p>
+<p>The command <code>\ensuremath</code> typesets its parameter in mathematical mode, <code>\lhook</code> is (obviously) the left hook, <code>\joinrel</code>eliminates horizontal spacing between symbols, putting them directly next to eachother and <code>\relbar</code> is a horizontal line used to create new mathematical symbols.</p>
+<p>Also note that I've used <code>\newcommand*</code>, the starred version of <code>\newcommand</code>. This macro assumes you won't be feeding it multiple paragraphs, as is the case here. Now when you <em>do</em> feed the <del>troll</del> macro multiple paragraphs, probably due some syntax error, it will complain at a more obvious place: namely exactly where it notices it has to consume too much and not at the end of the file.</p>

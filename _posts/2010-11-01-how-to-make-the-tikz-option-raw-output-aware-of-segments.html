@@ -1,0 +1,54 @@
+---
+layout: post
+title: How to make the TikZ option raw output aware of segments
+date: 2010-11-01 18:54:31.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- LaTeX
+tags: []
+meta:
+  _edit_last: '15754637'
+  _wp_old_slug: ''
+author:
+  login: pbelmans
+  email: pieterbelmans@gmail.com
+  display_name: pbelmans
+  first_name: ''
+  last_name: ''
+---
+<p>As my previous post suggested, I was tweaking the <code>pgfplots</code> code a little, to produce a nice algebraic curve from <code>gnuplot</code> data. The current behaviour just connects all the dots in the automatically produced <code>.table</code> file. But as the calculation of an implicit function in <code>gnuplot</code> involves the creation of a surface and intersecting it with the <em>z=0</em> plane, the output is not as good as it would be in the case of a regular function.</p>
+<p>But, I've hacked together a solution! Just replace the definition of <code>\pgf@readxyfile</code> by</p>
+<pre><code>{% raw %}\def\pgf@readxyfile{%
+  \read1 to \pgf@temp%
+  \let\par=\pgf@savedpar%
+  \edef\pgf@temp{\pgf@temp}%
+  \ifx\pgf@temp\pgfutil@empty%
+  \else\ifx\pgf@temp\pgf@partext%
+    \pgfplotstreamstart%
+    \pgfplotstreamend%
+  \else%
+    \expandafter\pgf@parsexyline\pgf@temp\pgf@stop%
+  \fi\fi%
+  \ifeof1\else\expandafter\pgf@readxyfile\fi%
+}{% endraw %}</code></pre>
+<p>It actually went quite smooth, it took me less than an hour to start reading the source (after a tip on <a href="http://tex.stackexchange.com">tex.stackexchange.com</a>) to find the solution, write an answer for my topic and write two blog posts about it.</p>
+<p>By the way, the code to produce the plot is</p>
+<pre><code>\begin{tikzpicture}[xscale=1,yscale=.25]
+  \draw plot[id=curve, raw gnuplot, smooth] function{
+    f(x,y) = y**2 + (x**2 - 5)*(4*x**4 - 20*x**2 + 25);
+    set xrange [-4:4];
+    set yrange [-15:15];
+    set view 0,0;
+    set isosample 1000,1000;
+    set table;
+    set size square;
+    set cont base;
+    set cntrparam levels incre 0,0.1,0;
+    unset surface;
+    splot f(x,y)
+  };
+\end{tikzpicture}</code></pre>
+<p>So in case you've always wondered how to draw algebraic curves or implicit functions in LaTeX, this is my hackish solution! Any comments on this?</p>
+<p><ins>For people looking at how to draw implicit functions using <code>pgfplots</code>, I refer you to <a href="http://pbelmans.wordpress.com/2010/11/11/howto-draw-algebraic-curves-using-pgftikz/">Howto: Draw Algebraic curves using TikZ</a>.</ins></p>

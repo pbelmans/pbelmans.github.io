@@ -1,0 +1,39 @@
+---
+layout: post
+title: Comparison of topologies
+date: 2014-08-01 16:10:05.000000000 +02:00
+type: post
+published: true
+status: publish
+categories:
+- computer-science
+- math
+tags: []
+meta:
+  _edit_last: '15754637'
+  geo_public: '0'
+  _publicize_pending: '1'
+author:
+  login: pbelmans
+  email: pieterbelmans@gmail.com
+  display_name: pbelmans
+  first_name: ''
+  last_name: ''
+---
+<p>Last year I made a graph comparing a bunch of Grothendieck topologies, and I had been toying with the idea of making an interactive web version of it. Two weeks ago Shane Kelly published a preprint <a href="http://arxiv.org/abs/1407.5782">Points in algebraic geometry</a>, while Stefan Schroër tackled in a preprint that appeared on the same day the intriguingly hard case of <a href="http://arxiv.org/abs/1407.5446">Points in the fppf topology</a>.</p>
+<p>The article by Kelly contains a comparison graph, just like the one I made last year (mine emphasised the "usual" topologies more, and had less topologies), but also describes what type of rings act as stalks for this topology, and gave short definitions of each of the topologies in use. Hence I had all the data to make a complete comparison!</p>
+<p>There is a <a href="http://win.ua.ac.be/~pbelmans/topologies-comparison/index.html">very preliminary draft available</a>. I'll be away from the internet for 2 weeks, hence if you are looking for a summer programming project and feel like contributing, there is the <a href="https://github.com/pbelmans/topologies-comparison">GitHub repository</a>. I want to:</p>
+<ol>
+<li>Improve the layout (I'm a horrible designer, as you can tell, and my SVG skills are rather sketchy).</li>
+<li>Add explanations on how to use the comparison graph.</li>
+<li>Fix all the TODOs, the code is riddled with them...</li>
+<li>Add more data (you don't have to be a programmer for this): I am especially looking for improved comparison results, more topologies, ... I know there is a <code>fpuo</code> and a <code>l'</code> topology out there. Are there more topologies in use?</li>
+<li>Add the canonical and extensive topology to the graph, and indicate these properties in the "passport" as well.</li>
+<li>I want a tighter integration with the Stacks project, preferably all the result that are used should turn up there, this requires both writing for the Stacks project and providing the functionality in the comparison graph.</li>
+<li>Right now everything is for $latex \mathrm{Sch}/S$, the category of separated schemes of finite type over $latex S$ a separated noetherian scheme: I don't know what goes wrong if we take a different category, hence
+<ul>
+<li>I would like to be able to switch between categories, and suitably update the comparison graph.</li>
+<li>I have no clue regarding the actual results that should be there...</li>
+</ul>
+</li>
+</ol>

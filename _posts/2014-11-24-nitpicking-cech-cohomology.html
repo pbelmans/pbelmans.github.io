@@ -1,0 +1,37 @@
+---
+layout: post
+title: Nitpicking on Čech cohomology notation
+date: 2014-11-24 14:24:33.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- LaTeX
+tags: []
+meta:
+  _edit_last: '15754637'
+  geo_public: '0'
+  _publicize_pending: '1'
+author:
+  login: pbelmans
+  email: pieterbelmans@gmail.com
+  display_name: pbelmans
+  first_name: ''
+  last_name: ''
+---
+<p>A long time ago I wrote about how to <a href="http://pbelmans.wordpress.com/2012/03/29/how-to-write-cech-cohomology-groups-in-latex/">produce Čech cohomology groups in LaTeX</a>, while in the <a href="https://pbelmans.wordpress.com/2014/11/23/adding-an-equation-to-the-table-of-contents/">previous post</a> there is the Čech-to-derived spectral sequence making an appearance, and when I took the first screenshot in that blogpost I realised there was something wrong with the positioning of the exponent. Compare:<br />
+<img src="{{ site.baseurl }}/assets/cech-bad.png" alt="Positioning of the exponent in Cech cohomology: bad" /><br />
+to<br />
+<img src="{{ site.baseurl }}/assets/cech-good.png" alt="Positioning of the exponent in Cech cohomology: good" /><br />
+The first one is the naive approach, obtained by using</p>
+<pre><code>\DeclareMathOperator\cHH{\check{\HH}}
+\DeclareMathOperator\HH{H}</code></pre>
+<p>The problem with it is that the accent raises the height of the box, thereby raising the exponent too. But visually speaking the $latex q$ and $latex p$ should be on the same height. This is done by using the <code>\smash</code> macro (which already exists in Plain TeX, and is not part of <a href="http://ctan.org/pkg/mathtools"><code>mathtools</code></a> which I mistakingly thought up to today) which basically annihilates the height from its argument in all layout computations. It can create a horrendous mess, but here it is the solution.</p>
+<p>To make sure that our macro is as generally applicable as possible we do insert the height of the argument which will then act as the total height of the result using the <code>\vphantom</code> macro:</p>
+<pre><code>\newcommand\cechit[1]{\smash{\check{#1}}\vphantom{#1}}
+
+\DeclareMathOperator\cHH{\cechit{\HH}}
+\DeclareMathOperator\HH{H}
+</code></pre>
+<p>which results in the second screenshot.</p>
+<p><small>The irony is that if I wouldn't be using macros, there wouldn't be a problem, as TeX will not treat it as one high box if you hardcode everything. Oh well...</small></p>

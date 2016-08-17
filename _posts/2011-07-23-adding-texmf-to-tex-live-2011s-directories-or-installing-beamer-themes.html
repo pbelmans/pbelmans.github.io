@@ -1,0 +1,51 @@
+---
+layout: post
+title: Adding ~/.texmf to TeX Live 2011's directories, or installing beamer themes
+date: 2011-07-23 16:34:59.000000000 +02:00
+type: post
+published: true
+status: publish
+categories:
+- LaTeX
+tags: []
+meta:
+  _edit_last: '15754637'
+author:
+  login: pbelmans
+  email: pieterbelmans@gmail.com
+  display_name: pbelmans
+  first_name: ''
+  last_name: ''
+---
+<p>While trying to install the <a href="https://github.com/nschloe/ua-beamer">UA <code>beamer</code> theme</a> in the most appropriate way, I stumbled for the umpteenth time on this issue. Where and how to install a <code>beamer</code> theme, or by extension any non-TeX Live package, without resorting to <code>sudo mv</code>'ing it into <code>/usr/local/texlive20xx/...</code>? I don't remember going through this process the last time I installed some packages myself, but as I recently installed TeX Live 2011 and decided to do things <em>the proper way</em> (at least in my opinion) I decided to write this post.</p>
+<p>What is "installing a package" by the way? It boils down to letting programs like <code>pdflatex</code> know <em>where certain files are situated</em>. Installing is therefore nothing but dumping the necessary files somewhere and let TeX know where it can find them. But TeX doesn't look everywhere, so we have to choose a place to dump the files and tell TeX they're there.</p>
+<p><ins datetime="2011-07-24T11:49:34+00:00">As <cite>Manuel Pégourié-Gonnard</cite> <a href="http://pbelmans.wordpress.com/2011/07/23/adding-texmf-to-tex-live-2011s-directories-or-installing-beamer-themes/#comment-73"><strong>pointed out in the comments</strong></a>, this extensive approach isn't quite necessary. If you want to add your own files to <code>~/texmf</code>, <em>just perform Step 7</em> (after creating the folder as in Step 1, of course). This should do the trick, without further ado.</p>
+<p>In case you want the "hidden folder approach" I wrote about, <em>performing Steps 1, 2, the first line of Step 4 and Step 7</em> should be fine.</ins></p>
+<p>A quick yet extensively documented howto:</p>
+<ol>
+<li>Open a shell and create your (hidden) local <code>texmf</code> folder by invoking <code>mkdir ~/.texmf</code>.</li>
+<li>Locate <code>texmf.cnf</code> by invoking <code>kpsewhich texmf.cnf</code>. You should end up with a path like <code>/usr/local/texlive/2011/texmf.cnf</code>.</li>
+<li>Open this file <em>as root</em> in your favorite text editor (in case you don't yet have a favorite text editor, I suggest <a href="http://vim.org/">vim</a>), i.e. <ins datetime="2011-07-23T16:12:10+00:00"><code>sudoedit /usr/local/texlive/2011/texmf.cnf</code> is a shortcut for this, although no-one says you cannot use <code>sudo gedit</code></ins> <del datetime="2011-07-23T16:12:10+00:00">e.g. <code>sudo vim /usr/local/texlive/2011/texmf.cnf</code> but you'll probably want to replace <code>vim</code> by <code>gedit</code></del>.</li>
+<li>Add the following two lines anywhere you like in this file (it's probably rather empty, containing nothing but comments)
+<pre>TEXMFHOME = ~/.texmf
+<del datetime="2011-07-24T11:49:34+00:00">TEXMFDBS = {!!$TEXMFSYSCONFIG,!!$TEXMFSYSVAR,!!$TEXMFMAIN,!!$TEXMFLOCAL,!!$TEXMFHOME,!!$TEXMFDIST}</del></pre>
+<p>	In case you're interested in what's so special about this <code>$TEXMFDBS</code> variable: unlike the standard configuration, we have added our non-standard hidden local <code>texmf</code> folder by adding <code>$TEXMFHOME</code>, a variable that's not there by default <ins datetime="2011-07-24T11:49:34+00:00">but that is not necessary so skip this step</ins>.</li>
+<li><del datetime="2011-07-24T11:49:34+00:00">Run <code>updmap</code>, this will update your configuration files. You'll get a lot of output, hopefully no errors.</del></li>
+<li><del datetime="2011-07-24T11:49:34+00:00">Run <code>texhash</code>. Its output will look like this
+<pre>texhash: Updating /home/.../.texmf/ls-R... 
+texhash: /usr/local/texlive/2011/texmf: directory not writable. Skipping...
+texhash: /usr/local/texlive/2011/texmf-config: directory not writable. Skipping...
+texhash: /usr/local/texlive/2011/texmf-dist: directory not writable. Skipping...
+texhash: /usr/local/texlive/2011/../texmf-local: directory not writable. Skipping...
+texhash: /usr/local/texlive/2011/texmf-var: directory not writable. Skipping...
+texhash: Done.</pre>
+<p>	As we didn't run <code>texhash</code> with root privileges, most directories are skipped. Yet the first directory where the dots are replaced by your username looks promising.</del>
+</li>
+<li>Mimic the structure of <code>/usr/local/texlive/2011/texmf/</code>, i.e. in my case that means I have to add the <code>beamer</code> theme in the folder <code>~/.texmf/tex/latex/beamer/themes/theme/</code> (or possibly some variation on this, but I decided to do it the strict way).</li>
+</ol>
+<p>The benefits of this approach are immediately obvious: we can write in our <code>~/.texmf</code> folder as we like and run <code>texhash</code> without root privileges. And it's hidden from our view if we don't bother about hidden files! So we've fixed <del datetime="2011-07-24T11:49:34+00:00">two</del><ins datetime="2011-07-24T11:49:34+00:00">one</ins> issue<del datetime="2011-07-24T11:49:34+00:00">s</del>:</p>
+<ul>
+<li>TeX Live 2011 defines <code>$TEXMFHOME</code> as <code>~/texmf</code> but we want it to be invisible so we've overridden the value with <code>~/.texmf</code>.</li>
+<li><del datetime="2011-07-24T11:49:34+00:00">TeX Live 2011 ignores <code>$TEXMFHOME</code> for its filename database. Hence your files would never have been found.</del></li>
+</ul>
+<p><ins datetime="2011-07-24T11:49:34+00:00">What remains is an explanation on how to configure TeX Live 2011 to look in a hidden folder, instead of its default visible folder. The rest can safely be ignored.</ins></p>
