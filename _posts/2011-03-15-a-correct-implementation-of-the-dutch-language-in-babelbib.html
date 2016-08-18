@@ -11,13 +11,13 @@ tags: []
 meta:
 author: Pieter Belmans
 ---
-<p>When preparing slides for my (Dutch) LaTeX course I decided to mention <a href="http://ctan.org/pkg/babelbib"><code>babelbib</code></a>: this is a package for <em>localizing your bibliographies</em>. Maybe you've never given much thought to languages in bibliographies, but the main issue that the title of the work that's being referenced often is in a language that is not the document's language and needs another hyphenation. And you probably want your bibliographical information such as version numbers, visited on dates, months of publication or words as <cite>editor</cite> in that same document's language. No problem if both the works you're referencing and your own documents are in English, but when writing a (in our case) Dutch document it rarely happens all your sources are in Dutch. At least in mathematics and computer science it does :).</p>
-<p>So I decided to learn my "students" (and myself) about this interesting package. But as I was constructing examples I discovered the implementation is incorrect:</p>
+<p>When preparing slides for my (Dutch) LaTeX course I decided to mention <a href="http://ctan.org/pkg/babelbib"><code>babelbib</code></a>: this is a package for <em>localizing your bibliographies</em>. Maybe you've never given much thought to languages in bibliographies, but the main issue that the title of the work that's being referenced often is in a language that is not the document's language and needs another hyphenation. And you probably want your bibliographical information such as version numbers, visited on dates, months of publication or words as <cite>editor</cite> in that same document's language. No problem if both the works you're referencing and your own documents are in English, but when writing a (in our case) Dutch document it rarely happens all your sources are in Dutch. At least in mathematics and computer science it does :).
+<p>So I decided to learn my "students" (and myself) about this interesting package. But as I was constructing examples I discovered the implementation is incorrect:
 <ul>
-<li>months are capitalized;</li>
-<li>not all available languages are translated (hence not available as an option within <code>babelbib</code>);</li>
-<li>the capitalization of some other terms was incorrect (German and Dutch differ greatly with respect to this);</li>
-<li>both shortened and full ordinal numbers (the linguistic meaning of the word, not everything is mathematics) are not handled correctly (which seems the case for most languages).</li>
+<li>months are capitalized;
+<li>not all available languages are translated (hence not available as an option within <code>babelbib</code>);
+<li>the capitalization of some other terms was incorrect (German and Dutch differ greatly with respect to this);
+<li>both shortened and full ordinal numbers (the linguistic meaning of the word, not everything is mathematics) are not handled correctly (which seems the case for most languages).
 </ul>
 <p>This fact is mentioned in the manual's todo section and I mailed the author about it, but in the meanwhile, here is my fix. I am not sure about some abbrevations, but the main issues are correct now. The following file is a replacement for <code>dutch.bdf</code>:[sourcecode language="tex" wraplines="false" toolbar="false" collapse="true"]{% raw %}%%<br />
 %% This is file `dutch.bdf',<br />
@@ -176,10 +176,10 @@ author: Pieter Belmans
     \bbbbaddto{dutch}{bibsdutch}<br />
   \fi<br />
   \bbbbaddto{dutch}{btxifchangecaseoff}<br />
-}</p>
+}
 <p>\endinput<br />
 %%<br />
-%% End of file `dutch.bdf'.[/sourcecode]{% endraw %}</p>
+%% End of file `dutch.bdf'.[/sourcecode]{% endraw %}
 <p>The file <code>babelbib.sty</code> should contain the definitions of <code>\btxnumeraldutch</code> and <code>\btxnumeraldutchlong</code>, which are given by:[sourcecode language="tex" wraplines="false" toolbar="false"]{% raw %}\DeclareRobustCommand\btxnumeraldutch[2]{%<br />
   \foreignlanguage{#1}{%<br />
     \ifnumber{#2}{%<br />
@@ -203,6 +203,6 @@ author: Pieter Belmans
         \btxnumeraldutch{#1}{#2}%<br />
       \fi}{#2}<br />
   }%<br />
-  }[/sourcecode]{% endraw %}</p>
-<p>These can be placed after the definition of <code>\btxnumeralenglish</code>. Now everything works as expected (provided you work with decimal version numbers and the correct month abbrevations in your BibTeX file).</p>
-<p>I should definitely start using <code>biblatex</code>, its implementation of languages seems (more) correct given its <code>dutch.lbx</code>. And I should find myself a decent and consequent indentation style for TeX.</p>
+  }[/sourcecode]{% endraw %}
+<p>These can be placed after the definition of <code>\btxnumeralenglish</code>. Now everything works as expected (provided you work with decimal version numbers and the correct month abbrevations in your BibTeX file).
+<p>I should definitely start using <code>biblatex</code>, its implementation of languages seems (more) correct given its <code>dutch.lbx</code>. And I should find myself a decent and consequent indentation style for TeX.

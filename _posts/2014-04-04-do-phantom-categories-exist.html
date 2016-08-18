@@ -11,40 +11,40 @@ tags: []
 meta:
 author: Pieter Belmans
 ---
-<p>The short answer: yes.</p>
+<p>The short answer: yes.
 <h2>Introduction</h2>
-<p>For the longer answer we should first say what a phantom category is. Recall that it is possible to define the Grothendieck group and Hochschild (co)homomology of (an enhancement of) a triangulated category, see for instance the introduction to <a href="http://arxiv.org/pdf/0904.4330v1.pdf">Hochschild homology and semiorthogonal decompositions</a>. Moreover, these agree with the more geometric definition that one can give of Hochschild (co)homology, so everything is as nice as one hopes. This way we get some computational tools to calculate these abstractly defined concepts.</p>
-<p>Grothendieck groups and Hochschild homology are moreover <em>additive</em> with respect to admissible subcategories, hence a decomposition of our triangulated category yields a direct sum decomposition of the Grothendieck group and Hochschild homology. One could then expect or hope for a certain amount of non-pathological behaviour: if the Grothendieck group and Hochschild homology of a triangulated category is zero, the category itself is zero. In other words, these invariants are <em>conservative</em>.</p>
+<p>For the longer answer we should first say what a phantom category is. Recall that it is possible to define the Grothendieck group and Hochschild (co)homomology of (an enhancement of) a triangulated category, see for instance the introduction to <a href="http://arxiv.org/pdf/0904.4330v1.pdf">Hochschild homology and semiorthogonal decompositions</a>. Moreover, these agree with the more geometric definition that one can give of Hochschild (co)homology, so everything is as nice as one hopes. This way we get some computational tools to calculate these abstractly defined concepts.
+<p>Grothendieck groups and Hochschild homology are moreover <em>additive</em> with respect to admissible subcategories, hence a decomposition of our triangulated category yields a direct sum decomposition of the Grothendieck group and Hochschild homology. One could then expect or hope for a certain amount of non-pathological behaviour: if the Grothendieck group and Hochschild homology of a triangulated category is zero, the category itself is zero. In other words, these invariants are <em>conservative</em>.
 <h2>The vanishing conjecture</h2>
-<p>This is the content of <em>Kuznetsov's vanishing conjecture</em>, proposed in <a href="http://arxiv.org/abs/0904.4330">Hochschild homology and semiorthogonal decompositions</a> (the Grothendieck group aspect was apparently already proposed by Bondal in the 90s). The following is conjecture 9.1 in the article.</p>
-<p><strong>Conjecture</strong> Let $X$ be a smooth projective variety. If $\mathcal{A}\subseteq\mathbf{D}^{\mathrm{b}}(X)$ is an admissible subcategory, and $\mathrm{HH}_\bullet(\mathcal{A})=0$ then $\mathcal{A}=0$.</p>
-<p>Recall that admissible means that the embedding functor has both a left and right adjoint. This is a situation first encountered in étale cohomology, in which we have gluing functors for a decomposition of a scheme into an open subscheme and its complement. So admissibility corresponds to knowing how the subcategory is glued to the bigger category.</p>
-<p>If the conjecture were true, we would get some nice properties:</p>
+<p>This is the content of <em>Kuznetsov's vanishing conjecture</em>, proposed in <a href="http://arxiv.org/abs/0904.4330">Hochschild homology and semiorthogonal decompositions</a> (the Grothendieck group aspect was apparently already proposed by Bondal in the 90s). The following is conjecture 9.1 in the article.
+<p><strong>Conjecture</strong> Let $X$ be a smooth projective variety. If $\mathcal{A}\subseteq\mathbf{D}^{\mathrm{b}}(X)$ is an admissible subcategory, and $\mathrm{HH}_\bullet(\mathcal{A})=0$ then $\mathcal{A}=0$.
+<p>Recall that admissible means that the embedding functor has both a left and right adjoint. This is a situation first encountered in étale cohomology, in which we have gluing functors for a decomposition of a scheme into an open subscheme and its complement. So admissibility corresponds to knowing how the subcategory is glued to the bigger category.
+<p>If the conjecture were true, we would get some nice properties:
 <ul>
-<li>we can check whether a semiorthogonal collection of subcategories is a semiorthogonal decomposition by checking whether it covers the whole Hochschild homology of the triangulated category</li>
-<li>information on the length of a full exceptional collection</li>
-<li>the ascending chain property for admissible subcategories</li>
+<li>we can check whether a semiorthogonal collection of subcategories is a semiorthogonal decomposition by checking whether it covers the whole Hochschild homology of the triangulated category
+<li>information on the length of a full exceptional collection
+<li>the ascending chain property for admissible subcategories
 </ul>
-<p>Unfortunately, as the short answer might already suggest, this conjecture is false. The interesting way in which this conjecture fails is the subject of the next post, let us first introduce some terminology.</p>
+<p>Unfortunately, as the short answer might already suggest, this conjecture is false. The interesting way in which this conjecture fails is the subject of the next post, let us first introduce some terminology.
 <h2>(Quasi-)phantoms</h2>
-<p><strong>Definition</strong> An admissible subcategory $\mathcal{A}$ of $\mathbf{D}^{\mathrm{b}}(\mathrm{coh}/X)$, the bounded derived category of coherent sheaves on a smooth and projective variety $X$, is a <em>quasi-phantom category</em> if</p>
+<p><strong>Definition</strong> An admissible subcategory $\mathcal{A}$ of $\mathbf{D}^{\mathrm{b}}(\mathrm{coh}/X)$, the bounded derived category of coherent sheaves on a smooth and projective variety $X$, is a <em>quasi-phantom category</em> if
 <ol>
-<li>$\mathrm{HH}_\bullet(\mathcal{A})=0$,</li>
-<li>$\mathrm{K}_0(\mathcal{A})$ finite.</li>
+<li>$\mathrm{HH}_\bullet(\mathcal{A})=0$,
+<li>$\mathrm{K}_0(\mathcal{A})$ finite.
 </ol>
-<p>If the second condition is strengthened to</p>
+<p>If the second condition is strengthened to
 <ol start="2">
-<li>$\mathrm{K}_0(\mathcal{A})=0$</li>
+<li>$\mathrm{K}_0(\mathcal{A})=0$
 </ol>
-<p>$\mathcal{A}$ is called a <em>phantom category</em>.</p>
-<p>So Kuznetsov's conjecture asserts the non-existence of (non-zero) (quasi-)phantom categories. And as the next post will show, phantoms exist, and they are even particularly interesting!</p>
+<p>$\mathcal{A}$ is called a <em>phantom category</em>.
+<p>So Kuznetsov's conjecture asserts the non-existence of (non-zero) (quasi-)phantom categories. And as the next post will show, phantoms exist, and they are even particularly interesting!
 <h2>Noetherianity and Jordan-Hölder for admissible subcategories</h2>
-<p>If quasiphantoms did not exist, we would get noetherianity for admissible subcategories (of a derived category of sufficiently nice geometric origin). In other words, if we would have an ascending chain of subcategories it would necessarily stabilise (by finite-dimensionality of the Hochschild homology). This is still an <em>open</em> problem, as quasiphantoms do exist...</p>
-<p>A stronger property (which is not implied by the vanishing conjecture, and which is false anyway) is the Jordan-Hölder property. This means that, whenever we have two semiorthogonal decompositions whose components are indecomposable, they are the same up to some permutation of the components. And this is <em>false</em>, even for derived categories of a geometric origin!</p>
+<p>If quasiphantoms did not exist, we would get noetherianity for admissible subcategories (of a derived category of sufficiently nice geometric origin). In other words, if we would have an ascending chain of subcategories it would necessarily stabilise (by finite-dimensionality of the Hochschild homology). This is still an <em>open</em> problem, as quasiphantoms do exist...
+<p>A stronger property (which is not implied by the vanishing conjecture, and which is false anyway) is the Jordan-Hölder property. This means that, whenever we have two semiorthogonal decompositions whose components are indecomposable, they are the same up to some permutation of the components. And this is <em>false</em>, even for derived categories of a geometric origin!
 <ol>
 <li>The <a href="http://arxiv.org/abs/1211.1229">first counterexample</a> was by considering an example that produces a quasiphantom: the classical Godeaux surface (see the next post for more on this one) has both a length 11 exceptional collection (which is the maximal length in this case), whose orthogonal is a quasiphantom category and a length 9 exceptional collection which cannot be extended any further, whose orthogonal is necessarily not a quasiphantom category.
-</li>
+
 <li>A <a href="http://arxiv.org/abs/1304.0903">less computation-heavy counterexample</a> was found by considering a two-step blowup of projective 3-space in some curves. This realises a known counterexample which has a non-geometric origin (it is the path algebra of some quiver with relations) as an admissible subcategory inside a derived category of geometric origin.
-</li>
+
 </ol>
-<p>This lack of a Jordan-Hölder property is annoying, as we could use it to prove <a href="http://www.cims.nyu.edu/~tschinke/books/rationality/kuznetsov.pdf">nonrationality of cubic 4-folds</a>. But I am getting off track here, and I'll leave a discussion of rationality problems for another time. In the second post of this two-post series I will discuss some (quasi)phantoms.</p>
+<p>This lack of a Jordan-Hölder property is annoying, as we could use it to prove <a href="http://www.cims.nyu.edu/~tschinke/books/rationality/kuznetsov.pdf">nonrationality of cubic 4-folds</a>. But I am getting off track here, and I'll leave a discussion of rationality problems for another time. In the second post of this two-post series I will discuss some (quasi)phantoms.

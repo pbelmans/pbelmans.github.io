@@ -14,18 +14,18 @@ meta:
     12:34:00";}
 author: Pieter Belmans
 ---
-<p>The <a href="http://strasheela.sourceforge.net/strasheela/doc/Installation.html">guide to installing Strasheela</a> is well-documented, so follow it. A few remarks.</p>
+<p>The <a href="http://strasheela.sourceforge.net/strasheela/doc/Installation.html">guide to installing Strasheela</a> is well-documented, so follow it. A few remarks.
 <ul>
-<li>You'll need <code>g++</code> and if you want to use the latest snapshot like I do, you'll need Subversion.</li>
-<li>I put the Strasheela source in <code>~/.strasheela</code> and will use <code>~/Strasheela</code> for my own files, so set <code>~/Strasheela/output</code> in <code>~/.ozrc</code> as a replacement for the <code>/tmp/</code> output directory.</li>
-<li>Install <code>audacity</code>, <code>cplay</code>, <code>timidity</code> and <code>lilypond</code> (yes, all of it) from the repositories.</li>
-<li>Edit the executables in <code>~/.ozrc</code>, my suggestion (based on lots of professional experience) would be <code>audacity</code>, <code>cplay</code>, <code>timidity</code> as MIDI player and we'll use <code>evince</code> instead of <code>acroread</code>.</li>
-<li>You'll have to manually install <code>csvmidi</code> and <code>midicsv</code>. Just <a href="http://www.fourmilab.ch/webtools/midicsv/">download the tar.gz</a> and perform the known <code>make</code>, <code>make check</code>, <code>sudo make install</code> cycle.</li>
-<li>The same is true for Fomus, download and install from <a href="http://fomus.sourceforge.net/">their website</a>. When compiling from source you'll need <code>libboost-all-dev</code> too (another big one, like Lilypond), from repositories. And lots of memory too. But you'll only need this when you want to export to MusicXML, so you can forget about it for now.</li>
-<li>Add <code>$OZHOME/1.4.99/bin</code> to your <code>$PATH</code>, i.e., <code>~/.bashrc</code> should contain a line stating <code>export PATH=$PATH:$OZHOME/bin/:$OZHOME/1.4.99/bin</code> where 1.4.99 is obviously your version of Oz, in case you've followed the installation guide this will be 1.4.99.</li>
-<li>Execute <code>StrasheelaTutorial</code> if you think you're done. If you really want to test your installation (unfortunately not the configuration for some reason), open the tutorial at chapter Output Formats, edit the configuration in File &gt; Settings to match your <code>.ozrc</code> and run the examples.</li>
+<li>You'll need <code>g++</code> and if you want to use the latest snapshot like I do, you'll need Subversion.
+<li>I put the Strasheela source in <code>~/.strasheela</code> and will use <code>~/Strasheela</code> for my own files, so set <code>~/Strasheela/output</code> in <code>~/.ozrc</code> as a replacement for the <code>/tmp/</code> output directory.
+<li>Install <code>audacity</code>, <code>cplay</code>, <code>timidity</code> and <code>lilypond</code> (yes, all of it) from the repositories.
+<li>Edit the executables in <code>~/.ozrc</code>, my suggestion (based on lots of professional experience) would be <code>audacity</code>, <code>cplay</code>, <code>timidity</code> as MIDI player and we'll use <code>evince</code> instead of <code>acroread</code>.
+<li>You'll have to manually install <code>csvmidi</code> and <code>midicsv</code>. Just <a href="http://www.fourmilab.ch/webtools/midicsv/">download the tar.gz</a> and perform the known <code>make</code>, <code>make check</code>, <code>sudo make install</code> cycle.
+<li>The same is true for Fomus, download and install from <a href="http://fomus.sourceforge.net/">their website</a>. When compiling from source you'll need <code>libboost-all-dev</code> too (another big one, like Lilypond), from repositories. And lots of memory too. But you'll only need this when you want to export to MusicXML, so you can forget about it for now.
+<li>Add <code>$OZHOME/1.4.99/bin</code> to your <code>$PATH</code>, i.e., <code>~/.bashrc</code> should contain a line stating <code>export PATH=$PATH:$OZHOME/bin/:$OZHOME/1.4.99/bin</code> where 1.4.99 is obviously your version of Oz, in case you've followed the installation guide this will be 1.4.99.
+<li>Execute <code>StrasheelaTutorial</code> if you think you're done. If you really want to test your installation (unfortunately not the configuration for some reason), open the tutorial at chapter Output Formats, edit the configuration in File &gt; Settings to match your <code>.ozrc</code> and run the examples.
 </ul>
-<p>For reference, here is the relevant part of my <code>.ozrc</code>:</p>
+<p>For reference, here is the relevant part of my <code>.ozrc</code>:
 <pre>{Init.putStrasheelaEnv csound csound}
 {Init.putStrasheelaEnv sndPlayer audacity}
 {Init.putStrasheelaEnv cmdlineSndPlayer cplay}
@@ -35,13 +35,13 @@ author: Pieter Belmans
 {Init.putStrasheelaEnv lilypond lilypond}
 {Init.putStrasheelaEnv 'convert-ly' 'convert-ly'}
 {Init.putStrasheelaEnv pdfViewer evince}</pre>
-<p>I've decided to go for Audacity, if you have another favorite sound editor, pick that. Everything should work now, but I haven't done much with Strasheela at this moment, so if things pop up later, I'll edit these posts accordingly.</p>
+<p>I've decided to go for Audacity, if you have another favorite sound editor, pick that. Everything should work now, but I haven't done much with Strasheela at this moment, so if things pop up later, I'll edit these posts accordingly.
 <h3>The Strasheela series</h3>
 <ol>
-<li><a href="http://pbelmans.wordpress.com/2011/08/15/computational-composition-the-kick-start/">Computational composition: the kick start</a></li>
-<li><a href="http://pbelmans.wordpress.com/2011/08/16/installing-the-mozart-programming-system/">Installing the Mozart Programming System</a></li>
-<li><a href="http://pbelmans.wordpress.com/2011/08/16/installing-strasheela/">Installing Strasheela</a></li>
-<li><a href="http://pbelmans.wordpress.com/2011/08/18/development-of-the-fuxian-counterpoint-project-is-now-available-at-github/">Development of the Fuxian counterpoint project is now available at GitHub</a></li>
-<li><a href="http://pbelmans.wordpress.com/2011/09/17/struggling-with-oz/">Struggling with Oz</a></li>
-<li><a href="http://pbelmans.wordpress.com/2011/09/24/counterpoint-in-gregorian-modes/">Counterpoint in Gregorian modes</a></li>
+<li><a href="http://pbelmans.wordpress.com/2011/08/15/computational-composition-the-kick-start/">Computational composition: the kick start</a>
+<li><a href="http://pbelmans.wordpress.com/2011/08/16/installing-the-mozart-programming-system/">Installing the Mozart Programming System</a>
+<li><a href="http://pbelmans.wordpress.com/2011/08/16/installing-strasheela/">Installing Strasheela</a>
+<li><a href="http://pbelmans.wordpress.com/2011/08/18/development-of-the-fuxian-counterpoint-project-is-now-available-at-github/">Development of the Fuxian counterpoint project is now available at GitHub</a>
+<li><a href="http://pbelmans.wordpress.com/2011/09/17/struggling-with-oz/">Struggling with Oz</a>
+<li><a href="http://pbelmans.wordpress.com/2011/09/24/counterpoint-in-gregorian-modes/">Counterpoint in Gregorian modes</a>
 </ol>

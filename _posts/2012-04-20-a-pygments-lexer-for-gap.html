@@ -17,18 +17,18 @@ author: Pieter Belmans
 ---
 <p>In case you haven't heard of one of the most awesome LaTeX packages ever, let me introduce to you: <a href="http://ctan.org/pkg/minted">minted</a>. It's a package to create listings (code snippets, preferably with highlighting, line numbering etc.), but it goes much further than the more well-known package <a href="http://ctan.org/pkg/listings">listings</a>. A small example:<br />
 <img src="{{ site.baseurl }}/assets/7sGrC.png" alt="" /><br />
-Its awesomeness comes at a cost though, it relies heavily on an external Python program called <a href="http://pygments.org">Pygments</a>. This is a generic tool for highlighting, regardless of output format. It can produce <a href="http://pygments.org/docs/formatters/">TeX, HTML, images, ...</a>. And it comes equipped with a load of <a href="http://pygments.org/languages/">supported languages</a>. And if you've read the title you might guess what this post is about: a language that wasn't supported yet.</p>
-<p>For a course in computational group theory I have to write a report about an implementation in <a href="http://gap-system.org">GAP</a>, and this is absolutely impossible without the best possible syntax highlighting, right? So I have entertained myself with implementing a GAP lexer. Its implementation is available at <a href="https://github.com/pbelmans/gap-pygments-lexer">github.com/pbelmans/gap-pygments-lexer</a>.</p>
-<p>I have supplied an automatic installer, as the <a href="https://github.com/pbelmans/gap-pygments-lexer/blob/master/README.markdown">README</a> suggests it boils down to</p>
+Its awesomeness comes at a cost though, it relies heavily on an external Python program called <a href="http://pygments.org">Pygments</a>. This is a generic tool for highlighting, regardless of output format. It can produce <a href="http://pygments.org/docs/formatters/">TeX, HTML, images, ...</a>. And it comes equipped with a load of <a href="http://pygments.org/languages/">supported languages</a>. And if you've read the title you might guess what this post is about: a language that wasn't supported yet.
+<p>For a course in computational group theory I have to write a report about an implementation in <a href="http://gap-system.org">GAP</a>, and this is absolutely impossible without the best possible syntax highlighting, right? So I have entertained myself with implementing a GAP lexer. Its implementation is available at <a href="https://github.com/pbelmans/gap-pygments-lexer">github.com/pbelmans/gap-pygments-lexer</a>.
+<p>I have supplied an automatic installer, as the <a href="https://github.com/pbelmans/gap-pygments-lexer/blob/master/README.markdown">README</a> suggests it boils down to
 <ol>
-<li><code>git clone git://github.com/pbelmans/gap-pygments-lexer.git</code> or download and extract the archive GitHub automatically creates at the <a href="https://github.com/pbelmans/gap-pygments-lexer/downloads">project's Downloads page</a></li>
-<li><code>cd gap-pygments-lexer</code></li>
-<li><code>sudo python setup.py install</code></li>
+<li><code>git clone git://github.com/pbelmans/gap-pygments-lexer.git</code> or download and extract the archive GitHub automatically creates at the <a href="https://github.com/pbelmans/gap-pygments-lexer/downloads">project's Downloads page</a>
+<li><code>cd gap-pygments-lexer</code>
+<li><code>sudo python setup.py install</code>
 </ol>
-<p>I would like to thank <a href="https://twitter.com/#!/wimthys">Wim Thys</a> for providing me with the names of all the built-in classes and functions, using a bit of <code>sed</code> magic. </p>
-<p>If you feel inspired, there are several other languages that need an implementation:</p>
+<p>I would like to thank <a href="https://twitter.com/#!/wimthys">Wim Thys</a> for providing me with the names of all the built-in classes and functions, using a bit of <code>sed</code> magic. 
+<p>If you feel inspired, there are several other languages that need an implementation:
 <ul>
-<li><a href="http://maplesoft.com">Maple</a></li>
-<li><a href="http://magma.maths.usyd.edu.au/magma/">Magma</a> (but they are be <a href="http://magma.maths.usyd.edu.au/magma/extra/highlight/README.txt">working on it themselves apparently</a>)</li>
-<li><a href="http://pari.math.u-bordeaux.fr/">PARI/GP</a> (this one has the most intriguing syntax of all)</li>
+<li><a href="http://maplesoft.com">Maple</a>
+<li><a href="http://magma.maths.usyd.edu.au/magma/">Magma</a> (but they are be <a href="http://magma.maths.usyd.edu.au/magma/extra/highlight/README.txt">working on it themselves apparently</a>)
+<li><a href="http://pari.math.u-bordeaux.fr/">PARI/GP</a> (this one has the most intriguing syntax of all)
 </ul>

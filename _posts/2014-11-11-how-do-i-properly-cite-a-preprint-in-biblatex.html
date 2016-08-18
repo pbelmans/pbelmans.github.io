@@ -13,7 +13,7 @@ tags: []
 meta:
 author: Pieter Belmans
 ---
-<p>This question has been nagging me for a while, and thanks to TeX - LaTeX Stack Exchange I have found an answer: <a href="http://tex.stackexchange.com/a/50039">Audrey's answer to the question <q>What should BibTeX for arXiv entries look like?</q></a> references the file <a href="http://archive.cs.uu.nl/mirror/CTAN/macros/latex/contrib/biblatex/doc/examples/biblatex-examples.bib"><tt>biblatex-examples.bib</tt></a> where the entries <code>baez/article</code> and <code>baez/online</code> indicate how it should be done. If you are referencing an article, which also has a preprint, it should be like (this part I knew)</p>
+<p>This question has been nagging me for a while, and thanks to TeX - LaTeX Stack Exchange I have found an answer: <a href="http://tex.stackexchange.com/a/50039">Audrey's answer to the question <q>What should BibTeX for arXiv entries look like?</q></a> references the file <a href="http://archive.cs.uu.nl/mirror/CTAN/macros/latex/contrib/biblatex/doc/examples/biblatex-examples.bib"><tt>biblatex-examples.bib</tt></a> where the entries <code>baez/article</code> and <code>baez/online</code> indicate how it should be done. If you are referencing an article, which also has a preprint, it should be like (this part I knew)
 <pre><code><small>@article{baez/article,
   author       = {Baez, John C. and Lauda, Aaron D.},
   title        = {Higher-Dimensional Algebra V: 2-Groups},
@@ -32,7 +32,7 @@ author: Pieter Belmans
                   has been enabled.  Compare \texttt{baez\slash online}, which
                   is the same item given as an \texttt{online} entry},
 }</small></code></pre>
-<p>and if it's only a preprint without a published version (and not occurring in some conference proceedings or something), one uses the <code>@online</code> field (which settles my questions)</p>
+<p>and if it's only a preprint without a published version (and not occurring in some conference proceedings or something), one uses the <code>@online</code> field (which settles my questions)
 <pre><code><small>@online{baez/online,
   author       = {Baez, John C. and Lauda, Aaron D.},
   title        = {Higher-Dimensional Algebra V: 2-Groups},
@@ -47,7 +47,7 @@ author: Pieter Belmans
                   \texttt{baez\slash article} which is the same item given as an
                   \texttt{article} entry with eprint information},
 }</small></code></pre>
-<p>without any other frizzles such as <code>url</code> fields or something.</p>
-<p>Actually, it is best to also use the <code>eprintclass</code> field for arXiv preprints, which is the main subject class under which a preprint is catalogued. This would mean you'd have to add <code>eprintclass = {math.QA}</code>.</p>
-<p><small>Tomorrow I will leave for the <a href="http://www.math.uni-bielefeld.de/birep/meetings/auslander2014/workshop.php">Auslander Auslander Memorial Workshop</a>, and I don't know whether I will feel like producing a long post on Thursday, which as you might have noticed has been something that I started doing since the first week of October. I have some drafts, but I guess you'll have to wait for those.</p>
-<p>Maybe I will even try live blogging the event (or discuss the talks in the evening, or something, or write down some things during my longish train ride back). Who knows?</small></p>
+<p>without any other frizzles such as <code>url</code> fields or something.
+<p>Actually, it is best to also use the <code>eprintclass</code> field for arXiv preprints, which is the main subject class under which a preprint is catalogued. This would mean you'd have to add <code>eprintclass = {math.QA}</code>.
+<p><small>Tomorrow I will leave for the <a href="http://www.math.uni-bielefeld.de/birep/meetings/auslander2014/workshop.php">Auslander Auslander Memorial Workshop</a>, and I don't know whether I will feel like producing a long post on Thursday, which as you might have noticed has been something that I started doing since the first week of October. I have some drafts, but I guess you'll have to wait for those.
+<p>Maybe I will even try live blogging the event (or discuss the talks in the evening, or something, or write down some things during my longish train ride back). Who knows?</small>

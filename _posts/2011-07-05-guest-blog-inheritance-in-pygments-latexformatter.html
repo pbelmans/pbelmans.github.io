@@ -11,23 +11,23 @@ tags: []
 meta:
 author: Pieter Belmans
 ---
-<p>This is a guest post by <cite>Pieter Goetschalckx</cite>. As a fellow classmate of mine we've been working together for most of our projects this year, resulting in some LaTeX-related results like the <a href="http://pbelmans.wordpress.com/2011/03/06/how-to-change-pygments-styles-and-a-university-of-antwerp-style/" title="How to change Pygments styles and a University of Antwerp&nbsp;style">UAStyle</a> and (unpublished) software for automated Enigma deciphering or numerical continuation of n-dimensional manifolds.</p>
-<blockquote><p><a href="http://pygments.org/">Pygments</a> in combination with the <a href="http://minted.googlecode.com/">minted package</a> is a very powerful syntax highlighter for LaTeX, with the possibility to use colored, bold and italic text. Unfortunately, the Computer Modern Typewriter font includes no bold shapes. Latin Modern does, but the difference is almost unnoticeable. Therefore I prefer <a href="http://www.tug.dk/FontCatalogue/beramono/">Beramono</a>, which in addition is a nice combination with <a href="http://www.tug.dk/FontCatalogue/charter/">Bitstream Charter</a>. So far my personal taste.</p>
-<p>While using this font setup for highlighting <a href="http://cython.org/">Cython</a> code, I discovered a bug in the <code>LatexFormatter</code> of Pygments. When highlighting the following (rather useless) Cython function, the output (with the default Pygments style) is:</p>
+<p>This is a guest post by <cite>Pieter Goetschalckx</cite>. As a fellow classmate of mine we've been working together for most of our projects this year, resulting in some LaTeX-related results like the <a href="http://pbelmans.wordpress.com/2011/03/06/how-to-change-pygments-styles-and-a-university-of-antwerp-style/" title="How to change Pygments styles and a University of Antwerp&nbsp;style">UAStyle</a> and (unpublished) software for automated Enigma deciphering or numerical continuation of n-dimensional manifolds.
+<blockquote><p><a href="http://pygments.org/">Pygments</a> in combination with the <a href="http://minted.googlecode.com/">minted package</a> is a very powerful syntax highlighter for LaTeX, with the possibility to use colored, bold and italic text. Unfortunately, the Computer Modern Typewriter font includes no bold shapes. Latin Modern does, but the difference is almost unnoticeable. Therefore I prefer <a href="http://www.tug.dk/FontCatalogue/beramono/">Beramono</a>, which in addition is a nice combination with <a href="http://www.tug.dk/FontCatalogue/charter/">Bitstream Charter</a>. So far my personal taste.
+<p>While using this font setup for highlighting <a href="http://cython.org/">Cython</a> code, I discovered a bug in the <code>LatexFormatter</code> of Pygments. When highlighting the following (rather useless) Cython function, the output (with the default Pygments style) is:
 <pre style="line-height:125%;letter-spacing:0;font-family:'Bitstream Vera Sans Mono','DejaVu Sans Mono',Consolas,'Andale Mono',monospace;"><span style="color:#008000;font-weight:bold;">cpdef</span> <span style="color:#B00040;">int</span> <span style="color:#0000FF;">add</span>(<span style="color:#B00040;">int</span> a, <span style="color:#B00040;">int</span> b):
     <span style="color:#008000;font-weight:bold;">return</span> a <span style="color:#666666;">+</span> b
 </pre>
-<p>Actually, this fragment was highlighted <em>with the <code>HTMLFormatter</code></em>. The <code>LatexFormatter</code> on the other hand outputs something like this:</p>
+<p>Actually, this fragment was highlighted <em>with the <code>HTMLFormatter</code></em>. The <code>LatexFormatter</code> on the other hand outputs something like this:
 <pre style="line-height:125%;letter-spacing:0;font-family:'Bitstream Vera Sans Mono','DejaVu Sans Mono',Consolas,'Andale Mono',monospace;"><span style="color:#008000;font-weight:bold;">cpdef</span> <span style="color:#B00040;font-weight:bold;">int</span> <span style="color:#0000FF;">add</span>(<span style="color:#B00040;font-weight:bold;">int</span> a, <span style="color:#B00040;font-weight:bold;">int</span> b):
     <span style="color:#008000;font-weight:bold;">return</span> a <span style="color:#666666;">+</span> b
 </pre>
-<p>when converted to HTML, obviously. The actual LaTeX code would be</p>
+<p>when converted to HTML, obviously. The actual LaTeX code would be
 <p>[sourcecode language="latex" collapse="true"]{% raw %}<br />
 \documentclass{minimal}<br />
 \usepackage{fancyvrb}<br />
 \usepackage{color}<br />
 \usepackage[T1]{fontenc}<br />
-\usepackage[scaled]{beramono}</p>
+\usepackage[scaled]{beramono}
 <p>\makeatletter<br />
 \def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%<br />
     \let\PY@ul=\relax \let\PY@tc=\relax%<br />
@@ -37,27 +37,27 @@ author: Pieter Belmans
     \PY@tok{#1}\expandafter\PY@toks\fi}<br />
 \def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%<br />
     \PY@it{\PY@bf{\PY@ff{#1}}}}}}}<br />
-\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}</p>
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
 <p>\def\PY@tok@nf{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}<br />
 \def\PY@tok@o{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}<br />
 \def\PY@tok@kt{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}<br />
 \def\PY@tok@k{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}<br />
-\makeatother</p>
-<p>\begin{document}</p>
+\makeatother
+<p>\begin{document}
 <p>\begin{Verbatim}[commandchars=\\\{\}]<br />
 \PY{k}{cpdef} \PY{k+kt}{int} \PY{n+nf}{add}\PY{p}{(}\PY{k+kt}{int} \PY{n}{a}\PY{p}{,} \PY{k+kt}{int} \PY{n}{b}\PY{p}{)}\PY{p}{:}<br />
     \PY{k}{return} \PY{n}{a} \PY{o}{+} \PY{n}{b}<br />
-\end{Verbatim}</p>
+\end{Verbatim}
 <p>\end{document}<br />
-{% endraw %}[/sourcecode]</p>
-<p>resulting in <a href="http://pbelmans.files.wordpress.com/2011/06/pygments-bug.pdf">this <code>pdf</code> output</a>. As the output differs in the handling of the type keywords a question arises: which <code>Formatter</code> is correct?</p>
-<p>Let's take a look at the style definition in <code>pygments/styles/default.py</code>:</p>
+{% endraw %}[/sourcecode]
+<p>resulting in <a href="http://pbelmans.files.wordpress.com/2011/06/pygments-bug.pdf">this <code>pdf</code> output</a>. As the output differs in the handling of the type keywords a question arises: which <code>Formatter</code> is correct?
+<p>Let's take a look at the style definition in <code>pygments/styles/default.py</code>:
 <p>[sourcecode language="python" light="true"]<br />
 Keyword:      &quot;bold #008000&quot;,<br />
 Keyword.Type: &quot;nobold #B00040&quot;,<br />
-[/sourcecode]</p>
-<p>Because <code>int</code> is a <code>Keyword.Type</code>, it should not be bold. Simplified, the macro <code>\PY{k+kt}{int}</code> executes <code>\PY@tok@k</code> and <code>\PY@tok@kt</code> before printing <code>\PY@bf{int}</code>. <code>\PY@tok@k</code> sets <code>\PY@bf=\textbf</code>, and <code>\PY@tok@kt</code> does nothing with <code>\PY@bf</code>, so the result is <code>\textbf{int}</code>.</p>
-<p>It looks like the <code>LatexFormatter</code> tries to implement inheritance and fails. Funny thing is, inheritance doesn't need to be implemented, because another part of Pygments already takes care of it. We can replace <code>\PY{k+kt}{int}</code> by <code>\PY{kt}{int}</code>. This can be done in <code>pygments/formatter/latex.py</code>, by replacing</p>
+[/sourcecode]
+<p>Because <code>int</code> is a <code>Keyword.Type</code>, it should not be bold. Simplified, the macro <code>\PY{k+kt}{int}</code> executes <code>\PY@tok@k</code> and <code>\PY@tok@kt</code> before printing <code>\PY@bf{int}</code>. <code>\PY@tok@k</code> sets <code>\PY@bf=\textbf</code>, and <code>\PY@tok@kt</code> does nothing with <code>\PY@bf</code>, so the result is <code>\textbf{int}</code>.
+<p>It looks like the <code>LatexFormatter</code> tries to implement inheritance and fails. Funny thing is, inheritance doesn't need to be implemented, because another part of Pygments already takes care of it. We can replace <code>\PY{k+kt}{int}</code> by <code>\PY{kt}{int}</code>. This can be done in <code>pygments/formatter/latex.py</code>, by replacing
 <p>[sourcecode language="python"]<br />
 styles = []<br />
 while ttype is not Token:<br />
@@ -68,16 +68,16 @@ while ttype is not Token:<br />
         styles.append(_get_ttype_name(ttype))<br />
     ttype = ttype.parent<br />
 styleval = '+'.join(reversed(styles))<br />
-[/sourcecode]</p>
-<p>with</p>
+[/sourcecode]
+<p>with
 <p>[sourcecode language="python"]<br />
 try:<br />
     styleval = t2n[ttype]<br />
 except KeyError:<br />
     # not in current style<br />
     styleval = _get_ttype_name(ttype)<br />
-[/sourcecode]</p>
-<p>Additionally, some macro definitions in the preamble can be simplified. This will not change anything visually, but it removes unused features. This can be done by replacing</p>
+[/sourcecode]
+<p>Additionally, some macro definitions in the preamble can be simplified. This will not change anything visually, but it removes unused features. This can be done by replacing
 <p>[sourcecode language="python" highlight="7,8,11"]<br />
 STYLE_TEMPLATE = r'''<br />
 {% raw %}\makeatletter<br />
@@ -91,8 +91,8 @@ STYLE_TEMPLATE = r'''<br />
     \%(cp)s@it{\%(cp)s@bf{\%(cp)s@ff{#1}}}}}}}<br />
 \def\%(cp)s#1#2{\%(cp)s@reset\%(cp)s@toks#1+\relax+\%(cp)s@do{#2}}<br />
 {% endraw %}
-[/sourcecode]</p>
-<p>with</p>
+[/sourcecode]
+<p>with
 <p>[sourcecode language="python" highlight="9"]<br />
 STYLE_TEMPLATE = r'''<br />
 {% raw %}\makeatletter<br />
@@ -103,9 +103,9 @@ STYLE_TEMPLATE = r'''<br />
 \def\%(cp)s@do#1{\%(cp)s@bc{\%(cp)s@tc{\%(cp)s@ul{%%<br />
     \%(cp)s@it{\%(cp)s@bf{\%(cp)s@ff{#1}}}}}}}<br />
 \def\%(cp)s#1#2{\%(cp)s@reset\%(cp)s@tok{#1}\%(cp)s@do{#2}}<br />
-[/sourcecode]{% endraw %}</p>
-<p>Now we've arrived at the correct version of the backend, but there are still some issues with the <code>CythonLexer</code>. In most cases this will suffice (unless other lexers contain bugs as well), yet for completeness' sake, I give my version of the <code>CythonLexer</code>. It can be found at <a href="https://github.com/314eter/pygments-CythonLexer">314eter / pygments-CythonLexer</a>.</p>
-<p><strong>The result:</strong> after all the described modifications, we should arrive at <a href="http://pbelmans.files.wordpress.com/2011/07/pygments-good.pdf">this highlighted piece of code</a>.</p>
-<p>As a matter of fact, this issue with the <code>LaTeXFormatter</code> is known to Pygments (by means of this <a href="https://bitbucket.org/birkenfeld/pygments-main/issue/614/inherance-of-bold-italic-etc-not-working">bug report</a>), but they've put the issue on hold. If you encounter it, this workaround could be the solution.</p>
+[/sourcecode]{% endraw %}
+<p>Now we've arrived at the correct version of the backend, but there are still some issues with the <code>CythonLexer</code>. In most cases this will suffice (unless other lexers contain bugs as well), yet for completeness' sake, I give my version of the <code>CythonLexer</code>. It can be found at <a href="https://github.com/314eter/pygments-CythonLexer">314eter / pygments-CythonLexer</a>.
+<p><strong>The result:</strong> after all the described modifications, we should arrive at <a href="http://pbelmans.files.wordpress.com/2011/07/pygments-good.pdf">this highlighted piece of code</a>.
+<p>As a matter of fact, this issue with the <code>LaTeXFormatter</code> is known to Pygments (by means of this <a href="https://bitbucket.org/birkenfeld/pygments-main/issue/614/inherance-of-bold-italic-etc-not-working">bug report</a>), but they've put the issue on hold. If you encounter it, this workaround could be the solution.
 </blockquote>
-<p>And this kids is why you should never dig into TeX, it's addictive :).</p>
+<p>And this kids is why you should never dig into TeX, it's addictive :).

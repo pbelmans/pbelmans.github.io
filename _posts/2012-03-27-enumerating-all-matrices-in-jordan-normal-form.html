@@ -13,27 +13,27 @@ meta:
 author: Pieter Belmans
 ---
 <h2>Introduction</h2>
-<p>For a course in noncommutative geometry / representation theory we discussed two examples of classifying orbits of matrices, more specifically Examples 1.1 and 1.2 in <a href="http://win.ua.ac.be/~lebruyn/b2hd-LeBruyn2007a.html">Noncommutative Geometry and Cayley-smooth Orders</a>. I won't discuss the details of the mathematics behind them, the reference should suffice.</p>
-<p>I was intrigued by the computational aspects of the problem (the computer scientist in me pops up from time to time), and I recently gained access to a small supercomputer with a <a href="http://magma.maths.usyd.edu.au/magma/">Magma installation</a>. Not knowing the complete classification, which is given in Section 2.8 of <a href="http://win.ua.ac.be/~lebruyn/b2hd-LeBruyn2007a.html">Noncommutative Geometry and Cayley-smooth Orders</a> under the monicker of the Gerstenhaber-Hesselink theorem (I always read the Gerstenlink-Haber theorem for some reason), I have implemented a general algorithm capable of giving you the details for all matrix rings if you are patient enough.</p>
-<p>There are three parts involved in the classification:</p>
+<p>For a course in noncommutative geometry / representation theory we discussed two examples of classifying orbits of matrices, more specifically Examples 1.1 and 1.2 in <a href="http://win.ua.ac.be/~lebruyn/b2hd-LeBruyn2007a.html">Noncommutative Geometry and Cayley-smooth Orders</a>. I won't discuss the details of the mathematics behind them, the reference should suffice.
+<p>I was intrigued by the computational aspects of the problem (the computer scientist in me pops up from time to time), and I recently gained access to a small supercomputer with a <a href="http://magma.maths.usyd.edu.au/magma/">Magma installation</a>. Not knowing the complete classification, which is given in Section 2.8 of <a href="http://win.ua.ac.be/~lebruyn/b2hd-LeBruyn2007a.html">Noncommutative Geometry and Cayley-smooth Orders</a> under the monicker of the Gerstenhaber-Hesselink theorem (I always read the Gerstenlink-Haber theorem for some reason), I have implemented a general algorithm capable of giving you the details for all matrix rings if you are patient enough.
+<p>There are three parts involved in the classification:
 <ol>
-<li>studying the structure of the variety of singularities</li>
-<li>enumerating all representatives of orbits, which are determined by Jordan normal forms</li>
-<li>determining the dimensions of the orbits</li>
+<li>studying the structure of the variety of singularities
+<li>enumerating all representatives of orbits, which are determined by Jordan normal forms
+<li>determining the dimensions of the orbits
 </ol>
-<p>The first part is computationally absolutely horrendous, but that could be my fault. I will discuss it if I feel compelled, but at the moment I am not happy with it. Degrees two and three are worked out in detail in the book, degree four is reasonably fast in my implementation while degree five already takes almost an hour... The results are not that uninteresting, so maybe I'll write about them, maybe not.</p>
+<p>The first part is computationally absolutely horrendous, but that could be my fault. I will discuss it if I feel compelled, but at the moment I am not happy with it. Degrees two and three are worked out in detail in the book, degree four is reasonably fast in my implementation while degree five already takes almost an hour... The results are not that uninteresting, so maybe I'll write about them, maybe not.
 <h2>Jordan normal form enumeration</h2>
-<p>The second part is what this post is about. Recall that any (complex) matrix can be conjugated with an invertible matrix to a block diagonal matrix, whose blocks are matrices with a single eigenvalue of the original on the diagonal, ones on the superdiagonal and zeroes everywhere else. For details, check Wikipedia's <a href="http://en.wikipedia.org/wiki/Jordan_normal_form#Complex_matrices">Jordan normal form/Complex matrices</a>. When trying to reproduce the diagram of Example 1.2 containing the orbit dimensions we obviously need to enumerate all possible Jordan normal forms. This is actually quite easy:</p>
+<p>The second part is what this post is about. Recall that any (complex) matrix can be conjugated with an invertible matrix to a block diagonal matrix, whose blocks are matrices with a single eigenvalue of the original on the diagonal, ones on the superdiagonal and zeroes everywhere else. For details, check Wikipedia's <a href="http://en.wikipedia.org/wiki/Jordan_normal_form#Complex_matrices">Jordan normal form/Complex matrices</a>. When trying to reproduce the diagram of Example 1.2 containing the orbit dimensions we obviously need to enumerate all possible Jordan normal forms. This is actually quite easy:
 <ol>
-<li>consider all partitions of $n$, where the numbers are given in decreasing order giving all possible configurations of the eigenvalues (these correspond to the columns in the diagram)</li>
-<li>fill in all legal superdiagonals, only considering <em>decreasing numbers of ones</em> for eigenvalues with the same multiplicity</li>
+<li>consider all partitions of $n$, where the numbers are given in decreasing order giving all possible configurations of the eigenvalues (these correspond to the columns in the diagram)
+<li>fill in all legal superdiagonals, only considering <em>decreasing numbers of ones</em> for eigenvalues with the same multiplicity
 </ol>
 <p>The eigenvalues of the representatives are taken to be unknowns in a function field, for maximal flexibility. So the following code<br />
 [sourcecode]<br />
 n := 5;<br />
 field := FunctionField(RationalField(), n);<br />
 variables := [&quot;x&quot;, &quot;y&quot;, &quot;z&quot;, &quot;u&quot;, &quot;v&quot;, &quot;w&quot;];<br />
-AssignNames(~field, variables[1 .. n]);</p>
+AssignNames(~field, variables[1 .. n]);
 <p>for partition in Partitions(n) do<br />
   representative := DiagonalFromPartition(field, partition);<br />
   &quot;Enumerating the orbits with representative&quot;, representative;<br />
@@ -41,37 +41,37 @@ AssignNames(~field, variables[1 .. n]);</p>
     M, &quot; &quot;;<br />
   end for;<br />
 end for;<br />
-[/sourcecode]</p>
+[/sourcecode]
 <p>does some initialization and will print all representatives, ordered by the structure of the eigenvalues. The code for <code>DiagonalFromPartition</code> is<br />
 [sourcecode]<br />
 DiagonalFromPartition := function(ring, partition)<br />
-  M := Matrix(ring, Weight(partition), Weight(partition), []);</p>
+  M := Matrix(ring, Weight(partition), Weight(partition), []);
 <p>  i := 1; j := 1;<br />
   for multiplicity in partition do<br />
     for k in [1 .. multiplicity] do M[j, j] := ring.i; j := j + 1; end for;<br />
     i := i + 1;<br />
-  end for;</p>
+  end for;
 <p>  return M;<br />
 end function;<br />
-[/sourcecode]</p>
+[/sourcecode]
 <p>while <code>EnumerateSuperDiagonals</code> is<br />
 [sourcecode]<br />
 EnumerateSuperdiagonals := function(matrix, partition)<br />
-  matrices := {};</p>
+  matrices := {};
 <p>  configurations := CartesianProduct([[0 .. multiplicity - 1] : multiplicity in partition]);<br />
   for configuration in configurations do<br />
     if IsNondecreasing(partition, configuration) then<br />
       matrices := matrices join {ConstructJordanNormalForm(matrix, partition, configuration)};<br />
     end if;<br />
-  end for;</p>
+  end for;
 <p>  return matrices;<br />
 end function;<br />
-[/sourcecode]</p>
+[/sourcecode]
 <p>The filter <code>IsNondecreasing</code> is implemented by<br />
 [sourcecode]<br />
 IsNondecreasing := function(partition, configuration)<br />
   maximum := Infinity();<br />
-  length := partition[1];</p>
+  length := partition[1];
 <p>  for i in [1 .. #partition] do<br />
     if partition[i] lt length then<br />
       maximum := Infinity();<br />
@@ -81,10 +81,10 @@ IsNondecreasing := function(partition, configuration)<br />
     else<br />
       maximum := configuration[i];<br />
     end if;<br />
-  end for;</p>
+  end for;
 <p>  return true;<br />
 end function;<br />
-[/sourcecode]</p>
+[/sourcecode]
 <p>while the actual construction as implemented in <code>ConstructJordanNormalForm</code> is given by<br />
 [sourcecode]<br />
 ConstructJordanNormalForm := function(matrix, partition, configuration)<br />
@@ -94,19 +94,19 @@ ConstructJordanNormalForm := function(matrix, partition, configuration)<br />
       matrix[position + j, position + j + 1] := 1;<br />
     end for;<br />
     position := position + (partition[i]);<br />
-  end for;</p>
+  end for;
 <p>  return matrix;<br />
 end function;<br />
-[/sourcecode]</p>
-<p>The output for this code (where $n=5$) is given in <a href="http://pastebin.com/bBxbNtsQ">this pastebin</a>.</p>
+[/sourcecode]
+<p>The output for this code (where $n=5$) is given in <a href="http://pastebin.com/bBxbNtsQ">this pastebin</a>.
 <h2>The calculation of the dimensions</h2>
-<p>The third part is a bit of (symbolic) linear algebra, where you have to determine the dimension of the orbit by calculating the dimension of the stabilizer group, which is a Zariski dense subset of the centralizer of a matrix, hence suffices for giving the correct dimension. Mathematical details can be found in the text, the actual implementation is given by</p>
+<p>The third part is a bit of (symbolic) linear algebra, where you have to determine the dimension of the orbit by calculating the dimension of the stabilizer group, which is a Zariski dense subset of the centralizer of a matrix, hence suffices for giving the correct dimension. Mathematical details can be found in the text, the actual implementation is given by
 <p>[sourcecode]<br />
 OrbitDimension := function(matrix)<br />
   field := BaseRing(matrix);<br />
   n := Rank(field);<br />
-  ring := PolynomialRing(field, n^2);</p>
-<p>  unknowns := Matrix(ring, n, n, [Name(ring, i) : i in [1 .. n^2]]);</p>
+  ring := PolynomialRing(field, n^2);
+<p>  unknowns := Matrix(ring, n, n, [Name(ring, i) : i in [1 .. n^2]]);
 <p>  system := Matrix(ring, n^2, n^2, []);<br />
   for i in [1 .. n] do<br />
     for j in [1 .. n] do<br />
@@ -114,10 +114,10 @@ OrbitDimension := function(matrix)<br />
         system[(i-1)*n + j, k] := Coefficient((matrix*unknowns)[i, j], k, 1) - Coefficient((unknowns*matrix)[i, j], k, 1);<br />
       end for;<br />
     end for;<br />
-  end for;</p>
+  end for;
 <p>  return n^2 - Rank(Kernel(system));<br />
 end function;<br />
 [/sourcecode]<br />
-The algorithm is nothing but initializing a big system of linear equations, expressing the commutator relation $AM=MA$ where $M$ is (not necessarily) a matrix in Jordan normal form and $A$ is a matrix where every element corresponds to an unknown. By equating $AM=MA$ positionwise and obtaining a linear system of $n^2$ equations over the function field where our eigenvalues live, we can compute the rank of the kernel, which describes the dimension of the centralizing matrices.</p>
-<p>If we slightly change the iteration of the first code example, calling <code>OrbitDimension</code> for each matrix, the output will be as given in <a href="http://pastebin.com/cTqND1cY">this pastebin</a> in case of $n=5$.</p>
-<p>What I have done is not the most relevant contribution to the world of mathematics, but in case you ever feel the urge to enumerate Jordan normal forms, I hope this will help you.</p>
+The algorithm is nothing but initializing a big system of linear equations, expressing the commutator relation $AM=MA$ where $M$ is (not necessarily) a matrix in Jordan normal form and $A$ is a matrix where every element corresponds to an unknown. By equating $AM=MA$ positionwise and obtaining a linear system of $n^2$ equations over the function field where our eigenvalues live, we can compute the rank of the kernel, which describes the dimension of the centralizing matrices.
+<p>If we slightly change the iteration of the first code example, calling <code>OrbitDimension</code> for each matrix, the output will be as given in <a href="http://pastebin.com/cTqND1cY">this pastebin</a> in case of $n=5$.
+<p>What I have done is not the most relevant contribution to the world of mathematics, but in case you ever feel the urge to enumerate Jordan normal forms, I hope this will help you.

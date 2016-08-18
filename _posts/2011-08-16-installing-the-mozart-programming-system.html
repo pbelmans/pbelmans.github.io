@@ -14,44 +14,44 @@ meta:
     12:34:52";}
 author: Pieter Belmans
 ---
-<p>The <a href="http://mozart-oz.org/">Mozart Programming System</a> is the environment in which you can use Oz, the multi-paradigm (yet we're mostly interested in the constraint-programming part) language on which Strasheela is built. So, let's install it!</p>
-<p>I have spent many hours trying to install this. First I wanted to compile from source, but I used the <a href="https://gforge.info.ucl.ac.be/svn/mozart/trunk/mozart">outdated Subversion repository</a>, which is unaware of 64-bit environments. Then I decided to get the 32-bit binary in the tarball <a href="http://www.mozart-oz.org/download/view.cgi?action=tar&amp;version=1.4.0">provided at the official website</a>. When that failed, I went for the virtualization approach: get a 32-bit Ubuntu running (<code>mozart</code> is in the repositories!) and do everything in my virtual machine. That was an easy success.</p>
-<p>But then I discovered that the (albeit slow) development of the Mozart Programming System has moved to <a href="https://github.com/mozart">GitHu</a>b. And they provided instructions to build from source! Hurray! I decided to stick to my virtual machine approach, but now a machine running a clean 64-bit Debian, just to make sure that:</p>
+<p>The <a href="http://mozart-oz.org/">Mozart Programming System</a> is the environment in which you can use Oz, the multi-paradigm (yet we're mostly interested in the constraint-programming part) language on which Strasheela is built. So, let's install it!
+<p>I have spent many hours trying to install this. First I wanted to compile from source, but I used the <a href="https://gforge.info.ucl.ac.be/svn/mozart/trunk/mozart">outdated Subversion repository</a>, which is unaware of 64-bit environments. Then I decided to get the 32-bit binary in the tarball <a href="http://www.mozart-oz.org/download/view.cgi?action=tar&amp;version=1.4.0">provided at the official website</a>. When that failed, I went for the virtualization approach: get a 32-bit Ubuntu running (<code>mozart</code> is in the repositories!) and do everything in my virtual machine. That was an easy success.
+<p>But then I discovered that the (albeit slow) development of the Mozart Programming System has moved to <a href="https://github.com/mozart">GitHu</a>b. And they provided instructions to build from source! Hurray! I decided to stick to my virtual machine approach, but now a machine running a clean 64-bit Debian, just to make sure that:
 <ul>
-<li>this installation guide is as complete as possible, explaining all steps necessary on a freshly installed machine;</li>
-<li>it actually works, after the many hours of fiddling with libraries etc. I am afraid my main install has some conflicting libraries.</li>
+<li>this installation guide is as complete as possible, explaining all steps necessary on a freshly installed machine;
+<li>it actually works, after the many hours of fiddling with libraries etc. I am afraid my main install has some conflicting libraries.
 </ul>
-<p>The notes provided at GitHub aren't complete though, in order to get it working on 64-bit Debian, a few adaptions are necessary.</p>
+<p>The notes provided at GitHub aren't complete though, in order to get it working on 64-bit Debian, a few adaptions are necessary.
 <h3>Installation guide</h3>
 <ol>
-<li><code>sudo apt-get git install tk-dev tcl-dev build-essential libc6-dev g++-multilib ia32-libs lib32z1-dev lib32gmp3-dev libgdbm-dev flex bison emacs autoconf</code></li>
-<li><code>mkdir ~/.oz</code></li>
-<li><code>mkdir -p ~/.dev/mozart</code></li>
-<li><code>cd ~/.dev/mozart</code></li>
-<li><code>git clone git://github.com/mozart/mozart.git</code></li>
-<li><code>mkdir build</code></li>
-<li><code>cd build</code></li>
-<li><code>../mozart/configure --prefix=$HOME/.oz --enable-contrib-gdbm=no</code></li>
-<li><code>make &amp;&amp; make install</code></li>
+<li><code>sudo apt-get git install tk-dev tcl-dev build-essential libc6-dev g++-multilib ia32-libs lib32z1-dev lib32gmp3-dev libgdbm-dev flex bison emacs autoconf</code>
+<li><code>mkdir ~/.oz</code>
+<li><code>mkdir -p ~/.dev/mozart</code>
+<li><code>cd ~/.dev/mozart</code>
+<li><code>git clone git://github.com/mozart/mozart.git</code>
+<li><code>mkdir build</code>
+<li><code>cd build</code>
+<li><code>../mozart/configure --prefix=$HOME/.oz --enable-contrib-gdbm=no</code>
+<li><code>make &amp;&amp; make install</code>
 <li>amend and append the below to your <code>~/.bashrc</code> file
 <pre>export OZHOME=$HOME/.oz
 export PATH=$PATH:$OZHOME/bin</pre>
-</li>
-<li><code>mkdir ~/.dev/mozart-stdlib</code></li>
-<li><code>cd ~/.dev/mozart-stdlib</code></li>
-<li><code>git clone git://github.com/mozart/mozart-stdlib.git</code></li>
-<li><code>mkdir build</code></li>
-<li><code>cd build</code></li>
-<li><code>../mozart-stdlib/configure --prefix=$HOME/.oz</code></li>
-<li><code>make &amp;&amp; make install</code></li>
+
+<li><code>mkdir ~/.dev/mozart-stdlib</code>
+<li><code>cd ~/.dev/mozart-stdlib</code>
+<li><code>git clone git://github.com/mozart/mozart-stdlib.git</code>
+<li><code>mkdir build</code>
+<li><code>cd build</code>
+<li><code>../mozart-stdlib/configure --prefix=$HOME/.oz</code>
+<li><code>make &amp;&amp; make install</code>
 </ol>
-<p>Now everything is ready to install Strasheela, which will be discussed in the next post.</p>
+<p>Now everything is ready to install Strasheela, which will be discussed in the next post.
 <h3>The Strasheela series</h3>
 <ol>
-<li><a href="http://pbelmans.wordpress.com/2011/08/15/computational-composition-the-kick-start/">Computational composition: the kick start</a></li>
-<li><a href="http://pbelmans.wordpress.com/2011/08/16/installing-the-mozart-programming-system/">Installing the Mozart Programming System</a></li>
-<li><a href="http://pbelmans.wordpress.com/2011/08/16/installing-strasheela/">Installing Strasheela</a></li>
-<li><a href="http://pbelmans.wordpress.com/2011/08/18/development-of-the-fuxian-counterpoint-project-is-now-available-at-github/">Development of the Fuxian counterpoint project is now available at GitHub</a></li>
-<li><a href="http://pbelmans.wordpress.com/2011/09/17/struggling-with-oz/">Struggling with Oz</a></li>
-<li><a href="http://pbelmans.wordpress.com/2011/09/24/counterpoint-in-gregorian-modes/">Counterpoint in Gregorian modes</a></li>
+<li><a href="http://pbelmans.wordpress.com/2011/08/15/computational-composition-the-kick-start/">Computational composition: the kick start</a>
+<li><a href="http://pbelmans.wordpress.com/2011/08/16/installing-the-mozart-programming-system/">Installing the Mozart Programming System</a>
+<li><a href="http://pbelmans.wordpress.com/2011/08/16/installing-strasheela/">Installing Strasheela</a>
+<li><a href="http://pbelmans.wordpress.com/2011/08/18/development-of-the-fuxian-counterpoint-project-is-now-available-at-github/">Development of the Fuxian counterpoint project is now available at GitHub</a>
+<li><a href="http://pbelmans.wordpress.com/2011/09/17/struggling-with-oz/">Struggling with Oz</a>
+<li><a href="http://pbelmans.wordpress.com/2011/09/24/counterpoint-in-gregorian-modes/">Counterpoint in Gregorian modes</a>
 </ol>

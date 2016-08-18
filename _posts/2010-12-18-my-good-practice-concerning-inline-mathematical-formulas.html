@@ -11,36 +11,36 @@ tags: []
 meta:
 author: Pieter Belmans
 ---
-<p>I am not sure whether this is common practice, but I do feel there is a benefit from what I'm going to discuss next. If you feel otherwise about this particular good practice I tend to use in my documents, do not hesitate and tell me why :-).</p>
+<p>I am not sure whether this is common practice, but I do feel there is a benefit from what I'm going to discuss next. If you feel otherwise about this particular good practice I tend to use in my documents, do not hesitate and tell me why :-).
 <h2>Problem sketch</h2>
-<p>When typing a mathematical text you use inline mathematical formulas. When doing this without much thought, <em>i.e.</em>, not caring about non-breakable spaces (or ties), also known as <code>~</code> you end up with nasty results.. Exercise 18.10 of the TeXbook tries to make you aware of these so-called <em>bad line breaks</em>.</p>
-<p>But Knuth doesn't really describe the rules he tends to follow and my personal taste differs from what he suggests as a solution to the given exercise. My main concerns are:</p>
+<p>When typing a mathematical text you use inline mathematical formulas. When doing this without much thought, <em>i.e.</em>, not caring about non-breakable spaces (or ties), also known as <code>~</code> you end up with nasty results.. Exercise 18.10 of the TeXbook tries to make you aware of these so-called <em>bad line breaks</em>.
+<p>But Knuth doesn't really describe the rules he tends to follow and my personal taste differs from what he suggests as a solution to the given exercise. My main concerns are:
 <ol>
-<li>lines starting with a symbol</li>
-<li>line breaks inside inline mathematical formulas</li>
-<li>symbols denoting an object at the end of a line while the type of object is on the next (as in: <cite>Let <em>C</em> be a commutative ring</cite>)</li>
+<li>lines starting with a symbol
+<li>line breaks inside inline mathematical formulas
+<li>symbols denoting an object at the end of a line while the type of object is on the next (as in: <cite>Let <em>C</em> be a commutative ring</cite>)
 </ol>
-<p>Number 3 is something he avoids, but 1 and 2 are phenomenons that will occur when following his technique (as is shown in the typeset solution). And he advocates the usage of white spacing to denote formulas, a practice that has gotten out of use since then. Now what I want to discuss in this post are the ways how I avoid these three problems.</p>
+<p>Number 3 is something he avoids, but 1 and 2 are phenomenons that will occur when following his technique (as is shown in the typeset solution). And he advocates the usage of white spacing to denote formulas, a practice that has gotten out of use since then. Now what I want to discuss in this post are the ways how I avoid these three problems.
 <h2>Solutions</h2>
-<p>The first one is obvious: you just prefix each inline math formula with a non-breakable space <code>~</code>. No more line breaks will happen at this point now. This same technique applies to the third one: just suffix each introduction of a symbol with a non-breakable space.</p>
-<p>This introduces a problem that concerns the second one as well: line breaking. When TeX is offered <em>less</em> opportunities to break a line, the results tend to get poorer. And I want to make it even worse: I don't want <em>any</em> line breaks within formulas! They're ugly!</p>
-<p>How do I avoid line breaks in inline mathematical formulas? By putting <code>\relpenalty=10000</code> and <code>\binoppenalty=10000</code>. This prevents TeX from breaking inside formulas because it would involve infinite badness (yes, infinite is at 10000): breaks at both relationships (equal signs and the like) or binary operators are forbidden. This is kind of like the <a href="http://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Werror-234"><code>-Werror</code> flag in <code>gcc</code></a>: all warnings (split formulas) are treated as errors (bad boxes). TeX is only allowed to break in text and if that would introduce intolerable badness I get to solve it myself. What's nice about this solution is that it is unobtrusive: one could also put <code>\mbox{}</code> around each formula but that would be <em>bad</em>.</p>
+<p>The first one is obvious: you just prefix each inline math formula with a non-breakable space <code>~</code>. No more line breaks will happen at this point now. This same technique applies to the third one: just suffix each introduction of a symbol with a non-breakable space.
+<p>This introduces a problem that concerns the second one as well: line breaking. When TeX is offered <em>less</em> opportunities to break a line, the results tend to get poorer. And I want to make it even worse: I don't want <em>any</em> line breaks within formulas! They're ugly!
+<p>How do I avoid line breaks in inline mathematical formulas? By putting <code>\relpenalty=10000</code> and <code>\binoppenalty=10000</code>. This prevents TeX from breaking inside formulas because it would involve infinite badness (yes, infinite is at 10000): breaks at both relationships (equal signs and the like) or binary operators are forbidden. This is kind of like the <a href="http://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Werror-234"><code>-Werror</code> flag in <code>gcc</code></a>: all warnings (split formulas) are treated as errors (bad boxes). TeX is only allowed to break in text and if that would introduce intolerable badness I get to solve it myself. What's nice about this solution is that it is unobtrusive: one could also put <code>\mbox{}</code> around each formula but that would be <em>bad</em>.
 <p>There are two solutions to the problem of the bad boxes introduced by this practice:
 <ul>
-<li>rewriting your text, opting for a less symbolic and more prosaic writing</li>
-<li>putting formulas in display style</li>
+<li>rewriting your text, opting for a less symbolic and more prosaic writing
+<li>putting formulas in display style
 </ul>
-<p>I feel both solutions tend to improve a mathematical text when applied the correct way. When typing you get the opportunity to be more verbose: handwritten math often contains many implicit facts due to the fact that it takes more time to write, a TeX'ed manuscript can offer a bit of explicitation by adding little words and slightly redundant phrases. And in order to avoid having a densely written roman-style of mathematical manuscript, display style can break the flow in a good way.</p>
+<p>I feel both solutions tend to improve a mathematical text when applied the correct way. When typing you get the opportunity to be more verbose: handwritten math often contains many implicit facts due to the fact that it takes more time to write, a TeX'ed manuscript can offer a bit of explicitation by adding little words and slightly redundant phrases. And in order to avoid having a densely written roman-style of mathematical manuscript, display style can break the flow in a good way.
 <h2>Morale</h2>
 <ul>
-<li>use ties, the TeXbook explains how, but bear in mind your own personal taste</li>
+<li>use ties, the TeXbook explains how, but bear in mind your own personal taste
 <li>prevent line breaks inside formulas by adding
 <pre><code>\relpenalty=10000
 \binoppenalty=10000</code></pre>
-</li>
+
 </ul>
 <h2>My answer to the exercise</h2>
-<p>I prefer the prose of the second suggestion more, so I've TeX'd it how I would do it.</p>
+<p>I prefer the prose of the second suggestion more, so I've TeX'd it how I would do it.
 <pre><code>Let~$C$ be a closed, bounded and convex subset of a Hilbert
 space~$H$, and let~$T$~be a non-expansive self map of~$C$. Suppose
 that as~$n\to\infty$, we have~$a_{n,k}\to 0$ for each~$k$, and
