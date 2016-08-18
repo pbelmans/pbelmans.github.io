@@ -12,16 +12,27 @@ meta:
 author: Pieter Belmans
 ---
 <p>During the <a href="https://sites.google.com/site/bragmeeting/1st-brag-meeting">British Algebraic Geometry meeting</a> last year in Warwick, <a href="http://www.srcf.ucam.org/~jvsh2/">Julian Holstein</a> asked me an interesting question<sup>*</sup>:
+
 <blockquote><p>What makes the Kronecker quiver special?</blockquote>
+
 <p>In the context of our conversation this meant the following: why is the derived category of the Kronecker quiver (with 2 arrows) equivalent to the derived category of the projective line, yet for the generalised Kronecker quiver (with $n$ arrows, for $n\neq 2$) there is no <em>equivalence</em> with the derived category of any smooth projective variety?
+
 <p>The exact interpretation of this question is that the path algebra of the Kronecker quiver is the endomorphism algebra of some full and strong exceptional collection of objects in the derived category of a smooth projective variety, whilst the generalised Kronecker can never occur in such a fashion. So why is this the case?
+
 <p>There are many ways in which it is not hard to see that this is indeed the only possibility (arguing on algebraic K-theory, using Okawa's indecomposability result for curves, studying exceptional objects, representation-theoretic arguments...) and certainly proving that the Kronecker quiver is indeed special wasn't the issue. But somehow we felt that each of these arguments was like appealing to the classification of finite simple groups to prove some easy lemma in group theory. Yes, it works, but it isn't the best method of proof.
+
 <p>Luckily, we are not just given a triangulated category: <em>Serre duality</em> imposes extra rigidity on a category, and it turns out that by studying the properties of the Serre functor we can distinguish between the Kronecker quiver and the generalised Kronecker quivers.
+
 <p>So for the actual answer: Bondal and Polishchuk (attributing the result to Suslin) prove in their paper <a href="http://www.ams.org/mathscinet-getitem?mr=1230966">Homological properties of associative algebras: the method of helices</a> that the Serre functor on the level of the Grothendieck group (when equipped with the correct sign) is a unipotent operator. As the Gram matrix of the $n$-Kronecker quiver is given by
-<p>$\displaystyle\begin{pmatrix} 1 &amp; n \\ 0 &amp; 1 \end{pmatrix}$
-<p>the Serre functor $\kappa$ is given by
-<p>$\displaystyle\begin{pmatrix} 1-n^2 &amp; -n \\ n &amp; 1 \end{pmatrix}$
-<p>and the characteristic polynomial of $-\kappa$ is given by $t^2+(-n^2+2)t+1$. For the matrix $-\kappa$ to be unipotent we need the characteristic polynomial to be a power of $t-1$, hence $n=2$ is the only solution.
+$$
+\displaystyle\begin{pmatrix} 1 &amp; n \\ 0 &amp; 1 \end{pmatrix}
+$$
+the Serre functor $\kappa$ is given by
+$$
+\displaystyle\begin{pmatrix} 1-n^2 &amp; -n \\ n &amp; 1 \end{pmatrix}
+$$
+and the characteristic polynomial of $-\kappa$ is given by $t^2+(-n^2+2)t+1$. For the matrix $-\kappa$ to be unipotent we need the characteristic polynomial to be a power of $t-1$, hence $n=2$ is the only solution.
+
 <p>What I like about this answer is that it opens up questions in higher dimensions, to which I might return at some point.
 <p><small><sup>*</sup> I don't recall his exact words, but I guess we were using a more dg categorical lingo at the time, hence more likely they were something along:
 <blockquote><p>What makes the gluing of two objects along a 2-dimensional vectorspace so special?</blockquote>
