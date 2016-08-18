@@ -14,45 +14,45 @@ author: Pieter Belmans
 ---
 <p>Today's blog post is inspired by the <a href="http://pbelmans.wordpress.com/2014/10/09/what-are-chern-classes/">Chern classes seminar that we are conducting</a>, but it takes a rather big leap from where I left off. Everything I say is based on SGA6 and Fulton--Lang's Riemann--Roch algebra (which is a true gem I discovered).</p>
 <h2>The lambda-ring associated to a scheme</h2>
-<p>If you have a sufficiently nice scheme $latex X$ (the buzzwords are connected, noetherian and having an ample line bundle) and let's even assume that $latex \dim(X)=d$. Then we have a <em>Grothendieck group</em> $latex \mathrm{K}^0(X)$, obtained by considering the category of locally free sheaves on $latex X$ and modding out exact sequences of locally free sheaves. Or, as is explained in SGA6 IV, one can take the (triangulated) category of perfect complexes and mod out triangles, where SGA6 II addresses the issues of being globally (and not just locally) isomorphic to a complex of locally free sheaves.</p>
+<p>If you have a sufficiently nice scheme $X$ (the buzzwords are connected, noetherian and having an ample line bundle) and let's even assume that $\dim(X)=d$. Then we have a <em>Grothendieck group</em> $\mathrm{K}^0(X)$, obtained by considering the category of locally free sheaves on $X$ and modding out exact sequences of locally free sheaves. Or, as is explained in SGA6 IV, one can take the (triangulated) category of perfect complexes and mod out triangles, where SGA6 II addresses the issues of being globally (and not just locally) isomorphic to a complex of locally free sheaves.</p>
 <p>The tensor product of locally free sheaves induces a multiplication, hence we obtain a <em>Grothendieck ring</em>.</p>
 <p>So far so good. Now we can turn this into a <em>lambda-ring</em>. The problem with this extra structure on a ring is that writing down all the axioms is boring. It helps if you know where the structure actually comes from: besides direct sums and tensor products we also have the <em>exterior product</em> of locally free sheaves. If we were to take globally free sheaves, we can prove that, just as in linear algebra, we have a decomposition</p>
-<p>$latex \bigwedge^n(\mathcal{E})\cong\bigoplus_{i=0}^n\left( \bigwedge^i(\mathcal{E}')\otimes\bigwedge^{n-i}(\mathcal{E}'') \right)$</p>
-<p>if $latex 0\to\mathcal{E}'\to\mathcal{E}\to\mathcal{E}''\to 0$ is an exact sequence of globally free sheaves. In the case that the exact sequence is only one of locally free sheaves there is no global decomposition, but there exists a filtration whose quotients are exactly the terms in the decomposition above. If you feel like it: do Hartshorne, exercise II.5.16(d). Hence, in the Grothendieck ring we have a sum decomposition</p>
-<p>$latex \left[ \bigwedge^n(\mathcal{E}) \right]=\sum_{i+j=n}\left[ \bigwedge^i(\mathcal{E}')\otimes\bigwedge^j(\mathcal{E}'') \right]$</p>
+<p>$\bigwedge^n(\mathcal{E})\cong\bigoplus_{i=0}^n\left( \bigwedge^i(\mathcal{E}')\otimes\bigwedge^{n-i}(\mathcal{E}'') \right)$</p>
+<p>if $0\to\mathcal{E}'\to\mathcal{E}\to\mathcal{E}''\to 0$ is an exact sequence of globally free sheaves. In the case that the exact sequence is only one of locally free sheaves there is no global decomposition, but there exists a filtration whose quotients are exactly the terms in the decomposition above. If you feel like it: do Hartshorne, exercise II.5.16(d). Hence, in the Grothendieck ring we have a sum decomposition</p>
+<p>$\left[ \bigwedge^n(\mathcal{E}) \right]=\sum_{i+j=n}\left[ \bigwedge^i(\mathcal{E}')\otimes\bigwedge^j(\mathcal{E}'') \right]$</p>
 <p>which says that exterior powers are compatible with the equivalence relation. Now that we know where the intuition comes from, we can formalise things.</p>
-<p><strong>Definition.</strong> Let $latex A$ be a commutative ring. Then a <em>lambda-ring structure</em> consists of endomorphisms $latex \lambda^i\colon A\to A$ for all $latex i\in\mathbb{N}$, such that</p>
+<p><strong>Definition.</strong> Let $A$ be a commutative ring. Then a <em>lambda-ring structure</em> consists of endomorphisms $\lambda^i\colon A\to A$ for all $i\in\mathbb{N}$, such that</p>
 <ol>
-<li>$latex \lambda^0(x)=1$ for all $latex x\in A$;
+<li>$\lambda^0(x)=1$ for all $x\in A$;
 </li>
-<li>$latex \lambda^1(x)=x$ for all $latex x\in A$;
+<li>$\lambda^1(x)=x$ for all $x\in A$;
 </li>
-<li>$latex \lambda^n(x+y)=\sum_{i=0}^n\lambda^i(x)\lambda^{k-i}(y)$ for all $latex x,y\in A$.
+<li>$\lambda^n(x+y)=\sum_{i=0}^n\lambda^i(x)\lambda^{k-i}(y)$ for all $x,y\in A$.
 </li>
 </ol>
-<p>So we have just formalised the notion of exterior products. Moreover we have a notion of <em>rank</em> for a locally free sheaf, which by linearity induces a surjective ring homomorphism $latex r\colon A\to\mathbb{Z}$.</p>
-<p>We are not quite there yet, because actually we are working with <em>special lambda-rings</em>. The <a href="http://win.ua.ac.be/~pbelmans/seminar/chern/grothendieck-chern.pdf"><em>splitting principle</em> in intersection theory</a>, which allows us to treat vector bundles as if they are iterated extensions of line bundles, gives extra data. Namely we have expressions for $latex \bigwedge^n\left( \bigwedge^m\mathcal{E} \right)$ and $latex \bigwedge^n\left( \mathcal{E}\otimes\mathcal{F} \right)$ in terms of the Chern roots of the original bundles. We will not need these at the moment, but maybe I will write something about this later.</p>
+<p>So we have just formalised the notion of exterior products. Moreover we have a notion of <em>rank</em> for a locally free sheaf, which by linearity induces a surjective ring homomorphism $r\colon A\to\mathbb{Z}$.</p>
+<p>We are not quite there yet, because actually we are working with <em>special lambda-rings</em>. The <a href="http://win.ua.ac.be/~pbelmans/seminar/chern/grothendieck-chern.pdf"><em>splitting principle</em> in intersection theory</a>, which allows us to treat vector bundles as if they are iterated extensions of line bundles, gives extra data. Namely we have expressions for $\bigwedge^n\left( \bigwedge^m\mathcal{E} \right)$ and $\bigwedge^n\left( \mathcal{E}\otimes\mathcal{F} \right)$ in terms of the Chern roots of the original bundles. We will not need these at the moment, but maybe I will write something about this later.</p>
 <h2>Three filtrations</h2>
 <p>The title suggests that there are three filtrations on this ring. It's about time I say which, and how they relate.</p>
 <h3>The topological filtration</h3>
-<p>The easiest filtration is the topological filtration. In the introduction SGA6 it is defined in a special case, for the presentation of the Grothendieck group via coherent sheaves, by just saying that $latex \mathrm{F}_{\mathrm{top}}^i\mathrm{K}^0(X)$ is generated by coherent sheaves whose support has codimension bigger than $latex i$. In Fulton--Lang a more formal definition is given in terms of (global) perfect complexes. The idea is to use cohomological support of complexes and codimension, but I don't feel like spelling out details.</p>
-<p>One can prove that it is compatible with the ring structure, and under the assumption that $latex \dim(X)=d$ it is a filtration of length $latex \leq d$.</p>
+<p>The easiest filtration is the topological filtration. In the introduction SGA6 it is defined in a special case, for the presentation of the Grothendieck group via coherent sheaves, by just saying that $\mathrm{F}_{\mathrm{top}}^i\mathrm{K}^0(X)$ is generated by coherent sheaves whose support has codimension bigger than $i$. In Fulton--Lang a more formal definition is given in terms of (global) perfect complexes. The idea is to use cohomological support of complexes and codimension, but I don't feel like spelling out details.</p>
+<p>One can prove that it is compatible with the ring structure, and under the assumption that $\dim(X)=d$ it is a filtration of length $\leq d$.</p>
 <h3>The lambda-filtration</h3>
 <p>The hardest filtration is the lambda-filtration, or Grothendieck filtration, or gamma-filtration. I'm not sure whether my intuition is entirely correct, but it seems that the motivation is to use the splitting principle to obtain a finer filtration than the topological filtration.</p>
-<p>To define this we put a different lambda-structure on our lambda-ring, by considering endomorphisms $latex \gamma^i\colon\mathrm{K}^0(X)\to\mathrm{K}^0(X)$ defined by</p>
-<p>$latex \sum_{i\in\mathbb{N}}\lambda^i(x))\left( \frac{t}{1-t} \right)^i=\sum_{i\in\mathbb{N}}\gamma^i(x)t^i$</p>
+<p>To define this we put a different lambda-structure on our lambda-ring, by considering endomorphisms $\gamma^i\colon\mathrm{K}^0(X)\to\mathrm{K}^0(X)$ defined by</p>
+<p>$\sum_{i\in\mathbb{N}}\lambda^i(x))\left( \frac{t}{1-t} \right)^i=\sum_{i\in\mathbb{N}}\gamma^i(x)t^i$</p>
 <p>i.e. we consider a formal power series ring over our lambda-ring, we choose a different generator for it and write out the change in coefficients.</p>
 <p>We then set</p>
 <ol>
-<li>$latex \mathrm{F}_\lambda^0\mathrm{K}^0(X)=\mathrm{K}^0(X)$;
+<li>$\mathrm{F}_\lambda^0\mathrm{K}^0(X)=\mathrm{K}^0(X)$;
 </li>
-<li>$latex \mathrm{F}_\lambda^1\mathrm{K}^0(X)=\mathrm{ker}(r)$, i.e. those elements which are of (formal) rank 0;
+<li>$\mathrm{F}_\lambda^1\mathrm{K}^0(X)=\mathrm{ker}(r)$, i.e. those elements which are of (formal) rank 0;
 </li>
-<li>$latex \mathrm{F}_\lambda^n\mathrm{K}^0(X)$ is generated by the expressions $latex \prod_{i=1}^k\gamma^{r_i}(x_i)$, for $latex x_i\in\mathrm{F}^1\mathrm{K}^0(X)$ and $latex \sum_{i=1}^kr_i\geq n$.
+<li>$\mathrm{F}_\lambda^n\mathrm{K}^0(X)$ is generated by the expressions $\prod_{i=1}^k\gamma^{r_i}(x_i)$, for $x_i\in\mathrm{F}^1\mathrm{K}^0(X)$ and $\sum_{i=1}^kr_i\geq n$.
 </li>
 </ol>
-<p>This induces a descending sequence of ideals in the Grothendieck ring. One can prove that $latex \mathrm{F}_{\mathrm{top}}^1\mathrm{K}^0(X)=\mathrm{F}_\lambda^1\mathrm{K}^0(X)$ (Fulton--Lang, V.3.5), and the proof boils down to the silly fact that $latex [\Sigma\mathcal{E}^\bullet]=-[\mathcal{E}^\bullet]$, if we use the presentation of the Grothendieck group via complexes.</p>
-<p>In general we have that the <em>lambda-filtration is finer than the topological filtration</em> (Fulton--Lang, V.3.9), i.e. $latex \mathrm{F}_\lambda^n\mathrm{K}^0(X)\subseteq\mathrm{F}_{\mathrm{top}}^n\mathrm{K}^0(X)$, and the proof of this fact uses the splitting principle, which reduces the statement to line bundles, then we use the equality in degree 1 and the fact that $latex \mathrm{F}_{\mathrm{top}}^i$ is compatible with the ring structures.</p>
+<p>This induces a descending sequence of ideals in the Grothendieck ring. One can prove that $\mathrm{F}_{\mathrm{top}}^1\mathrm{K}^0(X)=\mathrm{F}_\lambda^1\mathrm{K}^0(X)$ (Fulton--Lang, V.3.5), and the proof boils down to the silly fact that $[\Sigma\mathcal{E}^\bullet]=-[\mathcal{E}^\bullet]$, if we use the presentation of the Grothendieck group via complexes.</p>
+<p>In general we have that the <em>lambda-filtration is finer than the topological filtration</em> (Fulton--Lang, V.3.9), i.e. $\mathrm{F}_\lambda^n\mathrm{K}^0(X)\subseteq\mathrm{F}_{\mathrm{top}}^n\mathrm{K}^0(X)$, and the proof of this fact uses the splitting principle, which reduces the statement to line bundles, then we use the equality in degree 1 and the fact that $\mathrm{F}_{\mathrm{top}}^i$ is compatible with the ring structures.</p>
 <p>One of the main results (SGA6 VII) is that the <em>associated graded rings are, up to torsion, isomorphic</em>!</p>
 <h3>The third filtration</h3>
 <p>I was aware of the previous two filtrations in SGA6, but hidden inside SGA6 exposé VI.6.5 (not IV, as indicated in Fulton--Lang) there is a third filtration. This blog post has gone on for long enough now and the filtration has properties similar to the topological filtration (but it is not functorial), hence I won't discuss it. But reading SGA6 and Fulton--Lang was fun (in some perverse way, maybe), so maybe I will come back to it later.</p>

@@ -19,7 +19,7 @@ to<br />
 The first one is the naive approach, obtained by using</p>
 <pre><code>\DeclareMathOperator\cHH{\check{\HH}}
 \DeclareMathOperator\HH{H}</code></pre>
-<p>The problem with it is that the accent raises the height of the box, thereby raising the exponent too. But visually speaking the $latex q$ and $latex p$ should be on the same height. This is done by using the <code>\smash</code> macro (which already exists in Plain TeX, and is not part of <a href="http://ctan.org/pkg/mathtools"><code>mathtools</code></a> which I mistakingly thought up to today) which basically annihilates the height from its argument in all layout computations. It can create a horrendous mess, but here it is the solution.</p>
+<p>The problem with it is that the accent raises the height of the box, thereby raising the exponent too. But visually speaking the $q$ and $p$ should be on the same height. This is done by using the <code>\smash</code> macro (which already exists in Plain TeX, and is not part of <a href="http://ctan.org/pkg/mathtools"><code>mathtools</code></a> which I mistakingly thought up to today) which basically annihilates the height from its argument in all layout computations. It can create a horrendous mess, but here it is the solution.</p>
 <p>To make sure that our macro is as generally applicable as possible we do insert the height of the argument which will then act as the total height of the result using the <code>\vphantom</code> macro:</p>
 <pre><code>\newcommand\cechit[1]{\smash{\check{#1}}\vphantom{#1}}
 

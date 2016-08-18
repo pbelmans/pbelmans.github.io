@@ -12,8 +12,8 @@ tags: []
 meta:
 author: Pieter Belmans
 ---
-<p>I don't know whether it's common in other parts of the world, but in France one often (or rather: always) denotes an open or closed immersion by drawing a circle or a slash on the hooked arrow. A bad impression hacked together in plain LaTeX would be $latex \hookrightarrow\!\!\!\!\!\!\!\circ$ and $latex \hookrightarrow\!\!\!\!\!\!\!/$.</p>
-<p>Now to define the six functors formalism we have a scheme $latex X$, a closed subscheme $latex Z$ and an open subscheme $latex U$ such that on the level of the underlying sets our big scheme is the disjoint union. In order to write this using <a href="http://ctan.org/pkg/tikz-cd"><code>tikz-cd</code></a>, which is an excellent package to write commutative diagrams, a bit of effort is needed. We define the appropriate arrow styles by<br />
+<p>I don't know whether it's common in other parts of the world, but in France one often (or rather: always) denotes an open or closed immersion by drawing a circle or a slash on the hooked arrow. A bad impression hacked together in plain LaTeX would be $\hookrightarrow\!\!\!\!\!\!\!\circ$ and $\hookrightarrow\!\!\!\!\!\!\!/$.</p>
+<p>Now to define the six functors formalism we have a scheme $X$, a closed subscheme $Z$ and an open subscheme $U$ such that on the level of the underlying sets our big scheme is the disjoint union. In order to write this using <a href="http://ctan.org/pkg/tikz-cd"><code>tikz-cd</code></a>, which is an excellent package to write commutative diagrams, a bit of effort is needed. We define the appropriate arrow styles by<br />
 [sourcecode language="tex"]\usetikzlibrary{decorations.markings}<br />
 \tikzset{<br />
   closed/.style = {decoration = {markings, mark = at position 0.5 with { \node[transform shape, xscale = .8, yscale=.4] {/}; } }, postaction = {decorate} },<br />
@@ -25,5 +25,5 @@ and then we can produce the diagram by<br />
 \end{tikzcd}[/sourcecode]<br />
 This results in<br />
 <img src="{{ site.baseurl }}/assets/arrows.png" alt="" /></p>
-<p>Remark that we have to write the arrow from $latex U$ to $latex X$ in the opposite direction, because otherwise the hook is upside down. I haven't found a better solution for this. And it seems that in the font I'm using (the Bera family with Charter from mathdesign for mathematics) the circle is slightly above the center of the line. If one goes this far in writing a silly diagram this should be fixed too, but unfortunately I haven't found a (clean) solution for this yet. In the default font it looks better by the way.</p>
+<p>Remark that we have to write the arrow from $U$ to $X$ in the opposite direction, because otherwise the hook is upside down. I haven't found a better solution for this. And it seems that in the font I'm using (the Bera family with Charter from mathdesign for mathematics) the circle is slightly above the center of the line. If one goes this far in writing a silly diagram this should be fixed too, but unfortunately I haven't found a (clean) solution for this yet. In the default font it looks better by the way.</p>
 <p>It should be possible to do this in plain math mode too, but you'll have to create long hooked arrows etc. This is easier and more consistent I think.</p>

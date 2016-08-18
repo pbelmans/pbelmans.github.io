@@ -12,7 +12,7 @@ meta:
 author: Pieter Belmans
 ---
 <p>We are having a reading seminar on the book <a href="http://ebooks.cambridge.org/ebook.jsf?bid=CBO9780511623608">Representation theory of Artin algebras</a>, by Auslander, Reiten and Smalø, and this afternoon it's my turn to discuss chapter VI, on finite representation type. An important interest of most of the participants (excluding myself) is modular representation theory, and I should be able to tell something interesting about it in the context of finite representation type. Because of my appalling lack of knowledge on the structure of finite groups I had half an hour of fun with <a href="http://www.gap-system.org/">GAP</a> to come up with some (trivial) facts.</p>
-<p>Recall that by the recognition theorem for modular group algebras of finite type (see Theorem VI.3.3 in the book) it suffices to check whether the $latex p$-Sylow subgroups are cyclic or not, where $latex p$ is the characteristic of the ground field, which necessarily is a divisor of the order of the group (otherwise things are semisimple). Hence the following oneliner suffices to check being of finite representation type:</p>
+<p>Recall that by the recognition theorem for modular group algebras of finite type (see Theorem VI.3.3 in the book) it suffices to check whether the $p$-Sylow subgroups are cyclic or not, where $p$ is the characteristic of the ground field, which necessarily is a divisor of the order of the group (otherwise things are semisimple). Hence the following oneliner suffices to check being of finite representation type:</p>
 <pre><code>IsFiniteRepresentationType := function(G, p)
   return IsCyclic(SylowSubgroup(G, p));
 end;</code></pre>
@@ -48,6 +48,6 @@ end;</code></pre>
   od;
   Print("\n");
 od;</code></pre>
-<p>One obtains <a href="http://pastebin.com/u3ezv8H5">this output</a>, and we conclude that being of finite representation type is indeed a strict condition: as the multiplicity of a factor grows, the groups of finite representation type become scarce. The smallest case is just $latex \mathbb{F}_2\mathrm{Cyc}_2\times\mathrm{Cyc}_2$, a rather small algebra if you'd ask me.</p>
+<p>One obtains <a href="http://pastebin.com/u3ezv8H5">this output</a>, and we conclude that being of finite representation type is indeed a strict condition: as the multiplicity of a factor grows, the groups of finite representation type become scarce. The smallest case is just $\mathbb{F}_2\mathrm{Cyc}_2\times\mathrm{Cyc}_2$, a rather small algebra if you'd ask me.</p>
 <p>Another question to ask is: what about certain families? Symmetric and alternating groups have non-cyclic Sylow subgroups (if a prime factor has multiplicity greater than 1). Dihedral groups on the other hand have modular group algebras of finite representation type over each field of odd characteristic.</p>
 <p><small>Every conclusion could've been made without resorting to a computer algebra system. Unfortunately my computer science background sometimes induces a "code first, think later" way of life.</small></p>

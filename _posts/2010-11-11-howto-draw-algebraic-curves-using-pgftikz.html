@@ -15,9 +15,9 @@ author: Pieter Belmans
 <h2>Introduction</h2>
 <p>As one could deduce from my previous posts, I was trying to draw algebraic curves directly in LaTeX using PGF/TikZ and <code>gnuplot</code>. I'll present a short overview of how one can do this, hoping it will get as popular as <a href="http://pbelmans.wordpress.com/2010/10/02/direct-and-inverse-limit-in-latex/">my post on direct and inverse limits</a>. Which is according to Wordpress' statistics good for one daily search hit.</p>
 <p>So, what is an algebraic curve? For an extensive overview, I refer you to <a href="http://en.wikipedia.org/wiki/Algebraic_curve">the Wikipedia article about them</a>. In this post, it just boils down to an implicit function in 2 variables over the real field. That is, just take any polynomial<br />
-$latex F\in\mathbb{R}[X,Y]$</p>
+$F\in\mathbb{R}[X,Y]$</p>
 <p>and set it equal to zero. In general it is far more abstract, as can be seen in the Wikipedia article, but we're drawing plane algebraic curves, not n-dimensional hypersurfaces over exotic fields. To give an example, take<br />
-$latex F(X,Y)=Y^2-X^3+X=0$</p>
+$F(X,Y)=Y^2-X^3+X=0$</p>
 <p>for now, this is the curve (even more, this is an <a href="http://en.wikipedia.org/wiki/Elliptic_curve">elliptic curve</a>) we'll be using in our examples. It corresponds to the <a href="http://en.wikipedia.org/wiki/File:EllipticCurveCatalog.svg"><em>a=-1</em>, <em>b=0</em> cell in the matrix of examples</a>.</p>
 <h2>The set-up</h2>
 <p>We'll be using <a href="http://sourceforge.net/projects/pgf/">PGF/TikZ</a>, the most awesome LaTeX package since the invention of the boiled water. Apart from maybe <a href="http://www.ctan.org/tex-archive/macros/latex/contrib/microtype/"><code>microtype</code></a>. Anyway, to see what it can do I refer you to <a href="http://www.texample.net/tikz/examples/">TeXample</a>, a nice overview of the amazing stuff it can do. What it so far hasn't been doing is drawing algebraic curves. But we're about to change this!</p>

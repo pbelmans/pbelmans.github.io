@@ -25,7 +25,7 @@ author: Pieter Belmans
 <h2>Jordan normal form enumeration</h2>
 <p>The second part is what this post is about. Recall that any (complex) matrix can be conjugated with an invertible matrix to a block diagonal matrix, whose blocks are matrices with a single eigenvalue of the original on the diagonal, ones on the superdiagonal and zeroes everywhere else. For details, check Wikipedia's <a href="http://en.wikipedia.org/wiki/Jordan_normal_form#Complex_matrices">Jordan normal form/Complex matrices</a>. When trying to reproduce the diagram of Example 1.2 containing the orbit dimensions we obviously need to enumerate all possible Jordan normal forms. This is actually quite easy:</p>
 <ol>
-<li>consider all partitions of $latex n$, where the numbers are given in decreasing order giving all possible configurations of the eigenvalues (these correspond to the columns in the diagram)</li>
+<li>consider all partitions of $n$, where the numbers are given in decreasing order giving all possible configurations of the eigenvalues (these correspond to the columns in the diagram)</li>
 <li>fill in all legal superdiagonals, only considering <em>decreasing numbers of ones</em> for eigenvalues with the same multiplicity</li>
 </ol>
 <p>The eigenvalues of the representatives are taken to be unknowns in a function field, for maximal flexibility. So the following code<br />
@@ -98,7 +98,7 @@ ConstructJordanNormalForm := function(matrix, partition, configuration)<br />
 <p>  return matrix;<br />
 end function;<br />
 [/sourcecode]</p>
-<p>The output for this code (where $latex n=5$) is given in <a href="http://pastebin.com/bBxbNtsQ">this pastebin</a>.</p>
+<p>The output for this code (where $n=5$) is given in <a href="http://pastebin.com/bBxbNtsQ">this pastebin</a>.</p>
 <h2>The calculation of the dimensions</h2>
 <p>The third part is a bit of (symbolic) linear algebra, where you have to determine the dimension of the orbit by calculating the dimension of the stabilizer group, which is a Zariski dense subset of the centralizer of a matrix, hence suffices for giving the correct dimension. Mathematical details can be found in the text, the actual implementation is given by</p>
 <p>[sourcecode]<br />
@@ -118,6 +118,6 @@ OrbitDimension := function(matrix)<br />
 <p>  return n^2 - Rank(Kernel(system));<br />
 end function;<br />
 [/sourcecode]<br />
-The algorithm is nothing but initializing a big system of linear equations, expressing the commutator relation $latex AM=MA$ where $latex M$ is (not necessarily) a matrix in Jordan normal form and $latex A$ is a matrix where every element corresponds to an unknown. By equating $latex AM=MA$ positionwise and obtaining a linear system of $latex n^2$ equations over the function field where our eigenvalues live, we can compute the rank of the kernel, which describes the dimension of the centralizing matrices.</p>
-<p>If we slightly change the iteration of the first code example, calling <code>OrbitDimension</code> for each matrix, the output will be as given in <a href="http://pastebin.com/cTqND1cY">this pastebin</a> in case of $latex n=5$.</p>
+The algorithm is nothing but initializing a big system of linear equations, expressing the commutator relation $AM=MA$ where $M$ is (not necessarily) a matrix in Jordan normal form and $A$ is a matrix where every element corresponds to an unknown. By equating $AM=MA$ positionwise and obtaining a linear system of $n^2$ equations over the function field where our eigenvalues live, we can compute the rank of the kernel, which describes the dimension of the centralizing matrices.</p>
+<p>If we slightly change the iteration of the first code example, calling <code>OrbitDimension</code> for each matrix, the output will be as given in <a href="http://pastebin.com/cTqND1cY">this pastebin</a> in case of $n=5$.</p>
 <p>What I have done is not the most relevant contribution to the world of mathematics, but in case you ever feel the urge to enumerate Jordan normal forms, I hope this will help you.</p>
