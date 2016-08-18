@@ -11,12 +11,7 @@ tags: []
 meta:
   _edit_last: '15754637'
   _oembed_9d49c7c96642164cb7382ca544846762: '{{unknown}}'
-author:
-  login: pbelmans
-  email: pieterbelmans@gmail.com
-  display_name: pbelmans
-  first_name: ''
-  last_name: ''
+author: Pieter Belmans
 ---
 <p>While preparing a commutative diagram to be used in a <a href="http://mathjax.org">MathJax</a> environment I discovered the little gem that is already given away in the title. Basically I needed to draw a relatively complex commutative diagram (see below) without using extra packages like <code><a href="http://ctan.org/pkg/xypic">xypic</a></code> or (my favourite) <a href="http://ctan.org/pkg/pgf">PGF/TikZ</a>. Only stuff from <code>amsmath</code> (and its extended family) is allowed. That means hacking something together using <code>array</code>.</p>
 <p>You know variable-sized delimiters: they are either the <code>\left(</code>, <code>\right)</code> combo or variations on <code>\big)</code> making all your delimiters look good in LaTeX. But <code>\uparrow</code> and its related arrows <code>\downarrow</code>, <code>\Downarrow</code>, <code>\Uparrow</code>, <code>\updownarrow</code> and <code>\Updownarrow</code> are variable-sized delimiters too! Which means they can be used to spice up your commutative diagram a little.</p>

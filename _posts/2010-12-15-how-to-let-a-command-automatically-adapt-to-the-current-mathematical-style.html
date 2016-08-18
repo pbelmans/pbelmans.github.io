@@ -10,12 +10,7 @@ categories:
 tags: []
 meta:
   _edit_last: '15754637'
-author:
-  login: pbelmans
-  email: pieterbelmans@gmail.com
-  display_name: pbelmans
-  first_name: ''
-  last_name: ''
+author: Pieter Belmans
 ---
 <p>Maybe you know, maybe you don't, but LaTeX offers 4 different mathematical styles. There's <code>displaystyle</code>, <code>textstyle</code>, <code>scriptstyle</code> and <code>scriptscriptstyle</code>. The first corresponds to math in block environments, <em>i.e.</em>, in display mode such as in an <code>equation</code> or <code>displaymath</code> environment, the second occurs when typesetting inline math as is the case with <code>$...$</code> and the third and fourth occur in superscript and multiple superscript. You've (hopefully) noticed that for instance <code>\sum</code> gets expanded differently depending on the current style: in displaystyle the super- and subscript are added above and below of the sum symbol while in textstyle they are placed to the right of it.</p>
 <p>You can adapt the way a macro is expanded depending on the style of math that is being typeset at that moment. The <code>\mathchoice</code> macro provides this functionality: <code>\mathchoice{D}{T}{S}{SS}</code> expands to <code>D</code> in displaystyle, <code>T</code> in textstyle and (as you hopefully can guess) <code>S</code> and <code>SS</code> in respectively scriptstyle and scriptscriptstyle.</p>

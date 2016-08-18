@@ -10,12 +10,7 @@ categories:
 tags: []
 meta:
   _edit_last: '15754637'
-author:
-  login: pbelmans
-  email: pieterbelmans@gmail.com
-  display_name: pbelmans
-  first_name: ''
-  last_name: ''
+author: Pieter Belmans
 ---
 <p>While trying to install the <a href="https://github.com/nschloe/ua-beamer">UA <code>beamer</code> theme</a> in the most appropriate way, I stumbled for the umpteenth time on this issue. Where and how to install a <code>beamer</code> theme, or by extension any non-TeX Live package, without resorting to <code>sudo mv</code>'ing it into <code>/usr/local/texlive20xx/...</code>? I don't remember going through this process the last time I installed some packages myself, but as I recently installed TeX Live 2011 and decided to do things <em>the proper way</em> (at least in my opinion) I decided to write this post.</p>
 <p>What is "installing a package" by the way? It boils down to letting programs like <code>pdflatex</code> know <em>where certain files are situated</em>. Installing is therefore nothing but dumping the necessary files somewhere and let TeX know where it can find them. But TeX doesn't look everywhere, so we have to choose a place to dump the files and tell TeX they're there.</p>

@@ -12,12 +12,7 @@ meta:
   _edit_last: '15754637'
   geo_public: '0'
   _publicize_pending: '1'
-author:
-  login: pbelmans
-  email: pieterbelmans@gmail.com
-  display_name: pbelmans
-  first_name: ''
-  last_name: ''
+author: Pieter Belmans
 ---
 <p>Next week I'll be giving a lecture on spectral sequences in algebraic geometry, and in the notes I'm preparing I wanted to put the spectral sequence below the title of the corresponding section in the table of contents. The <code>\addcontentsline</code> command was known to me, but <code>\addtocontents</code> wasn't, and there is one caveat in using it: you need to make sure you put <code>\par</code> at the end of the what you are adding (if it is actual text), forcing the next item to get its own paragraph.</p>
 <p>So the macro</p>
