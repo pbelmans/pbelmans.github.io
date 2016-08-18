@@ -17,53 +17,64 @@ author:
   first_name: ''
   last_name: ''
 ---
-<p>Via <a href="http://www.walkingrandomly.com">Walking Randomly</a>'s post <a href="http://www.walkingrandomly.com/?p=3073">Fractals on Wolfram Alpha – an update</a> I stumbled upon his previous post <a href="http://www.walkingrandomly.com/?p=1290">Plotting Fractals with Wolfram Alpha</a>. And something struck me, I invented / discovered those <a href="http://en.wikipedia.org/wiki/H_tree">H-trees</a> when I was a little kid! I remember drawing them when I was in second grade (you're 7 years old then, at least in Belgium), enjoying the laborious yet beautiful nature of them. I also drew gigantic heaps of blocks in <a href="http://en.wikipedia.org/wiki/Oblique_projection">oblique projection</a>, oh, how many sheets of grid paper (5 by 5 millimetre) I have filled that way... I guess I was the weird kid of our class.</p>
-<p>I wanted to board train nostalgia and draw them in TikZ. And this was even easier than I imaged, as there is a library for fractal decorations! If only TikZ did the dishes. Based on the code I found in <code>$TEXMF/tex/generic/pgf/libraries/pgflibrarydecorations.fractals.code.tex</code> I quickly hacked together the following code:<br />
-[sourcecode language="latex" wraplines="false" toolbar="false"]<br />
-\pgfdeclaredecoration{H-tree}{init}<br />
-{<br />
-  \state{init}[width=\pgfdecoratedinputsegmentremainingdistance]<br />
-  {<br />
-    \pgfpathmoveto{\pgfpoint{0pt}{0.35355\pgfdecoratedinputsegmentremainingdistance}}<br />
-    \pgfpathlineto{\pgfpoint{0pt}{-0.35355\pgfdecoratedinputsegmentremainingdistance}}<br />
-    \pgfpathmoveto{\pgfpoint{0pt}{0pt}}<br />
-    \pgfpathlineto{\pgfpoint{\pgfdecoratedinputsegmentremainingdistance}{0pt}}<br />
-    \pgfpathmoveto{\pgfpoint{\pgfdecoratedinputsegmentremainingdistance}{0.35355\pgfdecoratedinputsegmentremainingdistance}}<br />
-    \pgfpathlineto{\pgfpoint{\pgfdecoratedinputsegmentremainingdistance}{-0.35355\pgfdecoratedinputsegmentremainingdistance}}<br />
-    \pgfpathmoveto{\pgfpoint{\pgfdecoratedinputsegmentremainingdistance}{0pt}}<br />
-  }<br />
-}[/sourcecode]</p>
-<p>This code must be either placed in <code>$TEXMF/tex/generic/pgf/libraries/pgflibrarydecorations.fractals.code.tex</code> or the file itself (or your personal contain-it-all package, just someplace where it can be found).</p>
-<p>Now you just draw a <code>tikzpicture</code> with a single recursively decorated line:<br />
-[sourcecode language="latex" wraplines="false" light="true"]<br />
-\begin{tikzpicture}[decoration=H-tree]<br />
-  \draw decorate{decorate{decorate{decorate{decorate{decorate{ (0,0) -- (5,0) }}}}}};<br />
-\end{tikzpicture}<br />
-[/sourcecode]<br />
-which results in<br />
+<p>Via <a href="http://www.walkingrandomly.com">Walking Randomly</a>'s post <a href="http://www.walkingrandomly.com/?p=3073">Fractals on Wolfram Alpha – an update</a> I stumbled upon his previous post <a href="http://www.walkingrandomly.com/?p=1290">Plotting Fractals with Wolfram Alpha</a>. And something struck me, I invented / discovered those <a href="http://en.wikipedia.org/wiki/H_tree">H-trees</a> when I was a little kid! I remember drawing them when I was in second grade (you're 7 years old then, at least in Belgium), enjoying the laborious yet beautiful nature of them. I also drew gigantic heaps of blocks in <a href="http://en.wikipedia.org/wiki/Oblique_projection">oblique projection</a>, oh, how many sheets of grid paper (5 by 5 millimetre) I have filled that way... I guess I was the weird kid of our class.
+
+<p>I wanted to board train nostalgia and draw them in TikZ. And this was even easier than I imaged, as there is a library for fractal decorations! If only TikZ did the dishes. Based on the code I found in <code>$TEXMF/tex/generic/pgf/libraries/pgflibrarydecorations.fractals.code.tex</code> I quickly hacked together the following code:
+
+{% highlight latex %}
+\pgfdeclaredecoration{H-tree}{init}
+{
+  \state{init}[width=\pgfdecoratedinputsegmentremainingdistance]
+  {
+    \pgfpathmoveto{\pgfpoint{0pt}{0.35355\pgfdecoratedinputsegmentremainingdistance}}
+    \pgfpathlineto{\pgfpoint{0pt}{-0.35355\pgfdecoratedinputsegmentremainingdistance}}
+    \pgfpathmoveto{\pgfpoint{0pt}{0pt}}
+    \pgfpathlineto{\pgfpoint{\pgfdecoratedinputsegmentremainingdistance}{0pt}}
+    \pgfpathmoveto{\pgfpoint{\pgfdecoratedinputsegmentremainingdistance}{0.35355\pgfdecoratedinputsegmentremainingdistance}}
+    \pgfpathlineto{\pgfpoint{\pgfdecoratedinputsegmentremainingdistance}{-0.35355\pgfdecoratedinputsegmentremainingdistance}}
+    \pgfpathmoveto{\pgfpoint{\pgfdecoratedinputsegmentremainingdistance}{0pt}}
+  }
+}
+{% endhighlight %}
+
+<p>This code must be either placed in <code>$TEXMF/tex/generic/pgf/libraries/pgflibrarydecorations.fractals.code.tex</code> or the file itself (or your personal contain-it-all package, just someplace where it can be found).
+
+<p>Now you just draw a <code>tikzpicture</code> with a single recursively decorated line:
+
+{% highlight latex %}
+\begin{tikzpicture}[decoration=H-tree]
+  \draw decorate{decorate{decorate{decorate{decorate{decorate{ (0,0) -- (5,0) }}}}}};
+\end{tikzpicture}
+{% endhighlight %}
+
+which results in
 <img src="{{ site.baseurl }}/assets/htree.png" alt="An H-tree, drawn in TikZ" /></p>
-<p>I hope I got the factor right, but I guess 1/(2sqrt(2)) is the one I needed. A complete minimal working example is given:<br />
-[sourcecode language="latex" collapse="true" wraplines="false"]<br />
-\documentclass{minimal}<br />
-\usepackage{tikz}<br />
-\usetikzlibrary{decorations.fractals}</p>
-<p>\pgfdeclaredecoration{H-tree}{init}<br />
-{<br />
-  \state{init}[width=\pgfdecoratedinputsegmentremainingdistance]<br />
-  {<br />
-    \pgfpathmoveto{\pgfpoint{0pt}{0.35355\pgfdecoratedinputsegmentremainingdistance}}<br />
-    \pgfpathlineto{\pgfpoint{0pt}{-0.35355\pgfdecoratedinputsegmentremainingdistance}}<br />
-    \pgfpathmoveto{\pgfpoint{0pt}{0pt}}<br />
-	\pgfpathlineto{\pgfpoint{\pgfdecoratedinputsegmentremainingdistance}{0pt}}<br />
-    \pgfpathmoveto{\pgfpoint{\pgfdecoratedinputsegmentremainingdistance}{0.35355\pgfdecoratedinputsegmentremainingdistance}}<br />
-    \pgfpathlineto{\pgfpoint{\pgfdecoratedinputsegmentremainingdistance}{-0.35355\pgfdecoratedinputsegmentremainingdistance}}<br />
-    \pgfpathmoveto{\pgfpoint{\pgfdecoratedinputsegmentremainingdistance}{0pt}}<br />
-  }<br />
-}</p>
-<p>\begin{document}<br />
-  \begin{tikzpicture}[decoration=H-tree, very thick]<br />
-	\draw decorate { decorate { decorate { decorate { decorate { decorate { (0,0) -- (5,0) }}}}}};<br />
-  \end{tikzpicture}<br />
-\end{document}<br />
-[/sourcecode]<br />
+
+<p>I hope I got the factor right, but I guess 1/(2sqrt(2)) is the one I needed. A complete minimal working example is given:
+{% highlight latex %}
+\documentclass{minimal}
+\usepackage{tikz}
+\usetikzlibrary{decorations.fractals}
+
+\pgfdeclaredecoration{H-tree}{init}
+{
+  \state{init}[width=\pgfdecoratedinputsegmentremainingdistance]
+  {
+    \pgfpathmoveto{\pgfpoint{0pt}{0.35355\pgfdecoratedinputsegmentremainingdistance}}
+    \pgfpathlineto{\pgfpoint{0pt}{-0.35355\pgfdecoratedinputsegmentremainingdistance}}
+    \pgfpathmoveto{\pgfpoint{0pt}{0pt}}
+	\pgfpathlineto{\pgfpoint{\pgfdecoratedinputsegmentremainingdistance}{0pt}}
+    \pgfpathmoveto{\pgfpoint{\pgfdecoratedinputsegmentremainingdistance}{0.35355\pgfdecoratedinputsegmentremainingdistance}}
+    \pgfpathlineto{\pgfpoint{\pgfdecoratedinputsegmentremainingdistance}{-0.35355\pgfdecoratedinputsegmentremainingdistance}}
+    \pgfpathmoveto{\pgfpoint{\pgfdecoratedinputsegmentremainingdistance}{0pt}}
+  }
+}
+
+\begin{document}
+  \begin{tikzpicture}[decoration=H-tree, very thick]
+    \draw decorate { decorate { decorate { decorate { decorate { decorate { (0,0) -- (5,0) }}}}}};
+  \end{tikzpicture}
+\end{document}
+{% endhighlight %}
+
 which should result in (after <a href="http://www.ctan.org/tex-archive/support/pdfcrop/"><code>pdfcrop</code></a>) <a href="http://pbelmans.files.wordpress.com/2010/12/htree-crop.pdf">this output</a>. LaTeX easily exceeds its total allocated memory, more iterations are impossible (unless you decrease the length of the line or the zooming factor, for some reason).</p>
