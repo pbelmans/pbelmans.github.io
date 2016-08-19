@@ -11,11 +11,14 @@ tags: []
 meta:
 author: Pieter Belmans
 ---
-<p>While preparing a document with lots of links for both online and offline viewing, I wanted the offline (i.e. printable) version to contain fulltext hyperlinks in the footnote. So whenever LaTeX comes across a <code>\href{http://example.org}{Example website}</code> I want it converted to something like <code>Example website\footnote{\url{http://example.org}}</code>. Inspired by <a href="http://tex.stackexchange.com/a/13147/210">this answer</a> to the <a href="http://tex.stackexchange.com/questions/12774/changing-hrefs-to-footnotes">related TeX.SX question</a> I came up with<br />
-[sourcecode language="latex" wraplines="false"]<br />
-\makeatletter<br />
-\newcommand\href@footnote[2]{#2\footnote{\url{#1}}}<br />
-\DeclareRobustCommand{\href}{\hyper@normalise\href@footnote}<br />
-\makeatother<br />
-[/sourcecode]This code properly handles active characters in url's. Which is exactly what I want :).
+<p>While preparing a document with lots of links for both online and offline viewing, I wanted the offline (i.e. printable) version to contain fulltext hyperlinks in the footnote. So whenever LaTeX comes across a <code>\href{http://example.org}{Example website}</code> I want it converted to something like <code>Example website\footnote{\url{http://example.org}}</code>. Inspired by <a href="http://tex.stackexchange.com/a/13147/210">this answer</a> to the <a href="http://tex.stackexchange.com/questions/12774/changing-hrefs-to-footnotes">related TeX.SX question</a> I came up with
+
+{% highlight latex %}
+\makeatletter
+\newcommand\href@footnote[2]{#2\footnote{\url{#1}}}
+\DeclareRobustCommand{\href}{\hyper@normalise\href@footnote}
+\makeatother
+{% endhighlight %}
+
+This code properly handles active characters in url's. Which is exactly what I want :).
 <p>I'm not claiming any originality here, but you might find it useful.

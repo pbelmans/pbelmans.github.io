@@ -14,15 +14,20 @@ author: Pieter Belmans
 <p>I was fiddling with <code>memoir</code>'s <code>titlingpage</code> and wanted functionality for the <code>\thanks</code> macro. This is normally handled by <code>\maketitle</code>, but we're bypassing this construction. Section 4.2 of the (otherwise excellent) <code>memoir</code> manual doesn't state anything on how to actually implement this behaviour yourself.
 <p>After a bit of fiddling with <code>memoir.dtx</code> (any <code>.dtx</code> file is the <em>documented source</em> of a LaTeX package or class) I hacked together the desired result. A bit of <code>\makeatletter</code> magic and calling the correct macros did what I wanted.
 <p>For future reference, here it is.
-<p>If you want to change the marker using <code>\thanksmarkseries{...}</code>, start your <code>titlingpage</code> environment with the following:<br />
-[sourcecode language="latex" wraplines="false"]\thanksmarkseries{alph}<br />
-\makeatletter<br />
-\@bsmarkseries<br />
-\makeatother[/sourcecode]
+<p>If you want to change the marker using <code>\thanksmarkseries{...}</code>, start your <code>titlingpage</code> environment with the following:
+{% highlight latex %}
+\thanksmarkseries{alph}
+\makeatletter
+\@bsmarkseries
+\makeatother
+{% endhighlight %}
 <p>The main part of the solution simply is to mention
-<p>[sourcecode language="latex" wraplines="false"]\makeatletter<br />
-\usethanksrule<br />
-\@thanks<br />
-\makeatother[/sourcecode]
-<p>at the end of the <code>titlingpage</code> environment. Note that <code>\usethanksrule</code> is not necessary but it feels better to have it.
+{% highlight latex %}
+\makeatletter
+\usethanksrule
+\@thanks
+\makeatother
+{% endhighlight %}
+at the end of the <code>titlingpage</code> environment. Note that <code>\usethanksrule</code> is not necessary but it feels better to have it.
+
 <p><small>There is the undocumented <code>\saythanks</code> macro though, but it is buggy: it always uses <code>fnsymbol</code> as its marker for the actual footnote. Behaviour that could be fixed I presume.</small>

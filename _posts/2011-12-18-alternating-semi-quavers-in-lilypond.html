@@ -13,13 +13,14 @@ author: Pieter Belmans
 ---
 <p>I've been playing around with <a href="http://lilypond.org">Lilypond</a> for a while now, but I never really dug deep. Now I <em>am</em> digging deep, trying to typeset an adaption in D major of Bach's BWV 1006(a), also known as Partita IV for violin (or lute, depending on the presence of (a)).
 <p>When writing for guitar it's important to distinguish whether the thumb or one of the other fingers of your right hand should be used to play a note. The basic idea will be to use two voices, adding inline multiple voices whenever your index, middle and ring finger play simultaneously. Maybe when I feel like (and have more experience) I will write a short guide to writing classical guitar music in Lilypond with all its odds and ends.
-<p>Today's post is dedicated to something I've been struggling with for a while. A rhythm of semiquavers, alternating between your thumb and your index/middle finger. I.e., in measure 14 of the prelude I would like to write<br />
+<p>Today's post is dedicated to something I've been struggling with for a while. A rhythm of semiquavers, alternating between your thumb and your index/middle finger. I.e., in measure 14 of the prelude I would like to write
 <img src="{{ site.baseurl }}/assets/alternating.png" alt="Alternating semiquavers in Lilypond: example" />
-<p>This is accomplished by wrapping the notes in each voice following the first in square brackets. I can't find any decent reference on this in the Lilypond manual, but you basically say "beam these notes together" this way. So the code necessary to produce the example is<br />
-[sourcecode language="text"]\relative c''<br />
-&lt;&lt;<br />
-  \time 3/4<br />
-  \key d \major<br />
-  { s16 [ d s d s d s d s d s d ] } \\ { d16 [ s fis s e s fis s g s e s ] } &gt;&gt;<br />
-[/sourcecode]
+<p>This is accomplished by wrapping the notes in each voice following the first in square brackets. I can't find any decent reference on this in the Lilypond manual, but you basically say "beam these notes together" this way. So the code necessary to produce the example is
+{% highlight lilypond %}
+\relative c''
+<<
+  \time 3/4
+  \key d \major
+  { s16 [ d s d s d s d s d s d ] } \\ { d16 [ s fis s e s fis s g s e s ] } >>
+{% endhighlight %}
 <p>Basically I've used two inline voices on top of eachother, fully writing out the measure in semiquavers twice but alternating between the actual notes and silent notes.

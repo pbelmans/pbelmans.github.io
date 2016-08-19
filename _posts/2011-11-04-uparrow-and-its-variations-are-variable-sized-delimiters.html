@@ -13,29 +13,38 @@ author: Pieter Belmans
 ---
 <p>While preparing a commutative diagram to be used in a <a href="http://mathjax.org">MathJax</a> environment I discovered the little gem that is already given away in the title. Basically I needed to draw a relatively complex commutative diagram (see below) without using extra packages like <code><a href="http://ctan.org/pkg/xypic">xypic</a></code> or (my favourite) <a href="http://ctan.org/pkg/pgf">PGF/TikZ</a>. Only stuff from <code>amsmath</code> (and its extended family) is allowed. That means hacking something together using <code>array</code>.
 <p>You know variable-sized delimiters: they are either the <code>\left(</code>, <code>\right)</code> combo or variations on <code>\big)</code> making all your delimiters look good in LaTeX. But <code>\uparrow</code> and its related arrows <code>\downarrow</code>, <code>\Downarrow</code>, <code>\Uparrow</code>, <code>\updownarrow</code> and <code>\Updownarrow</code> are variable-sized delimiters too! Which means they can be used to spice up your commutative diagram a little.
-<p>Compare<br />
-$  \begin{array}{ccccc}<br />
-    &amp; &amp; \mathrm{Nr}(\mathbb{Z}) &amp; &amp; \\<br />
-    &amp; &amp; \phantom{\textrm{itp}}\downarrow\textrm{itp} &amp; &amp; \\<br />
-    \mathrm{W}(\mathbb{Z}) &amp; \overset{\tau}{\longrightarrow} &amp; \hat{\Omega}(\mathrm{C}_\infty) &amp; \overset{\mathrm{s}_t}{\longrightarrow} &amp; \Lambda(\mathbb{Z}) \\<br />
-    \phantom{\Phi}\downarrow\Phi &amp; &amp; \phantom{\hat{\varphi}}\downarrow\hat{\varphi} &amp; &amp; \phantom{\mathrm{L}_{\mathbb{Z}}}\downarrow\mathrm{L}_{\mathbb{Z}} \\<br />
-    \prod_{n=1}^{+\infty}\mathbb{Z} &amp; \longleftrightarrow &amp; \mathrm{gh}(\mathrm{C}_\infty)=\mathbb{Z}^{\mathbb{N}^\times} &amp; \longleftrightarrow &amp; t\mathbb{Z}[\![t]\!]<br />
-\end{array}$<br />
-to<br />
-$  \begin{array}{ccccc}<br />
-    &amp; &amp; \mathrm{Nr}(\mathbb{Z}) &amp; &amp; \\<br />
-    &amp; &amp; \phantom{\textrm{itp}}\Big\downarrow\textrm{itp} &amp; &amp; \\<br />
-    \mathrm{W}(\mathbb{Z}) &amp; \overset{\tau}{\longrightarrow} &amp; \hat{\Omega}(\mathrm{C}_\infty) &amp; \overset{\mathrm{s}_t}{\longrightarrow} &amp; \Lambda(\mathbb{Z}) \\<br />
-    \phantom{\Phi}\Big\downarrow\Phi &amp; &amp; \phantom{\hat{\varphi}}\Big\downarrow\hat{\varphi} &amp; &amp; \phantom{\mathrm{L}_{\mathbb{Z}}}\Big\downarrow\mathrm{L}_{\mathbb{Z}} \\<br />
-    \prod_{n=1}^{+\infty}\mathbb{Z} &amp; \longleftrightarrow &amp; \mathrm{gh}(\mathrm{C}_\infty)=\mathbb{Z}^{\mathbb{N}^\times} &amp; \longleftrightarrow &amp; t\mathbb{Z}[\![t]\!]<br />
-  \end{array}$.
-<p>The difference isn't <em>shocking</em> but it does like a little nicer. Another useful tricks when typesetting commutative diagrams in an <code>array</code> environment: use <code>\phantom</code> to center your labels next to a vertical arrow. In case you're wondering what the complete code for this example looks like:<br />
-[sourcecode language="latex" wraplines="false"]\begin{array}{ccccc}<br />
-  &amp; &amp; \mathrm{Nr}(\mathbb{Z}) &amp; &amp; \\<br />
-  &amp; &amp; \phantom{\textrm{itp}}\Big\downarrow\textrm{itp} &amp; &amp; \\<br />
-  \mathrm{W}(\mathbb{Z}) &amp; \overset{\tau}{\longrightarrow} &amp; \hat{\Omega}(\mathrm{C}_\infty) &amp; \overset{\mathrm{s}_t}{\longrightarrow} &amp; \Lambda(\mathbb{Z}) \\<br />
-  \phantom{\Phi}\Big\downarrow\Phi &amp; &amp; \phantom{\hat{\varphi}}\Big\downarrow\hat{\varphi} &amp; &amp; \phantom{\mathrm{L}_{\mathbb{Z}}}\Big\downarrow\mathrm{L}_{\mathbb{Z}} \\<br />
-  \prod_{n=1}^{+\infty}\mathbb{Z} &amp; \longleftrightarrow &amp; \mathrm{gh}(\mathrm{C}_\infty)=\mathbb{Z}^{\mathbb{N}^\times} &amp; \longleftrightarrow &amp; t\mathbb{Z}[\![t]\!]<br />
-\end{array}[/sourcecode]
+<p>Compare
+$$
+\begin{array}{ccccc}
+  & & \mathrm{Nr}(\mathbb{Z}) & & \\
+  & & \phantom{\textrm{itp}}\downarrow\textrm{itp} & & \\
+  \mathrm{W}(\mathbb{Z}) & \overset{\tau}{\longrightarrow} & \hat{\Omega}(\mathrm{C}_\infty) & \overset{\mathrm{s}_t}{\longrightarrow} & \Lambda(\mathbb{Z}) \\
+  \phantom{\Phi}\downarrow\Phi & & \phantom{\hat{\varphi}}\downarrow\hat{\varphi} & & \phantom{\mathrm{L}_{\mathbb{Z}}}\downarrow\mathrm{L}_{\mathbb{Z}} \\
+  \prod_{n=1}^{+\infty}\mathbb{Z} & \longleftrightarrow & \mathrm{gh}(\mathrm{C}_\infty)=\mathbb{Z}^{\mathbb{N}^\times} & \longleftrightarrow & t\mathbb{Z}[\![t]\!]
+\end{array}
+$$
+to
+$$
+\begin{array}{ccccc}
+  & & \mathrm{Nr}(\mathbb{Z}) & & \\
+  & & \phantom{\textrm{itp}}\Big\downarrow\textrm{itp} & & \\
+  \mathrm{W}(\mathbb{Z}) & \overset{\tau}{\longrightarrow} & \hat{\Omega}(\mathrm{C}_\infty) & \overset{\mathrm{s}_t}{\longrightarrow} & \Lambda(\mathbb{Z}) \\
+  \phantom{\Phi}\Big\downarrow\Phi & & \phantom{\hat{\varphi}}\Big\downarrow\hat{\varphi} & & \phantom{\mathrm{L}_{\mathbb{Z}}}\Big\downarrow\mathrm{L}_{\mathbb{Z}} \\
+  \prod_{n=1}^{+\infty}\mathbb{Z} & \longleftrightarrow & \mathrm{gh}(\mathrm{C}_\infty)=\mathbb{Z}^{\mathbb{N}^\times} & \longleftrightarrow & t\mathbb{Z}[\![t]\!]
+\end{array}.$$
+
+<p>The difference isn't <em>shocking</em> but it does like a little nicer. Another useful tricks when typesetting commutative diagrams in an <code>array</code> environment: use <code>\phantom</code> to center your labels next to a vertical arrow. In case you're wondering what the complete code for this example looks like:
+
+{% highlight latex %}
+\begin{array}{ccccc}
+  & & \mathrm{Nr}(\mathbb{Z}) & & \\
+  & & \phantom{\textrm{itp}}\Big\downarrow\textrm{itp} & & \\
+  \mathrm{W}(\mathbb{Z}) & \overset{\tau}{\longrightarrow} & \hat{\Omega}(\mathrm{C}_\infty) & \overset{\mathrm{s}_t}{\longrightarrow} & \Lambda(\mathbb{Z}) \\
+  \phantom{\Phi}\Big\downarrow\Phi & & \phantom{\hat{\varphi}}\Big\downarrow\hat{\varphi} & & \phantom{\mathrm{L}_{\mathbb{Z}}}\Big\downarrow\mathrm{L}_{\mathbb{Z}} \\
+  \prod_{n=1}^{+\infty}\mathbb{Z} & \longleftrightarrow & \mathrm{gh}(\mathrm{C}_\infty)=\mathbb{Z}^{\mathbb{N}^\times} & \longleftrightarrow & t\mathbb{Z}[\![t]\!]
+\end{array}
+{% endhighlight %}
+
 <p>And in case you're wondering about what the diagram actually <em>means</em>: it is the key diagram in explaining the relations between structures related to the ring of big Witt vectors and is taking from the paper <a href="http://www.mathematik.uni-bielefeld.de/~sieben/lothar/burnside_ring_of_cyclic_group.pdf">The Burnside ring of the infinite cyclic group and its relations to the necklace algebra, $\lambda$-rings, and the universal ring of Witt vectors</a>.
+
 <p><small>I have found out about <a href="http://homepage.mac.com/oasis/xyjax.html">XyJax</a>, which allows you to use <code>xypic</code> code in MathJax, but I wasn't aware at the time of writing the diagram and it's still an alpha release. Yet, it looks promising and complete obsoletes the reason for this post!</small>

@@ -14,68 +14,94 @@ author: Pieter Belmans
 ---
 <p>As the title of this blog suggests math, it's time to put this in practice. For one of my bachelor projects I had to do exercises from Fulton's Algebraic Curves. People who know me in real life are familiar with my total lack of perseverance for actual calculations. And for one of the exercise I had to do calculations for 15 intersection numbers (fair enough, I didn't have to do them all, but I like to do things properly). So instead of doing the calculations by hand, I decided to implement this in Sage. No other implementation of this is known to me, except for <a href="http://magma.maths.usyd.edu.au/magma/handbook/text/1235#13357">Magma's</a> which is non-free in all meanings of the word.
 <p>What is it about? I refer you to the <a href="http://en.wikipedia.org/wiki/Intersection_number#Intersection_multiplicities_for_plane_curves">Wikipedia article</a> and <a href="http://www.math.lsa.umich.edu/~wfulton/CurveBook.pdf">Fulton's excellent book</a>. But it concerns how plane curves intersect and how their intersections behave in the local rings to these points. They lead to Max Noether's theorem, also known as the <a href="http://en.wikipedia.org/wiki/AF%2BBG_theorem">AF+BG theorem</a> and <a href="http://en.wikipedia.org/wiki/B%C3%A9zout's_theorem">Bézout's theorem</a> which is a global statement relating the local information to the entire curve. Interesting stuff, by all means :).
-<p>So, having written an implementation for myself, I decided to share this.[sourcecode language="python" wraplines="false"]def intersection_number(F, G, point = (0,0)):<br />
+<p>So, having written an implementation for myself, I decided to share this.
+
+{% highlight python %}
+def intersection_number(F, G, point = (0,0)):
     (x,y) = determine_variables(F, G)
-<p>    # translate both curves to origin and calculate it there<br />
-    F = F.subs({x:x + point[0], y:y + point[1]})<br />
+
+    # translate both curves to origin and calculate it there
+    F = F.subs({x:x + point[0], y:y + point[1]})
     G = G.subs({x:x + point[0], y:y + point[1]})
-<p>    # if $F(0,0)\neq 0$ or $G(0,0)\neq 0$ they don't intersect in the origin<br />
+
+    # if $F(0,0)\neq 0$ or $G(0,0)\neq 0$ they don't intersect in the origin
     if F.subs({x:0, y:0}) != 0 or G.subs({x:0, y:0}) != 0: return 0
-<p>    # if $F$ or $G$ are zero they don't intersect properly<br />
+
+    # if $F$ or $G$ are zero they don't intersect properly
     if F == 0 or G == 0: return Infinity
-<p>    # we only look at factors of $x$<br />
-    f = F.subs({y:0})<br />
+
+    # we only look at factors of $x$
+    f = F.subs({y:0})
     g = G.subs({y:0})
-<p>    # $F$ contains a component $y=0$<br />
-    if f == 0:<br />
-        # $G$ contains a component $y=0$ too, no proper intersection<br />
-        if g == 0: return infinity<br />
-        # remove common $y^n$ in $F$, count degree of $x$ in $G$ and recurse<br />
-        else:<br />
-            f = F.quo_rem(y)[0]<br />
-            return ldegree(g) + intersection_number(f, G)<br />
-    # $F$ does not contain a component $y=0$<br />
-    else:<br />
-        # $G$ *does* contain a component $y=0$<br />
-        if g == 0:<br />
-            g = G.quo_rem(y)[0]<br />
-            return ldegree(f) + intersection_number(F, g)<br />
-        # we recurse as in condition (7) by removing factors of $x$<br />
-        else:<br />
-            a, b = f.lc(), g.lc()<br />
+
+    # $F$ contains a component $y=0$
+    if f == 0:
+        # $G$ contains a component $y=0$ too, no proper intersection
+        if g == 0: return infinity
+        # remove common $y^n$ in $F$, count degree of $x$ in $G$ and recurse
+        else:
+            f = F.quo_rem(y)[0]
+            return ldegree(g) + intersection_number(f, G)
+    # $F$ does not contain a component $y=0$
+    else:
+        # $G$ *does* contain a component $y=0$
+        if g == 0:
+            g = G.quo_rem(y)[0]
+            return ldegree(f) + intersection_number(F, g)
+        # we recurse as in condition (7) by removing factors of $x$
+        else:
+            a, b = f.lc(), g.lc()
             r, s = f.degree(), g.degree()
-<p>            # we drop the highest degree term<br />
-            if r &lt;= s:<br />
-                return intersection_number(F, a*G - b*x^(s-r)*F)<br />
-            else:<br />
+
+            # we drop the highest degree term
+            if r <= s:
+                return intersection_number(F, a*G - b*x^(s-r)*F)
+            else:
                 return intersection_number(b*F - a*x^(r-s)*G, G)
-<p>def ldegree(F):<br />
+
+def ldegree(F):
     minimum = infinity
-<p>    for (n, m) in F.dict():<br />
+
+    for (n, m) in F.dict():
         minimum = min(minimum, n)
-<p>    return minimum
-<p>def determine_variables(F, G):<br />
-    if len(F.variables()) == 2:<br />
+
+    return minimum
+
+def determine_variables(F, G):
+    if len(F.variables()) == 2:
         return F.variables()
-<p>    if len(G.variables()) == 2:<br />
+
+    if len(G.variables()) == 2:
         return G.variables()
-<p>    if len(F.variables()) == len(G.variables()) == 1:<br />
-        if F.variables() == G.variables():<br />
-            return (F.variable(0), 0)<br />
-        else:<br />
+
+    if len(F.variables()) == len(G.variables()) == 1:
+        if F.variables() == G.variables():
+            return (F.variable(0), 0)
+        else:
             return (G.variable(0), F.variable(0))
-<p>    return (0,0)[/sourcecode]
+
+    return (0,0)
+{% endhighlight %}
+
 <p>The algorithm is pretty straightforward: based on Fulton's proof of the unicity of the intersection number all the operations I perform are related to reductions in the local rings. The only non-obvious parts might be <code>ldegree</code> and <code>determine_variables</code>. The first determines the lowest degree of the first, assuming the polynomial is expressed in 2 variables while the latter determines which variables the algorithm can use. It has no a priori means of determining which variables are used (unless by supplying them as arguments, which would be ugly). I'm sure this can look better, but for the moment it works. I've got a big red <strong>niceify and contact Sage developers</strong> note on my list by the way. For the moment it's implemented for algebraic schemes, but I'm not yet sure whether it's as it should be.
-<p>In case you wish to use it, the following code solves all exercises from Fulton's Algebraic Curves:[sourcecode language="python" wraplines="false"]import intersection_number
-<p>P. = PolynomialRing(QQ, 2)<br />
-F = []<br />
-F.append(y-x^2);<br />
-F.append(y^2-x^3+x);<br />
-F.append(y^2-x^3);<br />
-F.append(y^2-x^3-x^2);<br />
-F.append((x^2+y^2)^2+3*x^2*y-y^3);<br />
+<p>In case you wish to use it, the following code solves all exercises from Fulton's Algebraic Curves:
+
+{% highlight python %}
+import intersection_number
+
+P. = PolynomialRing(QQ, 2)
+F = []
+F.append(y-x^2);
+F.append(y^2-x^3+x);
+F.append(y^2-x^3);
+F.append(y^2-x^3-x^2);
+F.append((x^2+y^2)^2+3*x^2*y-y^3);
 F.append((x^2+y^2)^3-4*x^2*y^2);
-<p>for i in range(0,6):<br />
-    for j in range(i + 1,6):<br />
-        print '(%(i)d, %(j)d): %(m)d' % {'i': i, 'j': j, \<br />
-              'm': intersection_number.intersection_number(F[i], F[j])}[/sourcecode]To use this: perform <code>sage intersection_number.sage</code> first and then you can use it by calling <code>sage example.sage</code>.
+
+for i in range(0,6):
+    for j in range(i + 1,6):
+        print '(%(i)d, %(j)d): %(m)d' % {'i': i, 'j': j, \
+              'm': intersection_number.intersection_number(F[i], F[j])}
+{% endhighlight %}
+
+<p>To use this: perform <code>sage intersection_number.sage</code> first and then you can use it by calling <code>sage example.sage</code>.
