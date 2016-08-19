@@ -17,8 +17,11 @@ author: Pieter Belmans
 <h2>Definitions</h2>
 <p>As already hinted at, we will define <strong>commutator length</strong> for single elements. Let $G$ be any group. The map $\textrm{cl}_G\colon G\to\mathbb{N}$ maps an element $g$ to the minimal number $n$ such that there exist $g_1,\dotsc,g_n,h_1,\dotsc,h_n\in G$ where $g=[g_1,h_1]\dotsm[g_n,h_n]$. This map can serve as a norm, because $\textrm{cl}_G(1_G)=0$ and we have a triangle inequality $\textrm{cl}_G(gh)\leq\textrm{cl}_G(g)+\textrm{cl}_G(h)$ because the minimal expressions of the two factors can be multiplied to get a not necessarily minimal expression for the product. We won't need this.
 <p>A quasimorphism on the other hand is something that is almost, but not quite, a group morphism landing in $\mathbb{R}$. More precisely a <strong>quasimorphism</strong> is a map (of sets) $q\colon G\to\mathbb{R}$ such that its deviation from being a group morphism is <em>uniformly bounded</em>, i.e. there exists a constant $C\geq 0$ such that for all $g,h\in G$ we have $|q(gh)-(q(g)+q(h))|\leq C$. The least such constant is called the <strong>defect</strong> and will be denoted $\mathrm{D}(q)$. By recurrence we can prove for any $g_1,\dotsc,g_n\in G$ that
-<p>$\displaystyle\left|q(g_1\cdots g_n)-\left(\sum_{i=1}^nq(g_i)\right)\right|\leq(n-1)\mathrm{D}(q)$
+$$
+\displaystyle\left|q(g_1\cdots g_n)-\left(\sum_{i=1}^nq(g_i)\right)\right|\leq(n-1)\mathrm{D}(q)
+$$
 <p>which is a relation we will need later on.
+
 <p>A personal note: I think <em>near morphism</em> would be a better term. Less confusion with existing concepts, and it covers the meaning better.
 <h2>Examples and homogeneity</h2>
 <p>Some less interesting examples are:
@@ -37,7 +40,9 @@ author: Pieter Belmans
 <p>We can now state what should be considered the main theorem, explaining why the notion of quasimorphism pops up when investigating perfect groups with infinite commutator length.
 <p><strong>Theorem</strong> If $G$ is a perfect group admitting a homogeneous quasimorphism then $\mathrm{cl}_G$ is unbounded.
 <p><em>Proof:</em> Take $g\in G$ such that $q(g)\neq 0$. Define $\ell=\mathrm{cl}_G(g)$, then there exist $g_1,\dotsc,g_\ell,h_1,\dotsc,h_\ell\in G$ such that $g=[g_1,h_1]\dotsm[g_\ell,h_\ell]$. This product of commutators can be interpreted as $g_1(h_1g_1^{-1}h_1^{-1})\dotsm g_\ell(h_\ell g_\ell^{-1}h_\ell^{-1})$ and using the bound we obtained before we get
-<p>$\displaystyle\left| q(g)-\left(\sum_{i=1}^\ell q(g_i)+q(h_ig_i^{-1}h_i^{-1})\right) \right|\leq2\ell\mathrm{D}(q).$
+$$
+\displaystyle\left| q(g)-\left(\sum_{i=1}^\ell q(g_i)+q(h_ig_i^{-1}h_i^{-1})\right) \right|\leq2\ell\mathrm{D}(q).
+$$
 <p>Applying the previous lemma on the conjugation we see that the summation is in fact zero, so we get $|q(g)|\leq 2\mathrm{cl}_G(g)\mathrm{D}(q)|$. Now replacing $g$ by $g^n$ we get $|q(g^n)|=n|q(g^n)|\leq 2\mathrm{cl}_G(g^n)\mathrm{D}(q)$ . The left-hand side tends to infinity as $n$ grows, so the right-hand side grows too, and the only factor that can grow is the commutator length. QED
 <h2>What's next?</h2>
 <p>Actually not much remains, it suffices now to give any perfect group $G$ admitting such an unbounded homogeneous quasimorphism. This will be the content of the next post, and will require a little more build-up.
