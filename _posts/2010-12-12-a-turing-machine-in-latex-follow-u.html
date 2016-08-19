@@ -18,16 +18,24 @@ author: Pieter Belmans
 <p>Grasping how the TeX code actually works wasn't a problem on the other hand. It's quite a strange paradigm for a room full of C++ afficionados (our university's curriculum lacks other paradigms, oh I would've loved a full-fledged Lisp course) and the syntax is of course nothing they've ever seen, but apparently TeX is easier than I thought or me running around and drawing stuff actually helps understanding.
 <p>At the end of the talk I was going to run <code>pdflatex</code> on the file and show <a href="http://pbelmans.files.wordpress.com/2010/12/turing.pdf">the output</a>, as most people have never seen TeX from the commandline. So far so good, I knew the code would build. Then came <em>the question</em>. Does it simulate other Turing machines as well? Because okay, you've got your busy beaver implemented, you said it could simulate <em>any</em> Turing machine. Unprepared demo's, the horror. But it went smooth, I just changed one cell of the transition table and I got a halting Turing machine! Point proven. They now believed me it could simulate any Turing machine.
 <p>And now I was wondering what TeX would do when faced with a machine that doesn't halt. I changed line 64 from <a href="http://en.literateprograms.org/Special:Downloadcode/Turing_machine_simulator_%28LaTeX%29">the code</a> to
-<pre><code>\newcommand{\Azero}{\Write{one}\Moveright\State{A}}</code></pre>
-<p>so it will just move right and write ones. When faced with this Turing machine TeX produces 6473 pages (it doesn't actually write them, unfortunately) before halting with<code>
-<pre>! TeX capacity exceeded, sorry [hash size=65000].
+
+{% highlight latex %}
+\newcommand{\Azero}{\Write{one}\Moveright\State{A}}
+{% endhighlight %}
+
+so it will just move right and write ones. When faced with this Turing machine TeX produces 6473 pages (it doesn't actually write them, unfortunately) before halting with
+
+{% highlight latex %}
+! TeX capacity exceeded, sorry [hash size=65000].
 \ReadTape ...me TapeAt\arabic {headpos}\endcsname
                                                   \ifx \TapeAtHead \relax \e...
 l.83 \RunTuringMachine
 
-!  ==&gt; Fatal error occurred, no output PDF file produced!
-Transcript written on turing.log.</pre>
-<p></code>All this magic happened in
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on turing.log.
+{% endhighlight %}
+
+All this magic happened in
 <pre><code>real	0m22.199s
 user	0m21.610s
 sys	0m0.260s</code></pre>

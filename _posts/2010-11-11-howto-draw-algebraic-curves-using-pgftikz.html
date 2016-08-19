@@ -14,9 +14,9 @@ author: Pieter Belmans
 ---
 <h2>Introduction</h2>
 <p>As one could deduce from my previous posts, I was trying to draw algebraic curves directly in LaTeX using PGF/TikZ and <code>gnuplot</code>. I'll present a short overview of how one can do this, hoping it will get as popular as <a href="http://pbelmans.wordpress.com/2010/10/02/direct-and-inverse-limit-in-latex/">my post on direct and inverse limits</a>. Which is according to Wordpress' statistics good for one daily search hit.
-<p>So, what is an algebraic curve? For an extensive overview, I refer you to <a href="http://en.wikipedia.org/wiki/Algebraic_curve">the Wikipedia article about them</a>. In this post, it just boils down to an implicit function in 2 variables over the real field. That is, just take any polynomial<br />
+<p>So, what is an algebraic curve? For an extensive overview, I refer you to <a href="http://en.wikipedia.org/wiki/Algebraic_curve">the Wikipedia article about them</a>. In this post, it just boils down to an implicit function in 2 variables over the real field. That is, just take any polynomial
 $F\in\mathbb{R}[X,Y]$
-<p>and set it equal to zero. In general it is far more abstract, as can be seen in the Wikipedia article, but we're drawing plane algebraic curves, not n-dimensional hypersurfaces over exotic fields. To give an example, take<br />
+<p>and set it equal to zero. In general it is far more abstract, as can be seen in the Wikipedia article, but we're drawing plane algebraic curves, not n-dimensional hypersurfaces over exotic fields. To give an example, take
 $F(X,Y)=Y^2-X^3+X=0$
 <p>for now, this is the curve (even more, this is an <a href="http://en.wikipedia.org/wiki/Elliptic_curve">elliptic curve</a>) we'll be using in our examples. It corresponds to the <a href="http://en.wikipedia.org/wiki/File:EllipticCurveCatalog.svg"><em>a=-1</em>, <em>b=0</em> cell in the matrix of examples</a>.
 <h2>The set-up</h2>
@@ -25,21 +25,30 @@ $F(X,Y)=Y^2-X^3+X=0$
 <h2>Howto</h2>
 <p>PGF/TikZ cannot draw implicit functions. Actually, it can only draw lines, splines and variations thereupon, as far as I know. But it can pass functions to <code>gnuplot</code> which then calculates the coordinates of enough points to provide a nice result. Let's draw a sine for example.
 <p>I've modified <a href="http://www.texample.net/tikz/examples/gnuplot-basics/">this example at TeXample</a> (and snippet from the manual) a bit resulting in this code
-<pre><code>\begin{tikzpicture}[domain=0:4]
+
+{% highlight latex %}
+\begin{tikzpicture}[domain=0:4]
   \draw[very thin,color=gray] (-0.1,-1.1) grid (3.9,3.9);
   \draw[-&gt;] (-0.2,0) -- (4.2,0) node[right] {$x$};
   \draw[-&gt;] (0,-1.2) -- (0,4.2) node[above] {$y$};
   \draw plot[id=sin] function{sin(x)} node[right] {$f(x) = \sin x$};
-\end{tikzpicture}</code></pre>
+\end{tikzpicture}
+{% endhighlight %}
+
 <p>which produces
-<p><img src="{{ site.baseurl }}/assets/sine.png" alt="A sine curve drawn using PGF/TikZ" />
+
+<p style="text-align: center;"><img src="{{ site.baseurl }}/assets/sine.png" alt="A sine curve drawn using PGF/TikZ" />
+
 <p>So, let's pass our desired algebraic curve to <code>gnuplot</code>!
+
 <p>But <code>gnuplot</code> doesn't support implicit functions. So it's not possible to draw them. Wait? Why do you use it then? Because we can draw them by cheating a little. This is <a href="http://t16web.lanl.gov/Kawano/gnuplot/implicit/solve-e.html">explained at their website</a>. So we know how to draw them in <code>gnuplot</code>. How can we use that output?
 <p>This is where <code>raw gnuplot</code> comes to rescue. You basically feed <code>gnuplot</code> to the program and it outputs a <code>.table</code> file containing the necessary coordinates. So we end up with:
-<pre><code>\begin{tikzpicture}
+
+{% highlight latex %}
+\begin{tikzpicture}
   \draw[very thin,color=gray] (-1.9,-3.9) grid (3.9,3.9);
-  \draw[-&gt;] (-2,0) -- (4.2,0) node[right] {$x$};
-  \draw[-&gt;] (0,-4.2) -- (0,4.2) node[above] {$y$};
+  \draw[->] (-2,0) -- (4.2,0) node[right] {$x$};
+  \draw[->] (0,-4.2) -- (0,4.2) node[above] {$y$};
   \draw plot[id=curve, raw gnuplot, smooth] function{
     f(x,y) = y**2 - x**3 + x;
     set xrange [-4:4];
@@ -54,12 +63,15 @@ $F(X,Y)=Y^2-X^3+X=0$
     splot f(x,y)
   };
 \end{tikzpicture}
-</code></pre>
-<p>which results in<br />
-<img src="{{ site.baseurl }}/assets/wrong.png" alt="Our first attempt at an algebraic curve in PGF/TikZ, but the output is kind of rubbish" /><br />
-Not quite what we were expecting, don't you think? But there is an easy solution. First we observe that the <code>.table</code> file contains different segments. Apparently, the calculation of the intersection of the surface and the <em>z=0</em> plane is not that accurate, which results in discontinuities and the segments are not placed in order. PGF/TikZ on the other hand is not aware of any segments and just connects them. Resulting in a cat's cradle of lines.
+{% endhighlight %}
+
+which results in
+<p style="text-align: center;"><img src="{{ site.baseurl }}/assets/wrong.png" alt="Our first attempt at an algebraic curve in PGF/TikZ, but the output is kind of rubbish" />
+
+<p>Not quite what we were expecting, don't you think? But there is an easy solution. First we observe that the <code>.table</code> file contains different segments. Apparently, the calculation of the intersection of the surface and the <em>z=0</em> plane is not that accurate, which results in discontinuities and the segments are not placed in order. PGF/TikZ on the other hand is not aware of any segments and just connects them. Resulting in a cat's cradle of lines.
 <p>Now comes the hackish part. In <code>/texmf/tex/generic/pgf/modules/pgfmoduleplot.code.tex</code>, the definition of <code>\def\pgf@readxyfile</code> should read
-<pre><code>{% raw %}\def\pgf@readxyfile{%
+{% highlight latex %}
+{% raw %}\def\pgf@readxyfile{%
   \read1 to \pgf@temp%
   \let\par=\pgf@savedpar%
   \edef\pgf@temp{\pgf@temp}%
@@ -71,8 +83,11 @@ Not quite what we were expecting, don't you think? But there is an easy solution
     \expandafter\pgf@parsexyline\pgf@temp\pgf@stop%
   \fi\fi%
   \ifeof1\else\expandafter\pgf@readxyfile\fi%
-}{% endraw %}</code></pre>
-<p>which then results in<br />
-<img src="{{ site.baseurl }}/assets/right.png" alt="Our second attempt, a much smoother outcome" />
+}
+{% endraw %}
+{% endhighlight %}
+
+which then results in
+<p style="text-align: center"><img src="{{ site.baseurl }}/assets/right.png" alt="Our second attempt, a much smoother outcome" />
 <p>Much better, don't you think? The small gap at the bottom is due to my <code>gnuplot 4.2</code> installation, in <code>gnuplot 4.4</code> this is fixed (as shown by experiments on another computer) but I haven't yet updated mine.
 <p>Any questions?

@@ -13,38 +13,60 @@ author: Pieter Belmans
 ---
 <p>In my Differential geometry course there is a section on tensor products and they can get quite messy. Notation-wise that is. One of our professors is convinced the current generation of students is unable to grasp tensor products due to some intoxication in the water or something similar, but here I am speaking only about notation :).
 <p>An example, the notes contain a formula depicting the expression of a tensor in a certain basis
-<pre><code>\begin{displaymath}
+
+{% highlight latex %}
+\begin{displaymath}
   T=\sum_{
     i_1,\ldots,i_n,j_1,\ldots,j_m=1}^d \;
     T_{j_1,\ldots,j_m}^{i_1,\ldots,i_n}
     E_{i_1,\ldots,i_n}^{j_1,\ldots,j_m}
-\end{displaymath}</code></pre>
-<p>produces<br />
-<img src="{{ site.baseurl }}/assets/mathclap-11.png" alt="Expression of tensor product in basis, bad formatting" />
+\end{displaymath}
+{% endhighlight %}
+
+produces
+<p style="text-align: center"><img src="{{ site.baseurl }}/assets/mathclap-11.png" alt="Expression of tensor product in basis, bad formatting" />
+
 <p>Obviously, the enormous width of the summation indices produces an ugly result. <code>\mathclap</code> and <code>\substack</code> to the rescue!
+
 <p>First, <code>\substack</code>. The relevant part of <a href="ftp://ftp.ams.org/pub/tex/doc/amsmath/short-math-guide.pdf">the manual</a> states
+
 <blockquote><p>The <code>\substack</code> command can be used to produce a multiline subscript or superscript.</blockquote>
+
 <p>Sounds like what we need, don't you think? We just split up the summation indices in a row of <em>i</em>'s and a row of <em>j</em>'s.
+
 <p>Now, <code>\mathclap</code>. The relevant part of <a href="www.ctan.org/tex-archive/macros/latex/contrib/mh/mathtools.pd">the <code>mathtools</code> manual</a> states
+
 <blockquote><p>[...] contains a lot of excessive white space. The idea that comes to mind is to fake the width of the subscript. The command <code>\mathclap</code> puts its argument in a zero width box and centers it, [...]</blockquote>
+
 <p>Aha, LaTeX will ignore the width of the summation indices when typesetting math. That's what we need.
+
 <p>So we get
-<pre><code>\begin{displaymath}
+
+{% highlight latex %}
+\begin{displaymath}
   T=\sum_{
     \mathclap{\substack{i_1,\ldots,i_n=1 \ j_1,\ldots,j_m=1}}}^d
     T_{j_1,\ldots,j_m}^{i_1,\ldots,i_n}
     E_{i_1,\ldots,i_n}^{j_1,\ldots,j_m}
-\end{displaymath}</code></pre>
-<p>which produces<br />
-<img src="{{ site.baseurl }}/assets/mathclap-21.png" alt="Expression of tensor product in basis, good formatting" />
+\end{displaymath}
+{% endhighlight %}
+
+which produces
+<p style="text-align: center"><img src="{{ site.baseurl }}/assets/mathclap-21.png" alt="Expression of tensor product in basis, good formatting" />
+
 <p>When I look at this rendering of the formula, one thing still annoys me. There is <em>not enough</em> space now between the summation symbol and the summands. I feel like there's some symmetry needed: the space between the equals sign and the summation symbol should be on par with the space between the summation symbol and the summands.
+
 <p>Let's add some hardcoded whitespace, <code>\;</code> is one of the lesser known (at least to me) spacings, representing 5/18th of a quad. That's neither too wide nor thin, so using
-<pre><code>\begin{displaymath}
+
+{% highlight latex %}
+\begin{displaymath}
   T=\sum_{
     \mathclap{\substack{i_1,\ldots,i_n=1 \ j_1,\ldots,j_m=1}}}^d\;
     T_{j_1,\ldots,j_m}^{i_1,\ldots,i_n}
     E_{i_1,\ldots,i_n}^{j_1,\ldots,j_m}
-\end{displaymath}</code></pre>
-<p>we get<br />
-<img src="{{ site.baseurl }}/assets/mathclap-32.png" alt="Expression of tensor product in basis, best formatting" />
+\end{displaymath}
+{% endhighlight %}
+
+we get
+<p style="text-align: center"><img src="{{ site.baseurl }}/assets/mathclap-32.png" alt="Expression of tensor product in basis, best formatting" />
 <p>In case you're wondering what the name <code>\mathclap</code> means, it helps when you know there is a <code>\mathllap</code> and <code>\mathrlap</code>. So <code>\mathclap</code> centers the zero width box, while the other two respectively align the box to the left and right.

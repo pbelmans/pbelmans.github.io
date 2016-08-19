@@ -35,13 +35,18 @@ author: Pieter Belmans
 <ul>
 <li>use ties, the TeXbook explains how, but bear in mind your own personal taste
 <li>prevent line breaks inside formulas by adding
-<pre><code>\relpenalty=10000
-\binoppenalty=10000</code></pre>
+
+{% highlight latex %}
+\relpenalty=10000
+\binoppenalty=10000
+{% endhighlight %}
 
 </ul>
 <h2>My answer to the exercise</h2>
 <p>I prefer the prose of the second suggestion more, so I've TeX'd it how I would do it.
-<pre><code>Let~$C$ be a closed, bounded and convex subset of a Hilbert
+
+{% highlight latex %}
+Let~$C$ be a closed, bounded and convex subset of a Hilbert
 space~$H$, and let~$T$~be a non-expansive self map of~$C$. Suppose
 that as~$n\to\infty$, we have~$a_{n,k}\to 0$ for each~$k$, and
 \begin{displaymath}
@@ -51,4 +56,5 @@ Then for each~$x$ in~$C$, the infinite sum
 \begin{displaymath}
   A_nx=\sum_{k=0}^\infty a_{n,k}T^k x
 \end{displaymath}
-converges weakly to a fixed point of~$T$.</code></pre>
+converges weakly to a fixed point of~$T$.
+{% endhighlight %}
