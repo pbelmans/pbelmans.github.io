@@ -19,30 +19,25 @@ author: Pieter Belmans
 <blockquote><p>
 <strong>Proposition 5.</strong> Soit $V$ une intersection complète, définie par des polynômes homogènes $P_1,\dots,P_{r-p}$ de degrés $m_1,\dots,m_{r-p}$.
 <ol>
-<li>L'application $S(V)_n\to\mathrm{H}^0(V,\mathcal{O}_V(n))$ est bijective pour tout $n\in\mathbb{Z}$.
-
-<li>$\mathrm{H}^q(V,\mathcal{O}_V(n))=0$ pour $0&lt;q&lt;p$ et tout $n\in\mathbb{Z}$.
-
-<li>$\mathrm{H}^p(V,\mathcal{O}_V(n))$ est isomorphe à l'espace vectoriel dual de $\mathrm{H}^0(V,\mathcal{O}_V(N-n))$ avec $N=\sum_{i=1}^{r-p}m_i-r-1$.
-
+  <li>L'application $S(V)_n\to\mathrm{H}^0(V,\mathcal{O}_V(n))$ est bijective pour tout $n\in\mathbb{Z}$.
+  <li>$\mathrm{H}^q(V,\mathcal{O}_V(n))=0$ pour $0&lt;q&lt;p$ et tout $n\in\mathbb{Z}$.
+  <li>$\mathrm{H}^p(V,\mathcal{O}_V(n))$ est isomorphe à l'espace vectoriel dual de $\mathrm{H}^0(V,\mathcal{O}_V(N-n))$ avec $N=\sum_{i=1}^{r-p}m_i-r-1$.
 </ol>
 </blockquote>
 <p>The notation $S(V)_n$ in the statement refers to the degree $n$ part of the homogeneous coordinate ring of $V$ (i.e. the quotient of $k[x_0,\dotsc,x_n]$ by $I=(P_1,\dotsc,P_{r-p})$, where $V$ is a <em>complete intersection</em> in $\mathbb{P}_k^r$. This means that the codimension of $V$ is as high as it can be: with each equation $P_i$ it can drop with at most 1, and hence if it drops each time we get a $r-p$-dimensional variety.
 <p>This statement allows us easily to give the dimensions of the cohomology spaces, as in degree 0 we get a bijection with an explicit vectorspace, in intermediate degrees we have a vanishing result, and for the top degree we get an explicit duality with degree 0 information. The only part missing is computing the dimension of the degree 0 spaces. For this we use the fact that the Hilbert series of such a complete intersection (in the notation of Serre) is given by
-<p>$\qquad\qquad\displaystyle\frac{\prod_{i=1}^{r-p}(1-t^{p_i})}{(1-t)^r}.$
+$$
+\displaystyle\frac{\prod_{i=1}^{r-p}(1-t^{p_i})}{(1-t)^r}.
+$$
 <p>Hence if we can compute the coefficients in this series we have the dimensions we are looking for. This is just manipulating series, and is part of any computer algebra system.
 <p>But I wanted a HTML version of this. So I wrote an <a href="https://github.com/pbelmans/cohomology-tables/blob/master/series.js">implementation of power series (in one variable) in Javascript</a>. Using this implementation and a little HTML5 magic I then obtained the <a href="http://win.ua.ac.be/~pbelmans/cohomology-tables/index.html">following tool to display the dimensions of the cohomology spaces of $\mathcal{O}_X(r)$</a>.
 <h2>Hodge diamonds</h2>
 <p>Another class of interesting numbers related to cohomology of complete intersections can be found in the <a href="http://en.wikipedia.org/wiki/Hodge_diamond">Hodge diamond</a>. Now we don't look at the structure sheaf and its twists, but at $\Omega_X^p$, the differential $p$-forms and its cohomology. This algorithm is based on <a href="http://math.duke.edu/~adding/programs/complete_intersection.cpp">Nicolas Addington's <code>complete_intersection.cpp</code></a>. It uses:
 <ul>
-<li>Hilbert polynomials are additive with respect to exact sequences
-
-<li>the Euler exact sequence (and its exterior powers) relating the structure sheaf to differential forms, to get Hilbert polynomials for these objects
-
-<li>the adjunction formula (and its exterior powers) relating the differential forms of the ambient space to the hypersurface (i.e. this is done inductively for each hypersurface)
-
-<li>the Lefschetz hyperplane theorem to compute the dimensions of the cohomology spaces (with an error term for the top degree, as this is where the Lefschetz hyperplane theorem doesn't apply immediately).
-
+  <li>Hilbert polynomials are additive with respect to exact sequences
+  <li>the Euler exact sequence (and its exterior powers) relating the structure sheaf to differential forms, to get Hilbert polynomials for these objects
+  <li>the adjunction formula (and its exterior powers) relating the differential forms of the ambient space to the hypersurface (i.e. this is done inductively for each hypersurface)
+  <li>the Lefschetz hyperplane theorem to compute the dimensions of the cohomology spaces (with an error term for the top degree, as this is where the Lefschetz hyperplane theorem doesn't apply immediately).
 </ul>
 <p>By implementing this in Javascript (I claim no originality here, it is a straightforward port of the C++ code) we obtain the <a href="http://win.ua.ac.be/~pbelmans/cohomology-tables/index.html">following tool to display the Hodge diamond</a>. I thank Johan de Jong for the suggestion on the Hodge diamonds.
 <p><strong>Disclaimer</strong> It might not work in browsers different from Google Chrome and Safari. And be careful, if you push the limits of the Hodge diamond (high dimensions, high degrees of equations) it might run into (silent) overflows. I might fix this later on.
