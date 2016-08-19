@@ -15,10 +15,14 @@ author: Pieter Belmans
 <p>Remark that this non-functoriality makes computing Hochschild cohomology of algebras a difficult task: it is not possible in general to relate it to the Hochschild cohomology of related but easier algebras.
 <p>There are two ways of showing why Hochschild cohomology is not functorial: the conceptual explanation, and a counterexample. I'll discuss both. Especially the last shows why the issue is not addressed in text books, and why this blog post perhaps should not be written, and left as an exercise. So if you are interested in the answer, try coming up with the explanation yourself first, it really is an easy exercise.
 <p><small>All notations are as in Loday's Cyclic homology, and familiarity with Hochschild (co)homology is assumed. Although for the counterexample it suffices to know what finite groups and their centers are.</small>
+
 <h3>Conceptual</h3>
 <p>In trying to mimick the functoriality of Hochschild homology is one led to considering an algebra map $f\colon A\to B$, and $\phi\in\mathrm{Hom}_{A^{\mathrm{e}}}(\mathrm{C}^{\text{bar}}_\bullet(B),B)$. One would like to define the pullback $f^*(\phi)$ by
-<p>$f^*(\phi)(a,a_1,\dotsc,a_n)=\phi(f(a),f(a_1),\dotsc,f(a_n))$
-<p>but the map $\phi$ has the wrong codomain: it should land in $A$ but it lands in $B$. The similar situation for Hochschild homology works fine though.
+$$
+f^*(\phi)(a,a_1,\dotsc,a_n)=\phi(f(a),f(a_1),\dotsc,f(a_n))
+$$
+but the map $\phi$ has the wrong codomain: it should land in $A$ but it lands in $B$. The similar situation for Hochschild homology works fine though.
+
 <h3>Counterexample</h3>
 <p>We have the interpretation of the zeroth Hochschild cohomology as the center of the algebra. But taking the center is in general not functorial, as even the example of the maps $\mathrm{Cyc}_3\hookrightarrow\mathrm{Sym}_3\twoheadrightarrow\mathrm{Cyc}_3$ composing to the identity shows. The center in $\mathrm{Sym}_3$ is trivial, hence the composition of the centers of the morphisms is trivial too, but the center of the composition is the whole (abelian) group $\mathrm{Cyc}_3$.
 <p>To turn this into an example for Hochschild cohomology it suffices to take the group algebras on these groups, and we're done.

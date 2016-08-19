@@ -16,12 +16,15 @@ author: Pieter Belmans
 <p>And if you can postpone work in a fancy way it's even better! So I've got 5 "categories" of notes, each with its own color and options. An example (click for pdf):<br />
 <a href="http://pbelmans.files.wordpress.com/2013/02/todo.pdf"><img src="{{ site.baseurl }}/assets/todo-example.png" alt="" /></a><br />
 The interesting part is that I'm using the <code><a href="http://ctan.org/pkg/xparse">xparse</a></code> package, to have <em>optional commands</em>. So I can choose between <code>\addreference</code> and <code>\addreference{to that particular book for which I don't feel like creating a BibTeX entry right now}</code>. It's really easy, just put
-<pre><code>\usepackage{xparse}
+
+{% highlight latex %}
+\usepackage{xparse}
 
 \DeclareDocumentCommand\addreference{g}{\todo[color = blue!30]{Add reference\IfNoValueF{#1}{: #1}}}
 \DeclareDocumentCommand\checkthis{g}{\todo[color = red!50]{Check this\IfNoValueF{#1}{: #1}}}
 \DeclareDocumentCommand\fixthis{g}{\todo[color = orange!50]{Fix this\IfNoValueF{#1}{: #1}}}
 \DeclareDocumentCommand\expand{g}{\todo[color = green!50]{Expand\IfNoValueF{#1}{: #1}}}
 \newcommand\removethis{\todo[color = yellow!50]{Remove this?}}
-</code></pre>
+{% endhighlight %}
+
 <p>in your preamble when you have <code>todonotes</code> loaded. Adding the option <code>textsize = small</code> to your <code>\usepackage</code> command might be a good idea, and there is <code>colorinlistoftodos</code> if you want colored boxes in the list.
