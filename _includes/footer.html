@@ -1,38 +1,33 @@
-<footer class="site-footer">
-
+<footer>
   <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
     <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
+      <div class="footer-col footer-col-3">
+        contact me:
+        <br>
+        &nbsp;&nbsp;<a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        <br>
+        address:
+        <address>
+          &nbsp;&nbsp;G2.28<br>
+          &nbsp;&nbsp;Departement Wiskunde–Informatica<br>
+          &nbsp;&nbsp;Middelheimlaan 1<br>
+          &nbsp;&nbsp;2020 Antwerpen
+        </address>
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
+        I maintain
+        <ul class="social-media-list">
+          <li>{% include icon-stacks.html %}
+          <li>{% include icon-ncag.html %}
+        </ul>
+        you can also find me on
+        <ul class="social-media-list">
+          <li>{% include icon-github.html username="pbelmans" %}
+          <li>{% include icon-twitter.html username="pbelmans" %}
+          <li>{% include icon-mathoverflow.html username="pbelmans" id="6263" %}
+        </ul>
       </div>
     </div>
-
   </div>
-
 </footer>

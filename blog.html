@@ -1,0 +1,28 @@
+---
+layout: page
+title: blog
+permalink: /blog/
+---
+
+<p>This blog used to be on WordPress.com, but now it is integrated in my actual homepage. You can browse it by year below, or by
+<ul>
+  <li><a href="{{ site.baseurl }}/blog/categories">categories</a>
+  <li><a href="{{ site.baseurl }}/blog/tags">tags</a>
+</ul>
+
+{%for post in site.posts %}
+  {% unless post.next %}
+    <h2>{{ post.date | date: '%Y' }}</h2>
+    <ul>
+  {% else %}
+    {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+    {% capture nextyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+    {% if year != nextyear %}
+        </ul>
+        <h2>{{ post.date | date: '%Y' }}</h2>
+        <ul>
+    {% endif %}
+  {% endunless %}
+  <li><span>{{ post.date | date: "%b %d, %Y" }}</span> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>

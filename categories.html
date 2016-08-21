@@ -1,0 +1,22 @@
+---
+layout: page
+permalink: /blog/categories
+---
+
+<h1>Categories</h1>
+<ul>
+  {% for category in site.categories %}
+  <li><a href="#{{ category[0] | slugify }}">{{ category[0] }} ({{ category | last | size }})</a>
+  {% endfor %}
+  <li>
+</ul>
+
+{% for category in site.categories %}
+<h2 id="{{ category[0] | slugify }}">{{ category[0] }}</h2>
+
+<ul>
+  {% for post in category[1] %}
+  <li><span>{{ post.date | date: "%b %d, %Y" }}</span> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
+{% endfor %}

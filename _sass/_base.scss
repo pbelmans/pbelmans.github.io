@@ -30,11 +30,15 @@ body {
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
+h1,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
     margin-bottom: $spacing-unit / 2;
+}
+
+h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
 }
 
 
@@ -85,8 +89,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: $base-font-weight;
 }
 
-
-
 /**
  * Links
  */
@@ -129,7 +131,7 @@ blockquote {
  */
 pre,
 code {
-    font-size: 15px;
+    font-size: 100%;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
     background-color: #eef;
@@ -137,6 +139,12 @@ code {
 
 code {
     padding: 1px 5px;
+}
+
+code.url {
+    border: 0;
+    padding: 0;
+    background-color: transparent;
 }
 
 pre {
@@ -193,14 +201,10 @@ pre {
  */
 .icon {
 
-    > svg {
+    > svg, > img {
         display: inline-block;
         width: 16px;
         height: 16px;
         vertical-align: middle;
-
-        path {
-            fill: $grey-color;
-        }
     }
 }

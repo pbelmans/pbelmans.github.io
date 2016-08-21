@@ -12,7 +12,7 @@
 
 .site-title {
     font-size: 26px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 56px;
     letter-spacing: -1px;
     margin-bottom: 0;
@@ -20,7 +20,7 @@
 
     &,
     &:visited {
-        color: $grey-color-dark;
+        color: #a00;
     }
 }
 
@@ -141,6 +141,7 @@
     width:         calc(45% - (#{$spacing-unit} / 2));
 }
 
+
 @include media-query($on-laptop) {
     .footer-col-1,
     .footer-col-2 {
@@ -204,39 +205,46 @@
 }
 
 .post-title {
-    font-size: 42px;
+    font-size: 30px;
     letter-spacing: -1px;
     line-height: 1;
 
     @include media-query($on-laptop) {
-        font-size: 36px;
+        font-size: 24px;
     }
 }
 
-.post-content {
-    margin-bottom: $spacing-unit;
+h2 {
+    font-size: 22px;
 
-    h2 {
-        font-size: 32px;
-
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
-    }
-
-    h3 {
-        font-size: 26px;
-
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
-    }
-
-    h4 {
+    @include media-query($on-laptop) {
         font-size: 20px;
+    }
+}
 
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
+h3 {
+    font-size: 18px;
+
+    @include media-query($on-laptop) {
+        font-size: 18px;
+    }
+}
+
+h4 {
+    font-size: 16px;
+
+    @include media-query($on-laptop) {
+        font-size: 16px;
+    }
+}
+
+.post-header ul {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+
+    li {
+        display: inline-block;
     }
 }

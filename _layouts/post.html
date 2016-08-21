@@ -5,7 +5,40 @@ layout: default
 
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+
     <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+
+    <div class="post-meta">
+      posted in:
+      <ul class="categories-list">
+        {% assign categories_list = page.categories %}
+        {% if categories_list.first[0] == null %}
+          {% for category in categories_list %}
+            <li><a href="{{ site.basurl }}/blog/categories#{{ category | slugify }}">{{ category | join: "/" }}{% unless forloop.last %}, {% endunless %}</a></li>
+          {% endfor %}
+        {% else %}
+          {% for category in categories_list %}
+            <li><a href="{{ site.basurl }}/blog/categories#{{ category | slugify }}">{{ category | join: "/" }}</a></li>
+          {% endfor %}
+        {% endif %}
+      </ul>
+    </div>
+
+    <div class="post-meta">
+      tags:
+      <ul class="tags-list">
+        {% assign tags_list = page.tags %}
+        {% if tags_list.first[0] == null %}
+          {% for tag in tags_list %}
+            <li><a href="{{ site.basurl }}/blog/tags#{{ tag | slugify }}">{{ tag | join: "/" }}{% unless forloop.last %}, {% endunless %}</a></li>
+          {% endfor %}
+        {% else %}
+          {% for tag in tags_list %}
+            <li><a href="{{ site.basurl }}/blog/tags#{{ tag | slugify }}">{{ tag | join: "/" }}</a></li>
+          {% endfor %}
+        {% endif %}
+      </ul>
+    </div>
   </header>
 
   <div class="post-content" itemprop="articleBody">

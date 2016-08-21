@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(0,16)">
+<g transform="scale(0.5,-0.5)">
+
+<polygon points="2,2 24,2 24,7 21,7 21,5 5,5 5,21 7,21 7,24 2,24" />
+<polygon points="8,8 29,8 29,13 26,13 26,11 11,11 11,26 13,26 13,29 8,29" />
+<polygon points="14,14 31,14 31,31 14,31" />
+<polygon points="17,17 28,17 28,28 17,28" style="fill: white;" />
+
+</g>
+</g>
+</svg>
