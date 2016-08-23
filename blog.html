@@ -23,6 +23,6 @@ permalink: /blog/
         <ul class="posts-list">
     {% endif %}
   {% endunless %}
-  <li><span class="date">{{ post.date | date: "%b %d, %Y" }}</span> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+  <li><span class="date">{{ post.date | date: "%b %d, %Y" }}</span> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>{% if post.draft %} (draft){% endif %}
 {% endfor %}
 </ul>
