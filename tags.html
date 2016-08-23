@@ -14,9 +14,9 @@ permalink: /blog/tags
 {% for tag in site.tags %}
 <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
 
-<ul>
+<ul class="posts-list">
   {% for post in tag[1] %}
-  <li><span>{{ post.date | date: "%b %d, %Y" }}</span> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+  <li><span class="date">{{ post.date | date: "%b %d, %Y" }}</span> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
 {% endfor %}

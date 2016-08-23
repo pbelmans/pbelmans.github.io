@@ -14,9 +14,9 @@ permalink: /blog/categories
 {% for category in site.categories %}
 <h2 id="{{ category[0] | slugify }}">{{ category[0] }}</h2>
 
-<ul>
+<ul class="posts-list">
   {% for post in category[1] %}
-  <li><span>{{ post.date | date: "%b %d, %Y" }}</span> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+  <li><span class="date">{{ post.date | date: "%b %d, %Y" }}</span> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
 {% endfor %}
