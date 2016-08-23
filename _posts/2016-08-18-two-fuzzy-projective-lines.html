@@ -1,0 +1,22 @@
+---
+layout: post
+title: Two fuzzy projective lines
+date: 2016-08-18 14:43:00 +02:00
+type: post
+published: true
+status: publish
+categories:
+- mathematics
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+<p>At the moment I am working on something which involves properties of non-reduced curves, and I realised that there are (at least) two interpretations you can give to the term <em>fuzzy projective line</em>. This confused me at first, but it's all very simple actually:
+<ol>
+  <li>You can consider $X=\mathop{\rm Proj}k[x,y,z]/(x^2)$.
+  <li>You can also consider $Y=\mathop{\rm Spec}k[\epsilon]/(\epsilon^2)\times\mathbb{P}_k^1$.
+</ol>
+<p>These are not the same. One way of seeing this is by computing the global sections of the structure sheaf. For the first you can for instance appeal to Hartshorne, exercise&nbsp;III.5.5, because this fuzzy projective line is a complete intersection, and we get&nbsp;$\mathrm{H}^0(X,\mathcal{O}_X)=k$. On the other hand we have by construction that&nbsp;$\mathrm{H}^0(Y,\mathcal{O}_Y)=k[\epsilon]/(\epsilon^2)$.
+
+<p>What is happening is that the second fuzzy projective line is not a complete intersection, hence we cannot embed it into $\mathbb{P}_k^2$. But it is not hard to realise it inside $\mathbb{P}_k^3$ by using that $\mathop{\rm Spec}k[\epsilon]/(\epsilon^2)$ is a closed subscheme of $\mathbb{P}_k^1$, so $Y$ is a closed subscheme of $\mathbb{P}_k^1\times\mathbb{P}_k^1$, which we can embed into $\mathbb{P}_k^3$. An explicit set of equations cutting out $Y$ inside $\mathop{\rm Proj}k[x,y,z,w]$ would be $(xy-zw,y^2,z^2,zw)$.
