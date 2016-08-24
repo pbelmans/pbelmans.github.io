@@ -3,10 +3,13 @@ layout: post
 title: Enumerating all matrices in Jordan normal form
 type: post
 categories:
-- computer-science
-- math
+- mathematics
+tags:
+- programming
+- algebraic geometry
 author: Pieter Belmans
 ---
+
 <h2>Introduction</h2>
 <p>For a course in noncommutative geometry / representation theory we discussed two examples of classifying orbits of matrices, more specifically Examples 1.1 and 1.2 in <a href="http://win.ua.ac.be/~lebruyn/b2hd-LeBruyn2007a.html">Noncommutative Geometry and Cayley-smooth Orders</a>. I won't discuss the details of the mathematics behind them, the reference should suffice.
 <p>I was intrigued by the computational aspects of the problem (the computer scientist in me pops up from time to time), and I recently gained access to a small supercomputer with a <a href="http://magma.maths.usyd.edu.au/magma/">Magma installation</a>. Not knowing the complete classification, which is given in Section 2.8 of <a href="http://win.ua.ac.be/~lebruyn/b2hd-LeBruyn2007a.html">Noncommutative Geometry and Cayley-smooth Orders</a> under the monicker of the Gerstenhaber-Hesselink theorem (I always read the Gerstenlink-Haber theorem for some reason), I have implemented a general algorithm capable of giving you the details for all matrix rings if you are patient enough.

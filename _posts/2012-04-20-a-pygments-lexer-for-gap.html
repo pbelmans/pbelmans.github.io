@@ -3,11 +3,13 @@ layout: post
 title: A Pygments lexer for GAP
 type: post
 categories:
-- computer-science
+- computer science
 - LaTeX
-- math
+tags:
+- programming
 author: Pieter Belmans
 ---
+
 <p>In case you haven't heard of one of the most awesome LaTeX packages ever, let me introduce to you: <a href="http://ctan.org/pkg/minted">minted</a>. It's a package to create listings (code snippets, preferably with highlighting, line numbering etc.), but it goes much further than the more well-known package <a href="http://ctan.org/pkg/listings">listings</a>. A small example:<br />
 <img src="{{ site.baseurl }}/assets/7sGrC.png" alt="" /><br />
 Its awesomeness comes at a cost though, it relies heavily on an external Python program called <a href="http://pygments.org">Pygments</a>. This is a generic tool for highlighting, regardless of output format. It can produce <a href="http://pygments.org/docs/formatters/">TeX, HTML, images, ...</a>. And it comes equipped with a load of <a href="http://pygments.org/languages/">supported languages</a>. And if you've read the title you might guess what this post is about: a language that wasn't supported yet.
