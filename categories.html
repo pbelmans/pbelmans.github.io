@@ -1,18 +1,19 @@
 ---
 layout: page
+title: categories
 permalink: /blog/categories
+exclude: true
 ---
 
-<h1>Categories</h1>
 <ul>
-  {% for category in site.categories %}
-  <li><a href="#{{ category[0] | slugify }}">{{ category[0] }} ({{ category | last | size }})</a>
+  {% assign categories = site.categories | sort %}
+  {% for category in categories %}
+    <li><a href="#{{ category[0] | slugify }}">{{ category[0] }} ({{ category | last | size }})</a>
   {% endfor %}
-  <li>
 </ul>
 
-{% for category in site.categories %}
-<h2 id="{{ category[0] | slugify }}">{{ category[0] }}</h2>
+{% for category in categories %}
+<h2 class="posts-list" id="{{ category[0] | slugify }}">{{ category[0] }}</h2>
 
 <ul class="posts-list">
   {% for post in category[1] %}
