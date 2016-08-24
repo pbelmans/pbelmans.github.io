@@ -1,15 +1,11 @@
 ---
 layout: post
 title: How to make the TikZ option raw output aware of segments
-date: 2010-11-01 18:54:31.000000000 +01:00
 type: post
-published: true
-status: publish
 categories:
 - LaTeX
 tags:
 - programming
-meta:
 author: Pieter Belmans
 ---
 <p>As my previous post suggested, I was tweaking the <code>pgfplots</code> code a little, to produce a nice algebraic curve from <code>gnuplot</code> data. The current behaviour just connects all the dots in the automatically produced <code>.table</code> file. But as the calculation of an implicit function in <code>gnuplot</code> involves the creation of a surface and intersecting it with the <em>z=0</em> plane, the output is not as good as it would be in the case of a regular function.
