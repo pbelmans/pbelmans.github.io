@@ -4,13 +4,14 @@ title: On "Towards MathJax 3.0"
 type: post
 categories:
 - LaTeX
-- math
+- mathematics
+tags:
 - Stacks project
 author: Pieter Belmans
 ---
 <p>A few days ago the MathJax consortium <a href="https://www.mathjax.org/whitepaper-towards-mathjax-v3/">released</a> a white paper called "<a href="http://mathjax.github.io/papers/towards-v3/towards-mathjax-v3.html">Towards MathJax 3.0</a>" (<a href="http://mathjax.github.io/papers/towards-v3/towards-mathjax-v3.pdf">pdf</a>). With my sinuses again in a reasonable condition I decided to read it, and see what it means for the average user. If you are an average user but don't care about why things are the way they are, you can skip to the <a href="#changes">changes</a>.
 <h2>Introduction</h2>
-<p>The question that is answered is: 
+<p>The question that is answered is:
 <blockquote><p>"What do we expect from MathJax 3.0?"</blockquote>
 <p>It is actually interesting to first explain what the answer to this question was for version 1.0 and 2.0.
 <p>One should be aware that there is something called <a href="http://www.w3.org/Math/">MathML</a> which is a web standard for producing mathematical formulas on the web, just like HTML is a standard for producing what are basically hyperlinked text documents. But an important difference between these standards is their implementation. Whereas HTML is widely implemented, MathML has been largely ignored. I remember experimenting with it around 2005 or so, and back then I was happy if I could render something like $a^2+b^2=c^2$ properly. This was not only because of me: to render MathML you either had to use some obscure Internet Explorer plug-in, or use beta versions of Firefox (if I remember correctly).
@@ -20,7 +21,7 @@ author: Pieter Belmans
 <p><small>A convenient side effect of MathJax was a very good implementation of LaTeX mathematics for the web, which is the use case most often encountered (at least by me). But this is done via implementing MathML, and translating LaTeX to MathML, not directly rendering LaTeX as was the case before.</small>
 <h2>What is going to happen with MathJax 3.0?</h2>
 <p>The main point of the white paper is to re-evaluate all this, and whether it makes sense to keep this original goal. Depending on this two paths for the future of MathJax 3.0 are described.
-<p>But first it is made clear that the future of MathJax ought to be more modular with easier integration in other frameworks, and less of a complicated framework itself. The current structure of MathJax also reinvents the wheel at some points, for which external libraries are now available. 
+<p>But first it is made clear that the future of MathJax ought to be more modular with easier integration in other frameworks, and less of a complicated framework itself. The current structure of MathJax also reinvents the wheel at some points, for which external libraries are now available.
 <p>This can be achieved in two ways. One is focused on further enabling browser development as before, and continuing making MathJax a tool for a positive feedback loop for MathML. This is probably the most desirable approach, but it comes with great technical difficulties, and it is very naive to think that browser vendors will change their view towards MathML given that no browser vendor has worked or is planning to work on implementations and support for volunteer efforts is virtually non-existent.
 <p>The other path is to use the current HTML5, SVG and CSS3 implementations (which are very good indeed, across all browsers) to provide a MathML interpretation using MathJax, which was (maybe unfortunately) the current state of affairs anyway. And this is the path that will be taken for MathJax 3.0. The following quote from the conclusion sums this up nicely:
 <blockquote><p>... - to no longer consider native HTML support in browsers an achievable of goal of MathJax.</blockquote>
