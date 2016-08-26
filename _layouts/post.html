@@ -48,4 +48,19 @@ layout: default
     {{ content }}
   </div>
 
+
+<ul class="pagination">
+  {% if page.previous.url %}
+    <li class="previous"><a href="{{ page.previous.url | prepend: site.baseurl | replace: "//", "/" }}">previous post</a>
+  {% else %}
+    <li class="disabled previous"><a href="#">previous post</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <li class="next"><a href="{{ page.next.url | prepend: site.baseurl | replace: "//", "/" }}">next post</a>
+  {% else %}
+    <li class="disabled next"><a href="#">next post</a>
+  {% endif %}
+</ul>
 </article>
+
