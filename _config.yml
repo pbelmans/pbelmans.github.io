@@ -12,3 +12,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://pbelmans.ncag.info" # the base hostname & protocol for your site
 
 permalink: /blog/:year/:month/:day/:title
+
+paginate: 5
+paginate_path: "/archive/:num/"
+gems: [jekyll-paginate]
