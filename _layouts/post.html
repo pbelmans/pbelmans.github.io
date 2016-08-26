@@ -24,6 +24,8 @@ layout: default
       </ul>
     </div>
 
+    {% assign count = page.tags | size %}
+    {% if count != 0 %}
     <div class="post-meta">
       tags:
       <ul class="tags-list">
@@ -39,6 +41,7 @@ layout: default
         {% endif %}
       </ul>
     </div>
+    {% endif %}
   </header>
 
   <div class="post-content" itemprop="articleBody">
