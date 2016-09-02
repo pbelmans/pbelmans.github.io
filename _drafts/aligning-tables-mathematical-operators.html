@@ -1,0 +1,32 @@
+---
+layout: post
+title: Aligning table columns on a mathematical operator
+type: post
+categories:
+- LaTeX
+tags:
+- programming
+author: Pieter Belmans
+---
+
+<p>This is a little LaTeX hack that I would like to document. For something that I am writing right now I have a big table, where one column contains a certain abelian group. All these groups are direct sums of two other abelian groups. Wouldn't it be nice if the column was aligned on the $\oplus$? At the end of this post there is a comparison.
+
+<p><small>These abelian groups are the Picard group of certain singular curves, and they are direct sums of $\Pic_0$ and a number of copies of $\mathbb{Z}$ depending on the number of irreducible components. But this is not very important for the remainder of the post.</small>
+
+<p>Using the <a href="http://texdoc.net"><code>dcolumn</code></a> package it is possible to align columns on a decimal point. Luckily, this decimal point can be chosen in a rather broad sense. The column specifier
+
+{% highlight latex %}
+D{+}{\oplus}{-1}
+{% endhighlight %}
+
+<p>tells you that we wish to align on the <code>+</code> symbol in the LaTeX code, and that we wish to display <code>\oplus</code> as our decimal point. The <code>-1</code> is not important for us, because we don't have actual decimals.
+
+<p>A few things to keep in mind:
+<ul>
+  <li>the <code>dcolumn</code> package automatically turns everything into math mode, hence you don't need to use <code>$</code>'s in this particular column;
+  <li>so if you need to align actual text using this method, you can always wrap things in <code>\text{}</code>;
+  <li>if you have a column header, you do not with to apply the <code>dcolumn</code> column specifier to it, which is possible by using <code>\multicol{1}{c}{...}</code>.
+</ul>
+
+<p>Compare:
+<!-- have two columns: code versus screenshot -->
