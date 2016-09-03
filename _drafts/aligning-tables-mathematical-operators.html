@@ -9,11 +9,11 @@ tags:
 author: Pieter Belmans
 ---
 
-<p>This is a little LaTeX hack that I would like to document. For something that I am writing right now I have a big table, where one column contains a certain abelian group. All these groups are direct sums of two other abelian groups. Wouldn't it be nice if the column was aligned on the $\oplus$? At the end of this post there is a comparison.
+<p>This is a little LaTeX hack that I would like to document. For something that I am writing right now I have a big table, where one column contains a certain abelian group. All these groups are direct sums of two other abelian groups. Wouldn't it be nice if the column was aligned on the $\oplus$? At the end of this post there is a comparison to see what I mean in practice.
 
-<p><small>These abelian groups are the Picard group of certain singular curves, and they are direct sums of $\Pic_0$ and a number of copies of $\mathbb{Z}$ depending on the number of irreducible components. But this is not very important for the remainder of the post.</small>
+<p><small>These abelian groups are the Picard group of certain singular curves, and they are direct sums of $\mathrm{Pic}_0$ and a number of copies of $\mathbb{Z}$ depending on the number of irreducible components. But this is not very important for the remainder of the post.</small>
 
-<p>Using the <a href="http://texdoc.net"><code>dcolumn</code></a> package it is possible to align columns on a decimal point. Luckily, this decimal point can be chosen in a rather broad sense. The column specifier
+<p>Using the <a href="http://ctan.org/pkg/dcolumn"><code>dcolumn</code></a> package it is possible to align columns on a decimal point. Luckily, this decimal point can be chosen in a rather broad sense. The column specifier
 
 {% highlight latex %}
 D{+}{\oplus}{-1}
@@ -28,5 +28,46 @@ D{+}{\oplus}{-1}
   <li>if you have a column header, you do not with to apply the <code>dcolumn</code> column specifier to it, which is possible by using <code>\multicol{1}{c}{...}</code>.
 </ul>
 
-<p>Compare:
-<!-- have two columns: code versus screenshot -->
+Compare:
+<table>
+  <tr>
+    <td style="text-align: center; padding-right: 40px">
+      <img style="height: 200px; min-width: 129px;" src="{{ site.baseurl }}/assets/dcolumn-without.png">
+    </td>
+    <td>
+      {% highlight latex %}
+\begin{tabular}{c}
+  \toprule
+  \multicolumn{1}{c}{$\quad\Pic_0C$} \\
+  \midrule
+  $C\oplus\mathbb{Z}$ \\
+  $\Ga\oplus\mathbb{Z}$ \\
+  $\Gm\oplus\mathbb{Z}$ \\
+  $\Gm\oplus\mathbb{Z}^{\oplus2}$ \\
+  $\Ga\oplus\mathbb{Z}^{\oplus2}$ \\
+  \bottomrule
+\end{tabular}{% endhighlight %}
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: center; padding-right: 40px">
+      <img style="height: 200px; min-width: 166px;" src="{{ site.baseurl }}/assets/dcolumn.png">
+    </td>
+    <td>
+      {% highlight latex %}
+\begin{tabular}{D{+}{\,\oplus\,}{-1}}
+  \toprule
+  \multicolumn{1}{c}{$\quad\Pic_0C$} \\
+  \midrule
+  C+\mathbb{Z} \\
+  \Ga+\mathbb{Z} \\
+  \Gm+\mathbb{Z} \\
+  \Gm+\mathbb{Z}^{\oplus2} \\
+  \Ga+\mathbb{Z}^{\oplus2} \\
+  \bottomrule
+\end{tabular}{% endhighlight %}
+    </td>
+  </tr>
+</table>
+
+<p><small>Notice that I had to move the column header to the right a little. I should figure out a better solution, especially because this creates a little extra margin on the left. But this nitpickery has gone on long enough now.</small>
