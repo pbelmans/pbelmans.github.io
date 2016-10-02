@@ -141,6 +141,11 @@
     width:         calc(45% - (#{$spacing-unit} / 2));
 }
 
+footer {
+  border-top: 1px solid #e8e8e8;
+  padding-top: 1em;
+}
+
 
 @include media-query($on-laptop) {
     .footer-col-1,
