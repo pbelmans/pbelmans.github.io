@@ -1,0 +1,16 @@
+---
+layout: post
+title: Computing dimensions Hochschild cohomology of $\mathbb{P}^n$ as a one-liner in Macaulay2
+type: post
+categories:
+- mathematics
+tags:
+- programming
+- algebraic geometry
+author: Pieter Belmans
+---
+
+{% highlight text %}
+n = 3
+for i from 0 to n when true list rank HH^0(exteriorPower(i, tangentSheaf Proj(QQ[vars(0..n)])))
+{% endhighlight %}
