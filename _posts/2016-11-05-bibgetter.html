@@ -1,0 +1,27 @@
+---
+layout: post
+title: Announcing bibgetter
+type: post
+categories:
+- LaTeX
+tags:
+- programming
+author: Pieter Belmans
+---
+
+<p>The weather is turning grim, hence a good way of spending Saturday afternoons is by programming. I just created a new tool: <a href="https://bibgetter.github.io/"><code>bibgetter</code></a>.
+
+<p>I don't like managing references, for many reasons. Because of this I created <a href="https://github.com/pbelmans/mscget">a tool to fetch BibTeX entries from MathSciNet</a> a little while ago. It seems like I never really announced it on my blog, but I found it to be very convenient even if it was only quickly hacked together. I'm not sure where it stood on the <a href="https://xkcd.com/1205/">xkcd: is it worth your time?</a> table, but I liked using this first version.
+
+<p>The idea is that whenever I want to cite a paper, I just look up its identifier in <a href="http://www.ams.org/mathscinet/">MathSciNet</a> and use that identifier as the citation key in your <code>\cite</code> command. For example, if I want to cite <a href="http://www.ams.org/mathscinet-getitem?mr=1996800">Bondal&ndash;Van den Bergh, Generators and representability of functors in commutative and noncommutative geometry</a>, it suffices to write <code>\cite{MR1996800}</code>. Then whenever you feel like it you would run the Python script, which'll fetch the BibTeX code for all MathSciNet entries that have been cited.
+
+<p>I have now created <strong>a new version</strong>, and I called it <a href="https://github.com/bibgetter/bibgetter"><code>bibgetter</code></a>. It looks for arXiv identifiers, or MathSciNet identifiers in the <code>.aux</code> file, and fetches the corresponding BibTeX entries. It does this by using
+<ul>
+  <li>Nathan Grigg's <a href="https://github.com/nathangrigg/arxiv2bib"><code>arxiv2bib</code></a>
+  <li><a href="https://github.com/bibgetter/mr2bib"><code>mr2bib</code></a> (which is nothing but a modification of the <code>arxiv2bib</code> based on the first Python script that I wrote)
+</ul>
+<p>to actually parse the data. The main point difference is that it is now actually a commandline tool, and not just a Python script. It is not very polished at the moment, but it is definitely better than the first script.
+
+<p>Also, to make a print-ready version you might want to consider cleaning up the BibTeX. But you can now do this at the end of the process, not each time you add an entry (which is what OCD me would do).
+
+<p>You can read the very rudimentary documentation at <a href="https://bibgetter.github.io/"><code>bibgetter.github.io</code></a>. Right now there is not really a way of installing it, except for making sure Python can find all the files. I'll fix this later.
