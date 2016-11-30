@@ -1,0 +1,46 @@
+---
+layout: post
+title: Improved open and closed immersions in tikz-cd
+type: post
+categories:
+- LaTeX
+tags:
+- algebraic geometry
+- programming
+author: Pieter Belmans
+---
+
+<p>A long time ago, <a href="{% post_url 2013-03-13-open-and-closed-immersions-in-tikz-cd %}">I explained how to draw arrows for open and closed immersions in <code>tikz-cd</code></a>. Back then I already mentioned that my solution is not completely satisfactory. <a href="http://haoyun.github.io/">Yun Hao</a> took up the challenge, and significantly improved my implementation.
+
+{% highlight latex %}
+\usetikzlibrary{decorations.markings}
+
+\makeatletter
+\tikzcdset{
+  open/.code     = {\tikzcdset{hook, circled};},
+  closed/.code   = {\tikzcdset{hook, slashed};},
+  open'/.code    = {\tikzcdset{hook', circled};},
+  closed'/.code  = {\tikzcdset{hook', slashed};},
+  circled/.code  = {\tikzcdset{markwith = {\draw (0,0) circle (.375ex);}};},
+  slashed/.code  = {\tikzcdset{markwith = {\draw[-] (-.4ex,-.4ex) -- (.4ex,.4ex);}};},
+  markwith/.code ={
+    \pgfutil@ifundefined%
+    {tikz@library@decorations.markings@loaded}%
+    {\pgfutil@packageerror{tikz-cd}{You need to say %
+      \string\usetikzlibrary{decorations.markings} to use arrows with markings}{}}{}%
+    \pgfkeysalso{/tikz/postaction = {
+      /tikz/decorate,
+      /tikz/decoration={markings, mark = at position 0.5 with {#1}}}
+    }
+  },
+}
+\makeatother
+{% endhighlight %}
+
+<p><a href="https://gist.github.com/pbelmans/20feef4708b72736187c1deef724cd9c">His example</a> produces the following result
+
+<a href="{{ site.baseurl }}/assets/tikz-cd-hao.pdf"><img src="{{ site.baseurl }}/assets/tikz-cd-hao.png"></a>
+
+<p>Observe that the position of the circle will be perfect in each font, whereas my solution was greatly font-dependent on how good the result was.
+
+<p>Many thanks to him for letting sharing his code!
