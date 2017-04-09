@@ -1,0 +1,83 @@
+---
+layout: post
+title: "On Bondal's counterexample to the Jordan-Hölder property: non-extendability"
+type: post
+categories:
+- mathematics
+- programming
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+
+<p>This post <a href="{% post_url 2017-04-08-bondals-example %}">continues the discussion</a> of Bondal's counterexample from <a href="https://arxiv.org/abs/1304.0903v1">A simple counterexample to the Jordan-Hölder property for derived categories</a>. We will reuse the notation.
+
+<p><strong>Non-extendability</strong> Now we get to the interesting part. The preprint does not really mention <em>how</em> one checks that the exceptional object cannot be extended to an exceptional collection. To do this, we will check in the (numerical) Grothendieck group that the left orthogonal of the exceptional object does not contain a numerically exceptional object, hence definitely not an exceptional object. So we consider the semiorthogonal decomposition
+
+\begin{equation}
+\mathbf{D}^{\mathrm{b}}(A)=\left\langle P^\perp,P \right\rangle
+\end{equation}
+
+where $P^\perp=\{M\in\mathbf{D}^{\mathrm{b}}(A)\mid\operatorname{Hom}_{\mathbf{D}^{\mathrm{b}}(A)}(M,P)=0\}$ is the left orthogonal of the object $P$. Because the Grothendieck group is an additive invariant of a triangulated category, we get that $\operatorname{K}_0(A)=\operatorname{K}_0(P^\perp)\oplus\operatorname{K}_0(k)$.
+
+<p>The <em>Euler form $\chi$</em> on $\operatorname{K}_0(A)$ is the bilinear form given by
+
+\begin{equation}
+\chi([M],[N])=\sum_{i=-\infty}^{\infty}(-1)^i\dim_k\operatorname{Hom}_{\mathbf{D}^{\mathrm{b}}(A)}(M,N[i]).
+\end{equation}
+
+for objects $M,N\in\mathbf{D}^{\mathrm{b}}(A)$. Hence an exceptional object $E$ has $\chi(E,E)=1$, and a numerically exceptional object will be any object $M$ for which $\chi(M,M)=1$.
+
+<p>If we take the full exceptional collection $(P_1,P_2,P_3)$ of indecomposable projectives as a basis for the Grothendieck group, then the Euler form is described by the <a href="{% post_url 2016-09-11-cartan-coxeter-and-gram %}">Cartan matrix</a>, and in this case it is readily seen (by counting the number of paths in the quiver) to be
+
+\begin{equation}
+M=
+\begin{pmatrix}
+1 & 2 & 2 \\
+0 & 1 & 2 \\
+0 & 0 & 1
+\end{pmatrix}.
+\end{equation}
+
+<p>If you like QPA, <code>CartanMatrix(A)</code> will also tell you this.
+
+<p>Now we wish to express the Euler form in a basis which contains the class of the exceptional object $P$. To do this, we need to first express $[P]$ in terms of the $[P_i]$. For this we need a projective resolution, or take the shortcut using dimension vectors. If we go for the projective resolution we can again use QPA:
+
+{% highlight gap %}
+ObjectOfComplex(ProjectiveResolution(P), 0);
+ObjectOfComplex(ProjectiveResolution(P), 1);
+ObjectOfComplex(ProjectiveResolution(P), 2);
+{% endhighlight %}
+
+and from (or using dimension vectors), we get
+
+\begin{equation}
+[P]=[P_2]-[P_1]-[P_3],
+\end{equation}
+
+so $[P]=(-1,1,-1)$. Now we need to find two vectors in $\operatorname{K}_0(A)$ (or just even in $\operatorname{K}_0(A)\otimes\mathbb{Q}$) which are orthogonal to $(-1,1,-1)$. Let us take $c_1=(1,-1,0)$ and $c_2=(-1,0,1)$. We want to use these three vectors as our new basis for $\operatorname{K}_0(A)$, and express the Euler form in this basis. If we denote the change of base matrix
+
+\begin{equation}
+Q=
+\begin{pmatrix}
+1 & 1 & -1 \\
+-1 & 0 &  1 \\
+0 & -1 & -1
+\end{pmatrix}
+\end{equation}
+
+then
+
+\begin{equation}
+Q^{\mathrm{t}}MQ=
+\begin{pmatrix}
+0 & 1 & 0 \\
+-1 & 0 & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+\end{equation}
+
+for the basis $(c_1,c_2,[P])$. The submatrix on $c_1$ and $c_2$ defines a <em>skew-symmetric</em> bilinear form, which is the Euler form on $\operatorname{K}_0(P^\perp)$. But for such a skew-symmetric bilinear form we have that $\chi|_{\operatorname{K}_0(P^\perp)}(E,E)=0$, so there are no numerically exceptional objects in the category $P^\perp$!
+
+
