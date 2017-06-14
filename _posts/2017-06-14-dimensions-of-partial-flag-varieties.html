@@ -1,0 +1,261 @@
+---
+layout: post
+title: "Dimensions of partial flag varieties"
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+<p>Derived categories of partial flag varieties are interesting, and if you are not yet convinced of this claim, I refer you to <a href="http://www.ams.org/mathscinet-getitem?mr=3463417">Kuznetsov&ndash;Polishchuk, Exceptional collections on isotropic Grassmannians</a>, which is what inspired me to make this statement.
+
+<p>In this paper they discuss partial flag varieties with respect to a <em>maximal</em> parabolic subgroup, as these are the cases necessary to understand the derived category of any partial flag variety. One of things I wondered about when I first looked at that paper is: how big are these partial flag varieties? This is just an easy exercise in the representation theory of algebraic groups, but I couldn't find them explicitly written up.
+
+<h3>Maximal parabolic subgroups</h3>
+<p>We can specify a parabolic subgroup, by specifying a number of simple roots in the Dynkin diagram that we are adding to the Borel subgroup. In order to make it a <em>maximal</em> parabolic, we need to add all but 1 simple root. So take your favourite crayon, and fill all but one vertex of your favourite Dynkin diagram. You have now specified a maximal parabolic subgroup, which is well-defined up to conjugacy.
+
+<h3>Dimension of partial flag varieties</h3>
+<p>We wish to determine ${\dim G}/{\dim P_i}$ for all $i$, where $i$ runs over the vertices in the Dynkin diagram. All this can be done by counting the roots in the root system. We have that $\dim G$ is the number of roots in the root system plus the rank (which accounts for the center). These numbers can be found in any table discussing properties of irreducible root systems, e.g. <a href="https://en.wikipedia.org/wiki/Root_system#Properties_of_the_irreducible_root_systems">Wikipedia's table</a>.
+
+<p>Next thing is we need to compute the dimension of the parabolic subgroup $P_i$. Again we need to count roots. We have that $B\subset P_i$. And $\dim B$ is the number of <em>positive</em> roots plus the rank. So we only need to count the number of <em>negative</em> roots which are added to construct $P_i$. Luckily, SAGE can easily do this for us.
+
+{% highlight python %}
+def dimGB(D):
+  dimG = len(D.root_system().root_poset()) * 2 + D.rank()
+  dimB = len(D.root_system().root_poset()) + D.rank()
+  return (dimG, dimB)
+
+def dimension(D, T):
+  return dimGB(D)[0] - dimGB(D)[1] - (dimGB(D.subtype(T))[0] - dimGB(D.subtype(T))[1])
+{% endhighlight %}
+
+<p>To use this in the case of the Dynkin quiver of type $\mathrm{F}_4$, one does the following.
+
+{% highlight python %}
+D = DynkinDiagram("F4")
+for k in range(1, 4 + 1):
+  print dimension(D, [r for r in D.vertices() if r != k])
+{% endhighlight %}
+
+<h3>Results</h3>
+<p>If we apply this code to compute the dimensions of the partial flag varieties with respect to maximal parabolic subgroups, and take into account symmetries of the Dynkin diagram to remove some redundancy, we get the following result.
+
+<style type="text/css">
+td {
+  text-align: center;
+  width: 5em;
+}
+
+th {
+  background-color: #eee;
+}
+</style>
+
+<table>
+  <tr>
+    <td></td>
+    <th>$P_1$</th>
+    <th>$P_2$</th>
+    <th>$P_3$</th>
+    <th>$P_4$</th>
+    <th>$P_5$</th>
+    <th>$P_6$</th>
+    <th>$P_7$</th>
+    <th>$P_8$</th>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{A}_1$</th>
+    <td>1</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{A}_2$</th>
+    <td>2</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{A}_3$</th>
+    <td>3</td>
+    <td>4</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{A}_4$</th>
+    <td>4</td>
+    <td>6</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{A}_5$</th>
+    <td>5</td>
+    <td>8</td>
+    <td>9</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{A}_6$</th>
+    <td>6</td>
+    <td>10</td>
+    <td>12</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{A}_7$</th>
+    <td>7</td>
+    <td>12</td>
+    <td>15</td>
+    <td>16</td>
+  </tr>
+
+  <tr>
+    <td>...</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{B}_2=\mathrm{C}_2$</th>
+    <td>3</td>
+    <td>3</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{B}_3=\mathrm{C}_3$</th>
+    <td>5</td>
+    <td>7</td>
+    <td>6</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{B}_4=\mathrm{C}_4$</th>
+    <td>7</td>
+    <td>11</td>
+    <td>12</td>
+    <td>10</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{B}_5=\mathrm{C}_5$</th>
+    <td>9</td>
+    <td>15</td>
+    <td>18</td>
+    <td>18</td>
+    <td>15</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{B}_6=\mathrm{C}_6$</th>
+    <td>11</td>
+    <td>19</td>
+    <td>24</td>
+    <td>26</td>
+    <td>25</td>
+    <td>15</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{B}_7=\mathrm{C}_7$</th>
+    <td>13</td>
+    <td>23</td>
+    <td>30</td>
+    <td>34</td>
+    <td>35</td>
+    <td>33</td>
+    <td>28</td>
+  </tr>
+
+  <tr>
+    <td>...</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{D}_4$</th>
+    <td>6</td>
+    <td>9</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{D}_5$</th>
+    <td>8</td>
+    <td>13</td>
+    <td>15</td>
+    <td>10</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{D}_6$</th>
+    <td>10</td>
+    <td>17</td>
+    <td>21</td>
+    <td>22</td>
+    <td>15</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{D}_7$</th>
+    <td>12</td>
+    <td>21</td>
+    <td>27</td>
+    <td>30</td>
+    <td>30</td>
+    <td>21</td>
+  </tr>
+
+  <tr>
+    <td>...</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{E}_6$</th>
+    <td>16</td>
+    <td>21</td>
+    <td>25</td>
+    <td>29</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{E}_7$</th>
+    <td>33
+    <td>42
+    <td>47
+    <td>53
+    <td>50
+    <td>42
+    <td>27
+  </tr>
+
+  <tr>
+    <th>$\mathrm{E}_8$</th>
+    <td>78</td>
+    <td>92</td>
+    <td>98</td>
+    <td>106</td>
+    <td>104</td>
+    <td>97</td>
+    <td>83</td>
+    <td>57</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{F}_4$</th>
+    <td>15</td>
+    <td>20</td>
+    <td>20</td>
+    <td>15</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{G}_2$</th>
+    <td>5</td>
+    <td>5</td>
+  </tr>
+</table>
