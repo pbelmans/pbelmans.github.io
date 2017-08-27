@@ -48,8 +48,8 @@ author: Pieter Belmans
       <li>add
 {% highlight latex %}
 \def\reversemarginpar{}
-\newcommand{\marginnote}[1]{}
-\newcommand{\hypertarget}[2]{}
+\def\marginnote[#1]{}
+\def\hypertarget[#1]#2{}
 {% endhighlight %}
     </ul>
     <p>You will have to redo this each time you run <code>make tags/tmp/book.tex</code>!
