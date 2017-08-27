@@ -48,9 +48,10 @@ author: Pieter Belmans
       <li>add
 {% highlight latex %}
 \def\reversemarginpar{}
-\def\marginnote[#1]{}
-\def\hypertarget[#1]#2{}
+\def\marginnote#1{}
+\def\hypertarget#1#2{}
 {% endhighlight %}
+       at the end of the preamble
     </ul>
     <p>You will have to redo this each time you run <code>make tags/tmp/book.tex</code>!
   <li><p>run <code>ln -s tags/tags tags/tmp/tags</code> in the repository
