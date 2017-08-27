@@ -1,0 +1,68 @@
+---
+layout: post
+title: "Introducing Gerby: plasTeX"
+type: post
+categories:
+- mathematics
+- computer science
+tags:
+- "Stacks project"
+- programming
+author: Pieter Belmans
+---
+
+<p>So, we are currently working on a new version of the Stacks project website. If you have any suggestions for the new website, please get in touch: you can email me, or <a href="https://github.com/pbelmans/gerby-website">use the issue tracker for the website on GitHub</a>. The project is called <strong>Gerby</strong>, as a silly reference to the Stacks project. It consists of several parts, and this blog post explains you how to use one of them: the <a href="https://github.com/pbelmans/plastex/tree/gerby">Gerby renderer in plasTeX</a>.
+
+<p>Also, if you want to set up your own Stacks project-like website, the new system will be much more compatible with other texts, so you can contact me if you are interested in doing this.
+
+<p>Right now we are still quite far from replacing the current website. But the most complicated part is in some sense over: we can
+<ul>
+  <li>split the TeX file according to all the different tags
+  <li>convert this to HTML in a much more robust way than before
+</ul>
+<p>We are now using <a href="http://tiarno.github.io/plastex/">plasTeX</a> for this, a Python library which was originally written for converting the <a href="http://www.sas.com/">SAS</a> documentation written in TeX to various formats. Below you can find the instructions for running the Gerby renderer on the Stacks project, and see for yourself how it works.
+
+<h2>Instructions on running the Gerby renderer</h2>
+<p>To get plasTeX up and running:
+<ol>
+  <li><p>run <code>git clone https://github.com/pbelmans/plastex.git</code>
+  <li><p>run <code>git checkout gerby</code> in the repository
+  <li><p>run <code>pip3 install --editable .</code> in the repository directory (or your preferred method of installing Python scripts)
+</ol>
+<p>To run it on the Stacks project (this part will become easier in the future)
+<ol>
+  <li><p>run <code>git clone https://github.com/stacks/stacks-project.git</code>
+  <li><p>run <code>make tags/tmp/book.tex</code> in the repository (this creates a single buildable TeX file of the Stacks project)
+  <li><p>change the preamble of <code>tags/tmp/book.tex</code>:
+    <ul>
+      <li>the document class should be book, i.e. replace the first few lines by
+{% highlight latex %}
+\documentclass{book}
+{% endhighlight %}
+      <li>remove (this is optional)
+{% highlight latex %}
+\newenvironment{reference}{\comment}{\endcomment}
+\newenvironment{slogan}{\comment}{\endcomment}
+\newenvironment{history}{\comment}{\endcomment}
+{% endhighlight %}
+      <li>add
+{% highlight latex %}
+\def\reversemarginpar{}
+\newcommand{\marginnote}[1]{}
+\newcommand{\hypertarget}[2]{}
+{% endhighlight %}
+    </ul>
+    <p>You will have to redo this each time you run <code>make tags/tmp/book.tex</code>!
+  <li><p>run <code>ln -s tags/tags tags/tmp/tags</code> in the repository
+</ol>
+<p>You should now be ready to run plasTeX: run <code>plastex --renderer=Gerby book.tex</code> in the directory <code>tags/tmp</code>.
+<p>Now you can go for a walk. After 30 minutes (give or take, depending on your computer) you will have a directory <code>tags/tmp/book</code> containing several tens of thousands small files containing HTML. Congratulations! Next time I'll tell you what to do with these.
+
+<p>The only thing you need to run this on your own project is a tags file. This is a <a href="https://github.com/stacks/stacks-project/blob/master/tags/tags">text file linking tags to labels</a>. You must create one yourself, because the system only generates files for tags.
+
+<h3>Remarks</h3>
+<p>Be aware of the following:
+<ul>
+  <li>remove the package <code>amsthm</code>, it makes plasTeX very confused
+</ul>
+<p>That's it for now, I'll add remarks as I think of them.
