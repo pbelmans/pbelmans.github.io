@@ -1,0 +1,59 @@
+---
+layout: post
+title: Hodge numbers for $\operatorname{Hilb}^nS$
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+- programming
+author: Pieter Belmans
+---
+<p>3 years ago I created a <a href="/cohomology-tables">webpage that computes the Hodge diamond and sheaf cohomology of line bundles for complete intersections</a> as a tool to illustrate Serre duality in some lectures on Grothendieck duality.
+<p>Now I needed to compute the Hodge numbers $\mathrm{h}^{p,q}(S^{[n]})=\dim_k\mathrm{H}^{q}(S^{[n]},\Omega_{S^{[n]}}^p)$ of the Hilbert scheme of $n$ points on a surface $S$. And for this we can use Göttsche's formula, which expresses these Hodge numbers in terms of the Hodge numbers $\mathrm{h}^{p,q}(S)$, cleverly combining them in a generating series. The statement we need is found as theorem 3.2.14 of <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=1312161">Hilbert schemes of zero-dimensional subschemes of smooth varieties</a>. To understand the statement, recall that the <em>Hodge&ndash;Poincaré polynomial</em> of a variety $X$ is
+\begin{equation}
+\mathrm{h}(X,x,y):=\sum_{p,q=0}^{\dim X}\mathrm{h}^{p,q}(X)x^py^q
+\end{equation}
+and then Göttsche's formula expresses the Hodge&ndash;Poincaré polynomials <em>for all values of $n$ simultaneously</em> as
+\begin{equation}
+\sum_{n=1}^{+\infty}\mathrm{h}(S^{[n]}x,y)t^n
+=
+\prod_{k=1}^{+\infty}\prod_{p,q=0}^2\left( 1 + (-1)^{p+q+1}x^{p+k-1}y^{q+k-1}t^k \right)^{(-1)^{p+q+1}\mathrm{h}^{p,q}(S)}
+\end{equation}
+<p>What is important to note is that to compute the Hodge numbers for of $S^{[n]}$ we don't need to do the infinite product, it suffices to do this up to $k=n$, at which point we can read off the Hodge&ndash;Poincaré polynomial of $S^{[n]}$ from the coefficients of the monomials $x^py^qt^n$.
+<p>Now it becomes basically a no-brainer in <a href="http://www.sagemath.org/">Sage</a>, using its implementation for power series rings. The final observation to be made is that we only need to compute coefficients for monomials of total degree up to $3n$, even though we need $x^{2n}y^{2n}t^n$, but Serre duality comes to the rescue. Increasing the precision seems to be an important factor in the running time of these computations, so it's best to keep it as low as possible.
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+
+<div class="sage">
+  <script type="text/x-sage">
+h = [[1,0,0], [0,1,0], [0,0,1]] # P^2
+
+def hodge(h, n):
+  R.<a, b, t> = PowerSeriesRing(ZZ, default_prec = (3*n + 1))
+  series = R(1)
+
+  # theorem 2.3.14 of Göttsche's book
+  for k in range(1, n+1):
+    for (p,q) in cartesian_product([range(3), range(3)]):
+      series = series * (1 + (-1)**(p+q+1) * a**(p+k-1) * b**(q+k-1) * t**k)**((-1)**(p+q+1) * h[p][q])
+
+  # read off Hodge diamond
+  diamond = [[0 for _ in range(2*n + 1)] for _ in range(2*n + 1)]
+  for (p,q) in cartesian_product([range(2*n + 1), range(2*n + 1)]):
+    monomial = a**min(p, 2*n-q)*b**min(q, 2*n-p)*t**n # use Serre duality
+    if monomial in series.coefficients():
+      diamond[p][q] = series.coefficients()[monomial]
+
+  return diamond
+
+hodge(h, 2)
+  </script>
+</div>
+
+<p>You can easily plug in other Hodge diamonds, e.g. if you like K3 surfaces.
+
+<p>I am wondering about how to optimise this computation, as already for $\mathbb{P}^2$ and $n=10$ it takes a while. Am I missing something obvious to speed up this computation significantly? Sage probably isn't the fastest kid on the block, but maybe I'm just being stupid here.
+
+<p><small>I realised that I missed an episode of fortnightly links last week. I'll shift the schedule by 1 week, so tomorrow there will be a new one.</small>
