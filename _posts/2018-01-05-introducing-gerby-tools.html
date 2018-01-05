@@ -1,0 +1,42 @@
+---
+layout: post
+title: "Introducing Gerby: the websites"
+type: post
+categories:
+- mathematics
+- computer science
+tags:
+- "Stacks project"
+- programming
+author: Pieter Belmans
+---
+
+<p>A little while ago I explained <a href="{% post_url 2017-08-27-introduction-gerby-plastex %}">how to take the Stacks project and convert it to a bunch of small HTML files</a>, which is the first step in setting up the new website for the Stacks project. In this post I'll explain the next two steps: creating the database behind the website, and setting up the website. For now, this part is not as streamlined as we'd want it to be, but in any case, it's not too hard.
+<p>I will assume you have performed plasTeX step with the most recent version of the Gerby renderer.
+
+<h2>Instructions on creating the database</h2>
+<p>To get Gerby website and the toolset:
+<ol>
+  <li><p>run <code>git clone https://github.com/pbelmans/gerby-website.git</code>
+  <li><p>install the following Python libraries: <code>flask</code>, <code>peewee</code>, <code>pybtex</code> (and apply <a href="https://bitbucket.org/pybtex-devs/pybtex/issues/110/dont-use-protected-in-math-mode">this patch</a> if you want to be exact), <code>flask_profiler</code> (or just delete this code from <code>gerby/gerby.py</code>), <code>feedparser</code>
+  <li><p><em>inside the directory</em> <code>gerby/tools/</code> we'll link to the output (using <code>ln -s</code>) from the first step as follows:
+    <ul>
+      <li>create a soft link to the output directory <code>tags/tmp/book/</code> inside your clone of the Stacks project, named <code>stacks</code>
+      <li>create a soft link to the tags file <code>tags/tags</code> inside your clone of the Stacks project, named <code>stacks.tags</code>
+      <li>create a soft link to the file <code> tags/tmp/book.paux</code>, named <code>stacks.paux</code>
+    </ul>
+  <li><p>run <code>python3 update.py</code> (sit back and relax, this takes a bit, but not as long as plasTeX)
+  <li><p>create a soft link in <code>gerby/</code> to <code>gerby/tools/stacks.sqlite</code>, named <code>stacks.sqlite</code>
+</ol>
+<p>All these filenames are governed by the file <code>gerby/config.py</code>, and can be changed. Eventually I should make a better configuration system.
+
+<h2>Instructions on serving the website</h2>
+<p>The following instructions are for running a local copy of the new Stacks project website. You could use this for having a local copy of the Stacks project (with the caveat that right now you'll need an internet connection for the JavaScript libraries). Eventually we'll make a standalone version, for which you don't need an internet connection.
+<p>Until then, it suffices to do the following:
+<ol>
+  <li><p>set <code>FLASK_APP=gerby</code> in your path (in <var>bash</var> this is done by <code>export FLASK_APP=gerby</code>)
+  <li><p>inside the directory <code>gerby/</code> run <code>flask run</code>
+  <li><p>open <code>localhost:5000</code> in your browser
+</ol>
+<p>That's it. Enjoy! As you can tell if you have successfully performed these steps, it won't take too long (something on the order of 2 months) until we will use the new system for the actual Stacks project website. Until then, please give suggestions on the beta version.
+<p>If you are interested in running a Stacks-project like system for your own project, please get in touch with me.
