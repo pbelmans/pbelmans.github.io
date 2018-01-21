@@ -1,0 +1,74 @@
+---
+layout: post
+title: Hodge numbers for $\operatorname{M}_C(r,\mathcal{L})$
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+- programming
+author: Pieter Belmans
+---
+<p>Continuing my short and irregular series of blogposts regarding the computation of Hodge numbers directly from your browser (earlier installments are <a href="{% post_url 2017-11-18-hodge-numbers-hilb %}">Hodge numbers for $\operatorname{Hilb}^nS$</a> and <a href="{% post_url 2014-01-16-a-visualisation-of-serre-duality-and-hodge-diamonds %}">A visualisation of Serre duality and Hodge diamonds</a> (for complete intersections)), I present you today the Hodge numbers of $\operatorname{M}_C(r,\mathcal{L})$.
+<p>$\operatorname{M}_C(r,\mathcal{L})$ is the moduli space of rank $r$ vector bundles with determinant isomorphic to $\mathcal{L}$ of degree $d$ such that $(d,r)=1$, all on a smooth projective curve $C$ of genus $g\geq 2$. These are very interesting Fano varieties with $\operatorname{Pic}(\operatorname{M}_C(r,\mathcal{L}))=\mathbb{Z}$, and 10 years ago a closed formula for their Hodge&ndash;Poincaré polynomial was found. Recall that the <em>Hodge&ndash;Poincaré polynomial</em> of a variety $X$ is
+\[
+  \operatorname{HP}(X,x,y)=\sum_{p,q=0}^{\dim X}\mathrm{h}^q(X,\Omega_X^p)x^py^q.
+\]
+<p>del Bano computed the Hodge&ndash;Poincaré polynomial for $\operatorname{M}_C(r,\mathcal{L})$ in <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=1817504">On the Chow motive of some moduli spaces</a>. If we denote $\langle\alpha\rangle$ the decimal part of $\alpha\in\mathbb{R}$, then the formula is the following
+\begin{align*}
+  \operatorname{HP}(\operatorname{M}_C(r,\mathcal{L}),x,y)
+  &=
+  \sum_{r_1+\ldots+r_\ell=r}
+  (-1)^{\ell-1}\frac{\left( (1+x)^g(1+y)^g \right)^{\ell-1}}{(1-xy)^{\ell-1}} \\
+  &\qquad\qquad\qquad\cdot\prod_{j=1}^\ell\prod_{i=1}^{r_j-1}\frac{(1+x^iy^{i+1})^g(1+x^{i+1}y^i)^g}{(1-(xy)^i)(1-(xy)^{i+1})} \\
+  &\qquad\qquad\qquad\cdot\prod_{j=1}^{\ell-1}\frac{1}{1-(xy)^{r_j+r_{j+1}}} \\
+  &\qquad\qquad\qquad\cdot(xy)^{\sum_{i&lt;j}r_ir_j(g-1)+\sum_{i=1}^{\ell-1}(r_i+r_{i+1})\langle -(r_1+\ldots+r_i)d/r\rangle}
+\end{align*}
+<p><small>I've fixed a small typo in the exponent on the fourth line.</small>
+
+<p>This looks like the perfect thing to implement in Sage, and below you find the direct translation into computer code.
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+
+<div class="sage">
+  <script type="text/x-sage">
+R.<x,y> = PolynomialRing(ZZ)
+
+def diamond(HP):
+  """Return the matrix of coefficients of the Hodge--Poincaré polynomial, as an approximation of the Hodge diamond."""
+  M = matrix(HP.degrees()[0] + 1)
+  for monomial in HP.monomials():
+    M[monomial.degrees()] = HP.monomial_coefficient(monomial)
+  return M
+
+def bracket(x):
+  """Return the decimal part of a fraction."""
+  return x - x.floor()
+
+def one(C, g):
+  """Return the first factor in del Bano's formula."""
+  return (-1)^(len(C)-1) * ((1+x)^g * (1+y)^g)^(len(C)-1) / (1-x*y)^(len(C)-1) # already corrected the factor from the Jacobian
+
+def two(C, g):
+  """Return the second factor in del Bano's formula."""
+  return prod([prod([(1 + x^i*y^(i+1))^g * (1 + x^(i+1)*y^i)^g / ((1 - x^i*y^i) * (1 - x^(i+1)*y^(i+1))) for i in range(1, C[j])]) for j in range(len(C))])
+
+def three(C, g):
+  """Return the third factor in del Bano's formula."""
+  return prod([1 / (1-(x*y)^(C[j] + C[j+1])) for j in range(len(C) - 1)])
+
+def four(C, d, g):
+  """Return the fourth factor in del Bano's formula."""
+  exponent = sum([sum([(g-1) * C[i] * C[j] for i in range(j)]) for j in range(len(C))]) + sum([(C[i] + C[i+1]) * bracket(-(sum(C[0:i+1]) * d / C.size())) for i in range(len(C) - 1)])
+  return (x*y)^exponent
+
+def hodge_poincare(n, d, g):
+  """Return the Hodge--Poincaré polynomial for M_C(r,L), where deg L = d, and (r,d)=1."""
+  return R(sum([one(C, g) * two(C, g) * three(C, g) * four(C, d, g) for C in Compositions(n)]))
+
+print diamond(hodge_poincare(2,1,2))
+  </script>
+</div>
+
+<p>The example with $r=2$, $d=1$ and $g=2$ is the easiest case. It can be shown that this is also the complete intersection of two quadrics in $\mathbb{P}^5$, so one can check the result using <a href="/cohomology-tables">the Hodge diamond for complete intersections</a>.
