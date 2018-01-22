@@ -72,3 +72,5 @@ print diamond(hodge_poincare(2,1,2))
 </div>
 
 <p>The example with $r=2$, $d=1$ and $g=2$ is the easiest case. It can be shown that this is also the complete intersection of two quadrics in $\mathbb{P}^5$, so one can check the result using <a href="/cohomology-tables">the Hodge diamond for complete intersections</a>.
+
+<p>It should be remarked that <a href="https://www.math.purdue.edu/~dvb/scripts/scripts.html">Donu Arapura also has a Sage implementation</a>, but his implementation deals with fractions of polynomials in a different way, using series expansion and truncation at every step. As a result, my (naive) implementation above turns out to be much faster (although that might not have been the case when he implemented the formula, I can certainly imagine the implementation for fractions of polynomials in Sage to have improved over time).
