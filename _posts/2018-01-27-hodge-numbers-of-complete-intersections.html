@@ -1,0 +1,35 @@
+---
+layout: post
+title: Hodge numbers for complete intersections
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+- programming
+author: Pieter Belmans
+---
+<p>I really enjoy being able to compute things straight out of my browser, and it's also convenient to quickly show people things this way. I already have this for <a href="http://pbelmans.ncag.info/cohomology-tables/">the Hodge numbers of complete intersections</a>, but its functionality is limited by the interface that I decided to implement 4 years ago. So continuing my series on Hodge numbers using Sage, I present you the code for complete intersections.
+<p>SGA7, éxposé XI, théorème 2.3 tells us that $\mathrm{h}^{p,q}(X_{d_1,\ldots,d_k})$ for $X_{d_1,\ldots,d_k}$ a complete intersection inside $\mathbb{P}^{n+k}$, and $p+q=n$ (i.e. the <em>middle cohomology</em> is described, which is the only interesting part in any case) is given by the coefficient of $x^py^q$ in the power series
+\begin{equation}
+  \frac{1}{(1+x)(1+y)}
+  \left(
+    \prod_{i=1}^k\frac{(1+x)^{d_i}-(1+y)^{d_i}}{(x(1+y)^{d_i}-y(1+x)^{d_i}}
+  \right)
+  +\frac{1}{1-xy}
+\end{equation}
+<p><small>The formula in SGA7 is for the primitive part of cohomology, so we add a term to make up for this 1-dimensional piece.</small>
+
+<p>The Sage code for this, which could not have been more naive than it is right now, is
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+
+<div class="sage">
+  <script type="text/x-sage">
+def hodge(d, n):
+  R.<x,y> = PowerSeriesRing(ZZ, default_prec=n+2)
+  H = 1/((1+x)*(1+y)) * (prod([((1+x)^di - (1+y)^di) / (x*(1+y)^di - y*(1+x)^di) for di in d]) - 1) + 1/(1-x*y)
+  return [H.coefficients()[x^i * y^(n-i)] if x^i * y^(n-i) in H.coefficients() else 0 for i in range(n + 1)]
+  </script>
+</div>
+<p>Donu Arapura also has <a href="https://www.math.purdue.edu/~dvb/scripts/hodge.sage">an implementation in Sage</a>, and there is no clear best choice when it comes to speed this time.
