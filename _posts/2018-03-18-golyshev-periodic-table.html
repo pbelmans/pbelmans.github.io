@@ -1,0 +1,201 @@
+---
+layout: post
+title: Golyshev's periodic table for Fano 3-folds of rank 1
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+- Fano
+author: Pieter Belmans
+---
+
+<p>A few weeks ago <a href="https://www.mccme.ru/~galkin/">Sergey Galkin</a> explained a funny fact about the classification of Fano 3-folds of rank 1, due to Golyshev (the fact that is, not the classification, which is due to Mori&ndash;Mukai). Namely, if you make a table of these Fano 3-folds as follows
+
+<style type="text/css">
+td {
+  text-align: center;
+}
+
+dl dt {
+  width: 30px;
+}
+
+dl dt,
+dl dd {
+  float: left;
+}
+</style>
+
+<table style="margin: 0 auto">
+  <tr>
+    <td></td>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>5</th>
+    <th>6</th>
+    <th>7</th>
+    <th>8</th>
+    <th>9</th>
+    <th>11</th>
+  </tr>
+  <tr>
+    <th>1</th>
+    <td>$\mathrm{V}_2$</td>
+    <td>$\mathrm{V}_4$</td>
+    <td>$\mathrm{V}_6$</td>
+    <td>$\mathrm{V}_8$</td>
+    <td>$\mathrm{V}_{10}$</td>
+    <td>$\mathrm{V}_{12}$</td>
+    <td>$\mathrm{V}_{14}$</td>
+    <td>$\mathrm{V}_{16}$</td>
+    <td>$\mathrm{V}_{18}$</td>
+    <td>$\mathrm{V}_{22}$</td>
+  </tr>
+  <tr>
+    <th>2</th>
+    <td>$\mathrm{B}_1$</td>
+    <td>$\mathrm{B}_2$</td>
+    <td>$\mathrm{B}_3$</td>
+    <td>$\mathrm{B}_4$</td>
+    <td>$\mathrm{B}_5$</td>
+  </tr>
+  <tr>
+    <th>3</th>
+    <td></td>
+    <td></td>
+    <td>$Q$</td>
+  </tr>
+  <tr>
+    <th>4</th>
+    <td></td>
+    <td>$\mathbb{P}^3$</td>
+  </tr>
+</table>
+
+where the rows are indexed by the Fano index $r$, and the columns by the integer $N$, then
+\begin{equation}
+  I=r\psi(N)
+\end{equation}
+where $\psi(N)=N\prod_{p\,\mid\, N}(1+1/p)$ is the <a href="https://en.wikipedia.org/wiki/Dedekind_psi_function">Dedekind psi function</a>, is a <strong>birational invariant</strong>. So whenever the value is&nbsp;<strong>12</strong> in the following table, the Fano variety is rational. You also see the correspondence between $\mathrm{B}_n$ and $\mathrm{V}_{4n+2}$.
+
+<table style="margin: 0 auto">
+  <tr>
+    <td></td>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>5</th>
+    <th>6</th>
+    <th>7</th>
+    <th>8</th>
+    <th>9</th>
+    <th>11</th>
+  </tr>
+  <tr>
+    <th>1</th>
+    <td>1</td>
+    <td>3</td>
+    <td>4</td>
+    <td>6</td>
+    <td>6</td>
+    <td>12</td>
+    <td>8</td>
+    <td>12</td>
+    <td>12</td>
+    <td>12</td>
+  </tr>
+  <tr>
+    <th>2</th>
+    <td>2</td>
+    <td>6</td>
+    <td>8</td>
+    <td>12</td>
+    <td>12</td>
+  </tr>
+  <tr>
+    <th>3</th>
+    <td></td>
+    <td></td>
+    <td>12</td>
+  </tr>
+  <tr>
+    <th>4</th>
+    <td></td>
+    <td>12</td>
+  </tr>
+</table>
+
+<p>At some point I'd like to do more with the classification of Fano 3-folds, I feel like something similar to <a href="http://superficie.info/">superficie.info</a> would work really well for this.
+
+<p><small>As a quick reminder, here are the descriptions of the varieties in the first table.
+<dl>
+  <dt>$\mathrm{V}_2$</dt>
+<dd>sextic hypersurface in $\mathbb{P}(1,1,1,1,3)$</dd>
+<br style="clear: both">
+
+<dt>$\mathrm{V}_4$</dt>
+<dd>quartic hypersurface in $\mathbb{P}^4$</dd>
+<br style="clear: both">
+
+<dt>$\mathrm{V}_6$</dt>
+<dd>complete intersection of a quadric and cubic in $\mathbb{P}^5$</dd>
+<br style="clear: both">
+
+<dt>$\mathrm{V}_8$</dt>
+<dd>complete intersection of 3 quadrics in $\mathbb{P}^6$</dd>
+<br style="clear: both">
+
+<dt>$\mathrm{V}_{10}$</dt>
+<dd>section of $\mathrm{Gr}(2,5)$ by quadric and codimension 2 hyperplane plane</dd>
+<br style="clear: both">
+
+<dt>$\mathrm{V}_{12}$</dt>
+<dd>section of $\mathrm{OGr}(5,10)$ by codimension 7 hyperplane</dd>
+<br style="clear: both">
+
+<dt>$\mathrm{V}_{14}$</dt>
+<dd>section of $\mathrm{Gr}(2,6)$ by codimension 5 hyperplane</dd>
+<br style="clear: both">
+
+<dt>$\mathrm{V}_{16}$</dt>
+<dd>section of $\mathrm{LGr}(3,6)$ by codimension 3 hyperplane</dd>
+<br style="clear: both">
+
+<dt>$\mathrm{V}_{18}$</dt>
+<dd>section of $\mathrm{G}_2/P$ by codimension 2 hyperplane</dd>
+<br style="clear: both">
+
+<dt>$\mathrm{V}_{22}$</dt>
+<dd><em>hard to describe succinctly</em></dd>
+<br style="clear: both">
+
+
+<dt>$\mathrm{B}_1$</dt>
+<dd>sextic hypersurface in $\mathbb{P}(1,1,1,2,3)$</dd>
+<br style="clear: both">
+
+<dt>$\mathrm{B}_2$</dt>
+<dd>quartic hypersurface in $\mathbb{P}(1,1,1,1,2)$</dd>
+<br style="clear: both">
+
+<dt>$\mathrm{B}_3$</dt>
+<dd>cubic hypersurface in $\mathbb{P}^3$</dd>
+<br style="clear: both">
+
+<dt>$\mathrm{B}_4$</dt>
+<dd>complete intersection of 2 quadrics in $\mathbb{P}^5$</dd>
+<br style="clear: both">
+
+<dt>$\mathrm{B}_5$</dt>
+<dd>section of $\mathrm{Gr}(2,5)$ by codimension 3 hyperplane</dd>
+<br style="clear: both">
+
+
+<dt>$Q$</dt>
+<dd>quadric hypersurface in $\mathbb{P}^4$</dd>
+<br style="clear: both">
+</dl>
