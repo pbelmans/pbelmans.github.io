@@ -1,0 +1,48 @@
+---
+layout: post
+title: Brill–Noether pictures
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+- Fano
+author: Pieter Belmans
+---
+
+<p>Brill&ndash;Noether theory is dedicated to studying linear series on algebraic curves. I won't explain anything about it, but as I was reading up a bit on it in chapter V of the classic textbook Geometry of algebraic curves, by Arbarello&ndash;Cornalba&ndash;Griffiths&ndash;Harris, I noticed they had some pretty pictures, but they only gave the general idea, not actual examples where the Brill&ndash;Noether number is included on the graph. Which made my TikZ itch rear its head, so I quickly scratched it.
+<p>Without further explanation, here is the quick visualisation of the Brill&ndash;Noether numbers $\rho(g,d,r)=g-(r+1)(g-d+r)$ for $g=4$ and $g=10$. Below you find the TikZ code for arbitrary genus. Changing the value in <code>\def\g{10}</code> is enough to get a different picture.
+
+<p><a href="/assets/brill-noether-g-4.pdf"><img width="467" src="/assets/brill-noether-g-4.png"></a>
+<p><a href="/assets/brill-noether-g-10.pdf"><img width="556" src="/assets/brill-noether-g-10.png"></a>
+
+{% highlight tex %}
+\begin{tikzpicture}[scale=.5]
+  \def\g{10}
+
+  \pgfmathtruncatemacro\dmax{2*\g};
+  \pgfmathtruncatemacro\rmax{\g+1};
+
+  \draw[black!10!white] (0,0) grid (\dmax,\rmax);
+  \draw[thick, ->] (-1,0) -- (\dmax+1,0) node [right] {$d$};
+  \draw[thick, ->] (0,-1) -- (0,\rmax+1) node [left] {$r$};
+
+  \draw[thick] (0,0) -- (2*\g-2,\g-1) -- (2*\g-1,\g-1); % Clifford line
+  \draw[thick] (\g,0) -- (2*\g-1,\g-1); % Riemann--Roch line
+
+  \draw[fill] (2*\g-2,\g-1) circle (2pt) node [above] {$\mathrm{K}_C$}; % canonical divisor
+  \draw[fill] (\g,0) circle (2pt) node [below] {$g$};
+  \draw[fill] (2*\g-2,0) circle (2pt) node [below] {$2g-2$};
+  \draw[fill] (0,\g-1) circle (2pt) node [left] {$g-1$};
+
+  \foreach \r in {1,...,\rmax} {
+    \pgfmathtruncatemacro\rg{min(\dmax,\r+\g-1)}
+    \foreach \d in {1,...,\rg} {
+      \pgfmathtruncatemacro\rhodr{\g-(\r+1)*(\g-\d+\r)};
+      \ifthenelse{\rhodr>-1}{\node at (\d,\r) {\quad\rhodr};}{}
+    }
+  }
+\end{tikzpicture}
+{% endhighlight %}
+
+<p>If you came here for pictures of the fine looking German gentleman that started Brill&ndash;Noether theory: <a href="https://en.wikipedia.org/wiki/Alexander_von_Brill#/media/File:Alexander_von_Brill.jpg">Alexander von Brill</a> and <a href="https://en.wikipedia.org/wiki/Max_Noether#/media/File:Noether_2514.JPG">Max Noether</a>. So it should actually be called <em>von Brill&ndash;Noether</em> theory, or maybe <em>Noether&ndash;von Brill</em>.
