@@ -38,7 +38,7 @@ author: Pieter Belmans
     \pgfmathtruncatemacro\rg{min(\dmax,\r+\g-1)}
     \foreach \d in {1,...,\rg} {
       \pgfmathtruncatemacro\rhodr{\g-(\r+1)*(\g-\d+\r)};
-      \ifthenelse{\rhodr>-1}{\node at (\d,\r) {\quad\rhodr};}{}
+      \ifthenelse{\rhodr>-1}{\draw[fill] (\d,\r) circle (2pt) node {\quad\rhodr};}{}
     }
   }
 \end{tikzpicture}
