@@ -1,0 +1,27 @@
+---
+layout: post
+title: Hilbert squares of higher-dimensional hyperkähler varieties are not hyperkähler
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+<p>Of course, the statement in the title should not come as a surprise, otherwise they would already be listed among the extremely short list of known hyperkähler varieties. Recall that a <em>hyperkähler</em> variety is a variety with a holomorphic symplectic form, and they are one of three building blocks (the others are abelian varieties and Calabi&ndash;Yau varieties) of varieties with trivial canonical bundle. So far, the list of known hyperkähler varieties is rather short:
+<ul>
+  <li>(deformations of) Hilbert schemes of points on K3 surfaces (of dimension $2n$)
+  <li>(deformations of) generalised Kummer varieties of abelian surfaces (of dimension $2n$)
+  <li>O'Grady's family of 6-dimensional examples
+  <li>O'Grady's family of 10-dimensional examples
+</ul>
+<p>Inspired by the first type, I was wondering on my walk home yesterday evening whether the Hilbert square $X^{[2]}$, where $X$ is a higher-dimensional hyperkähler variety, would be again hyperkähler. After all, it is true for K3 surfaces. The restriction to Hilbert squares (and Hilbert cubes) is quite natural here: without restricting the number of points, the Hilbert scheme of points on a higher-dimensional variety becomes (very) singular.
+<p>But there is a silly and roundabout argument to rule this out, based on the derived category of the Hilbert square (an object I've been thinking about recently, in a different setting). Of course, a more direct analysis of the geometry of the Hilbert square would be more appropriate (the expected geometric argument probably says that the resolution is no longer crepant).
+<p><strong>Proof.</strong> Assume it were hyperkähler. Then its canonical bundle is necessarily trivial. By Bridgeland's indecomposability for derived categories with trivial canonical bundle, we know that its derived category is indecomposable.
+<p>On the other hand, in <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=3811590">Krug&ndash;Ploog&ndash;Sosna: Derived categories of resolutions of cyclic quotient singularities</a> a semiorthogonal decomposition of the form
+\begin{equation*}
+\mathbf{D}^{\mathrm{b}}(X^{[2]})=\left\langle \mathbf{D}_{\mathbb{Z}/2\mathbb{Z}}^{\mathrm{b}}(X^2),\mathbf{D}^{\mathrm{b}}(X),\ldots,\mathbf{D}^{\mathrm{b}}(X)\right\rangle
+\end{equation*}
+with the first component the equivariant derived category, and $\mathop{\rm dim}X-2$ copies of $\mathbf{D}^{\mathrm{b}}(X)$ is given. This contradicts the indecomposability for $\mathop{\rm dim}X\geq 3$.<span style="float: right; display: block;">$\blacksquare$</span>
+<p>The case $\mathop{\rm dim}X=2$ is an instance of the Bridgeland&ndash;King&ndash;Reid equivalence by the way.
