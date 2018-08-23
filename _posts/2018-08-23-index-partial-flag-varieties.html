@@ -1,0 +1,263 @@
+---
+layout: post
+title: "Index of partial flag varieties"
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+<p>For the context for this post, see <a href="{% post_url 2018-08-22-rank-flag-varieties %}">yesterday's</a>.
+
+<h3>Index</h3>
+<p>To compute the index we use lemma 2.19 and remark 2.20 of the Kuznetsov&ndash;Polishchuk paper. Combined they say the following.
+<p><strong>Lemma</strong> Let $\beta$ be the simple root corresponding to the chosen maximal parabolic subgroup $P$, and $\xi$ the associated fundamental weight. Let $\overline{\beta}$ be the maximal root of the same length as $\beta$ such that the coefficient of $\beta$ in the expression of $\overline{\beta}$ is 1. Then the index of $G/P$ equals
+\begin{equation*}
+i_{G/P}=\frac{(\rho,\beta+\overline{\beta})}{(\xi,\beta)}.
+\end{equation*}
+
+<p>The Sage code for this is
+{% highlight python %}
+def index(D, k):
+  R = RootSystem(D)
+  L = R.root_lattice()
+
+  beta = L.simple_root(k)
+
+  length = beta.to_ambient().dot_product(beta.to_ambient())
+  betabar = [alpha for alpha in L.roots()
+      if alpha.coefficient(k) == 1
+      and alpha.to_ambient().dot_product(alpha.to_ambient()) == length][-1]
+
+  M = R.ambient_space()
+  rho = M.rho()
+  xi = M.fundamental_weight(k)
+  beta = beta.to_ambient()
+  betabar = betabar.to_ambient()
+
+  return rho.dot_product(beta + betabar) / xi.dot_product(beta)
+{% endhighlight %}
+
+<style type="text/css">
+td {
+  text-align: center;
+  width: 5em;
+}
+
+th {
+  background-color: #eee;
+}
+</style>
+
+<table>
+  <tr>
+    <td></td>
+    <th>$P_1$</th>
+    <th>$P_2$</th>
+    <th>$P_3$</th>
+    <th>$P_4$</th>
+    <th>$P_5$</th>
+    <th>$P_6$</th>
+    <th>$P_7$</th>
+    <th>$P_8$</th>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{A}_1$</th>
+    <td>2</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{A}_2$</th>
+    <td>3</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{A}_3$</th>
+    <td>4</td>
+    <td>4</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{A}_4$</th>
+    <td>5</td>
+    <td>5</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{A}_5$</th>
+    <td>6</td>
+    <td>6</td>
+    <td>6</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{A}_6$</th>
+    <td>7</td>
+    <td>7</td>
+    <td>7</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{A}_7$</th>
+    <td>8</td>
+    <td>8</td>
+    <td>8</td>
+    <td>8</td>
+  </tr>
+
+  <tr>
+    <td>...</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{B}_2=\mathrm{C}_2$</th>
+    <td>3</td>
+    <td>4</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{B}_3=\mathrm{C}_3$</th>
+    <td>5</td>
+    <td>4</td>
+    <td>6</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{B}_4=\mathrm{C}_4$</th>
+    <td>7</td>
+    <td>6</td>
+    <td>5</td>
+    <td>8</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{B}_5=\mathrm{C}_5$</th>
+    <td>9</td>
+    <td>8</td>
+    <td>7</td>
+    <td>6</td>
+    <td>10</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{B}_6=\mathrm{C}_6$</th>
+    <td>11</td>
+    <td>10</td>
+    <td>9</td>
+    <td>8</td>
+    <td>7</td>
+    <td>12</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{B}_7=\mathrm{C}_7$</th>
+    <td>13</td>
+    <td>12</td>
+    <td>11</td>
+    <td>10</td>
+    <td>9</td>
+    <td>8</td>
+    <td>14</td>
+  </tr>
+
+  <tr>
+    <td>...</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{D}_4$</th>
+    <td>6</td>
+    <td>5</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{D}_5$</th>
+    <td>8</td>
+    <td>7</td>
+    <td>6</td>
+    <td>8</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{D}_6$</th>
+    <td>10</td>
+    <td>9</td>
+    <td>8</td>
+    <td>7</td>
+    <td>10</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{D}_7$</th>
+    <td>12</td>
+    <td>11</td>
+    <td>10</td>
+    <td>9</td>
+    <td>8</td>
+    <td>12</td>
+  </tr>
+
+  <tr>
+    <td>...</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{E}_6$</th>
+    <td>12</td>
+    <td>11</td>
+    <td>9</td>
+    <td>7</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{E}_7$</th>
+    <td>17</td>
+    <td>14</td>
+    <td>11</td>
+    <td>8</td>
+    <td>10</td>
+    <td>13</td>
+    <td>18</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{E}_8$</th>
+    <td>23</td>
+    <td>17</td>
+    <td>13</td>
+    <td>9</td>
+    <td>11</td>
+    <td>14</td>
+    <td>19</td>
+    <td>29</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{F}_4$</th>
+    <td>8</td>
+    <td>5</td>
+    <td>7</td>
+    <td>11</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+
+  <tr>
+    <th>$\mathrm{G}_2$</th>
+    <td>5</td>
+    <td>3</td>
+  </tr>
+</table>
+
+<p>Maybe in the future I have something useful to say about these derived categories, who knows.
+
+<p><small>It's not quite true that $\mathrm{B}_i=\mathrm{C}_i$ for the index, one has to reorder the indices a bit, but I didn't want to change the layout of the table compared to the previous ones. The table is given for $\mathrm{B}_i$.
