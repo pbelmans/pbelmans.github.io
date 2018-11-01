@@ -1,0 +1,556 @@
+---
+layout: post
+title: Hodge numbers for generalised Kummer varieties
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+- programming
+author: Pieter Belmans
+---
+
+<p>For the regular reader of my blog it's no secret I like numerical invariants of smooth projective varieties. Today I have a new treat for you. At least, if you like Hodge numbers that is.
+
+<h3>Varieties with trivial canonical bundle</h3>
+<p>In the classification of varieties with trivial canonical bundle the Beauville&ndash;Bogomolov decomposition theorem transforms such a variety after a finite étale cover into a product of
+<ul>
+  <li>simple abelian varieties
+  <li>(strict) Calabi&ndash;Yau varieties of dimension at least 3
+  <li>irreducible holomorphic symplectic (or hyperkähler) varieties
+</ul>
+<p>Let's pretend we understand abelian varieties. On the other hand, already a classification of Calabi&ndash;Yau 3-folds is completely out of reach, and as far as I know even the finiteness of number of deformation families is not known. So let's ignore those too.
+<h3>Irreducible holomorphic symplectic varieties</h3>
+<p>What remains are the <em>irreducible holomorphic symplectic varieties</em>, i.e. varieties which are simply connected and for which there exists a symplectic form spanning $\mathrm{H}^0(X,\Omega_X^2)$. Here the total opposite is the case: although we have examples in every (necessarily) even dimension, the complete list of known irreducible holomorphic symplectic varieties is rather short:
+<ul>
+  <li>Hilbert schemes of $n$ points on K3 surfaces, and things deformation equivalent to it, for all dimensions;
+  <li>generalised Kummer varieties, and things deformation equivalent to it, for all even dimensions;
+  <li>two sporadic examples due to O'Grady: one of dimension 6, another of dimension 10.
+</ul>
+<p>As generalised Kummer varieties form the main topic, let's recall their definition. Let $A$ be an abelian surface. Then the <em>$n$th generalised Kummer variety</em> $\mathrm{K}^n(A)$ of $A$ is the fibre at 0 of the Albanese map
+\begin{equation}
+\operatorname{Hilb}^nA\to\operatorname{Sym}^nA\overset{\scriptstyle\sum}{\to} A
+\end{equation}
+<p><small>In some sources this would be the $(n-1)$th generalised Kummer variety. So in my setup, the first generalised Kummer is a point, and the second generalised Kummer variety is the Kummer K3 surface.</small>
+
+<h3>Hodge numbers of irreducible holomorphic symplectic varieties</h3>
+<p>To get a feel for these varieties one can try to compute some of its numerical invariants, and the computation of the second Betti number was what originally distinguished the Hilbert schemes of points on K3 surfaces from the generalised Kummer varieties: the former has $\mathrm{b}_2=23$, whilst the latter has $\mathrm{b}_2=7$ (when $n\geq 3$).
+<p>For the Hodge numbers of Hilbert schemes of points on K3 surfaces, there is <a href="{% post_url 2017-11-18-hodge-numbers-hilb %}">my blog post on Hodge numbers for $\operatorname{Hilb}^nS$</a> containing the code to compute it for arbitrary surfaces.
+<p>For the sporadic cases the situation is as follows:
+<ul>
+  <li>for the 6-dimensional example the paper <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=3798592">The Hodge diamond of O'Grady's six-dimensional example</a> of Mongardi&ndash;Rapagnetta&ndash;Saccà gives the Hodge numbers
+  <li>for the 10-dimensional example the Hodge numbers are not known as far as I can tell
+</ul>
+
+<p>For the record, here is the Hodge diamond for exceptional 6-dimensional case.
+<table class="hodge">
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+    <td>6</td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+    <td>12</td>
+    <td></td>
+    <td>173</td>
+    <td></td>
+    <td>12</td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>0</td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td></td>
+    <td>6</td>
+    <td></td>
+    <td>173</td>
+    <td></td>
+    <td>1144</td>
+    <td></td>
+    <td>173</td>
+    <td></td>
+    <td>6</td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>0</td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+    <td>12</td>
+    <td></td>
+    <td>173</td>
+    <td></td>
+    <td>12</td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+    <td>6</td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+  </tr>
+</table>
+
+<h3>Hodge numbers of generalised Kummer varieties</h3>
+<p>We finally get to the main point now. In the paper <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=1219901">Perverse sheaves and the cohomology of Hilbert schemes of smooth algebraic surfaces</a> of Göttsche--Soergel the (signed) Hodge polynomial for $A\times\mathrm{K}^n(A)$ is given by the intimidating-looking formula
+\begin{equation}
+\mathrm{h}(A\times\mathrm{K}^n(A),-x,-y)
+=
+\sum_{\alpha\in\mathrm{P}(n)}
+\left(
+  g(\alpha)^4
+  (xy)^{n-|\alpha|}
+  \prod_{i,\alpha_i\neq 0}
+  \left(
+    \sum_{\beta\in\mathrm{P}(\alpha_i)}
+    \prod_{j}
+      \frac{1}{j^{\beta_j}\beta_j!}
+      \left(
+        (1-x^j)(1-y^j)
+      \right)^{2\beta_j}
+  \right)
+\right)
+\end{equation}
+in corollary 1, where we write the partition $\alpha$ in the exponential notation $n=\alpha_1\cdot 1+\ldots+\alpha_r\cdot r$, and
+<ul>
+  <li>$g(\alpha):=\gcd\{i\mid\alpha_i\neq 0\}$
+  <li>$|\alpha|:=\sum_{i=1}^r\alpha_i$
+</ul>
+
+The (not very pretty) Sage code, which also deals with the signs and gets rid of the extra factor of $A$ is given by
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+
+<div class="sage">
+  <script type="text/x-sage">
+def diamond(HP):
+  """Return the matrix of coefficients of the Hodge--Poincaré polynomial, as a visual approximation of the Hodge diamond."""
+  M = matrix(HP.degrees()[0] + 1)
+  for monomial in HP.monomials():
+    M[monomial.degrees()] = HP.monomial_coefficient(monomial)
+  return M
+
+
+def betti(P):
+  """Return the Betti numbers"""
+  D = diamond(P)
+  d = D.nrows() - 1
+
+  return [sum([D[i, j] for (i, j) in map(tuple, IntegerVectors(k, length=2, max_part=d))]) for k in range(2*d + 1)]
+
+
+def generalisedkummer(n):
+  """Return the Hodge polynomial of the nth generalised Kummer variety, where the 1st generalised Kummer is the point, the 2nd the Kummer K3, etc."""
+  R.<x,y> = PolynomialRing(QQ)
+
+  # helper function, defined on line -5 of page 240
+  def g(a):
+    return gcd(a.keys())
+
+  # Hodge polynomial of A\times K^[[n]] from page 244, with signs removed
+  def product(n):
+    return sum([g(a)^4 * (x*y)^(n - sum(a.values())) * prod([sum([prod([1 / (j^b[j] * factorial(b[j])) * ((1-x^j) * (1-y^j))^(2*b[j]) for j in b.keys()]) for b in [b.to_exp_dict() for b in Partitions(a[i])]]) for i in a.keys()]) for a in [a.to_exp_dict() for a in Partitions(n)]])(-x, -y)
+
+  return R(product(n) / product(1))
+
+diamond(generalisedkummer(3))
+  </script>
+</div>
+
+<p>You can also compute the Betti numbers of a Hodge polynomial, and check that they agree with the table in Göttsche's book <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=1312161">Hilbert schemes of zero-dimensional subschemes of smooth varieties</a>, on page 50 (with the caveat that the indexing of the generalised Kummers differs by 1).
+
+<p>So the generalised Kummer variety $\mathrm{K}^3(A)$ has Hodge diamond
+<style type="text/css">
+table.hodge {
+}
+
+table.hodge td {
+  text-align: center;
+}
+</style>
+
+<table class="hodge">
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+    <td>5</td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>0</td>
+    <td></td>
+    <td>4</td>
+    <td></td>
+    <td>4</td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td></td>
+    <td>5</td>
+    <td></td>
+    <td>96</td>
+    <td></td>
+    <td>5</td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>0</td>
+    <td></td>
+    <td>4</td>
+    <td></td>
+    <td>4</td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+    <td>5</td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+  </tr>
+</table>
+
+<p>And the generalised Kummer variety $\mathrm{K}^4(A)$ has Hodge diamond
+<table class="hodge">
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+    <td>5</td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+    <td>4</td>
+    <td></td>
+    <td>4</td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+    <td>6</td>
+    <td></td>
+    <td>37</td>
+    <td></td>
+    <td>6</td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>0</td>
+    <td></td>
+    <td>4</td>
+    <td></td>
+    <td>24</td>
+    <td></td>
+    <td>24</td>
+    <td></td>
+    <td>4</td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td></td>
+    <td>5</td>
+    <td></td>
+    <td>37</td>
+    <td></td>
+    <td>372</td>
+    <td></td>
+    <td>37</td>
+    <td></td>
+    <td>5</td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>0</td>
+    <td></td>
+    <td>4</td>
+    <td></td>
+    <td>24</td>
+    <td></td>
+    <td>24</td>
+    <td></td>
+    <td>4</td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+    <td>6</td>
+    <td></td>
+    <td>37</td>
+    <td></td>
+    <td>6</td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+    <td>4</td>
+    <td></td>
+    <td>4</td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+    <td>5</td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>1</td>
+    <td></td>
+  </tr>
+</table>
+
+<p>Etc.
+<p><small>I think I should collect all my Hodge diamond related code, as I by now have quite a bit of interesting examples, not all of them on my blog, and some helper code for printing and other manipulations. That will happen at some point in the nearish future.
+<!-- give the 6-dim Hodge diamond -->
