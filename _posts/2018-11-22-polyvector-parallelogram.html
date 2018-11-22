@@ -1,0 +1,230 @@
+---
+layout: post
+title: Hodge diamonds and polyvector parallelograms
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+<p>Today I want to talk about a convenient way of organising the Hochschild&ndash;Kostant&ndash;Rosenberg decomposition for the Hochschild cohomology of a smooth projective variety $X$ of dimension $n$, and to make things easy, I'll work over an algebraically closed field $k$ of characteristic 0. I'll start with some build-up, if you only care about the new notion I would like to discuss you can jump straight to <a href="#parallelogram"><strong>polyvector parallelograms</strong></a>.
+<h2>Hochschild (co)homology and the Hochschild&ndash;Kostant&ndash;Rosenberg decomposition</h2>
+<p>In our setting we will define the <em>Hochschild cohomology</em> of $X$ as
+\[
+  \operatorname{HH}^i(X):=\operatorname{Ext}_{X\times X}^i(\Delta_*\mathcal{O}_X,\Delta_*\mathcal{O}_X).
+\]
+Similarly, we define the <em>Hochschild homology</em> of $X$ as
+\[
+  \operatorname{HH}_i(X):=\operatorname{Ext}_{X\times X}^{n+i}(\Delta_*\mathcal{O}_X,\Delta_*\omega_X).
+\]
+<p>These definitions don't look very computable, but there exist a convenient resolution of $\Delta_*\mathcal{O}_X$ which allows one to obtain the <em>Hochschild&ndash;Kostant&ndash;Rosenberg decomposition</em>.
+<p><strong>Theorem</strong> (Hochschild&ndash;Kostant&ndash;Rosenberg) There exist isomorphisms
+\[
+  \operatorname{HH}^i(X)\cong\bigoplus_{p+q=i}\operatorname{H}^p(X,\bigwedge\nolimits^q\mathrm{T}_X)
+\]
+and
+\[
+  \operatorname{HH}_i(X)\cong\bigoplus_{q-p=i}\operatorname{H}^q(X,\Omega_X^p).
+\]
+
+<h2>Hodge diamonds</h2>
+<p>The dimensions of the components for the Hochschild&ndash;Kostant&ndash;Rosenberg decomposition of the Hochschild homology are well-known: these are the <em>Hodge numbers</em> $\mathrm{h}^{p,q}:=\dim_k\operatorname{H}^q(X,\Omega_X^p)$. They satisfy two symmetries:
+<dl>
+  <dt>Serre duality</dt>
+  <dd>$\mathrm{h}^{p,q}=\mathrm{h}^{n-p,n-q}$</dd>
+
+  <dt>Hodge symmetry</dt>
+  <dd>$\mathrm{h}^{p,q}=\mathrm{h}^{q,p}$</dd>
+</dl>
+<p>The reason why these numbers are well-known is that they appear in the <em>Hodge decomposition</em> (at least when $k=\mathbb{C}$) of the cohomology of $X$, as
+\[
+  \operatorname{H}^k(X;\mathbb{C})\cong\bigoplus_{p+q=i}\operatorname{H}^q(X,\Omega_X^p).
+\]
+<p>Given their importance, and their symmetries, people have been writing these numbers as <em>Hodge diamonds</em> for a while (and these have been featured a few times on this blog already). If $X$ is say 3-dimensional, the Hodge diamond is
+
+<table>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>$\mathrm{h}^{3,3}$</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td></td>
+    <td>$\mathrm{h}^{3,2}$</td>
+    <td></td>
+    <td>$\mathrm{h}^{2,3}$</td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td>$\mathrm{h}^{3,1}$</td>
+    <td></td>
+    <td>$\mathrm{h}^{2,2}$</td>
+    <td></td>
+    <td>$\mathrm{h}^{1,3}$</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>$\mathrm{h}^{3,0}$</td>
+    <td></td>
+    <td>$\mathrm{h}^{2,1}$</td>
+    <td></td>
+    <td>$\mathrm{h}^{1,2}$</td>
+    <td></td>
+    <td>$\mathrm{h}^{0,3}$</td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td>$\mathrm{h}^{2,0}$</td>
+    <td></td>
+    <td>$\mathrm{h}^{1,1}$</td>
+    <td></td>
+    <td>$\mathrm{h}^{0,2}$</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td></td>
+    <td>$\mathrm{h}^{1,0}$</td>
+    <td></td>
+    <td>$\mathrm{h}^{0,1}$</td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>$\mathrm{h}^{0,0}$</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
+<p>The symmetries correspond to a point reflection through the center (resp. reflecting along the vertical diagonal), and also we have that $\mathrm{h}^{0,0}=\mathrm{h}^{n,n}=1$. We now see that Hochschild homology of $X$ and the usual cohomology of $X$ with complex coefficients are very much related:
+<dl>
+  <dt>Hodge decomposition</dt>
+  <dd>$\mathrm{H}^i(X;\mathbb{C})$ corresponds to the <em>rows</em></dd>
+
+  <dt>Hochschild&ndash;Kostant&ndash;Rosenberg decomposition</dt>
+  <dd>$\operatorname{HH}_i(X)$ corresponds to the <em>columns</em></dd>
+</dl>
+
+<h2 id="parallelogram">Polyvector parallelograms</h2>
+<p>I would like to suggest a similar way of organising the dimensions appearing in the Hochschild&ndash;Kostant&ndash;Rosenberg decomposition of Hochschild cohomology. I've been using it privately for a while, and I'd like to share it now.
+<p>Let us denote
+\[
+  \mathrm{g}^{p,q}:=\dim_k\operatorname{H}^p(X,\bigwedge\nolimits^q\mathrm{T}_X).
+\]
+<p>Observe that there is <em>no</em> symmetry for these numbers. Therefore our visualisation shouldn't be too symmetric. Moreover, there is no interpretation in terms of another invariant, which is maybe to be expected, as this is not the only elusive property of Hochschild cohomology.
+
+<p>In any case I suggest to organise these numbers in a parallelogram as follows, let's say again for a threefold.
+
+<style type="text/css">
+table.polyvector td {
+  width: 3em;
+  text-align: center;
+}
+</style>
+
+<table class="polyvector">
+  <tr>
+    <td>$\mathrm{g}^{0,0}$</td>
+  </tr>
+
+  <tr>
+    <td>$\color{green}{\mathrm{g}^{1,0}}$</td>
+    <td>$\color{red}{\mathrm{g}^{0,1}}$</td>
+  </tr>
+
+  <tr>
+    <td>$\color{green}{\mathrm{g}^{2,0}}$</td>
+    <td>$\color{red}{\mathrm{g}^{1,1}}$</td>
+    <td>$\color{blue}{\mathrm{g}^{0,2}}$</td>
+  </tr>
+
+  <tr>
+    <td>$\color{green}{\mathrm{g}^{3,0}}$</td>
+    <td>$\color{red}{\mathrm{g}^{2,1}}$</td>
+    <td>$\mathrm{g}^{1,2}$</td>
+    <td>$\color{blue}{\mathrm{g}^{0,3}}$</td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td>$\mathrm{g}^{3,1}$</td>
+    <td>$\mathrm{g}^{2,2}$</td>
+    <td>$\mathrm{g}^{1,3}$</td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td></td>
+    <td>$\mathrm{g}^{3,2}$</td>
+    <td>$\mathrm{g}^{2,3}$</td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>$\mathrm{g}^{3,3}$</td>
+  </tr>
+</table>
+<p>So one can now easily read off the Hochschild&ndash;Kostant&ndash;Rosenberg decomposition for Hochschild cohomology, as these are just the rows of the parallelogram.
+
+<p>What is convenient about this presentation? This post is already (too) long, so I'll postpone some more advanced examples, but let me give the most down-to-earth applications here.
+
+<p>One of the main applications of Hochschild cohomology is <strong>deformation theory</strong>, such that $\operatorname{HH}^2(X)$ parametrises infinitesimal deformations of the abelian category $\operatorname{coh}X$, $\operatorname{HH}^3(X)$ obstructions to extending to higher orders, and $\operatorname{HH}^1(X)$ the infinitesimal automorphisms. For each of these spaces we have the decomposition, and we can associate a classical interpretation to these. For $\operatorname{HH}^2(X)$ there are three components, and there are 3 types of deformations associated to these.
+
+<p><strong>Kodaira&ndash;Spencer deformation theory</strong> is the usual deformation theory in algebraic geometry, classifying deformations of $X$ as a scheme. The cohomology groups controlling this are $\operatorname{H}^1(X,\mathrm{T}_X)$ for the deformations, with $\operatorname{H}^0(X,\mathrm{T}_X)$ for the automorphisms and $\operatorname{H}^2(X,\mathrm{T}_X)$ for the obstructions. This corresponds to the components in $\color{red}{\text{red}}$.
+
+<p><strong>Poisson structures</strong> are what leads to noncommutative deformations. These are given by bivector fields (i.e. elements of $\operatorname{H}^0(X,\bigwedge\nolimits^2\mathrm{T}_X)$) satisfying an integrability condition (which is an unobstructedness condition) which lives in $\operatorname{H}^0(X,\bigwedge\nolimits^3\mathrm{T}_X)$). This corresponds to the components in $\color{blue}{\text{blue}}$.
+
+<p><strong>Gerby deformations</strong> are the final type of deformations, giving by gluing together (non)commutative deformations of open pieces together in a non-trivial way. There are controlled by $\operatorname{H}^i(X,\mathcal{O}_X)$ for $i=1,2,3$ and are in $\color{green}{\text{green}}$.
+
+<h2>An example</h2>
+<p>I've had a <a href="/notes/hkr-table.pdf">table of Hochschild cohomologies for some surfaces</a> on my website for quite some time. Let's take an interesting example from here, the fourth Hirzebruch surface $\mathbb{F}_4$. Then (unless I made a mistake all those years ago) the polyvector parallelogram is given by
+
+<table class="polyvector">
+  <tr>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>9</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>3</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>0</td>
+  </tr>
+</table>
+
+
+<p><small>I'd be interested in knowing the first occurrence of the notion of a Hodge diamond. In MathSciNet the first occurrence is only in the review of the Cossec&ndash;Dolgachev book on Enriques surfaces published in 1989. With Google Scholar I can lower that to papers in string theory published in 1987. Is it really that recent?
