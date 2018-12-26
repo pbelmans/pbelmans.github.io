@@ -1,0 +1,104 @@
+---
+layout: post
+title: Roots of Hilbert polynomials for Fano toric varieties
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+- programming
+author: Pieter Belmans
+---
+
+<p>Half a year ago Sergey Galkin, Swarnava Mukhopadhyay and I put <a href="https://arxiv.org/abs/1806.07648">a preprint on the arXiv regarding the <em>canonical strip hypothesis</em></a>, where we gave the first counterexamples violating this hypothesis. Let me recall the setup.
+<p>If $X$ is a smooth projective Fano variety (i.e. $\omega_X$ is ample) we can look at its canonical polarisation $\bigoplus_{n\geq 0}\mathrm{H}^0(X,\omega_X^{\otimes n})$. As such we obtain a Hilbert series, and therefore a <em>Hilbert polynomial</em>. The canonical strip hypothesis concerns the locations of the roots of this polynomial. Because Serre duality involves the canonical bundle $\omega_X$, we obtain a symmetry around the axis (or <em>critical line</em>) $\Re=-\frac{1}{2}$ for these roots.
+<p>Based on inequalities involving Chern numbers Golyshev hypothesised that these roots are not only symmetric around this critical line, but are actually contained within the "canonical strip", where $-1\leq\Re\leq 0$. This is the case in low dimension, and for all complete intersections in partial flag varieties.
+<p>In the paper you can find the details for a family of Fano varieties violating this hypothesis, and a picture of these roots suggesting that something interesting happening with the positions of these roots. This blogpost is not about this picture.
+<p>I want to discuss a different picture. Whilst writing the paper we also computed Hilbert polynomials for all smooth projective toric Fano varieties up to dimension 7 (there are 80891 of these), and observed that the hypothesis holds. The results of this computation can be found in the GitHub repository <a href="https://github.com/pbelmans/ehrhart-polynomials-toric-fanos"><code>pbelmans/ehrhart-polynomials-toric-fanos</code></a>
+<p>As a fun exercise in using <a href="https://d3js.org/">D3</a> I decided to plot these pictures, and share them with you. Below you can find the picture up to dimension 5, and a <a href="/assets/ehrhart-2-6.html">standalone version also includes dimension 6</a>. There's no picture up to dimension 7, as this would involve too many roots.
+<p>I do not know what one should conclude from these pictures. It seems that there might be a pattern, but it is unclear to me what it should be.
+
+<style type="text/css">
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: grey;
+  stroke-width: 1;
+  shape-rendering: crispEdges;
+}
+
+</style>
+
+<script src="http://d3js.org/d3.v4.min.js"></script>
+
+<script>
+// setting the dimensions of the canvas
+var margin = {top: 30, right: 30, bottom: 30, left: 30},
+    width = 600 - 30 - margin.left - margin.right,
+    height = width;
+
+// setting the ranges
+var x = d3.scaleLinear().range([0, width]);
+var y = d3.scaleLinear().range([height, 0]);
+
+// defining the axes
+var xAxis = d3.axisBottom(x);
+var yAxis = d3.axisLeft(y);
+
+// adding the svg canvas
+var svg = d3.select("div.post-content")
+    .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+// Get the data
+d3.csv("/assets/ehrhart-2-5.csv", function(error, data) {
+    // scaling the range of the data
+    x.domain([-1.1, 0.1]);
+    y.domain([-0.5, 0.5]);
+
+    // color scale
+    color = d3.scaleOrdinal().domain([2, 3, 4, 5, 6]).range(["rgb(214, 39, 40)", "rgb(44, 160, 44);", "rgb(255, 127, 14)", "rgb(31, 119, 180)", "rgb(130, 180, 180)"]);
+
+    // the scatterplot
+    svg.selectAll("dot")
+      .data(data)
+      .enter().append("circle")
+        .attr("r", function(d) { return 4 - d.i * 0.5; })
+        .attr("style", function(d) { return "fill: " + color(d.i); })
+        .attr("cx", function(d) { return x(d.real); })
+        .attr("cy", function(d) { return y(d.imag); });
+
+    // axes
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+    svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis);
+
+    // legend
+    var legend = svg.selectAll(".legend")
+      .data([2, 3, 4, 5])
+      .enter().append("g")
+        .attr("class", "legend")
+        .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+    legend.append("circle")
+        .attr("cx", width - 18)
+        .attr("transform", function(d, i) { return "translate(0, 9)"; })
+        .attr("r", 6)
+        .style("fill", color);
+    legend.append("text")
+        .attr("x", width - 30)
+        .attr("y", 9)
+        .attr("dy", ".35em")
+        .style("text-anchor", "end")
+        .text(function(d) { return "dimension " + d; })
+});
+</script>
+
+<p>Maybe I'll continue my D3 exercise at some point. It'd be nice to have a toggling option, zooming and dragging. But for now this will be it.
