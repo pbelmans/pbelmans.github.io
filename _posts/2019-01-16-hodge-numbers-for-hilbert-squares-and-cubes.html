@@ -1,0 +1,72 @@
+---
+layout: post
+title: Hodge numbers for Hilbert squares and Hilbert cubes
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+- programming
+author: Pieter Belmans
+---
+
+<p>In my ongoing series of posts on implementations to Hodge numbers for interesting smooth projective varieties we have now arrived at Hilbert squares and Hilbert cubes. In <a href="{% post_url 2017-11-18-hodge-numbers-hilb %}">Hodge numbers for $\operatorname{Hilb}^nS$</a> I explained how to compute these for Hilbert schemes of $n$ points on smooth projective surfaces. When one looks at $\operatorname{Hilb}^nX$ for $X$ a higher-dimensional variety, these are <em>very singular</em>, <strong>unless</strong> $n=2,3$. These special cases are then called Hilbert squares (resp. Hilbert cubes).
+<p>As before, we'll denote the Hodge polynomial of a smooth projective variety $X$ as
+\begin{equation}
+\mathrm{h}(X,x,y):=\sum_{p,q=0}^{\dim X}\mathrm{h}^{p,q}(X)x^py^q
+\end{equation}
+where $\mathrm{h}^{p,q}=\dim\operatorname{H}^q(X,\Omega_X^p)$.
+<p>Then the game we are playing is to express the Hodge polynomial of $\operatorname{Hilb}^2X$ and $\operatorname{Hilb}^3X$ in terms of that of $X$.
+
+<h3>Hilbert squares</h3>
+<p>The Hodge numbers for the Hilbert square can be considered classical, using the description of $\operatorname{Hilb}^2X$ as the blowup in the diagonal of the quotient of $X\times X$ by the group $\mathbb{Z}/2\mathbb{Z}$ permuting the factors. One can show that
+\begin{equation}
+\mathrm{h}(\operatorname{Hilb}^2X,x,y)
+=
+\frac{1}{2}
+\left(
+\mathrm{h}(X,x,y)^2 + \mathrm{h}(X,-x^2,-y^2)
+\right)
++
+\mathrm{h}(X,x,y)\left( \sum_{i=1}^{\dim X-1}(xy)^i \right)
+\end{equation}
+
+<h3>Hilbert cubes</h3>
+<p>For Hilbert cubes the description is more complicated, and the resulting formula can be found on page 507 of <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=1382733">On the cohomology of Hilbert schemes of points</a>. Without further ado, here it is (with intentional overflow to showcase how
+\begin{equation}
+\mathrm{h}(\operatorname{Hilb}^3X,x,y)
+=
+\frac{1}{6}\mathrm{h}(X,x,y)^3
+\\\qquad + \frac{1}{2}\mathrm{h}(X,x,y)\mathrm{h}(X,-x^2,-y^2)
+\\\qquad + \frac{1}{3}\mathrm{h}(X,x^3,y^3)
+\\\qquad + \mathrm{h}(X,x,y)^2\left( \sum_{i=1}^{\dim X-1}(xy)^i \right)
+\\\qquad + \mathrm{h}(X,x,y)\left( \sum_{1\leq i\leq j\leq\dim X-1}(xy)^{i+j} \right)
+\end{equation}
+
+<h3>Implementation in Sage</h3>
+<p>No post about Hodge numbers is complete without a Sage implementation (it is the sole purpose of these posts), so here goes. It becomes clear that constructing the Hodge polynomial for these higher-dimensional varieties is becoming quite cumbersome in non-trivial cases, so this is where my little library of Hodge diamond related tools will come in handy. Stay tuned for that!
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+
+<div class="sage">
+  <script type="text/x-sage">
+R.<x, y> = PolynomialRing(ZZ)
+
+# quintic 3-fold
+X = x^3*y^3 + x^2*y^2 + x^3 + 101*x^2*y + 101*x*y^2 + y^3 + x*y + 1
+
+def hilbtwo(X):
+  d = X.degree() / 2
+  return R(1/2 * (X^2 + X(-x^2, -y^2)) + sum([(x*y)^i * X for i in range(1, d)]))
+
+def hilbthree(X):
+  d = X.degree() / 2
+  return R(1/6 * X^3 + 1/2 * X * X(-x^2, -y^2) + 1/3 * X(x^3, y^3) + sum([X^2 * (x*y)^i for i in range(1, d)]) + sum([X * (x*y)^(i+j) for i in range(1, d) for j in range(i, d)]))
+
+
+print hilbtwo(X)
+print hilbthree(X)
+
+  </script>
+</div>
