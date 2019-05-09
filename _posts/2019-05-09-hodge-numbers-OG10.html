@@ -1,0 +1,40 @@
+---
+layout: post
+title: Hodge numbers for O'Grady 10
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+<p>I could keep it for the fortnightly links, but the Hodge diamond <a href="https://en.wikipedia.org/wiki/Lepidopterology">lepidopterist</a> in me is too excited. The Hodge numbers for O'Grady's sporadic 10-dimensional example have been computed, by Mark Andrea de Cataldo, Antonio Rapagnetta and Giulia Saccà in their paper <a href="https://arxiv.org/abs/1905.03217v1">The Hodge numbers of O'Grady 10 via Ngô strings</a>.
+
+<p>I have nothing useful to say about the proof, as it is far outside my comfort zone. But I did add it to <a href="https://github.com/pbelmans/hodge-diamond-cutter">my collection of <del>butterflies</del> <ins>Hodge diamonds</ins></a>. In its full glory it looks like:
+
+{% raw %}
+\begin{array}{ccccccccccccccccccccc}
+ &  &  &  &  &  &  &  &  &  & 1 &  &  &  &  &  &  &  &  &  &  \\
+ &  &  &  &  &  &  &  &  & 0 &  & 0 &  &  &  &  &  &  &  &  &  \\
+ &  &  &  &  &  &  &  & 1 &  & 22 &  & 1 &  &  &  &  &  &  &  &  \\
+ &  &  &  &  &  &  & 0 &  & 0 &  & 0 &  & 0 &  &  &  &  &  &  &  \\
+ &  &  &  &  &  & 1 &  & 22 &  & 254 &  & 22 &  & 1 &  &  &  &  &  &  \\
+ &  &  &  &  & 0 &  & 0 &  & 0 &  & 0 &  & 0 &  & 0 &  &  &  &  &  \\
+ &  &  &  & 1 &  & 23 &  & 276 &  & 2299 &  & 276 &  & 23 &  & 1 &  &  &  &  \\
+ &  &  & 0 &  & 0 &  & 0 &  & 0 &  & 0 &  & 0 &  & 0 &  & 0 &  &  &  \\
+ &  & 1 &  & 22 &  & 276 &  & 2531 &  & 16490 &  & 2531 &  & 276 &  & 22 &  & 1 &  &  \\
+ & 0 &  & 0 &  & 0 &  & 0 &  & 0 &  & 0 &  & 0 &  & 0 &  & 0 &  & 0 &  \\
+1 &  & 22 &  & 254 &  & 2299 &  & 16490 &  & 88024 &  & 16490 &  & 2299 &  & 254 &  & 22 &  & 1 &  \\
+ & 0 &  & 0 &  & 0 &  & 0 &  & 0 &  & 0 &  & 0 &  & 0 &  & 0 &  & 0 &  \\
+ &  & 1 &  & 22 &  & 276 &  & 2531 &  & 16490 &  & 2531 &  & 276 &  & 22 &  & 1 &  &  \\
+ &  &  & 0 &  & 0 &  & 0 &  & 0 &  & 0 &  & 0 &  & 0 &  & 0 &  &  &  \\
+ &  &  &  & 1 &  & 23 &  & 276 &  & 2299 &  & 276 &  & 23 &  & 1 &  &  &  &  \\
+ &  &  &  &  & 0 &  & 0 &  & 0 &  & 0 &  & 0 &  & 0 &  &  &  &  &  \\
+ &  &  &  &  &  & 1 &  & 22 &  & 254 &  & 22 &  & 1 &  &  &  &  &  &  \\
+ &  &  &  &  &  &  & 0 &  & 0 &  & 0 &  & 0 &  &  &  &  &  &  &  \\
+ &  &  &  &  &  &  &  & 1 &  & 22 &  & 1 &  &  &  &  &  &  &  &  \\
+ &  &  &  &  &  &  &  &  & 0 &  & 0 &  &  &  &  &  &  &  &  &  \\
+ &  &  &  &  &  &  &  &  &  & 1 &  &  &  &  &  &  &  &  &  &  \\
+\end{array}
+{% endraw %}
