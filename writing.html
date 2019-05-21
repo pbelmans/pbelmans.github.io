@@ -9,16 +9,16 @@ body {
   counter-reset: publications;
 }
 
-ol {
+ol.publications {
   list-style: none;
   padding-left: 30px;
 }
 
-ol li {
+ol.publications li {
   margin-bottom: .5em;
 }
 
-ol > li:before {
+ol.publications > li:before {
   counter-increment: publications;
   content: counter(publications) ". ";
   float: left;
@@ -32,7 +32,7 @@ ol > li:before {
 
 <h2>Papers</h2>
 <h3>Published</h3>
-<ol>
+<ol class="publications">
   <li>The point variety of quantum polynomial rings, joint with Kevin De Laet and <a href="http://win.ua.ac.be/~lebruyn/">Lieven Le Bruyn</a> (<a href="http://arxiv.org/abs/1509.07312">arXiv:1509.07312</a>),
   <br><a href="https://dx.doi.org/10.1016/j.jalgebra.2016.06.013">published in <em>Journal of Algebra, volume 463, 2016, pages 10&ndash;22</em></a>
 
@@ -50,7 +50,7 @@ ol > li:before {
 </ol>
 
 <h3>Accepted for publication</h3>
-<ol>
+<ol class="publications">
   <li>Hochschild cohomology of noncommutative planes and quadrics (<a href="https://arxiv.org/abs/1705.06098">arXiv:1705.06098</a>),
   <br>accepted for publication in <a href="http://www.ems-ph.org/journals/journal.php?jrn=jncg"><em>Journal of Noncommutative Geometry</em></a>
 
@@ -65,12 +65,12 @@ ol > li:before {
 </ol>
 
 <h3>Preprints</h3>
-<ol>
+<ol class="publications">
   <li>Comparison of two constructions of noncommutative surfaces with exceptional collections of length 4, joint with Dennis Presotto and <a href="http://hardy.uhasselt.be/personal/vdbergh/Members/michel_id.html">Michel Van den Bergh</a> (<a href="https://arxiv.org/abs/1811.08810">arXiv:1811.08810</a>)
 </ol>
 
 <h3>Other</h3>
-<ol>
+<ol class="publications">
   <li>Semiorthogonal decompositions for moduli of sheaves on curves, to be published in Oberwolfach Reports, <a href="https://www.mfo.de/occasion/1822/www_view">Oberwolfach Workshop 1822</a>, Interactions between Algebraic Geometry and Noncommutative Algebra (<a href="assets/owr-1822-belmans.pdf">preprint</a>)
 
   <li>appendix to The Hochschild cohomology ring of a global quotient orbifold, by <a href="http://math.mit.edu/~negronc/">Cris Negron</a> and <a href="https://www.imperial.ac.uk/people/t.schedler">Travis Schedler</a> (<a href="https://arxiv.org/abs/1809.08715">arXiv:1809.08715</a>)
