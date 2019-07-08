@@ -1,0 +1,25 @@
+---
+layout: post
+title: Hodge numbers for Quot schemes on curves
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+<p>Last week <a href="https://arxiv.org/abs/1907.00826v1">Massimo Bagnarol, Barbara Fantechi, Fabio Perroni: On the motive of zero-dimensional Quot schemes on a curve</a> appeared on the arXiv, and they study moduli spaces of sheaves on a curve which I hadn't seen before (at least not for their intrinsic geometry, only as a tool). They describe the class in the Grothendieck ring of $\mathrm{Quot}_C^n(\mathcal{E})$, where $C$ is a smooth projective curve of genus $g$, $\mathcal{E}$ is a vector bundle of rank $r$ on $C$ and $n\geq 1$ is the length of the finite-dimensional quotients of $\mathcal{E}$ which are parametrised.
+
+<p>They show that the class in the Grothendieck ring is independent of $\mathcal{E}$, effectively reducing the computation to an earlier result of Bifet for $\mathcal{E}=\mathcal{O}_C^{\oplus r}$. The formula (see proposition 4.5) is
+
+\begin{equation}
+[\mathrm{Quot}_C^n(\mathcal{E})]
+=
+\sum_{\mathbf{n}\in\mathbb{N}^r,|\mathbf{n}|=n}
+[\operatorname{Sym}{n_1}C]\cdots[\operatorname{Sym}^{n_r}C]\mathbb{L}^{d_{\mathbf{n}}}
+\end{equation}
+
+where $d_{\mathbf{n}}:=\sum_{i=1}^r(i-1)n_i$, so one can then apply the motivic measure $\mathrm{K}_0(\mathrm{Var}/k)\to\mathbb{Z}[x,y]$ given by the Hodge polynomial to get the Hodge diamond. For all of you who wish to use it in Hodge diamond cutter I have good news, as <a href="https://github.com/pbelmans/hodge-diamond-cutter/commit/40fd20837ccf52f015a95aa27f0c5544438ae118">I just added it</a>.
+
+<p>Let me know about any requests you might have!
