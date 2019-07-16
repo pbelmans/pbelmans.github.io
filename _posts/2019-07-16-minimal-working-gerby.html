@@ -1,0 +1,20 @@
+---
+layout: post
+title: "A minimal working example to use Gerby"
+type: post
+categories:
+- mathematics
+- computer science
+tags:
+- "Stacks project"
+- programming
+author: Pieter Belmans
+---
+
+<p>If you are interested in setting up a website similar to <a href="https://stacks.math.columbia.edu">The Stacks project</a> or <a href="https://kerodon.net">Kerodon</a>, you can do this using the same framework that powers these websites: <a href="https://gerby-project.github.io">Gerby</a>. Unfortunately, until now the instructions to use this were pretty annoyingly only available for the Stacks project, so setting things up correctly was painful and very specific.
+
+<p>We have now created <a href="https://github.com/gerby-project/hello-world"><strong>a minimal working example</strong></a> which lists the relevant steps to set up Gerby for a minimal Hello world project. Doing this you'll get an instance of the Gerby with the Stacks project layout, containing just a few tags. This repository is basically a Travis script which performs all the steps required for the installation of plasTeX and Gerby, and then goes through what should be the usual update process for an actual instance.
+
+<p>As usual in any programming tutorial, to go from Hello world to something meaningful is still non-trivial, but at least the first step is now documented. Let me know if you run into any issues!
+
+<p><small><strong>Caveat</strong> Using Gerby for your own project still requires some customisation in the layout, as this is written specifically for the Stacks project.</small>
