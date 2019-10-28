@@ -1,0 +1,24 @@
+---
+layout: post
+title: Fortnightly links (93)
+type: post
+categories:
+- mathematics
+tags:
+- fortnightly links
+author: Pieter Belmans
+---
+
+<ul>
+  <li><p><a href="https://arxiv.org/abs/1910.09531">Martin Kalck, Nebojsa Pavic, Evgeny Shinder: Obstructions to semiorthogonal decompositions for singular threefolds I: K-theory</a> is a really interesting paper, giving obstructions (and exhibiting many examples in natural examples!) to having a Kawamata-style semiorthogonal decomposition for singular varieties. This generalises the case for surfaces, via an interesting relationship between negative K-theory and the Brauer group. Cool stuff.
+
+  <li><p><a href="https://arxiv.org/abs/1910.06730v1">Qingyuan Jiang: On the Chow theory of projectivization</a> discusses isomorphisms at the level of <em>integral</em> Chow groups arising from semiorthogonal decompositions. The cool thing is that this is usually not what is to be expected from semiorthogonal decompositions, so this is exciting.
+
+  <li><p><a href="http://chalkdustmagazine.com/features/can-computers-prove-theorems/">Kevin Buzzard: Can computers prove theorems?</a> explains how formal proof verification can be considered a game, and actually provides a <a href="http://wwwf.imperial.ac.uk/~buzzard/xena/natural_number_game/">game-environment for defining the natural numbers</a>!
+  <p>Do you think we can get the speed running community interested in formalising the proof of Fermat's last theorem? After all, the level has a perfectly good definition, which reads
+{% highlight lean %}theorem FLT (a b c n : ℕ) (h : n > 2) : a ^ n + b ^ n = c ^ n → a * b = 0 :=
+begin
+  -- insert millions of lines of code here
+end
+{% endhighlight %}
+</ul>
