@@ -1,0 +1,39 @@
+---
+layout: post
+title: A caveat on the notion of strongly simple
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+<p>I'd like to point out a small caveat in the statement of a particularly useful form of the <strong>Bondal&ndash;Orlov criterion</strong>, as the literature is a bit sloppy on this it seems. Let's be overly wordy in our explanation, so that it is clear where the issue lies.
+
+$\DeclareMathOperator\derived{\mathbf{D}} \newcommand\bounded{\mathrm{b}} \DeclareMathOperator\Hom{Hom} \DeclareMathOperator\Ext{Ext}$
+
+<p>Recall that the <strong>Bondal&ndash;Orlov criterion</strong> is a very useful criterion to check fully faithfulness of such a functor, by checking it on the spanning class given by skyscraper sheaves at closed points, but <em>omitting</em> the complicated part where the criterion involving an arbitrary spanning class would require checking that the natural map
+\begin{equation*}
+\Hom_{\derived^\bounded(X)}(k(x),k(x)[i])\to\Hom_{\derived(Y)}(\Phi_{\mathcal{P}}(k(x)),\Phi_{\mathcal{P}}(k(x))[i])
+\end{equation*}
+is an isomorphism, where the domain is ${\dim X \choose i}$-dimensional.
+
+<p>Rather, it suffices to show for $x,y\in X$ closed points that
+\begin{equation}
+\Hom_{\derived(Y)}(\Phi_{\mathcal{P}}(k(x)),\Phi_{\mathcal{P}}(k(y))[i])
+\end{equation}
+<ul>
+  <li>is zero for $x\neq y$
+  <li>if $x=y$, then
+    <ul>
+      <li>it is 1-dimensional for $i=0$
+      <li>it is zero for $i\notin[0,\dim X]$
+    </ul>
+</ul>
+
+<p>Now, if $\mathcal{P}$ is a coherent sheaf, flat over $X$, then one can show that $\Phi_{\mathcal{P}}(k(x))$ is also a coherent sheaf (on $Y$), namely $\mathcal{P}_x$. In this setting, one then says that $\mathcal{P}$ is <strong>strongly simple</strong> if $\mathcal{P}_y$ is simple for all $x\in X$, and for all $x\neq y$ we have that $\Ext_Y^i(\mathcal{P}_x,\mathcal{P}_y)=0$ (= <em>complete orthogonality</em>).
+
+<p>It is said in a few places that strong simplicity is enough to apply the Bondal&ndash;Orlov criterion, but it it important to note that in Bridgeland's original formulation he takes $\dim X=\dim Y$. If $\dim X&lt;\dim Y$ then the vanishing of $\Ext_Y^i$ for $i\geq\dim X+1$ is good enough to ensure vanishing outside the range $[0,\dim Y]$, but <strong>not</strong> necessarily in $[\dim X+1,\dim Y]$, where for $x=y$ the vanishing is a non-trivial condition to check.
+
+<p>Hence the notion of strongly simple should in general be dependent on the dimension of the target. This seems to be omitted in quite a few places. Exercise for the reader: construct a strongly simple (in the original definition) functor which is not strongly simple in the definition dependent on $Y$.
