@@ -1,0 +1,48 @@
+---
+layout: post
+title: "New tool: twisted Hodge diamonds for complete intersections"
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+- programming
+author: Pieter Belmans
+---
+
+<p>Recently Piet Glas, one of my master students finished his thesis, and part of it was an <a href="https://github.com/pbelmans/twisted-hodge">implementation of the computation of <strong>twisted Hodge numbers</strong></a>, i.e. the numbers
+\begin{equation}
+\mathrm{h}_j^{p,q}
+=
+\dim\mathrm{H}^q(X,\Omega_X^p(j))
+\end{equation}
+where $X\subseteq\mathbb{P}^n$ is a complete intersection $H_{d_1}\cap\ldots\cap H_{d_c}$, and $\mathcal{O}_X(j)$ is the restriction of $\mathcal{O}_{\mathbb{P}^n}(j)$.
+
+<p>For $j=0$ there is a beautiful formula due to Hirzebruch, which is implemented in <a href="https://github.com/pbelmans/hodge-diamond-cutter">Hodge diamond cutter</a>, but for $j\neq 0$ no generating series is known and rather one needs to carefully induct on the Euler sequence and its exterior powers. Luckily, in a little known series of papers by Brückmann ([<a href="https://mathscinet.ams.org/mathscinet-getitem?mr=399102">1</a>], [<a href="https://mathscinet.ams.org/mathscinet-getitem?mr=417202">2</a>], [<a href="https://mathscinet.ams.org/mathscinet-getitem?mr=447266">3</a>]) this analysis is performed, and these are formulae one can implement.
+
+<p>There is extensive documentation in the README and the docstrings, let me just show you an example. After loading, the code <code>print TwistedHodgeDiamond((5, [3]), 3)</code> computes the twisted Hodge diamond of a cubic fourfold where the twist by 3 (which is the <em>index</em> of $X$) actually ensures that we are looking at the Hochschild cohomology of $X$:
+<pre>
+                    0
+               0         0
+          0         0        0
+      0        0         0       0
+  1       20        1        0       0
+      0        0         0       0
+          20        0        0
+               70        0
+                    55
+</pre>
+
+<p>As explained in <a href="{% post_url 2018-11-22-polyvector-parallelogram %}">this blogpost from almost a year ago on polyvector parallelograms</a> I like to visualise this rather as the following parallelogram (via <code>print PolyvectorParallelogram((5, [3]))</code>), giving
+<pre>
+  1
+  0   0
+  0   20   20
+  0   0    0    70
+  0   0    1    0    55
+      0    0    0    0
+           0    0    0
+                0    0
+                     0
+</pre>
+<p>but maybe you are interested in other twists too. Enjoy!
