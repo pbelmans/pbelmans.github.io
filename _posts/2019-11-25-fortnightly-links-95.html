@@ -1,0 +1,38 @@
+---
+layout: post
+title: Fortnightly links (95)
+type: post
+categories:
+- mathematics
+tags:
+- fortnightly links
+author: Pieter Belmans
+---
+
+<ul>
+  <li><p><a href="https://arxiv.org/abs/1911.07949">Yu-Hsiang Liu: Donaldson-Thomas theory for quantum Fermat quintic threefolds</a> is an interesting preprint I would like to read more carefully. Donaldson&ndash;Thomas invariants can be defined for CY3 categories, and a quintic hypersurface in a noncommutative $\mathbb{P}^4$ of a specific type gives rise to such a category which is not of purely geometric origin.
+    <p>An interesting feature of DT theory is that it should be deformation-invariant. But these CY3 categories are <em>not</em> the deformation of the derived category of a quintic 3-fold. Hence the invariants one obtains are distinct from the ones in the commutative setting, as
+{% highlight sage %}
+R.<t> = PowerSeriesRing(ZZ)
+chi = -200
+print prod([1 / (1 - (-t)^n)^n for n in range(1, 20)])^chi
+{% endhighlight %}
+  <p>suggests that in the commutative case series from corollary 6.13 is (if I didn't misinterpret things, please tell me if I did!)
+  \begin{equation*}
+    \sum_{n=0}^4\operatorname{DT}^n(Y)t^n
+    =
+    1 + 200t + 19500t^2 + 1234000t^3 + 56923950t^4
+  \end{equation*}
+  <p>I was hoping to see 2875 here, but maybe this is a different setting?
+
+  <li><p><a href="https://arxiv.org/abs/1911.08968">Anton Fonarev: Full exceptional collections on Lagrangian Grassmannians</a> shows that the exceptional collection of expected length in $\mathbf{D}^{\mathrm{b}}(\operatorname{LGr}(n,2n))$ constructed by Kuznetsov&ndash;Polishchuk is a <em>full</em> exceptional collection. Here $\operatorname{LGr}(n,2n)$ is the <em>Lagrangian Grassmannian</em>, the isotropic Grassmannian associated to the Dynkin diagram of type $\mathrm{C}_n$ and the maximal parabolic at the "special" vertex. Hence another family bites the dust!
+    <p>I think a good way to waste my time would be to make an overview table of all the known results, saying which partial flag varieties have
+    <ul>
+      <li>a (known) full exceptional collection
+      <li>a (known) Lefschetz decomposition (which is stronger, and more useful)
+      <li>a conjectural exceptional collection
+    </ul>
+    <p>Let me know if you have any suggestions!
+
+  <li><p><a href="https://arxiv.org/abs/1911.08949">Alexander Kuznetsov, Yuri Prokhorov: Rationality of Fano threefolds over non-closed fields</a> discusses a complete picture for (uni)rationality for forms of Fano 3-folds of Picard rank 1. Aside from the obvious geometric interest, an important aspect is the structure of the derived category of such varieties. For instance, they prove that a rationally connected threefold with a semiorthogonal decomposition containing only exceptional objects and derived categories of a curve has an intermediate Jacobian which is <em>isomorphic</em> (and not merely isogenous) to the Jacobian of said curve. Cool!
+</ul>
