@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Gerby supports TikZ now"
+type: post
+categories:
+- mathematics
+- computer science
+tags:
+- programming
+author: Pieter Belmans
+---
+
+<p>One aspect in which <a href="https://gerby-project.github.io/">Gerby</a> (the software which underlies the Stacks project) was lacking was its support for TikZ and commutative diagrams. Luckily both <a href="https://stacks.math.columbia.edu">The Stacks project</a> and <a href="https://kerodon.net">Kerodon</a> are written by people who use <var>xypic</var> for their commutative diagrams, which allows the use of <a href="https://sonoisa.github.io/xyjax/xyjax.html">XyJax</a>, but this is not a perfect implementation of <var>xypic</var>.
+<p>The system on which (part of) Gerby is built is <a href="http://plastex.github.io/plastex/">plasTeX</a>, which contained support for TikZ for a while now, by running <var>pdflatex</var> on every TikZ environment and then converting the resulting pdf to svg. I have now copied over this implementation (thank you <a href="https://www.math.u-psud.fr/~pmassot/en/">Patrick Massot</a> for implementing it for the HTML5 renderer!) and added a <a href="https://www.math.u-psud.fr/~pmassot/en/">minimal working example containing TikZ</a>.
+<p>The workflow is exactly the same as before, but <strong>I have not tested it</strong> outside the minimal working example. One needs to make sure <var>pdf2svg</var> and <var>pdflatex</var> with the appropriate packages are available.
+
