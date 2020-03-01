@@ -67,7 +67,7 @@ def hodge_poincare(n, d, g):
   """Return the Hodge--Poincaré polynomial for M_C(r,L), where deg L = d, and (r,d)=1."""
   return R(sum([one(C, g) * two(C, g) * three(C, g) * four(C, d, g) for C in Compositions(n)]))
 
-print diamond(hodge_poincare(2,1,2))
+print(diamond(hodge_poincare(2,1,2)))
   </script>
 </div>
 
