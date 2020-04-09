@@ -1,0 +1,153 @@
+---
+layout: post
+title: "Statistics for the Stacks project"
+type: post
+categories:
+- algebraic geometry
+tags:
+- "Stacks project"
+author: Pieter Belmans
+---
+
+<p>A few weeks ago someone who shall not be named asked me about the viewer statistics for the Stacks project. When plotting these results, I realised that (aside from a major ego trip) it is also remarkably pleasant to look at graphs which somehow do not feature logarithmic scales and / or impending doom, so I decided to have 5 minutes of fun in <a href="https://d3js.org/">D3.js</a> and share them.
+
+<p>The most interesting one I think is the number of unique visitors (i.e. the number of unique IP's in the Apache access logs, which is as good as we can get the data). The growth is remarkably linear it seems, I actually expected the growth rate to have gone down over the years.
+
+<p><small>Alternatively we could plot the number of visitors, resp. the number of pageviews, but here we see some peculiarities arising because of bot traffic, so these are less interesting in my opinion. If you know your way around your browser's inspector / development tools, you can make the graphs visible though, if you really care.</small>
+
+<script src="https://d3js.org/d3.v4.js"></script>
+
+<div style="text-align: center" id="unique"></div>
+
+
+<div style="display: none" id="visits"></div>
+<div style="display: none" id="pages"></div>
+
+<script>
+// set the dimensions and margins of the graph
+var margin = {top: 10, right: 30, bottom: 30, left: 60},
+    width = 460 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+var unique = d3.select("#unique")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+var visits = d3.select("#visits")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+var pages = d3.select("#pages")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+//Read the data
+d3.csv("/assets/stacks-data.csv",
+
+  // When reading the csv, I must format variables:
+  function(d){
+    return { date : d3.timeParse("%Y-%m")(d.month), unique : d.visitors, visits : d.visits, pages : d.pages }
+  },
+
+  // Now I can use this dataset:
+  function(data) {
+
+    // x axis
+    var x = d3.scaleTime()
+      .domain(d3.extent(data, function(d) { return d.date; }))
+      .range([ 0, width ]);
+    unique.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
+    visits.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
+    pages.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
+
+    // y axes
+    var uniqueY = d3.scaleLinear()
+      .domain([0, d3.max(data, function(d) { return +d.unique; })])
+      .range([ height, 0 ]);
+    unique.append("g")
+      .call(d3.axisLeft(uniqueY));
+    var visitsY = d3.scaleLinear()
+      .domain([0, d3.max(data, function(d) { return +d.visits; })])
+      .range([ height, 0 ]);
+    visits.append("g")
+      .call(d3.axisLeft(visitsY));
+    var pagesY = d3.scaleLinear()
+      .domain([0, d3.max(data, function(d) { return +d.pages; })])
+      .range([ height, 0 ]);
+    pages.append("g")
+      .call(d3.axisLeft(pagesY));
+
+    // add the lines
+    unique.append("path")
+      .datum(data)
+      .attr("fill", "none")
+      .attr("stroke", "steelblue")
+      .attr("stroke-width", 1.5)
+      .attr("d", d3.line()
+        .x(function(d) { return x(d.date) })
+        .y(function(d) { return uniqueY(d.unique) })
+      )
+    visits.append("path")
+      .datum(data)
+      .attr("fill", "none")
+      .attr("stroke", "steelblue")
+      .attr("stroke-width", 1.5)
+      .attr("d", d3.line()
+        .x(function(d) { return x(d.date) })
+        .y(function(d) { return visitsY(d.visits) })
+      )
+    pages.append("path")
+      .datum(data)
+      .attr("fill", "none")
+      .attr("stroke", "steelblue")
+      .attr("stroke-width", 1.5)
+      .attr("d", d3.line()
+        .x(function(d) { return x(d.date) })
+        .y(function(d) { return pagesY(d.pages) })
+      )
+
+    // add axis labels
+    unique.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - margin.left)
+        .attr("x",0 - (height / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .text("Number of unique visitors per month");
+    visits.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - margin.left)
+        .attr("x",0 - (height / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .text("Number of visits");
+    pages.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - margin.left)
+        .attr("x",0 - (height / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .text("Number of pageviews");
+
+})
+</script>
+
