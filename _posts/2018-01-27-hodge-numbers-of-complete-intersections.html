@@ -9,6 +9,9 @@ tags:
 - programming
 author: Pieter Belmans
 ---
+
+{% include hodge.html %}
+
 <p>I really enjoy being able to compute things straight out of my browser, and it's also convenient to quickly show people things this way. I already have this for <a href="http://pbelmans.ncag.info/cohomology-tables/">the Hodge numbers of complete intersections</a>, but its functionality is limited by the interface that I decided to implement 4 years ago. So continuing my series on Hodge numbers using Sage, I present you the code for complete intersections.
 <p>SGA7, éxposé XI, théorème 2.3 tells us that $\mathrm{h}^{p,q}(X_{d_1,\ldots,d_k})$ for $X_{d_1,\ldots,d_k}$ a complete intersection inside $\mathbb{P}^{n+k}$, and $p+q=n$ (i.e. the <em>middle cohomology</em> is described, which is the only interesting part in any case) is given by the coefficient of $x^py^q$ in the power series
 \begin{equation}

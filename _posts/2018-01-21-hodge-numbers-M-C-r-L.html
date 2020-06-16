@@ -9,6 +9,10 @@ tags:
 - programming
 author: Pieter Belmans
 ---
+
+{% include hodge.html %}
+
+
 <p>Continuing my short and irregular series of blogposts regarding the computation of Hodge numbers directly from your browser (earlier installments are <a href="{% post_url 2017-11-18-hodge-numbers-hilb %}">Hodge numbers for $\operatorname{Hilb}^nS$</a> and <a href="{% post_url 2014-01-16-a-visualisation-of-serre-duality-and-hodge-diamonds %}">A visualisation of Serre duality and Hodge diamonds</a> (for complete intersections)), I present you today the Hodge numbers of $\operatorname{M}_C(r,\mathcal{L})$.
 <p>$\operatorname{M}_C(r,\mathcal{L})$ is the moduli space of rank $r$ vector bundles with determinant isomorphic to $\mathcal{L}$ of degree $d$ such that $(d,r)=1$, all on a smooth projective curve $C$ of genus $g\geq 2$. These are very interesting Fano varieties with $\operatorname{Pic}(\operatorname{M}_C(r,\mathcal{L}))=\mathbb{Z}$, and 10 years ago a closed formula for their Hodge&ndash;Poincaré polynomial was found. Recall that the <em>Hodge&ndash;Poincaré polynomial</em> of a variety $X$ is
 \[
