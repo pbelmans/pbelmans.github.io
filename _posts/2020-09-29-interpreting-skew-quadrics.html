@@ -1,0 +1,40 @@
+---
+layout: post
+title: "Interpreting skew conics"
+type: post
+categories:
+- algebraic geometry
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+<p>In <a href="{% post_url 2020-08-11-fortnightly-links-111 %}">the 111th installment of fortnightly links</a> I mentioned <a href="https://arxiv.org/abs/2008.02255v1">Derived categories of skew quadric hypersurfaces</a> by Kenta Ueyama. In this paper he discusses a class of noncommutative objects whose definition mimicks that of the usual quadrics, but the ambient space is now a certain skew noncommutative projective space. For this reason he calls them <em>skew quadrics</em>.
+<p>And already in (projective) dimension 1 these skew quadrics are not necessarily deformations of usual quadrics (even though their ambient noncommutative projective space is), because their derived categories don't have the same number of objects, and this is a deformation-invariant. Ueyama shows there are precisely two types which appear in this way.
+<p>I told you that I find this an intriguing picture that I would love to understand better. Soon after posting the fortnightly links I came up with an interpretation in the case of dimension 1 (so <em>skew conics</em> if you wish) which allows me to explain why there are these two cases. I'm sharing this here on my blog now in case someone finds this $\epsilon&gt;0$ interesting, and I hope it could spark some further discussion. It's also been a while since I've done a longer mathematical blogpost (although I realise that this one will not appeal to a general audience :)).
+
+<h3>Skew conics</h3>
+<p>Let us recall the setup from Ueyama's preprint. A <em>skew polynomial algebra</em> is the graded algebra $A_q=\mathbb{C}_q[x_0,\ldots,x_n]$ where $x_ix_j=q_{i,j}x_jx_i$ for some symmetric matrix $q=(q_{i,j})$ such that $q_{i,i}=1$. To such an algebra (and in fact any quadratic Artin--Schelter regular algebra, of which this is just a specific instance) we associate the category $\operatorname{qgr}A_q$, which is a noncommutative projective space.
+<p>If $q_{i,j}\in\{\pm1\}$ for all $i$ and $j$ then the Fermat quadric $x_0^2+\ldots+x_n^2$ is a central element, which we'll denote by $f$. Then the category $\operatorname{qgr}A_q/f$ is a <em>skew quadric hypersurface</em>. It is studied using algebraic methods in Ueyama's preprint, and in particular the structure of its derived category is described. For $n=1,2,3$ a classification is also given. The case $n=1$ being not very interesting, let us consider $n=2$. Hence we have a skew quadric hypersurface inside a noncommutative projective plane, or <em>skew conic</em>. It is shown in Example 3.23 that its derived category is one of the following:
+<ul>
+  <li>if $q_{1,2}q_{1,3}q_{2,3}=1$, then $\mathbf{D}^{\mathrm{b}}(\operatorname{qgr}A_q/f)$ is the derived category of the Kronecker quiver (denoted as extended $\mathrm{A}_1$ in op. cit.), so $\mathbf{D}^{\mathrm{b}}(\operatorname{qgr}A_q/f)\cong\mathbf{D}^{\mathrm{b}}(\mathbb{P}^1)$;
+  <li>if $q_{1,2}q_{1,3}q_{2,3}=-1$, then $\mathbf{D}^{\mathrm{b}}(\operatorname{qgr}A_q/f)$ is the derived category of the extended $\mathrm{D}_4$ quiver.
+</ul>
+
+<h3>Interpretation</h3>
+<p>What is a geometric interpretation for this second case? For starters, this dichotomy should be related to the geometry of the point scheme of the ambient noncommutative projective space, see <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=3527537">Belmans&ndash;De Laet&ndash;Le Bruyn: The point variety of quantum polynomial rings</a> for this story (including higher dimensions, which we'll get back to later).
+<p>To make this precise for $n=3$, notice that the assumption that $q_{i,j}\in\{\pm1\}$ causes the skew polynomial algebra to be a <em>Clifford algebra</em>, and that such noncommutative projective planes can be interpreted as quaternion orders, as discussed in <a href="https://arxiv.org/abs/1811.08810">Belmans&ndash;Presotto&ndash;Van den Bergh: The Hirzebruch isomorphism for exotic noncommutative surfaces</a>. Indeed, for $q_{1,2}q_{1,3}q_{2,3}=-1$ the skew polynomial algebra turns out to be finite over its center, whose central Proj is $\mathbb{P}^2$, and we obtain a sheaf of orders. This is a sheaf of (noncommutative) algebras $\mathcal{A}$ which is generically an Azumaya algebra, except on the ramification divisor, which is a triangle of lines in this case.
+<p>This brings us to the <strong>main idea</strong>:
+<blockquote>
+  a skew conic is the restriction of a quaternion order to a line!
+</blockquote>
+<p>Indeed, one can reinterpret the Fermat quadric $f$ as a section of $\mathcal{O}_{\mathbb{P}^2}(1)$ on the central Proj. If we restrict the quaternion order to this line, it will intersect the ramification divisor in 3 distinct points. We obtain a quaternion order (which is no longer maximal, only hereditary) on $\mathbb{P}^1$, whose ramification are 3 points.
+<p>But this is the same as a weighted projective line using the <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=2018958">Chan&ndash;Ingalls dictionary</a>! And these derived categories are well-understood. The weighted projective line we obtain in this way is "of type $(2,2,2)$" (as it is a quaternion order, and its ramification divisor consists of 3 points), and its derived category is equivalent to that of the extended $\mathrm{D}_4$ quiver.
+<p>Written like this I think this is a satisfactory geometric interpretation of skew conics.
+
+<h3>Higher dimensions?</h3>
+<p>But what about higher dimensions? In section 4 of his preprint Ueyama obtains 3 possibilities for the structure of the derived category of a skew quadric surface. One is the familiar $\mathbf{D}^{\mathrm{b}}(\mathbb{P}^1\times\mathbb{P}^1)$ (denoted QS1), the other two (see Proposition 4.2 and ensuing discussion) have are different. For QS2 we recognise a noncommutative quadric surface, whilst QS3 has a quiver with 10 vertices.
+<p>This blogpost has been rambling for long enough; let me just point out that the classification of point schemes for skew polynomial algebras for $n=4$ gives 4 possibilities, but one of them can not be realised using $q_{i,j}\in\{\pm1\}$. Also, the central Proj in this case is more complicated, one does not just get $\mathbb{P}^3$, but a more complicated singular rational 3-fold. On this 3-fold we should get a natural hyperplane section, such that the restriction of the quaternion order is the skew quadric surface. I don't know how to make the story more precise, I don't even know what the hyperplane section looks like. Is it isomorphic to $\mathbb{P}^1\times\mathbb{P}^1$? How does it hit the ramification? What is the ramification? Many interesting questions!
+
+<p><small>Is this something that I should write up with more details and actual proofs? Coming up with this interpretation was certainly aided by the papers I wrote during my PhD, so many details omitted here are based on things I thought about at that time, which are not necessarily "standard" material. I also hope I didn't mess anything up.</small>
+<p><small><strong>Acknowledgements</strong> I want to thank Theo Raedschelders for listening to me rambling about this in emails. If you think this blogpost was rambling, be thoughtful of what Theo went through.
