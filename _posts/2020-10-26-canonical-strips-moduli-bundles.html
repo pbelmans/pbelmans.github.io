@@ -1,0 +1,187 @@
+---
+layout: post
+title: Pictures of the canonical strip hypothesis for moduli of vector bundles
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+- programming
+author: Pieter Belmans
+---
+
+<h3>Golyshev's canonical strip hypothesis</h4>
+<p>As a Christmas treat almost 2 years ago I produced some <a href="{% post_url 2018-12-26-toric-scatterplot %}">colourful pictures of the roots of Hilbert polynomials of smooth toric Fano varieties</a>. These were meant to illustrate Golyshev's hypothesis, which predicts that these roots are to lie in the "canonical strip". Jointly with Sergey Galkin and Swarnava Mukhopadhyay we have found <a href="https://www.tandfonline.com/doi/full/10.1080/10586458.2019.1602571">counterexamples to this hypothesis</a> in higher dimension, using non-toric Fano varieties: namely moduli of vector bundles of rank 2 and odd determinant, on curves of genus $g$).
+
+<h3>The two players</h3>
+<p>There is an interesting parallel between
+<ul>
+  <li>moduli of rank 2 bundles with odd determinant on a curve of genus $g\geq 2$
+  <li>moduli of <em>parabolic</em> rank 2 bundles on $\mathbb{P}^1$ with weight 1/2 at $2g+1$ points, for $g\geq 2$
+</ul>
+<p>The first is a Fano variety of Picard rank 1, index 2 and dimension $3g-3$, whilst the second is a Fano variety of Picard rank $2g+2$, index 1, and dimension $2g-2$. and more importantly, for both we have a <strong>Verlinde formula</strong> expressing dimensions of global sections of the anticanonical divisor. Hence we can determine their Hilbert polynomials, and compute the location of their roots.
+
+<h3>The pictures</h3>
+<p>Doing some totally unrelated reading on moduli of parabolic bundles a few days ago and coming across this Verlinde formula again, I wanted to (<small>I might suffer from some mild ADD?</small>)
+<ul>
+  <li>check the possible failure of Golyshev's hypothesis for these moduli spaces of parabolic bundles
+  <li>make a colourful version of the plot we made in our paper and the analogous plot for the parabolic case
+</ul>
+<p>In the two plots below, once the roots go outside the interval $[-2,0]$ (resp. $[-1,0])$, the hypothesis fails. This happens for $g\geq 10$ (resp. $g\geq 8$). So this gives a second class of counterexamples! And in fact, whilst the counterexample we originally constructed had dimension 27, we now already see a counterexample in dimension 14.
+<p>I think it would be interesting to understand the asymptotic behaviour which one observes in these pictures. Let me know if you have any suggestions!
+
+<style type="text/css">
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: grey;
+  stroke-width: 1;
+  shape-rendering: crispEdges;
+}
+
+</style>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+<div class="usual"></div>
+
+<div class="parabolic"></div>
+
+<script>
+// setting the dimensions of the canvas
+var margin = {top: 30, right: 30, bottom: 30, left: 30},
+    width = 600 - 30 - margin.left - margin.right,
+    height = width;
+
+// setting the ranges
+var x = d3.scaleLinear().range([0, width]);
+var y = d3.scaleLinear().range([height, 0]);
+
+// defining the axes
+var xAxis = d3.axisBottom(x);
+var yAxis = d3.axisLeft(y);
+
+// adding the svg canvas
+var parabolic = d3.select("div.parabolic")
+    .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+// Get the data
+d3.csv("/assets/golyshev-parabolic.csv", function(error, data) {
+    // scaling the range of the data
+    x.domain([-1.1, 0.1]);
+    y.domain([-2, 2]);
+
+    // color scale
+    color = d3.scaleLinear().domain([5, 15, 29]).range(["blue", "green", "red"]);
+
+    // the scatterplot
+    parabolic.selectAll("dot")
+      .data(data)
+      .enter().append("circle")
+        .attr("r", function(d) { return 2; })
+        .attr("style", function(d) { return "fill: " + color(d.n); })
+        .attr("cx", function(d) { return x(d.real); })
+        .attr("cy", function(d) { return y(d.imag); });
+
+    // axes
+    parabolic.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+    parabolic.append("g")
+        .attr("class", "y axis")
+        .call(yAxis);
+
+    // legend
+    var legend = parabolic.selectAll(".legend")
+      .data([5,15,29])
+      .enter().append("g")
+        .attr("class", "legend")
+        .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+    legend.append("circle")
+        .attr("cx", width - 18)
+        .attr("transform", function(d, i) { return "translate(0, 9)"; })
+        .attr("r", 6)
+        .style("fill", color);
+    legend.append("text")
+        .attr("x", width - 30)
+        .attr("y", 9)
+        .attr("dy", ".35em")
+        .style("text-anchor", "end")
+        .text(function(d) { return d + " points"; })
+});
+</script>
+
+<script>
+// setting the dimensions of the canvas
+var margin = {top: 30, right: 30, bottom: 30, left: 30},
+    width = 600 - 30 - margin.left - margin.right,
+    height = width;
+
+// setting the ranges
+var x = d3.scaleLinear().range([0, width]);
+var y = d3.scaleLinear().range([height, 0]);
+
+// defining the axes
+var xAxis = d3.axisBottom(x);
+var yAxis = d3.axisLeft(y);
+
+// adding the svg canvas
+var usual = d3.select("div.usual")
+    .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+// Get the data
+d3.csv("/assets/golyshev-positive-genus.csv", function(error, data) {
+    // scaling the range of the data
+    x.domain([-2.4, 0.4]);
+    y.domain([-2, 2]);
+
+    // color scale
+    color = d3.scaleLinear().domain([2, 17, 30]).range(["blue", "green", "red"]);
+
+    // the scatterplot
+    usual.selectAll("dot")
+      .data(data)
+      .enter().append("circle")
+        .attr("r", function(d) { return 2; })
+        .attr("style", function(d) { return "fill: " + color(d.g); })
+        .attr("cx", function(d) { return x(d.real); })
+        .attr("cy", function(d) { return y(d.imag); });
+
+    // axes
+    usual.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+    usual.append("g")
+        .attr("class", "y axis")
+        .call(yAxis);
+
+    // legend
+    var legend = usual.selectAll(".legend")
+      .data([2,10,20,30])
+      .enter().append("g")
+        .attr("class", "legend")
+        .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+    legend.append("circle")
+        .attr("cx", width - 18)
+        .attr("transform", function(d, i) { return "translate(0, 9)"; })
+        .attr("r", 6)
+        .style("fill", color);
+    legend.append("text")
+        .attr("x", width - 30)
+        .attr("y", 9)
+        .attr("dy", ".35em")
+        .style("text-anchor", "end")
+        .text(function(d) { return "genus " + d; })
+});
+</script>
