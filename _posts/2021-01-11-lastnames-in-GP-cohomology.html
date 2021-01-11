@@ -1,0 +1,53 @@
+---
+layout: post
+title: "An overview of what the names Pieri, Giambelli, Chevalley, Monk, Littlewood&ndash;Richardson say about the cohomology of $G/P$"
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+<p>This blog post is inspired by my near-total inability to remember what precisely each of these names refer to in the context of the cohomology of $G/P$. I'll give a short (and very incomplete) overview of these results (without precise formulas or anything), as a cheat sheet for those like me, including anyone who might be confused by the inconsistent naming conventions in the literature.
+
+<p>The goal of all the results named in the title is to provide information on the Chow ring (or cohomology ring) of $G/P$ (which are isomorphic as graded rings, after multiplying the degrees in the Chow ring by two). Here $G/P$ is a homogeneous variety, where $G$ is a reductive algebraic group and $P$ is a parabolic subgroup. Unlike for <a href="https://grassmannian.pythonanywhere.com">Grassmannian.info</a> we do not assume $P$ to be a maximal parabolic subgroup.
+
+<p>Two facts are important to get started:
+<ol>
+  <li>there is an <strong>additive</strong> basis, in terms of <em>Schubert classes</em>
+  <li>there is a <strong>multiplicative</strong> basis, in terms of <em>special Schubert classes</em>, and a subset of these correspond to classes of divisors (i.e. multiplicative generators 
+</ol>
+<p>There exist convenient descriptions of these Schubert classes in terms of the Weyl group $W$ of $G$, but I will avoid any notation in this blog post.
+
+<h3>Multiplication: <em>Chevalley&ndash;Monk</em> and <em>Pieri</em> formulas</h3>
+<p>The first pair of names is that of <strong>Chevalley</strong> and <strong>Monk</strong>. They describe how to multiply
+<ul>
+  <li>a <strong>divisor class</strong> (so a multiplicative generator of degree 1)
+  <li>with a Schubert class
+</ul>
+<p>So for every choice of divisor class and Schubert class, the Chevalley&ndash;Monk formula expresses their product as a sum of Schubert classes.
+
+<p>The more general rule (a priori) is the <strong>Pieri rule</strong>. It describes how to multiply
+<ul>
+  <li>a <strong>special Schubert class</strong>
+  <li>with a Schubert class
+</ul>
+<p>So for every choice of special Schubert class and Schubert class, the Pieri formula expresses their product as a sum of Schubert classes. This only applies to the classical types A, B, C and D (because we know how to do it in type A and the other types are closed subvarieties expressing isotropy conditions), in the exceptional types there is no clear definition of special Schubert classes.
+
+<p>Observe that for $G/B$ (i.e. when $P=B$ is a Borel subgroup), the special Schubert classes are in fact all of degree 1, but for $B\nsubseteq P$ it applies to more classes.
+
+<p><small>I have seen <em>Chevalley&ndash;Pieri</em> being written, in which case it refers to what I would just call the Pieri formula. I think in <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=2812501">A positive Monk formula in the $S^1$-equivariant cohomology of type A Peterson varieties</a> Harada&ndash;Tymoczko describe the naming convention I've given here as the <strong>Iowa convention</strong>, which proposes to say <em>Pieri</em> and <em>(Chevalley&ndash;)Monk</em> and avoid any other versions.</small>
+
+<p>One interesting observation is that because of functoriality relating the Chow rings of $G/B$ and $G/P$ for $B\subseteq P$ a parabolic subgroup, one can use the Chevalley&ndash;Monk formulas for $G/B$ to prove the Pieri formulas for $G/P$.
+
+
+<h3>Relating the bases: <em>Giambelli</em> formulas</h3>
+<p>These formulas are very useful, but don't tell us the entire story, as we still need to express every element of the additive basis in terms of a product of elements in the multiplicative basis. These are the <strong>Giambelli formulas</strong>; which can be proved using the Pieri formulas. For Grassmannians they take on a famous form in terms of determinants.
+<p>So to multiply two arbitrary Schubert classes, one would express one in terms of the corresponding Giambelli formula, and then iteratively apply the Pieri formulas for the generators which appear in the expression.
+
+
+<h3>Structure coefficients: <em>Littlewood&ndash;Richardson</em> rules</h3>
+<p>Alternatively, instead of the algorithmic and inductive nature of the Giambelli formulas, the <strong>Littlewood&ndash;Richardson</strong> rules determine the structure constants for the multiplication of two Schubert classes. These structure constants are meant to be counts of some combinatorial objects.
+
+<p><small>I hope I have not interpreted the literature incorrectly in this overview. Please let me know if I have misrepresented anything! Also, no reference or actual formulas are given here, nor is the quantum version discussed. Let me just point out <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=3470578">Giambelli and degeneracy locus formulas for classical $G/P$ spaces</a> by Tamvakis, which contains a wealth of information, although I have written this post <em>before</em> having come across it.</small>
