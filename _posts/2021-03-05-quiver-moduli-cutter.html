@@ -1,0 +1,57 @@
+---
+layout: post
+title: Quiver moduli in the Hodge diamond cutter
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+{% include hodge.html %}
+
+<p>Another family of varieties has been added to the Hodge diamond cutter: <em>moduli of quiver representations</em>. For every acyclic quiver and dimension vector, and suitable choice of stability condition, this produces a smooth projective variety, whose Hodge numbers are concentrated on the diagonal. The method to determine them is given by Corollary 6.9 in <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=1974891">Markus Reineke's Inventiones paper</a>.
+
+<p>Let's do two examples, based on <a href="https://arxiv.org/abs/2001.10556">Franzen, Reineke, Sabatini: Fano quiver moduli</a>. They are interested in the question when a quiver moduli space is Fano, and I like Fano varieties, so that is a good choice.
+
+<p><strong>Example</strong> (Subspace quivers) Consider the $m$-subspace quiver from Section 5.1. Let's also fix $d=2$, so then we are in the very classical setting of the invariant theory of $(\mathbb{P}^1)^m//\mathrm{PGL}_2$. If $m$ is even then the moduli space is singular for the canonical stability condition is singular, so we need to do a small perturbation. The following code constructs all the necessary data, and computes some examples.
+
+{% highlight python %}
+def subspace_quiver(m, d):
+    Q = matrix.zero(m + 1)
+    Q[:,-1] = 1
+    Q[-1,-1] = 0
+
+    D = [1]*m + [d]
+    Theta = [d]*m + [-m]
+
+    return (Q, D, Theta)
+
+def points_on_P1(m, perturb=False):
+    (Q, d, Theta) = subspace_quiver(m, 2)
+
+    if perturb:
+        # perturb theta
+        perturbation = [(-1)^randint(1, 2) / (10 + randint(0, 1000)) for _ in range(m)]
+        Theta[0] = Theta[0] + sum(perturbation)
+        for i in range(m - 1): Theta[i + 1] = Theta[i + 1] - perturbation[i]
+        Theta[m] = Theta[m] - perturbation[m - 1] / 2
+
+    return quiver_moduli(Q, d, mu(Theta))
+
+for m in range(4, 10):
+    print(m, points_on_P1(m, perturb=(m % 2 == 0)).betti()[0::2])
+{% endhighlight %}
+
+<p>which gives as output
+{% highlight plaintext %}
+4 [1, 1]
+5 [1, 5, 1]
+6 [1, 6, 6, 1]
+7 [1, 7, 22, 7, 1]
+8 [1, 8, 29, 29, 8, 1]
+9 [1, 9, 37, 93, 37, 9, 1]
+{% endhighlight %}
+
+<p>There are other, more efficient ways, of computing these Betti numbers in the case of subspace quivers, but this method is completely generic and works for any quiver you might be interested in! The implementation already has some optimisations, but in case you need to compute some examples with large quivers and large dimension vectors and are stuck because of efficiency reasons, please get in touch and I'll see what I can do.
