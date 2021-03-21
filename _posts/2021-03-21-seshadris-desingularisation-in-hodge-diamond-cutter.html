@@ -1,0 +1,18 @@
+---
+layout: post
+title: "Seshadri's desingularisation in the Hodge diamond cutter"
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+{% include hodge.html %}
+
+<p>As I was cleaning up things I ran into my print-out of <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=1895918">del Baño: On the motive of moduli spaces of rank two vector bundles over a curve</a>, which I apparently printed on December 15, 2017. This marks the start of my interest in these moduli spaces (which have an extremely rich and beautiful history!) and I noticed I never really looked at Section 3. In this section the Hodge numbers for <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=578858">Seshadri's desingularisation</a> of $\mathrm{M}_C(2,\mathcal{O}_C)$ are computed, and I couldn't resist having a little fun with this.
+<p>This is now implemented in the <a href="https://github.com/pbelmans/hodge-diamond-cutter/commit/5577470bb9e3bd7e173baf64bf60cad373fcfdc3">Hodge diamond cutter</a>. Mind that there are 2 minor typos in the formula in the paper, which one can quickly fix by looking at the statements of the results from which the corollary follows.
+<p>One thing which I'd find interesting is to figure out what the derived category of this variety looks like. Or maybe one should rather look for the structure of a categorical crepant resolution.
+<p>If we do it for Seshadri's resolution and $g=3$, it seems we get $4$ exceptional objects (which is reasonable from the index being 4), 2 copies of $\mathbf{D}^{\mathrm{b}}(\operatorname{Sym}^2C)$ and then something which can only be categorical it seems, with Hochschild homology in degrees $-2,0,2$ of dimension $6,84,6$. But no copy of $\mathbf{D}^{\mathrm{b}}(C)$. Maybe a better candidate can be found though! And I should probably look at what is known about intersection cohomology.
+<p><small>I should create documentation using <a href="https://www.sphinx-doc.org">Sphinx</a> I guess. That should making the code easier I hope.
