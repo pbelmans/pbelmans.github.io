@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Seshadri's desingularisation in the Hodge diamond cutter"
+title: "Seshadri's desingularisation in the Hodge diamond cutter, and a bold proposal"
 type: post
 categories:
 - mathematics
@@ -24,6 +24,56 @@ def IE(g):
   E = ((1-x^2*y)^g * (1-x*y^2)^g - (x*y)^(g+1) * (1-x)^g * (1-y)^g) / ((1-x*y) * (1-(x*y)^2)) - (x*y)^(g-1) / 2 * ((1-x)^g * (1-y)^g / (1-x*y) + (-1)^(g-1) * (1+x)^g * (1+y)^g / (1+x*y))
   return HodgeDiamond.from_polynomial(HodgeDiamond.R(E.subs(x=-x, y=-y)))
 {% endhighlight %}
-<p>Still, the picture isn't obvious to me, but at least copies of $\mathbf{D}^{\mathrm{b}}(C)$ seem to be naturally present now. The formula is taken from <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=2099191">this paper</a> by the way.
+<p><del>Still, the picture isn't obvious to me, but at least copies of $\mathbf{D}^{\mathrm{b}}(C)$ seem to be naturally present now.</del> The formula is taken from <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=2099191">this paper</a> by the way.
+<h3>A proposal</h3>
+<p><ins>A little more playing gives a clear picture</ins>: the noncommutative crepant resolution $\mathcal{C}$ of $\mathrm{M}_C(2,\mathcal{O}_C)$ looks like it might have a semiorthogonal decomposition of the form
+\begin{equation}
+\mathcal{C}
+=
+\begin{cases}
+\langle\mathbf{D}^{\mathrm{b}}(\mathrm{pt}),
+\mathbf{D}^{\mathrm{b}}(\mathrm{pt}),
+\mathbf{D}^{\mathrm{b}}(\mathrm{pt}),
+\mathbf{D}^{\mathrm{b}}(\mathrm{pt}),\\
+\quad\mathbf{D}^{\mathrm{b}}(\operatorname{Sym}^2C),
+\mathbf{D}^{\mathrm{b}}(\operatorname{Sym}^2C),
+\mathbf{D}^{\mathrm{b}}(\operatorname{Sym}^2C),
+\mathbf{D}^{\mathrm{b}}(\operatorname{Sym}^2C),\\
+\quad\ldots,\\
+\quad\mathbf{D}^{\mathrm{b}}(\operatorname{Sym}^{g/2}C),
+\mathbf{D}^{\mathrm{b}}(\operatorname{Sym}^{g/2}C),
+\mathbf{D}^{\mathrm{b}}(\operatorname{Sym}^{g/2}C),
+\mathbf{D}^{\mathrm{b}}(\operatorname{Sym}^{g/2}C)\rangle
+& g\equiv 0\bmod 2 \\
+\langle\mathbf{D}^{\mathrm{b}}(C),
+\mathbf{D}^{\mathrm{b}}(C),
+\mathbf{D}^{\mathrm{b}}(C),
+\mathbf{D}^{\mathrm{b}}(C), \\
+\quad\mathbf{D}^{\mathrm{b}}(\operatorname{Sym}^3C),
+\mathbf{D}^{\mathrm{b}}(\operatorname{Sym}^3C),
+\mathbf{D}^{\mathrm{b}}(\operatorname{Sym}^3C),
+\mathbf{D}^{\mathrm{b}}(\operatorname{Sym}^3C), \\
+\quad\ldots,\\
+\quad\mathbf{D}^{\mathrm{b}}(\operatorname{Sym}^{(g-1)/2}C),
+\mathbf{D}^{\mathrm{b}}(\operatorname{Sym}^{(g-1)/2}C),
+\mathbf{D}^{\mathrm{b}}(\operatorname{Sym}^{(g-1)/2}C),
+\mathbf{D}^{\mathrm{b}}(\operatorname{Sym}^{(g-1)/2}C)\rangle
+& g\equiv 1\bmod 2 \\
+\end{cases}
+\end{equation}
+<p>So for $g$ even there are 4 copies of the derived category of even symmetric powers of $C$, for the powers $0,2,\ldots,g/2$, whilst for $g$ odd there are 4 copies of the derived category of odd symmetric powers of $C$, for the powers $1,3,\ldots,(g-1)/2$.
+<p>For $g=2$ this is good, because we're considering a noncommutative crepant resolution of $\mathbb{P}^3$, which is just $\mathbb{P}^3$ itself and there are 4 exceptional objects. For $g=3$ the numbers suggest a semiorthogonal decomposition with just 4 copies of $\mathbf{D}^{\mathrm{b}}(C)$. Can that be true?!
+<p>We also see the index of the (singular) moduli space being 4 in this picture.
+<p>What is odd is that for $g$ odd there are no exceptional objects in the decomposition. I somehow expect there to be some of them, as we are considering a conjectural noncommutative crepant resolution of a Fano variety, and for smooth Fanos we always have the structure sheaf as an exceptional object.
+<p>So this is just some wild speculation, based on the following code:
+{% highlight python %}
+def conjecture(g):
+    if g % 2 == 0: return (IE(g) - 4 * sum([symmetric_power(2*k, g) for k in range(g // 2)])).hochschild().is_zero()
+    else: return (IE(g) - 4 * sum([symmetric_power(2*k + 1, g) for k in range(g // 2)])).hochschild().is_zero()
+
+for g in range(2, 20):
+    print(g, conjecture(g))
+{% endhighlight %}
+<p>The idea is that the columns of the "intersection Hodge diamond" correspond to the Hochschild homology of a categorical crepant resolution. I don't know whether that makes sense though, it's just Sunday afternoon speculation.
 
 <p><small>I should create documentation using <a href="https://www.sphinx-doc.org">Sphinx</a> I guess. That should making the code easier I hope.
