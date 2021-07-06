@@ -1,0 +1,140 @@
+---
+layout: post
+title: "On $\\int\\mathrm{td}_X^{1/2}$ of O'Grady's exceptional hyperkähler varieties"
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+<p>It's been a while since there was an honest mathematical blogpost, for <a href="{% post_url 2021-04-23-ida %}">reasons explained in an earlier post</a>. I should maybe also write something about the preprint we put on the arXiv in April.
+<p>But today I will share you a fun computation I did involving hyperkähler varieties, as I expect that some of the code used in the computation will be useful to future me, and therefore maybe also to someone else.
+<ul>
+  <li><a href="/assets/hyperkahler-integrals.pdf">the pdf for which this blogpost is an introduction</a>
+  <li><a href="https://gist.github.com/pbelmans/931580361e84b71789e826935f21d282">the Sage code</a>
+</ul>
+
+<h3>Hyperkähler varieties</h3>
+<p>There is a curious class of varieties with trivial canonical bundle, which are irreducible holomorphic symplectic varieties, or hyperkähler varieties. For an excellent introduction one is referred to <a href="https://irma.math.unistra.fr/~pacienza/notes-ogrady.pdf">O'Grady's introductory lecture notes</a>.
+<p>Up to deformation, we currently know of two infinite families and 2 exceptional (maybe sporadic is a better word? maybe they are not so sporadic too but we just don't know):
+<ul>
+  <li>Hilbert schemes of points on K3 surfaces
+  <li>generalised Kummer varieties
+  <li>O'Grady's 6-dimensional varieties
+  <li>O'Grady's 10-dimensional varieties
+</ul>
+<p>Roughly there are 2 types of results on hyperkähler varieties:
+<ul>
+  <li>results proven for an abstract hyperkähler variety
+  <li>results proven by inspecting the known cases explicitly
+</ul>
+
+<h3>On $\int\mathrm{td}_X^{1/2}$</h3>
+<p>A very interesting cohomology class is the <a href="https://en.wikipedia.org/wiki/Todd_class">Todd class</a>, which first appears when you look at the Hirzebruch&ndash;Riemann&ndash;Roch formula. It is also possible to take the square root of this class, and <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=1813238">Hitchin&ndash;Sawon</a> proved that for a $2n$-dimensional hyperkähler variety $X$
+\begin{equation}
+\int\mathrm{td}_X^{1/2}
+=
+\frac{1}{(192\pi^2n)^n}
+\frac{||R||^{2n}}{(\operatorname{vol}X)^{n-1}}
+\end{equation}
+<p>Here $||R||$ is the $\mathcal{L}^2$-norm of the Riemann curvature tensor. I don't claim I understand the right-hand side very well, but even without deep understanding the right-hand side exhibits beauty.
+
+<p>For an abstract hyperkähler variety, the work of Hitchin&ndash;Sawon and <a href="https://arxiv.org/abs/2008.04685">Jiang</a> shows that
+\begin{equation}
+0 &lt; \int\mathrm{td}_X \leq 1
+\end{equation}
+with equality if and only if $X$ is a K3 surface.
+<p>For the two known finite families on the other hand Sawon has given in his PhD thesis an explicit expression, namely
+\begin{align}
+\int\mathrm{td}_{\mathrm{K3}^{[n]}}&=\frac{(n+3)^n}{4^n n!}, \\
+\int\mathrm{td}_{\mathrm{Kum}^n}&=\frac{(n+1)^{n+1}}{4^n n!}.
+\end{align}
+<p>In the <a href="https://arxiv.org/abs/2008.04685v1"><strong>first</strong> version of Jiang's preprint</a> an exercise left to the reader was to compute these integrals for O'Grady's exceptional hyperkähler varieties, using the fact that the Chern numbers are known.
+<p>Over the weekend I had some fun doing this in Sage, resulting in a <a href="/assets/hyperkahler-integrals.pdf">short note which could be of interest to someone</a>. The code is available in the pdf, but also as <a href="https://gist.github.com/pbelmans/931580361e84b71789e826935f21d282">a gist</a>. The numbers that I obtained led Jiang to update his preprint, giving a more conceptual explanation for them.
+<p>There is no serious mathematics happening here, but I hope the very explicit nature and available code is of interest. I had fun making my first steps in hyperkähler varieties!
+<p>For good measure, here is the output of the Sage code:
+<pre><code>O'Grady 6-fold
+Defining c2, c4, c6
+2/3
+
+O'Grady 10-fold
+Defining c2, c4, c6, c8, c10
+4/15
+
+Generalised Kummer variety of dimension 6-fold: computation by hand
+Defining c2, c4, c6
+2/3</pre></code>
+<p>I don't have the Chern numbers of the Hilbert scheme of 5 points on a K3 surface, so I couldn't do an explicit check for that case, but the closed formula of course just works too.
+<p>And here's a table with some values
+<style type="text/css">
+table td {
+  text-align: center;
+}
+</style>
+<table>
+  <tr>
+    <td></td>
+    <th>$\mathrm{K3}^n$</th>
+    <th>$\mathrm{Kum}^n$</th>
+    <th>$\mathrm{OG}6$</th>
+    <th>$\mathrm{OG}10$</th>
+  </tr>
+  <tr>
+    <td>$n=1$</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>$n=2$</td>
+    <td>$\frac{25}{32}=0.78125$</td>
+    <td>$\frac{27}{32}=0.84375$
+  </tr>
+  <tr>
+    <td>$n=3$</td>
+    <td>$\frac{9}{16}=0.5625$</td>
+    <td>$\frac{2}{3}\approx0.66667$</td>
+    <td>$\frac{2}{3}\approx0.66667$</td>
+  </tr>
+  <tr>
+    <td>$n=4$</td>
+    <td>$\frac{2401}{6144}\approx0.39079$</td>
+    <td>$\frac{3125}{6144}\approx0.50863$</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>$n=5$</td>
+    <td>$\frac{4}{15}\approx0.26667$</td>
+    <td>$\frac{243}{640}\approx0.37969$</td>
+    <td></td>
+    <td>$\frac{4}{15}\approx0.26667$</td>
+  </tr>
+  <tr>
+    <td>$n=6$</td>
+    <td>$\frac{59049}{327680}\approx0.18020$</td>
+    <td>$\frac{823543}{2949120}\approx0.27925$</td>
+  </tr>
+  <tr>
+    <td>$n=7$</td>
+    <td>$\frac{15625}{129024}\approx0.12110$</td>
+    <td>$\frac{64}{315}\approx0.20317$</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>$n=8$</td>
+    <td>$\frac{214358881}{2642411520}\approx0.081127$</td>
+    <td>$\frac{43046721}{293601280}\approx0.14662$</td>
+  </tr>
+  <tr>
+    <td>$n=9$</td>
+    <td>$\frac{243}{4480}\approx0.054244$</td>
+    <td>$\frac{1953125}{18579456}\approx0.10512$</td>
+  </tr>
+  <tr>
+    <td>$n=10$</td>
+    <td>$\frac{137858491849}{3805072588800}\approx0.036233$</td>
+    <td>$\frac{285311670611}{3805072588800}\approx0.07498$</td>
+  </tr>
+
+</table>
