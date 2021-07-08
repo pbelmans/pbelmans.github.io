@@ -43,13 +43,13 @@ author: Pieter Belmans
 
 <p>For an abstract hyperkähler variety, the work of Hitchin&ndash;Sawon and <a href="https://arxiv.org/abs/2008.04685">Jiang</a> shows that
 \begin{equation}
-0 &lt; \int\mathrm{td}_X \leq 1
+0 &lt; \int\mathrm{td}_X^{1/2} \leq 1
 \end{equation}
 with equality if and only if $X$ is a K3 surface.
 <p>For the two known finite families on the other hand Sawon has given in his PhD thesis an explicit expression, namely
 \begin{align}
-\int\mathrm{td}_{\mathrm{K3}^{[n]}}&=\frac{(n+3)^n}{4^n n!}, \\
-\int\mathrm{td}_{\mathrm{Kum}^n}&=\frac{(n+1)^{n+1}}{4^n n!}.
+\int\mathrm{td}_{\mathrm{K3}^{[n]}}^{1/2}&=\frac{(n+3)^n}{4^n n!}, \\
+\int\mathrm{td}_{\mathrm{Kum}^n}^{1/2}&=\frac{(n+1)^{n+1}}{4^n n!}.
 \end{align}
 <p>In the <a href="https://arxiv.org/abs/2008.04685v1"><strong>first</strong> version of Jiang's preprint</a> an exercise left to the reader was to compute these integrals for O'Grady's exceptional hyperkähler varieties, using the fact that the Chern numbers are known.
 <p>Over the weekend I had some fun doing this in Sage, resulting in a <a href="/assets/hyperkahler-integrals.pdf">short note which could be of interest to someone</a>. The code is available in the pdf, but also as <a href="https://gist.github.com/pbelmans/931580361e84b71789e826935f21d282">a gist</a>. The numbers that I obtained led Jiang to update his preprint, giving a more conceptual explanation for them.
