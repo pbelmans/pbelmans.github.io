@@ -20,8 +20,9 @@ author: Pieter Belmans
 <p>With the latter, the code (in case you still want to do the hands-on approach) becomes super-transparent, and is available as <a href="https://gist.github.com/pbelmans/931580361e84b71789e826935f21d282#file-integral-todd-root-hyperkahler-using-chow-sage">this gist</a>. This nicely abstracts away all the explicit implementations I did, but now it becomes easily modifiable and extendable. Great!
 <p>I've modified the little writeup in the pdf to reflect this.
 
-<h3>Chern numbers of $\mathrm{K}3^{[5]}$ and $\mathrm{K}3^{[6]}$</h3>
-<a href="https://github.com/8d1h/IntersectionTheory/blob/159fe56f8ba41bd2f4a699fd2cb750df31105450/src/Bott.jl#L306">implementation</a>
+<h3>Chern numbers of $\mathrm{K}3^{[5]}$, $\mathrm{K}3^{[6]}$ and $\mathrm{K}3^{[7]}$</h3>
+<p>Jieao Song implemented the computation of these Chern numbers (and others) in his Julia package <a href="https://github.com/8d1h/IntersectionTheory">IntersectionTheory</a> (see also the <a href="https://8d1h.github.io/IntersectionTheory/dev/chern_num/">documentation</a> for this). He managed to optimise things so that the computation for $\mathrm{K}3^{[5]}$, $\mathrm{K}3^{[6]}$ and $\mathrm{K}3^{[7]}$ works, and it gives the following results:
+<p>For $\mathrm{K}3^{[5]}$:
 \[
 \begin{aligned}
 \mathrm{c}_2^5   &= 126867456 \\
@@ -34,6 +35,7 @@ author: Pieter Belmans
 \end{aligned}
 \]
 
+<p>For $\mathrm{K}3^{[6]}$:
 \[
 \begin{aligned}
 \mathrm{c}_2^6 &= 9277276480 \\
@@ -47,6 +49,27 @@ author: Pieter Belmans
 \mathrm{c}_8\mathrm{c}_4 &= 59314272 \\
 \mathrm{c}_{10}\mathrm{c}_2 &= 14450680 \\
 \mathrm{c}_{12} &= 1073720
+\end{aligned}
+\]
+
+<p>For $\mathrm{K}3^{[7]}$:
+\[
+\begin{aligned}
+\mathrm{c}_{2}^7                               & = 765374164992 \\
+\mathrm{c}_{4}\mathrm{c}_{2}^5                & = 326732507136 \\
+\mathrm{c}_{4}^2\mathrm{c}_{2}^3                & = 139582386432 \\
+\mathrm{c}_{6}\mathrm{c}_{2}^4                & = 79324710912 \\
+\mathrm{c}_{4}^3\mathrm{c}_{2}                & = 59674012416 \\
+\mathrm{c}_{6}\mathrm{c}_{4}\mathrm{c}_{2}^2 & = 33935583744 \\
+\mathrm{c}_{6}\mathrm{c}_{4}^2                & = 14528215296 \\
+\mathrm{c}_{8}\mathrm{c}_{2}^3                & = 12357114624 \\
+\mathrm{c}_{10}\mathrm{c}_{2}^2               & = 1324608768 \\
+\mathrm{c}_{8}\mathrm{c}_{6}                & = 1296158976 \\
+\mathrm{c}_{6}^2\mathrm{c}_{2}                & = 8273055744 \\
+\mathrm{c}_{8}\mathrm{c}_{4}\mathrm{c}_{2}  & = 5296568832 \\
+\mathrm{c}_{10}\mathrm{c}_{4}               & = 569044224 \\
+\mathrm{c}_{12}\mathrm{c}_{2}               & = 102477312 \\
+\mathrm{c}_{14}                               & = 5930496
 \end{aligned}
 \]
 
