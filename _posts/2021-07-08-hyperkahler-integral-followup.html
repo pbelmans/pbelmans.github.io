@@ -21,7 +21,7 @@ author: Pieter Belmans
 <p>I've modified the little writeup in the pdf to reflect this.
 
 <h3>Chern numbers of $\mathrm{K}3^{[5]}$, $\mathrm{K}3^{[6]}$ and $\mathrm{K}3^{[7]}$</h3>
-<p>Jieao Song implemented the computation of these Chern numbers (and others) in his Julia package <a href="https://github.com/8d1h/IntersectionTheory">IntersectionTheory</a> (see also the <a href="https://8d1h.github.io/IntersectionTheory/dev/chern_num/">documentation</a> for this). He managed to optimise things so that the computation for $\mathrm{K}3^{[5]}$, $\mathrm{K}3^{[6]}$ and $\mathrm{K}3^{[7]}$ works, and it gives the following results:
+<p>Jieao Song implemented the computation of these Chern numbers (and much more!) in his Julia package <a href="https://github.com/8d1h/IntersectionTheory">IntersectionTheory</a> (see also the <a href="https://8d1h.github.io/IntersectionTheory/dev/chern_num/">documentation</a> for this). He managed to optimise things so that the computation for $\mathrm{K}3^{[5]}$, $\mathrm{K}3^{[6]}$ and $\mathrm{K}3^{[7]}$ works, and it gives the following results:
 <p>For $\mathrm{K}3^{[5]}$:
 \[
 \begin{aligned}
@@ -72,6 +72,7 @@ author: Pieter Belmans
 \mathrm{c}_{14}                               & = 5930496
 \end{aligned}
 \]
+<p>A demo for the code (in case installing Julia is not something for you) <a href="https://mybinder.org/v2/gh/8d1h/IntersectionTheory/master?filepath=demo.ipynb">can be run online</a>. He has also optimised things, so that he can compute the Chern numbers of $\mathrm{K3}^{[n]}$ for $n\leq 10$, see <a href="https://8d1h.github.io/IntersectionTheory/dev/chern_num/#Chern-numbers-of-the-Hilbert-scheme-of-a-surface">the documentation</a>. Great!
 
 <h3>Instructions for installing Chow</h3>
 <p>The instructions on the library's website ask you to recompile all of Sage, which is a bit overkill. Jieao Song also pointed out an easier way (modified to work on Mac OS X):
