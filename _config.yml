@@ -7,7 +7,7 @@
 
 # Site settings
 title: "Pieter Belmans"
-email: pbelmans@math.uni-bonn.de
+email: pieter.belmans@uni.lu
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://pbelmans.ncag.info" # the base hostname & protocol for your site
 

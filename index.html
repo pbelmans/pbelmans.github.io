@@ -2,8 +2,25 @@
 layout: default
 ---
 
-{% include about.html %}
+<img style="float: right; padding: 10px" width="200" src="assets/photo.jpg">
 
+<p>I am an assistant professor at the <a href="https://math.uni.lu">University of Luxembourg</a>.
+<p>You can reach me at <a href="mailto:pieter.belmans@uni.lu">pieter.belmans@uni.lu</a>.
+
+<ul>
+  <li style="margin-bottom: 4px">{% include icon-fanography.html %}<!--<br><em>a tool to visually study the geography of Fano 3-folds</em>-->
+  <li style="margin-bottom: 4px">{% include icon-grassmannian.html %}<!--<br><em>a periodic table of (generalised) Grassmannians</em>-->
+  <li style="margin-bottom: 4px">{% include icon-superficie.html %}<!--<br><em>interactive geography of (minimal) complex algebraic smooth surfaces</em>-->
+</ul>
+
+<h2>Latest blogposts</h2>
+<ul class="posts-list">
+{% for post in site.posts limit:7 %}
+  <li><span class="date">{{ post.date | date: "%b %d, %Y" }}</span> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>{% if post.draft %} (draft){% endif %}
+{% endfor %}
+</ul>
+
+<!--
 <h2>Teaching in Bonn</h2>
 <ul>
   <li>Sommersemester 2021: <a href="/teaching/hh-2021">Selected topics in representation theory: Hochschild (co)homology</a>
@@ -13,19 +30,13 @@ layout: default
   <li>Sommersemester 2019: <a href="/teaching/rep-2019">Representation theory I</a>
   <li>Sommersemester 2018: <a href="/teaching/hh-2018">Advanced topics in algebra: Hochschild (co)homology</a>
 </ul>
-
-<h2>Latest blogposts</h2>
-<ul class="posts-list">
-{% for post in site.posts limit:5 %}
-  <li><span class="date">{{ post.date | date: "%b %d, %Y" }}</span> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>{% if post.draft %} (draft){% endif %}
-{% endfor %}
-</ul>
+-->
 
 <h2 id="conferences">Conferences</h2>
 <ul>
   <li><a href="https://stacks.github.io">Stacks Project Workshop 2</a>, Ann Arbor, summer 2022?
   <li><a href="https://nc-shapes.info">Noncommutative shapes</a>, Antwerp, September 19&ndash;23, 2022
-  <li><a href="https://nc-shapes.info">Noncommutative shapes: halfway event</a>, Antwerp, September 20, 2022
+  <li><a href="https://nc-shapes.info">Noncommutative shapes: halfway event</a>, Antwerp, September 20, 2021
   <li><a href="https://www.him.uni-bonn.de/programs/future-programs/future-junior-trimester-programs/new-trends-in-representation-theory/new-trends-in-representation-theory-categorification/">Workshop: Categorification, Hall algebras and quantum cohomology</a>, Bonn, November 30&ndash;December 4, 2020
   <li><a href="https://www.hcm.uni-bonn.de/events/eventpages/felix-klein-lectures/fkl-2020-reineke/">Felix Klein lectures by Markus Reineke: Quiver moduli and applications</a>, online, October 20&ndash;29, 2020
   <li><a href="https://stacks.github.io">Stacks Project Online GEometry Event</a>, online, August 3&ndash;7, 2020
