@@ -1,0 +1,35 @@
+---
+layout: post
+title: "Documentation and unit tests for the Hodge diamond cutter"
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+{% include hodge.html %}
+
+<p>It was a tedious task, but the <a href="https://github.com/pbelmans/hodge-diamond-cutter">Hodge diamond cutter</a> now has
+<ul>
+  <li><strong><a href="https://pbelmans.ncag.info/hodge-diamond-cutter">online documentation</a></strong> (check it out!)
+  <li><a href="https://pbelmans.ncag.info/hodge-diamond-cutter/hodgediamondcutter.pdf">documentation as a pdf</a>
+  <li>unit tests
+</ul>
+<h3>Using the library</h3>
+<p>It's enough to have the file <code>diamond.py</code> (pay attention to the file extension) somewhere where Sage can find it via <code>load("diamond.py")</code> and then you are good to go.
+<h3>Unit tests</h3>
+<p>Having unit tests is very convenient to test regressions, and to showcase the functionality. Almost every method and construction now has (multiple) examples showcasing how to use it, and the library in general.
+<p>By typing <code>sage -t diamond.py</code> Sage automatically executes all the code in the examples section in the documentation, and reports (as of today) that
+<pre><code>Doctesting 1 file.
+sage -t --random-seed=0 diamond.py
+    [194 tests, 5.49 s]
+----------------------------------------------------------------------
+All tests passed!
+----------------------------------------------------------------------
+Total time for all tests: 5.6 seconds
+    cpu time: 5.5 seconds
+    cumulative wall time: 5.5 seconds
+</pre></code>
+<p>Thanks to Alex Best and Jieao Song for pull requests, fixing things and significantly improving the efficiency!
