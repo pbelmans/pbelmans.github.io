@@ -1,0 +1,33 @@
+---
+layout: post
+title: Fortnightly links (137)
+type: post
+categories:
+- mathematics
+tags:
+- fortnightly links
+author: Pieter Belmans
+---
+
+<ul>
+  <li><p><a href="https://arxiv.org/abs/2108.11951v3">Jenia Tevelev, Sebastián Torres: The BGMN conjecture via stable pairs</a> goes a long way proving one of my favourite questions, that of the semiorthogonal decomposition of $\mathbf{D}^{\mathrm{b}}(\mathrm{M}_C(2,\mathcal{L}))$: they construct all the components that one hopes are present. Almost at the same time <a href="https://arxiv.org/abs/2108.13353v2">Kai Xu, Shing-Tung Yau: Semiorthogonal decomposition of $\mathbf{D}^{\mathrm{b}}(\mathrm{Bun}_2^L)$</a> constructs half of the expected decomposition using completely different methods. This is <strong>great</strong> to see!
+
+  <li><p><a href="https://arxiv.org/abs/2108.13314v2">Eunjeong Lee, Kyeong-Dong Park: Complete intersection hyperkähler fourfolds with respect to equivariant vector bundles over rational homogeneous varieties of Picard number one</a> is a rigorous classification of the 4-dimensional zero loci of equivariant vector bundles on $G/P$ of rank 1 in type $\mathrm{E}_{6,7,8},\mathrm{F}_4,\mathrm{G}_2$. It's great to see this being worked out properly. Part of it was already contained in <a href="https://sites.google.com/site/webpagevladimirobenedetti">Benedetti's PhD thesis</a> it turns out, and I had by an exhaustive computer search also told a friend of mine on June 18 that <q>I seem to have found no hyperkähler zero loci</q>.
+
+  <p>Benedetti writes in Tables B.17 and B.18 some Calabi&ndash;Yau sixfolds in exceptional Grassmannians for which he could not compute $\chi(X,\mathcal{O}_X)$. I'm running my code on some of them right now, but maybe the codimension is just too high for a quick check on my laptop on a Sunday morning to fully finish things.
+  <p>That being said,
+  <ul>
+    <li>for $\mathrm{E}_6/\mathrm{P}_5$ and $\mathcal{E}=(1,0,0,0,0,0)^{\oplus3}\oplus(0,0,0,0,0,1)\oplus\mathcal{O}(1)^{\oplus 2}$ (notice the fix of a minor typo, with $\mathcal{O}(2)$ the bundle has the wrong rank) the Euler characteristic is 2 according to my code
+    <li>for $\mathrm{E}_6/\mathrm{P}_5$ and $\mathcal{E}=(1,0,0,0,0,0)^{\oplus2}\oplus(0,0,0,0,0,1)^{\oplus 4}\oplus\mathcal{O}(1)$ the Euler characteristic is also 2 according to my code
+    <li>for $\mathrm{E}_6/\mathrm{P}_5$ and $\mathcal{E}=(1,0,0,0,0,0)\oplus(0,0,0,0,0,1)^{\oplus 7}$ the Euler characteristic is also 2 according to my code
+  </ul>
+  <p>So no unexpected things happened for 6-folds in type $\mathrm{E}_6$. I wasn't patient enough for $\mathrm{E}_7$.
+  <p>I should maybe try and run my code to understand 8-folds then!
+
+  <li><p><a href="https://arxiv.org/abs/2109.02026v1">Alexander Kuznetsov, Alexander Perry: Serre functors and dimensions of residual categories</a> is another great preprint, which correctly refines certain expectations about the Serre dimensions of residual categories in derived categories of complete intersections.
+  <p>I'm particularly interested in the little room that Corollary 6.12 leaves for residual categories of complete intersections to be equivalent to the derived category of another smooth projective variety, and it would be great to understand whether that is ever possible outside the known cases of multidegree $(2)$ (when it's one or two points, depending on the parity of $n$), $(2,2)$ (when it's a hyperelliptic curve or a stacky curve, depending on the parity of $n$) or $(3)$ (for $n=5$ one gets K3 categories, which are sometimes equivalent to true K3 surfaces).
+
+  <li><p><a href="https://github.com/8d1h/bott">8d1h/bott</a> is Sage code by <a href="https://webusers.imj-prg.fr/~jieao.song/en/index.html">Jieao Song</a> to compute Chern numbers of hyperkähler varieties. Alternatively this can be done using the same author's Julia package <a href="https://github.com/8d1h/IntersectionTheory">8d1h/IntersectionTheory</a>. This is all related to <a href="{% post_url 2021-07-06-hyperkahler-integral %}">some musings I posted a little while ago</a>.
+    <p>On a somewhat related note, there are <a href="http://www.math.uni-bonn.de/people/huybrech/HyperKSummer2021.pdf">nice notes</a> of the "Topics in hyperkähler geometry"</a> seminar between Bonn and Paris from previous semester.
+</ul>
+
