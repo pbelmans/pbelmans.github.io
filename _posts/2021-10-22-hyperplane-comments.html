@@ -19,7 +19,7 @@ author: Pieter Belmans
 </ul>
 <p>It turns out that the latter two cases are already mentioned in Section 4.5 of <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=3987870">Alexander Kuznetsov: Calabi-Yau and fractional Calabi-Yau categories</a>.
 
-<p>For good measure I decided to compute some more middle cohomology of hyperplane sections of orthogonal and symplectic Grassmannians, and see where it could be of interest. Here's a quick (and possibly incorrect, I am prone to arithmetic mistakes) overview:
+<p>For good measure I decided to compute some more middle cohomology of hyperplane sections of orthogonal and symplectic Grassmannians, and see where it could be of interest. Here's a quick overview (hopefully without mistakes now):
 
 <style type="text/css">
 table {
@@ -55,7 +55,7 @@ tr:hover td {
     <tr>
       <th>$G/P$
       <th>middle cohomology $G/P\cap H$</th>
-      <th>Lefschetz contribution</th>
+      <th>contribution from Lefschetz on $G/P$</th>
       <th>comment</th>
     </tr>
   </thead>
@@ -64,15 +64,15 @@ tr:hover td {
     <tr>
       <td><a href="https://grassmannian.info/B3/2">$\operatorname{OGr}(2,7)$</a>
       <td>$4$
-      <td>$2$
-      <td>homological projective dual looks like (a resolution of) <em>double</em> cover of $\mathbb{P}^{20}$ ramified in the classical projective dual
+      <td>$1$
+      <td>homological projective dual looks like (a resolution of) <em>triple</em> cover of $\mathbb{P}^{20}$ ramified in the classical projective dual
     </tr>
 
     <tr>
       <td><a href="https://grassmannian.info/B4/2">$\operatorname{OGr}(2,9)$</a>
       <td>$6$
-      <td>$3$
-      <td>homological projective dual looks like (a resolution of) <em>triple</em> cover of $\mathbb{P}^{35}$ ramified in the classical projective dual
+      <td>$2$
+      <td>homological projective dual looks like (a resolution of) <em>quadruple</em> cover of $\mathbb{P}^{35}$ ramified in the classical projective dual
     </tr>
     <tr>
       <td><a href="https://grassmannian.info/B4/3">$\operatorname{OGr}(3,9)$</a>
@@ -84,8 +84,8 @@ tr:hover td {
     <tr>
       <td><a href="https://grassmannian.info/B5/2">$\operatorname{OGr}(2,11)$</a>
       <td>$8$
-      <td>$4$
-      <td>homological projective dual looks like (a resolution of) <em>quadruple</em> cover of $\mathbb{P}^{54}$ ramified in the classical projective dual
+      <td>$3$
+      <td>homological projective dual looks like (a resolution of) <em>quintuple</em> cover of $\mathbb{P}^{54}$ ramified in the classical projective dual
     </tr>
     <tr>
       <td><a href="https://grassmannian.info/B5/3">$\operatorname{OGr}(3,11)$</a>
@@ -105,8 +105,8 @@ tr:hover td {
     <tr>
       <td><a href="https://grassmannian.info/C3/2">$\operatorname{SGr}(2,6)$</a>
       <td>$4$
-      <td>$2$
-      <td>homological projective dual looks like (a resolution of) the <em>double</em> cover of $\mathbb{P}^{13}$ ramified in the classical projective dual
+      <td>$1$
+      <td>homological projective dual looks like (a resolution of) the <em>triple</em> cover of $\mathbb{P}^{13}$ ramified in the classical projective dual
     </tr>
     <tr>
       <td><a href="https://grassmannian.info/C3/3">$\operatorname{LGr}(3,6)$</a>
@@ -118,8 +118,8 @@ tr:hover td {
     <tr>
       <td><a href="https://grassmannian.info/C4/2">$\operatorname{SGr}(2,8)$</a>
       <td>$6$
-      <td>$3$
-      <td>homological projective dual looks like (a resolution of) the <em>triple</em> cover of $\mathbb{P}^{26}$ ramified in the classical projective dual
+      <td>$2$
+      <td>homological projective dual looks like (a resolution of) the <em>quadruple</em> cover of $\mathbb{P}^{26}$ ramified in the classical projective dual
     </tr>
     <tr>
       <td><a href="https://grassmannian.info/C4/3">$\operatorname{SGr}(3,8)$</a>
@@ -137,8 +137,8 @@ tr:hover td {
     <tr>
       <td><a href="https://grassmannian.info/C5/2">$\operatorname{SGr}(2,10)$</a>
       <td>$8$
-      <td>$4$
-      <td>homological projective dual looks like (a resolution of) the <em>quadruple</em> cover of $\mathbb{P}^{43}$ ramified in the classical projective dual
+      <td>$3$
+      <td>homological projective dual looks like (a resolution of) the <em>quintuple</em> cover of $\mathbb{P}^{43}$ ramified in the classical projective dual
     </tr>
     <tr>
       <td><a href="https://grassmannian.info/C5/3">$\operatorname{SGr}(3,10)$</a>
@@ -148,14 +148,14 @@ tr:hover td {
     </tr>
     <tr>
       <td><a href="https://grassmannian.info/C5/4">$\operatorname{SGr}(4,10)$</a>
-      <td>$1,101,1220,1220,101,1$
+      <td>$1,111,1220,1220,111,1$
       <td>
       <td>5-Calabi&ndash;Yau category?
     </tr>
     <tr>
       <td><a href="https://grassmannian.info/C5/5">$\operatorname{LGr}(5,10)$</a>
       <td>$1,77,354,77,1$
-      <td>$3$
+      <td>
       <td>4-Calabi&ndash;Yau category?
     </tr>
   </tbody>
@@ -164,19 +164,19 @@ tr:hover td {
     <tr>
       <td><a href="https://grassmannian.info/D4/2">$\operatorname{OGr}(2,8)$</a>
       <td>$8$
-      <td>$4$
-      <td>homological projective dual looks like (a resolution of) the <em>quadruple</em> cover of $\mathbb{P}^{27}$ ramified in the classical projective dual
+      <td>$3$
+      <td>homological projective dual looks like (a resolution of) the <em>quintuple</em> cover of $\mathbb{P}^{27}$ ramified in the classical projective dual
     </tr>
     <tr>
       <td><a href="https://grassmannian.info/D5/2">$\operatorname{OGr}(2,10)$</a>
       <td>$10$
-      <td>$5$
-      <td>homological projective dual looks like (a resolution of) the <em>quintuple</em> cover of $\mathbb{P}^{44}$ ramified in the classical projective dual
+      <td>$4$
+      <td>homological projective dual looks like (a resolution of) the <em>sextuple</em> cover of $\mathbb{P}^{44}$ ramified in the classical projective dual
     </tr>
     <tr>
       <td><a href="https://grassmannian.info/D5/3">$\operatorname{OGr}(3,10)$</a>
       <td>$1,77,358,77,1$
-      <td>$9$
+      <td>
       <td>4-Calabi&ndash;Yau category?
     </tr>
     <tr>
@@ -189,13 +189,13 @@ tr:hover td {
     <tr>
       <td><a href="https://grassmannian.info/D6/2">$\operatorname{OGr}(2,12)$</a>
       <td>$12$
-      <td>$6$
-      <td>homological projective dual looks like (a resolution of) the <em>sextuple</em> cover of $\mathbb{P}^{77}$ ramified in the classical projective dual
+      <td>$5$
+      <td>homological projective dual looks like (a resolution of) the <em>septuple</em> cover of $\mathbb{P}^{77}$ ramified in the classical projective dual
     </tr>
     <tr>
       <td><a href="https://grassmannian.info/D6/3">$\operatorname{OGr}(3,12)$</a>
       <td>$1,\ldots,1$
-      <td>$14$
+      <td>
       <td>6-Calabi&ndash;Yau category?
     </tr>
     <tr>
@@ -207,16 +207,17 @@ tr:hover td {
     <tr>
       <td><a href="https://grassmannian.info/D6/5">$\operatorname{OGr}_+(6,12)$</a>
       <td>$4$
-      <td>$3$
-      <td>homological projective dual is generically isomorphic to $\mathbb{P}^{31}$?
+      <td>$2$
+      <td>homological projective dual looks like (a resolution of the <em>double cover</em> of $\mathbb{P}^{31}$ ramified in the classical projective dual
     </tr>
   </tbody>
 </table>
 <p>Some comments on the table:
 <ul>
-  <li><p>If the dimension of $G/P$ is even, then there is no contribution by the Lefschetz hyperplane theorem.
   <li><p>By Corollary 4.5 of <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=3987870">Alexander Kuznetsov: Calabi-Yau and fractional Calabi-Yau categories</a> we know that the interesting component of $\operatorname{OGr}(2,2n+1)$ is a Calabi&ndash;Yau category of dimension 0, so we get that the homological projective dual should be a finite cover of the dual projective space ramified along the classical projective dual.
   <li><p>The reader of <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=3987870">Alexander Kuznetsov: Calabi-Yau and fractional Calabi-Yau categories</a> is left to formulate analogous results for hyperplane sections (and hypersurfaces of low degree) in other generalised Grassmannians. The data from the table will be a good consistency check. These will be partially conjectural (lacking a construction of the required Lefschetz collections), and they might be complicated by the fact that the Lefschetz collections aren't necessarily rectangular. So maybe the Calabi&ndash;Yauness mentioned above is only correct for some subcategory.
 </ul>
 
 <p>I fully expect various of these to be known (or conjectured) before. But my memory is not the best, so I guess I need to include an overview of what is known on <a href="https://grassmannian.info">Grassmannian.info</a>, also known as my external memory.
+
+<p>Update October 23: <ins datetime="2021-10-23">Sasha Kuznetsov pointed out some issues in the original version of the table. I would like to thank him for this!</ins>
