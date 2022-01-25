@@ -13,19 +13,19 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/blog/feed/" | prepend: site.baseurl | prepend: site.url }}">
 
-  <script>
-MathJax = {
+<script>
+window.MathJax = {
   tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']]
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    packages: ['base', 'ams', 'mathtools']
+  },
+  loader: {
+    load: ['[tex]/ams', '[tex]/mathtools']
   }
 };
-window.MathJax = {
-  loader: {load: ['[tex]/mathtools']},
-  tex: {packages: {'[+]': ['mathtools']}}
-};
-  </script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-  </script>
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
 
 <!--
   <script type="text/x-mathjax-config">
