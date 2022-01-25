@@ -21,7 +21,15 @@ author: Pieter Belmans
 {% endhighlight %}
 
 produces
+\[
+  T=\sum_{
+    i_1,\ldots,i_n,j_1,\ldots,j_m=1}^d \;
+    T_{j_1,\ldots,j_m}^{i_1,\ldots,i_n}
+    E_{i_1,\ldots,i_n}^{j_1,\ldots,j_m}
+\]
+<!--
 <p style="text-align: center"><img src="{{ site.baseurl }}/assets/mathclap-11.png" alt="Expression of tensor product in basis, bad formatting" />
+-->
 
 <p>Obviously, the enormous width of the summation indices produces an ugly result. <code>\mathclap</code> and <code>\substack</code> to the rescue!
 
@@ -42,14 +50,23 @@ produces
 {% highlight latex %}
 \begin{displaymath}
   T=\sum_{
-    \mathclap{\substack{i_1,\ldots,i_n=1 \ j_1,\ldots,j_m=1}}}^d
+    \mathclap{\substack{i_1,\ldots,i_n=1 \\ j_1,\ldots,j_m=1}}}^d
     T_{j_1,\ldots,j_m}^{i_1,\ldots,i_n}
     E_{i_1,\ldots,i_n}^{j_1,\ldots,j_m}
 \end{displaymath}
 {% endhighlight %}
 
 which produces
+
+\[
+  T=\sum_{
+    \mathclap{\substack{i_1,\ldots,i_n=1 \\ j_1,\ldots,j_m=1}}}^d
+    T_{j_1,\ldots,j_m}^{i_1,\ldots,i_n}
+    E_{i_1,\ldots,i_n}^{j_1,\ldots,j_m}
+\]
+<!--
 <p style="text-align: center"><img src="{{ site.baseurl }}/assets/mathclap-21.png" alt="Expression of tensor product in basis, good formatting" />
+-->
 
 <p>When I look at this rendering of the formula, one thing still annoys me. There is <em>not enough</em> space now between the summation symbol and the summands. I feel like there's some symmetry needed: the space between the equals sign and the summation symbol should be on par with the space between the summation symbol and the summands.
 
