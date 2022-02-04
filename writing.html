@@ -15,6 +15,7 @@ ol.reverse {
 }
 
 ol.publications {
+  margin-left: 0;
   list-style: none;
   padding-left: 30px;
 }
@@ -38,134 +39,156 @@ ol.publications > li:before {
   width: 20px;
   text-align: right;
 }
+
+p.title {
+  font-weight: 500;
+}
+p.title,
+p.journal,
+p.comment,
+p.coauthors {
+  margin-bottom: 0px;
+}
+
+p.badges {
+  margin-bottom: 5px;
+}
+
+p.journal {
+  font-style: italic;
+}
+
+/* taken from view-source:https://www.albany.edu/~mv312143/research.html */
+.id {
+  font-size: .75rem;
+  white-space: nowrap;
+  font-family: monospace;
+}
+.id-type, .id-key {
+  display: inline-flex;
+  align-items: center;
+  height: 1.75em;
+}
+.id a:hover {
+  text-decoration: none;
+}
+.id-key {
+  border-radius: 0 4px 4px 0;
+  padding-left: 0.5em;
+  padding-right: 0.6em;
+  color: #337ab7;
+  background-color: whitesmoke;
+  margin-right: 0.4em;
+}
+.id-type {
+  border-radius: 4px 0 0 4px;
+  padding-left: 0.6em;
+  padding-right: 0.5em;
+  color: white;
+}
+.id-key:hover {
+  text-decoration: underline;
+}
+.id-arxiv {
+  background-color: #d9534f;
+}
+.id-mr {
+  background-color: #337ab7;
+}
+.id-zbl {
+  background-color: #5bc0de;
+}
+.id-doi {
+  background-color: #0a0a0a;
+}
+.id-pdf {
+  background-color: #669d31;
+}
 </style>
 
-<p>These are the things I have written over the past few years, <a href="https://arxiv.org/a/belmans_p_1.html">all preprints are on the arXiv</a>.</p>
+<p>These are the things I have written over the past years.
+<!--, <a href="https://arxiv.org/a/belmans_p_1.html">all preprints are on the arXiv</a>.</p>-->
 
 <h2>Papers</h2>
-<h3>Accepted for publication</h3>
-<ol class="publications reverse">
-  <li>Derived categories of (nested) Hilbert schemes, joint with <a href="https://sites.google.com/site/andkrugmath/">Andreas Krug</a> (<a href="https://arxiv.org/abs/1909.04321">arXiv:1909.04321</a>)<br>
-    accepted for publication in <a href="https://lsa.umich.edu/math/centers-outreach/michigan-mathematical-journal.html">Michigan Mathematical Journal</a>
+<ul id="quicknav">
+  <li><a href="#accepted">accepted for publication</a></li>
+  <li><a href="#published">published</a></li>
+  <li><a href="#preprints">preprints</a></li>
+</ul>
 
-  <li>Projectivity of the moduli space of vector bundles on a curve, joint with <a href="https://sites.math.washington.edu/~jarod/">Jarod Alper</a>, <a href="https://math.berkeley.edu/~braggdan/">Daniel Bragg</a>, <a href="https://lsa.umich.edu/math/people/phd-students/liangji.html">Jason Liang</a> and Tuomas Tajakka (expository article, preprint will be available soon)<br>
-    accepted for publication in SPEC: Stacks Project Expository Collection
+<h3 id="accepted">Accepted for publication</h3>
+<ol class="publications reverse" style="counter-reset: publications 11">
+{% for paper in site.data.papers.accepted %}
+  {% include publication.html paper=paper %}
+{% endfor %}
 </ol>
 
-<h3>Published</h3>
-<ol class="publications reverse">
-  <li>Embeddings of algebras in derived categories of surfaces, joint with <a href="http://homepages.vub.ac.be/~traedsch/">Theo Raedschelders</a> (<a href="http://arxiv.org/abs/1501.04197">arXiv:1501.04197</a>),
-  <br><a href="https://dx.doi.org/10.1090/proc/13497">published as <em>Proceedings of the American Mathematical Society, volume 145, number 7, 2017, pages 2757&ndash;2770</em></a>
-
-  <li>The point variety of quantum polynomial rings, joint with Kevin De Laet and <a href="http://win.ua.ac.be/~lebruyn/">Lieven Le Bruyn</a> (<a href="http://arxiv.org/abs/1509.07312">arXiv:1509.07312</a>),
-  <br><a href="https://dx.doi.org/10.1016/j.jalgebra.2016.06.013">published as <em>Journal of Algebra, volume 463, 2016, pages 10&ndash;22</em></a>
-
-  <li>Derived categories of noncommutative quadrics and Hilbert squares, joint with <a href="http://homepages.vub.ac.be/~traedsch/">Theo Raedschelders</a> (<a href="https://arxiv.org/abs/1605.02795">arXiv:1605.02795</a>),
-  <br><a href="https://dx.doi.org/10.1093/imrn/rny192">published as <em>IMRN, volume 2020, issue 19, pages 6042&ndash;6069</em></a>
-
-  <li>Relative tensor triangular Chow groups for coherent algebras, joint with Sebastian Klein (<a href="https://arxiv.org/abs/1607.03423">arXiv:1607.03423</a>),
-  <br><a href="https://doi.org/10.1016/j.jalgebra.2017.05.024">published as <em>Journal of Algebra, volume 487, 2017, pages 386&ndash;428</em></a>
-
-  <li>Hochschild cohomology of noncommutative planes and quadrics (<a href="https://arxiv.org/abs/1705.06098">arXiv:1705.06098</a>),
-  <br><a href="http://doi.org/10.4171/JNCG/338">published as <em>Journal of Noncommutative Geometry, volume 13, 2019, pages 769&ndash;795</em></a>
-
-  <li>Constructing noncommutative surfaces with exceptional collections of length 4, joint with Dennis Presotto (<a href="https://arxiv.org/abs/1705.06943">arXiv:1705.06943</a>),
-  <br><a href="https://doi.org/10.1112/jlms.12126">published as <em>Journal of the London Mathematical Society, volume 98, 2018, pages 85&ndash;103</em></a>
-
-  <li>Examples violating Golyshev's canonical strip hypothesis, joint with <a href="https://www.mccme.ru/~galkin/">Sergey Galkin</a> and <a href="http://www.math.tifr.res.in/~swarnava/">Swarnava Mukhopadhyay</a> (<a href="https://arxiv.org/abs/1806.07648">arXiv:1806.07648</a>, see also the related repositories <a href="https://github.com/pbelmans/canonical-strip-moduli-of-vector-bundles"><span style="font-family: monospace">canonical-strip-moduli-of-vector-bundles</span></a> and <a href="https://github.com/pbelmans/ehrhart-polynomials-toric-fanos"><span style="font-family: monospace">ehrhart-polynomials-toric-fanos</span></a>)
-  <br><a href="https://doi.org/10.1080/10586458.2019.1602571">published online ahead of print</a> in <a href="https://www.tandfonline.com/toc/uexm20/current"><em>Experimental Mathematics</em></a>
-
-  <li>Admissible subcategories in derived categories of moduli of vector bundles on curves, joint with <a href="http://www.math.tifr.res.in/~swarnava/">Swarnava Mukhopadhyay</a> (<a href="https://arxiv.org/abs/1807.00216">arXiv:1807.00216</a>)
-  <br><a href="https://doi.org/10.1016/j.aim.2019.05.019">published as <em>Advances in Mathematics, volume 351, 2019, pages 653&ndash;675</a></em>
-
-  <li>Hilbert squares: derived categories and deformations, joint with <a href="http://math.univ-lyon1.fr/~fu/">Lie Fu</a> and <a href="http://homepages.vub.ac.be/~traedsch/">Theo Raedschelders</a> (<a href="https://arxiv.org/abs/1810.11873">arXiv:1810.11873</a>)
-  <br><a href="http://doi.org/10.1007/s00029-019-0482-y">published as <em>Selecta Mathematica, volume 25, 2019, paper 37</em></a>
-
-  <li>Automorphisms of Hilbert schemes of points on surfaces, joint with <a href="http://www.math.uni-bonn.de/~georgo/">Georg Oberdieck</a> and <a href="https://folk.uio.no/jorgeren/">Jørgen Vold Rennemo</a> (<a href="https://arxiv.org/abs/1907.07064">arXiv:1907.07064</a>)
-    <br><a href="https://doi.org/10.1090/tran/8106">published as <em>Transactions of the American Mathematical Society, volume 373 (9), 2020, pages 6139&ndash;6156</em></a>
-
-  <li>Derived categories of the Cayley plane and the coadjoint Grassmannian in type F, joint with <a href="http://www.mi-ras.ru/~akuznet/">Alexander Kuznetsov</a> and <a href="https://msmirnov18.github.io/">Maxim Smirnov</a> (<a href="https://arxiv.org/abs/2005.01989">arXiv:2005.01989</a>)
-    <br><a href="https://link.springer.com/article/10.1007/s00031-021-09657-w">published online ahead of print</a> in <a href="https://www.springer.com/journal/31">Transformation Groups</a>
+<h3 id="published">Published</h3>
+<ol class="publications reverse" style="counter-reset: publications">
+{% for paper in site.data.papers.published %}
+  {% include publication.html paper=paper %}
+{% endfor %}
 </ol>
 
-<h3>Preprints</h3>
+<h3 id="preprints">Preprints</h3>
+<ol class="publications" style="counter-reset: publications 13">
+{% for paper in site.data.papers.preprints %}
+  {% include publication.html paper=paper %}
+{% endfor %}
+</ol>
+
+<h3>Preprints nearing completion</h3>
 <ol class="publications">
-  <li>Comparison of two constructions of noncommutative surfaces with exceptional collections of length 4, joint with Dennis Presotto and <a href="http://hardy.uhasselt.be/personal/vdbergh/Members/michel_id.html">Michel Van den Bergh</a> (<a href="https://arxiv.org/abs/1811.08810">arXiv:1811.08810</a>)
-    <p><small>We will retitle this to "The Hirzebruch isomorphism for exotic noncommutative surfaces".</small>
-
-  <li>Hochschild cohomology of generalised Grassmannians, joint with <a href="https://msmirnov18.github.io/">Maxim Smirnov</a> (<a href="https://arxiv.org/abs/1911.09414">arXiv:1911.09414</a>)
-
-  <li>Moduli spaces of semiorthogonal decompositions in families, joint with <a href="http://www4.math.sci.osaka-u.ac.jp/~okawa/">Shinnosuke Okawa</a> and <a href="https://atricolfi.github.io/">Andrea Ricolfi</a> (<a href="https://arxiv.org/abs/2002.03303">arXiv:2002.03303</a>)
-
-  <li>Derived categories of standard flips and cubic hypersurfaces, joint with <a href="http://math.univ-lyon1.fr/~fu/">Lie Fu</a> and <a href="http://homepages.vub.ac.be/~traedsch/">Theo Raedschelders</a> (<a href="https://arxiv.org/abs/2002.04940">arXiv:2002.04940</a>)
-
-  <li>Indecomposability of derived categories in families, joint with <a href="https://sites.google.com/site/francescobastianelli/">Francesco Bastianelli</a>,  <a href="http://www4.math.sci.osaka-u.ac.jp/~okawa/">Shinnosuke Okawa</a> and <a href="https://atricolfi.github.io/">Andrea Ricolfi</a> (<a href="https://arxiv.org/abs/2007.00994">arXiv:2007.00994</a>)
-
-  <li>Graph potentials and topological quantum field theories, joint with <a href="https://www.mccme.ru/~galkin/">Sergey Galkin</a> and <a href="http://www.math.tifr.res.in/~swarnava/">Swarnava Mukhopadhyay</a> (<a href="https://arxiv.org/abs/2009.05568">arXiv:2009.05568</a>)
-
-  <li>Polyvector fields for Fano 3-folds, joint with <a href="https://sites.google.com/view/enricofatighenti/home">Enrico Fatighenti</a> and <a href="https://sites.google.com/site/fabiotanturri/home?authuser=0">Fabio Tanturri</a> (<a href="https://arxiv.org/abs/2104.07626">arxiv:2104.07626</a>)
-
-</ol>
-
-<h3>Preprints available upon request</h3>
-<ol class="publications">
-  <li>Graph potentials and symplectic geometry of moduli of vector bundles, joint with <a href="https://www.mccme.ru/~galkin/">Sergey Galkin</a> and <a href="http://www.math.tifr.res.in/~swarnava/">Swarnava Mukhopadhyay</a> (to be split off from <a href="https://arxiv.org/abs/2009.05568">arXiv:2009.05568</a>
-
-  <li>Motivic, orthogonal and semiorthogonal decompositions of moduli of vector bundles, joint with <a href="https://www.mccme.ru/~galkin/">Sergey Galkin</a> and <a href="http://www.math.tifr.res.in/~swarnava/">Swarnava Mukhopadhyay</a> (to be split off from <a href="https://arxiv.org/abs/2009.05568">arXiv:2009.05568</a>)
-
-  <li>A combinatorial non-abelian Torelli theorem, joint with <a href="https://www.mccme.ru/~galkin/">Sergey Galkin</a> and <a href="http://www.math.tifr.res.in/~swarnava/">Swarnava Mukhopadhyay</a>
-
-    <li>Homological projective duality for the Segre cubic, joint with <a href="http://www.math.uni-bonn.de/people/beckmann/">Thorsten Beckmann</a>
+{% for paper in site.data.papers.inprogress %}
+  {% include publication.html paper=paper %}
+{% endfor %}
 </ol>
 
 
 <h3>Other publications</h3>
 <ol class="publications">
-  <li>Semiorthogonal decompositions for moduli of sheaves on curves, Oberwolfach Reports 24/2018, <a href="https://www.mfo.de/occasion/1822/www_view">Oberwolfach Workshop 1822</a>, Interactions between Algebraic Geometry and Noncommutative Algebra, <a href="/assets/owr-1822-belmans.pdf">pages 1473&ndash;1476</a>
-
-  <li>appendix "Comparing definitions of Hochschild cohomology for algebraic stacks" to The Hochschild cohomology ring of a global quotient orbifold, by <a href="https://negron.math.unc.edu/">Cris Negron</a> and <a href="https://www.imperial.ac.uk/people/t.schedler">Travis Schedler</a> (<a href="https://arxiv.org/abs/1809.08715">arXiv:1809.08715</a>)
-  <br><a href="https://doi.org/10.1016/j.aim.2020.106978">published as <em>Advances in Mathematics, volume 364, 2020</em></a>
-
-  <li>How do semiorthogonal decompositions behave in families?, Oberwolfach Reports 19/2020, <a href="https://www.mfo.de/occasion/2029/www_view">Oberwolfach Workshop 2029</a>, Algebraic Geometry: Moduli Spaces, Birational Geometry and Derived Aspects, <a href="/assets/owr-2029-belmans.pdf">pages 985&ndash;989</a>
-</ol>
-
-<h3>Lecture notes</h3>
-<ol class="publications">
-  <li><a href="notes/stratification.pdf">Stratification of triangulated categories</a>, notes for the lecture series by Henning Krause at the summer school on derived categories in Nantes (with corrections by Henning Krause, thanks!)
-  <li>My lecture series on Grothendieck duality for ANAGRAMS, as a <a href="notes/grothendieck-duality.pdf">single set of notes</a>, or separately:
-  <ol>
-    <li><a href="notes/grothendieck-duality-1.pdf">Riemann&ndash;Roch theorem and Serre duality</a>, notes for the first lecture
-    <li><a href="notes/grothendieck-duality-2.pdf">More on Riemann&ndash;Roch and Serre duality, with applications</a>, notes for the second lecture
-    <li><a href="notes/grothendieck-duality-3.pdf">Derived categories and Grothendieck duality</a>, notes for the third lecture
-    <li><a href="notes/grothendieck-duality-4.pdf">Sketches of some of the proofs</a>, notes for the fourth lecture
-  </ol>
-  <li><a href="/assets/hh-2018-notes.pdf">Hochschild (co)homology, and the Hochschild&ndash;Kostant&ndash;Rosenberg decomposition</a>, lecture notes for Advanced Topics in Algebra, a course from 2018 at the University of Bonn (to be expanded in the future)
+{% for paper in site.data.papers.other %}
+  {% include publication.html paper=paper %}
+{% endfor %}
 </ol>
 
 <h3>For a broader audience</h3>
 <ol class="publications">
-  <li>Het Stacks project, (<a href="/assets/naw5-2020-21-3-167.pdf">pdf</a>),
-  <p>published as <em><a href="http://www.nieuwarchief.nl/serie5/pdf/naw5-2020-21-3-167.pdf">Nieuw Archief voor Wiskunde (5) 21 (2020), no. 3, 167&ndash;173</a></em>
+{% for paper in site.data.papers.broad %}
+  {% include publication.html paper=paper %}
+{% endfor %}
+</ol>
 
-  <li>Curating Online Mathematical Resources,
-  <p>published as <a href="https://www.ams.org/journals/notices/202109/rnoti-p1524.pdf"><em>Notices of the American Mathematical Society, volume 69, number 9, pages 1524&ndash;1527</a></em>
+<h3>Lecture notes</h3>
+<ol class="publications">
+{% for paper in site.data.papers.lecture-notes %}
+  {% include publication.html paper=paper %}
+{% endfor %}
 </ol>
 
 <h3>Not intended for publication</h3>
 <ol class="publications">
-  <li><a href="/notes/segre.pdf">Segre symbols</a> (short note defining Segre symbols as a method of classifying base loci of pencils of quadric hypersurfaces, which seems to have been of interest to some)
-  <li><a href="/assets/non-quad-4-dim-as-regular.pdf">Artin&ndash;Schelter regular algebras versus smooth projective varieties</a> (short note, possibly to be extended at some point)
-</ol>
-
-<h2>Editorial work</h2>
-<ol class="publications">
-  <li>SPEC: Stacks Project Expository Collection, to be published by Cambridge University Press in the London Mathematical Society Lecture Note Series
+{% for paper in site.data.papers.not-for-publication %}
+  {% include publication.html paper=paper %}
+{% endfor %}
 </ol>
 
 <h2>Non-mathematical writing</h2>
 <ol class="publications">
-  <li><a href="{{ site.baseurl }}/assets/fugue-guitar.pdf">The fugue and the guitar</a> (in Dutch)
+{% for paper in site.data.papers.not-math %}
+  {% include publication.html paper=paper %}
+{% endfor %}
 </ol>
+
+This gives the following list of coauthors:
+{% for coauthor in site.data.coauthors %}
+{% if coauthor[1].url %}<a href="{{ coauthor[1].url }}">{{ coauthor[1].name }}</a>{% else %}{{ coauthor[1].name }}{% endif %}{% unless forloop.last %}, {% endunless %}
+{% endfor %}
+
+<h2>Editorial work</h2>
+<ul>
+  <li>SPEC: Stacks Project Expository Collection, to be published by Cambridge University Press in the London Mathematical Society Lecture Note Series
+</ul>
 
 
 <h2>Reviews</h2>

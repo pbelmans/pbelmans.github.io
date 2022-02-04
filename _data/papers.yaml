@@ -1,0 +1,264 @@
+accepted:
+  - title: Derived categories of (nested) Hilbert schemes
+    coauthors:
+      - krug
+    arxiv: 1909.04321
+    journal: accepted for publication in Michigan Mathematical Journal
+
+  - title: Projectivity of the moduli space of vector bundles on a curve
+    coauthors:
+      - alper
+      - bragg
+      - liang
+      - tajakka
+    journal: "accepted for publication in SPEC: Stacks Project Expository Collection"
+
+
+published:
+  - title: Embeddings of algebras in derived categories of surfaces
+    coauthors:
+      - raedschelders
+    arxiv: 1501.04197
+    doi: 10.1090/proc/13497
+    mathscinet: 3637928
+    zbmath: 1378.16035
+    journal: Proceedings of the American Mathematical Society
+    information: volume 145, number 7, 2017, pages 2757&ndash;2770
+
+  - title: The point variety of quantum polynomial rings
+    coauthors:
+      - delaet
+      - lebruyn
+    arxiv: 1509.07312
+    doi: 10.1016/j.jalgebra.2016.06.013
+    mathscinet: 3637928
+    zbmath: 1454.14043
+    journal: Journal of Algebra
+    information: volume 463, 2016, pages 10&ndash;22
+
+  - title: Derived categories of noncommutative quadrics and Hilbert squares
+    coauthors:
+      - raedschelders
+    arxiv: 1605.02795
+    doi: 10.1093/imrn/rny192
+    mathscinet: 4165471
+    journal: IMRN
+    information: volume 2020, issue 19, pages 6042&ndash;6069
+
+  - title: Relative tensor triangular Chow groups for coherent algebras
+    coauthors:
+      - klein
+    arxiv: 1607.03423
+    doi: 10.1016/j.jalgebra.2017.05.024
+    mathscinet: 3671198
+    zbmath: 1400.14049
+    journal: Journal of Algebra
+    information: volume 487, 2017, pages 386&ndash;428</em>
+
+  - title: Hochschild cohomology of noncommutative planes and quadrics
+    arxiv: 1705.06098
+    doi: 10.4171/JNCG/338
+    mathscinet: 3988086
+    zbmath: 1429.14002
+    journal: Journal of Noncommutative Geometry
+    information: volume 13, 2019, pages 769&ndash;795
+
+  - title: Constructing noncommutative surfaces with exceptional collections of length 4
+    coauthors:
+      - presotto
+    arxiv: 1705.06943
+    doi: 10.1112/jlms.12126
+    mathscinet: 3847233
+    zbmath: 1441.14008
+    journal: Journal of the London Mathematical Society (2)
+    information: volume 98, 2018, pages 85&ndash;103
+
+  - title: Examples violating Golyshev's canonical strip hypothesis
+    coauthors:
+      - galkin
+      - mukhopadhyay
+    arxiv: 1806.07644
+    comment: 'see also the related repositories <ul><li style="margin-bottom: 0"><a href="https://github.com/pbelmans/canonical-strip-moduli-of-vector-bundles"><span style="font-family: monospace">canonical-strip-moduli-of-vector-bundles</span></a></li><li><a href="https://github.com/pbelmans/ehrhart-polynomials-toric-fanos"><span style="font-family: monospace">ehrhart-polynomials-toric-fanos</span></a></li></ul>'
+    doi: 10.1080/10586458.2019.1602571
+    journal: Experimental Mathematics
+    information: published online ahead of print
+
+  - title: Admissible subcategories in derived categories of moduli of vector bundles on curves
+    coauthors:
+      - mukhopadhyay
+    arxiv: 1807.00216
+    doi: 10.1016/j.aim.2019.05.019
+    mathscinet: 3954042
+    zbmath: 1440.14079
+    journal: Advances in Mathematics
+    information: volume 351, 2019, pages 653&ndash;675
+
+  - title: "Hilbert squares: derived categories and deformations"
+    coauthors:
+      - fu
+      - raedschelders
+    arxiv: 1810.11873
+    doi: 10.1007/s00029-019-0482-y
+    mathscinet: 3950704
+    zbmath: 1423.14115
+    journal: Selecta Mathematica
+    information: volume 25, 2019, paper 37
+
+  - title: Automorphisms of Hilbert schemes of points on surfaces
+    coauthors:
+      - oberdieck
+      - rennemo
+    arxiv: 1907.07064
+    doi: 10.1090/tran/8106
+    mathscinet: 4155174
+    zbmath: 1451.14008
+    journal: Transactions of the American Mathematical Society
+    information: volume 373 (9), 2020, pages 6139&ndash;6156
+
+  - title: Derived categories of the Cayley plane and the coadjoint Grassmannian in type F
+    coauthors:
+      - kuznetsov
+      - smirnov
+    arxiv: 2005.01989
+    doi: 10.1007/s00031-021-09657-w
+    journal: Transformation Groups
+    information: published online ahead of print
+
+
+preprints:
+  - title: Comparison of two constructions of noncommutative surfaces with exceptional collections of length 4
+    coauthors:
+      - presotto
+      - vandenbergh
+    arxiv: 1811.08810
+    comment: <small>We will retitle this to "The Hirzebruch isomorphism for exotic noncommutative surfaces".</small>
+
+  - title: Hochschild cohomology of generalised Grassmannians
+    coauthors:
+      - smirnov
+    arxiv: 1911.09414
+
+  - title: Moduli spaces of semiorthogonal decompositions in families
+    coauthors:
+      - okawa
+      - ricolfi
+    arxiv: 2002.03303
+
+  - title: Derived categories of standard flips and cubic hypersurfaces
+    coauthors:
+      - fu
+      - raedschelders
+    arxiv: 2002.04940
+
+  - title: Indecomposability of derived categories in families
+    coauthors:
+      - bastianelli
+      - okawa
+      - ricolfi
+    arxiv: 2007.00994
+
+  - title: Graph potentials and topological quantum field theories
+    coauthors:
+      - galkin
+      - mukhopadhyay
+    arxiv: 2009.05568
+
+  - title: Polyvector fields for Fano 3-folds
+    coauthors:
+      - fatighenti
+      - tanturri
+    arxiv: 2104.07626
+
+
+inprogress:
+  - title: Graph potentials and symplectic geometry of moduli of vector bundles
+    coauthors:
+      - galkin
+      - mukhopadhyay
+    comment: to be split off from <a href="https://arxiv.org/abs/2009.05568">arXiv:2009.05568</a>, available on request
+
+  - title: Motivic, orthogonal and semiorthogonal decompositions of moduli of vector bundles
+    coauthors:
+      - galkin
+      - mukhopadhyay
+    comment: to be split off from <a href="https://arxiv.org/abs/2009.05568">arXiv:2009.05568</a>, available on request
+
+  - title: A combinatorial non-abelian Torelli theorem
+    coauthors:
+      - galkin
+      - mukhopadhyay
+
+  - title: Homological projective duality for the Segre cubic
+    coauthors:
+      - beckmann
+
+
+hidden:
+  - title: Projectivity of good moduli spaces of quiver representations
+    coauthors:
+      - damiolini
+      - franzen
+      - hoskins
+      - makarova
+      - tajakka
+
+
+other:
+  - title: Semiorthogonal decompositions for moduli of sheaves on curves
+    journal: Oberwolfach Reports 24/2018
+    information: Interactions between Algebraic Geometry and Noncommutative Algebra, <a href="/assets/owr-1822-belmans.pdf">pages 1473&ndash;1476</a>
+
+  - title: "Comparing definitions of Hochschild cohomology for algebraic stacks"
+    journal: Advances in Mathematics
+    information: volume 364, 2020
+    arxiv: 1809.08715
+    doi: 10.1016/j.aim.2020.106978
+    mathscinet: 4057490
+    zbmath: 1435.14005
+    comment: 'appendix to <span class="font-weight: 500">The Hochschild cohomology ring of a global quotient orbifold</span>, by Cris Negron and Travis Schedler'
+
+  - title: How do semiorthogonal decompositions behave in families?
+    journal: Oberwolfach Reports 19/2020
+    information: 'Algebraic Geometry: Moduli Spaces, Birational Geometry and Derived Aspects, <a href="/assets/owr-2029-belmans.pdf">pages 985&ndash;989</a>'
+
+
+broad:
+  - title: Het Stacks project
+    journal: Nieuw Archief voor Wiskunde
+    information: (5) 21 (2020), no. 3, pages 167&ndash;173
+    pdf: http://www.nieuwarchief.nl/serie5/pdf/naw5-2020-21-3-167.pdf
+
+  - title: Curating Online Mathematical Resources
+    journal: Notices of the American Mathematical Society
+    information: volume 69, number 9, pages 1524&ndash;1527
+    pdf: https://www.ams.org/journals/notices/202109/rnoti-p1524.pdf
+
+
+lecture-notes:
+  - title: Stratification of triangulated categories
+    comment: notes for the lecture series by Henning Krause at the summer school on derived categories in Nantes (with corrections by Henning Krause, thanks!)
+    pdf: notes/stratification.pdf
+
+  - title: Grothendieck duality
+    comment: notes for a lecture series on Grothendieck duality for a graduate student seminar
+    pdf: notes/grothendieck-duality.pdf
+
+  - title: Hochschild (co)homology, and the Hochschild&ndash;Kostant&ndash;Rosenberg decomposition
+    comment: lecture notes for Advanced Topics in Algebra, a course from 2018 at the University of Bonn (to be expanded in the future)
+    pdf: /assets/hh-2018-notes.pdf
+
+
+not-for-publication:
+  - title: Segre symbols
+    comment: short note defining Segre symbols as a method of classifying base loci of pencils of quadric hypersurfaces
+    pdf: /notes/segre.pdf
+
+  - title: Artin&ndash;Schelter regular algebras versus smooth projective varieties
+    comment: short note, possibly to be extended at some point
+    pdf: /assets/non-quad-4-dim-as-regular.pdf
+
+
+not-math:
+  - title: The fugue and the guitar
+    comment: final project for my composition course (in Dutch)
+    pdf: /assets/fugue-guitar.pdf
