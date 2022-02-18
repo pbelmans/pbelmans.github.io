@@ -1,0 +1,67 @@
+---
+layout: post
+title: 'New paper: Homological projective duality for the Segre cubic'
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+<p><small>This really should have been a well-established series by now, but so far there was <a href="{% post_url 2016-05-11-new-paper-noncommutative-quadrics-and-hilbert-schemes-of-points %}">only one prior installment</a>. Should I write some of these retroactively maybe?</small></p>
+
+<p><a href="http://www.math.uni-bonn.de/people/beckmann/">Thorsten Beckmann</a> and I have a <strong><a href="https://arxiv.org/abs/2202.08601">new paper on the arXiv</a></strong>, titled <strong><a href="https://arxiv.org/abs/2202.08601">Homological projective duality for the Segre cubic</a></strong>, intended as a semi-expository contribution for a proceedings volume. It was great fun writing it, and let me try to informally and with pictures convey some of the things that made writing it great fun, in the hope of convincing you to take a closer look at the paper.
+
+<h2>The Segre cubic</h2>
+<img src="/assets/segre.jpg" style="float: right" width="200">
+<p>Back in 1887, <a href="https://en.wikipedia.org/wiki/Corrado_Segre">Corrado Segre</a>, one of the frontrunners of the Italian school, studied a cubic 3-fold, written most conveniently as the vanishing locus
+\begin{equation}
+\left\{
+  \begin{aligned}
+    \sum_{i=0}^5x_i&=0 \\
+    \sum_{i=0}^5x_i^3&=0 \\
+  \end{aligned}
+\right.
+\end{equation}
+in $\mathbb{P}^5$ (so that it's really a cubic hypersurface in the hyperplane given by the first equation).
+It is the cubic 3-fold with the <strong>highest number of isolated singularities</strong>: there are <strong>10 nodal singularities</strong>.
+One can beautifully describe aspects of its geometry in terms of its (large) automorphism group: $\mathrm{S}_6$.
+
+<p>By taking further hyperplane sections it also gives rise to convenient descriptions of some classical cubic surfaces:
+<p><strong>Cayley cubic</strong>
+<img src="/assets/cayley.png" style="float: right;" width="150">
+<ul>
+  <li>obtained by a hyperplane section of the form $x_i-x_j=0$
+  <li>this is the cubic surface with the highest number of isolated singularities: there are 4 nodal singularities
+  <li>its automorphism group is also interesting: it is $\mathrm{S}_4$, which is the largest amongst the parameter-free singular cubic surfaces with finite automorphism group
+</ul>
+<p><strong>Clebsch cubic</strong>
+<img src="/assets/clebsch.png" style="float: right;" width="150">
+<ul>
+  <li>obtained by a hyperplane section of the form $x_i=0$
+  <li>this is the cubic surface with the highest number of <em>real</em> lines: all 27 lines on the cubic can be defined over the real numbers, making this surface a standard example to illustrate the geometry of cubic surfaces
+  <li>its automorphism group is also interesting: it is $\mathrm{S}_5$, which is the second-largest (the largest automorphism group arises for the Fermat cubic, and it's a semidirect product of $\mathrm{S}_4$ with $(\mathbb{Z}/3\mathbb{Z})^3$
+</ul>
+
+<h2>Homological projective geometry</h2>
+<img src="/assets/kuznetsov.png" style="float: right" height="200">
+<p>In classical projective geometry the notion of duality plays an important role. One standard example for the projective plane is are the dual statements that through every 2 distinct points goes a unique line and that every 2 distinct lines intersect in a unique point. For (embedded) projective varieties there exists a whole theory of projective duality, showing how one can recover a variety from its dual, defined as the closure of the points in the dual projective space corresponding to tangent hyperplanes at smooth points.
+<p>I like to study varieties through their derived categories, and the theory of projective duality was generalised by Kuznetsov to a notion of <em>homological projective duality</em> in 2007. Nowadays classical constructions in projective geometry, such as cones and joins, have an incarnation on the level of derived categories, making them applicable to settings far beyond the usual projective varieties, and this theory goes by the name of <em>homological projective geometry</em>
+
+<img src="/assets/quadric.png" style="float: right;" width="150">
+<p>My favourite basic example in projective duality is a (smooth) <strong>quadric hypersurface</strong>, which is projective dual to another smooth quadric hypersurface. On the level of derived categories an interchange between hypersurfaces and double covers arises (essentially because there are 1 or 2 spinor bundles depending on the parity of the dimension).
+<p>Surely, going from a degree 2 equation to a degree 3 equation shouldn't make life too hard?! Turns out it does! If one needs convincing of the rich and complicated nature of <strong>cubic hypersurfaces</strong>, one can check out the <a href="http://www.math.uni-bonn.de/~huybrech/Notes.pdf">book-in-progress by Daniel Huybrechts</a>.
+<p>Now, there does exist a framework that can handle homological projective duals for smooth cubic hypersurfaces. But its output is highly non-trivial. Rather than work with smooth cubics, one can also consider singular cubics, and look for an interesting resolution of singularities, and have fun with the geometry of the original cubic vs. that of the singularity, and that of its (homological) projective dual.
+<p>This <em>reduces</em> the complexity of the machinery, and the <strong>"easiest" case is the most singular case, that of the Segre cubic</strong>.
+
+<h2>What did we do?</h2>
+<p>The Segre cubic and one of its resolutions plays an essential role in <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=4076812">Cheltsov, Kuznetsov, Shramov: Coble fourfold, $\mathfrak{S}_6$-invariant quartic threefolds, and Wiman-Edge sextics</a>. The resolution is a $\mathbb{P}^1$-bundle over the del Pezzo surface $\operatorname{Bl}_4\mathbb{P}^2$ of degree 5. And one of the first results in homological projective duality is a description of homological projective duality for projective bundles, so we can just apply that machinery!
+<p>We end up with an explicit construction of the homological projective dual (as a resolution of the Coble fourfold), which
+<ul>
+  <li>ties together lots of <strong>super-classical</strong> (19th century!) algebraic geometry in terms of <strong>21st century methods</strong>
+  <li>gives a nice <strong>showcase</strong> of methods in homological projective duality: I for one think having this example worked out when I was learning the theory would have been useful
+  <li>features <strong>cameos</strong> of many explicit and interesting varieties: there is a role for cubic surfaces (and the Cayley and Clebsch surface from above in particular), del Pezzo double planes, the blowup of $\mathbb{P}^2$ in 4 points, the Segre cubic threefold, the Castelnuovo&ndash;Richmond&ndash;Igusa quartic threefold, the Coble fourfold, elliptic curves, and their derived categories.
+  <li>allows for an easy and explicit discussion of <em>derived</em> fiber products
+</ul>
+<p>Let me know if you have any questions after reading this, or reading the paper. We've tried to make it accessible (its goal is to be somewhat expository after all), but if things are not clear we gladly improve them.

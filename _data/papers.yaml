@@ -169,6 +169,11 @@ preprints:
       - tanturri
     arxiv: "2104.07626"
 
+  - title: Homological projective duality for the Segre cubic
+    coauthors:
+      - beckmann
+    arxiv: "2202.08601"
+
 
 inprogress:
   - title: Graph potentials and symplectic geometry of moduli of vector bundles
@@ -187,10 +192,7 @@ inprogress:
     coauthors:
       - galkin
       - mukhopadhyay
-
-  - title: Homological projective duality for the Segre cubic
-    coauthors:
-      - beckmann
+    comment: available on request
 
 
 hidden:
