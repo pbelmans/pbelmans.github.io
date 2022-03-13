@@ -5,6 +5,7 @@
     border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
+    background-color: $light-grey-color;
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -144,6 +145,7 @@
 footer {
   border-top: 1px solid #e8e8e8;
   padding-top: 1em;
+  background-color: $light-grey-color;
 }
 
 
