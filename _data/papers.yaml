@@ -81,7 +81,7 @@ published:
     comment: 'see also the related repositories <ul><li style="margin-bottom: 0"><a href="https://github.com/pbelmans/canonical-strip-moduli-of-vector-bundles"><span style="font-family: monospace">canonical-strip-moduli-of-vector-bundles</span></a></li><li><a href="https://github.com/pbelmans/ehrhart-polynomials-toric-fanos"><span style="font-family: monospace">ehrhart-polynomials-toric-fanos</span></a></li></ul>'
     doi: 10.1080/10586458.2019.1602571
     journal: Experimental Mathematics
-    information: published online ahead of print
+    information: volume 31 (1), 2022, pages 233&ndash;237,
 
   - title: Admissible subcategories in derived categories of moduli of vector bundles on curves
     coauthors:
@@ -194,8 +194,6 @@ inprogress:
       - mukhopadhyay
     comment: available on request
 
-
-hidden:
   - title: Projectivity of good moduli spaces of quiver representations
     coauthors:
       - damiolini
@@ -203,6 +201,7 @@ hidden:
       - hoskins
       - makarova
       - tajakka
+    comment: working title
 
 
 other:
