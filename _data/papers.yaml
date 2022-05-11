@@ -157,11 +157,11 @@ preprints:
       - ricolfi
     arxiv: "2007.00994"
 
-  - title: Graph potentials and topological quantum field theories
+  - title: Decompositions of moduli spaces of vector bundles and graph potentials
     coauthors:
       - galkin
       - mukhopadhyay
-    arxiv: "2009.05568"
+    arxiv: "2009.05568v3"
 
   - title: Polyvector fields for Fano 3-folds
     coauthors:
@@ -176,17 +176,17 @@ preprints:
 
 
 inprogress:
-  - title: Graph potentials and symplectic geometry of moduli of vector bundles
+  - title: Graph potentials and symplectic geometry of moduli spaces of vector bundles
     coauthors:
       - galkin
       - mukhopadhyay
-    comment: to be split off from <a href="https://arxiv.org/abs/2009.05568">arXiv:2009.05568</a>, available on request
+    comment: to be split off from <a href="https://arxiv.org/abs/2009.05568v2">arXiv:2009.05568v2</a>, available on request
 
-  - title: Motivic, orthogonal and semiorthogonal decompositions of moduli of vector bundles
+  - title: Graph potentials and topological quantum field theories
     coauthors:
       - galkin
       - mukhopadhyay
-    comment: to be split off from <a href="https://arxiv.org/abs/2009.05568">arXiv:2009.05568</a>, available on request
+    comment: to be split off from <a href="https://arxiv.org/abs/2009.05568v2">arXiv:2009.05568v2</a>, available on request
 
   - title: A combinatorial non-abelian Torelli theorem
     coauthors:
@@ -207,7 +207,8 @@ inprogress:
 other:
   - title: Semiorthogonal decompositions for moduli of sheaves on curves
     journal: Oberwolfach Reports 24/2018
-    information: Interactions between Algebraic Geometry and Noncommutative Algebra, <a href="/assets/owr-1822-belmans.pdf">pages 1473&ndash;1476</a>
+    information: Interactions between Algebraic Geometry and Noncommutative Algebra, pages 1473&ndash;1476
+    pdf: https://pbelmans.ncag.info/assets/owr-1822-belmans.pdf
 
   - title: "Comparing definitions of Hochschild cohomology for algebraic stacks"
     journal: Advances in Mathematics
@@ -220,7 +221,12 @@ other:
 
   - title: How do semiorthogonal decompositions behave in families?
     journal: Oberwolfach Reports 19/2020
-    information: 'Algebraic Geometry: Moduli Spaces, Birational Geometry and Derived Aspects, <a href="/assets/owr-2029-belmans.pdf">pages 985&ndash;989</a>'
+    information: 'Algebraic Geometry: Moduli Spaces, Birational Geometry and Derived Aspects, pages 985&ndash;989'
+    pdf: https://pbelmans.ncag.info/assets/owr-2029-belmans.pdf
+
+  - title: Projectivity of good moduli spaces of semistable quiver representations and vector bundles
+    journal: Oberwolfach Reports ??/2022
+    information: Interactions between Algebraic Geometry and Noncommutative Algebra
 
 
 broad:
