@@ -1,0 +1,46 @@
+---
+layout: post
+title: 'New-ish paper: Graph potentials and topological quantum field theories'
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+<p>There is another new-ish paper on the arXiv now: <strong><a href="">Graph potentials and topological quantum field theories</a></strong>.
+<p>Last week I announced a <a href="{% post_url 2022-05-11-newish-paper %}">new-ish paper</a> which was split off from a large preprint by Sergey Galkin, Swarnava Mukhopadhyay and myself. The new installment is really the first part, in which we define the novel object (namely graph potentials) whose properties we study.
+<hr>
+<br>
+<p>The main goal of this paper is to properly define graph potentials, and study their basic properties.
+They are Laurent polynomials in $3g-3$ variables, where $g$ refers to the genus of a trivalent graph used to define them.
+Locally a trivalent graph looks like
+<p style="text-align: center"><img src="/assets/trivalent.png" width="200">
+<p>where we also see its topological origin relevant for us, from pair-of-pants decompositions of surfaces.
+<p>Labelling the outgoing half-edges as $x,y,z$ and incorporating a coloring $c$ of the vertex (which can be either $0$ or $1$) we can define a Laurent polynomial in $x^{\pm},y^{\pm},z^{\pm}$ as
+\begin{equation}
+  W=
+  \begin{cases}
+    xyz+\frac{x}{yz}+\frac{y}{xz}+\frac{z}{xy} & c=0 \\
+    \frac{1}{xyz}+\frac{xy}{z}+\frac{xz}{y}+\frac{yz}{x} & c=1
+  \end{cases}
+\end{equation}
+<p>For a trivalent graph of genus $g$ without half-edges this defines a Laurent polynomial in $3g-3$ variables, the <strong>graph potential</strong>. Why is this an interesting object?
+
+Topologically speaking, trivalent graphs reflect pair-of-pants decompositions of a surface,
+and there can be many such decompositions, all related via special operations.
+For us the main operation is
+<p style="text-align: center"><img src="/assets/transformation.png" width="300">
+<p>and such an operation induces transformations between the graph potentials.
+The <strong>choice</strong> of trivalent graph influences the shape of the Laurent polynomial, but not really its properties! We are mostly interested in its classical period, which for any Laurent polynomial can be defined as (although this doesn't quite reflect its Hodge-theoretical origins very well)
+\begin{equation}
+  \pi_W(t)=\sum_{k\geq 0}[W^k]_0t^k
+\end{equation}
+where $[f]_0$ is the constant term of a Laurent polynomial.
+
+<p>This fact allows us to define a <strong>topological quantum field theory</strong> which computes its classical period really efficiently.
+The great thing about this computational approach is that it works for all genera simultaneously,
+and one can implement this implementation super-easily on a computer.
+<p>The paper also surveys what happens in the rest of the series (2 more parts to come, so 4 in total).
+So if you want to read 5 pages out of the 100+, this paper's introduction is probably your best choice.
