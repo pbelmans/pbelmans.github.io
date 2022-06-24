@@ -12,6 +12,7 @@ accepted:
       - liang
       - tajakka
     journal: "accepted for publication in SPEC: Stacks Project Expository Collection"
+    arxiv: "2206.06195"
 
 
 published:
@@ -180,14 +181,13 @@ preprints:
       - mukhopadhyay
     arxiv: "2205.07244"
 
-
-inprogress:
   - title: Graph potentials and symplectic geometry of moduli spaces of vector bundles
     coauthors:
       - galkin
       - mukhopadhyay
-    comment: to be split off from <a href="https://arxiv.org/abs/2009.05568v2">arXiv:2009.05568v2</a>, available on request
+    arxiv: "2206.11584"
 
+inprogress:
   - title: A combinatorial non-abelian Torelli theorem
     coauthors:
       - galkin
