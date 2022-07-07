@@ -14,6 +14,12 @@ accepted:
     journal: "accepted for publication in SPEC: Stacks Project Expository Collection"
     arxiv: "2206.06195"
 
+  - title: Homological projective duality for the Segre cubic
+    coauthors:
+      - beckmann
+    journal: accepted for publication in Proceedings of Nottingham Algebraic Geometry Seminar
+    arxiv: "2202.08601"
+
 
 published:
   - title: Embeddings of algebras in derived categories of surfaces
@@ -169,11 +175,6 @@ preprints:
       - fatighenti
       - tanturri
     arxiv: "2104.07626"
-
-  - title: Homological projective duality for the Segre cubic
-    coauthors:
-      - beckmann
-    arxiv: "2202.08601"
 
   - title: Graph potentials and topological quantum field theories
     coauthors:
