@@ -1,0 +1,46 @@
+---
+layout: post
+title: 'New-ish paper: Graph potentials and symplectic geometry of moduli spaces of vector bundles'
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+<p>There has been 2 earlier posts about new(ish) papers recently, <a href="{% post_url 2022-05-11-newish-paper %}">a first one</a> and <a href="{% post_url 2022-05-17-newish-paper-2 %}">a second one</a>, where the new(ish) refers to the fact that they are split off and expanded from a preprint from 2 years ago by Sergey Galkin, Swarnava Mukhopadhyay and myself. Now the third installment, called <a href="https://arxiv.org/abs/2206.11584">Graph potentials and symplectic geometry of moduli spaces of vector bundles</a>.
+<hr>
+<br>
+<p>In the first paper we introduced graph potentials, a family of Laurent polynomials with interesting properties.
+In the current paper we explain why we were motivated in the first place to introduce these graph potentials:
+to understand mirror symmetry for moduli spaces of rank 2 bundles on curves.
+<p>This forms part of the mirror symmetry picture for Fano varieties,
+which is maybe slightly less familiar territory than mirror symmetry for Calabi&ndash;Yau varieties for most.
+The mirror to a Fano variety $X$ is a Landau&ndash;Ginzburg model $f\colon Y\to\mathbb{A}^1$
+(where $Y$ is a smooth quasiprojective variety and $f$ is a regular function),
+so mirror symmetry is "less symmetric" in the sense that it involves objects of a different nature.
+But there are still 2 comparisons:
+<ul>
+  <li>the symplectic geometry of $X$ "equals" the complex geometry of $(Y,f)$
+  <li>the complex geometry of $X$ "equals" the symplectic geometry of $(Y,f)$
+</ul>
+<p>We will be interested in the first comparison, and we are concerned with enumerative mirror symmetry.
+The enumerative invariant on the symplectic side is Gromov&ndash;Witten theory,
+and the <strong>quantum period</strong> in particular.
+This is a generating series for counting rational curves on $X$.
+On the complex side we are looking for a Hodge-theoretic invariant
+(this is <a href="https://en.wikipedia.org/wiki/Quintic_threefold#Rational_curves">similar to the initial success story of mirror symmetry for the quintic 3-fold!</a>)
+which will be the <strong>classical period</strong>.
+We only need $Y$ to be a torus for this,
+so that $f$ is in fact a Laurent polynomial.
+<p>This type of enumerative mirror symmetry is only looking at a certain "fingerprint" of the objects involved,
+and there is plenty of things which are not being compared.
+But it is an excellent litmus test for checking whether your candidate mirror construction is indeed valid.
+And this is exactly what we do!
+<p><strong>Theorem</strong> The classical period of the graph potential equals the quantum period of the moduli space of rank 2 bundles on a curve.</p>
+
+<p><small>Last week I gave a talk about this work in Oberwolfach, so I'll be writing an extended abstract for it soon.
+If you are interested in a slightly more technical overview,
+without having to read the paper (or just its introduction)
+I hope that will satisfy your needs.</small>
