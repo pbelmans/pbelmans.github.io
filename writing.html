@@ -160,25 +160,25 @@ p.journal {
 </ol>
 
 <h3>Lecture notes</h3>
-<ol class="publications">
+<ul class="publications">
 {% for paper in site.data.papers.lecture-notes %}
   {% include publication.html paper=paper %}
 {% endfor %}
-</ol>
+</ul>
 
 <h3>Not intended for publication</h3>
-<ol class="publications">
+<ul class="publications">
 {% for paper in site.data.papers.not-for-publication %}
   {% include publication.html paper=paper %}
 {% endfor %}
-</ol>
+</ul>
 
 <h2>Non-mathematical writing</h2>
-<ol class="publications">
+<ul class="publications">
 {% for paper in site.data.papers.not-math %}
   {% include publication.html paper=paper %}
 {% endfor %}
-</ol>
+</ul>
 
 This gives the following list of coauthors:
 {% for coauthor in site.data.coauthors %}
