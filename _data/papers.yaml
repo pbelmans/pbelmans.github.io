@@ -238,14 +238,19 @@ other:
 
 broad:
   - title: Het Stacks project
-    journal: Nieuw Archief voor Wiskunde
-    information: (5) 21 (2020), no. 3, pages 167&ndash;173
+    coauthors:
+      - dejong
+    journal: Nieuw Archief voor Wiskunde (serie 5)
+    information: volume 21 (3), 2020, pages 167&ndash;173
     pdf: http://www.nieuwarchief.nl/serie5/pdf/naw5-2020-21-3-167.pdf
 
   - title: Curating Online Mathematical Resources
     journal: Notices of the American Mathematical Society
-    information: volume 69, number 9, pages 1524&ndash;1527
+    information: volume 69 (9), 2021, pages 1524&ndash;1527
     pdf: https://www.ams.org/journals/notices/202109/rnoti-p1524.pdf
+
+  - title: The periodic tables of algebraic geometry
+    journal: Snapshots of modern mathematics from Oberwolfach
 
 
 lecture-notes:
