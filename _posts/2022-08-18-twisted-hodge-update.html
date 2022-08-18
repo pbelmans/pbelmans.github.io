@@ -1,0 +1,26 @@
+---
+layout: post
+title: "Updates for twisted Hodge diamonds for complete intersections"
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+- programming
+author: Pieter Belmans
+---
+
+{% include twisted-hodge.html %}
+
+<p>Almost 3 years ago Piet Glas (who did his master thesis under my supervision) and I <a href="{% post_url 2019-11-06-twisted-hodge %}">released code to compute twisted Hodge numbers of complete intersections</a>, based on formulas obtained by Peter Brückmann. It is time to mention some updates about it.
+<ol>
+  <li><p>I realised at some point there was a small bug. I never really got around to figuring out its cause until now.
+    <p>But <a href="https://github.com/pbelmans/twisted-hodge/commit/781bbd8c7431fb5ae94473e2c18b641640244272">it is now fixed</a>. The master thesis had the right formula, and the original implementation due to Piet had the right implementation, I just made a silly mistake in the final implementation. As explained in the commit log, I just messed up reading the parentheses in a formula of the paper. It's really like the universe is telling me to never program in Lisp.
+    <p>The curious thing is that the tests I wrote to compare the two implementations did not catch the discrepancy, so I was unlucky that my tests didn't cover enough ground.
+
+  <li><p>Talking about tests, I have added lots of tests to the code, and they can be run automatically now, so hopefully this will catch any future issues.
+
+  <li><p>Because the fix in the first point was related to characteristic 0 versus characteristic $p$, I decided to extend the computations to also work in positive characteristic. This part is not as seriously tested as the original part, so be careful in using it.
+
+  <li><p>I have created a DOI: <a href="https://zenodo.org/badge/latestdoi/220016736"><img src="https://zenodo.org/badge/220016736.svg" alt="DOI"></a>. This page also contains information on how to cite the software in case you use it.
+</ol>
