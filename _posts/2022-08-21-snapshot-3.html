@@ -1,0 +1,61 @@
+---
+layout: post
+title: 'The periodic tables of algebraic geometry: 3-folds and beyond'
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+<div style="background-color: rgb(255, 243, 205); border: 1px solid rgb(255, 238, 186); padding: 10px;">
+The <a href="https://www.mfo.de/outreach-media/snapshots">Snapshots of modern mathematics from Oberwolfach</a> is a series of outreach articles. Last month I attended <a href="https://www.mfo.de/occasion/2228/www_view">a workshop there</a> and I was asked to write something for it. Long story short, if you are impatient, you can <a href="/assets/snapshot.pdf">read the result all in one go</a>. But in the spirit of magazine science fiction I will also be posting it in installments on my blog. So below you'll see a version of the last two sections adapted to the web.
+</div>
+
+<h3 id="section:fano-3-folds">Fano 3-folds: Mori–Mukai</h3>
+<p>In our journey through smooth projective varieties we now reach dimension 3. From this point on it is impossible to make good pictures (although algebraic geometers do develop an intuition for these objects, and make drawings which are hard, if not downright impossible, to be interpreted by outsiders).</p>
+<p>For curves and surfaces we saw that the trichotomy between positive, flat and negative curvature gave very different flavours to the classification problem. This pattern continues in higher dimension. The analogue of the <span class="math inline">\(g=0\)</span> case for curves (so with positive curvature) and del Pezzo surfaces are so-called <em>Fano varieties</em>, and thus in dimension 3 these are called <em>Fano 3-folds</em>. We will first talk about these, as a full classification indeed exists. In dimension 2 we already saw that there are 10 families of del Pezzo surfaces. So, what about dimension 3?</p>
+<p>Again, there exists a full classification, due to Mori and Mukai in 1981 (with important preliminary work by Iskovskikh), building on the results for which Mori eventually won the Fields medal in 1990. There are 105 families in the classification: originally they listed 104, but back in 2003 they found a missing case.</p>
+<p>The geometry of Fano 3-folds is truly a treasure trove of interesting algebraic geometry, with lots of ongoing work which falls outside the scope of this snapshot. Having a classification of the objects is after all not the end of the work, but rather the beginning of the systematic study.</p>
+<h4 id="fano-4-folds">Fano 4-folds</h4>
+<p>Having classified Fano varieties in dimensions 1, 2 and 3 we can turn to the classification of Fano varieties in higher dimension. An important result from 1992 by Kollár–Miyaoka–Mori is that in any dimension <span class="math inline">\(n\)</span>, the number of deformation families is <em>finite</em> (we continue to only consider smooth projective varieties). But we have no idea how large this number really is. If we try to make the bound “effective” we end up with an upper bound of <span class="math display">\[(n+2)^{(n+2)^{n2^{3n}}}\]</span> for the number of families of <span class="math inline">\(n\)</span>-dimensional Fano varieties. For <span class="math inline">\(n=1\)</span> this gives a number with 3131 digits, which is <em>very</em> far off from the true value, which we saw is <span class="math inline">\(1\)</span>.</p>
+<p>The first open case is the classification of Fano 4-folds. This is a large undertaking with many people working on it from different perspectives, and this topic alone would make another great Snapshot. Currently we have found about 700 families of Fano 4-folds, but we have no idea how close we are to a full classification. We know that there is only a finite number, but we don’t know we are close (say the total number is 1000) or still very far off (say the total number is 100000). Hopefully within a few years we will know how to continue the sequence <span class="math inline">\(1,10,105\)</span>.</p>
+<p>One could also try to classify singular Fano varieties. The essential ingredient for this— the finiteness of the classification problem— was provided recently by Birkar, for which he received the Fields medal in 2018.</p>
+<h4 id="calabiyau-3-folds">Calabi–Yau 3-folds</h4>
+<p>Instead of going to higher-dimensional varieties with positive curvature, we could consider 3-dimensional varieties with flat curvature: <em>Calabi–Yau 3-folds</em>. They are the analogues of the K3 surfaces and abelian surfaces we saw before. These objects have played a tremendously important role in theoretical physics and string theory, and given their importance mathematicians have been constructing more and more of these. Their beautiful properties and ongoing classification would form an excellent subject for yet another Snapshot.</p>
+<p>But frustratingly enough, we don’t know whether the final classification in this case is a finite classification or not! To give a precise number of the number of currently known families of Calabi–Yau 3-folds is hard, because it requires a careful comparison of all the different constructions. Let us just point out that one important type of construction (using reflexive 4-dimensional polytopes, of which there are a whopping 473 800 776) gives rise to 30 108 families of Calabi–Yau 3-folds which are guaranteed to be different.</p>
+<h3 id="section:hyperkaehler">Hyperkähler varieties</h3>
+<p>One important theme that has been present is that the higher we go in dimension, the more restrictive we want our class of varieties in order to have any hope of classification. The final periodic table in algebraic geometry we want to discuss is one of the most mysterious.</p>
+<p>Amongst the varieties of flat curvature there exists a decomposition into building blocks, just like we can decompose molecules into atoms (for arbitrary varieties there is nothing like such a decomposition). There are 3 types:</p>
+<ul>
+<li><p>abelian varieties of arbitrary dimension;</p></li>
+<li><p>Calabi–Yau varieties of dimension <span class="math inline">\(\geq 3\)</span>;</p></li>
+<li><p>hyperkähler varieties.</p></li>
+</ul>
+<p>So the classification problem of varieties with flat curvature reduces to three different classification problems.</p>
+<p>We already discussed the classification of Calabi–Yau 3-folds, and in arbitrary dimension the situation is the same: we don’t know whether the classification is finite, but we can construct <em>many</em> (really, many!) examples. On the other hand, although they possess lots of interesting geometry, the classification of abelian varieties is straightforward: in every dimension there is a single family.</p>
+<p>That leaves us with hyperkähler varieties. These are necessarily even-dimensional, and possess an extremely rich and beautiful geometry. Amongst all the varieties we discussed so far, the only hyperkähler varieties are K3 surfaces. Are there any others?</p>
+<p>The first examples of dimension <span class="math inline">\(\geq 4\)</span> were obtained by Beauville in 1983. Using K3 surfaces he constructed a family of hyperkähler varieties of dimension <span class="math inline">\(2n\)</span>. We will call varieties of this type <span class="math inline">\(\mathrm{K3}^{[n]}\)</span>. Similarly using abelian surfaces he constructed another family of hyperkähler varieties of dimension <span class="math inline">\(2n\)</span>. We will call varieties of this type <span class="math inline">\(\mathrm{Kum}^n\)</span>. By computing a numerical invariant of elements in these two families Beauville could moreover show that they are <em>different</em> families.</p>
+<p>Mathematicians have found other constructions of hyperkähler varieties, but they all were similar to <span class="math inline">\(\mathrm{K3}^{[n]}\)</span> and <span class="math inline">\(\mathrm{Kum}^n\)</span> (in the precise sense that they are deformation equivalent). Is this then the end of the classification? <strong>No</strong>!</p>
+<p>In 1999 and 2003 O’Grady constructed two new families of hyperkähler varieties, again using K3 surfaces and abelian surfaces, but sufficiently different from the previous construction in order to be truly new. Because they are 6- resp. 10-dimensional we will call them <span class="math inline">\(\mathrm{OG}_6\)</span> and <span class="math inline">\(\mathrm{OG}_{10}\)</span>. Currently they look “exceptional”, in the sense that they are seemingly not part of a construction that works in arbitrary dimension.</p>
+<p>Is <em>this</em> then the end of the classification? Are all hyperkähler varieties of type <span class="math inline">\(\mathrm{K3}^{[n]}\)</span>, <span class="math inline">\(\mathrm{Kum}^n\)</span>, <span class="math inline">\(\mathrm{OG}_6\)</span> and <span class="math inline">\(\mathrm{OG}_{10}\)</span>? We have <strong>absolutely no idea</strong>! Already in dimension 4 we don’t know whether <span class="math inline">\(\mathrm{K3}^{[2]}\)</span> and <span class="math inline">\(\mathrm{Kum}^2\)</span> are all the types we need. There might be a type of hyperkähler variety that has been hiding from us, like a beautiful butterfly deep within the rain forest. In other words, we are still far from understanding the periodic table of hyperkähler varieties.</p>
+<p>Or are we? Mathematicians have come up with a curious conjecture that would describe the periodic table of hyperkähler varieties. There is some similarity between this classification and that of (certain) simple Lie algebras. The latter classification is a famous result from the 19th century, involving 2 infinite families, and 3 exceptional cases. So provided the speculation is correct, we might be close to finding all the necessary objects. Maybe in a few years time someone will be able to write a Snapshot about a proof of this conjecture.</p>
+<h4 id="interactive-periodic-tables-in-algebraic-geometry">Interactive periodic tables in algebraic geometry</h4>
+<p>Do you want to see some “periodic tables” in algebraic geometry in action? The author has created various interactive interfaces for some of classification results:</p>
+<ul>
+<li><p><a href="https://superficie.info" class="uri"><code>https://superficie.info</code></a>: Enriques–Kodaira classification of surfaces (joint with Johan Commelin)</p></li>
+<li><p><a href="https://fanography.info" class="uri"><code>https://fanography.info</code></a>: Mori–Mukai classification of Fano 3-folds</p></li>
+<li><p><a href="https://hyperkaehler.info" class="uri"><code>https://hyperkaehler.info</code></a>: classification of hyperkähler varieties</p></li>
+<li><p><a href="https://grassmannian.info" class="uri"><code>https://grassmannian.info</code></a>: generalised Grassmannians (not discussed)</p></li>
+</ul>
+<p>It might be hard to really understand what is happening there, but hopefully it is clear that mathematicians are truly interested in classifications.</p>
+<h4 id="acknowledgements">Acknowledgements</h4>
+<p><span> I would like to thank the organisers of Oberwolfach workshop number 2228, Algebraic Geometry: Moduli Spaces, Birational Geometry and Derived Categories, for the invitation to prepare this snapshot. The work on this Snapshot was supported by the Luxembourg National Research Fund (FNR) (PSP-Classic: Classified Mathematics). </span></p>
+<h4 id="image-credits">Image credits</h4>
+<div class="description">
+<p>“Collection drawer with butterflies in Upper Silesian Museum in Bytom, Poland”. Author: Marek S̀lusarczyk. <a href="https://en.wikipedia.org/wiki/File:04_Museum_insect_specimen_drawer_(Schmetterlings_Exemplar)_-_Muzeum_Gornoslaskie,_Bytom,_Poland.jpg#file">Licensed under Creative Commons Attribution 3.0 Unported</a>, visited on August 4, 2022.</p>
+<p>“Periodic table of elements”. Original authors: Ryan Griffin and Janosh Riebesell. Licensed under MIT License, modified by the author from <a href="https://tikz.net/periodic-table" class="uri"><code>https://tikz.net/periodic-table</code></a>, visited on August 4, 2022.</p>
+<p>Created by the author using SageMath or Ti<em>k</em>Z.</p>
+</div>
+
