@@ -20,6 +20,13 @@ accepted:
     journal: accepted for publication in Proceedings of Nottingham Algebraic Geometry Seminar
     arxiv: "2202.08601"
 
+  - title: Derived categories of standard flips and cubic hypersurfaces
+    coauthors:
+      - fu
+      - raedschelders
+    arxiv: "2002.04940"
+    journal: Proceedings of the London Mathematical Society
+
 
 published:
   - title: Embeddings of algebras in derived categories of surfaces
@@ -150,12 +157,6 @@ preprints:
       - okawa
       - ricolfi
     arxiv: "2002.03303"
-
-  - title: Derived categories of standard flips and cubic hypersurfaces
-    coauthors:
-      - fu
-      - raedschelders
-    arxiv: "2002.04940"
 
   - title: Indecomposability of derived categories in families
     coauthors:
