@@ -5,15 +5,6 @@ accepted:
     arxiv: "1909.04321"
     journal: accepted for publication in Michigan Mathematical Journal
 
-  - title: Projectivity of the moduli space of vector bundles on a curve
-    coauthors:
-      - alper
-      - bragg
-      - liang
-      - tajakka
-    journal: "accepted for publication in SPEC: Stacks Project Expository Collection"
-    arxiv: "2206.06195"
-
   - title: Homological projective duality for the Segre cubic
     coauthors:
       - beckmann
@@ -56,6 +47,7 @@ published:
     arxiv: "1605.02795"
     doi: 10.1093/imrn/rny192
     mathscinet: "4165471"
+    zbmath: "1481.14034"
     journal: IMRN
     information: volume 2020, issue 19, pages 6042&ndash;6069
 
@@ -94,6 +86,8 @@ published:
     arxiv: "1806.07644"
     comment: 'see also the related repositories <ul><li style="margin-bottom: 0"><a href="https://github.com/pbelmans/canonical-strip-moduli-of-vector-bundles"><span style="font-family: monospace">canonical-strip-moduli-of-vector-bundles</span></a></li><li style="margin-bottom: 0"><a href="https://github.com/pbelmans/ehrhart-polynomials-toric-fanos"><span style="font-family: monospace">ehrhart-polynomials-toric-fanos</span></a></li></ul>'
     doi: 10.1080/10586458.2019.1602571
+    mathscinet: 4399121
+    zbmath: "1485.14071"
     journal: Experimental Mathematics
     information: volume 31 (1), 2022, pages 233&ndash;237,
 
@@ -137,6 +131,16 @@ published:
     doi: 10.1007/s00031-021-09657-w
     journal: Transformation Groups
     information: published online ahead of print
+
+  - title: Projectivity of the moduli space of vector bundles on a curve
+    coauthors:
+      - alper
+      - bragg
+      - liang
+      - tajakka
+    arxiv: "2206.06195"
+    journal: "SPEC: Stacks Project Expository Collection"
+    information: chapter 3, pages 90&ndash;125
 
 
 preprints:
@@ -196,7 +200,7 @@ inprogress:
       - mukhopadhyay
     comment: available on request
 
-  - title: Effective bounds and ampleness of determinantal line bundles on moduli spaces of quiver representations
+  - title: Projectivity and effective basepoint-freeness for moduli spaces of quiver representations
     coauthors:
       - damiolini
       - franzen
@@ -210,6 +214,7 @@ other:
   - title: Semiorthogonal decompositions for moduli of sheaves on curves
     journal: Oberwolfach Reports 24/2018
     information: Interactions between Algebraic Geometry and Noncommutative Algebra, pages 1473&ndash;1476
+    doi: 10.14760/OWR-2018-24
     pdf: https://pbelmans.ncag.info/assets/owr-1822-belmans.pdf
 
   - title: "Comparing definitions of Hochschild cohomology for algebraic stacks"
@@ -223,6 +228,7 @@ other:
 
   - title: How do semiorthogonal decompositions behave in families?
     journal: Oberwolfach Reports 19/2020
+    doi: 10.14760/OWR-2020-19
     information: 'Algebraic Geometry: Moduli Spaces, Birational Geometry and Derived Aspects, pages 985&ndash;989'
     pdf: https://pbelmans.ncag.info/assets/owr-2029-belmans.pdf
 
@@ -232,8 +238,9 @@ other:
     pdf: https://pbelmans.ncag.info/assets/owr-2218-belmans.pdf
 
   - title: Mirror symmetry for moduli of rank 2 bundles on a curve
-    journal: Oberwolfach Reports ??/2022
+    journal: Oberwolfach Reports 32/2022
     information: 'Algebraic Geometry: Moduli Spaces, Birational Geometry and Derived Aspects'
+    doi: 10.14760/OWR-2022-32
     pdf: https://pbelmans.ncag.info/assets/owr-2228-belmans.pdf
 
 
