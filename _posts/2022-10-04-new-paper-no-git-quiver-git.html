@@ -1,0 +1,65 @@
+---
+layout: post
+title: 'New paper: Projectivity and effective global generation of determinantal line bundles on quiver moduli'
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+<p>I'm super-stoked to have <a href="https://arxiv.org/abs/2210.00033">Projectivity and effective global generation of determinantal line bundles on quiver moduli</a> on the arXiv now! This is a joint project with
+<a href="{{ site.data.coauthors['damiolini'].url }}">Chiara Damiolini</a>,
+<a href="{{ site.data.coauthors['franzen'].url }}">Hans Franzen</a>,
+<a href="{{ site.data.coauthors['hoskins'].url }}">Victoria Hoskins</a>,
+<a href="{{ site.data.coauthors['makarova'].url }}">Svetlana Makarova</a> and
+<a href="{{ site.data.coauthors['tajakka'].url }}">Tuomas Tajakka</a>,
+and it is truly a pandemic project:
+<ul>
+  <li>the idea was conceived during <a href="https://aimath.org/pastworkshops/newmethodmoduliV.html">Moduli problems beyond geometric invariant theory</a>, which happened almost a year into the pandemic,
+    <li>the question was inspired by the expository write-up Tuomas and I wrote together with Jarod, Dan and Jason on a GIT-free proof of the <a href="https://arxiv.org/abs/2206.06195">projectivity of the moduli space of vector bundles on a curve</a>, which was started during the Stacks project workshop in 2020 which was also fully online,
+  <li>the authors have never met in-person,
+  <li>at least for me it was great to have some sense of purpose during the pandemic, having weekly meetings with a group of great people!
+</ul>
+
+<p>So what is this all about? One powerful tool to <strong>construct moduli spaces</strong> is <em>geometric invariant theory</em>.
+If you can write down a variety which "over-parametrises" your moduli space,
+together with a group action that allows you to identify exactly the things that need to be identified,
+you can just apply a machine called GIT and construct the moduli space.
+<p>This was introduced by Mumford in the first half of the 1960s,
+and used in 1965 by Narasimhan and Seshadri to construct the <strong>moduli space of stable bundles on a curve</strong>.
+It was extended to semistable bundles by Seshadri, thus obtaining a projective moduli space.
+<p>Curves are one-dimensional, and quivers are also one-dimensional in a homological sense.
+There are many parallels between curves and quivers (nicely explained in Vicky's <a href="https://www.emis.de/journals/SIGMA/2018/127/">Parallels between moduli of quiver representations and vector bundles over curves</a>).
+Now that we are convinced we are interested in <strong>moduli spaces of quiver representations</strong>,
+and these being linear algebra data from the get-go,
+it is very natural to use geometric invariant theory for their construction.
+
+<p>But in the case of moduli of vector bundles
+Faltings introduced in the early 1990s a method to construct the moduli space as a projective variety which does not use geometric invariant theory! Rather (although not quite written in this language)
+he shows that there exists an ample line bundle on the moduli stack which descends to an ample line bundle on the moduli space.
+An expository account of this result (although not using the technique of Faltings to show ampleness) was given in <a href="https://arxiv.org/abs/2206.06195">Projectivity of the moduli space of vector bundles on a curve</a>.
+<p>So what did the six of us do?
+We unleashed our inner Faltings, and showed the projectivity of the moduli space of semistable quiver representations on an acyclic quiver <strong>without GIT</strong>,
+and explicitly prove ampleness of a line bundle constructed using on the moduli space.
+The construction of this line bundle is completely parallel to what happens for curves (it is a determinantal construction),
+and was already studied (although not explicitly in this language) by Schofield around 1990.
+
+<p>Why is it interesting to do this? That of course depends on who's asking (or listening). I can tell you that my personal reasons were:
+<ul>
+  <li>it is a great way to understand further parallels between curves and quivers,
+  <li>sometimes you can't use GIT to construct moduli spaces, so having "elementary" cases like this to guide you the way in proving projectivity is very useful,
+  <li>it is a great test case and exposition for the theory of good and adequate moduli spaces (we work over rather general bases!),
+  <li>it actually gives you effective bounds on when certain line bundles become globally generated:
+    a question which has seen great interest in the case of moduli of vector bundles on curves,
+    and which now becomes tractable to study for moduli of quiver representations.
+</ul>
+<p>If you want to know more, I happily invite you to:
+<ul>
+  <li>read the introduction of the paper
+  <li>read <a href="/assets/owr-2218-belmans.pdf">a related Oberwolfach report</a>
+  <li>read the main body of the paper (if you are ambitious)
+  <li>ask me questions you might have
+  <li>invite one of my coauthors (or me) to give a talk about it
+</ul>

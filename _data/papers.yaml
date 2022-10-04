@@ -11,13 +11,6 @@ accepted:
     journal: accepted for publication in Proceedings of Nottingham Algebraic Geometry Seminar
     arxiv: "2202.08601"
 
-  - title: Derived categories of standard flips and cubic hypersurfaces
-    coauthors:
-      - fu
-      - raedschelders
-    arxiv: "2002.04940"
-    journal: accepted for publication in Proceedings of the London Mathematical Society
-
 
 published:
   - title: Embeddings of algebras in derived categories of surfaces
@@ -123,6 +116,14 @@ published:
     journal: Transactions of the American Mathematical Society
     information: volume 373 (9), 2020, pages 6139&ndash;6156
 
+  - title: Derived categories of standard flips and cubic hypersurfaces
+    coauthors:
+      - fu
+      - raedschelders
+    arxiv: "2002.04940"
+    journal: accepted for publication in Proceedings of the London Mathematical Society
+    doi: 10.1112/plms.12487
+
   - title: Derived categories of the Cayley plane and the coadjoint Grassmannian in type F
     coauthors:
       - kuznetsov
@@ -193,20 +194,21 @@ preprints:
       - mukhopadhyay
     arxiv: "2206.11584"
 
-inprogress:
-  - title: A combinatorial non-abelian Torelli theorem
-    coauthors:
-      - galkin
-      - mukhopadhyay
-    comment: available on request
-
   - title: Projectivity and effective global generation of determinantal line bundles on quiver moduli
+    arxiv: "2210.00033"
     coauthors:
       - damiolini
       - franzen
       - hoskins
       - makarova
       - tajakka
+
+inprogress:
+  - title: A combinatorial non-abelian Torelli theorem
+    coauthors:
+      - galkin
+      - mukhopadhyay
+    comment: available on request
 
 
 other:
