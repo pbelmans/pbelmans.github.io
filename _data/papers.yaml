@@ -212,6 +212,9 @@ inprogress:
     comment: available on request
 
   - title: Hochschild cohomology of symmetric quotient stacks
+    coauthors:
+      - fu
+      - krug
 
 
 other:
