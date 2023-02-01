@@ -119,7 +119,7 @@ p.journal {
 </ul>
 
 <h3 id="accepted">Accepted for publication</h3>
-<ol class="publications reverse" style="counter-reset: publications 12">
+<ol class="publications reverse" style="counter-reset: publications {{ site.data.papers.published | size }}">
 {% for paper in site.data.papers.accepted %}
   {% include publication.html paper=paper %}
 {% endfor %}
@@ -133,7 +133,8 @@ p.journal {
 </ol>
 
 <h3 id="preprints">Preprints</h3>
-<ol class="publications" style="counter-reset: publications 15">
+{% assign both = site.data.papers.published | concat: site.data.papers.accepted %}
+<ol class="publications" style="counter-reset: publications {{ both | size }}">
 {% for paper in site.data.papers.preprints %}
   {% include publication.html paper=paper %}
 {% endfor %}

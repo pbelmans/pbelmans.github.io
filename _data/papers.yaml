@@ -121,8 +121,10 @@ published:
       - fu
       - raedschelders
     arxiv: "2002.04940"
-    journal: accepted for publication in Proceedings of the London Mathematical Society
+    journal: Proceedings of the London Mathematical Society
+    information: volume 125 (6), 2022, pages 1452&ndash;1482
     doi: 10.1112/plms.12487
+    mathscinet: "4524222"
 
   - title: Derived categories of the Cayley plane and the coadjoint Grassmannian in type F
     coauthors:
@@ -143,6 +145,7 @@ published:
     journal: "SPEC: Stacks Project Expository Collection"
     doi: 10.1017/9781009051897.005
     information: chapter 3, pages 90&ndash;125
+    mathscinet: "4480534"
 
 
 preprints:
@@ -211,7 +214,7 @@ inprogress:
       - mukhopadhyay
     comment: available on request
 
-  - title: Hochschild cohomology of symmetric quotient stacks
+  - title: Hochschild cohomology of Hilbert schemes of points
     coauthors:
       - fu
       - krug
