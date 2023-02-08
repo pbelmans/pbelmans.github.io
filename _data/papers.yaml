@@ -11,6 +11,13 @@ accepted:
     journal: accepted for publication in Proceedings of Nottingham Algebraic Geometry Seminar
     arxiv: "2202.08601"
 
+  - title: Decompositions of moduli spaces of vector bundles and graph potentials
+    coauthors:
+      - galkin
+      - mukhopadhyay
+    arxiv: "2009.05568v3"
+    journal: accepted for publication in Forum of Mathematics, Sigma
+
 
 published:
   - title: Embeddings of algebras in derived categories of surfaces
@@ -173,12 +180,6 @@ preprints:
       - okawa
       - ricolfi
     arxiv: "2007.00994"
-
-  - title: Decompositions of moduli spaces of vector bundles and graph potentials
-    coauthors:
-      - galkin
-      - mukhopadhyay
-    arxiv: "2009.05568v3"
 
   - title: Polyvector fields for Fano 3-folds
     coauthors:
