@@ -20,6 +20,13 @@ accepted:
     journal: accepted for publication in Forum of Mathematics, Sigma
     doi: 10.1017/fms.2023.14
 
+  - title: Polyvector fields for Fano 3-folds
+    coauthors:
+      - fatighenti
+      - tanturri
+    arxiv: "2104.07626"
+    journal: accepted for publication in Mathematische Zeitschrift
+
 
 published:
   - title: Embeddings of algebras in derived categories of surfaces
@@ -182,12 +189,6 @@ preprints:
       - okawa
       - ricolfi
     arxiv: "2007.00994"
-
-  - title: Polyvector fields for Fano 3-folds
-    coauthors:
-      - fatighenti
-      - tanturri
-    arxiv: "2104.07626"
 
   - title: Graph potentials and topological quantum field theories
     coauthors:
