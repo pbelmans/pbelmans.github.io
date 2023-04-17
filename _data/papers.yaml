@@ -18,6 +18,13 @@ accepted:
       - tanturri
     arxiv: "2104.07626"
     journal: accepted for publication in Mathematische Zeitschrift
+    doi: 10.1007/s00209-023-03261-2
+
+  - title: Hochschild cohomology of generalised Grassmannians
+    coauthors:
+      - smirnov
+    arxiv: "1911.09414"
+    journal: accepted for publication in Documenta Mathematica
 
 
 published:
@@ -140,6 +147,7 @@ published:
       - smirnov
     arxiv: "2005.01989"
     doi: 10.1007/s00031-021-09657-w
+    mathscinet: "4552169"
     journal: Transformation Groups
     information: volume 28, 2023, pages 9&ndash;34
 
@@ -163,6 +171,7 @@ published:
     journal: Forum of Mathematics, Sigma
     information: volume 11:e16, 2023, pages 1&ndash;28
     doi: 10.1017/fms.2023.14
+    mathscinet: "4557892"
 
 
 preprints:
@@ -172,11 +181,6 @@ preprints:
       - vandenbergh
     arxiv: "1811.08810"
     comment: <small>We will retitle this to "The Hirzebruch isomorphism for exotic noncommutative surfaces".</small>
-
-  - title: Hochschild cohomology of generalised Grassmannians
-    coauthors:
-      - smirnov
-    arxiv: "1911.09414"
 
   - title: Moduli spaces of semiorthogonal decompositions in families
     coauthors:
