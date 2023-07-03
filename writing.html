@@ -140,12 +140,20 @@ p.journal {
 {% endfor %}
 </ol>
 
+<h3>Preprints needing revision</h3>
+<ol class="publications">
+{% for paper in site.data.papers.needingrevision %}
+  {% include publication.html paper=paper %}
+{% endfor %}
+</ol>
+
 <h3>Preprints nearing completion</h3>
 <ol class="publications">
 {% for paper in site.data.papers.inprogress %}
   {% include publication.html paper=paper %}
 {% endfor %}
 </ol>
+
 
 
 <h3 id="other">Other publications</h3>

@@ -154,6 +154,7 @@ published:
     doi: 10.1017/9781009051897.005
     information: chapter 3, pages 90&ndash;125
     mathscinet: "4480534"
+    zbmath: "1506.14072"
 
   - title: Decompositions of moduli spaces of vector bundles and graph potentials
     coauthors:
@@ -173,29 +174,10 @@ published:
     journal: Mathematische Zeitschrift
     information: volume 304, 12 (2023)
     doi: 10.1007/s00209-023-03261-2
+    mathscinet: "4578397"
 
 
 preprints:
-  - title: Comparison of two constructions of noncommutative surfaces with exceptional collections of length 4
-    coauthors:
-      - presotto
-      - vandenbergh
-    arxiv: "1811.08810"
-    comment: <small>We will retitle this to "The Hirzebruch isomorphism for exotic noncommutative surfaces".</small>
-
-  - title: Moduli spaces of semiorthogonal decompositions in families
-    coauthors:
-      - okawa
-      - ricolfi
-    arxiv: "2002.03303"
-
-  - title: Indecomposability of derived categories in families
-    coauthors:
-      - bastianelli
-      - okawa
-      - ricolfi
-    arxiv: "2007.00994"
-
   - title: Graph potentials and topological quantum field theories
     coauthors:
       - galkin
@@ -217,17 +199,89 @@ preprints:
       - makarova
       - tajakka
 
-inprogress:
+  - title: On Chow rings of quiver moduli
+    coauthors:
+      - franzen
+
   - title: A combinatorial non-abelian Torelli theorem
     coauthors:
       - galkin
       - mukhopadhyay
-    comment: available on request
 
-  - title: Hochschild cohomology of Hilbert schemes of points
+
+needingrevision:
+  - title: Comparison of two constructions of noncommutative surfaces with exceptional collections of length 4
+    coauthors:
+      - presotto
+      - vandenbergh
+    arxiv: "1811.08810"
+    comment: <small>We will retitle this to "The Hirzebruch isomorphism for exotic noncommutative surfaces".</small>
+
+  - title: Moduli spaces of semiorthogonal decompositions in families
+    coauthors:
+      - okawa
+      - ricolfi
+    arxiv: "2002.03303"
+
+  - title: Indecomposability of derived categories in families
+    coauthors:
+      - bastianelli
+      - okawa
+      - ricolfi
+    arxiv: "2007.00994"
+
+
+inprogress:
+  - title: Hochschild cohomology of symmetric quotient stacks
     coauthors:
       - fu
       - krug
+
+  - title: Rigidity and Schofield's conjecture for quiver moduli
+    coauthors:
+      - brecan
+      - franzen
+      - petrella
+      - reineke
+
+  - title: Vector fields and admissible embeddings for quiver moduli
+    coauthors:
+      - brecan
+      - franzen
+      - reineke
+
+  - title: On decompositions for Fano schemes of intersections of two quadrics
+    coauthors:
+      - bose
+      - frei
+      - gould
+      - hotchkiss
+      - lamarche
+      - petok
+      - rodriguez
+      - shah
+
+# use # to comment out
+ongoing:
+  - title: Hochschild (co)homology of noncommutative cyclic covers
+    coauthors:
+      - ingalls
+
+  - title: Central curves on noncommutative surfaces
+    coauthors:
+      - baumann
+      - vangarderen
+
+  - title: Derived categories of Fano schemes of lines on intersections of two quadrics
+    coauthors:
+      - bose
+      - frei
+      - gould
+      - hotchkiss
+      - lamarche
+      - petok
+      - rodriguez
+      - shah
 
 
 other:
@@ -253,7 +307,8 @@ other:
     pdf: https://pbelmans.ncag.info/assets/owr-2029-belmans.pdf
 
   - title: Projectivity of good moduli spaces of semistable quiver representations and vector bundles
-    journal: Oberwolfach Reports ??/2022
+    journal: Oberwolfach Reports 22/2022
+    doi: 10.4171/OWR/2022/23
     information: Interactions between Algebraic Geometry and Noncommutative Algebra
     pdf: https://pbelmans.ncag.info/assets/owr-2218-belmans.pdf
 

@@ -6,13 +6,22 @@ bastianelli:
   name: Francesco Bastianelli
   url: https://sites.google.com/site/francescobastianelli/
 
+baumann:
+  name: Thilo Baumann
+
 beckmann:
   name: Thorsten Beckmann
   url: http://www.math.uni-bonn.de/people/beckmann/
 
+bose:
+  name: Jishnu Bose
+
 bragg:
   name: Daniel Bragg
   url: https://math.berkeley.edu/~braggdan/
+
+brecan:
+  name: Ana-Maria Brecan
 
 damiolini:
   name: Chiara Damiolini
@@ -31,19 +40,35 @@ fatighenti:
 
 franzen:
   name: Hans Franzen
-  url: https://www.ruhr-uni-bochum.de/ffm/Lehrstuehle/Algebra/franzen.html.en
+  url: https://math.uni-paderborn.de/ag/arbeitsgruppe-algebra/team/hans-franzen
+
+frei:
+  name: Sarah Frei
+  url: https://math.dartmouth.edu/~sfrei/
 
 fu:
   name: Lie Fu
-  url: https://www.math.ru.nl/~liefu/
+  url: https://irma.math.unistra.fr/~lfu/
 
 galkin:
   name: Sergey Galkin
   url: https://www.mccme.ru/~galkin/
 
+gould:
+  name: Ben Gould
+  url: https://sites.google.com/uic.edu/gould
+
 hoskins:
   name: Vicky Hoskins
   url: https://www.math.ru.nl/~vhoskins/
+
+hotchkiss:
+  name: James Hotchkiss
+  url: https://sites.google.com/view/jameshotchkiss/james-hotchkiss
+
+ingalls:
+  name: Colin Ingalls
+  url: https://carleton.ca/math/people/colin-ingalls/
 
 klein:
   name: Sebastian Klein
@@ -51,6 +76,14 @@ klein:
 krug:
   name: Andreas Krug
   url: https://sites.google.com/site/andkrugmath/
+
+kuznetsov:
+  name: Alexander Kuznetsov
+  url: http://www.mi-ras.ru/~akuznet/
+
+lamarche:
+  name: Alicia Lamarche
+  url: http://alicialamarche.com/
 
 lebruyn:
   name: Lieven Le Bruyn
@@ -68,10 +101,6 @@ mukhopadhyay:
   name: Swarnava Mukhopadhyay
   url: http://www.math.tifr.res.in/~swarnava/
 
-kuznetsov:
-  name: Alexander Kuznetsov
-  url: http://www.mi-ras.ru/~akuznet/
-
 oberdieck:
   name: Georg Oberdieck
   url: http://www.math.uni-bonn.de/~georgo/
@@ -80,11 +109,23 @@ okawa:
   name: Shinnosuke Okawa
   url: http://www4.math.sci.osaka-u.ac.jp/~okawa/
 
+petok:
+  name: Jack Petok
+  url: https://math.dartmouth.edu/~jpetok/
+
+petrella:
+  name: Gianni Petrella
+  url: https://www.giannipetrella.eu
+
 presotto:
   name: Dennis Presotto
 
 raedschelders:
   name: Theo Raedschelders
+
+reineke:
+  name: Markus Reineke
+  url: https://www.ruhr-uni-bochum.de/ffm/Lehrstuehle/Algebra/reineke.html.de
 
 ricolfi:
   name: Andrea Ricolfi
@@ -93,6 +134,12 @@ ricolfi:
 rennemo:
   name: Jørgen Vold Rennemo
   url: https://folk.uio.no/jorgeren/
+
+rodriguez:
+  name: Cristian Andres Rodriguez Avila
+
+shah:
+  name: Saket Shah
 
 smirnov:
   name: Maxim Smirnov
@@ -109,3 +156,7 @@ tanturri:
 vandenbergh:
   name: Michel Van den Bergh
   url: http://hardy.uhasselt.be/personal/vdbergh/Members/michel_id.html
+
+vangarderen:
+  name: Okke van Garderen
+  url: https://okkevangarderen.nl
