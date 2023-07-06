@@ -202,11 +202,13 @@ preprints:
   - title: On Chow rings of quiver moduli
     coauthors:
       - franzen
+    arxiv: "2307.01711"
 
-  - title: A combinatorial non-abelian Torelli theorem
+  - title: A combinatorial non-abelian Torelli theorem and random walks
     coauthors:
       - galkin
       - mukhopadhyay
+    note: available upon request
 
 
 needingrevision:

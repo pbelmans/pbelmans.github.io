@@ -1,0 +1,77 @@
+---
+layout: post
+title: 'New paper: On Chow rings of quiver moduli'
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+<p>I'm really happy to have <strong><a href="https://arxiv.org/abs/2307.01711">On Chow rings of quiver moduli</a></strong> on the arXiv now. It is joint with my good friend <a href="{{ site.data.coauthors['franzen'].url }}">Hans Franzen</a>, with whom I also wrote (together with others) the topic of the <a href="{% post_url 2022-10-04-new-paper-no-git-quiver-git %}">previous "new paper" post</a>.
+<p>The motivation is somewhat similar as to the previous post: there are lots of interesting parallels between
+<ul>
+  <li>moduli of semistable quiver representations (or quiver moduli, in short)
+  <li>moduli of semistable vector bundles on curves
+</ul>
+<p>As the title suggests, we now care about Chow rings (and cohomology rings) of these moduli spaces.
+First of all, we'd like an explicit presentation.
+For moduli of vector bundles on curves, a nice introduction can be found in <a href="https://mathscinet.ams.org/mathscinet/article?mr=1489212">Alastair King, Peter Newstead: On the cohomology ring of the moduli space of rank 2 vector bundles on a curve</a>.
+<p>For quiver moduli, this was done in <a href="https://mathscinet.ams.org/mathscinet/article?mr=3318266">Hans Franzen: Chow rings of fine quiver moduli are tautologically presented</a>, building upon <a href="https://mathscinet.ams.org/mathscinet/article?mr=1324213">Alastair King and Charles Walter: On Chow rings of fine moduli spaces of modules</a>.
+<h3>Todd classes and point classes</h3>
+<p>But to do calculations, as for instance implemented in the wonderful <a href="http://www2.macaulay2.com/Macaulay2/doc/Macaulay2-1.20/share/doc/Macaulay2/Schubert2/html/index.html">Schubert2</a> for partial flag varieties (in type A), one also needs
+<ul>
+  <li>an expression for the point class (so that you know how you are integrating things)
+  <li>an expression for the Todd class, to make Hirzebruch&ndash;Riemann&ndash;Roch calculations possible
+</ul>
+<p>in terms of the given presentation. I don't know where this would be done for moduli of vector bundles on curves. But for quiver moduli it is now done in our new paper.
+<p>The trick is to upgrade the usual 4-term sequence of Hom and Ext of quiver representations
+to a <strong>4-term sequence of vector bundles on the base of a family</strong>.
+This is not new, but I am really happy with how we approached this problem,
+as I think it highlights how quiver moduli are parallel to more conventional moduli spaces of sheaves.
+<p>Another important ingredient, again looking for parallels with more conventional moduli spaces of sheaves,
+is the <strong>Kodaira&ndash;Spencer morphism</strong>.
+Its construction was sketched by Dyer and Polishchuk in <a href="https://mathscinet.ams.org/mathscinet/article?mr=3925499">NC-smooth algebroid thickenings for families of vector bundles and quiver representations</a>,
+but we give a novel take on it, explaining the role of Atiyah classes.
+<h3>A conjecture</h3>
+<p>Our initial motivation was to do some explicit calculations in a specific case.
+Namely, Kronecker moduli, or Kronecker quiver moduli,
+are quiver moduli associated to the easiest possible quivers: Kronecker quivers,
+with 2 vertices and $n$ arrows.
+To make things interesting we assume $n\geq 3$.
+<p>In many cases these Kronecker quiver moduli have an interpretation as a Grassmannian.
+But not always.
+The smallest case
+is the 3-Kronecker quiver, with dimension vector $(2,3)$.
+It is a 6-dimensional Fano variety of Picard rank 1 and index 3,
+with Hodge numbers $\mathrm{h}^{p,p}$ given by
+\[
+1, 1, 3, 3, 3, 1, 1.
+\]
+<p>There is a great interest in describing Fano varieties
+in terms of zero loci of equivariant vector bundles on partial flag varieties.
+When prompted with this challenge,
+<a href="{{ site.data.coauthors['fatighenti'].url }}">Enrico Fatighenti</a>
+and
+<a href="{{ site.data.coauthors['tanturri'].url }}">Fabio Tanturri</a>
+quickly produced a zero locus with the same properties,
+using $\mathcal{Q}^\vee(1)$ on $\operatorname{Gr}(2,8)$.
+<p>To find further evidence,
+or disprove that they were the same variety,
+we wanted to compute the degree of $\mathcal{O}_X(1)$
+and the Hilbert series of $\mathcal{O}_X(1)$,
+for which we needed the point class and Todd class.
+<p>Turns out that those numbers agree,
+thus giving further evidence to the conjecture that they are indeed the same variety!
+Next up (please take up this challenge!) would then be:
+<ul>
+  <li>trying to (dis)prove the conjecture,
+  <li>find similar descriptions for Kronecker quiver moduli
+</ul>
+<p>Et voilà,
+now you know why I am so happy with this paper,
+and you know what is in it, without having to read the less colloquially written introduction (or even worse, the paper itself).
+Of course, you are still cordially invited to do so
+(and let us know if you have any comments)
+if you are interested in quiver moduli!
