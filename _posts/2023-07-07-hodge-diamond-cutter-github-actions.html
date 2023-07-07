@@ -1,0 +1,43 @@
+---
+layout: post
+title: "GitHub Actions for automated unit tests of the Hodge diamond cutter"
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+{% include hodge.html %}
+
+<p>Today I was supposed to take the day off. So what did I do for the past hour? I set up <a href="https://github.com/features/actions">GitHub Actions</a> to automatically run the <a href="{% post_url 2021-08-05-hodge-diamond-cutter-documentation %}">unit tests</a> that are in the documentation. Yes, this is <em>nerdy</em>.
+<p>Why is this interesting? Well, for one it now displays this badge
+<p style="text-align: center"><img src="https://github.com/pbelmans/hodge-diamond-cutter/actions/workflows/tests.yml/badge.svg">
+<p>on the <a href="https://github.com/pbelmans/hodge-diamond-cutter/tree/master">repository page</a>.
+This should say <strong>passing</strong>.
+If it doesn't, please tell me (although I probably already know, because I should get an email from GitHub if the test fails).
+<p>Whenever something happens with the code (a commit, or a pull request, or manually triggering the tests),
+<a href="https://github.com/pbelmans/hodge-diamond-cutter/blob/master/.github/workflows/tests.yml">this script</a>
+will
+<ul>
+  <li>start up an Ubuntu virtual machine
+  <li>use the SageMath Docker container
+  <li>install the Hodge diamond cutter
+  <li>run the tests (of which there were 251 at the time of writing)
+</ul>
+<p>Here is the <a href="https://pipelines.actions.githubusercontent.com/serviceHosts/6805fe20-7399-43c4-860b-1f473ca3f60b/_apis/pipelines/1/runs/19/signedlogcontent/2?urlExpires=2023-07-07T14%3A35%3A19.8345770Z&urlSigningMethod=HMACV1&urlSignature=J3JIeS296pIjP3W1AdpOAwFuzkeZB0Bhval0nr%2Fuq0w%3D">log file</a> of the last test run today. The important part is
+<code><pre>2023-07-07T14:24:02.8409203Z     [251 tests, 3.58 s]
+2023-07-07T14:24:02.8409755Z ----------------------------------------------------------------------
+2023-07-07T14:24:02.8410066Z All tests passed!
+2023-07-07T14:24:02.8410405Z ----------------------------------------------------------------------
+2023-07-07T14:24:02.8410691Z Total time for all tests: 3.7 seconds
+2023-07-07T14:24:02.8412365Z     cpu time: 3.5 seconds
+2023-07-07T14:24:02.8412605Z     cumulative wall time: 3.6 seconds</pre></code>
+<p>telling us that all went well.
+
+<p>I believe the workflow is really easy to use yourself (after I spent too long getting it to work, as simple as it is), and I hope someone else who develops things for SageMath is interested in using a similar test workflow.
+
+<h3>Installation instructions</h3>
+<p>I also restructured the repository, so that installing it through pip is now easy.
+Just follow <a href="https://github.com/pbelmans/hodge-diamond-cutter#getting-started">the instructions in the documentation</a>.
