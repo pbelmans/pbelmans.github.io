@@ -1,0 +1,41 @@
+---
+layout: post
+title: The identification of a 6-dimensional Kronecker quiver moduli with a certain zero section
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+<p>In the post <a href="{% post_url 2023-07-06-new-paper-chow-rings-quiver-moduli %}">'New paper: On Chow rings of quiver moduli'</a>
+I explained a conjectural identification between two varieties, for which we used our newly gained understanding of Chow rings to give more evidence.
+<p>Shortly after posting it to the arXiv I got an email by Laurent Manivel,
+pointing out that the zero section of $\operatorname{Gr}(2,8)$ makes an appearance
+<a href="https://doi.org/10.1515/crll.2005.2005.585.93">Atanas Iliev and Laurent Manivel: Severi varieties and their varieties of reductions</a>,
+and that it might be useful to prove the identification.
+<p>And indeed, after reading up a bit, I realised that the proof of the conjecture can be given by
+simply stringing together various results,
+avoiding any actual computations.
+Namely:
+<ol>
+  <li>The Kronecker quiver moduli space $X$
+    is also the moduli space of bundles $Z$ on $\mathbb{P}^2$
+    with $(r,\mathrm{c}_1,\mathrm{c}_2)=(4,1,3)$,
+    which is of height zero in the sense of Drezet.
+  <li>The moduli space $Z$
+    is the image of the second contraction of $\operatorname{Hilb}^3\mathbb{P}^2$
+    (the other one being $\operatorname{Sym}^3\mathbb{P}^2$).
+  <li>The zero section $Y$ is the variety $Y_2$ in Iliev&ndash;Manivel,
+    this might be clear from Iliev&ndash;Manivel itself
+    but a detailed proof is given in Theorem 3.8 of
+    <a href="https://doi.org/10.5802/aif.3131">Pietro De Poi, Daniele Faenzi, Emilia Mezzetti and Kristian Ranestad: Fano congruences of index 3 and alternating 3-forms</a>.
+  <li>Finally, $Y$ and $Z$ are identified by Theorem 4.2 in Iliev&ndash;Manivel.
+</ol>
+<p>We will update the paper accordingly, but as Hans and I will be on (separate) vacations for the next few weeks,
+I wanted to write this blog post
+so that no-one is wasting time on a proof
+if one is so readily available from the literature already.
+Of course, if you have something else of interest to tell us, please do!
+<p>I would like to thank Laurent Manivel for the suggestion, and Jieao Song and Fabian Reede for related discussions.
