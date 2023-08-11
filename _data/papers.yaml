@@ -12,12 +12,6 @@ accepted:
     journal: accepted for publication in Proceedings of Nottingham Algebraic Geometry Seminar
     arxiv: "2202.08601"
 
-  - title: Hochschild cohomology of generalised Grassmannians
-    coauthors:
-      - smirnov
-    arxiv: "1911.09414"
-    journal: accepted for publication in Documenta Mathematica
-
 
 published:
   - title: Embeddings of algebras in derived categories of surfaces
@@ -175,6 +169,14 @@ published:
     information: volume 304, 12 (2023)
     doi: 10.1007/s00209-023-03261-2
     mathscinet: "4578397"
+
+  - title: Hochschild cohomology of generalised Grassmannians
+    coauthors:
+      - smirnov
+    arxiv: "1911.09414"
+    journal: Documenta Mathematica
+    information: volume 28, number 1, pages 11&ndash;53
+    doi: 10.4171/dm/912
 
 
 preprints:
