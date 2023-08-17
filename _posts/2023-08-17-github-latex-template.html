@@ -1,0 +1,32 @@
+---
+layout: post
+title: GitHub LaTeX template
+type: post
+categories:
+- mathematics
+author: Pieter Belmans
+---
+
+<p>Last week during the Stacks project workshop I gave an <a href="https://stacks.github.io/2023-git.pdf">introduction to Git for working mathematicians</a>,
+and one thing that people found interesting then was my GitHub LaTeX template,
+which includes:
+<ul>
+  <li>a GitHub Action to build pdf's upon push, see <a href="https://github.com/pbelmans/latex-template/blob/main/.github/workflows/pdf.yml">pdf.yml</a>
+  <li>hooks to add commit metadata to pdf's
+</ul>
+<p>The first thing is the coolest I think,
+and a variation upon existing such actions that are available on GitHub already.
+It guarantees that there is always a copy of the pdf in the repository,
+except that it lives in an orphan branch where it cannot create conflicts!
+
+<p>I've now put this on GitHub as a <a href="https://github.com/pbelmans/latex-template">template repository</a>,
+so that you can just click the green <strong>Use this template</strong> button
+to start a new repository from scratch, with this configuration.
+
+<hr>
+<p>
+<p>Is there something missing, or unclear? Let me know!
+<p>I also have some inspiration to write a "<em>Git and GitHub for working mathematicians</em>" tutorial,
+there exist excellent introductions already,
+but I think there needs to be one which doesn't mention the commandline <em>at all</em>.
+Stay tuned for that!
