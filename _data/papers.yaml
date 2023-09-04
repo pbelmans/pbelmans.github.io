@@ -338,8 +338,10 @@ broad:
     doi: 10.1090/noti2344
 
   - title: The periodic tables of algebraic geometry
-    journal: submitted to Snapshots of modern mathematics from Oberwolfach
-    pdf: https://pbelmans.ncag.info/assets/snapshot.pdf
+    journal: Snapshots of modern mathematics from Oberwolfach
+    information: "2023, number 2"
+    pdf: https://publications.mfo.de/handle/mfo/4067
+    doi: 10.14760/SNAP-2023-002-EN
 
 
 lecture-notes:
