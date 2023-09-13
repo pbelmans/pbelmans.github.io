@@ -206,6 +206,12 @@ preprints:
       - franzen
     arxiv: "2307.01711"
 
+  - title: Hochschild cohomology of Hilbert schemes of points on surfaces
+    coauthors:
+      - fu
+      - krug
+    arxiv: "2309.06244"
+
   - title: A combinatorial non-abelian Torelli theorem and random walks
     coauthors:
       - galkin
@@ -236,10 +242,6 @@ needingrevision:
 
 
 inprogress:
-  - title: Hochschild cohomology of symmetric quotient stacks
-    coauthors:
-      - fu
-      - krug
 
   - title: Rigidity and Schofield's conjecture for quiver moduli
     coauthors:

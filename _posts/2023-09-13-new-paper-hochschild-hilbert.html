@@ -1,0 +1,112 @@
+---
+layout: post
+title: 'New paper: Hochschild cohomology of Hilbert schemes of points on surfaces'
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+<p>I'm really happy and proud to have <a href="https://arxiv.org/abs/2309.06244"><strong>Hochschild cohomology of Hilbert schemes of points on surfaces</strong></a>
+on the arXiv now,
+joint with my good friends <a href="https://irma.math.unistra.fr/~lfu/">Lie Fu</a>
+and <a href="https://sites.google.com/site/andkrugmath/">Andreas Krug</a>.
+
+<p>There is a (to me at least) funny story behind the paper.
+In Huybrechts's famous book on Fourier&ndash;Mukai transforms,
+he briefly discusses Hochschild (co)homology
+through a <em>larger</em> and <em>bigraded</em> algebra which
+contains both Hochschild cohomology and Hochschild homology,
+and also the canonical algebra,
+following Orlov's presentation in his survey paper.
+It is defined for a smooth projective variety $X$ as
+\begin{equation*}
+\operatorname{HS}_*^\bullet(X)
+=
+\bigoplus_{i\in\mathbb{Z}}\bigoplus_{j\in\mathbb{Z}}
+\operatorname{HS}_j^i(X)
+=
+\bigoplus_{i\in\mathbb{Z}}\bigoplus_{j\in\mathbb{Z}}
+\operatorname{Ext}_{X\times X}^i(\Delta_*\mathcal{O}_X,\Delta_*\omega_X^{\otimes j}[j\dim X]),
+\end{equation*}
+where we have (for a good reason)
+inserted a certain shift
+when compared to the original definition.
+To avoid a conflict of terminology,
+and emphasise the role of the Serre functor in this definition,
+we have decided to call this algebra
+the <strong>Hochschild&ndash;Serre cohomology</strong> of $X$.
+Because this bigraded algebra is a derived invariant,
+those 3 invariants are also derived invariants.
+<p>But, nowhere had I ever seen other applications of this bigraded algebra.
+Was it really useful on its own,
+or only as a vehicle for those 3 invariants?
+
+<hr>
+<p>
+<p>The Hochschild homology of Hilbert schemes of points on surfaces
+is easy to compute (as a graded vector space)
+because we have Göttsche's formula for the Hodge numbers of Hilbert schemes
+(as implemented in the <a href="https://pbelmans.ncag.info/hodge-diamond-cutter/">Hodge diamond cutter</a>, for instance).
+Thus, using the Hochschild&ndash;Kostant&ndash;Rosenberg decomposition,
+we can leverage this information to know the dimension of Hochschild homology.
+<p>The Hochschild cohomology, however is a different beast.
+Sure, we have the Hochschild&ndash;Kostant&ndash;Rosenberg decomposition,
+which involves exterior powers of the tangent bundle now.
+But getting a good enough grasp on the tangent bundle of the Hilbert scheme
+seems like a challenging problem.
+<h3>Two ingredients</h3>
+<p>This is where Lie, Andreas, and I tried using the famous
+<strong>derived McKay correspondence</strong>
+due to Bridgeland&ndash;King&ndash;Reid&ndash;Haiman equivalence,
+which gives a derived equivalence
+\begin{equation*}
+\mathbf{D}^{\mathrm{b}}(\operatorname{Hilb}^nS)
+\cong
+\mathbf{D}^{\mathrm{b}}([\operatorname{Sym}^nS])
+\end{equation*}
+where on the right-hand side we have the derived category of
+the symmetric quotient stack.
+And Hochschild cohomology is a derived invariant,
+so we can compute it using the right-hand side.
+
+<p>The second ingredient is the <strong>orbifold Hochschild&ndash;Kostant&ndash;Rosenberg decomposition</strong>
+due to Arinkin, Căldăraru, and Hablicsek.
+This can be applied to the right-hand side of the McKay correspondence.
+
+<p>And this is where the magic happens!
+When you work out the orbifold decomposition of the Hochschild cohomology,
+you suddenly see the Hochschild&ndash;Serre cohomology appear.
+The reason is that the computation involves fixed loci,
+and thus various diagonals,
+which when you spell out the details
+can be packaged together into one formula which reads
+\begin{equation*}
+\bigoplus_{n\geq 0}\operatorname{HH}^*(\operatorname{Hilb}^nS)t^n
+\cong
+\operatorname{Sym}^\bullet(\bigoplus_{i\geq 1}\operatorname{HS}_{1-i}^*(S)t^i)
+\end{equation*}
+
+<h3>Conclusion</h3>
+<p>Sure, this isn't good enough to write down the Hochschild&ndash;Kostant&ndash;Rosenberg decomposition
+of the Hochschild cohomology of the Hilbert scheme,
+but at least we can write down the Hochschild cohomology.
+And in fact, for the pieces we care about the most
+(namely the first and second Hochschild cohomology)
+we know enough to write down the Hochschild&ndash;Kostant&ndash;Rosenberg decomposition!
+<p>In fact, we also:
+<ul>
+  <li>work it all out for arbitrary symmetric quotient stacks
+  <li>have versions of the result where we allow coefficients
+  <li>explain various examples from different angles,
+    and discuss applications to the deformation theory of Hilbert schemes
+  <li>discuss Hochschild&ndash;Serre cohomology
+    for dg categories,
+    as a Morita invariant
+  <li>explain étale functoriality for Hochschild&ndash;Serre cohomology
+</ul>
+so there is plenty of stuff I haven't discussed in this blogpost.
+<p>I am really proud of this paper, and I'd be happy to hear all comments,
+and answer any questions you might have!
