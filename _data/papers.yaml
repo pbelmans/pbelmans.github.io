@@ -12,6 +12,12 @@ accepted:
     journal: accepted for publication in Proceedings of Nottingham Algebraic Geometry Seminar
     arxiv: "2202.08601"
 
+  - title: On Chow rings of quiver moduli
+    coauthors:
+      - franzen
+    arxiv: "2307.01711"
+    journal: accepted for publication in IMRN
+
 
 published:
   - title: Embeddings of algebras in derived categories of surfaces
@@ -200,11 +206,6 @@ preprints:
       - hoskins
       - makarova
       - tajakka
-
-  - title: On Chow rings of quiver moduli
-    coauthors:
-      - franzen
-    arxiv: "2307.01711"
 
   - title: Hochschild cohomology of Hilbert schemes of points on surfaces
     coauthors:
