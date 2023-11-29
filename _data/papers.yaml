@@ -192,12 +192,6 @@ preprints:
       - mukhopadhyay
     arxiv: "2205.07244"
 
-  - title: Graph potentials and symplectic geometry of moduli spaces of vector bundles
-    coauthors:
-      - galkin
-      - mukhopadhyay
-    arxiv: "2206.11584"
-
   - title: Projectivity and effective global generation of determinantal line bundles on quiver moduli
     arxiv: "2210.00033"
     coauthors:
@@ -218,6 +212,22 @@ preprints:
       - galkin
       - mukhopadhyay
     note: available upon request
+
+  - title: Rigidity and Schofield's partial tilting conjecture for quiver moduli
+    coauthors:
+      - brecan
+      - franzen
+      - petrella
+      - reineke
+    arxiv: "2311.17003"
+
+  - title: Vector fields and admissible embeddings for quiver moduli
+    coauthors:
+      - brecan
+      - franzen
+      - reineke
+    arxiv: "2311.17004"
+
 
 
 needingrevision:
@@ -241,22 +251,15 @@ needingrevision:
       - ricolfi
     arxiv: "2007.00994"
 
+  - title: Graph potentials and symplectic geometry of moduli spaces of vector bundles
+    coauthors:
+      - galkin
+      - mukhopadhyay
+    arxiv: "2206.11584"
+
+
 
 inprogress:
-
-  - title: Rigidity and Schofield's conjecture for quiver moduli
-    coauthors:
-      - brecan
-      - franzen
-      - petrella
-      - reineke
-
-  - title: Vector fields and admissible embeddings for quiver moduli
-    coauthors:
-      - brecan
-      - franzen
-      - reineke
-
   - title: On decompositions for Fano schemes of intersections of two quadrics
     coauthors:
       - bose
