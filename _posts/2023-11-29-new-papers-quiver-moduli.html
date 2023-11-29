@@ -1,0 +1,123 @@
+---
+layout: post
+title: "New papers: two papers on quiver moduli"
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+<p>It's been quiet over here, because I was focusing on writing all kinds of things.
+Two of these are now on the arXiv,
+and the title of this blogpost is the chimera you get by combining the titles of
+<ol>
+  <li><a href="https://arxiv.org/abs/2311.17003"><strong>Rigidity and Schofield's partial tilting conjecture for quiver moduli</strong></a>,
+    joint with Ana-Maria Brecan, Hans Franzen, Gianni Petrella, and Markus Reineke
+  <li><a href="https://arxiv.org/abs/2311.17004"><strong>Vector fields and admissible embeddings for quiver moduli</strong></a>,
+    joint with Ana-Maria Brecan, Hans Franzen, Markus Reineke
+</ol>
+<p>I'm really proud of these works, for several reasons:
+<ul>
+  <li>It's the first paper with my PhD student <a href="https://www.giannipetrella.eu">Gianni Petrella</a>.
+    Congratulations Gianni!
+  <li>It answers questions Hans and I dreamt of solving back in 2017,
+    using tools we had no idea existed back in the day.
+  <li>It simultaneously resolves an old conjecture by Aidan Schofield,
+    whose work I greatly admire.
+  <li>It is another example of the philosophy that moduli spaces of vector bundles on curves
+    and moduli spaces of quiver representations
+    behave in very similar ways.
+  <li><small>They have consecutive arXiv id's.</small>
+</ul>
+
+<h3>The main results</h3>
+<p>The main technical results of the paper can be combined into a single theorem statement,
+at the cost of losing some generality.
+Recall that there exists a universal representation $\mathcal{U}=\bigoplus_{i\in Q_0}\mathcal{U}_i$
+on the moduli space $\mathrm{M}^{\theta\text{-st}}(Q,\mathbf{d})$
+of $\theta$-stable representations of dimension vector $\mathbf{d}$,
+and our main technical result tells you how to compute the cohomology of the summands of the endomorphism bundle.
+Because of a (usually hidden) choice of normalization in the definition of $\mathcal{U}$,
+the cohomology of $\mathcal{U}_i$ depends on this choice, whereas that of $\mathcal{U}_i^\vee\otimes\mathcal{U}_j$ doesn't.
+<p>The condition of being <em>strongly amply stable</em>
+is a strengthening of the ample stability introduced by <a href="https://mathscinet.ams.org/mathscinet/article?mr=3683503"</a>Reineke--Schröer</a>
+(which says that the unstable locus has codimension at least 2).
+<p><strong>Theorem</strong>
+<em>Let $Q$ be an acyclic quiver,
+$\mathbf{d}$ an indivisible dimension vector,
+$\theta$ a stability parameter for which every semistable representation is stable,
+and assume that $\mathbf{d}$ is strongly $\theta$-amply stable.
+Then
+\[
+\mathrm{H}^k(\mathrm{M}^{\theta\text{-st}}(Q,\mathbf{d}),\mathcal{U}_i^\vee\otimes\mathcal{U}_j)
+\cong
+\begin{cases}
+  e_j \mathbf{k}Q e_i & k=0 \\
+  0 & k\geq 1
+\end{cases}
+\]
+where $e_j \mathbf{k}Q e_i$ is the vector space spanned by paths from $i$ to $j$.
+The non-trivial isomorphism sends a path $a_\ell\cdots a_1$ from $i$ to $j$
+to the composition of the morphisms $\mathcal{U}_{a_m}\colon\mathcal{U}_{\mathrm{s}(a_m)}\to\mathcal{U}_{\mathrm{t}(a_m)}$
+for $m=1,\ldots,\ell$.</em>
+<h3>On the methods</h3>
+<p>The statement of the technical result contains two parts: an explicit description of the global sections,
+and a vanishing of the higher cohomology.
+The two papers use wildly different methods to establish these,
+which is why they are indeed two separate papers.
+<p>For the <strong>vanishing</strong>,
+we use <a href="https://en.wikipedia.org/wiki/Quantization_commutes_with_reduction">Teleman quantization</a> (the Wikipedia link is for the symplectic version).
+It allows one to compute the cohomology on a GIT quotient
+by computing it on the quotient stack, before throwing out the unstable locus.
+The punchline is that the quotient stack for moduli of quiver representations
+is the quotient of an <em>affine space</em> by a reductive group,
+thus there is no higher cohomology on the quotient stack!
+The hard work is in checking that one can apply Teleman quantization,
+for which lots of weight calculations are necessary.
+<p>For the <strong>global sections</strong>,
+we use <a href="https://en.wikipedia.org/wiki/Geometric_invariant_theory">geometric invariant theory</a>,
+by reducing the calculation to that of a line bundle on a different moduli space,
+and appealing to the celebrated <a href="https://mathscinet.ams.org/mathscinet/article?mr=0958897">Le Bruyn&ndash;Procesi</a> result
+to compute this.
+
+<h3>The applications</h3>
+<p>Sure, this all sounds fun, but why is this interesting? Very briefly, the 4 terms in the titles of the papers refer to the following:
+<ol>
+  <li>using the 4-term sequence for quiver moduli one can prove that moduli spaces of quiver representations are <em>rigid</em>;
+  <li>the cohomology vanishing is in fact inequivalent to $\mathcal{U}$ being a <em>partial tilting object</em>, as conjectured by Schofield;
+  <li>the global sections allow one to compute that the <em>first Hochschild cohomology of the path algebra</em> $\mathbf{k}Q$
+    (for which Happel gave a very explicit presentation)
+    is isomorphic to the vector fields of the moduli space
+    (at least as a vector space, conjecturally also as Lie algebras)
+  <li>the global sections also allow one to compute the endomorphism algebra of the partial tilting object $\mathcal{U}$,
+    which turns out to be the path algebra $\mathbf{k}Q$,
+    thus setting up an <em>admissible embedding</em>.
+</ol>
+
+<h3>Similarities between moduli spaces of vector bundles and representations</h3>
+<p>These applications are inspired by what we already knew for moduli spaces of vector bundles on curves:
+<ul>
+  <li>back in 1975, <a href="https://mathscinet.ams.org/mathscinet/article?mr=0384797">Narasimhan&ndash;Ramanan</a>
+    showed that the automorphism group of the moduli space is finite,
+    and that the first-order deformations of the moduli space are identified with those of the curve;
+  <li>in the last decade,
+    there has been a flurry of activity by several authors
+    (starting with <a href="https://mathscinet.ams.org/mathscinet/article?mr=3713871">Narasimhan</a> and <a href="https://mathscinet.ams.org/mathscinet/article?mr=3764066">Fonarev&ndash;Kuznetsov</a>)
+    to show that the universal vector bundle sets up a fully faithful Fourier&ndash;Mukai functor.
+</ul>
+<p>We manage to find the quiver analogues for these two results:
+<ul>
+  <li>the vector fields of the moduli space are now isomorphic to the first Hochschild cohomology of the path algebra,
+    which are the appropriate symmetries to consider,
+    and depending on the algebra this can be a very rich space, or zero;
+  <li>the appropriate analogue of a Fourier&ndash;Mukai functor in this noncommutative setting
+    is indeed fully faithful.
+</ul>
+<p>Using an idea <a href="https://mathscinet.ams.org/mathscinet/article?mr=3950704">Theo, Lie and I applied earlier for Hilbert schemes of points on surfaces</a>
+we even relate the two,
+explaining how the fully faithful functor allows one to obtain the results on the vector fields and rigidity.
+<hr>
+<p>This was a long post, but it goes to show how proud I am of these results, and how pleasant it was to collaborate with my excellent coauthors on this.
+I am more than happy to answer questions you might have about this work!
