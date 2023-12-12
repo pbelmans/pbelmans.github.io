@@ -111,12 +111,20 @@ p.journal {
 
 <h2>Papers</h2>
 <ul id="quicknav">
+  <li><a href="#preprints">preprints</a></li>
   <li><a href="#accepted">accepted for publication</a></li>
   <li><a href="#published">published</a></li>
-  <li><a href="#preprints">preprints</a></li>
   <li><a href="#other">other publications (appendices, conference proceedings, ...)</a></li>
   <li><a href="#broader">for a broader audience</a></li>
 </ul>
+
+<h3 id="preprints">Preprints</h3>
+{% assign both = site.data.papers.published | concat: site.data.papers.accepted %}
+<ol class="publications reverse" style="counter-reset: publications {{ both | size }}">
+{% for paper in site.data.papers.preprints %}
+  {% include publication.html paper=paper %}
+{% endfor %}
+</ol>
 
 <h3 id="accepted">Accepted for publication</h3>
 <ol class="publications reverse" style="counter-reset: publications {{ site.data.papers.published | size }}">
@@ -132,16 +140,8 @@ p.journal {
 {% endfor %}
 </ol>
 
-<h3 id="preprints">Preprints</h3>
-{% assign both = site.data.papers.published | concat: site.data.papers.accepted %}
-<ol class="publications" style="counter-reset: publications {{ both | size }}">
-{% for paper in site.data.papers.preprints %}
-  {% include publication.html paper=paper %}
-{% endfor %}
-</ol>
-
 <h3>Preprints needing revision</h3>
-<ol class="publications">
+<ol class="publications" style="counter-reset: publications 24">
 {% for paper in site.data.papers.needingrevision %}
   {% include publication.html paper=paper %}
 {% endfor %}

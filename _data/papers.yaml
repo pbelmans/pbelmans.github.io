@@ -17,6 +17,7 @@ accepted:
       - franzen
     arxiv: "2307.01711"
     journal: accepted for publication in IMRN
+    doi: 10.1093/imrn/rnad306
 
 
 published:
@@ -207,12 +208,6 @@ preprints:
       - krug
     arxiv: "2309.06244"
 
-  - title: A combinatorial non-abelian Torelli theorem and random walks
-    coauthors:
-      - galkin
-      - mukhopadhyay
-    note: available upon request
-
   - title: Rigidity and Schofield's partial tilting conjecture for quiver moduli
     coauthors:
       - brecan
@@ -270,6 +265,13 @@ inprogress:
       - petok
       - rodriguez
       - shah
+
+  - title: A combinatorial non-abelian Torelli theorem and random walks
+    coauthors:
+      - galkin
+      - mukhopadhyay
+    note: available upon request
+
 
 # use # to comment out
 ongoing:
