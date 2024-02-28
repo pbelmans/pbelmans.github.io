@@ -1,11 +1,4 @@
 accepted:
-  - title: Derived categories of (nested) Hilbert schemes
-    coauthors:
-      - krug
-    arxiv: "1909.04321"
-    journal: accepted for publication in Michigan Mathematical Journal
-    doi: 10.1307/mmj/20216092
-
   - title: Homological projective duality for the Segre cubic
     coauthors:
       - beckmann
@@ -182,8 +175,17 @@ published:
       - smirnov
     arxiv: "1911.09414"
     journal: Documenta Mathematica
-    information: volume 28, number 1, pages 11&ndash;53
+    information: volume 28 (2023), number 1, pages 11&ndash;53
     doi: 10.4171/dm/912
+
+  - title: Derived categories of (nested) Hilbert schemes
+    coauthors:
+      - krug
+    arxiv: "1909.04321"
+    journal: Michigan Mathematical Journal
+    information: volume 74, number 1, pages 167&ndash;187
+    doi: 10.1307/mmj/20216092
+
 
 
 preprints:
