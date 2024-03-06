@@ -126,6 +126,7 @@ published:
     information: volume 125 (6), 2022, pages 1452&ndash;1482
     doi: 10.1112/plms.12487
     mathscinet: "4524222"
+    zbmath: "1520.14029"
 
   - title: Derived categories of the Cayley plane and the coadjoint Grassmannian in type F
     coauthors:
@@ -136,6 +137,7 @@ published:
     mathscinet: "4552169"
     journal: Transformation Groups
     information: volume 28, 2023, pages 9&ndash;34
+    zbmath: "1517.14031"
 
   - title: Projectivity of the moduli space of vector bundles on a curve
     coauthors:
@@ -159,6 +161,7 @@ published:
     information: volume 11:e16, 2023, pages 1&ndash;28
     doi: 10.1017/fms.2023.14
     mathscinet: "4557892"
+    zbmath: "1525.14016"
 
   - title: Polyvector fields for Fano 3-folds
     coauthors:
@@ -169,6 +172,7 @@ published:
     information: volume 304, 12 (2023)
     doi: 10.1007/s00209-023-03261-2
     mathscinet: "4578397"
+    zbmath: "1516.14077"
 
   - title: Hochschild cohomology of generalised Grassmannians
     coauthors:
@@ -177,6 +181,7 @@ published:
     journal: Documenta Mathematica
     information: volume 28 (2023), number 1, pages 11&ndash;53
     doi: 10.4171/dm/912
+    mathscinet: "4706032"
 
   - title: Derived categories of (nested) Hilbert schemes
     coauthors:

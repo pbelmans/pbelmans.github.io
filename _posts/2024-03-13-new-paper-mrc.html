@@ -1,0 +1,80 @@
+---
+layout: post
+title: "New paper: On decompositions for Fano schemes of intersections of two quadrics"
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+<p>I'm really happy to announce that we have a new paper on the arXiv: <a href=""><strong>On decompositions for Fano schemes of intersections of two quadrics</strong></a>.
+The <em>we</em> here refers to my coauthors Jishnu Bose, Sarah Frei, Ben Gould, James Hotchkiss, Alicia Lamarche, Jack Petok, Cristian Andres Rodriguez Avila, and Saket Shah.
+Here is all of us:
+<center>
+  <img src="/assets/bundles-group.jpg" width="600">
+</center>
+<p>This picture was taken June 2023 in upstate New York,
+because the paper is a collaboration which started at the
+<a href="https://www.ams.org/programs/research-communities/2023MRC-DerivedCategories">Mathematics Research Communities: Derived Categories, Arithmetic and Geometry</a>,
+expertly organized by Matthew Ballard, Katrina Honigs, Daniel Krashen, Alicia Lamarche, and Emanuele Macrì,
+where I led a group of PhD students and postdocs on a week-long adventure ride
+on Fano schemes of intersections of two quadrics.
+One of the projects we were working on has now materialized in the form of this preprint.
+
+<h3>Decompositions for varieties</h3>
+<p>In an earlier joint work with Sergey Galkin and Swarnava Mukhopadhyay we looked at
+<a href="https://mathscinet.ams.org/mathscinet/article?mr=4557892">how the moduli space of rank-2 bundles on a curve "decomposes" in several ways</a>,
+the following 2 being relevant here:
+<ul>
+  <li>a semiorthogonal decomposition of its derived category
+  <li>an identity in the Grothendieck ring of varieties
+</ul>
+<p>This has led to what is called the BMGN conjecture (with Narasimhan independently conjecturing the semiorthogonal decomposition),
+which is now settled by <a href="https://arxiv.org/abs/2108.11951">Tevelev&ndash;Torres</a> and <a href="https://arxiv.org/abs/2304.01825">Tevelev</a>.
+<p>On the other hand,
+the <em>very first example</em> of a semiorthogonal decomposition
+was that of $Q_1\cap Q_2\subset\mathbb{P}^{2n+1}$, due to Bondal and Orlov,
+where the derived category of a naturally associated hyperelliptic curve appears.
+<p>It is possible to interpolate between this ur-example
+and moduli spaces of rank-2 bundles,
+by considering Fano schemes of linear subspaces on intersections of 2 quadrics.
+For $Q_1\cap Q_2\subset\mathbb{P}^{2n+1}$,
+we will denote these as $\mathrm{F}_k(Q_1\cap Q_2)$,
+for $k=0,\ldots,g-1$.
+For more on the geometry of these Fano schemes, I refer to our paper.
+<p>But what should the decomposition be?!
+
+<h3>Hodge numbers and conjectures</h3>
+<p>To find out what the decomposition ought to be
+we can use the <a href="https://github.com/pbelmans/hodge-diamond-cutter">Hodge diamond cutter</a>.
+With a bit of optimism,
+<ol>
+  <li>a geometrically meaningful identity in $\mathbb{Z}[x,y]$ on the level of Hodge diamonds
+  <li><em>might</em> be arising from a decomposition in the Grothendieck ring of varieties,
+  <li>which in turn gives an identity in the Grothendieck ring of categories,
+  <li>which in turn <em>might</em> be arising from an actual semiorthogonal decomposition.
+</ol>
+<p>This type of optimism is of course not always warranted,
+but it is exactly what led the BGMN conjecture.
+So this brings us to what we did:
+<ul>
+  <li>we explained how to compute the Hodge numbers of these Fano schemes,
+    by bootstrapping from earlier works of Chen&ndash;Vilonen&ndash;Xue:
+    this is where we worked some magic with mixed Hodge modules;
+  <li>we found a mysterious (to me) formula for the multiplicity of each component,
+    which can be checked numerically to be the right thing
+</ul>
+<p>Throughout I've focused on the "hyperelliptic" case, where the intersection of two quadrics is odd-dimensional.
+There is a parallel story for the even-dimensional case, which can be called the "stacky" case.
+Here, <a href="https://arxiv.org/abs/2305.18058">Fonarev has obtained a conjectural semiorthogonal decomposition in the "maximal" case</a>,
+similar to the BGMN conjecture being the maximal case, and $Q_1\cap Q_2$ being the minimal case.
+<p>Our work thus describes aspects of the geometry of $\mathrm{F}_k(Q_1\cap Q_2)$ is
+<ul>
+  <li>for all dimensions of $Q_1\cap Q_2$, independent of the parity,
+  <li>for all $k=0,\ldots,g-1$.
+</ul>
+and uses it to make some conjectures about these really interesting varieties.
+If you're not convinced why these are interesting, just check out the previous installment of fortnightly links.
+<p>Let me know if you have any comments or questions!
