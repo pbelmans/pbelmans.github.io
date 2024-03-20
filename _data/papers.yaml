@@ -182,6 +182,7 @@ published:
     information: volume 28 (2023), number 1, pages 11&ndash;53
     doi: 10.4171/dm/912
     mathscinet: "4706032"
+    zbmath: "1528.14062"
 
   - title: Derived categories of (nested) Hilbert schemes
     coauthors:
@@ -190,6 +191,7 @@ published:
     journal: Michigan Mathematical Journal
     information: volume 74, number 1, pages 167&ndash;187
     doi: 10.1307/mmj/20216092
+    mathscinet: "4718496"
 
 
 
@@ -230,6 +232,17 @@ preprints:
       - reineke
     arxiv: "2311.17004"
 
+  - title: On decompositions for Fano schemes of intersections of two quadrics
+    coauthors:
+      - bose
+      - frei
+      - gould
+      - hotchkiss
+      - lamarche
+      - petok
+      - rodriguez
+      - shah
+    arxiv: "2403.12517"
 
 
 needingrevision:
@@ -262,17 +275,6 @@ needingrevision:
 
 
 inprogress:
-  - title: On decompositions for Fano schemes of intersections of two quadrics
-    coauthors:
-      - bose
-      - frei
-      - gould
-      - hotchkiss
-      - lamarche
-      - petok
-      - rodriguez
-      - shah
-
   - title: A combinatorial non-abelian Torelli theorem and random walks
     coauthors:
       - galkin
@@ -290,17 +292,6 @@ ongoing:
     coauthors:
       - baumann
       - vangarderen
-
-  - title: Derived categories of Fano schemes of lines on intersections of two quadrics
-    coauthors:
-      - bose
-      - frei
-      - gould
-      - hotchkiss
-      - lamarche
-      - petok
-      - rodriguez
-      - shah
 
 
 other:
