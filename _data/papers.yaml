@@ -318,7 +318,7 @@ other:
 
   - title: Projectivity of good moduli spaces of semistable quiver representations and vector bundles
     journal: Oberwolfach Reports 22/2022
-    doi: 10.4171/OWR/2022/23
+    doi: 10.14760/OWR-2022-23
     information: Interactions between Algebraic Geometry and Noncommutative Algebra
     pdf: https://pbelmans.ncag.info/assets/owr-2218-belmans.pdf
 
@@ -327,6 +327,11 @@ other:
     information: 'Algebraic Geometry: Moduli Spaces, Birational Geometry and Derived Aspects'
     doi: 10.14760/OWR-2022-32
     pdf: https://pbelmans.ncag.info/assets/owr-2228-belmans.pdf
+
+  - title: Hochschild cohomology of Hilbert schemes of points
+    journal: Oberwolfach Reports 2024
+    information: "Hochschild (co)homology and applications"
+    pdf: https://pbelmans.ncag.info/assets/owr-2416-belmans.pdf
 
 
 broad:
