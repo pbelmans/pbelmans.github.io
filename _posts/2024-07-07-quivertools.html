@@ -1,0 +1,70 @@
+---
+layout: post
+title: "QuiverTools"
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+{% include quivertools.html %}
+
+<h2>QuiverTools</h2>
+<p>I am really excited to announce something that has been in the making for quite some time, and which is the result of the hard work with
+<ul>
+  <li><a href="https://math.uni-paderborn.de/ag/arbeitsgruppe-algebra/team/hans-franzen">Hans Franzen</a>
+  <li><a href="https://giannipetrella.eu">Gianni Petrella</a>
+</ul>
+
+<p>Many questions in the representation theory and algebraic geometry of quivers and their moduli of representations
+can be answered using very algorithmic methods.
+This is what <a href="https://quiver.tools"><strong>QuiverTools</strong></a> is about.
+We do not deal with actual representations (that is what <a href="https://folk.ntnu.no/oyvinso/QPA/">QPA</a> is for),
+rather our focus is on the geometry of moduli spaces.
+
+<h3>An example</h3>
+Let us illustrate some things.
+One of my favourite quiver moduli is the 6-dimensional Kronecker moduli space,
+which Hans and I considered in <a href="https://doi.org/10.1093/imrn/rnad306">On Chow rings of quiver moduli</a>.
+Let us define it in QuiverTools:
+{% highlight python %}
+from quiver import *
+
+Q = KroneckerQuiver(3)
+X = QuiverModuliSpace(Q, (2, 3))
+{% endhighlight %}
+<p>Then we can compute some of its basic invariants as follows:
+{% highlight python %}
+X.is_projective() # True
+X.is_smooth() # True
+X.dimension() # 6
+X.picard_rank() # 1
+X.index() # 3
+{% endhighlight %}
+<p>Just like in the Hodge diamond cutter you can compute Betti numbers:
+{% highlight python %}
+X.betti_numbers() # [1, 0, 1, 0, 3, 0, 3, 0, 3, 0, 1, 0, 1]
+{% endhighlight %}
+<p>We also support the recent work involving Chow rings and rigidity questions for quiver moduli:
+{% highlight python %}
+eta = -Q.canonical_stability_parameter(d) / 3
+X.degree(eta) # 57
+
+X.if_rigidity_inequality_holds() # True
+{% endhighlight %}
+<p>This is only a very quick tour of what it can do, more explanations are to come!
+<p>If you have problems installing it, you can also run it inside your browser using <a href="https://mybinder.org/v2/gh/QuiverTools/mybinder-sage/master">this interactive binder notebook</a>.
+
+<h3>Some comments</h3>
+<ul>
+  <li>This release is really only a <code>v1.0</code>.
+    Let us know if you find issues, or have feature requests!
+  <li>We are also working on a Julia version, focusing more on performance.
+    Stay tuned for more information.
+  <li>We are also working on more detailed instructions:
+    for now there is the documentation taken from the docstrings,
+    which should be good enough if you have some experience with Sage and quiver moduli,
+    but a more user-friendly guide is in the works.
+</ul>
