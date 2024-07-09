@@ -5,13 +5,6 @@ accepted:
     journal: accepted for publication in Proceedings of Nottingham Algebraic Geometry Seminar
     arxiv: "2202.08601"
 
-  - title: On Chow rings of quiver moduli
-    coauthors:
-      - franzen
-    arxiv: "2307.01711"
-    journal: accepted for publication in IMRN
-    doi: 10.1093/imrn/rnad306
-
 
 published:
   - title: Embeddings of algebras in derived categories of surfaces
@@ -193,6 +186,13 @@ published:
     doi: 10.1307/mmj/20216092
     mathscinet: "4718496"
 
+  - title: On Chow rings of quiver moduli
+    coauthors:
+      - franzen
+    arxiv: "2307.01711"
+    journal: IMRN
+    doi: 10.1093/imrn/rnad306
+    information: volume 2024, issue 13, pages 10255&ndash;10272
 
 
 preprints:

@@ -141,14 +141,14 @@ p.journal {
 </ol>
 
 <h3>Preprints needing revision</h3>
-<ol class="publications" style="counter-reset: publications 24">
+<ol class="publications" style="counter-reset: publications 25">
 {% for paper in site.data.papers.needingrevision %}
   {% include publication.html paper=paper %}
 {% endfor %}
 </ol>
 
 <h3>Preprints nearing completion</h3>
-<ol class="publications">
+<ol class="publications" style="counter-reset: publications 29">
 {% for paper in site.data.papers.inprogress %}
   {% include publication.html paper=paper %}
 {% endfor %}
