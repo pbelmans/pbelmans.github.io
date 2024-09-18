@@ -281,17 +281,18 @@ inprogress:
       - mukhopadhyay
     note: available upon request
 
+  - title: Central curves on noncommutative surfaces
+    coauthors:
+      - baumann
+      - vangarderen
+    note: available upon request
+
 
 # use # to comment out
 ongoing:
   - title: Hochschild (co)homology of noncommutative cyclic covers
     coauthors:
       - ingalls
-
-  - title: Central curves on noncommutative surfaces
-    coauthors:
-      - baumann
-      - vangarderen
 
 
 other:
