@@ -244,6 +244,13 @@ preprints:
       - shah
     arxiv: "2403.12517"
 
+  - title: Central curves on noncommutative surfaces
+    coauthors:
+      - baumann
+      - vangarderen
+    comment: available upon request
+    arxiv: 2410.07620
+
 
 needingrevision:
   - title: Comparison of two constructions of noncommutative surfaces with exceptional collections of length 4
@@ -280,12 +287,6 @@ inprogress:
       - galkin
       - mukhopadhyay
     comment: available upon request, previously titled <em>A combinatorial non-abelian Torelli theorem and random walks</em>
-
-  - title: Central curves on noncommutative surfaces
-    coauthors:
-      - baumann
-      - vangarderen
-    comment: available upon request
 
   - title: The Albanese morphism for hyperelliptic varieties
     coauthors:
