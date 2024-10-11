@@ -248,7 +248,7 @@ preprints:
     coauthors:
       - baumann
       - vangarderen
-    arxiv: 2410.07620
+    arxiv: "2410.07620"
 
 
 needingrevision:
