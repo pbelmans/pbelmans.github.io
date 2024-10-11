@@ -275,17 +275,22 @@ needingrevision:
 
 
 inprogress:
-  - title: A combinatorial non-abelian Torelli theorem and random walks
+  - title: Can you hear the shape of a random walk?
     coauthors:
       - galkin
       - mukhopadhyay
-    note: available upon request
+    comment: available upon request, previously titled <em>A combinatorial non-abelian Torelli theorem and random walks</em>
 
   - title: Central curves on noncommutative surfaces
     coauthors:
       - baumann
       - vangarderen
-    note: available upon request
+    comment: available upon request
+
+  - title: The Albanese morphism for hyperelliptic varieties
+    coauthors:
+      - demleitner
+      - nunez
 
 
 # use # to comment out

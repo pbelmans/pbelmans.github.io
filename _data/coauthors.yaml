@@ -34,6 +34,10 @@ dejong:
 delaet:
   name: Kevin De Laet
 
+demleitner:
+  name: Andreas Demleitner
+  url: https://home.mathematik.uni-freiburg.de/demleitner/
+
 fatighenti:
   name: Enrico Fatighenti
   url: https://sites.google.com/view/enricofatighenti/home
@@ -100,6 +104,10 @@ makarova:
 mukhopadhyay:
   name: Swarnava Mukhopadhyay
   url: http://www.math.tifr.res.in/~swarnava/
+
+nunez:
+  name: Pedro Núñez
+  url: https://pedro-nunez.github.io/
 
 oberdieck:
   name: Georg Oberdieck
