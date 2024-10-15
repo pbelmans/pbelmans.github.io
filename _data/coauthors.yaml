@@ -8,6 +8,7 @@ bastianelli:
 
 baumann:
   name: Thilo Baumann
+  url: https://tbpi.github.io
 
 beckmann:
   name: Thorsten Beckmann
@@ -60,7 +61,7 @@ galkin:
 
 gould:
   name: Ben Gould
-  url: https://sites.google.com/uic.edu/gould
+  url: https://sites.google.com/umich.edu/brgould
 
 hoskins:
   name: Vicky Hoskins
@@ -95,7 +96,6 @@ lebruyn:
 
 liang:
   name: Jason Liang
-  url: https://lsa.umich.edu/math/people/phd-students/liangji.html
 
 makarova:
   name: Svetlana Makarova
@@ -103,7 +103,7 @@ makarova:
 
 mukhopadhyay:
   name: Swarnava Mukhopadhyay
-  url: http://www.math.tifr.res.in/~swarnava/
+  url: https://mathweb.tifr.res.in/~swarnava/index.html
 
 nunez:
   name: Pedro Núñez
@@ -111,7 +111,7 @@ nunez:
 
 oberdieck:
   name: Georg Oberdieck
-  url: http://www.math.uni-bonn.de/~georgo/
+  url: https://people.kth.se/~georgo/
 
 okawa:
   name: Shinnosuke Okawa
@@ -119,7 +119,7 @@ okawa:
 
 petok:
   name: Jack Petok
-  url: https://math.dartmouth.edu/~jpetok/
+  url: https://jackpetok.github.io/
 
 petrella:
   name: Gianni Petrella
@@ -137,11 +137,11 @@ reineke:
 
 ricolfi:
   name: Andrea Ricolfi
-  url: https://atricolfi.github.io
+  url: https://aricolfi.github.io
 
 rennemo:
   name: Jørgen Vold Rennemo
-  url: https://folk.uio.no/jorgeren/
+  url: https://sites.google.com/view/jvrennemo/home
 
 rodriguez:
   name: Cristian Andres Rodriguez Avila
@@ -168,7 +168,7 @@ torres:
 
 vandenbergh:
   name: Michel Van den Bergh
-  url: http://hardy.uhasselt.be/personal/vdbergh/Members/michel_id.html
+  url: https://cantate.be
 
 vangarderen:
   name: Okke van Garderen
