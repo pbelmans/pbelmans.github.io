@@ -193,6 +193,7 @@ published:
     information: volume 74, number 1, pages 167&ndash;187
     doi: 10.1307/mmj/20216092
     mathscinet: "4718496"
+    zbmath: "1540.14008"
 
   - title: On Chow rings of quiver moduli
     coauthors:
@@ -201,6 +202,7 @@ published:
     journal: IMRN
     doi: 10.1093/imrn/rnad306
     information: volume 2024, issue 13, pages 10255&ndash;10272
+    mathscinet: "4770368"
 
 
 preprints:
