@@ -4,6 +4,7 @@
     <p class="coauthors">with {% for coauthor in paper.coauthors %}{% if site.data.coauthors[coauthor].url %}<a href="{{ site.data.coauthors[coauthor].url }}">{% endif %}{{ site.data.coauthors[coauthor].name }}{% if site.data.coauthors[coauthor].url %}</a>{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}.</p>
   {% endif %}
   {% if paper.journal %}<p class="journal">{{ paper.journal }}, {{ paper.information }}</p>{% endif %}
+  {% if paper.comment %}<p class="comment">{{ paper.comment }}</p>{% endif %}
   {% if paper.arxiv or paper.mathscinet or paper.doi or paper.zbmath or paper.pdf %}
     <p class="badges">
     {% if paper.arxiv %}<span class="id"><a href="https://arxiv.org/abs/{{ paper.arxiv }}"><span class="id-type id-arxiv">arXiv</span><span class="id-key">{{ paper.arxiv }}</span></a></span>{% endif %}
@@ -13,6 +14,5 @@
     {% if paper.pdf %}<span class="id"><a href="{{ paper.pdf }}"><span class="id-type id-pdf">pdf</span><span class="id-key">link</span></a></span>{% endif %}
     </p>
   {% endif %}
-  {% if paper.comment %}<p class="comment">{{ paper.comment }}{% endif %}
 </li>
 

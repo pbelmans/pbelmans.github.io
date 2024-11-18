@@ -206,6 +206,13 @@ published:
 
 
 preprints:
+  - title: Moduli spaces of semiorthogonal decompositions in families
+    coauthors:
+      - okawa
+      - ricolfi
+    arxiv: "2002.03303"
+    comment: <small>with an appendix jointly with <a href="https://wendylowen.com">Wendy Lowen</a></small>
+
   - title: Graph potentials and topological quantum field theories
     coauthors:
       - galkin
@@ -261,12 +268,6 @@ needingrevision:
       - vandenbergh
     arxiv: "1811.08810"
     comment: <small>We will retitle this to "The Hirzebruch isomorphism for exotic noncommutative surfaces".</small>
-
-  - title: Moduli spaces of semiorthogonal decompositions in families
-    coauthors:
-      - okawa
-      - ricolfi
-    arxiv: "2002.03303"
 
   - title: Indecomposability of derived categories in families
     coauthors:
