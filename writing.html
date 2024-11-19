@@ -119,8 +119,10 @@ p.journal {
 </ul>
 
 <h3 id="preprints">Preprints</h3>
-{% assign both = site.data.papers.published | concat: site.data.papers.accepted %}
-<ol class="publications reverse" style="counter-reset: publications {{ both | size }}">
+{% assign two = site.data.papers.published | concat: site.data.papers.accepted %}
+{% assign three = two | concat: site.data.papers.preprints %}
+{% assign four = three | concat: site.data.papers.needingrevision %}
+<ol class="publications reverse" style="counter-reset: publications {{ two | size }}">
 {% for paper in site.data.papers.preprints %}
   {% include publication.html paper=paper %}
 {% endfor %}
@@ -141,14 +143,14 @@ p.journal {
 </ol>
 
 <h3>Preprints needing revision</h3>
-<ol class="publications" style="counter-reset: publications 25">
+<ol class="publications" style="counter-reset: publications {{ three | size }}">
 {% for paper in site.data.papers.needingrevision %}
   {% include publication.html paper=paper %}
 {% endfor %}
 </ol>
 
 <h3>Preprints nearing completion</h3>
-<ol class="publications" style="counter-reset: publications 29">
+<ol class="publications" style="counter-reset: publications {{ four | size }}">
 {% for paper in site.data.papers.inprogress %}
   {% include publication.html paper=paper %}
 {% endfor %}
