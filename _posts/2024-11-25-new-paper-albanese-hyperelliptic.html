@@ -1,0 +1,88 @@
+---
+layout: post
+title: "New paper: The Albanese morphism for hyperelliptic varieties"
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+<p>This blogpost is about
+<a href="https://arxiv.org/abs/2411.14814"><strong>The Albanese morphism for hyperelliptic varieties</strong></a>.
+If you just want mathematics and not some of the backstory,
+you can click the link to immediately get to the preprint.
+
+<h3>Background</h3>
+<p>Back in March 2023,
+<a href="https://home.mathematik.uni-freiburg.de/demleitner/">Andreas Demleitner</a> and <a href="https://pedro-nunez.github.io/">Pedro Núñez</a>
+gave seminar talks at the University of Luxembourg,
+with the talk by Andreas being on hyperelliptic varieties
+(the talk by Pedro, whilst interesting, has no relevance to this story).
+These hyperelliptic varieties were introduced by Lange in 2001,
+as a higher-dimensional version of bielliptic surfaces,
+one of the four classes of K-trivial surfaces.
+<p>They can be defined as the quotient of an abelian variety $A$
+by a finite group $G$ acting freely and without translations,
+and they give interesting higher-dimensional varieties with torsion canonical bundles,
+for which a classification is somewhat feasible.
+Whilst we still don't know whether there are finitely many
+or infinitely many deformation classes of Calabi&ndash;Yau 3-folds,
+we have a good understanding of which groups can occur in dimensions 3 and 4,
+with <em>many</em> interesting examples known,
+or possibly to construct,
+given their explicit description.
+I'd be interested in knowing a full classification of all deformation families in dimension 3 (and being bold: dimension 4),
+akin to the Mori&ndash;Mukai classification of Fano 3-folds,
+but that is not the topic of this paper.
+<p>Rather, the motivation comes from the fact that
+the derived categories of bielliptic surfaces are interesting:
+they are <em>indecomposable</em> by Kawatani&ndash;Okawa,
+making them some kind of atomic objects in the study of derived categories.
+This brings us to the question that motivated the start of our conversations:
+is the same true for (higher-dimensional) hyperelliptic varieties?
+The indecomposability of derived categories of higher-dimensional varieties
+is a significant open problem,
+with little known beyond the easy cases where the conclusion comes from having trivial canonical bundle,
+whereas for hyperelliptic varieties it is torsion and potentially not algebraically trivial.
+
+<h3>Overview of the results</h3>
+<p>Our approach to this problem is,
+as the title suggests,
+given by studying the <a href="https://en.wikipedia.org/wiki/Albanese_variety">Albanese morphism</a>.
+From general results in birational geometry,
+one already knows that $X=A/G$ has an isotrivial Albanese morphism
+which is étale-locally just the product with a fiber.
+But the explicit geometry of $X$ in terms of $A$ and $G$
+allows us to give an effective description of the Albanese variety
+and the Albanese fiber.
+<p>That this should be possible is not necessarily very surprising,
+and when the preprint was essentially finished
+it turned out that a similar but less explicit description
+was already known to Ueno in the 1970s,
+although it only appears as an ingredient of a proof.
+<p>As it turns out,
+understanding the Albanese morphism
+and its role in the geography
+of hyperelliptic varieties gives rise to
+some cool phenomena taking place already in low dimensions.
+<p>And our explicit approach allows us to often give a positive answer to the question
+whether the derived category of a hyperelliptic variety
+is indecomposable!
+For this we use two methods:
+<ul>
+  <li><a href="https://epiga.episciences.org/11116">Pirozhkov's notion of stable indecomposability of a variety</a>,
+    strengthening indecomposability for its derived category;
+  <li><a href="https://arxiv.org/abs/1508.00682">Kawatani&ndash;Okawa's results using the geometry of the canonical bundle</a>.
+</ul>
+<p>Two highlights are:
+<ul>
+  <li>whenever $G$ is cyclic, $\mathbf{D}^{\mathrm{b}}(X)$ is (stably) indecomposable
+  <li>if $\dim X=3$, then $\mathbf{D}^{\mathrm{b}}(X)$ is indecomposable
+</ul>
+<p>We conjecture that it is always indecomposable,
+and highlight some of the first open cases where none of the existing tools seem to work.
+<p>Let me know if you want to chat about this,
+it has been a fun project,
+and I'm always looking forward to share the fun!

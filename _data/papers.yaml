@@ -260,6 +260,12 @@ preprints:
       - vangarderen
     arxiv: "2410.07620"
 
+  - title: The Albanese morphism for hyperelliptic varieties
+    coauthors:
+      - demleitner
+      - nunez
+    arxiv: "2411.14814"
+
 
 needingrevision:
   - title: Comparison of two constructions of noncommutative surfaces with exceptional collections of length 4
@@ -290,12 +296,6 @@ inprogress:
       - galkin
       - mukhopadhyay
     comment: available upon request, previously titled <em>A combinatorial non-abelian Torelli theorem and random walks</em>
-
-  - title: The Albanese morphism for hyperelliptic varieties
-    coauthors:
-      - demleitner
-      - nunez
-    comment: available upon request
 
 
 # use # to comment out
