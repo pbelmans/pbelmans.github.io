@@ -1,0 +1,66 @@
+---
+layout: post
+title: Graphical evidence for the Birch and Swinnerton-Dyer conjecture
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+<p>Whilst mentoring a student on a project related to elliptic curves,
+we got talking about the <a href="https://en.wikipedia.org/wiki/Birch_and_Swinnerton-Dyer_conjecture">Birch and Swinnerton&ndash;Dyer conjecture</a>.
+I refer you to the Wikipedia page for context, if you need any.
+<p>The Wikipedia page features <a href="https://en.wikipedia.org/wiki/File:BSD_data_plot_for_elliptic_curve_800h1.svg">a plot</a>,
+but no code to produce it.
+In order to consider more examples, I've written the following Julia code.
+{% highlight julia %}
+using Hecke
+using Plots
+using Primes
+using ThreadsX
+
+# to benefit from multithreading, start Julia using `julia --threads 10`
+
+bound = 1000000
+# start at 100 to ignore the erratic early behavior
+P = Primes.primes(100, bound)
+X = map(log, map(log, P))
+
+function ratio(E, p)
+    if p in bad_primes(E)
+        return 1
+    end
+    return order(base_change(GF(p), E)) // p
+end
+
+function BSD(E)
+    ratios = ThreadsX.collect(Float64(ratio(E, p)) for p in P)
+    partials = cumprod(ratios)
+
+    return map(log, partials)
+end
+{% endhighlight %}
+<p>Similar to the linked plot, we expect that an elliptic curve of rank $r$
+gives rise to something which approaches a line of slope $r$.
+For elliptic curves of ranks 0 to 4 taken from the <a href="https://lmfdb.org">LMFDB</a>
+we can easily plot their associated "BSD-curves"
+using
+{% highlight julia %}
+curves = [
+    elliptic_curve([0, -1, 1, 0, 0]),
+    elliptic_curve([0, 0, 1, -1, 0]),
+    elliptic_curve([0, -1, 1, -24, 54]),
+    elliptic_curve([1, -1, 1, -237, 1365]),
+    elliptic_curve([0, -1, 1, -129, 600]),
+];
+
+label = permutedims(hcat([string("rank ", i) for i in 0:4]));
+plot(X, map(BSD, curves), label=label)
+{% endhighlight %}
+which results in
+<p><img src="/assets/bsd-plot.svg">
+<p>Does anyone know what the original data supporting the BSD conjecture looked like?
+Certainly, the <a href="https://en.wikipedia.org/wiki/EDSAC_2">EDSAC</a> they purportedly used for the calculations
+is not going to reproduce the plot above anytime soon.
