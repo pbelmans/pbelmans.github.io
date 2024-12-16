@@ -1,0 +1,68 @@
+---
+layout: post
+title: "New tool: twisted Hodge diamonds for Hilbert schemes of points"
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+- programming
+author: Pieter Belmans
+---
+
+{% include twisted-hodge-hilbert.html %}
+
+<p>Last year I wrote about <a href="{% post_url 2023-09-13-new-paper-hochschild-hilbert %}">a paper Lie Fu, Andreas Krug, and I wrote</a>,
+about computing the Hochschild cohomology of Hilbert schemes of points.
+In this paper we conjectured that the identity
+\[
+  \sum_{n\geq 0}\sum_{p=0}^{2n}\sum_{q=0}^{2n}\mathrm{h}^{p,q}(\mathop{\rm Hilb}\nolimits^nS,{L}_n)x^py^qt^n
+  =
+  \prod_{k\ge 1}\prod_{p=0}^2\prod_{q=0}^2\left( 1-(-1)^{p+q}x^{p+k-1}y^{q+k-1}t^k\right)^{-(-1)^{p+q}\mathrm{h}^{p,q}(S,{L}^{\otimes k})}.
+\]
+holds.
+It gives an expression of the twisted Hodge numbers of the line bundle $L_n$ on $\mathop{\rm Hilb}^nS$
+induced from a line bundle $L$ on $S$,
+in terms of the twisted Hodge numbers of the line bundles (plural!) $L^{\otimes k}$ on $S$.
+The version without $\otimes k$ was a conjecture of Boissière,
+for which counterexamples had already been found.
+<p>I was really happy to see that Lie Fu has found <a href="https://arxiv.org/abs/2412.09975"><strong>a proof of the conjecture</strong></a>!
+
+<p>It is no secret that I like explicit implementations of results.
+It's not too hard to implement this formula,
+except that it is a little cumbersome to deal with all the data required for the formula,
+because you might need many twisted Hodge diamonds of $S$.
+<p>That's why I decided to take my implementation of the (at the time conjectural) formula from a few years back,
+clean it up,
+and package it together with various interesting surfaces and their twisted Hodge diamonds.
+My preferred choice of $L$ is the anticanonical line bundle,
+because then it computes the Hochschild&ndash;Kostant&ndash;Rosenberg decomposition
+of the Hochschild cohomology of Hilbert schemes of points.
+
+<h3>Some examples</h3>
+<p>One of the explicit examples we have computed in our joint paper is $\mathop{\rm Hilb}^2\mathbb{P}^2$.
+This can now be easily recomputed as
+{% highlight python %}
+sage: from twisted_hilbert import *
+sage: S = CompleteIntersectionSurface([], 3) # anticanonical twist
+sage: TwistedHilbertSchemeDiamond(S, 2).as_parallelogram()
+  1
+  0   8
+  0   10   38
+  0   0    35   80
+  0   0    0    28   55
+      0    0    0    0
+           0    0    0
+                0    0
+                     0
+{% endhighlight %}
+<p>Here we use the twisted Hodge diamonds of complete intersection surfaces,
+as implemented by <a href="https://github.com/pbelmans/twisted-hodge-ci"><code>twisted-hodge-ci</code></a>,
+something implemented by Piet Glas and myself a few years back.
+<p>Alternative examples are given by bielliptic surfaces,
+which are discussed at length in our joint paper.
+
+<h3>Instructions etc.</h3>
+Instructions on <a href="https://github.com/pbelmans/twisted-hodge-hilbert?tab=readme-ov-file#getting-started">how to get started</a>
+and <a href="https://github.com/pbelmans/twisted-hodge-hilbert?tab=readme-ov-file#how-to-cite">how to cite the software</a>
+are available.
