@@ -17,6 +17,6 @@ future: false
 
 paginate: 5
 paginate_path: "/archive/:num/"
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-redirect-from
