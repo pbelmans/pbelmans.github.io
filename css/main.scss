@@ -19,8 +19,8 @@ $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
 
 $grey-color:       #828282;
-$grey-color-light: color.adjust($grey-color, $lightness: 40%);
-$grey-color-dark:  color.adjust($grey-color, $lightness: -25%);
+$grey-color-light: adjust-color($grey-color, $lightness: 40%);
+$grey-color-dark:  adjust-color($grey-color, $lightness: -25%);
 $light-grey-color: #f2f2f2;
 
 // Width of the content area
@@ -53,9 +53,9 @@ $on-laptop:        800px;
      margin: 0;
      padding: 0;
  }
- 
- 
- 
+
+
+
  /**
   * Basic styling
   */
@@ -70,9 +70,9 @@ $on-laptop:        800px;
      font-feature-settings: "kern" 1;
      font-kerning: normal;
  }
- 
- 
- 
+
+
+
  /**
   * Set `margin-bottom` to maintain vertical rhythm
   */
@@ -82,13 +82,13 @@ $on-laptop:        800px;
  %vertical-rhythm {
      margin-bottom: calc($spacing-unit / 2);
  }
- 
+
  h2, h3, h4, h5, h6 {
      margin-bottom: 0;
  }
- 
- 
- 
+
+
+
  /**
   * Images
   */
@@ -96,71 +96,71 @@ $on-laptop:        800px;
      max-width: 100%;
      vertical-align: middle;
  }
- 
- 
- 
+
+
+
  /**
   * Figures
   */
  figure > img {
      display: block;
  }
- 
+
  figcaption {
      font-size: $small-font-size;
  }
- 
- 
- 
+
+
+
  /**
   * Lists
   */
  ul, ol {
      margin-left: $spacing-unit;
  }
- 
+
  li {
      > ul,
      > ol {
           margin-bottom: 0;
      }
  }
- 
+
  dt {
    font-weight: bold;
  }
- 
+
  dd {
    margin-left: 3em;
  }
- 
- 
+
+
  /**
   * Headings
   */
  h1, h2, h3, h4, h5, h6 {
      font-weight: $base-font-weight;
  }
- 
+
  /**
   * Links
   */
  a {
      color: $brand-color;
      text-decoration: none;
- 
+
      &:visited {
-         color: color.adjust($brand-color, $lightness: -15%);
+         color: adjust-color($brand-color, $lightness: -15%);
      }
- 
+
      &:hover {
          color: $text-color;
          text-decoration: underline;
      }
  }
- 
- 
- 
+
+
+
  /**
   * Blockquotes
   */
@@ -171,14 +171,14 @@ $on-laptop:        800px;
      font-size: 106%;
      letter-spacing: -.4px;
      font-style: italic;
- 
+
      > :last-child {
          margin-bottom: 0;
      }
  }
- 
- 
- 
+
+
+
  /**
   * Code formatting
   */
@@ -189,30 +189,30 @@ $on-laptop:        800px;
      border-radius: 3px;
      background-color: #eef;
  }
- 
+
  code {
      padding: 1px 5px;
  }
- 
+
  code.url {
      border: 0;
      padding: 0;
      background-color: transparent;
  }
- 
+
  pre {
      padding: 8px 12px;
      overflow-x: auto;
- 
+
      > code {
          border: 0;
          padding-right: 0;
          padding-left: 0;
      }
  }
- 
- 
- 
+
+
+
  /**
   * Wrapper
   */
@@ -224,7 +224,7 @@ $on-laptop:        800px;
      padding-right: $spacing-unit;
      padding-left: $spacing-unit;
      @extend %clearfix;
- 
+
      @include media-query($on-laptop) {
          max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
          max-width:         calc(#{$content-width} - (#{$spacing-unit}));
@@ -232,28 +232,28 @@ $on-laptop:        800px;
          padding-left: calc($spacing-unit / 2);
      }
  }
- 
- 
- 
+
+
+
  /**
   * Clearfix
   */
  %clearfix {
- 
+
      &:after {
          content: "";
          display: table;
          clear: both;
      }
  }
- 
- 
- 
+
+
+
  /**
   * Icons
   */
  .icon {
- 
+
      > svg, > img {
          display: inline-block;
          width: 16px;
@@ -262,7 +262,7 @@ $on-laptop:        800px;
      }
  }
 
- 
+
  /**
  * Site header
  */
