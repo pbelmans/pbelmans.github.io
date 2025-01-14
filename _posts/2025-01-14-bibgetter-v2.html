@@ -1,0 +1,30 @@
+---
+layout: post
+title: A new version of bibgetter
+type: post
+categories:
+- LaTeX
+tags:
+- programming
+author: Pieter Belmans
+---
+
+<p>More than 8 years ago <a href="{% post_url 2016-11-05-bibgetter %}">I created bibgetter</a>,
+a tool that fitted perfectly in my workflow of dealing with bibliographies in LaTeX,
+which is a combination of citing arXiv preprints, papers with MathSciNet entries, and a few other things.
+I imagine that your workflow might be very different,
+and maybe you are looking for something like <a href="https://github.com/alexrutar/mathbib-py">mathbib</a> instead.
+
+<p>So, about bibgetter.
+After the MathSciNet update a few years back it stopped working.
+I had some fun earlier this month, and now:
+<ul>
+  <li>it works again! no MathSciNet authentication needed anymore! (yes!)
+  <li>it also supports a central bibliography file, which you can <em>curate</em>:
+    sometimes MathSciNet entries have issues,
+    or you can create your own custom entries (e.g., the Stacks project is not on MathSciNet)
+  <li>it is implemented much more cleanly than before
+</ul>
+<p>By no means do I think it is a finished product.
+But as I've started integrating it in my workflow,
+so can you, and if you find issues or have feature requests, please get in touch!
