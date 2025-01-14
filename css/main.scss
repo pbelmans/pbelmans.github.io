@@ -78,8 +78,7 @@ $on-laptop:        800px;
   */
  h1,
  p, blockquote, pre,
- ul, ol, dl, figure,
- %vertical-rhythm {
+ ul, ol, dl, figure {
      margin-bottom: calc($spacing-unit / 2);
  }
 
