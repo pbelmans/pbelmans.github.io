@@ -5,14 +5,6 @@ accepted:
     journal: accepted for publication in Proceedings of Nottingham Algebraic Geometry Seminar
     arxiv: "2202.08601"
 
-  - title: Vector fields and admissible embeddings for quiver moduli
-    coauthors:
-      - brecan
-      - franzen
-      - reineke
-    arxiv: "2311.17004"
-    journal: accepted for publication in Moduli
-
 
 published:
   - title: Embeddings of algebras in derived categories of surfaces
@@ -203,6 +195,16 @@ published:
     doi: 10.1093/imrn/rnad306
     information: volume 2024, issue 13, pages 10255&ndash;10272
     mathscinet: "4770368"
+
+  - title: Vector fields and admissible embeddings for quiver moduli
+    coauthors:
+      - brecan
+      - franzen
+      - reineke
+    arxiv: "2311.17004"
+    journal: Moduli
+    information: volume 2, e3 (2025) 1&ndash;23
+    doi: 10.1112/mod.2024.11
 
 
 preprints:
