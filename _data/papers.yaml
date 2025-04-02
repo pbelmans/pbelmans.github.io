@@ -5,6 +5,16 @@ accepted:
     journal: accepted for publication in Proceedings of Nottingham Algebraic Geometry Seminar
     arxiv: "2202.08601"
 
+  - title: Projectivity and effective global generation of determinantal line bundles on quiver moduli
+    arxiv: "2210.00033"
+    journal: accepted for publication in Algebra & Number Theory
+    coauthors:
+      - damiolini
+      - franzen
+      - hoskins
+      - makarova
+      - tajakka
+
 
 published:
   - title: Embeddings of algebras in derived categories of surfaces
@@ -203,6 +213,7 @@ published:
       - reineke
     arxiv: "2311.17004"
     journal: Moduli
+    mathscinet: "4883104"
     information: volume 2, e3 (2025) 1&ndash;23
     doi: 10.1112/mod.2024.11
 
@@ -220,15 +231,6 @@ preprints:
       - galkin
       - mukhopadhyay
     arxiv: "2205.07244"
-
-  - title: Projectivity and effective global generation of determinantal line bundles on quiver moduli
-    arxiv: "2210.00033"
-    coauthors:
-      - damiolini
-      - franzen
-      - hoskins
-      - makarova
-      - tajakka
 
   - title: Hochschild cohomology of Hilbert schemes of points on surfaces
     coauthors:
