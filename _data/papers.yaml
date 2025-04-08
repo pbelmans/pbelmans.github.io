@@ -15,6 +15,13 @@ accepted:
       - makarova
       - tajakka
 
+  - title: Central curves on noncommutative surfaces
+    coauthors:
+      - baumann
+      - vangarderen
+    arxiv: "2410.07620"
+    journal: accepted for publication in Transactions of the American Mathematical Society
+
 
 published:
   - title: Embeddings of algebras in derived categories of surfaces
@@ -226,6 +233,13 @@ preprints:
     arxiv: "2002.03303"
     comment: <small>with an appendix jointly with <a href="https://wendylowen.com">Wendy Lowen</a></small>
 
+  - title: Indecomposability of derived categories in families
+    coauthors:
+      - bastianelli
+      - okawa
+      - ricolfi
+    arxiv: "2007.00994"
+
   - title: Graph potentials and topological quantum field theories
     coauthors:
       - galkin
@@ -258,12 +272,6 @@ preprints:
       - shah
     arxiv: "2403.12517"
 
-  - title: Central curves on noncommutative surfaces
-    coauthors:
-      - baumann
-      - vangarderen
-    arxiv: "2410.07620"
-
   - title: The Albanese morphism for hyperelliptic varieties
     coauthors:
       - demleitner
@@ -278,13 +286,6 @@ needingrevision:
       - vandenbergh
     arxiv: "1811.08810"
     comment: <small>We will retitle this to "The Hirzebruch isomorphism for exotic noncommutative surfaces".</small>
-
-  - title: Indecomposability of derived categories in families
-    coauthors:
-      - bastianelli
-      - okawa
-      - ricolfi
-    arxiv: "2007.00994"
 
   - title: Graph potentials and symplectic geometry of moduli spaces of vector bundles
     coauthors:
