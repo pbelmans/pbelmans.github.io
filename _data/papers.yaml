@@ -282,6 +282,12 @@ preprints:
     arxiv: "2506.09811"
     comment: 'see also the related repository <a href="https://github.com/pbelmans/bott-non-vanishing"><span style="font-family: monospace">bott-non-vanishing</span></a>'
 
+  - title: The QuiverTools package for Sage and Julia
+    arxiv: "2506.19432"
+    coauthors:
+      - franzen
+      - petrella
+
 
 needingrevision:
   - title: Comparison of two constructions of noncommutative surfaces with exceptional collections of length 4

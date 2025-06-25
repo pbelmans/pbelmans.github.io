@@ -1,0 +1,112 @@
+---
+layout: post
+title: "QuiverTools: the writeup"
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+{% include quivertools.html %}
+
+<p>tldr; <a href="https://arxiv.org/abs/2506.19432"><strong>The QuiverTools package for SageMath and Julia</strong></a> is now on the arXiv.
+
+<p><a href="{% post_url 2024-07-07-quivertools %}">Almost a year</a> ago we (= Hans Franzen, Gianni Petrella, and I) announced QuiverTools,
+which is software to work with quivers and their moduli spaces of representations.
+<p>Back then I wrote that:
+<ul>
+  <li>we released v1.0
+  <li>we were working on a Julia version, more focused on performance
+  <li>we were working on an introduction to the package
+</ul>
+<p>I'm glad to say that:
+<ul>
+  <li>we released v1.1, fixing some issues and introducing some new features
+  <li>we released <a href="https://github.com/QuiverTools/QuiverTools.jl">v1.0 of the Julia version</a>,
+    in case you need performance and/or prefer working with Julia
+  <li>we put <a href="https://arxiv.org/abs/2506.19432"><strong>The QuiverTools package for SageMath and Julia</strong></a> on the arXiv
+</ul>
+<p>I won't be giving a short description of the paper:
+it is itself short and meant to be accessible.
+<h3>A slogan</h3>
+<p>Let me however explain a slogan
+which is implicit in the paper,
+but which motivates many of the results.
+It is directly related to the beautiful dictionary between
+<ul>
+  <li>moduli spaces of quiver representations
+  <li>moduli spaces of vector bundles on curves
+</ul>
+<p><strong>The curve side</strong>
+The Riemann&ndash;Roch theorem for vector bundles says that
+for a vector bundle $\mathcal{E}$ on a smooth projective curve $C$ of genus $g$,
+we have that
+\[
+\chi(C,\mathcal{E})
+=
+\mathrm{h}^0(C,\mathcal{E})
+-
+\mathrm{h}^1(C,\mathcal{E})
+=
+\deg(\mathcal{E})
++
+\operatorname{rk}(\mathcal{E})(1-g)
+\]
+<p>It allows us to encode the intersection form (or Euler form) on the numerical Grothendieck group of $C$,
+which is isomorphic to $\mathbb{Z}^{\oplus 2}$,
+because
+\[
+\langle\mathcal{E},\mathcal{F}\rangle
+\coloneqq
+\operatorname{Hom}(\mathcal{E},\mathcal{F})
+-
+\operatorname{Ext}^1(\mathcal{E},\mathcal{F})
+\overset{!}{=}
+\chi(C,\mathcal{E}^\vee\otimes\mathcal{F}).
+\]
+<p>Many results for (moduli of) vector bundles on curves are
+essentially reductions to a Riemann&ndash;Roch calculation.
+<p><strong>The quiver side</strong>
+The same is true for quiver representations.
+But what do I mean with "the same"?!
+<p>
+Often,
+the Euler form is defined ad hoc on $\mathbb{Z}^{Q_0}$
+(the numerical Grothendieck group of the category of representations of $Q$)
+as
+\[
+  \langle-,-\rangle\colon
+  \mathbb{Z}^{Q_0} \times \mathbb{Z}^{Q_0} \to \mathbb{Z}:
+  (\mathbf{d},\mathbf{e}) \mapsto \sum_{i \in Q_0} d_i e_i - \sum_{a \in Q_1} d_{\operatorname{s}(a)} e_{\operatorname{t}(a)}.
+\]
+The Riemann&ndash;Roch theorem for curves
+becomes the 4-term exact sequence
+\[
+  0 \to
+  \operatorname{Hom}(V, W) \to
+  \bigoplus_{i\in Q_0}\operatorname{Hom}_{\mathbb{C}}(V_i,W_i) \to
+  \bigoplus_{\alpha\in Q_1}\operatorname{Hom}_{\mathbb{C}}(V_{\operatorname{s}(\alpha)},W_{\operatorname{t}(\alpha)}) \to
+  \operatorname{Ext}(V, W) \to
+  0,
+\]
+which explains how this Euler form
+is indeed computing the alternating sum of Hom and Ext.
+Whenever you do a Riemann&ndash;Roch calculation studying moduli of vector bundles,
+chances are you'll be doing an Euler form calculation
+when studying quiver moduli.
+This is particularly visible in <a href="https://arxiv.org/abs/2210.00033">Projectivity and effective global generation of determinantal line bundles on quiver moduli</a>,
+a joint paper with Chiara Damiolini, Hans Franzen, Victoria Hoskins, Svetlana Makarova, and Tuomas Tajakka,
+but it is also visible in the QuiverTools writeup.
+<p>The writeup which was posted today gives (we hope) a nice summary of
+how algorithms for quiver moduli are built from more basic ones,
+and how one gets diverse explicit methods for this class of varieties.
+In my opinion,
+they allow (almost) as many explicit calculations as
+partial flag varieties
+and toric varieties,
+and there is a non-trivial intersection with both classes.
+There are certainly calculations feasible for both those classes of varieties
+for which no quiver moduli version can exist,
+but it certainly is a good motivation to try and get as close as possible!
