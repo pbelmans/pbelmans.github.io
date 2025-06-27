@@ -1,0 +1,41 @@
+---
+layout: post
+title: "Conway's game of life in 3 dimensions"
+type: post
+categories:
+- mathematics
+author: Pieter Belmans
+---
+
+<img src="/assets/conway.gif" style="float: right; margin: 0 1em 1em 1em;">
+<p>Back when I was still in Luxembourg,
+I used to supervise projects in the <a href="https://math.uni.lu/eml/">Experimental Mathematics Lab</a>.
+For one of these projects, the students were tasked with visualising Conway's Game of Life in three dimensions,
+by drawing each generation on top of the previous one.
+I was inspired to suggest this
+by <a href="https://www.instagram.com/reel/C2hoRnFsmQW/">something I'd seen linked on Twitter</a>.
+<p>Because the SageMath approach the students used ran into efficiency issues,
+I decided to try implementing it myself using <a href="https://d3js.org/">D3js</a>.
+The result can be seen on <a href="https://conway.ncag.info/">conway.ncag.info</a>.
+<p>As you can tell from the link,
+and <a href="https://github.com/pbelmans/conway">from the repository</a>,
+I haven't fully finished the implementation:
+there is no GUI whatsoever.
+But it is in fact possible to draw <em>many</em> patterns:
+it comes preloaded with all the patterns from the
+<a href="https://conwaylife.com/wiki">the Conway's game of life wiki</a>.
+To use this,
+one has to modify the URL,
+e.g.,
+<pre><code>https://conway.ncag.info/?pattern=13enginecordership</code></pre>
+<p>loads the file <a href="https://github.com/pbelmans/conway/blob/main/public/patterns/13enginecordership.cells">13enginerecordership.cells</a>.
+You see part of the animation in this post.
+You can find all preloaded files
+<a href="https://github.com/pbelmans/conway/tree/main/public/patterns">in the repository</a>.
+<h3>What's next?</h3>
+<p>I don't have time to properly build a GUI around this thing.
+But I think it could be a fun project for someone else.
+The code is <a href="https://github.com/pbelmans/conway">on GitHub</a>.
+There are, of course, various Conway Game of Life visualisers out there&mdash;but
+is this the first online, open-source version that does 3D like this? Maybe.
+In any case, I had fun building it last year, and now someone else can take it further.
