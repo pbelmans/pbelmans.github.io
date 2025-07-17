@@ -22,6 +22,14 @@ accepted:
     arxiv: "2410.07620"
     journal: accepted for publication in Transactions of the American Mathematical Society
 
+  - title: Indecomposability of derived categories in families
+    coauthors:
+      - bastianelli
+      - okawa
+      - ricolfi
+    arxiv: "2007.00994"
+    journal: accepted for publication in Journal of Geometry and Physics
+
 
 published:
   - title: Embeddings of algebras in derived categories of surfaces
@@ -232,13 +240,6 @@ preprints:
       - ricolfi
     arxiv: "2002.03303"
     comment: <small>with an appendix jointly with <a href="https://wendylowen.com">Wendy Lowen</a></small>
-
-  - title: Indecomposability of derived categories in families
-    coauthors:
-      - bastianelli
-      - okawa
-      - ricolfi
-    arxiv: "2007.00994"
 
   - title: Graph potentials and topological quantum field theories
     coauthors:
