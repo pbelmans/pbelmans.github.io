@@ -30,6 +30,15 @@ accepted:
     arxiv: "2007.00994"
     journal: accepted for publication in Journal of Geometry and Physics
 
+  - title: Rigidity and Schofield's partial tilting conjecture for quiver moduli
+    coauthors:
+      - brecan
+      - franzen
+      - petrella
+      - reineke
+    arxiv: "2311.17003"
+    journal: accepted for publication in Journal de l'École Polytechnique &mdash; Mathématiques
+
 
 published:
   - title: Embeddings of algebras in derived categories of surfaces
@@ -252,14 +261,6 @@ preprints:
       - fu
       - krug
     arxiv: "2309.06244"
-
-  - title: Rigidity and Schofield's partial tilting conjecture for quiver moduli
-    coauthors:
-      - brecan
-      - franzen
-      - petrella
-      - reineke
-    arxiv: "2311.17003"
 
   - title: On decompositions for Fano schemes of intersections of two quadrics
     coauthors:
