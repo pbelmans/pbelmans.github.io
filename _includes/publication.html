@@ -9,7 +9,7 @@
     <p class="badges">
     {% if paper.arxiv %}<span class="id"><a href="https://arxiv.org/abs/{{ paper.arxiv }}"><span class="id-type id-arxiv">arXiv</span><span class="id-key">{{ paper.arxiv }}</span></a></span>{% endif %}
     {% if paper.mathscinet %}<span class="id"><a href="https://mathscinet.ams.org/mathscinet-getitem?mr={{ paper.mathscinet }}"><span class="id-type id-mr">MR</span><span class="id-key">{{ paper.mathscinet }}</span></a></span>{% endif %}
-    {% if paper.zbmath %}<span class="id"><a href="https://zbmath.org/?q=an%3A{ paper.zbmath }}"><span class="id-type id-zbl">Zbl</span><span class="id-key">{{ paper.zbmath }}</span></a></span>{% endif %}
+    {% if paper.zbmath %}<span class="id"><a href="https://zbmath.org/?q=an%3A{{ paper.zbmath }}"><span class="id-type id-zbl">Zbl</span><span class="id-key">{{ paper.zbmath }}</span></a></span>{% endif %}
     {% if paper.doi %}<span class="id"><a href="https://doi.org/{{ paper.doi }}"><span class="id-type id-doi">doi</span><span class="id-key">{{ paper.doi }}</span></a></span>{% endif %}
     {% if paper.pdf %}<span class="id"><a href="{{ paper.pdf }}"><span class="id-type id-pdf">pdf</span><span class="id-key">link</span></a></span>{% endif %}
     </p>
