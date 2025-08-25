@@ -31,6 +31,20 @@ accepted:
     arxiv: "2311.17003"
     journal: accepted for publication in Journal de l'École Polytechnique &mdash; Mathématiques
 
+  - title: On decompositions for Fano schemes of intersections of two quadrics
+    coauthors:
+      - bose
+      - frei
+      - gould
+      - hotchkiss
+      - lamarche
+      - petok
+      - rodriguez
+      - shah
+    arxiv: "2403.12517"
+    journal: accepted for publication in Advances in Mathematics
+
+
 
 published:
   - title: Embeddings of algebras in derived categories of surfaces
@@ -243,6 +257,7 @@ published:
     journal: Journal of Geometry and Physics
     doi: "10.1016/j.geomphys.2025.105600"
     information: volume 217, November 2025, 105600
+    mathscinet: "4939473"
 
 
 preprints:
@@ -264,18 +279,6 @@ preprints:
       - fu
       - krug
     arxiv: "2309.06244"
-
-  - title: On decompositions for Fano schemes of intersections of two quadrics
-    coauthors:
-      - bose
-      - frei
-      - gould
-      - hotchkiss
-      - lamarche
-      - petok
-      - rodriguez
-      - shah
-    arxiv: "2403.12517"
 
   - title: The Albanese morphism for hyperelliptic varieties
     coauthors:
