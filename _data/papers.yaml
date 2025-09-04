@@ -21,28 +21,7 @@ accepted:
       - vangarderen
     arxiv: "2410.07620"
     journal: accepted for publication in Transactions of the American Mathematical Society
-
-  - title: Rigidity and Schofield's partial tilting conjecture for quiver moduli
-    coauthors:
-      - brecan
-      - franzen
-      - petrella
-      - reineke
-    arxiv: "2311.17003"
-    journal: accepted for publication in Journal de l'École Polytechnique &mdash; Mathématiques
-
-  - title: On decompositions for Fano schemes of intersections of two quadrics
-    coauthors:
-      - bose
-      - frei
-      - gould
-      - hotchkiss
-      - lamarche
-      - petok
-      - rodriguez
-      - shah
-    arxiv: "2403.12517"
-    journal: accepted for publication in Advances in Mathematics
+    doi: 10.1090/tran/9571
 
 
 
@@ -150,6 +129,26 @@ published:
     journal: Transactions of the American Mathematical Society
     information: volume 373 (9), 2020, pages 6139&ndash;6156
 
+  - title: Derived categories of (nested) Hilbert schemes
+    coauthors:
+      - krug
+    arxiv: "1909.04321"
+    journal: Michigan Mathematical Journal
+    information: volume 74 (2024), number 1, pages 167&ndash;187
+    doi: 10.1307/mmj/20216092
+    mathscinet: "4718496"
+    zbmath: "1540.14008"
+
+  - title: Hochschild cohomology of generalised Grassmannians
+    coauthors:
+      - smirnov
+    arxiv: "1911.09414"
+    journal: Documenta Mathematica
+    information: volume 28 (2023), number 1, pages 11&ndash;53
+    doi: 10.4171/dm/912
+    mathscinet: "4706032"
+    zbmath: "1528.14062"
+
   - title: Derived categories of standard flips and cubic hypersurfaces
     coauthors:
       - fu
@@ -172,18 +171,16 @@ published:
     information: volume 28, 2023, pages 9&ndash;34
     zbmath: "1517.14031"
 
-  - title: Projectivity of the moduli space of vector bundles on a curve
+  - title: Indecomposability of derived categories in families
     coauthors:
-      - alper
-      - bragg
-      - liang
-      - tajakka
-    arxiv: "2206.06195"
-    journal: "SPEC: Stacks Project Expository Collection"
-    doi: 10.1017/9781009051897.005
-    information: chapter 3, pages 90&ndash;125
-    mathscinet: "4480534"
-    zbmath: "1506.14072"
+      - bastianelli
+      - okawa
+      - ricolfi
+    arxiv: "2007.00994"
+    journal: Journal of Geometry and Physics
+    doi: "10.1016/j.geomphys.2025.105600"
+    information: volume 217 (2025), 105600
+    mathscinet: "4939473"
 
   - title: Decompositions of moduli spaces of vector bundles and graph potentials
     coauthors:
@@ -207,25 +204,18 @@ published:
     mathscinet: "4578397"
     zbmath: "1516.14077"
 
-  - title: Hochschild cohomology of generalised Grassmannians
+  - title: Projectivity of the moduli space of vector bundles on a curve
     coauthors:
-      - smirnov
-    arxiv: "1911.09414"
-    journal: Documenta Mathematica
-    information: volume 28 (2023), number 1, pages 11&ndash;53
-    doi: 10.4171/dm/912
-    mathscinet: "4706032"
-    zbmath: "1528.14062"
-
-  - title: Derived categories of (nested) Hilbert schemes
-    coauthors:
-      - krug
-    arxiv: "1909.04321"
-    journal: Michigan Mathematical Journal
-    information: volume 74, number 1, pages 167&ndash;187
-    doi: 10.1307/mmj/20216092
-    mathscinet: "4718496"
-    zbmath: "1540.14008"
+      - alper
+      - bragg
+      - liang
+      - tajakka
+    arxiv: "2206.06195"
+    journal: "SPEC: Stacks Project Expository Collection"
+    doi: 10.1017/9781009051897.005
+    information: chapter 3, pages 90&ndash;125
+    mathscinet: "4480534"
+    zbmath: "1506.14072"
 
   - title: On Chow rings of quiver moduli
     coauthors:
@@ -236,6 +226,17 @@ published:
     information: volume 2024, issue 13, pages 10255&ndash;10272
     mathscinet: "4770368"
     zbmath: "1554.14004"
+
+  - title: Rigidity and Schofield's partial tilting conjecture for quiver moduli
+    coauthors:
+      - brecan
+      - franzen
+      - petrella
+      - reineke
+    arxiv: "2311.17003"
+    doi: 10.5802/jep.312
+    journal: Journal de l’École polytechnique — Mathématiques
+    information: volume 12 (2025), pp. 1345-1379.
 
   - title: Vector fields and admissible embeddings for quiver moduli
     coauthors:
@@ -248,16 +249,20 @@ published:
     information: volume 2, e3 (2025) 1&ndash;23
     doi: 10.1112/mod.2024.11
 
-  - title: Indecomposability of derived categories in families
+  - title: On decompositions for Fano schemes of intersections of two quadrics
     coauthors:
-      - bastianelli
-      - okawa
-      - ricolfi
-    arxiv: "2007.00994"
-    journal: Journal of Geometry and Physics
-    doi: "10.1016/j.geomphys.2025.105600"
-    information: volume 217, November 2025, 105600
-    mathscinet: "4939473"
+      - bose
+      - frei
+      - gould
+      - hotchkiss
+      - lamarche
+      - petok
+      - rodriguez
+      - shah
+    arxiv: "2403.12517"
+    journal: Advances in Mathematics
+    information: volume 480 (2025), 110506
+    doi: 10.1016/j.aim.2025.110506
 
 
 preprints:
