@@ -34,7 +34,7 @@ published:
     mathscinet: "3637928"
     zbmath: "1378.16035"
     journal: Proceedings of the American Mathematical Society
-    information: volume 145, number 7, 2017, pages 2757&ndash;2770
+    information: volume 145 (2017), number 7, pages 2757&ndash;2770
 
   - title: The point variety of quantum polynomial rings
     coauthors:
@@ -45,7 +45,7 @@ published:
     mathscinet: "3527537"
     zbmath: "1454.14043"
     journal: Journal of Algebra
-    information: volume 463, 2016, pages 10&ndash;22
+    information: volume 463 (2016) pages 10&ndash;22
 
   - title: Derived categories of noncommutative quadrics and Hilbert squares
     coauthors:
@@ -55,7 +55,7 @@ published:
     mathscinet: "4165471"
     zbmath: "1481.14034"
     journal: IMRN
-    information: volume 2020, issue 19, pages 6042&ndash;6069
+    information: volume 2020 (2020), issue 19, pages 6042&ndash;6069
 
   - title: Relative tensor triangular Chow groups for coherent algebras
     coauthors:
@@ -65,7 +65,7 @@ published:
     mathscinet: "3671198"
     zbmath: "1400.14049"
     journal: Journal of Algebra
-    information: volume 487, 2017, pages 386&ndash;428</em>
+    information: volume 487 (2017), pages 386&ndash;428
 
   - title: Hochschild cohomology of noncommutative planes and quadrics
     arxiv: "1705.06098"
@@ -73,7 +73,7 @@ published:
     mathscinet: "3988086"
     zbmath: "1429.14002"
     journal: Journal of Noncommutative Geometry
-    information: volume 13, 2019, pages 769&ndash;795
+    information: volume 13 (2019), pages 769&ndash;795
 
   - title: Constructing noncommutative surfaces with exceptional collections of length 4
     coauthors:
@@ -83,7 +83,7 @@ published:
     mathscinet: 3847233
     zbmath: "1441.14008"
     journal: Journal of the London Mathematical Society (2)
-    information: volume 98, 2018, pages 85&ndash;103
+    information: volume 98 (2018), pages 85&ndash;103
 
   - title: Examples violating Golyshev's canonical strip hypothesis
     coauthors:
@@ -95,7 +95,7 @@ published:
     mathscinet: 4399121
     zbmath: "1485.14071"
     journal: Experimental Mathematics
-    information: volume 31 (1), 2022, pages 233&ndash;237,
+    information: volume 31 (2022), number 1, pages 233&ndash;237,
 
   - title: Admissible subcategories in derived categories of moduli of vector bundles on curves
     coauthors:
@@ -105,7 +105,7 @@ published:
     mathscinet: "3954042"
     zbmath: "1440.14079"
     journal: Advances in Mathematics
-    information: volume 351, 2019, pages 653&ndash;675
+    information: volume 351 (2019), pages 653&ndash;675
 
   - title: "Hilbert squares: derived categories and deformations"
     coauthors:
@@ -116,7 +116,7 @@ published:
     mathscinet: "3950704"
     zbmath: "1423.14115"
     journal: Selecta Mathematica
-    information: volume 25, 2019, paper 37
+    information: volume 25 (2019), paper 37
 
   - title: Automorphisms of Hilbert schemes of points on surfaces
     coauthors:
@@ -127,7 +127,7 @@ published:
     mathscinet: "4155174"
     zbmath: "1451.14008"
     journal: Transactions of the American Mathematical Society
-    information: volume 373 (9), 2020, pages 6139&ndash;6156
+    information: volume 373 (2020), number 9, pages 6139&ndash;6156
 
   - title: Derived categories of (nested) Hilbert schemes
     coauthors:
@@ -155,7 +155,7 @@ published:
       - raedschelders
     arxiv: "2002.04940"
     journal: Proceedings of the London Mathematical Society
-    information: volume 125 (6), 2022, pages 1452&ndash;1482
+    information: volume 125 (2022), number 6, pages 1452&ndash;1482
     doi: 10.1112/plms.12487
     mathscinet: "4524222"
     zbmath: "1520.14029"
@@ -168,7 +168,7 @@ published:
     doi: 10.1007/s00031-021-09657-w
     mathscinet: "4552169"
     journal: Transformation Groups
-    information: volume 28, 2023, pages 9&ndash;34
+    information: volume 28 (2023), pages 9&ndash;34
     zbmath: "1517.14031"
 
   - title: Indecomposability of derived categories in families
@@ -179,7 +179,7 @@ published:
     arxiv: "2007.00994"
     journal: Journal of Geometry and Physics
     doi: "10.1016/j.geomphys.2025.105600"
-    information: volume 217 (2025), 105600
+    information: volume 217 (2025), paper 105600
     mathscinet: "4939473"
 
   - title: Decompositions of moduli spaces of vector bundles and graph potentials
@@ -188,7 +188,7 @@ published:
       - mukhopadhyay
     arxiv: "2009.05568v3"
     journal: Forum of Mathematics, Sigma
-    information: volume 11:e16, 2023, pages 1&ndash;28
+    information: volume 11:e16 (2023), pages 1&ndash;28
     doi: 10.1017/fms.2023.14
     mathscinet: "4557892"
     zbmath: "1525.14016"
@@ -199,7 +199,7 @@ published:
       - tanturri
     arxiv: "2104.07626"
     journal: Mathematische Zeitschrift
-    information: volume 304, 12 (2023)
+    information: volume 304 (2023), paper 12
     doi: 10.1007/s00209-023-03261-2
     mathscinet: "4578397"
     zbmath: "1516.14077"
@@ -223,7 +223,7 @@ published:
     arxiv: "2307.01711"
     journal: IMRN
     doi: 10.1093/imrn/rnad306
-    information: volume 2024, issue 13, pages 10255&ndash;10272
+    information: volume 2024 (2024), number 13, pages 10255&ndash;10272
     mathscinet: "4770368"
     zbmath: "1554.14004"
 
@@ -235,8 +235,8 @@ published:
       - reineke
     arxiv: "2311.17003"
     doi: 10.5802/jep.312
-    journal: Journal de l’École polytechnique — Mathématiques
-    information: volume 12 (2025), pp. 1345-1379.
+    journal: Journal de l’École polytechnique &mdash; Mathématiques
+    information: volume 12 (2025), pages 1345&ndash;1379.
 
   - title: Vector fields and admissible embeddings for quiver moduli
     coauthors:
@@ -246,7 +246,7 @@ published:
     arxiv: "2311.17004"
     journal: Moduli
     mathscinet: "4883104"
-    information: volume 2, e3 (2025) 1&ndash;23
+    information: volume 2 (2025), e3, 1&ndash;23
     doi: 10.1112/mod.2024.11
 
   - title: On decompositions for Fano schemes of intersections of two quadrics
@@ -261,7 +261,8 @@ published:
       - shah
     arxiv: "2403.12517"
     journal: Advances in Mathematics
-    information: volume 480 (2025), 110506
+    mathscinet: "4953422"
+    information: volume 480 (2025), paper 110506
     doi: 10.1016/j.aim.2025.110506
 
 
