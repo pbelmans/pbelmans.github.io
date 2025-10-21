@@ -23,6 +23,13 @@ accepted:
     journal: accepted for publication in Transactions of the American Mathematical Society
     doi: 10.1090/tran/9571
 
+  - title: The Albanese morphism for hyperelliptic varieties
+    coauthors:
+      - demleitner
+      - nunez
+    arxiv: "2411.14814"
+    journal: accepted for publication in Indagationes Mathematicae
+
 
 
 published:
@@ -287,12 +294,6 @@ preprints:
       - krug
     arxiv: "2309.06244"
 
-  - title: The Albanese morphism for hyperelliptic varieties
-    coauthors:
-      - demleitner
-      - nunez
-    arxiv: "2411.14814"
-
   - title: Failure of Bott vanishing for (co)adjoint partial flag varieties
     arxiv: "2506.09811"
     comment: 'see also the related repository <a href="https://github.com/pbelmans/bott-non-vanishing"><span style="font-family: monospace">bott-non-vanishing</span></a>'
@@ -327,12 +328,22 @@ inprogress:
       - mukhopadhyay
     comment: available upon request, previously titled <em>A combinatorial non-abelian Torelli theorem and random walks</em>
 
+  - title: Deformation theory for a morphism in the derived category with fixed lift of the codomain
+    coauthors:
+      - lowen
+      - okawa
+      - ricolfi
 
 # use # to comment out
 ongoing:
   - title: Hochschild (co)homology of noncommutative cyclic covers
     coauthors:
       - ingalls
+
+  - title: Brauer groups of resolved quiver moduli
+    coauthors:
+      - petrella
+      - torres
 
 
 other:
