@@ -328,6 +328,11 @@ inprogress:
       - mukhopadhyay
     comment: available upon request, previously titled <em>A combinatorial non-abelian Torelli theorem and random walks</em>
 
+  - title: Brauer groups of resolved quiver moduli
+    coauthors:
+      - petrella
+      - torres
+
   - title: Deformation theory for a morphism in the derived category with fixed lift of the codomain
     coauthors:
       - lowen
@@ -340,10 +345,6 @@ ongoing:
     coauthors:
       - ingalls
 
-  - title: Brauer groups of resolved quiver moduli
-    coauthors:
-      - petrella
-      - torres
 
 
 other:
