@@ -272,6 +272,7 @@ published:
     mathscinet: "4953422"
     information: volume 480 (2025), paper 110506
     doi: 10.1016/j.aim.2025.110506
+    comment: 'see also the related repository <a href="https://github.com/pbelmans/decomposing-fano-schemes"><span style="font-family: monospace">decomposing-fano-schemes</span></a>'
 
 
 preprints:
