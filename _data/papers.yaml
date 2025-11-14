@@ -282,7 +282,6 @@ preprints:
       - okawa
       - ricolfi
     arxiv: "2002.03303"
-    comment: <small>with an appendix jointly with <a href="https://wendylowen.com">Wendy Lowen</a></small>
 
   - title: Graph potentials and topological quantum field theories
     coauthors:
@@ -305,6 +304,13 @@ preprints:
     coauthors:
       - franzen
       - petrella
+
+  - title: Deformation theory for a morphism in the derived category with fixed lift of the codomain
+    coauthors:
+      - lowen
+      - okawa
+      - ricolfi
+    arxiv: "2511.10312"
 
 
 needingrevision:
