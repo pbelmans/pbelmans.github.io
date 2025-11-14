@@ -1,0 +1,76 @@
+---
+layout: post
+title: "New paper: Deformation theory for a morphism in the derived category with fixed lift of the codomain"
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+<p>This blogpost is concerned with
+<strong><a href="https://arxiv.org/abs/2511.10312">Deformation theory for a morphism in the derived category with fixed lift of the codomain</a></strong>,
+written together with Wendy Lowen, Shinnosuke Okawa, and Andrea Ricolfi.
+If you want to go straight to the details,
+you can directly start reading the paper,
+this blogpost is just to give a bit of background and history.
+
+<h3>Origin story</h3>
+<p>Following a referee report and subsequent revision for <a href="https://arxiv.org/abs/2002.03303">Moduli spaces of semiorthogonal decompositions in families</a>,
+we have performed an appendectomy on what was formerly Appendix A in that paper
+(whose v3 will be online on Monday, I'll describe those significant changes in a separate blogpost),
+turning it into a standalone paper.
+After all,
+the main result proved in this former appendix
+is of independent interest.
+However, it being buried in an appendix was not an ideal situation.
+
+<p>So now it is a standalone paper
+which also includes our original proof
+that semiorthogonal decompositions deform uniquely
+in smooth and proper families.
+The referee has suggested a more self-contained proof for this uniqueness,
+which will be featured in v3 of the original paper,
+but more on that in a later blogpost.
+
+<h3>What's in the paper?</h3>
+<p>The paper establishes a deformation theory of <em>morphisms</em>,
+explaining when they lift to derived categories of deformations of abelian categories.
+The case of <a href="https://mathscinet.ams.org/mathscinet/article?mr=2175388">objects was worked out by Lowen in 2005</a>.
+One important conclusion from the results for objects is
+a precise theorem that explains the heuristic that exceptional objects
+should lift uniquely along deformations.
+
+<p>To do the same lifting for morphisms,
+you have to say first what you precisely want to do with
+the objects that are the domain and codomain of the morphism.
+As the title suggests, we want to fix a lift of the codomain,
+and then we try to understand how the domain and morphism itself
+can be lifted.
+
+<p>The reason for this choice of setup is that it is
+exactly what is needed for our application,
+namely to understand the deformation theory of semiorthogonal decompositions.
+After all,
+a semiorthogonal decomposition can be described using a <em>decomposition triangle</em>
+of projection functors,
+with the middle term being the identity functor,
+encoded using the structure sheaf of the diagonal.
+We therefore know which lift of the codomain we want to take:
+the structure sheaf of the diagonal.
+
+<p>And thus, that is what we have done:
+<ul>
+  <li>Theorem A gives the technical result for lifting morphisms,
+    identifying the obstruction class
+    and torsor structure for the set of lifts;
+  <li>Corollary B gives the algebro-geometric version,
+    which requires a restriction argument,
+    because in algebraic geometry one uses tensor products for pullbacks,
+    but those are a priori not compatible with
+    using Grothendieck categories and injective objects;
+  <li>Theorem C shows that semiorthogonal decompositions deform uniquely
+    in smooth and proper families.
+</ul>
+<p>I hope that this abstract and general machinery can be useful for you too!
