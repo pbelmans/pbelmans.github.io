@@ -349,14 +349,7 @@ ongoing:
       - ingalls
 
 
-
-other:
-  - title: Semiorthogonal decompositions for moduli of sheaves on curves
-    journal: Oberwolfach Reports 24/2018
-    information: Interactions between Algebraic Geometry and Noncommutative Algebra, pages 1473&ndash;1476
-    doi: 10.14760/OWR-2018-24
-    pdf: https://pbelmans.ncag.info/assets/owr-1822-belmans.pdf
-
+appendices:
   - title: "Comparing definitions of Hochschild cohomology for algebraic stacks"
     journal: Advances in Mathematics
     information: volume 364, 2020
@@ -365,6 +358,21 @@ other:
     mathscinet: "4057490"
     zbmath: "1435.14005"
     comment: 'appendix to <span class="font-weight: 500">The Hochschild cohomology ring of a global quotient orbifold</span>, by Cris Negron and Travis Schedler'
+
+  - title: "Generic non-semisimplicity of small quantum cohomology of Kronecker moduli"
+    coauthors:
+      - reineke
+    arxiv: 2509.01101v2
+    comment: 'appendix to <span class="font-weight: 500">A-D-E diagrams, Hodge&ndash;Tate hyperplane sections and semisimple quantum cohomology</span>, by Sergey Galkin, Naichung Conan Leung, Changzheng Li, and Rui Xiong'
+    pdf: https://pbelmans.ncag.info/assets/appendix-non-semisimple-kronecker-moduli.pdf
+
+
+other:
+  - title: Semiorthogonal decompositions for moduli of sheaves on curves
+    journal: Oberwolfach Reports 24/2018
+    information: Interactions between Algebraic Geometry and Noncommutative Algebra, pages 1473&ndash;1476
+    doi: 10.14760/OWR-2018-24
+    pdf: https://pbelmans.ncag.info/assets/owr-1822-belmans.pdf
 
   - title: How do semiorthogonal decompositions behave in families?
     journal: Oberwolfach Reports 19/2020

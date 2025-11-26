@@ -122,6 +122,7 @@ p.journal {
 {% assign two = site.data.papers.published | concat: site.data.papers.accepted %}
 {% assign three = two | concat: site.data.papers.preprints %}
 {% assign four = three | concat: site.data.papers.needingrevision %}
+{% assign five = four | concat: site.data.papers.inprogress %}
 <ol class="publications reverse" style="counter-reset: publications {{ two | size }}">
 {% for paper in site.data.papers.preprints %}
   {% include publication.html paper=paper %}
@@ -156,9 +157,14 @@ p.journal {
 {% endfor %}
 </ol>
 
+<h3 id="other">Appendices</h3>
+<ol class="publications" style="counter-reset: publications {{ five | size }}">
+{% for paper in site.data.papers.appendices %}
+  {% include publication.html paper=paper %}
+{% endfor %}
+</ol>
 
-
-<h3 id="other">Other publications</h3>
+<h3>Not peer-reviewed</h3>
 <ol class="publications">
 {% for paper in site.data.papers.other %}
   {% include publication.html paper=paper %}

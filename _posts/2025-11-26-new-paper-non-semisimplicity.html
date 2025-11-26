@@ -1,0 +1,47 @@
+---
+layout: post
+title: "New paper: Generic non-semisimplicity of small quantum cohomology of Kronecker moduli"
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+- programming
+author: Pieter Belmans
+---
+
+<p>It's not quite a new paper,
+rather it is a new <em>appendix</em> (<a href="/assets/appendix-non-semisimple-kronecker-moduli.pdf"><strong>pdf of a standalone version</strong></a>),
+to be included in <a href="https://arxiv.org/abs/2509.01101">A-D-E diagrams, Hodge&ndash;Tate hyperplane sections and semisimple quantum cohomology</a>
+by Sergey Galkin, Naichung Conan Leung, Changzheng Li, and Rui Xiong.
+<p>It is a short appendix,
+in which we observe that one of the main results in the Galkin&ndash;Leung&ndash;Li&ndash;Xiong paper
+is also sufficiently strong to deduce that
+the small quantum cohomology of certain Kronecker moduli is <em>not</em> semisimple.
+Here, Kronecker moduli is shorthand for
+moduli spaces of stable quiver representations of the Kronecker quiver;
+this class of smooth projective varieties has many extremely nice properties,
+and many strong tools to study them.
+<p>I refer to the introduction of the main paper for additional context
+motivating the study of quantum cohomology.
+Let me just point out that
+<ul>
+  <li>combining the Schofield and Dubrovin conjectures
+    predicts that the big quantum cohomology should be generically semisimple;
+  <li>special cases of Kronecker moduli are Grassmannians,
+    for which the small quantum cohomology is generically semisimple;
+  <li><a href="https://arxiv.org/abs/2412.15987">Meng has shown</a> that the small quantum cohomology for the Kronecker moduli space
+    for the 3-Kronecker quiver and dimension vector $(2,3)$
+    (the smallest case which is not a Grassmannian)
+    has generically simple quantum cohomology.
+</ul>
+<p>One can experimentally (using <a href="https://quiver.tools">QuiverTools</a>)
+check that the obstruction from Galkin&ndash;Leung&ndash;Li&ndash;Xiong's Theorem 1.2
+vanishes for many examples of Kronecker moduli.
+But Markus and I noticed that it does <em>not</em> vanish for the following infinite family of Kronecker moduli:
+<p><strong>Theorem</strong>
+<em>Let $\mathrm{M}_{(2,m)}^m$ be the Kronecker moduli space
+for the $m$-Kronecker quiver and dimension vector $(2,m)$, and $m\geq 5$.
+Then the small quantum cohomology of $\mathrm{M}_{(2,m)}^m$ is <strong>not</strong> generically semisimple.</em>
+</p>
+<p>It's a fun, combinatorial proof, that fits in 1.5 page, so I won't comment further on it.
