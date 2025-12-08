@@ -31,6 +31,11 @@ accepted:
     journal: accepted for publication in Indagationes Mathematicae
     doi: 10.1016/j.indag.2025.10.004
 
+  - title: Failure of Bott vanishing for (co)adjoint partial flag varieties
+    arxiv: "2506.09811"
+    journal: accepted for publication in Mathematical Research Letters
+    comment: 'see also the related repository <a href="https://github.com/pbelmans/bott-non-vanishing"><span style="font-family: monospace">bott-non-vanishing</span></a>'
+
 
 
 published:
@@ -294,11 +299,6 @@ preprints:
       - fu
       - krug
     arxiv: "2309.06244"
-
-  - title: Failure of Bott vanishing for (co)adjoint partial flag varieties
-    arxiv: "2506.09811"
-    comment: 'see also the related repository <a href="https://github.com/pbelmans/bott-non-vanishing"><span style="font-family: monospace">bott-non-vanishing</span></a>'
-
   - title: The QuiverTools package for Sage and Julia
     arxiv: "2506.19432"
     coauthors:
