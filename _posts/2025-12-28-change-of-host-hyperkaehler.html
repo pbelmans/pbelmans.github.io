@@ -1,0 +1,31 @@
+---
+layout: post
+title: "Change of host for Hyperkaehler.info"
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+- programming
+author: Pieter Belmans
+---
+
+<p>I've been hosting all interactive websites on PythonAnywhere,
+but recently I felt the urge to try and host them on my Synology DS920+.
+Four years ago, I bought it with the possibility in mind
+of starting to self-host various things
+aside from using it as a NAS.
+After a failed attempt a few weeks ago
+(despite port forwarding being set up in a seemingly correct fashion,
+my ISP was blocking communication with the Let's Encrypt servers)
+I figured out that I could use CloudFlare Tunnels instead.
+<p>I have now done this for <a href="https://hyperkaehler.info">Hyperkaehler.info</a>,
+as a little experiment.
+You shouldn't notice anything different,
+except that response times might even be a little quicker,
+and the SSL certificate comes from somewhere else.
+But in case it does go down for a prolonged period,
+now you know why.
+<p>If this approach works well for the next few months,
+I'll probably move my other interactive websites over as well
+(the static ones can simply continue running via GitHub Pages for the time being)
