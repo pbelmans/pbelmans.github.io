@@ -216,6 +216,7 @@ published:
     doi: 10.1007/s00209-023-03261-2
     mathscinet: "4578397"
     zbmath: "1516.14077"
+    comment: 'see also the related repository <a href="https://github.com/pbelmans/bivector-fields-fano-3-folds"><span style="font-family: monospace">bivector-fields-fano-3-folds</span></a>'
 
   - title: Projectivity of the moduli space of vector bundles on a curve
     coauthors:
@@ -248,7 +249,7 @@ published:
       - reineke
     arxiv: "2311.17003"
     doi: 10.5802/jep.312
-    journal: Journal de l’École polytechnique &mdash; Mathématiques
+    journal: Journal de l’École Polytechnique &mdash; Mathématiques
     information: volume 12 (2025), pages 1345&ndash;1379.
     mathscinet: "4954467"
 
