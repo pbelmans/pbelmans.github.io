@@ -36,6 +36,13 @@ accepted:
     journal: accepted for publication in Mathematical Research Letters
     comment: 'see also the related repository <a href="https://github.com/pbelmans/bott-non-vanishing"><span style="font-family: monospace">bott-non-vanishing</span></a>'
 
+  - title: The QuiverTools package for Sage and Julia
+    arxiv: "2506.19432"
+    coauthors:
+      - franzen
+      - petrella
+    journal: accepted for publication in Journal of Software for Algebra and Geometry
+
 
 
 published:
@@ -300,12 +307,6 @@ preprints:
       - fu
       - krug
     arxiv: "2309.06244"
-  - title: The QuiverTools package for Sage and Julia
-    arxiv: "2506.19432"
-    coauthors:
-      - franzen
-      - petrella
-
   - title: Deformation theory for a morphism in the derived category with fixed lift of the codomain
     coauthors:
       - lowen
