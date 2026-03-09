@@ -1,0 +1,34 @@
+---
+layout: post
+title: "Hyperkaehler.info: an update"
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+- programming
+author: Pieter Belmans
+---
+
+<p>Last week I updated <a href="https://hyperkaehler.info">Hyperkaehler.info</a> a bit,
+and now it also contains information on:</p>
+<ul>
+  <li><a href="https://www.hyperkaehler.info/monodromy">monodromy groups</a>
+  <li><a href="https://www.hyperkaehler.info/riemann-roch">Riemann&ndash;Roch polynomials</a>
+  <li><a href="https://www.hyperkaehler.info/llv">Looijenga–Lunts–Verbitsky (LLV) decompositions</a>
+</ul>
+<p>Especially the latter is really cool,
+it is a refinement of the Hodge decomposition using the representation theory of a finite-dimensional Lie algebra attached to a hyperkähler variety.
+<a href="https://jieaosong.github.io">Jieao Song</a> created an interactive visualization of this decomposition,
+and this is now integrated into the website.
+You can explore it for <a href="https://www.hyperkaehler.info/K3-4">type K3<sup>[4]</sup></a>.
+Notice how each type now also has its own canonical URL!</p>
+
+<hr>
+<p>Full disclosure: I have used LLMs (more precisely, Claude Opus and Sonnet, via GitHub Copilot)
+to implement these additions.
+What would probably have taken me more than a day of work (including various unrelated fixes) ended up taking only one or two hours,
+split between some implementation work of my own and a larger amount of reviewing LLM-generated code.</p>
+<p>It seems that LLMs have reached sufficient maturity to be useful for these things
+(but one has to carefully review things! they are basically very good autocomplete machines behaving like slot machines, or vice versa)
+and I'll be describing some more successful use cases later.
