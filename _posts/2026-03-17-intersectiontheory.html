@@ -1,0 +1,44 @@
+---
+layout: post
+title: "Intersection theory in OSCAR"
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+- programming
+author: Pieter Belmans
+---
+
+<p>5 years ago, Jieao Song wrote
+<a href="https://github.com/jieaosong/IntersectionTheory">a really nice intersection theory package</a> in Julia,
+my new favourite programming language.
+It is similar to the famous <a href="https://macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/Schubert2/html/index.html">Schubert2</a> package
+in Macaulay2,
+and other, lesser-known packages,
+like <a href="https://www.math.sciences.univ-nantes.fr/~sorger/en/chow/">Chow</a> for SageMath.
+It is extremely efficient (being significantly faster than Schubert2).
+<p>One plan that had been around for almost 5 years
+<a href="https://github.com/jieaosong/IntersectionTheory/issues/4">was to integrate it into OSCAR</a>,
+the Julia analogue of what SageMath is in Python,
+so that it becomes part of a stable ecosystem.
+<p>I'm happy to say that <a href="https://github.com/oscar-system/Oscar.jl/pull/5865/changes"><strong>this integration is now done</strong></a>!
+This was a joint effort of <a href="https://math.rptu.de/en/decker">Wolfram Decker</a> and myself.
+I want to thank Wolfram for the great help (and patience).
+Aside from simply integrating the infrastructure,
+we have added lots of documentation, examples, tests, and some minor features.
+That said, it cannot be overstated how great the foundation laid by Jieao was.
+I feel like standing on the shoulder of a giant here, and I hope that this will be a great tool for many people in the future.
+<p>It is not yet in the latest version (which is 1.7.0 at the time of writing) of OSCAR,
+but you can use the <a href="https://docs.oscar-system.org/dev/DeveloperDocumentation/new_developers/">development version per these instructions</a>.
+<p>If you want to see what it is capable of,
+see <a href="https://docs.oscar-system.org/dev/Experimental/IntersectionTheory/intro/">the documentation</a>
+(which for now still refers to the development branch; in the latest branch it is still the older version),
+e.g., check out
+<ul>
+  <li><a href="https://docs.oscar-system.org/dev/Experimental/IntersectionTheory/AbstractVarieties/">the different constructions and properties</a>, or
+  <li><a href="https://docs.oscar-system.org/dev/Experimental/IntersectionTheory/examples/">one of the many examples</a>
+</ul>
+<p>it can work with.
+<p>It is still in the experimental phase,
+and we are eager to hear your feedback and comments!
