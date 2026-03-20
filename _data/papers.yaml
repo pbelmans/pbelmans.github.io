@@ -43,6 +43,14 @@ accepted:
       - petrella
     journal: accepted for publication in Journal of Software for Algebra and Geometry
 
+  - title: Graph potentials and topological quantum field theories
+    coauthors:
+      - galkin
+      - mukhopadhyay
+    arxiv: "2205.07244"
+    journal: accepted for publication in Proceedings of the London Mathematical Society
+    comment: 'see also the related repository <a href="https://github.com/pbelmans/graph-potential-tqft"><span style="font-family: monospace">graph-potential-tqft</span></a>'
+
 
 
 published:
@@ -296,12 +304,6 @@ preprints:
       - ricolfi
     arxiv: "2002.03303"
 
-  - title: Graph potentials and topological quantum field theories
-    coauthors:
-      - galkin
-      - mukhopadhyay
-    arxiv: "2205.07244"
-
   - title: Hochschild cohomology of Hilbert schemes of points on surfaces
     coauthors:
       - fu
@@ -313,6 +315,17 @@ preprints:
       - okawa
       - ricolfi
     arxiv: "2511.10312"
+
+  - title: Brauer groups of resolved quiver moduli via gerbes
+    coauthors:
+      - petrella
+      - torres
+
+  - title: Can you hear the shape of a high-dimensional random walk?
+    coauthors:
+      - galkin
+      - mukhopadhyay
+    comment: available upon request, previously titled <em>A combinatorial non-abelian Torelli theorem and random walks</em>
 
 
 needingrevision:
@@ -332,23 +345,32 @@ needingrevision:
 
 
 inprogress:
-  - title: Can you hear the shape of a random walk?
-    coauthors:
-      - galkin
-      - mukhopadhyay
-    comment: available upon request, previously titled <em>A combinatorial non-abelian Torelli theorem and random walks</em>
-
-  - title: Brauer groups of resolved quiver moduli
+  - title: Fano 3-fold quiver moduli
     coauthors:
       - petrella
-      - torres
+      - reineke
 
+  - title: Fano 4-fold quiver moduli from subspace quivers
+    coauthors:
+      - reineke
 
-# use # to comment out
 ongoing:
   - title: Hochschild (co)homology of noncommutative cyclic covers
     coauthors:
       - ingalls
+
+  - title: Series of Fano quiver moduli from subspace quivers
+    coauthors:
+      - reineke
+
+  - title: Series of Fano quiver moduli from extended Dynkin quivers
+    coauthors:
+      - reineke
+
+  - title: Twisting du Val resolutions and central skew surfaces
+    coauthors:
+      - mizuno
+      - vangarderen
 
 
 appendices:
