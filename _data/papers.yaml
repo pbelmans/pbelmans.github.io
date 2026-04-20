@@ -15,14 +15,6 @@ accepted:
       - makarova
       - tajakka
 
-  - title: Central curves on noncommutative surfaces
-    coauthors:
-      - baumann
-      - vangarderen
-    arxiv: "2410.07620"
-    journal: published online ahead of print in Transactions of the American Mathematical Society
-    doi: 10.1090/tran/9571
-
   - title: The Albanese morphism for hyperelliptic varieties
     coauthors:
       - demleitner
@@ -42,15 +34,6 @@ accepted:
       - franzen
       - petrella
     journal: accepted for publication in Journal of Software for Algebra and Geometry
-
-  - title: Graph potentials and topological quantum field theories
-    coauthors:
-      - galkin
-      - mukhopadhyay
-    arxiv: "2205.07244"
-    journal: accepted for publication in Proceedings of the London Mathematical Society
-    comment: 'see also the related repository <a href="https://github.com/pbelmans/graph-potential-tqft"><span style="font-family: monospace">graph-potential-tqft</span></a>'
-
 
 
 published:
@@ -233,6 +216,16 @@ published:
     zbmath: "1516.14077"
     comment: 'see also the related repository <a href="https://github.com/pbelmans/bivector-fields-fano-3-folds"><span style="font-family: monospace">bivector-fields-fano-3-folds</span></a>'
 
+  - title: Graph potentials and topological quantum field theories
+    coauthors:
+      - galkin
+      - mukhopadhyay
+    arxiv: "2205.07244"
+    doi: 10.1112/plms.70156
+    mathscinet: "5061218"
+    journal: volume 132, issue 4, April 2026, e70156
+    comment: 'see also the related repository <a href="https://github.com/pbelmans/graph-potential-tqft"><span style="font-family: monospace">graph-potential-tqft</span></a>'
+
   - title: Projectivity of the moduli space of vector bundles on a curve
     coauthors:
       - alper
@@ -295,6 +288,15 @@ published:
     information: volume 480 (2025), paper 110506
     doi: 10.1016/j.aim.2025.110506
     comment: 'see also the related repository <a href="https://github.com/pbelmans/decomposing-fano-schemes"><span style="font-family: monospace">decomposing-fano-schemes</span></a>'
+
+  - title: Central curves on noncommutative surfaces
+    coauthors:
+      - baumann
+      - vangarderen
+    arxiv: "2410.07620"
+    journal: volume 379 (2026), pages 3537&ndash;3589
+    doi: 10.1090/tran/9571
+    mathscinet: "5060440"
 
 
 preprints:
