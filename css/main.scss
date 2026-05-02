@@ -19,8 +19,8 @@ $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
 
 $grey-color:       #828282;
-$grey-color-light: adjust-color($grey-color, $lightness: 40%);
-$grey-color-dark:  adjust-color($grey-color, $lightness: -25%);
+$grey-color-light: color.adjust($grey-color, $lightness: 40%);
+$grey-color-dark:  color.adjust($grey-color, $lightness: -25%);
 $light-grey-color: #f2f2f2;
 
 // Width of the content area
@@ -149,7 +149,7 @@ $on-laptop:        800px;
      text-decoration: none;
 
      &:visited {
-         color: adjust-color($brand-color, $lightness: -15%);
+         color: color.adjust($brand-color, $lightness: -15%);
      }
 
      &:hover {
