@@ -28,13 +28,6 @@ accepted:
     journal: accepted for publication in Mathematical Research Letters
     comment: 'see also the related repository <a href="https://github.com/pbelmans/bott-non-vanishing"><span style="font-family: monospace">bott-non-vanishing</span></a>'
 
-  - title: The QuiverTools package for Sage and Julia
-    arxiv: "2506.19432"
-    coauthors:
-      - franzen
-      - petrella
-    journal: accepted for publication in Journal of Software for Algebra and Geometry
-
 
 published:
   - title: Embeddings of algebras in derived categories of surfaces
@@ -294,9 +287,19 @@ published:
       - baumann
       - vangarderen
     arxiv: "2410.07620"
-    journal: volume 379 (2026), pages 3537&ndash;3589
+    journal: Transactions of the American Mathematical Society
+    information: volume 379 (2026), pages 3537&ndash;3589
     doi: 10.1090/tran/9571
     mathscinet: "5060440"
+
+  - title: The QuiverTools package for Sage and Julia
+    arxiv: "2506.19432"
+    coauthors:
+      - franzen
+      - petrella
+    journal: Journal of Software for Algebra and Geometry
+    information: volume 16-1 (2026), pages 31&ndash;44
+    doi: 10.2140/jsag.2026.16.31
 
 
 preprints:
