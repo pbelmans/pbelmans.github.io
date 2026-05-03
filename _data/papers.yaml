@@ -5,16 +5,6 @@ accepted:
     journal: accepted for publication in Proceedings of Nottingham Algebraic Geometry Seminar
     arxiv: "2202.08601"
 
-  - title: Projectivity and effective global generation of determinantal line bundles on quiver moduli
-    arxiv: "2210.00033"
-    journal: accepted for publication in Algebra & Number Theory
-    coauthors:
-      - damiolini
-      - franzen
-      - hoskins
-      - makarova
-      - tajakka
-
   - title: The Albanese morphism for hyperelliptic varieties
     coauthors:
       - demleitner
@@ -231,6 +221,19 @@ published:
     information: chapter 3, pages 90&ndash;125
     mathscinet: "4480534"
     zbmath: "1506.14072"
+
+  - title: Projectivity and effective global generation of determinantal line bundles on quiver moduli
+    arxiv: "2210.00033"
+    journal: Algebra & Number Theory
+    information: volume 20 (2026), no. 4, pages 747&ndash;800
+    doi:  10.2140/ant.2026.20.747
+    coauthors:
+      - damiolini
+      - franzen
+      - hoskins
+      - makarova
+      - tajakka
+
 
   - title: On Chow rings of quiver moduli
     coauthors:
