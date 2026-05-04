@@ -1,0 +1,53 @@
+<footer>
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        contact me:
+        <br>
+        <a href="mailto:{{ .Site.Params.email }}" style="margin-left: 1em">{{ .Site.Params.email }}</a>
+        <br><br>
+        address:
+        <address style="margin-left: 1em">
+          Mathematical Institute<br>
+          Utrecht University<br>
+          Budapestlaan 6<br>
+          3584 CD Utrecht<br>
+          The Netherlands
+        </address>
+        <br>
+        office:
+        <address style="margin-left: 1em; font-style: normal">room 702</address>
+      </div>
+
+      <div class="footer-col footer-col-1">
+        I maintain the websites
+        <ul class="social-media-list" style="font-size: 90%">
+          <li>{{ partial "icon-stacks.html" . }}</li>
+          <li>{{ partial "icon-ncag.html" . }}</li>
+          <li>{{ partial "icon-kerodon.html" . }}</li>
+          <li>{{ partial "icon-fanography.html" . }}</li>
+          <li>{{ partial "icon-hyperkaehler.html" . }}</li>
+          <li>{{ partial "icon-grassmannian.html" . }}</li>
+          <li>{{ partial "icon-mgnbar.html" . }}</li>
+          <li>{{ partial "icon-superficie.html" . }}</li>
+        </ul>
+        I maintain the tools
+        <ul class="social-media-list" style="font-size: 90%">
+          <li>{{ partial "icon-hodge.html" . }}</li>
+          <li>{{ partial "icon-quivertools.html" . }}</li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-1">
+        you can also find me on
+        <ul class="social-media-list">
+          <li>{{ partial "icon-github.html" (dict "Site" .Site "username" "pbelmans") }}</li>
+          <li>{{ partial "icon-mathoverflow.html" (dict "Site" .Site "username" "pbelmans" "id" "6263") }}</li>
+          <li>{{ partial "icon-orcid.html" (dict "Site" .Site "id" "0000-0002-0140-2824") }}</li>
+          <li>{{ partial "icon-scholar.html" (dict "Site" .Site "username" "user=dX7G0o4AAAAJ") }}</li>
+          <li>{{ partial "icon-genealogy.html" (dict "Site" .Site "username" "219852") }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

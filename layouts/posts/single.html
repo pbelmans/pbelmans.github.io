@@ -1,0 +1,53 @@
+{{ define "main" }}
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">{{ .Title | htmlUnescape }}</h1>
+
+    <p class="post-meta">
+      <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" itemprop="datePublished">{{ .Date.Format "Jan 2, 2006" }}</time>{{ with .Params.author }} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ . }}</span></span>{{ end }}
+    </p>
+
+    {{ with .Params.categories }}
+    {{ $categories := . }}
+    <div class="post-meta">
+      posted in:
+      <ul class="categories-list">
+        {{ range $i, $category := $categories }}
+          <li><a href="/blog/categories#{{ $category | urlize }}">{{ $category | htmlUnescape }}</a>{{ if lt $i (sub (len $categories) 1) }}, {{ end }}</li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+
+    {{ with .Params.tags }}
+    {{ $tags := . }}
+    <div class="post-meta">
+      tags:
+      <ul class="tags-list">
+        {{ range $i, $tag := $tags }}
+          <li><a href="/blog/tags#{{ $tag | urlize }}">{{ $tag | htmlUnescape }}</a>{{ if lt $i (sub (len $tags) 1) }}, {{ end }}</li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ .Content }}
+  </div>
+
+  <ul class="pagination">
+    {{ with .PrevInSection }}
+      <li class="previous"><a href="{{ .RelPermalink }}">previous post</a></li>
+    {{ else }}
+      <li class="disabled previous"><a href="#">previous post</a></li>
+    {{ end }}
+
+    {{ with .NextInSection }}
+      <li class="next"><a href="{{ .RelPermalink }}">next post</a></li>
+    {{ else }}
+      <li class="disabled next"><a href="#">next post</a></li>
+    {{ end }}
+  </ul>
+</article>
+{{ end }}

@@ -1,0 +1,25 @@
+{{ define "main" }}
+{{ $posts := where .Site.RegularPages "Section" "posts" }}
+{{ $paginator := .Paginate ($posts.ByDate.Reverse) }}
+{{ range $paginator.Pages }}
+  {{ partial "post-summary.html" . }}
+{{ end }}
+
+{{ if gt $paginator.TotalPages 1 }}
+<ul class="pagination">
+  {{ if $paginator.HasPrev }}
+    {{ $prev := $paginator.Prev.PageNumber }}
+    <li class="previous"><a href="{{ if eq $prev 1 }}/archive/{{ else }}/archive/{{ $prev }}/{{ end }}">previous page</a></li>
+  {{ else }}
+    <li class="disabled previous"><a href="#">previous page</a></li>
+  {{ end }}
+
+  {{ if $paginator.HasNext }}
+    {{ $next := $paginator.Next.PageNumber }}
+    <li class="next"><a href="/archive/{{ $next }}/">next page</a></li>
+  {{ else }}
+    <li class="disabled next"><a href="#">next page</a></li>
+  {{ end }}
+</ul>
+{{ end }}
+{{ end }}

@@ -3,3 +3,10 @@ _site
 .jekyll-metadata
 *.swp
 .jekyll-cache
+node_modules
+test-output
+crawl-urls.txt
+_jekyll_site
+_hugo_site
+public/
+resources/_gen/

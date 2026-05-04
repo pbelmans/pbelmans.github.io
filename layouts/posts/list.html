@@ -1,0 +1,11 @@
+{{ define "main" }}
+{{ $posts := where .Site.RegularPages "Section" "posts" }}
+{{ range $posts.ByDate.Reverse.GroupByDate "2006" }}
+  <h2 class="posts-list">{{ .Key }}</h2>
+  <ul class="posts-list">
+    {{ range .Pages }}
+      <li><span class="date">{{ .Date.Format "Jan 02, 2006" }}</span> <a href="{{ .RelPermalink }}">{{ .Title | htmlUnescape }}</a>{{ if .Draft }} (draft){{ end }}</li>
+    {{ end }}
+  </ul>
+{{ end }}
+{{ end }}

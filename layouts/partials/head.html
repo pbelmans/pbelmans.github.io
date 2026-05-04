@@ -1,0 +1,20 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" type="image/png" href="/favicon.png" size="256x256">
+
+  <title>{{ .Site.Title }}{{ if .Title }}&mdash;{{ .Title | htmlUnescape }}{{ end }}</title>
+  {{ with .Summary }}<meta name="description" content="{{ . | plainify | htmlUnescape | truncate 160 }}">{{ end }}
+
+  {{ $style := resources.Get "css/main.scss" | toCSS (dict "targetPath" "css/main.css" "enableSourceMap" true) }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ .Site.BaseURL }}blog/feed/">
+
+  {{ partial "mathjax.html" . }}
+
+  <script defer data-domain="pbelmans.ncag.info" src="https://plausible.io/js/script.js"></script>
+</head>

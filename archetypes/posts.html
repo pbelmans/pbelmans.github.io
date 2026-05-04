@@ -1,0 +1,16 @@
+---
+title: "{{ replace .File.ContentBaseName "-" " " | title }}"
+date: {{ .Date }}
+categories: [mathematics]
+tags: []
+# mathjax: true
+---
+
+<p>Write your post body here in HTML.</p>
+
+<p>Inline math (if <code>mathjax: true</code> is uncommented above): $E = mc^2$</p>
+
+<p>Display math:</p>
+\[
+  \text{your equation here}
+\]

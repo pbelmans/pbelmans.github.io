@@ -1,0 +1,26 @@
+baseURL: "https://pbelmans.ncag.info/"
+title: "Pieter Belmans"
+
+permalinks:
+  posts: "/blog/:year/:month/:day/:slug/"
+
+params:
+  email: "p.belmans@uu.nl"
+
+pagination:
+  pagerSize: 5
+  path: "archive"
+
+buildFuture: false
+disablePathToLower: true
+
+taxonomies:
+  category: categories
+  tag: tags
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
