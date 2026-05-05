@@ -11,25 +11,13 @@ tags:
 author: Pieter Belmans
 ---
 
-<p>Half a year ago Sergey Galkin, Swarnava Mukhopadhyay and I put <a href="https://arxiv.org/abs/1806.07648">a preprint on the arXiv regarding the <em>canonical strip hypothesis</em></a>, where we gave the first counterexamples violating this hypothesis. Let me recall the setup.
-<p>If $X$ is a smooth projective Fano variety (i.e. $\omega_X$ is ample) we can look at its canonical polarisation $\bigoplus_{n\geq 0}\mathrm{H}^0(X,\omega_X^{\otimes n})$. As such we obtain a Hilbert series, and therefore a <em>Hilbert polynomial</em>. The canonical strip hypothesis concerns the locations of the roots of this polynomial. Because Serre duality involves the canonical bundle $\omega_X$, we obtain a symmetry around the axis (or <em>critical line</em>) $\Re=-\frac{1}{2}$ for these roots.
-<p>Based on inequalities involving Chern numbers Golyshev hypothesised that these roots are not only symmetric around this critical line, but are actually contained within the "canonical strip", where $-1\leq\Re\leq 0$. This is the case in low dimension, and for all complete intersections in partial flag varieties.
-<p>In the paper you can find the details for a family of Fano varieties violating this hypothesis, and a picture of these roots suggesting that something interesting happening with the positions of these roots. This blogpost is not about this picture.
-<p>I want to discuss a different picture. Whilst writing the paper we also computed Hilbert polynomials for all smooth projective toric Fano varieties up to dimension 7 (there are 80891 of these), and observed that the hypothesis holds. The results of this computation can be found in the GitHub repository <a href="https://github.com/pbelmans/ehrhart-polynomials-toric-fanos"><code>pbelmans/ehrhart-polynomials-toric-fanos</code></a>
-<p>As a fun exercise in using <a href="https://d3js.org/">D3</a> I decided to plot these pictures, and share them with you. Below you can find the picture up to dimension 5, and a <a href="/assets/ehrhart-2-6.html">standalone version also includes dimension 6</a>. There's no picture up to dimension 7, as this would involve too many roots.
-<p>I do not know what one should conclude from these pictures. It seems that there might be a pattern, but it is unclear to me what it should be.
-
-<style type="text/css">
-
-.axis path,
-.axis line {
-  fill: none;
-  stroke: grey;
-  stroke-width: 1;
-  shape-rendering: crispEdges;
-}
-
-</style>
+<p>Half a year ago Sergey Galkin, Swarnava Mukhopadhyay and I put <a href="https://arxiv.org/abs/1806.07648">a preprint on the arXiv regarding the <em>canonical strip hypothesis</em></a>, where we gave the first counterexamples violating this hypothesis. Let me recall the setup.</p>
+<p>If $X$ is a smooth projective Fano variety (i.e. $\omega_X$ is ample) we can look at its canonical polarisation $\bigoplus_{n\geq 0}\mathrm{H}^0(X,\omega_X^{\otimes n})$. As such we obtain a Hilbert series, and therefore a <em>Hilbert polynomial</em>. The canonical strip hypothesis concerns the locations of the roots of this polynomial. Because Serre duality involves the canonical bundle $\omega_X$, we obtain a symmetry around the axis (or <em>critical line</em>) $\Re=-\frac{1}{2}$ for these roots.</p>
+<p>Based on inequalities involving Chern numbers Golyshev hypothesised that these roots are not only symmetric around this critical line, but are actually contained within the "canonical strip", where $-1\leq\Re\leq 0$. This is the case in low dimension, and for all complete intersections in partial flag varieties.</p>
+<p>In the paper you can find the details for a family of Fano varieties violating this hypothesis, and a picture of these roots suggesting that something interesting happening with the positions of these roots. This blogpost is not about this picture.</p>
+<p>I want to discuss a different picture. Whilst writing the paper we also computed Hilbert polynomials for all smooth projective toric Fano varieties up to dimension 7 (there are 80891 of these), and observed that the hypothesis holds. The results of this computation can be found in the GitHub repository <a href="https://github.com/pbelmans/ehrhart-polynomials-toric-fanos"><code>pbelmans/ehrhart-polynomials-toric-fanos</code></a></p>
+<p>As a fun exercise in using <a href="https://d3js.org/">D3</a> I decided to plot these pictures, and share them with you. Below you can find the picture up to dimension 5, and a <a href="/assets/ehrhart-2-6.html">standalone version also includes dimension 6</a>. There's no picture up to dimension 7, as this would involve too many roots.</p>
+<p>I do not know what one should conclude from these pictures. It seems that there might be a pattern, but it is unclear to me what it should be.</p>
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
 
@@ -81,6 +69,11 @@ d3.csv("/assets/ehrhart-2-5.csv", function(error, data) {
     svg.append("g")
         .attr("class", "y axis")
         .call(yAxis);
+    svg.selectAll(".axis path, .axis line")
+        .style("fill", "none")
+        .style("stroke", "grey")
+        .style("stroke-width", 1)
+        .style("shape-rendering", "crispEdges");
 
     // legend
     var legend = svg.selectAll(".legend")
@@ -102,4 +95,4 @@ d3.csv("/assets/ehrhart-2-5.csv", function(error, data) {
 });
 </script>
 
-<p>Maybe I'll continue my D3 exercise at some point. It'd be nice to have a toggling option, zooming and dragging. But for now this will be it.
+<p>Maybe I'll continue my D3 exercise at some point. It'd be nice to have a toggling option, zooming and dragging. But for now this will be it.</p>

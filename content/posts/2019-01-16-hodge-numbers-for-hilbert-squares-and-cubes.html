@@ -13,16 +13,16 @@ author: Pieter Belmans
 
 {{< hodge >}}
 
-<p>In my ongoing series of posts on implementations to Hodge numbers for interesting smooth projective varieties we have now arrived at Hilbert squares and Hilbert cubes. In <a href="/blog/2017/11/18/hodge-numbers-hilb/">Hodge numbers for $\operatorname{Hilb}^nS$</a> I explained how to compute these for Hilbert schemes of $n$ points on smooth projective surfaces. When one looks at $\operatorname{Hilb}^nX$ for $X$ a higher-dimensional variety, these are <em>very singular</em>, <strong>unless</strong> $n=2,3$. These special cases are then called Hilbert squares (resp. Hilbert cubes).
-<p>As before, we'll denote the Hodge polynomial of a smooth projective variety $X$ as
+<p>In my ongoing series of posts on implementations to Hodge numbers for interesting smooth projective varieties we have now arrived at Hilbert squares and Hilbert cubes. In <a href="/blog/2017/11/18/hodge-numbers-hilb/">Hodge numbers for $\operatorname{Hilb}^nS$</a> I explained how to compute these for Hilbert schemes of $n$ points on smooth projective surfaces. When one looks at $\operatorname{Hilb}^nX$ for $X$ a higher-dimensional variety, these are <em>very singular</em>, <strong>unless</strong> $n=2,3$. These special cases are then called Hilbert squares (resp. Hilbert cubes).</p>
+<p>As before, we'll denote the Hodge polynomial of a smooth projective variety $X$ as</p>
 \begin{equation}
 \mathrm{h}(X,x,y):=\sum_{p,q=0}^{\dim X}\mathrm{h}^{p,q}(X)x^py^q
 \end{equation}
-where $\mathrm{h}^{p,q}=\dim\operatorname{H}^q(X,\Omega_X^p)$.
-<p>Then the game we are playing is to express the Hodge polynomial of $\operatorname{Hilb}^2X$ and $\operatorname{Hilb}^3X$ in terms of that of $X$.
+<p>where $\mathrm{h}^{p,q}=\dim\operatorname{H}^q(X,\Omega_X^p)$.</p>
+<p>Then the game we are playing is to express the Hodge polynomial of $\operatorname{Hilb}^2X$ and $\operatorname{Hilb}^3X$ in terms of that of $X$.</p>
 
 <h3>Hilbert squares</h3>
-<p>The Hodge numbers for the Hilbert square can be considered classical, using the description of $\operatorname{Hilb}^2X$ as the blowup in the diagonal of the quotient of $X\times X$ by the group $\mathbb{Z}/2\mathbb{Z}$ permuting the factors. One can show that
+<p>The Hodge numbers for the Hilbert square can be considered classical, using the description of $\operatorname{Hilb}^2X$ as the blowup in the diagonal of the quotient of $X\times X$ by the group $\mathbb{Z}/2\mathbb{Z}$ permuting the factors. One can show that</p>
 \begin{equation}
 \mathrm{h}(\operatorname{Hilb}^2X,x,y)
 =
@@ -35,7 +35,7 @@ where $\mathrm{h}^{p,q}=\dim\operatorname{H}^q(X,\Omega_X^p)$.
 \end{equation}
 
 <h3>Hilbert cubes</h3>
-<p>For Hilbert cubes the description is more complicated, and the resulting formula can be found on page 507 of <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=1382733">On the cohomology of Hilbert schemes of points</a>. Without further ado, here it is (with intentional overflow to showcase how
+<p>For Hilbert cubes the description is more complicated, and the resulting formula can be found on page 507 of <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=1382733">On the cohomology of Hilbert schemes of points</a>. Without further ado, here it is (with intentional overflow to showcase how</p>
 \begin{equation}
 \mathrm{h}(\operatorname{Hilb}^3X,x,y)
 =
@@ -47,7 +47,7 @@ where $\mathrm{h}^{p,q}=\dim\operatorname{H}^q(X,\Omega_X^p)$.
 \end{equation}
 
 <h3>Implementation in Sage</h3>
-<p>No post about Hodge numbers is complete without a Sage implementation (it is the sole purpose of these posts), so here goes. It becomes clear that constructing the Hodge polynomial for these higher-dimensional varieties is becoming quite cumbersome in non-trivial cases, so this is where my little library of Hodge diamond related tools will come in handy. Stay tuned for that!
+<p>No post about Hodge numbers is complete without a Sage implementation (it is the sole purpose of these posts), so here goes. It becomes clear that constructing the Hodge polynomial for these higher-dimensional varieties is becoming quite cumbersome in non-trivial cases, so this is where my little library of Hodge diamond related tools will come in handy. Stay tuned for that!</p>
 
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>

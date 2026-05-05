@@ -10,9 +10,18 @@ tags:
 author: Pieter Belmans
 ---
 
-{{< snapshot >}}
+<div style="background-color: rgb(255, 243, 205); border: 1px solid rgb(255, 238, 186); padding: 10px;">
+  <p>The <a href="https://www.mfo.de/outreach-media/snapshots">Snapshots of modern mathematics from Oberwolfach</a> is a series of outreach articles. Last month I attended <a href="https://www.mfo.de/occasion/2228/www_view">a workshop there</a> and I was asked to write something for it. Long story short, if you are impatient, you can <a href="/assets/snapshot.pdf">read the result all in one go</a>. But in the spirit of magazine science fiction I will also be posting it in installments on my blog.</p>
+  <ol>
+    <li><a href="/blog/2022/08/19/snapshot/">The periodic tables of algebraic geometry: introduction</a></li>
+    <li><a href="/blog/2022/08/20/snapshot-2/">The periodic tables of algebraic geometry: curves and surfaces</a></li>
+    <li><a href="/blog/2022/08/21/snapshot-3/">The periodic tables of algebraic geometry: 3-folds and beyond</a></li>
+  </ol>
+  <div>Mind you, this is still the preprint version technically speaking.</div>
+</div>
+<!-- produced using pandoc preprint.tex --mathjax --wrap=none -->
 
-<h3 id="section:fano-3-folds">Fano 3-folds: Mori–Mukai</h3>
+<h3 id="section-fano-3-folds">Fano 3-folds: Mori–Mukai</h3>
 <p>In our journey through smooth projective varieties we now reach dimension 3. From this point on it is impossible to make good pictures (although algebraic geometers do develop an intuition for these objects, and make drawings which are hard, if not downright impossible, to be interpreted by outsiders).</p>
 <p>For curves and surfaces we saw that the trichotomy between positive, flat and negative curvature gave very different flavours to the classification problem. This pattern continues in higher dimension. The analogue of the <span class="math inline">\(g=0\)</span> case for curves (so with positive curvature) and del Pezzo surfaces are so-called <em>Fano varieties</em>, and thus in dimension 3 these are called <em>Fano 3-folds</em>. We will first talk about these, as a full classification indeed exists. In dimension 2 we already saw that there are 10 families of del Pezzo surfaces. So, what about dimension 3?</p>
 <p>Again, there exists a full classification, due to Mori and Mukai in 1981 (with important preliminary work by Iskovskikh), building on the results for which Mori eventually won the Fields medal in 1990. There are 105 families in the classification: originally they listed 104, but back in 2003 they found a missing case.</p>
@@ -24,7 +33,7 @@ author: Pieter Belmans
 <h4 id="calabiyau-3-folds">Calabi–Yau 3-folds</h4>
 <p>Instead of going to higher-dimensional varieties with positive curvature, we could consider 3-dimensional varieties with flat curvature: <em>Calabi–Yau 3-folds</em>. They are the analogues of the K3 surfaces and abelian surfaces we saw before. These objects have played a tremendously important role in theoretical physics and string theory, and given their importance mathematicians have been constructing more and more of these. Their beautiful properties and ongoing classification would form an excellent subject for yet another Snapshot.</p>
 <p>But frustratingly enough, we don’t know whether the final classification in this case is a finite classification or not! To give a precise number of the number of currently known families of Calabi–Yau 3-folds is hard, because it requires a careful comparison of all the different constructions. Let us just point out that one important type of construction (using reflexive 4-dimensional polytopes, of which there are a whopping 473 800 776) gives rise to 30 108 families of Calabi–Yau 3-folds which are guaranteed to be different.</p>
-<h3 id="section:hyperkaehler">Hyperkähler varieties</h3>
+<h3 id="section-hyperkaehler">Hyperkähler varieties</h3>
 <p>One important theme that has been present is that the higher we go in dimension, the more restrictive we want our class of varieties in order to have any hope of classification. The final periodic table in algebraic geometry we want to discuss is one of the most mysterious.</p>
 <p>Amongst the varieties of flat curvature there exists a decomposition into building blocks, just like we can decompose molecules into atoms (for arbitrary varieties there is nothing like such a decomposition). There are 3 types:</p>
 <ul>
@@ -57,4 +66,3 @@ author: Pieter Belmans
 <p>“Periodic table of elements”. Original authors: Ryan Griffin and Janosh Riebesell. Licensed under MIT License, modified by the author from <a href="https://tikz.net/periodic-table" class="uri"><code>https://tikz.net/periodic-table</code></a>, visited on August 4, 2022.</p>
 <p>Created by the author using SageMath or Ti<em>k</em>Z.</p>
 </div>
-

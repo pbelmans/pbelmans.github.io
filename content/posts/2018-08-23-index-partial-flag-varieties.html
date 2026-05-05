@@ -10,16 +10,16 @@ tags:
 author: Pieter Belmans
 ---
 
-<p>For the context for this post, see <a href="/blog/2018/08/22/rank-flag-varieties/">yesterday's</a>.
+<p>For the context for this post, see <a href="/blog/2018/08/22/rank-flag-varieties/">yesterday's</a>.</p>
 
 <h3>Index</h3>
-<p>To compute the index we use lemma 2.19 and remark 2.20 of the Kuznetsov&ndash;Polishchuk paper. Combined they say the following.
-<p><strong>Lemma</strong> Let $\beta$ be the simple root corresponding to the chosen maximal parabolic subgroup $P$, and $\xi$ the associated fundamental weight. Let $\overline{\beta}$ be the maximal root of the same length as $\beta$ such that the coefficient of $\beta$ in the expression of $\overline{\beta}$ is 1. Then the index of $G/P$ equals
+<p>To compute the index we use lemma 2.19 and remark 2.20 of the Kuznetsov&ndash;Polishchuk paper. Combined they say the following.</p>
+<p><strong>Lemma</strong> Let $\beta$ be the simple root corresponding to the chosen maximal parabolic subgroup $P$, and $\xi$ the associated fundamental weight. Let $\overline{\beta}$ be the maximal root of the same length as $\beta$ such that the coefficient of $\beta$ in the expression of $\overline{\beta}$ is 1. Then the index of $G/P$ equals</p>
 \begin{equation*}
 i_{G/P}=\frac{(\rho,\beta+\overline{\beta})}{(\xi,\beta)}.
 \end{equation*}
 
-<p>The Sage code for this is
+<p>The Sage code for this is</p>
 {{< highlight python >}}
 def index(D, k):
   R = RootSystem(D)
@@ -43,18 +43,7 @@ def index(D, k):
 
 <p><ins datetime="2018-08-24">By accident I ran into these indices in the literature, they are also available in the proposition on page 124 of Akhiezer's <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=1334091">Lie group actions in complex analysis</a>.</ins></p>
 
-<style type="text/css">
-td {
-  text-align: center;
-  width: 5em;
-}
-
-th {
-  background-color: #eee;
-}
-</style>
-
-<table>
+<table style="text-align: center;">
   <tr>
     <td></td>
     <th>$P_1$</th>
@@ -263,6 +252,6 @@ th {
 
 <hr>
 
-<p>Maybe in the future I have something useful to say about these derived categories, who knows.
+<p>Maybe in the future I have something useful to say about these derived categories, who knows.</p>
 
-<p><small>It's not quite true that $\mathrm{B}_i=\mathrm{C}_i$ for the index, one has to reorder the indices a bit, but I didn't want to change the layout of the table compared to the previous ones. The table is given for $\mathrm{B}_i$. For $\mathrm{C}_i$ one has to put the entry for $P_i$ at the beginning, and shift all other entries to the right.
+<p><small>It's not quite true that $\mathrm{B}_i=\mathrm{C}_i$ for the index, one has to reorder the indices a bit, but I didn't want to change the layout of the table compared to the previous ones. The table is given for $\mathrm{B}_i$. For $\mathrm{C}_i$ one has to put the entry for $P_i$ at the beginning, and shift all other entries to the right.</small></p>

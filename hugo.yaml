@@ -8,8 +8,9 @@ params:
   email: "p.belmans@uu.nl"
 
 pagination:
+  disableAliases: true
   pagerSize: 5
-  path: "archive"
+  path: ""
 
 buildFuture: false
 disablePathToLower: true

@@ -1,11 +1,17 @@
 {{ define "main" }}
+{{ if .Params.bare_content }}
+{{ .Content }}
+{{ else }}
 <article class="post">
+  {{ with .Title }}
   <header class="post-header">
-    <h1 class="post-title">{{ .Title | htmlUnescape }}</h1>
+    <h1 class="post-title">{{ . | htmlUnescape }}</h1>
   </header>
+  {{ end }}
 
   <div class="post-content">
     {{ .Content }}
   </div>
 </article>
+{{ end }}
 {{ end }}

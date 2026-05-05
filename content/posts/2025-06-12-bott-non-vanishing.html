@@ -14,6 +14,7 @@ author: Pieter Belmans
 <a href="https://arxiv.org/abs/2506.09811"><strong>Failure of Bott vanishing for (co)adjoint partial flag varieties</strong></a>.
 If you just want mathematics and not some of the backstory,
 you can click the link to immediately get to the preprint.
+</p>
 
 <h3>Background</h3>
 <p>Bott vanishing is a very strong cohomological vanishing property
@@ -29,6 +30,7 @@ over fields of positive characteristic
 it is implied by
 liftability of $X$ modulo $p^2$
 <em>including their Frobenius</em>.
+</p>
 <p>Without asking the Frobenius lifts along,
 it is precisely the setting of the famous Deligne&ndash;Illusie paper,
 and the lifting modulo $p^2$ gives the (weaker)
@@ -39,16 +41,18 @@ Kodaira&ndash;Akizuki&ndash;Nakano vanishing
 for $p+q\geq\dim X+1$ and an ample line bundle $\mathcal{L}$ on $X$.
 Every variety arising from characteristic zero admits a lifting modulo $p^2$.
 This is the key insight used by Deligne–Illusie to give an algebraic proof of Kodaira-type vanishing.
+</p>
 <h3>Conjecture</h3>
 <p>Varieties which lift together with their Frobenius
 are <em>much</em> rarer,
 because they must satisfy Bott vanishing.
 In the case of partial flag varieties, Buch&ndash;Thomsen&ndash;Lauritzen&ndash;Mehta conjectured the following.
+</p>
 <p><strong>Conjecture (Buch&ndash;Thomsen&ndash;Lauritzen&ndash;Mehta)</strong>
 <em>Let $X=\mathrm{G}/\mathrm{P}$ be a partial flag variety
 which is not isomorphic to a product of projective spaces
 Then $X$ does not satisfy Bott vanishing.</em></p>
-<p>This shows that such partial flag varieties cannot be lifted together with their Frobenius morphism.
+<p>This shows that such partial flag varieties cannot be lifted together with their Frobenius morphism.</p>
 <h3>Results</h3>
 <p>In the short paper that this blogpost is concerned with,
 I prove this conjecture for (co)adjoint partial flag varieties
@@ -59,12 +63,14 @@ of (co)adjoint partial flag varieties:
 recently, and using a very different obstruction,
 this was established (for all partial flag varieties)
 by <a href="https://doi.org/10.4171/jems/1063">Achinger&ndash;Witaszek&ndash;Zdanowicz</a>.
+</p>
 <p>The failure of Bott vanishing outside the (co)minuscule and (co)adjoint case
 can also be related to an observation Maxim Smirnov and I made
 about the Hochschild&ndash;Kostant&ndash;Rosenberg decomposition
 of Hochschild cohomology of partial flag varieties:
 we conjectured it to always have some non-zero higher cohomology,
 and we computationally verified it in many cases.
+</p>
 <p>The cool thing is that
 <a href="https://arxiv.org/abs/2506.09727">Anton Fonarev proved exactly that</a>!
 The preprint also appeared today.
@@ -72,6 +78,7 @@ So taken all together,
 the Buch&ndash;Thomsen&ndash;Lauritzen&ndash;Mehta conjecture is
 <em>almost</em>
 settled for generalised Grassmannians.
+</p>
 <h3>Methods</h3>
 <p>The method of proof is easy to explain.
 Because of how I think of this problem,
@@ -80,25 +87,27 @@ where $\omega_X^\vee$ is ample.
 It turns out that to prove Bott non-vanishing,
 it suffices to twist everything by $\mathcal{O}_X(-1)$,
 so that the line bundle remains ample.
-<p>The recipe thus becomes:
+</p>
+<p>The recipe thus becomes:</p>
 <ol>
-  <li>write down the associated graded of the Jordan&ndash;Hölder filtration of the tangent bundle:
+<li>write down the associated graded of the Jordan&ndash;Hölder filtration of the tangent bundle:
     this is annoying in general
     (although in the classical types B, C and D there is a nice description and this is what Anton uses too),
     and can be done on a computer on a case-by-case basis amenable to these types of calculations,
-    but the (co)adjoint case allows for a really good description;
-  <li>search for the smallest exterior power (which will depend on the Dynkin type), such that,
+    but the (co)adjoint case allows for a really good description;</li>
+<li>search for the smallest exterior power (which will depend on the Dynkin type), such that,
     when twisting by $\mathcal{O}_X(-1)$
-    you get a non-zero higher sheaf cohomology
-  <li>prove that it is indeed non-vanishing.
+    you get a non-zero higher sheaf cohomology</li>
+<li>prove that it is indeed non-vanishing.</li>
 </ol>
 <p>For parts (2) and (3),
 one can use <a href="https://github.com/pbelmans/bott-non-vanishing">a computer calculation</a>,
 taking care that the method indeed works for all Dynkin types,
 and not just the ones that you happened to have checked computationally.
+</p>
 <p>Recently, Bott (non-)vanishing was studied by several other authors.
 This prompted me to make this observation on the non-vanishing for (co)adjoint varieties
 (which in some premature form dates back to discussions with Maxim Smirnov
 when we were working on <a href="https://doi.org/10.4171/dm/912">Hochschild cohomology of generalised Grassmannians</a>)
-available as a short article.
-<p>The preprint contains full details, including an explicit construction for each type. Comments and questions welcome!
+available as a short article.</p>
+<p>The preprint contains full details, including an explicit construction for each type. Comments and questions welcome!</p>

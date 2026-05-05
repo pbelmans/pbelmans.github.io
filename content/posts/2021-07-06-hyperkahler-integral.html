@@ -10,26 +10,26 @@ tags:
 author: Pieter Belmans
 ---
 
-<p>It's been a while since there was an honest mathematical blogpost, for <a href="/blog/2021/04/23/ida/">reasons explained in an earlier post</a>. I should maybe also write something about the preprint we put on the arXiv in April.
-<p>But today I will share you a fun computation I did involving hyperkähler varieties, as I expect that some of the code used in the computation will be useful to future me, and therefore maybe also to someone else.
+<p>It's been a while since there was an honest mathematical blogpost, for <a href="/blog/2021/04/23/ida/">reasons explained in an earlier post</a>. I should maybe also write something about the preprint we put on the arXiv in April.</p>
+<p>But today I will share you a fun computation I did involving hyperkähler varieties, as I expect that some of the code used in the computation will be useful to future me, and therefore maybe also to someone else.</p>
 <ul>
-  <li><a href="/assets/hyperkahler-integrals.pdf">the pdf for which this blogpost is an introduction</a>
-  <li><a href="https://gist.github.com/pbelmans/931580361e84b71789e826935f21d282">the Sage code</a>
+  <li><a href="/assets/hyperkahler-integrals.pdf">the pdf for which this blogpost is an introduction</a></li>
+  <li><a href="https://gist.github.com/pbelmans/931580361e84b71789e826935f21d282">the Sage code</a></li>
 </ul>
 
 <h3>Hyperkähler varieties</h3>
-<p>There is a curious class of varieties with trivial canonical bundle, which are irreducible holomorphic symplectic varieties, or hyperkähler varieties. For an excellent introduction one is referred to <a href="https://irma.math.unistra.fr/~pacienza/notes-ogrady.pdf">O'Grady's introductory lecture notes</a>.
-<p>Up to deformation, we currently know of two infinite families and 2 exceptional (maybe sporadic is a better word? maybe they are not so sporadic too but we just don't know):
+<p>There is a curious class of varieties with trivial canonical bundle, which are irreducible holomorphic symplectic varieties, or hyperkähler varieties. For an excellent introduction one is referred to <a href="https://irma.math.unistra.fr/~pacienza/notes-ogrady.pdf">O'Grady's introductory lecture notes</a>.</p>
+<p>Up to deformation, we currently know of two infinite families and 2 exceptional (maybe sporadic is a better word? maybe they are not so sporadic too but we just don't know):</p>
 <ul>
-  <li>Hilbert schemes of points on K3 surfaces
-  <li>generalised Kummer varieties
-  <li>O'Grady's 6-dimensional varieties
-  <li>O'Grady's 10-dimensional varieties
+  <li>Hilbert schemes of points on K3 surfaces</li>
+  <li>generalised Kummer varieties</li>
+  <li>O'Grady's 6-dimensional varieties</li>
+  <li>O'Grady's 10-dimensional varieties</li>
 </ul>
-<p>Roughly there are 2 types of results on hyperkähler varieties:
+<p>Roughly there are 2 types of results on hyperkähler varieties:</p>
 <ul>
-  <li>results proven for an abstract hyperkähler variety
-  <li>results proven by inspecting the known cases explicitly
+  <li>results proven for an abstract hyperkähler variety</li>
+  <li>results proven by inspecting the known cases explicitly</li>
 </ul>
 
 <h3>On $\int\mathrm{td}_X^{1/2}$</h3>
@@ -40,22 +40,25 @@ author: Pieter Belmans
 \frac{1}{(192\pi^2n)^n}
 \frac{||R||^{2n}}{(\operatorname{vol}X)^{n-1}}
 \end{equation}
-<p>Here $||R||$ is the $\mathcal{L}^2$-norm of the Riemann curvature tensor. I don't claim I understand the right-hand side very well, but even without deep understanding the right-hand side exhibits beauty.
+</p>
+<p>Here $||R||$ is the $\mathcal{L}^2$-norm of the Riemann curvature tensor. I don't claim I understand the right-hand side very well, but even without deep understanding the right-hand side exhibits beauty.</p>
 
 <p>For an abstract hyperkähler variety, the work of Hitchin&ndash;Sawon and <a href="https://arxiv.org/abs/2008.04685">Jiang</a> shows that
 \begin{equation}
 0 &lt; \int\mathrm{td}_X^{1/2} \leq 1
 \end{equation}
-with equality if and only if $X$ is a K3 surface.
+</p>
+<p>with equality if and only if $X$ is a K3 surface.</p>
 <p>For the two known finite families on the other hand Sawon has given in his PhD thesis an explicit expression, namely
 \begin{align}
-\int\mathrm{td}_{\mathrm{K3}^{[n]}}^{1/2}&=\frac{(n+3)^n}{4^n n!}, \\
-\int\mathrm{td}_{\mathrm{Kum}^n}^{1/2}&=\frac{(n+1)^{n+1}}{4^n n!}.
+\int\mathrm{td}_{\mathrm{K3}^{[n]}}^{1/2}&amp;=\frac{(n+3)^n}{4^n n!}, \\
+\int\mathrm{td}_{\mathrm{Kum}^n}^{1/2}&amp;=\frac{(n+1)^{n+1}}{4^n n!}.
 \end{align}
-<p>In the <a href="https://arxiv.org/abs/2008.04685v1"><strong>first</strong> version of Jiang's preprint</a> an exercise left to the reader was to compute these integrals for O'Grady's exceptional hyperkähler varieties, using the fact that the Chern numbers are known.
-<p>Over the weekend I had some fun doing this in Sage, resulting in a <a href="/assets/hyperkahler-integrals.pdf">short note which could be of interest to someone</a>. The code is available in the pdf, but also as <a href="https://gist.github.com/pbelmans/931580361e84b71789e826935f21d282">a gist</a>. The numbers that I obtained led Jiang to update his preprint, giving a more conceptual explanation for them.
-<p>There is no serious mathematics happening here, but I hope the very explicit nature and available code is of interest. I had fun making my first steps in hyperkähler varieties!
-<p>For good measure, here is the output of the Sage code:
+</p>
+<p>In the <a href="https://arxiv.org/abs/2008.04685v1"><strong>first</strong> version of Jiang's preprint</a> an exercise left to the reader was to compute these integrals for O'Grady's exceptional hyperkähler varieties, using the fact that the Chern numbers are known.</p>
+<p>Over the weekend I had some fun doing this in Sage, resulting in a <a href="/assets/hyperkahler-integrals.pdf">short note which could be of interest to someone</a>. The code is available in the pdf, but also as <a href="https://gist.github.com/pbelmans/931580361e84b71789e826935f21d282">a gist</a>. The numbers that I obtained led Jiang to update his preprint, giving a more conceptual explanation for them.</p>
+<p>There is no serious mathematics happening here, but I hope the very explicit nature and available code is of interest. I had fun making my first steps in hyperkähler varieties!</p>
+<p>For good measure, here is the output of the Sage code:</p>
 {{< highlight text >}}
 O'Grady 6-fold
 Defining c2, c4, c6
@@ -69,14 +72,9 @@ Generalised Kummer variety of dimension 6-fold: computation by hand
 Defining c2, c4, c6
 2/3
 {{< /highlight >}}
-<p>I don't have the Chern numbers of the Hilbert scheme of 5 points on a K3 surface, so I couldn't do an explicit check for that case, but the closed formula of course just works too.
-<p>And here's a table with some values
-<style type="text/css">
-table td {
-  text-align: center;
-}
-</style>
-<table>
+<p>I don't have the Chern numbers of the Hilbert scheme of 5 points on a K3 surface, so I couldn't do an explicit check for that case, but the closed formula of course just works too.</p>
+<p>And here's a table with some values</p>
+<table style="text-align: center;">
   <tr>
     <td></td>
     <th>$\mathrm{K3}^n$</th>
@@ -92,7 +90,7 @@ table td {
   <tr>
     <td>$n=2$</td>
     <td>$\frac{25}{32}=0.78125$</td>
-    <td>$\frac{27}{32}=0.84375$
+    <td>$\frac{27}{32}=0.84375$</td>
   </tr>
   <tr>
     <td>$n=3$</td>

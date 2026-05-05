@@ -12,11 +12,11 @@ author: Pieter Belmans
 
 {{< hodge >}}
 
-<p>Another family of varieties has been added to the Hodge diamond cutter: <em>moduli of quiver representations</em>. For every acyclic quiver and dimension vector, and suitable choice of stability condition, this produces a smooth projective variety, whose Hodge numbers are concentrated on the diagonal. The method to determine them is given by Corollary 6.9 in <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=1974891">Markus Reineke's Inventiones paper</a>.
+<p>Another family of varieties has been added to the Hodge diamond cutter: <em>moduli of quiver representations</em>. For every acyclic quiver and dimension vector, and suitable choice of stability condition, this produces a smooth projective variety, whose Hodge numbers are concentrated on the diagonal. The method to determine them is given by Corollary 6.9 in <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=1974891">Markus Reineke's Inventiones paper</a>.</p>
 
-<p>Let's do two examples, based on <a href="https://arxiv.org/abs/2001.10556">Franzen, Reineke, Sabatini: Fano quiver moduli</a>. They are interested in the question when a quiver moduli space is Fano, and I like Fano varieties, so that is a good choice.
+<p>Let's do two examples, based on <a href="https://arxiv.org/abs/2001.10556">Franzen, Reineke, Sabatini: Fano quiver moduli</a>. They are interested in the question when a quiver moduli space is Fano, and I like Fano varieties, so that is a good choice.</p>
 
-<p><strong>Example</strong> (Subspace quivers) Consider the $m$-subspace quiver from Section 5.1. Let's also fix $d=2$, so then we are in the very classical setting of the invariant theory of $(\mathbb{P}^1)^m//\mathrm{PGL}_2$. If $m$ is even then the moduli space is singular for the canonical stability condition is singular, so we need to do a small perturbation. The following code constructs all the necessary data, and computes some examples.
+<p><strong>Example</strong> (Subspace quivers) Consider the $m$-subspace quiver from Section 5.1. Let's also fix $d=2$, so then we are in the very classical setting of the invariant theory of $(\mathbb{P}^1)^m//\mathrm{PGL}_2$. If $m$ is even then the moduli space is singular for the canonical stability condition is singular, so we need to do a small perturbation. The following code constructs all the necessary data, and computes some examples.</p>
 
 {{< highlight python >}}
 def subspace_quiver(m, d):
@@ -45,7 +45,7 @@ for m in range(4, 10):
     print(m, points_on_P1(m, perturb=(m % 2 == 0)).betti()[0::2])
 {{< /highlight >}}
 
-<p>which gives as output
+<p>which gives as output</p>
 {{< highlight plaintext >}}
 4 [1, 1]
 5 [1, 5, 1]
@@ -55,4 +55,4 @@ for m in range(4, 10):
 9 [1, 9, 37, 93, 37, 9, 1]
 {{< /highlight >}}
 
-<p>There are other, more efficient ways, of computing these Betti numbers in the case of subspace quivers, but this method is completely generic and works for any quiver you might be interested in! The implementation already has some optimisations, but in case you need to compute some examples with large quivers and large dimension vectors and are stuck because of efficiency reasons, please get in touch and I'll see what I can do.
+<p>There are other, more efficient ways, of computing these Betti numbers in the case of subspace quivers, but this method is completely generic and works for any quiver you might be interested in! The implementation already has some optimisations, but in case you need to compute some examples with large quivers and large dimension vectors and are stuck because of efficiency reasons, please get in touch and I'll see what I can do.</p>

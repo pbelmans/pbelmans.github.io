@@ -11,16 +11,16 @@ tags:
 author: Pieter Belmans
 ---
 
-<p>This is just a quick update: last time I discussed the <em>quantum spectra</em> of (generalised) Grassmannians, with the promise of more pictures (in high rank) to come. That promise has now been upheld. For all $G/P$ for which the number of eigenvalues is smaller than 1000 I have computed the spectrum. This includes everything you see on the frontpage, except for some cases in type $\mathrm{E}_7$ and (almost) all in type $\mathrm{E}_8$. But even the (co)adjoint $\mathrm{E}_8$ is now included, having only 240 eigenvalues.
-<p>I can compute the matrix (using Sergey's code) for bigger Grassmannians, but it's the eigenvalue computation which is becoming too expensive. Maybe with bigger infrastructure and better algorithms it's again feasible, but this will be it for now. 
-<p>You can admire the biggest quantum spectrum currently available (with 756 eigenvalues) here:
+<p>This is just a quick update: last time I discussed the <em>quantum spectra</em> of (generalised) Grassmannians, with the promise of more pictures (in high rank) to come. That promise has now been upheld. For all $G/P$ for which the number of eigenvalues is smaller than 1000 I have computed the spectrum. This includes everything you see on the frontpage, except for some cases in type $\mathrm{E}_7$ and (almost) all in type $\mathrm{E}_8$. But even the (co)adjoint $\mathrm{E}_8$ is now included, having only 240 eigenvalues.</p>
+<p>I can compute the matrix (using Sergey's code) for bigger Grassmannians, but it's the eigenvalue computation which is becoming too expensive. Maybe with bigger infrastructure and better algorithms it's again feasible, but this will be it for now.</p>
+<p>You can admire the biggest quantum spectrum currently available (with 756 eigenvalues) here:</p>
 <div id="eigenvalues"><p style="text-align: center"><strong>Figure 1</strong>: Spectrum for $\mathrm{E}_7/\mathrm{P}_6$</p></div>
 
-<p><small>I can also compute the quantum spectra for toric Fano varieties (at least in dimensions 2, 3 and 4; for dimensions 5 and especially 6 I might need to resort to bigger infrastructure than my laptop). I will likely show some pictures at some point next week.
+<p><small>I can also compute the quantum spectra for toric Fano varieties (at least in dimensions 2, 3 and 4; for dimensions 5 and especially 6 I might need to resort to bigger infrastructure than my laptop). I will likely show some pictures at some point next week.</small></p>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 <script src="https://d3js.org/d3.v5.js"></script>
-<script type="text/javascript">
+<script>
 var margin = {top: 10, right: 30, bottom: 30, left: 60},
     width = 460 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
@@ -89,4 +89,3 @@ var multiplicities = svg.append("g")
     .attr("font-size", "7px")
     .text(function(d) { return d.multiplicity > 1 ? d.multiplicity : ""; });
 </script>
-

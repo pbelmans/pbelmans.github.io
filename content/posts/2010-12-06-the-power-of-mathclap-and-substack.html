@@ -9,8 +9,8 @@ tags:
 - programming
 author: Pieter Belmans
 ---
-<p>In my Differential geometry course there is a section on tensor products and they can get quite messy. Notation-wise that is. One of our professors is convinced the current generation of students is unable to grasp tensor products due to some intoxication in the water or something similar, but here I am speaking only about notation :).
-<p>An example, the notes contain a formula depicting the expression of a tensor in a certain basis
+<p>In my Differential geometry course there is a section on tensor products and they can get quite messy. Notation-wise that is. One of our professors is convinced the current generation of students is unable to grasp tensor products due to some intoxication in the water or something similar, but here I am speaking only about notation :).</p>
+<p>An example, the notes contain a formula depicting the expression of a tensor in a certain basis</p>
 
 {{< highlight latex >}}
 \begin{displaymath}
@@ -32,21 +32,21 @@ produces
 <p style="text-align: center"><img src="/assets/mathclap-11.png" alt="Expression of tensor product in basis, bad formatting" />
 -->
 
-<p>Obviously, the enormous width of the summation indices produces an ugly result. <code>\mathclap</code> and <code>\substack</code> to the rescue!
+<p>Obviously, the enormous width of the summation indices produces an ugly result. <code>\mathclap</code> and <code>\substack</code> to the rescue!</p>
 
-<p>First, <code>\substack</code>. The relevant part of <a href="ftp://ftp.ams.org/pub/tex/doc/amsmath/short-math-guide.pdf">the manual</a> states
+<p>First, <code>\substack</code>. The relevant part of <a href="ftp://ftp.ams.org/pub/tex/doc/amsmath/short-math-guide.pdf">the manual</a> states</p>
 
-<blockquote><p>The <code>\substack</code> command can be used to produce a multiline subscript or superscript.</blockquote>
+<blockquote><p>The <code>\substack</code> command can be used to produce a multiline subscript or superscript.</p></blockquote>
 
-<p>Sounds like what we need, don't you think? We just split up the summation indices in a row of <em>i</em>'s and a row of <em>j</em>'s.
+<p>Sounds like what we need, don't you think? We just split up the summation indices in a row of <em>i</em>'s and a row of <em>j</em>'s.</p>
 
-<p>Now, <code>\mathclap</code>. The relevant part of <a href="www.ctan.org/tex-archive/macros/latex/contrib/mh/mathtools.pd">the <code>mathtools</code> manual</a> states
+<p>Now, <code>\mathclap</code>. The relevant part of <a href="www.ctan.org/tex-archive/macros/latex/contrib/mh/mathtools.pd">the <code>mathtools</code> manual</a> states</p>
 
-<blockquote><p>[...] contains a lot of excessive white space. The idea that comes to mind is to fake the width of the subscript. The command <code>\mathclap</code> puts its argument in a zero width box and centers it, [...]</blockquote>
+<blockquote><p>[...] contains a lot of excessive white space. The idea that comes to mind is to fake the width of the subscript. The command <code>\mathclap</code> puts its argument in a zero width box and centers it, [...]</p></blockquote>
 
-<p>Aha, LaTeX will ignore the width of the summation indices when typesetting math. That's what we need.
+<p>Aha, LaTeX will ignore the width of the summation indices when typesetting math. That's what we need.</p>
 
-<p>So we get
+<p>So we get</p>
 
 {{< highlight latex >}}
 \begin{displaymath}
@@ -69,9 +69,9 @@ which produces
 <p style="text-align: center"><img src="/assets/mathclap-21.png" alt="Expression of tensor product in basis, good formatting" />
 -->
 
-<p>When I look at this rendering of the formula, one thing still annoys me. There is <em>not enough</em> space now between the summation symbol and the summands. I feel like there's some symmetry needed: the space between the equals sign and the summation symbol should be on par with the space between the summation symbol and the summands.
+<p>When I look at this rendering of the formula, one thing still annoys me. There is <em>not enough</em> space now between the summation symbol and the summands. I feel like there's some symmetry needed: the space between the equals sign and the summation symbol should be on par with the space between the summation symbol and the summands.</p>
 
-<p>Let's add some hardcoded whitespace, <code>\;</code> is one of the lesser known (at least to me) spacings, representing 5/18th of a quad. That's neither too wide nor thin, so using
+<p>Let's add some hardcoded whitespace, <code>\;</code> is one of the lesser known (at least to me) spacings, representing 5/18th of a quad. That's neither too wide nor thin, so using</p>
 
 {{< highlight latex >}}
 \begin{displaymath}
@@ -82,6 +82,6 @@ which produces
 \end{displaymath}
 {{< /highlight >}}
 
-we get
-<p style="text-align: center"><img src="/assets/mathclap-32.png" alt="Expression of tensor product in basis, best formatting" />
-<p>In case you're wondering what the name <code>\mathclap</code> means, it helps when you know there is a <code>\mathllap</code> and <code>\mathrlap</code>. So <code>\mathclap</code> centers the zero width box, while the other two respectively align the box to the left and right.
+<p>we get</p>
+<p style="text-align: center"><img src="/assets/mathclap-32.png" alt="Expression of tensor product in basis, best formatting"></p>
+<p>In case you're wondering what the name <code>\mathclap</code> means, it helps when you know there is a <code>\mathllap</code> and <code>\mathrlap</code>. So <code>\mathclap</code> centers the zero width box, while the other two respectively align the box to the left and right.</p>

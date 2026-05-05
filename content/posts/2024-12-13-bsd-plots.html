@@ -11,10 +11,10 @@ author: Pieter Belmans
 ---
 <p>Whilst mentoring a student on a project related to elliptic curves,
 we got talking about the <a href="https://en.wikipedia.org/wiki/Birch_and_Swinnerton-Dyer_conjecture">Birch and Swinnerton&ndash;Dyer conjecture</a>.
-I refer you to the Wikipedia page for context, if you need any.
+I refer you to the Wikipedia page for context, if you need any.</p>
 <p>The Wikipedia page features <a href="https://en.wikipedia.org/wiki/File:BSD_data_plot_for_elliptic_curve_800h1.svg">a plot</a>,
 but no code to produce it.
-In order to consider more examples, I've written the following Julia code.
+In order to consider more examples, I've written the following Julia code.</p>
 
 {{< highlight julia >}}
 using Hecke
@@ -47,7 +47,7 @@ end
 gives rise to something which approaches a line of slope $r$.
 For elliptic curves of ranks 0 to 4 taken from the <a href="https://lmfdb.org">LMFDB</a>
 we can easily plot their associated "BSD-curves"
-using
+using</p>
 {{< highlight julia >}}
 curves = [
     elliptic_curve([0, -1, 1, 0, 0]),
@@ -60,8 +60,8 @@ curves = [
 label = permutedims(hcat([string("rank ", i) for i in 0:4]));
 plot(X, map(BSD, curves), label=label)
 {{< /highlight >}}
-which results in
-<p><img src="/assets/bsd-plot.svg">
+<p>which results in</p>
+<img src="/assets/bsd-plot.svg">
 <p>Does anyone know what the original data supporting the BSD conjecture looked like?
 Certainly, the <a href="https://en.wikipedia.org/wiki/EDSAC_2">EDSAC</a> they purportedly used for the calculations
-is not going to reproduce the plot above anytime soon.
+is not going to reproduce the plot above anytime soon.</p>

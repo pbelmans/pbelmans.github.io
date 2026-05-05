@@ -11,15 +11,15 @@ tags:
 author: Pieter Belmans
 ---
 
-<p>Yesterday I wrote about how I've added horospherical varieties of rank one to <a href="https://www.grassmannian.info">Grassmannian.info</a>. I've now also computed the quantum spectra (so the eigenvalues of quantum multiplication by the canonical class), at least for those for which I had the tools. Based on the <a href="https://arxiv.org/abs/1803.05063">work of Gonzales&ndash;Pech&ndash;Perrin&ndash;Samokhin</a> these are the sporadic cases $X^2$ and $X^5$ (with $X^4$ still missing) and all odd symplectic Grassmannians $\operatorname{SGr}(m,2n+1)=X^3(n,m)$. The family $X^1(n)$ has no uniform description of quantum cohomology yet, and only $n=3$ is discussed, using the quantum Chevalley formula.
+<p>Yesterday I wrote about how I've added horospherical varieties of rank one to <a href="https://www.grassmannian.info">Grassmannian.info</a>. I've now also computed the quantum spectra (so the eigenvalues of quantum multiplication by the canonical class), at least for those for which I had the tools. Based on the <a href="https://arxiv.org/abs/1803.05063">work of Gonzales&ndash;Pech&ndash;Perrin&ndash;Samokhin</a> these are the sporadic cases $X^2$ and $X^5$ (with $X^4$ still missing) and all odd symplectic Grassmannians $\operatorname{SGr}(m,2n+1)=X^3(n,m)$. The family $X^1(n)$ has no uniform description of quantum cohomology yet, and only $n=3$ is discussed, using the quantum Chevalley formula.</p>
 
 <h3>Methods</h3>
-<p>For $X^1(3)$ and $X^2$ I used the quantum Chevalley formula from Gonzales&ndash;Pech;&ndash;Perrin&ndash;Samokhin (see Section 4), whilst for $X^3(m,n)$ I used their presentation from Theorem 5.17. You can find the code for this below.
-<p>Let me show you one of my favourite spectra, that for $\operatorname{SGr}(3,15)=X^3(7,3)$:
+<p>For $X^1(3)$ and $X^2$ I used the quantum Chevalley formula from Gonzales&ndash;Pech;&ndash;Perrin&ndash;Samokhin (see Section 4), whilst for $X^3(m,n)$ I used their presentation from Theorem 5.17. You can find the code for this below.</p>
+<p>Let me show you one of my favourite spectra, that for $\operatorname{SGr}(3,15)=X^3(7,3)$:</p>
 <div id="eigenvalues"></div>
 
 <script src="https://d3js.org/d3.v5.js"></script>
-<script type="text/javascript">
+<script>
 var margin = {top: 10, right: 30, bottom: 30, left: 60},
     width = 460 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
@@ -90,22 +90,22 @@ var multiplicities = svg.append("g")
 </script>
 
 <h3>Observations</h3>
-<p>Somehow the spectra are "easier" than they are for generalised Grassmannians: most of the time (at least in the cases where the number of eigenvalues is sufficiently small, say smaller than 1000) all eigenvalues <em>are distinct</em>. This has implications using the Kuznetsov&ndash;Smirnov conjecture which I won't discuss here. 
+<p>Somehow the spectra are "easier" than they are for generalised Grassmannians: most of the time (at least in the cases where the number of eigenvalues is sufficiently small, say smaller than 1000) all eigenvalues <em>are distinct</em>. This has implications using the Kuznetsov&ndash;Smirnov conjecture which I won't discuss here.</p>
 
-<p>But this also already implies that the small quantum cohomology is semisimple. This significantly extends the known semisimplicity results for odd symplectic Grassmannians. Based on the computations in manageable cases one could say optimistically that:
+<p>But this also already implies that the small quantum cohomology is semisimple. This significantly extends the known semisimplicity results for odd symplectic Grassmannians. Based on the computations in manageable cases one could say optimistically that:</p>
 
-<p><strong>Optimistic conjecture</strong> The small quantum cohomology of $\operatorname{SGr}(m,2n+1)$:
+<p><strong>Optimistic conjecture</strong> The small quantum cohomology of $\operatorname{SGr}(m,2n+1)$:</p>
 <ol>
-  <li>is semisimple for all $n\geq 2$ and $m=2,\ldots,n$
-  <li>has semisimple quantum spectrum whenever $2n+2-m$ divides $(m+1)2^m{n\choose m}-(2n-2m+1)2^{m-1}{n\choose m-1}$
+  <li>is semisimple for all $n\geq 2$ and $m=2,\ldots,n$</li>
+  <li>has semisimple quantum spectrum whenever $2n+2-m$ divides $(m+1)2^m{n\choose m}-(2n-2m+1)2^{m-1}{n\choose m-1}$</li>
 </ol>
-<p>Here $2n+2-m$ is the index, and $(m+1)2^m{n\choose m}-(2n-2m+1)2^{m-1}{n\choose m-1}$ is the dimension of the cohomology, obtained using the blowup description and the fact that the dimension of cohomology of $\operatorname{SGr}(m,2n)=2^m{n\choose m}$.
+<p>Here $2n+2-m$ is the index, and $(m+1)2^m{n\choose m}-(2n-2m+1)2^{m-1}{n\choose m-1}$ is the dimension of the cohomology, obtained using the blowup description and the fact that the dimension of cohomology of $\operatorname{SGr}(m,2n)=2^m{n\choose m}$.</p>
 
-<p>The computational evidence for this conjecture extends Theorem 4.1 of <a href="https://arxiv.org/abs/1803.05063">Geometry of horospherical varieties of Picard rank one</a>, and earlier work of Pech, to all $n\leq 7$, except for $n=5$ and $m=3$ which has zero has an eigenvalue of higher multiplicity. The next case where this happens is $n=8$ and $m=3$ (and $(8,6)$, $(9,5)$, $(11,3)$, etc.) There is some periodicity in these cases, but as the dimensions grows too quickly, no experimental results can be obtained.
-<p>At least for $n=5$ and $m=3$ one can use the presentation of quantum cohomology to check that the variety is reduced, by letting Sage compute the number of points using <code>.variety(QQbar)</code>.
+<p>The computational evidence for this conjecture extends Theorem 4.1 of <a href="https://arxiv.org/abs/1803.05063">Geometry of horospherical varieties of Picard rank one</a>, and earlier work of Pech, to all $n\leq 7$, except for $n=5$ and $m=3$ which has zero has an eigenvalue of higher multiplicity. The next case where this happens is $n=8$ and $m=3$ (and $(8,6)$, $(9,5)$, $(11,3)$, etc.) There is some periodicity in these cases, but as the dimensions grows too quickly, no experimental results can be obtained.</p>
+<p>At least for $n=5$ and $m=3$ one can use the presentation of quantum cohomology to check that the variety is reduced, by letting Sage compute the number of points using <code>.variety(QQbar)</code>.</p>
 
 <h3>Code</h3>
-<p>In case you feel like playing with the quantum cohomology of odd symplectic Grassmannians:
+<p>In case you feel like playing with the quantum cohomology of odd symplectic Grassmannians:</p>
 {{< highlight python >}}
 def QH(n, m):
     R = PolynomialRing(QQ, "t", 2*n + 2 - m)
@@ -128,12 +128,12 @@ def eigenvalues(n, m):
 
 
 <h3>Semisimplicity of small quantum cohomology of generalised Grassmannians</h3>
-<p>One can apply the same observation regarding distinct eigenvalues to the semisimplicity of small quantum cohomology of generalised Grassmannians, and obtain semisimplicity in cases where it was not observed before. In the exceptional types this applies to $\mathrm{E}_6/\mathrm{P}_3=\mathrm{E}_6/\mathrm{P}_5$ and $\mathrm{F}_4/\mathrm{P}_2$.
-<p>In standard types and low rank, one gets the semisimplicity of
+<p>One can apply the same observation regarding distinct eigenvalues to the semisimplicity of small quantum cohomology of generalised Grassmannians, and obtain semisimplicity in cases where it was not observed before. In the exceptional types this applies to $\mathrm{E}_6/\mathrm{P}_3=\mathrm{E}_6/\mathrm{P}_5$ and $\mathrm{F}_4/\mathrm{P}_2$.</p>
+<p>In standard types and low rank, one gets the semisimplicity of</p>
 <ul>
-  <li>type B: $\operatorname{OGr}(4,13)$ and $\operatorname{OGr}(4,15)$ (but not $\operatorname{OGr}(4,11)$, as the index, which is 6, does not divide the dimension of cohomology, which is 80)
-  <li>type C: $\operatorname{SGr}(3,10)$ and $\operatorname{SGr}(3,12)$ (but not $\operatorname{SGr}(3,8)$ or $\operatorname{SGr}(3,14)$, again by divisibility issues)
+  <li>type B: $\operatorname{OGr}(4,13)$ and $\operatorname{OGr}(4,15)$ (but not $\operatorname{OGr}(4,11)$, as the index, which is 6, does not divide the dimension of cohomology, which is 80)</li>
+  <li>type C: $\operatorname{SGr}(3,10)$ and $\operatorname{SGr}(3,12)$ (but not $\operatorname{SGr}(3,8)$ or $\operatorname{SGr}(3,14)$, again by divisibility issues)</li>
 </ul>
-<p>I have updated the display on the website accordingly.
+<p>I have updated the display on the website accordingly.</p>
 
-<p><strong>Acknowledgements</strong> I thank Ryan Shifler and Maxim Smirnov for interesting discussions!
+<p><strong>Acknowledgements</strong> I thank Ryan Shifler and Maxim Smirnov for interesting discussions!</p>

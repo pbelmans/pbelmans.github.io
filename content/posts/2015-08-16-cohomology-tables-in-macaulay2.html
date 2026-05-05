@@ -10,16 +10,16 @@ tags:
 - programming
 author: Pieter Belmans
 ---
-<p><a href="/blog/2014/01/16/a-visualisation-of-serre-duality-and-hodge-diamonds/">Last year</a> I created a little online tool to compute sheaf cohomology of twists of the structure sheaf on a complete intersection. It was a fun exercise in implementing power series computations and a result from SGA7 in JavaScript, but it unfortunately only applies to:
+<p><a href="/blog/2014/01/16/a-visualisation-of-serre-duality-and-hodge-diamonds/">Last year</a> I created a little online tool to compute sheaf cohomology of twists of the structure sheaf on a complete intersection. It was a fun exercise in implementing power series computations and a result from SGA7 in JavaScript, but it unfortunately only applies to:</p>
 
 <ul>
-  <li>complete intersections
-  <li>twists of the structure sheaf
+  <li>complete intersections</li>
+  <li>twists of the structure sheaf</li>
 </ul>
 
-<p>Lately I have been toying a little with Macaulay2, and computations of this sort are very easy in this language, and can be done in far greater generality for arbitrary projective varieties and arbitrary coherent sheaves. As long as you can define the objects you are good to go, because of <a href="http://www.math.uiuc.edu/Macaulay2/doc/Macaulay2-1.5/share/doc/Macaulay2/BGG/html/_cohomology__Table.html"><var>cohomologyTable</var></a>. As you can <a href="http://www.math.uiuc.edu/Macaulay2/TryItOut/">use Macaulay2 online</a> you might as well do it this way, instead of using the limited functionality in my implementation.
+<p>Lately I have been toying a little with Macaulay2, and computations of this sort are very easy in this language, and can be done in far greater generality for arbitrary projective varieties and arbitrary coherent sheaves. As long as you can define the objects you are good to go, because of <a href="http://www.math.uiuc.edu/Macaulay2/doc/Macaulay2-1.5/share/doc/Macaulay2/BGG/html/_cohomology__Table.html"><var>cohomologyTable</var></a>. As you can <a href="http://www.math.uiuc.edu/Macaulay2/TryItOut/">use Macaulay2 online</a> you might as well do it this way, instead of using the limited functionality in my implementation.</p>
 
-<p>As an example you can run the following code (the online interface requires you to put your cursor on the first line and then repeatedly click evaluate):
+<p>As an example you can run the following code (the online interface requires you to put your cursor on the first line and then repeatedly click evaluate):</p>
 
 {{< highlight macaulay2 >}}
 loadPackage "BGG";
@@ -36,7 +36,7 @@ X = Proj(QQ[a,b,c,d] / (a^4+b^4+c^4+d^4));
 cohomologyTable(tangentSheaf X, -4, 4)
 {{< /highlight >}}
 
-<p>The output for the K3 surface is
+<p>The output for the K3 surface is</p>
 
 {{< highlight output >}}
 ii16 : -- Fermat quartic (a K3 surface)
@@ -49,5 +49,5 @@ oo17 = 2: 124 80 45 20  6  .  .  .  .  .   .   .   .   .   .
        1:   .  1  4 10 16 20 16 10  4  1   .   .   .   .   .
        0:   .  .  .  .  .  .  6 20 45 80 124 176 236 304 380
 {{< /highlight >}}
-<p>Observe the (weird) indexing: for the K3 surface we have $\mathrm{h}^1(X,\mathrm{T}_X)=20$, which sits in position (1,1) and not (1,0) as I would expect. The reason for this can be found in the manual:
-<blockquote><p>This function takes as input a coherent sheaf <code>F</code>, two integers <code>l</code> and <code>h</code>, and prints the dimension <code>dim HH^j F(i-j)</code> for <code>h&gt;=i&gt;=l</code>.</blockquote>
+<p>Observe the (weird) indexing: for the K3 surface we have $\mathrm{h}^1(X,\mathrm{T}_X)=20$, which sits in position (1,1) and not (1,0) as I would expect. The reason for this can be found in the manual:</p>
+<blockquote><p>This function takes as input a coherent sheaf <code>F</code>, two integers <code>l</code> and <code>h</code>, and prints the dimension <code>dim HH^j F(i-j)</code> for <code>h&gt;=i&gt;=l</code>.</p></blockquote>

@@ -26,23 +26,23 @@ It gives an expression of the twisted Hodge numbers of the line bundle $L_n$ on 
 induced from a line bundle $L$ on $S$,
 in terms of the twisted Hodge numbers of the line bundles (plural!) $L^{\otimes k}$ on $S$.
 The version without $\otimes k$ was a conjecture of Boissière,
-for which counterexamples had already been found.
-<p>I was really happy to see that Lie Fu has found <a href="https://arxiv.org/abs/2412.09975"><strong>a proof of the conjecture</strong></a>!
+for which counterexamples had already been found.</p>
+<p>I was really happy to see that Lie Fu has found <a href="https://arxiv.org/abs/2412.09975"><strong>a proof of the conjecture</strong></a>!</p>
 
 <p>It is no secret that I like explicit implementations of results.
 It's not too hard to implement this formula,
 except that it is a little cumbersome to deal with all the data required for the formula,
-because you might need many twisted Hodge diamonds of $S$.
+because you might need many twisted Hodge diamonds of $S$.</p>
 <p>That's why I decided to take my implementation of the (at the time conjectural) formula from a few years back,
 clean it up,
 and package it together with various interesting surfaces and their twisted Hodge diamonds.
 My preferred choice of $L$ is the anticanonical line bundle,
 because then it computes the Hochschild&ndash;Kostant&ndash;Rosenberg decomposition
-of the Hochschild cohomology of Hilbert schemes of points.
+of the Hochschild cohomology of Hilbert schemes of points.</p>
 
 <h3>Some examples</h3>
 <p>One of the explicit examples we have computed in our joint paper is $\mathop{\rm Hilb}^2\mathbb{P}^2$.
-This can now be easily recomputed as
+This can now be easily recomputed as</p>
 {{< highlight python >}}
 sage: from twisted_hilbert import *
 sage: S = CompleteIntersectionSurface([], 3) # anticanonical twist
@@ -59,11 +59,11 @@ sage: TwistedHilbertSchemeDiamond(S, 2).as_parallelogram()
 {{< /highlight >}}
 <p>Here we use the twisted Hodge diamonds of complete intersection surfaces,
 as implemented by <a href="https://github.com/pbelmans/twisted-hodge-ci"><code>twisted-hodge-ci</code></a>,
-something implemented by Piet Glas and myself a few years back.
+something implemented by Piet Glas and myself a few years back.</p>
 <p>Alternative examples are given by bielliptic surfaces,
-which are discussed at length in our joint paper.
+which are discussed at length in our joint paper.</p>
 
 <h3>Instructions etc.</h3>
-Instructions on <a href="https://github.com/pbelmans/twisted-hodge-hilbert?tab=readme-ov-file#getting-started">how to get started</a>
+<p>Instructions on <a href="https://github.com/pbelmans/twisted-hodge-hilbert?tab=readme-ov-file#getting-started">how to get started</a>
 and <a href="https://github.com/pbelmans/twisted-hodge-hilbert?tab=readme-ov-file#how-to-cite">how to cite the software</a>
-are available.
+are available.</p>

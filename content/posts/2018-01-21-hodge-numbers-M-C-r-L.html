@@ -18,24 +18,24 @@ author: Pieter Belmans
 {{< hodge >}}
 
 
-<p>Continuing my short and irregular series of blogposts regarding the computation of Hodge numbers directly from your browser (earlier installments are <a href="/blog/2017/11/18/hodge-numbers-hilb/">Hodge numbers for $\operatorname{Hilb}^nS$</a> and <a href="/blog/2014/01/16/a-visualisation-of-serre-duality-and-hodge-diamonds/">A visualisation of Serre duality and Hodge diamonds</a> (for complete intersections)), I present you today the Hodge numbers of $\operatorname{M}_C(r,\mathcal{L})$.
-<p>$\operatorname{M}_C(r,\mathcal{L})$ is the moduli space of rank $r$ vector bundles with determinant isomorphic to $\mathcal{L}$ of degree $d$ such that $(d,r)=1$, all on a smooth projective curve $C$ of genus $g\geq 2$. These are very interesting Fano varieties with $\operatorname{Pic}(\operatorname{M}_C(r,\mathcal{L}))=\mathbb{Z}$, and 10 years ago a closed formula for their Hodge&ndash;Poincaré polynomial was found. Recall that the <em>Hodge&ndash;Poincaré polynomial</em> of a variety $X$ is
+<p>Continuing my short and irregular series of blogposts regarding the computation of Hodge numbers directly from your browser (earlier installments are <a href="/blog/2017/11/18/hodge-numbers-hilb/">Hodge numbers for $\operatorname{Hilb}^nS$</a> and <a href="/blog/2014/01/16/a-visualisation-of-serre-duality-and-hodge-diamonds/">A visualisation of Serre duality and Hodge diamonds</a> (for complete intersections)), I present you today the Hodge numbers of $\operatorname{M}_C(r,\mathcal{L})$.</p>
+<p>$\operatorname{M}_C(r,\mathcal{L})$ is the moduli space of rank $r$ vector bundles with determinant isomorphic to $\mathcal{L}$ of degree $d$ such that $(d,r)=1$, all on a smooth projective curve $C$ of genus $g\geq 2$. These are very interesting Fano varieties with $\operatorname{Pic}(\operatorname{M}_C(r,\mathcal{L}))=\mathbb{Z}$, and 10 years ago a closed formula for their Hodge&ndash;Poincaré polynomial was found. Recall that the <em>Hodge&ndash;Poincaré polynomial</em> of a variety $X$ is</p>
 \[
   \operatorname{HP}(X,x,y)=\sum_{p,q=0}^{\dim X}\mathrm{h}^q(X,\Omega_X^p)x^py^q.
 \]
-<p>del Bano computed the Hodge&ndash;Poincaré polynomial for $\operatorname{M}_C(r,\mathcal{L})$ in <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=1817504">On the Chow motive of some moduli spaces</a>. If we denote $\langle\alpha\rangle$ the decimal part of $\alpha\in\mathbb{R}$, then the formula is the following
+<p>del Bano computed the Hodge&ndash;Poincaré polynomial for $\operatorname{M}_C(r,\mathcal{L})$ in <a href="https://mathscinet.ams.org/mathscinet-getitem?mr=1817504">On the Chow motive of some moduli spaces</a>. If we denote $\langle\alpha\rangle$ the decimal part of $\alpha\in\mathbb{R}$, then the formula is the following</p>
 \begin{align*}
   \operatorname{HP}(\operatorname{M}_C(r,\mathcal{L}),x,y)
-  &=
+  &amp;=
   \sum_{r_1+\ldots+r_\ell=r}
   (-1)^{\ell-1}\frac{\left( (1+x)^g(1+y)^g \right)^{\ell-1}}{(1-xy)^{\ell-1}} \\
-  &\qquad\qquad\qquad\cdot\prod_{j=1}^\ell\prod_{i=1}^{r_j-1}\frac{(1+x^iy^{i+1})^g(1+x^{i+1}y^i)^g}{(1-(xy)^i)(1-(xy)^{i+1})} \\
-  &\qquad\qquad\qquad\cdot\prod_{j=1}^{\ell-1}\frac{1}{1-(xy)^{r_j+r_{j+1}}} \\
-  &\qquad\qquad\qquad\cdot(xy)^{\sum_{i&lt;j}r_ir_j(g-1)+\sum_{i=1}^{\ell-1}(r_i+r_{i+1})\langle -(r_1+\ldots+r_i)d/r\rangle}
+  &amp;\qquad\qquad\qquad\cdot\prod_{j=1}^\ell\prod_{i=1}^{r_j-1}\frac{(1+x^iy^{i+1})^g(1+x^{i+1}y^i)^g}{(1-(xy)^i)(1-(xy)^{i+1})} \\
+  &amp;\qquad\qquad\qquad\cdot\prod_{j=1}^{\ell-1}\frac{1}{1-(xy)^{r_j+r_{j+1}}} \\
+  &amp;\qquad\qquad\qquad\cdot(xy)^{\sum_{i&lt;j}r_ir_j(g-1)+\sum_{i=1}^{\ell-1}(r_i+r_{i+1})\langle -(r_1+\ldots+r_i)d/r\rangle}
 \end{align*}
-<p><small>I've fixed a small typo in the exponent on the fourth line.</small>
+<p><small>I've fixed a small typo in the exponent on the fourth line.</small></p>
 
-<p>This looks like the perfect thing to implement in Sage, and below you find the direct translation into computer code.
+<p>This looks like the perfect thing to implement in Sage, and below you find the direct translation into computer code.</p>
 
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
@@ -80,6 +80,6 @@ print(diamond(hodge_poincare(2,1,2)))
   </script>
 </div>
 
-<p>The example with $r=2$, $d=1$ and $g=2$ is the easiest case. It can be shown that this is also the complete intersection of two quadrics in $\mathbb{P}^5$, so one can check the result using <a href="/cohomology-tables">the Hodge diamond for complete intersections</a>.
+<p>The example with $r=2$, $d=1$ and $g=2$ is the easiest case. It can be shown that this is also the complete intersection of two quadrics in $\mathbb{P}^5$, so one can check the result using <a href="/cohomology-tables">the Hodge diamond for complete intersections</a>.</p>
 
-<p>It should be remarked that <a href="https://www.math.purdue.edu/~dvb/scripts/scripts.html">Donu Arapura also has a Sage implementation</a>, but his implementation deals with fractions of polynomials in a different way, using series expansion and truncation at every step. As a result, my (naive) implementation above turns out to be much faster (although that might not have been the case when he implemented the formula, I can certainly imagine the implementation for fractions of polynomials in Sage to have improved over time).
+<p>It should be remarked that <a href="https://www.math.purdue.edu/~dvb/scripts/scripts.html">Donu Arapura also has a Sage implementation</a>, but his implementation deals with fractions of polynomials in a different way, using series expansion and truncation at every step. As a result, my (naive) implementation above turns out to be much faster (although that might not have been the case when he implemented the formula, I can certainly imagine the implementation for fractions of polynomials in Sage to have improved over time).</p>

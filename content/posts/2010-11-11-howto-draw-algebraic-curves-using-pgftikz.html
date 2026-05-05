@@ -10,18 +10,18 @@ tags:
 author: Pieter Belmans
 ---
 <h2>Introduction</h2>
-<p>As one could deduce from my previous posts, I was trying to draw algebraic curves directly in LaTeX using PGF/TikZ and <code>gnuplot</code>. I'll present a short overview of how one can do this, hoping it will get as popular as <a href="/blog/2010/10/02/direct-and-inverse-limit-in-latex/">my post on direct and inverse limits</a>. Which is according to Wordpress' statistics good for one daily search hit.
-<p>So, what is an algebraic curve? For an extensive overview, I refer you to <a href="http://en.wikipedia.org/wiki/Algebraic_curve">the Wikipedia article about them</a>. In this post, it just boils down to an implicit function in 2 variables over the real field. That is, just take any polynomial
-$F\in\mathbb{R}[X,Y]$
-<p>and set it equal to zero. In general it is far more abstract, as can be seen in the Wikipedia article, but we're drawing plane algebraic curves, not n-dimensional hypersurfaces over exotic fields. To give an example, take
-$F(X,Y)=Y^2-X^3+X=0$
-<p>for now, this is the curve (even more, this is an <a href="http://en.wikipedia.org/wiki/Elliptic_curve">elliptic curve</a>) we'll be using in our examples. It corresponds to the <a href="http://en.wikipedia.org/wiki/File:EllipticCurveCatalog.svg"><em>a=-1</em>, <em>b=0</em> cell in the matrix of examples</a>.
+<p>As one could deduce from my previous posts, I was trying to draw algebraic curves directly in LaTeX using PGF/TikZ and <code>gnuplot</code>. I'll present a short overview of how one can do this, hoping it will get as popular as <a href="/blog/2010/10/02/direct-and-inverse-limit-in-latex/">my post on direct and inverse limits</a>. Which is according to Wordpress' statistics good for one daily search hit.</p>
+<p>So, what is an algebraic curve? For an extensive overview, I refer you to <a href="http://en.wikipedia.org/wiki/Algebraic_curve">the Wikipedia article about them</a>. In this post, it just boils down to an implicit function in 2 variables over the real field. That is, just take any polynomial</p>
+<p>$F\in\mathbb{R}[X,Y]$</p>
+<p>and set it equal to zero. In general it is far more abstract, as can be seen in the Wikipedia article, but we're drawing plane algebraic curves, not n-dimensional hypersurfaces over exotic fields. To give an example, take</p>
+<p>$F(X,Y)=Y^2-X^3+X=0$</p>
+<p>for now, this is the curve (even more, this is an <a href="http://en.wikipedia.org/wiki/Elliptic_curve">elliptic curve</a>) we'll be using in our examples. It corresponds to the <a href="http://en.wikipedia.org/wiki/File:EllipticCurveCatalog.svg"><em>a=-1</em>, <em>b=0</em> cell in the matrix of examples</a>.</p>
 <h2>The set-up</h2>
-<p>We'll be using <a href="http://sourceforge.net/projects/pgf/">PGF/TikZ</a>, the most awesome LaTeX package since the invention of the boiled water. Apart from maybe <a href="http://www.ctan.org/tex-archive/macros/latex/contrib/microtype/"><code>microtype</code></a>. Anyway, to see what it can do I refer you to <a href="http://www.texample.net/tikz/examples/">TeXample</a>, a nice overview of the amazing stuff it can do. What it so far hasn't been doing is drawing algebraic curves. But we're about to change this!
-<p>Apart from PGF/TikZ, we'll need <a href="http://gnuplot.info"><code>gnuplot</code></a>, a tool for drawing plots (as its name suggests) and luckily for us: tightly integrated in PGF/TikZ. In case you're using Linux, it should only be a <code>sudo apt-get install gnuplot</code> (or similar) away. If you're using Windows, I'm afraid you'll have to figure out how to install and use it yourself.
+<p>We'll be using <a href="http://sourceforge.net/projects/pgf/">PGF/TikZ</a>, the most awesome LaTeX package since the invention of the boiled water. Apart from maybe <a href="http://www.ctan.org/tex-archive/macros/latex/contrib/microtype/"><code>microtype</code></a>. Anyway, to see what it can do I refer you to <a href="http://www.texample.net/tikz/examples/">TeXample</a>, a nice overview of the amazing stuff it can do. What it so far hasn't been doing is drawing algebraic curves. But we're about to change this!</p>
+<p>Apart from PGF/TikZ, we'll need <a href="http://gnuplot.info"><code>gnuplot</code></a>, a tool for drawing plots (as its name suggests) and luckily for us: tightly integrated in PGF/TikZ. In case you're using Linux, it should only be a <code>sudo apt-get install gnuplot</code> (or similar) away. If you're using Windows, I'm afraid you'll have to figure out how to install and use it yourself.</p>
 <h2>Howto</h2>
-<p>PGF/TikZ cannot draw implicit functions. Actually, it can only draw lines, splines and variations thereupon, as far as I know. But it can pass functions to <code>gnuplot</code> which then calculates the coordinates of enough points to provide a nice result. Let's draw a sine for example.
-<p>I've modified <a href="http://www.texample.net/tikz/examples/gnuplot-basics/">this example at TeXample</a> (and snippet from the manual) a bit resulting in this code
+<p>PGF/TikZ cannot draw implicit functions. Actually, it can only draw lines, splines and variations thereupon, as far as I know. But it can pass functions to <code>gnuplot</code> which then calculates the coordinates of enough points to provide a nice result. Let's draw a sine for example.</p>
+<p>I've modified <a href="http://www.texample.net/tikz/examples/gnuplot-basics/">this example at TeXample</a> (and snippet from the manual) a bit resulting in this code</p>
 
 {{< highlight latex >}}
 \begin{tikzpicture}[domain=0:4]
@@ -32,14 +32,14 @@ $F(X,Y)=Y^2-X^3+X=0$
 \end{tikzpicture}
 {{< /highlight >}}
 
-<p>which produces
+<p>which produces</p>
 
-<p style="text-align: center;"><img src="/assets/sine.png" alt="A sine curve drawn using PGF/TikZ" />
+<p style="text-align: center;"><img src="/assets/sine.png" alt="A sine curve drawn using PGF/TikZ"></p>
 
-<p>So, let's pass our desired algebraic curve to <code>gnuplot</code>!
+<p>So, let's pass our desired algebraic curve to <code>gnuplot</code>!</p>
 
-<p>But <code>gnuplot</code> doesn't support implicit functions. So it's not possible to draw them. Wait? Why do you use it then? Because we can draw them by cheating a little. This is <a href="http://t16web.lanl.gov/Kawano/gnuplot/implicit/solve-e.html">explained at their website</a>. So we know how to draw them in <code>gnuplot</code>. How can we use that output?
-<p>This is where <code>raw gnuplot</code> comes to rescue. You basically feed <code>gnuplot</code> to the program and it outputs a <code>.table</code> file containing the necessary coordinates. So we end up with:
+<p>But <code>gnuplot</code> doesn't support implicit functions. So it's not possible to draw them. Wait? Why do you use it then? Because we can draw them by cheating a little. This is <a href="http://t16web.lanl.gov/Kawano/gnuplot/implicit/solve-e.html">explained at their website</a>. So we know how to draw them in <code>gnuplot</code>. How can we use that output?</p>
+<p>This is where <code>raw gnuplot</code> comes to rescue. You basically feed <code>gnuplot</code> to the program and it outputs a <code>.table</code> file containing the necessary coordinates. So we end up with:</p>
 
 {{< highlight latex >}}
 \begin{tikzpicture}
@@ -63,10 +63,10 @@ $F(X,Y)=Y^2-X^3+X=0$
 {{< /highlight >}}
 
 which results in
-<p style="text-align: center;"><img src="/assets/wrong.png" alt="Our first attempt at an algebraic curve in PGF/TikZ, but the output is kind of rubbish" />
+<p style="text-align: center;"><img src="/assets/wrong.png" alt="Our first attempt at an algebraic curve in PGF/TikZ, but the output is kind of rubbish"></p>
 
-<p>Not quite what we were expecting, don't you think? But there is an easy solution. First we observe that the <code>.table</code> file contains different segments. Apparently, the calculation of the intersection of the surface and the <em>z=0</em> plane is not that accurate, which results in discontinuities and the segments are not placed in order. PGF/TikZ on the other hand is not aware of any segments and just connects them. Resulting in a cat's cradle of lines.
-<p>Now comes the hackish part. In <code>/texmf/tex/generic/pgf/modules/pgfmoduleplot.code.tex</code>, the definition of <code>\def\pgf@readxyfile</code> should read
+<p>Not quite what we were expecting, don't you think? But there is an easy solution. First we observe that the <code>.table</code> file contains different segments. Apparently, the calculation of the intersection of the surface and the <em>z=0</em> plane is not that accurate, which results in discontinuities and the segments are not placed in order. PGF/TikZ on the other hand is not aware of any segments and just connects them. Resulting in a cat's cradle of lines.</p>
+<p>Now comes the hackish part. In <code>/texmf/tex/generic/pgf/modules/pgfmoduleplot.code.tex</code>, the definition of <code>\def\pgf@readxyfile</code> should read</p>
 {{< highlight latex >}}
 \def\pgf@readxyfile{%
   \read1 to \pgf@temp%
@@ -84,6 +84,6 @@ which results in
 {{< /highlight >}}
 
 which then results in
-<p style="text-align: center"><img src="/assets/right.png" alt="Our second attempt, a much smoother outcome" />
-<p>Much better, don't you think? The small gap at the bottom is due to my <code>gnuplot 4.2</code> installation, in <code>gnuplot 4.4</code> this is fixed (as shown by experiments on another computer) but I haven't yet updated mine.
-<p>Any questions?
+<p style="text-align: center"><img src="/assets/right.png" alt="Our second attempt, a much smoother outcome"></p>
+<p>Much better, don't you think? The small gap at the bottom is due to my <code>gnuplot 4.2</code> installation, in <code>gnuplot 4.4</code> this is fixed (as shown by experiments on another computer) but I haven't yet updated mine.</p>
+<p>Any questions?</p>
