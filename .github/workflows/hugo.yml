@@ -1,0 +1,27 @@
+name: Deploy Hugo site
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.161.1'
+          extended: true
+      - run: npm ci
+      - run: npm run build:public
+      - run: npm run validate:html:public
+      - uses: peaceiris/actions-gh-pages@v4
+        if: ${{ !env.ACT }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          cname: pbelmans.ncag.info
