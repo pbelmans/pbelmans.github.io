@@ -1,12 +1,24 @@
-_site
-.sass-cache
-.jekyll-metadata
-*.swp
-.jekyll-cache
-node_modules
-test-output
-crawl-urls.txt
-_jekyll_site
-_hugo_site
+# Build outputs
+_site/
+_jekyll_site/
+_hugo_site/
 public/
+.hugo_build.lock
+
+# Jekyll artifacts
+.sass-cache/
+.jekyll-metadata
+.jekyll-cache/
+
+# Testing artifacts
+test-output/
+crawl-urls.txt
+hugo-urls.txt
+url-inventory.txt
+
+# Hugo generated resources
 resources/_gen/
+
+# Editor temp files
+*.swp
+node_modules
