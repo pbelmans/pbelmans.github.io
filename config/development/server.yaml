@@ -1,0 +1,9 @@
+redirects:
+  - force: false
+    from: /blog/feed/
+    status: 200
+    to: /blog/feed/index.xml
+  - force: false
+    from: /**
+    status: 404
+    to: /404.html
