@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" type="image/png" href="/favicon.png" size="256x256">
+
+  <title>Pieter Belmans&mdash;The periodic tables of algebraic geometry: curves and surfaces</title>
+  <meta name="description" content=" The Snapshots of modern mathematics from Oberwolfach is a series of outreach articles. Last month I attended a workshop there and I was asked to write …">
+
+  
+  <link rel="stylesheet" href="/css/main.css">
+
+  <link rel="canonical" href="https://pbelmans.ncag.info/blog/2022/08/20/snapshot-2/">
+  <link rel="alternate" type="application/rss+xml" title="Pieter Belmans" href="https://pbelmans.ncag.info/blog/feed/">
+
+  <script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    packages: ['base', 'ams', 'mathtools', 'color', 'newcommand']
+  },
+  loader: {
+    load: ['[tex]/ams', '[tex]/mathtools', '[tex]/color']
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+  
+  
+
+  <script defer data-domain="pbelmans.ncag.info" src="https://plausible.io/js/script.js"></script>
+</head>
+
+  <body>
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Pieter Belmans</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        <a class="page-link" href="/about">about me</a>
+        <a class="page-link" href="/activities">interactive</a>
+        <a class="page-link" href="/blog">blog</a>
+        <a class="page-link" href="/talks">talks</a>
+        <a class="page-link" href="/uu.nl">uu.nl</a>
+        <a class="page-link" href="/writing">writing</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">The periodic tables of algebraic geometry: curves and surfaces</h1>
+
+    <p class="post-meta">
+      <time datetime="2022-08-20T00:00:00Z" itemprop="datePublished">Aug 20, 2022</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Pieter Belmans</span></span>
+    </p>
+
+    
+    
+    <div class="post-meta">
+      posted in:
+      <ul class="categories-list">
+        
+          <li><a href="/blog/categories#mathematics">mathematics</a></li>
+        
+      </ul>
+    </div>
+    
+
+    
+    
+    <div class="post-meta">
+      tags:
+      <ul class="tags-list">
+        
+          <li><a href="/blog/tags#algebraic-geometry">algebraic geometry</a></li>
+        
+      </ul>
+    </div>
+    
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    
+
+<div style="background-color: rgb(255, 243, 205); border: 1px solid rgb(255, 238, 186); padding: 10px;">
+  <p>The <a href="https://www.mfo.de/outreach-media/snapshots">Snapshots of modern mathematics from Oberwolfach</a> is a series of outreach articles. Last month I attended <a href="https://www.mfo.de/occasion/2228/www_view">a workshop there</a> and I was asked to write something for it. Long story short, if you are impatient, you can <a href="/assets/snapshot.pdf">read the result all in one go</a>. But in the spirit of magazine science fiction I will also be posting it in installments on my blog.</p>
+  <ol>
+    <li><a href="/blog/2022/08/19/snapshot/">The periodic tables of algebraic geometry: introduction</a></li>
+    <li><a href="/blog/2022/08/20/snapshot-2/">The periodic tables of algebraic geometry: curves and surfaces</a></li>
+    <li><a href="/blog/2022/08/21/snapshot-3/">The periodic tables of algebraic geometry: 3-folds and beyond</a></li>
+  </ol>
+  <div>Mind you, this is still the preprint version technically speaking.</div>
+</div>
+
+<h3 id="section-curves">Curves: Riemann</h3>
+<p>The first classification we look at will be of the simplest objects we can try to classify: curves, or one-dimensional varieties.</p>
+<p>We have already seen an important recipe and some examples to describe curves: take a homogeneous polynomial <span class="math inline">\(f\in\mathbb{C}[x,y,z]\)</span> of degree <span class="math inline">\(d\)</span> and consider its zero locus <span class="math inline">\(\mathbb{V}(f)\subset\mathbb{P}^2(\mathbb{C})\)</span>. The pictures in <a href="/blog/2022/08/19/snapshot/#figure:cubics" data-reference-type="autoref" data-reference="figure:cubics">Figures 3a and 3b</a> really live in <span class="math inline">\(\mathbb{C}^2\)</span>, but e.g., for <a href="/blog/2022/08/19/snapshot/#subfigure:elliptic" data-reference-type="autoref" data-reference="subfigure:elliptic">Figure 3a</a> we can remedy this affine vs. projective discrepancy, replacing <span class="math inline">\(-y^2+x^3-2x\)</span> by <span class="math inline">\(-y^2z+x^3-2xz^2\)</span>.</p>
+<p>Can we describe all curves using a single homogeneous polynomial in 3 variables? In other words, is every curve a <em>plane curve</em>, living in <span class="math inline">\(\mathbb{P}^2(\mathbb{C})\)</span>? No. But one can show that every curve is a <em>space curve</em>: it can be described by several polynomials in 4 variables, so that it is a curve living in <span class="math inline">\(\mathbb{P}^3(\mathbb{C})\)</span>.</p>
+<p>But does this help in the classification of curves? Recall that we don’t want to classify polynomials, because those are only the tools to describe the curves. So we need to talk about things which are <em>intrinsic</em> to the geometry of a curve, independent of the realisation.</p>
+<div style="margin: 20px auto; width: 90%; text-align: center;" id="figure-riemann-surfaces">
+<figure style="float: left; width: 33%; text-align: center;">
+<img src="/assets/genus-0.png" id="subfigure-genus-0">
+<figcaption aria-hidden="true">Figure 4a: A curve of genus 0<br></figcaption>
+</figure>
+<figure style="float: left; width: 33%; text-align: center;">
+<img src="/assets/genus-1.png" id="subfigure-genus-1">
+<figcaption aria-hidden="true">Figure 4b: A curve of genus 1<br></figcaption>
+</figure>
+<figure style="float: left; width: 33%; text-align: center;">
+<img src="/assets/genus-3.png" id="subfigure-genus-3">
+<figcaption aria-hidden="true">Figure 4c: A curve of genus 3<br></figcaption>
+</figure>
+</div>
+<br style="clear: both">
+<h4 id="a-discrete-invariant">A discrete invariant</h4>
+<p>For this we can look at an algebraic curve as a so-called Riemann surface: because we work over the complex numbers, a topologist’s picture of a curve is really 2-dimensional. This is also how they were originally studied by Riemann in the 1850s. We end up with drawings as in <a href="#figure-riemann-surfaces" data-reference-type="autoref" data-reference="figure-riemann-surfaces">Figures 4a, 4b and 4c</a>. They correspond to plane curves of degree 2, 3 and 4 respectively. The obvious difference between these pictures is “the number of holes”. Mathematicians refer to this number as the <em>genus</em>.</p>
+<p>It is similar to what a biologist would use to distinguish a giraffe from a fish: the former has 4 legs, the latter has none. Therefore they must be different in a meaningful sense, and the biologist will say they belong to different species (even though they are both animals).</p>
+<p>So for now the “periodic table” of the classification of curves looks pretty bland: it is just the sequence of integers <span class="math inline">\(0,1,2,\ldots\)</span> But biologists don’t stop classifying animals after having counted their legs, and neither will we after counting holes.</p>
+<p>On a Riemann surface mathematicians study certain additional structure which allows us to speak about the <em>curvature</em>. This curvature is either <span class="math inline">\(+1\)</span>, <span class="math inline">\(0\)</span> or <span class="math inline">\(-1\)</span>. The case of a sphere (as in <a href="#subfigure-genus-0" data-reference-type="autoref" data-reference="subfigure-genus-0">Figure 4a</a>) has positive curvature, the case of a torus (as in <a href="#subfigure-genus-1" data-reference-type="autoref" data-reference="subfigure-genus-1">Figure 4b</a>) has zero curvature (we say it is <em>flat</em>), and all other cases (e.g., <a href="#subfigure-genus-3" data-reference-type="autoref" data-reference="subfigure-genus-3">Figure 4c</a>) have negative curvature. Thus, there is an additional <em>trichotomy</em> into <span class="math inline">\(g=0\)</span>, <span class="math inline">\(g=1\)</span> and <span class="math inline">\(g\geq 2\)</span>.</p>
+<h4 id="continuous-parametrisations">Continuous parametrisations</h4>
+<p>But this is still not the end of the classification of algebraic curves. We have described a Riemann surface of genus 1 using a homogeneous polynomial of degree 3. What happens if we start varying the coefficients of this polynomial? For example, what if instead of the homogeneous version <span class="math inline">\(y^2z=x^3-2xz^2\)</span> of the equation in <a href="/blog/2022/08/19/snapshot/#subfigure:elliptic" data-reference-type="autoref" data-reference="subfigure:elliptic">Figure 3a</a>, we consider <span class="math inline">\(y^2z=x^3-3xz^2\)</span>? We can show that they define “the same” curve: they are <em>isomorphic</em>.</p>
+<p>But what if we consider <span class="math inline">\(y^2z=x^3-3xz^2+2z^3\)</span> instead? Then we can actually show that the curves are different, even though the genus is 1 in both cases. For this we’d have to use something called the <span class="math inline">\(j\)</span>-invariant: a number attached to every genus 1 curve. In the former case it is equal to 1728, in the latter it is 864 (quick word of warning: the <span class="math inline">\(j\)</span>-invariant is not a count of anything, in general it can be any complex number). Thus to a trained algebraic geometer these are in fact different curves. Hence we can use parameters in our equations and get truly distinct answers. In our example changed the coefficient of <span class="math inline">\(z^3\)</span> from <span class="math inline">\(0\)</span> to <span class="math inline">\(2\)</span>, and we could in fact have considered all intermediate values (including complex numbers) to get all kinds of non-isomorphic curves of genus 1. They are usually referred to as <em>elliptic curves</em>, and they are an important tool in modern cryptography.</p>
+<p>This continuous behavior is not something that happens in the periodic table of elements: you can’t move from hydrogen to helium by adding tiny fractions of neutrons, electrons and protons. The closest analogy in science is the Hertzsprung–Russell diagram, where you can vary the luminosity and temperature of a star continuously.</p>
+<p>What about other degrees? Here the trichotomy into <span class="math inline">\(g=0\)</span>, <span class="math inline">\(g=1\)</span> and <span class="math inline">\(g\geq 2\)</span> comes back into play. We can show that for <span class="math inline">\(g=0\)</span> there are no parameters possible (so there is a single curve of genus 0), whilst for <span class="math inline">\(g\geq 2\)</span> there are in fact <span class="math inline">\(3g-3\)</span> parameters (so there are <em>many</em> curves of genus <span class="math inline">\(g\)</span>, and describing them all in a suitable sense is an interesting problem). This result for <span class="math inline">\(g\geq 2\)</span> is what Riemann obtained back in 1853, effectively introducing the notion of a “moduli space” to mathematics: a parameter space to describe all curves of a given genus.</p>
+<p>More precisely, a <em>moduli space</em> is a new geometric object, that acts as a record-keeping device to describe a classification that involves continuous parameters. Every point in the moduli space corresponds to a certain element in the classification, and if we move a tiny bit in the moduli space we modify the element accordingly by a small amount to get a new element in the classification. If we move around in a different direction, we get another element in the classification.</p>
+<p>This turns a classification of shapes into a new shape, and thus we can use all the tools from algebraic geometry to study it. Many questions about a classification can be phrased in terms of geometric properties of the moduli space, and mathematicians study moduli spaces of all kinds.</p>
+<h3 id="section-surfaces">Smooth projective surfaces: Enriques</h3>
+<p>Going up one dimension we end up with surfaces. They have been at the forefront of algebraic geometry since the 19th century. The easiest algebraic surfaces we can produce are by taking a homogeneous polynomial in 4 variables, and consider <span class="math inline">\(\mathbb{V}(f)\)</span> in <span class="math inline">\(\mathbb{P}^3(\mathbb{C})\)</span>. Because we are working over the complex numbers this would require a 4-dimensional drawing, which goes beyond what we can do here. But in <a href="#figure-cubics" data-reference-type="autoref" data-reference="figure-cubics">Figures 5a and 5b</a> we do what algebraic geometers often do: make a picture of an affine piece over the real numbers.</p>
+<p>The classification of smooth projective surfaces is due to Enriques, as his life’s work, posthumously published in 1949. We will necessarily have to gloss over many details, but we will highlight some of its most interesting features. Without further mention we will classify <em>minimal</em> surfaces: every surface can be reduced to such a surface in a controlled way, and we know how to go back. Thus it suffices to classify these.</p>
+<div style="margin: 20px auto; width: 90%; text-align: center;" id="figure-cubics">
+<figure style="float: left; width: 45%; text-align: center;">
+<img src="/assets/clebsch-snapshot.png" id="subfigure-clebsch-cubic" style="width:95.0%" alt="The Clebsch cubic surface">
+<figcaption aria-hidden="true">Figure 5a: The Clebsch cubic surface</figcaption>
+</figure>
+<figure style="float: right; width: 45%; text-align: center;">
+<img src="/assets/quartic.png" id="subfigure-quartic-K3" style="width:95.0%" alt="A quartic K3 surface">
+<figcaption aria-hidden="true">Figure 5b: A quartic K3 surface</figcaption>
+</figure>
+</div>
+<h4 id="trichotomy">Trichotomy</h4>
+<p>Just like for Riemann surfaces we have a notion of curvature, introducing an important trichotomy between positive, flat and negative. With curves we had that <em>positively curved</em> case was the easiest, there being a unique such curve. For surfaces this is still the easiest case, but the uniqueness no longer holds: there are now 10 families of so-called <em>del Pezzo surfaces</em>, named after the mathematician who classified them in 1887. Some of these are unique in their family, for others there are continuous parameters.</p>
+<p>If we consider a single homogeneous polynomial in 4 variables, the cases of degree <span class="math inline">\(d=1,2\)</span> and <span class="math inline">\(3\)</span> give rise to del Pezzo surfaces. In <a href="#subfigure-clebsch-cubic" data-reference-type="autoref" data-reference="subfigure-clebsch-cubic">Figure 5a</a> we have given an impression of an important cubic surface, where <span class="math inline">\(d=3\)</span>. The geometry of these del Pezzo surfaces is already rich enough to fill entire books— even though their classification is relatively straightforward— and their higher-dimensional analogues will be important for what follows.</p>
+<p>What about the flat case, the 2-dimensional analogue of elliptic curves? There are now <em>two</em> distinct families. The closest analogue of elliptic curves are <em>abelian surfaces</em>. But there are also <em>K3 surfaces</em>, named so by Weil in 1958 after the recently climbed K2 mountain in the Himalayas, and the three mathematicians Kummer, Kähler, and Kodaira, who had been building the tools to study algebraic geometry and these surfaces in particular.</p>
+<p>If we again consider a single homogeneous polynomial in 4 variables, the case <span class="math inline">\(d=4\)</span> gives rise to a K3 surface, thus in <a href="#subfigure-quartic-K3" data-reference-type="autoref" data-reference="subfigure-quartic-K3">Figure 5b</a> we see an impression of an example. As with del Pezzo surfaces, their geometry is rich enough to fill entire volumes, and their higher-dimensional analogues will again be important for what follows.</p>
+<h4 id="the-geography-of-surfaces-surfaces-of-general-type">The geography of surfaces: surfaces of general type</h4>
+<p>We now come to the analogue of curves of genus <span class="math inline">\(g\geq 2\)</span>. There are such curves for every value of <span class="math inline">\(g\)</span>, in fact there is an entire moduli space of dimension <span class="math inline">\(3g-3\)</span> of them describing their classification.</p>
+<p>Unlike for curves, a single integer is no longer enough to describe the crude classification of surfaces. Two important integers we can assign to a surface are the <em>Chern numbers</em> <span class="math inline">\(\mathrm{c}_1^2\)</span> and <span class="math inline">\(\mathrm{c}_2\)</span>. For the genus we only had the inequality <span class="math inline">\(g\geq 0\)</span> because we were counting something. For surfaces the situation is more complicated, and the possible values depend on the curvature. In the flat case <span class="math inline">\(\mathrm{c}_1^2=0\)</span>, whilst in the negatively curved case <span class="math inline">\(\mathrm{c}_1^2&gt;0\)</span>. But what other conditions do we have?</p>
+<p>We also have <span class="math inline">\(\mathrm{c}_2&gt;0\)</span>, but more interesting we have that <span class="math inline">\(\mathrm{c}_1^2+\mathrm{c}_2\equiv0\bmod 12\)</span>. Besides this, there are two inequalities that need to be satisfied, the easier inequality to describe saying that <span class="math inline">\(\mathrm{c}_1^2\leq3\mathrm{c}_2\)</span>. In <a href="#figure-geography" data-reference-type="autoref" data-reference="figure-geography">[figure:geography]</a> we have drawn the “legal” values for sufficiently small Chern numbers. These conditions are similar to a law in biology saying that the number of legs on an animal is always even, but starfish are obvious counterexamples, so this particular universal biological law does not exist.</p>
+<p>Now we have discussed <em>necessary</em> conditions on the Chern numbers. Are these also <em>sufficient</em> conditions, i.e., can we always find a surface with these allowed numbers? This leads to the problem of understanding the <em>geography of surfaces</em>, in particular those with negative curvature, which are called <em>of general type</em>,</p>
+<figure>
+<embed src="/assets/table.png" id="figure-geography" style="width:90.0%" title="The geography of algebraic surfaces">
+<figcaption aria-hidden="true">Figure 6: The geography of algebraic surfaces</figcaption>
+</figure>
+<p>We can already fill in two positions in our “atlas”: abelian and K3 surfaces have <span class="math inline">\(\mathrm{c}_2=0\)</span> resp. <span class="math inline">\(24\)</span>. Next, if we take a homogeneous polynomial of degree 5, we get a quintic surface, for which <span class="math inline">\(\mathrm{c}_1^2=5\)</span> and <span class="math inline">\(\mathrm{c}_2=55\)</span>. There are still <em>many</em> other legal values in <a href="#figure-geography" data-reference-type="autoref" data-reference="figure-geography">Figure 6</a>, and it is an interesting challenge to find a construction for a surface with given coordinates. We don’t know yet whether every pair of coordinates corresponds to a surface for instance, but luckily algebraic geometers know of <em>many</em> interesting and beautiful examples.</p>
+<p>The important takeaway is that the classification of surfaces of general type is still an open problem, and it has been giving mathematicians enough material to work on for over a century.</p>
+
+<script>
+  (() => {
+    const legacyTargets = {
+      '#section:curves': 'section-curves',
+      '#figure:riemann-surfaces': 'figure-riemann-surfaces',
+      '#subfigure:genus-0': 'subfigure-genus-0',
+      '#subfigure:genus-1': 'subfigure-genus-1',
+      '#subfigure:genus-3': 'subfigure-genus-3',
+      '#section:surfaces': 'section-surfaces',
+      '#figure:cubics': 'figure-cubics',
+      '#figure:surfaces': 'figure-cubics',
+      '#subfigure:clebsch-cubic': 'subfigure-clebsch-cubic',
+      '#subfigure:quartic-K3': 'subfigure-quartic-K3',
+      '#figure:geography': 'figure-geography',
+    };
+
+    const scrollToLegacyTarget = () => {
+      const targetId = legacyTargets[window.location.hash];
+      if (!targetId) {
+        return;
+      }
+
+      const target = document.getElementById(targetId);
+      if (target) {
+        target.scrollIntoView();
+      }
+    };
+
+    window.addEventListener('hashchange', scrollToLegacyTarget);
+    scrollToLegacyTarget();
+  })();
+</script>
+
+  </div>
+
+  <ul class="pagination">
+    
+      <li class="previous"><a href="/blog/2022/08/19/snapshot/">previous post</a></li>
+    
+
+    
+      <li class="next"><a href="/blog/2022/08/21/snapshot-3/">next post</a></li>
+    
+  </ul>
+</article>
+
+      </div>
+    </div>
+
+    <footer>
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        contact me:
+        <br>
+        <a href="mailto:p.belmans@uu.nl" style="margin-left: 1em">p.belmans@uu.nl</a>
+        <br><br>
+        address:
+        <address style="margin-left: 1em">
+          Mathematical Institute<br>
+          Utrecht University<br>
+          Budapestlaan 6<br>
+          3584 CD Utrecht<br>
+          The Netherlands
+        </address>
+        <br>
+        office:
+        <address style="margin-left: 1em; font-style: normal">room 702</address>
+      </div>
+
+      <div class="footer-col footer-col-1">
+        I maintain the websites
+        <ul class="social-media-list" style="font-size: 90%">
+          <li><a href="https://stacks.math.columbia.edu"><span class="icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(0,16)">
+<g transform="scale(0.5,-0.5)">
+
+<polygon points="2,2 24,2 24,7 21,7 21,5 5,5 5,21 7,21 7,24 2,24" />
+<polygon points="8,8 29,8 29,13 26,13 26,11 11,11 11,26 13,26 13,29 8,29" />
+<polygon points="14,14 31,14 31,31 14,31" />
+<polygon points="17,17 28,17 28,28 17,28" style="fill: white;" />
+
+</g>
+</g>
+</svg>
+</span><span class="username"><code class="url">stacks.math.columbia.edu</code></span></a>
+</li>
+          <li><a href="https://ncag.info"><span class="icon"><img width="16" height="16" src="/assets/favicon-ncag.png"></span> <span class="username"><code class="url">ncag.info</code></span></a>
+</li>
+          <li><a href="https://kerodon.net"><span class="icon"><img width="16" height="16" src="/assets/favicon-kerodon.png"></span> <span class="username"><code class="url">kerodon.net</code></span></a>
+</li>
+          <li><a href="https://fanography.info"><span class="icon"><img width="16" height="16" src="/assets/favicon-fanography.png"></span> <span class="username"><code class="url">fanography.info</code></span></a>
+
+</li>
+          <li><a href="http://www.hyperkaehler.info"><span class="icon"><img width="16" height="16" src="/assets/favicon-hyperkaehler.png"></span> <span class="username"><code class="url">hyperkaehler.info</code></span></a>
+
+</li>
+          <li><a href="http://grassmannian.info"><span class="icon"><img width="16" height="16" src="/assets/favicon-grassmannian.png"></span> <span class="username"><code class="url">grassmannian.info</code></span></a>
+
+</li>
+          <li><a href="https://mgnbar.info"><span class="icon"><img width="16" height="16" src="/assets/favicon-mgnbar.png"></span> <span class="username"><code class="url">mgnbar.info</code></span></a>
+</li>
+          <li><a href="https://superficie.info"><span class="icon"><img width="16" height="16" src="/assets/favicon-superficie.png"></span> <span class="username"><code class="url">superficie.info</code></span></a>
+
+
+</li>
+        </ul>
+        I maintain the tools
+        <ul class="social-media-list" style="font-size: 90%">
+          <li><a href="https://cutter.ncag.info"><span class="icon"><img width="16" height="16" src="/assets/favicon-hodge.png"></span> <span class="username">Hodge diamond cutter</span></a>
+
+</li>
+          <li><a href="https://quiver.tools"><span class="icon"><img width="16" height="16" src="/assets/favicon-quivertools.png"></span> <span class="username">QuiverTools</span></a>
+
+</li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-1">
+        you can also find me on
+        <ul class="social-media-list">
+          <li><a href="https://github.com/pbelmans"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#000000" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">GitHub</span></a>
+</li>
+          <li><a href="http://mathoverflow.net/users/6263/pbelmans"><img width="16" height="16" src="/assets/favicon-mathoverflow.png"> <span class="username">MathOverflow</span></a>
+</li>
+          <li><a href="https://orcid.org/0000-0002-0140-2824"><span class="icon icon-orcid"><svg width="72px" height="72px" viewBox="0 0 72 72" version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+    <title>Orcid logo</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hero" transform="translate(-924.000000, -72.000000)" fill-rule="nonzero">
+            <g id="Group-4">
+                <g id="vector_iD_icon" transform="translate(924.000000, 72.000000)">
+                    <path d="M72,36 C72,55.884375 55.884375,72 36,72 C16.115625,72 0,55.884375 0,36 C0,16.115625 16.115625,0 36,0 C55.884375,0 72,16.115625 72,36 Z" id="Path" fill="#A6CE39"></path>
+                    <g id="Group" transform="translate(18.868966, 12.910345)" fill="#FFFFFF">
+                        <polygon id="Path" points="5.03734929 39.1250878 0.695429861 39.1250878 0.695429861 9.14431787 5.03734929 9.14431787 5.03734929 22.6930505 5.03734929 39.1250878"></polygon>
+                        <path d="M11.409257,9.14431787 L23.1380784,9.14431787 C34.303014,9.14431787 39.2088191,17.0664074 39.2088191,24.1486995 C39.2088191,31.846843 33.1470485,39.1530811 23.1944669,39.1530811 L11.409257,39.1530811 L11.409257,9.14431787 Z M15.7511765,35.2620194 L22.6587756,35.2620194 C32.49858,35.2620194 34.7541226,27.8438084 34.7541226,24.1486995 C34.7541226,18.1301509 30.8915059,13.0353795 22.4332213,13.0353795 L15.7511765,13.0353795 L15.7511765,35.2620194 Z" id="Shape"></path>
+                        <path d="M5.71401206,2.90182329 C5.71401206,4.441452 4.44526937,5.72914146 2.86638958,5.72914146 C1.28750978,5.72914146 0.0187670918,4.441452 0.0187670918,2.90182329 C0.0187670918,1.33420133 1.28750978,0.0745051096 2.86638958,0.0745051096 C4.44526937,0.0745051096 5.71401206,1.36219458 5.71401206,2.90182329 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+</span> <span class="username">ORCID</span></a>
+</li>
+          <li><a href="https://scholar.google.com/citations?user%3ddX7G0o4AAAAJ"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="96px" height="96px"><path fill="#1e88e5" d="M24,4C12.954,4,4,12.954,4,24s8.954,20,20,20s20-8.954,20-20S35.046,4,24,4z"/><path fill="#1565c0" d="M35,16.592v-3.878L37,11H27l0.917,1.833c-1.236,0-2.265,0-2.265,0S19.095,13,19.095,18.748	c0,5.752,5.732,5.088,5.732,5.088s0,0.865,0,1.453c0,0.594,0.77,0.391,0.864,1.583c-0.388,0-7.964-0.208-7.964,4.998	s6.679,4.959,6.679,4.959s7.722,0.365,7.722-6.104c0-3.871-4.405-5.121-4.405-6.686c0-1.563,3.319-2.012,3.319-5.684	c0-0.823-0.028-1.524-0.149-2.12L34,13.571v3.02c-0.581,0.207-1,0.756-1,1.408v4.5c0,0.829,0.672,1.5,1.5,1.5s1.5-0.671,1.5-1.5V18	C36,17.348,35.581,16.799,35,16.592z M30.047,31.169c0.131,2.024-1.929,3.811-4.603,3.998c-2.671,0.188-4.946-1.295-5.077-3.316	c-0.133-2.016,1.927-3.805,4.6-3.996C27.641,27.667,29.914,29.152,30.047,31.169z M26.109,22.453	c-1.592,0.451-3.375-1.062-3.982-3.367c-0.604-2.312,0.195-4.543,1.786-4.992c1.593-0.453,3.374,1.059,3.981,3.367	C28.499,19.77,27.702,22.004,26.109,22.453z"/><path fill="#e8eaf6" d="M34,16.592V12c0-0.051-0.015-0.097-0.029-0.143L35,11H21l-9,8h5.383	c0.174,5.466,5.715,4.836,5.715,4.836s0,0.865,0,1.453c0,0.594,0.771,0.391,0.865,1.583c-0.388,0-7.964-0.208-7.964,4.998	s6.679,4.959,6.679,4.959s7.721,0.365,7.721-6.104c0-3.871-4.404-5.121-4.404-6.686c0-1.563,3.318-2.012,3.318-5.684	c0-0.971-0.047-1.763-0.232-2.422L33,12.667v3.925c-0.581,0.207-1,0.756-1,1.408v4.5c0,0.829,0.672,1.5,1.5,1.5s1.5-0.671,1.5-1.5	V18C35,17.348,34.581,16.799,34,16.592z M28.319,31.169c0.131,2.024-1.928,3.811-4.602,3.998c-2.671,0.188-4.946-1.295-5.077-3.316	c-0.133-2.016,1.927-3.805,4.599-3.996C25.914,27.667,28.187,29.152,28.319,31.169z M24.38,22.453	c-1.591,0.451-3.373-1.062-3.981-3.367c-0.604-2.312,0.194-4.543,1.785-4.992c1.593-0.453,3.374,1.059,3.982,3.367	C26.77,19.77,25.973,22.004,24.38,22.453z"/></svg></span> Google Scholar</a>
+</li>
+          <li><a href="https://www.genealogy.ams.org/id.php?id=219852"><span class="icon icon-"><img width="16" height="16" src="/assets/mgp.png"></span> <span class="username">Math Genealogy</span></a>
+
+</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>

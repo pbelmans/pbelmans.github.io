@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Computer Science on Pieter Belmans</title>
+    <link>https://pbelmans.ncag.info/categories/computer-science/</link>
+    <description>Recent content in Computer Science on Pieter Belmans</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 21 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://pbelmans.ncag.info/categories/computer-science/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gerby supports TikZ now</title>
+      <link>https://pbelmans.ncag.info/blog/2019/12/21/gerby-supports-tikz/</link>
+      <pubDate>Sat, 21 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2019/12/21/gerby-supports-tikz/</guid>
+      <description>&lt;p&gt;One aspect in which &lt;a href=&#34;https://gerby-project.github.io/&#34;&gt;Gerby&lt;/a&gt; (the software which underlies the Stacks project) was lacking was its support for TikZ and commutative diagrams. Luckily both &lt;a href=&#34;https://stacks.math.columbia.edu&#34;&gt;The Stacks project&lt;/a&gt; and &lt;a href=&#34;https://kerodon.net&#34;&gt;Kerodon&lt;/a&gt; are written by people who use &lt;var&gt;xypic&lt;/var&gt; for their commutative diagrams, which allows the use of &lt;a href=&#34;https://sonoisa.github.io/xyjax/xyjax.html&#34;&gt;XyJax&lt;/a&gt;, but this is not a perfect implementation of &lt;var&gt;xypic&lt;/var&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The system on which (part of) Gerby is built is &lt;a href=&#34;http://plastex.github.io/plastex/&#34;&gt;plasTeX&lt;/a&gt;, which contained support for TikZ for a while now, by running &lt;var&gt;pdflatex&lt;/var&gt; on every TikZ environment and then converting the resulting pdf to svg. I have now copied over this implementation (thank you &lt;a href=&#34;https://www.math.u-psud.fr/~pmassot/en/&#34;&gt;Patrick Massot&lt;/a&gt; for implementing it for the HTML5 renderer!) and added a &lt;a href=&#34;https://github.com/gerby-project/hello-world/blob/master/document-tikz.tex&#34;&gt;minimal working example containing TikZ&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A minimal working example to use Gerby</title>
+      <link>https://pbelmans.ncag.info/blog/2019/07/16/minimal-working-gerby/</link>
+      <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2019/07/16/minimal-working-gerby/</guid>
+      <description>&lt;p&gt;If you are interested in setting up a website similar to &lt;a href=&#34;https://stacks.math.columbia.edu&#34;&gt;The Stacks project&lt;/a&gt; or &lt;a href=&#34;https://kerodon.net&#34;&gt;Kerodon&lt;/a&gt;, you can do this using the same framework that powers these websites: &lt;a href=&#34;https://gerby-project.github.io&#34;&gt;Gerby&lt;/a&gt;. Unfortunately, until now the instructions to use this were pretty annoyingly only available for the Stacks project, so setting things up correctly was painful and very specific.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;We have now created &lt;a href=&#34;https://github.com/gerby-project/hello-world&#34;&gt;&lt;strong&gt;a minimal working example&lt;/strong&gt;&lt;/a&gt; which lists the relevant steps to set up Gerby for a minimal Hello world project. Doing this you&#39;ll get an instance of the Gerby with the Stacks project layout, containing just a few tags. This repository is basically a Travis script which performs all the steps required for the installation of plasTeX and Gerby, and then goes through what should be the usual update process for an actual instance.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A website for Gerby</title>
+      <link>https://pbelmans.ncag.info/blog/2018/05/20/gerby/</link>
+      <pubDate>Sun, 20 May 2018 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2018/05/20/gerby/</guid>
+      <description>&lt;p&gt;By now it&#39;s no secret that we are working on a new version of the Stacks project website (see &lt;a href=&#34;https://pbelmans.ncag.info/blog/2017/08/27/introduction-gerby-plastex/&#34;&gt;1&lt;/a&gt; and &lt;a href=&#34;https://pbelmans.ncag.info/blog/2018/01/05/introducing-gerby-tools/&#34;&gt;2&lt;/a&gt;). We have been working on a system called &lt;em&gt;Gerby&lt;/em&gt; for almost a year now, as a replacement for the Stacks project website. In fact, it will go live &lt;em&gt;tomorrow&lt;/em&gt;.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;In case you are interested in knowing more about the new system, you want to run your local copy of the Stacks project website, or you are interested in testing the system for your own project, I have put up &lt;a href=&#34;https://gerby-project.github.io/&#34;&gt;a page describing the system&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Introducing Gerby: the tools and website</title>
+      <link>https://pbelmans.ncag.info/blog/2018/01/05/introducing-gerby-tools/</link>
+      <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2018/01/05/introducing-gerby-tools/</guid>
+      <description>&lt;p&gt;A little while ago I explained &lt;a href=&#34;https://pbelmans.ncag.info/blog/2017/08/27/introduction-gerby-plastex/&#34;&gt;how to take the Stacks project and convert it to a bunch of small HTML files&lt;/a&gt;, which is the first step in setting up the new website for the Stacks project. In this post I&#39;ll explain the next two steps: creating the database behind the website, and setting up the website. For now, this part is not as streamlined as we&#39;d want it to be, but in any case, it&#39;s not too hard.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Introducing Gerby: plasTeX</title>
+      <link>https://pbelmans.ncag.info/blog/2017/08/27/introduction-gerby-plastex/</link>
+      <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2017/08/27/introduction-gerby-plastex/</guid>
+      <description>&lt;p&gt;So, we are currently working on a new version of the Stacks project website. If you have any suggestions for the new website, please get in touch: you can email me, or &lt;a href=&#34;https://github.com/pbelmans/gerby-website&#34;&gt;use the issue tracker for the website on GitHub&lt;/a&gt;. The project is called &lt;strong&gt;Gerby&lt;/strong&gt;, as a silly reference to the Stacks project. It consists of several parts, and this blog post explains you how to use one of them: the &lt;a href=&#34;https://github.com/pbelmans/plastex/tree/gerby&#34;&gt;Gerby renderer in plasTeX&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Alternative visualisation of the structure of the Stacks project</title>
+      <link>https://pbelmans.ncag.info/blog/2016/05/26/alternative-visualisation-of-the-structure-of-the-stacks-project/</link>
+      <pubDate>Thu, 26 May 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/05/26/alternative-visualisation-of-the-structure-of-the-stacks-project/</guid>
+      <description>&lt;p&gt;It turns out that someone independently made &lt;a href=&#34;http://tietom.me/2016/04/30/stacksvis/&#34;&gt;visualisations of the structure of the Stacks project&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;He or she also performed some statistical analysis, but I&#39;m not sure the metrics of how important a result is are chosen appropriately. For instance &lt;a href=&#34;http://stacks.math.columbia.edu/tag/07FJ&#34;&gt;tag 07FJ&lt;/a&gt; appears in the top 10 list, just because it refers to so many other tags in its proof. That does not necessarily mean it is important because it heavily depends on how a statement and its proof are written: if a statement is a long list of substatements, or its proof does not contain any interesting sublemmas (at first sight) then by this metric it will become important just because it refers to many other tags. The metric confounds importance and difficulty I think. Although in this case it actually &lt;em&gt;is&lt;/em&gt; an important result because it forms the main technical part of the proof of &lt;a href=&#34;http://stacks.math.columbia.edu/tag/07GC&#34;&gt;Popescu&#39;s theorem&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AlphaGo versus computer playback of music</title>
+      <link>https://pbelmans.ncag.info/blog/2016/04/06/alphago-versus-computer-playback-of-music/</link>
+      <pubDate>Wed, 06 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/04/06/alphago-versus-computer-playback-of-music/</guid>
+      <description>&lt;p&gt;We all know that recently a computer beat one of the best human Go players. &lt;a href=&#34;https://medium.com/basic-income/deep-learning-is-going-to-teach-us-all-the-lesson-of-our-lives-jobs-are-for-machines-7c6442e37a49#.bmhblk8xt&#34;&gt;Deep Learning Is Going to Teach Us All the Lesson of Our Lives: Jobs Are for Machines&lt;/a&gt; is an interesting read about how this might change our economy. This post is not about the economy and mathematics, we have &lt;a href=&#34;http://mathbabe.org/&#34;&gt;mathbabe&lt;/a&gt; who does a way better job than I ever could for this.&lt;/p&gt;&#xA;&lt;p&gt;No, I would like to raise a question that came up during the reading of that article is:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Software for computations in algebraic geometry</title>
+      <link>https://pbelmans.ncag.info/blog/2014/11/06/software-for-computations-in-algebraic-geometry/</link>
+      <pubDate>Thu, 06 Nov 2014 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2014/11/06/software-for-computations-in-algebraic-geometry/</guid>
+      <description>&lt;p&gt;Because somehow I ended up with a degree in computer science people sometimes ask me how to do certain computations in algebra or algebraic geometry on a computer (not that I ever learnt such a thing in my computer science degree to be honest). In this blog post I try to give a summary of the tools (together with direct links to documentation, libraries, extra packages, ... so I never have to look for them again myself and don&#39;t forget to consider one when someone asks a question) that I am aware of for these computations, and which one is the most suited for which type of problems.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A Pygments lexer for GAP</title>
+      <link>https://pbelmans.ncag.info/blog/2012/04/20/a-pygments-lexer-for-gap/</link>
+      <pubDate>Fri, 20 Apr 2012 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2012/04/20/a-pygments-lexer-for-gap/</guid>
+      <description>&lt;p&gt;In case you haven&#39;t heard of one of the most awesome LaTeX packages ever, let me introduce to you: &lt;a href=&#34;http://ctan.org/pkg/minted&#34;&gt;minted&lt;/a&gt;. It&#39;s a package to create listings (code snippets, preferably with highlighting, line numbering etc.), but it goes much further than the more well-known package &lt;a href=&#34;http://ctan.org/pkg/listings&#34;&gt;listings&lt;/a&gt;. A small example:&lt;br&gt;&#xA;&lt;img src=&#34;https://pbelmans.ncag.info/assets/7sGrC.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;&#xA;Its awesomeness comes at a cost though, it relies heavily on an external Python program called &lt;a href=&#34;http://pygments.org&#34;&gt;Pygments&lt;/a&gt;. This is a generic tool for highlighting, regardless of output format. It can produce &lt;a href=&#34;http://pygments.org/docs/formatters/&#34;&gt;TeX, HTML, images, ...&lt;/a&gt;. And it comes equipped with a load of &lt;a href=&#34;http://pygments.org/languages/&#34;&gt;supported languages&lt;/a&gt;. And if you&#39;ve read the title you might guess what this post is about: a language that wasn&#39;t supported yet.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Struggling with Oz</title>
+      <link>https://pbelmans.ncag.info/blog/2011/09/17/struggling-with-oz/</link>
+      <pubDate>Sat, 17 Sep 2011 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2011/09/17/struggling-with-oz/</guid>
+      <description>&lt;p&gt;For those who have been waiting eagerly for more news on my computational composition project: I have rushed it a little. I should&#39;ve spent more time familiarizing myself with the Oz programming language, some of the concepts are fundamentally different from the paradigms I&#39;ve learnt so far. And then my summer job as a postman was a bit more time-consuming than it was in previous years.&lt;/p&gt;&#xA;&lt;p&gt;But now I&#39;ll try to make up for my hybris, learn Oz (and Strasheela) thoroughly and continue the project. I am considering a post (or several) discussing the peculiarities from the perspective of a generic computer science student who doesn&#39;t know anything about exotic paradigms but is rather fluent in C++. This &#34;learning by blogging&#34; approach is quite popular on math blogs, so maybe I should check it out :).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Development of the Fuxian counterpoint project is now available at GitHub</title>
+      <link>https://pbelmans.ncag.info/blog/2011/08/18/development-of-the-fuxian-counterpoint-project-is-now-available-at-github/</link>
+      <pubDate>Thu, 18 Aug 2011 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2011/08/18/development-of-the-fuxian-counterpoint-project-is-now-available-at-github/</guid>
+      <description>&lt;p&gt;In case you wish to follow my progress with Strasheela and implementing Fuxian counterpoint in it, there is one place to go: &lt;a href=&#34;https://github.com/pbelmans/FuxianCounterpoint&#34;&gt;github.com/pbelmans/FuxianCounterpoint&lt;/a&gt;. For the moment it is only capable of:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;staying in the correct scale;&lt;/li&gt;&#xA;&lt;li&gt;choosing intervals from a given list (but unlike the example from Strasheela, &lt;em&gt;it is capable of distinguishing between ascending and descending intervals&lt;/em&gt;!);&lt;/li&gt;&#xA;&lt;li&gt;doing this for first-species counterpoint in two voices.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Of course, I am greatly indebted to &lt;code&gt;$STRASHEELA/examples/Counterpoint-Examples/Fuxian-Counterpoint-with-Scale.oz&lt;/code&gt;. And that implementation is far more capable than mine at the moment, but hey, it&#39;s a work in progress :).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Installing Strasheela</title>
+      <link>https://pbelmans.ncag.info/blog/2011/08/16/installing-strasheela/</link>
+      <pubDate>Tue, 16 Aug 2011 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2011/08/16/installing-strasheela/</guid>
+      <description>&lt;p&gt;The &lt;a href=&#34;http://strasheela.sourceforge.net/strasheela/doc/Installation.html&#34;&gt;guide to installing Strasheela&lt;/a&gt; is well-documented, so follow it. A few remarks.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;You&#39;ll need &lt;code&gt;g++&lt;/code&gt; and if you want to use the latest snapshot like I do, you&#39;ll need Subversion.&lt;/li&gt;&#xA;&lt;li&gt;I put the Strasheela source in &lt;code&gt;~/.strasheela&lt;/code&gt; and will use &lt;code&gt;~/Strasheela&lt;/code&gt; for my own files, so set &lt;code&gt;~/Strasheela/output&lt;/code&gt; in &lt;code&gt;~/.ozrc&lt;/code&gt; as a replacement for the &lt;code&gt;/tmp/&lt;/code&gt; output directory.&lt;/li&gt;&#xA;&lt;li&gt;Install &lt;code&gt;audacity&lt;/code&gt;, &lt;code&gt;cplay&lt;/code&gt;, &lt;code&gt;timidity&lt;/code&gt; and &lt;code&gt;lilypond&lt;/code&gt; (yes, all of it) from the repositories.&lt;/li&gt;&#xA;&lt;li&gt;Edit the executables in &lt;code&gt;~/.ozrc&lt;/code&gt;, my suggestion (based on lots of professional experience) would be &lt;code&gt;audacity&lt;/code&gt;, &lt;code&gt;cplay&lt;/code&gt;, &lt;code&gt;timidity&lt;/code&gt; as MIDI player and we&#39;ll use &lt;code&gt;evince&lt;/code&gt; instead of &lt;code&gt;acroread&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;You&#39;ll have to manually install &lt;code&gt;csvmidi&lt;/code&gt; and &lt;code&gt;midicsv&lt;/code&gt;. Just &lt;a href=&#34;http://www.fourmilab.ch/webtools/midicsv/&#34;&gt;download the tar.gz&lt;/a&gt; and perform the known &lt;code&gt;make&lt;/code&gt;, &lt;code&gt;make check&lt;/code&gt;, &lt;code&gt;sudo make install&lt;/code&gt; cycle.&lt;/li&gt;&#xA;&lt;li&gt;The same is true for Fomus, download and install from &lt;a href=&#34;http://fomus.sourceforge.net/&#34;&gt;their website&lt;/a&gt;. When compiling from source you&#39;ll need &lt;code&gt;libboost-all-dev&lt;/code&gt; too (another big one, like Lilypond), from repositories. And lots of memory too. But you&#39;ll only need this when you want to export to MusicXML, so you can forget about it for now.&lt;/li&gt;&#xA;&lt;li&gt;Add &lt;code&gt;$OZHOME/1.4.99/bin&lt;/code&gt; to your &lt;code&gt;$PATH&lt;/code&gt;, i.e., &lt;code&gt;~/.bashrc&lt;/code&gt; should contain a line stating &lt;code&gt;export PATH=$PATH:$OZHOME/bin/:$OZHOME/1.4.99/bin&lt;/code&gt; where 1.4.99 is obviously your version of Oz, in case you&#39;ve followed the installation guide this will be 1.4.99.&lt;/li&gt;&#xA;&lt;li&gt;Execute &lt;code&gt;StrasheelaTutorial&lt;/code&gt; if you think you&#39;re done. If you really want to test your installation (unfortunately not the configuration for some reason), open the tutorial at chapter Output Formats, edit the configuration in File &amp;gt; Settings to match your &lt;code&gt;.ozrc&lt;/code&gt; and run the examples.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;For reference, here is the relevant part of my &lt;code&gt;.ozrc&lt;/code&gt;:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Installing the Mozart Programming System</title>
+      <link>https://pbelmans.ncag.info/blog/2011/08/16/installing-the-mozart-programming-system/</link>
+      <pubDate>Tue, 16 Aug 2011 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2011/08/16/installing-the-mozart-programming-system/</guid>
+      <description>&lt;p&gt;The &lt;a href=&#34;http://mozart-oz.org/&#34;&gt;Mozart Programming System&lt;/a&gt; is the environment in which you can use Oz, the multi-paradigm (yet we&#39;re mostly interested in the constraint-programming part) language on which Strasheela is built. So, let&#39;s install it!&lt;/p&gt;&#xA;&lt;p&gt;I have spent many hours trying to install this. First I wanted to compile from source, but I used the &lt;a href=&#34;https://gforge.info.ucl.ac.be/svn/mozart/trunk/mozart&#34;&gt;outdated Subversion repository&lt;/a&gt;, which is unaware of 64-bit environments. Then I decided to get the 32-bit binary in the tarball &lt;a href=&#34;http://www.mozart-oz.org/download/view.cgi?action=tar&amp;amp;version=1.4.0&#34;&gt;provided at the official website&lt;/a&gt;. When that failed, I went for the virtualization approach: get a 32-bit Ubuntu running (&lt;code&gt;mozart&lt;/code&gt; is in the repositories!) and do everything in my virtual machine. That was an easy success.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Computational composition: the kick start</title>
+      <link>https://pbelmans.ncag.info/blog/2011/08/15/computational-composition-the-kick-start/</link>
+      <pubDate>Mon, 15 Aug 2011 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2011/08/15/computational-composition-the-kick-start/</guid>
+      <description>&lt;p&gt;This will be a series of posts about computational composition. The following section is an overview of my personal views and experiences with this subject and can be safely skipped.&lt;/p&gt;&#xA;&lt;h3&gt;Introduction&lt;/h3&gt;&#xA;&lt;p&gt;The &lt;a href=&#34;https://pbelmans.ncag.info/about&#34;&gt;About me&lt;/a&gt; (and the blog&#39;s tag line) suggests an interest in computational composition and I promised myself to consider this blog as the place to really start my discovery of this subject. That promise was made almost a year ago. Fast forward to today, now is the moment I finally found the time (I had plenty in July though) and energy (I had none in July unfortunately) to begin.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A Turing machine in LaTeX: the follow-up</title>
+      <link>https://pbelmans.ncag.info/blog/2010/12/12/a-turing-machine-in-latex-follow-u/</link>
+      <pubDate>Sun, 12 Dec 2010 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2010/12/12/a-turing-machine-in-latex-follow-u/</guid>
+      <description>&lt;p&gt;Over a month ago I gave a talk about Turing machines in LaTeX at one of our &lt;a href=&#34;http://acmantwerp.acm.org&#34;&gt;ACM Student Chapter&lt;/a&gt;&#39;s TechTalks. When spreading the word about it, some people thought I was going to discuss how to draw Turing machines in LaTeX. At first that idea seemed so silly I wondered why they would think so. But apparently me live TeX&#39;ing finite state automata and Turing machines in class made an impact on people, which made me known as &#34;the guy who does Turing machines in TeX&#34;. Ahh, those days are gone forever, and quite frankly I&#39;m happy they are, there are packages more fun to play with than &lt;a href=&#34;http://www.lsv.ens-cachan.fr/~gastin/gastex/gastex.html&#34;&gt;&lt;code&gt;gastex&lt;/code&gt;&lt;/a&gt; *shivers*.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Literate programming</title>
+      <link>https://pbelmans.ncag.info/blog/2010/10/14/literate-programming/</link>
+      <pubDate>Thu, 14 Oct 2010 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2010/10/14/literate-programming/</guid>
+      <description>&lt;p&gt;Last week I gave a talk on the history of TeX and LaTeX (more on this later) and I talked about WEB, the programming language used by Knuth in creating TeX. It follows a paradigm called &lt;em&gt;literate programming&lt;/em&gt; and in my opinion it never really took a hold. But if you look at the &lt;a href=&#34;http://backbonejs.org/docs/backbone.html&#34;&gt;Backbone documentation&lt;/a&gt; you get a beautiful of where it actually did. If only the myriads of underdocumented C++ libraries there are out there had such nice documentation...&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

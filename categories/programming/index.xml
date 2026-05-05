@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on Pieter Belmans</title>
+    <link>https://pbelmans.ncag.info/categories/programming/</link>
+    <description>Recent content in Programming on Pieter Belmans</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 09 Apr 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://pbelmans.ncag.info/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>On Bondal&#39;s counterexample to the Jordan-Hölder property: non-extendability</title>
+      <link>https://pbelmans.ncag.info/blog/2017/04/09/bondals-example-2/</link>
+      <pubDate>Sun, 09 Apr 2017 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2017/04/09/bondals-example-2/</guid>
+      <description>&lt;p&gt;This post &lt;a href=&#34;https://pbelmans.ncag.info/blog/2017/04/08/bondals-example/&#34;&gt;continues the discussion&lt;/a&gt; of Bondal&#39;s counterexample from &lt;a href=&#34;https://arxiv.org/abs/1304.0903v1&#34;&gt;A simple counterexample to the Jordan-Hölder property for derived categories&lt;/a&gt;. We will reuse the notation.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;Non-extendability&lt;/strong&gt; Now we get to the interesting part. The preprint does not really mention &lt;em&gt;how&lt;/em&gt; one checks that the exceptional object cannot be extended to an exceptional collection. To do this, we will check in the (numerical) Grothendieck group that the left orthogonal of the exceptional object does not contain a numerically exceptional object, hence definitely not an exceptional object. So we consider the semiorthogonal decomposition&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

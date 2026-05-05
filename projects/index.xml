@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Pieter Belmans</title>
+    <link>https://pbelmans.ncag.info/projects/</link>
+    <description>Recent content in Projects on Pieter Belmans</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://pbelmans.ncag.info/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://pbelmans.ncag.info/projects/ademar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/projects/ademar/</guid>
+      <description>&lt;h1&gt;AdEMAR&lt;/h1&gt;&#xA;&#xA;&lt;p&gt;To be expanded.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://pbelmans.ncag.info/projects/catsincage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/projects/catsincage/</guid>
+      <description>&lt;h1&gt;CatsiNCAGe&lt;/h1&gt;&#xA;&lt;p&gt;&lt;span style=&#34;font-family: monospace;&#34;&gt;CatsINCAGe&lt;/span&gt; (Categories in Noncommutative Algebraic Geometry)&#xA;is an &lt;a href=&#34;https://www.nwo.nl/en/researchprogrammes/nwo-talent-programme/projects-vidi&#34;&gt;NWO Vidi project&lt;/a&gt;,&#xA;led by &lt;a href=&#34;https://pbelmans.ncag.info&#34;&gt;me&lt;/a&gt;.&#xA;Its goal is to &lt;strong&gt;study noncommutative deformations of (singular / stacky) surfaces and higher-dimensional varieties&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;More information can also be found on the &lt;a href=&#34;https://doi.org/10.61686/RZKLF82806&#34;&gt;NWO project page&lt;/a&gt;.&lt;/p&gt;&#xA;&#xA;&lt;h3&gt;Abstract for a general audience&lt;/h3&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Some phenomena in algebraic geometry can only be explained by enlarging what is understood by a geometric shape. We have to allow noncommutativity, where the multiplication $ab$ is not necessarily equal to $ba$, in order to find the noncommutative (or quantum) shapes that describe certain aspects of reality. Physics is an important source of inspiration for this, where quantum mechanics is inherently noncommutative.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://pbelmans.ncag.info/projects/hilbertmovies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/projects/hilbertmovies/</guid>
+      <description>&lt;h1&gt;HilbertMoVieS&lt;/h1&gt;&#xA;&lt;p&gt;&lt;span style=&#34;font-family: monospace;&#34;&gt;HilbertMoVieS&lt;/span&gt; (Hilbert schemes: Modern Views and Synergies)&#xA;is an &lt;a href=&#34;https://weave-research.net/&#34;&gt;NWO+DFG Weave project&lt;/a&gt;,&#xA;led by&#xA;&lt;a href=&#34;https://sites.google.com/site/andkrugmath/&#34;&gt;Andreas Krug&lt;/a&gt;&#xA;and me.&#xA;Its goal is to &lt;strong&gt;study Hilbert schemes of points on curves and surfaces&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;!--&lt;p&gt;More information can also be found on the &lt;a href=&#34;&#34;&gt;NWO project page&lt;/a&gt;.--&gt;&#xA;&#xA;&lt;h3&gt;Abstract for a general audience&lt;/h3&gt;&#xA;&lt;blockquote&gt;&#xA;  &lt;p&gt;Mathematicians often want to classify things. When continuous parameters are involved,&#xA;  a classification takes the form of a moduli space: a shape that acts as a book-keeping device to describe and study the classification.&#xA;  Different points in the moduli space correspond to different objects, and the shape of the space gives insight into the classification.&#xA;  In this project we will extend the scope of the existing constructions, by allowing &#34;quantum surfaces&#34; and curves with additional symmetries as input.&#xA;  We will study these new objects using modern tools from category theory and representation theory.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

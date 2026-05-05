@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" type="image/png" href="/favicon.png" size="256x256">
+
+  <title>Pieter Belmans&mdash;seminar</title>
+  <meta name="description" content="In Luxembourg Below is the current schedule for the algebraic geometry seminar. Talks take place in MNO, on the ground floor or first floor. In weeks without an …">
+
+  
+  <link rel="stylesheet" href="/css/main.css">
+
+  <link rel="canonical" href="https://pbelmans.ncag.info/uni.lu/seminar">
+  <link rel="alternate" type="application/rss+xml" title="Pieter Belmans" href="https://pbelmans.ncag.info/blog/feed/">
+
+  <script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    packages: ['base', 'ams', 'mathtools', 'color', 'newcommand']
+  },
+  loader: {
+    load: ['[tex]/ams', '[tex]/mathtools', '[tex]/color']
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+  
+  
+
+  <script defer data-domain="pbelmans.ncag.info" src="https://plausible.io/js/script.js"></script>
+</head>
+
+  <body>
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Pieter Belmans</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        <a class="page-link" href="/about">about me</a>
+        <a class="page-link" href="/activities">interactive</a>
+        <a class="page-link" href="/blog">blog</a>
+        <a class="page-link" href="/talks">talks</a>
+        <a class="page-link" href="/uu.nl">uu.nl</a>
+        <a class="page-link" href="/writing">writing</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        
+
+
+<h2>In Luxembourg</h2>
+<p>Below is the current schedule for the algebraic geometry seminar. Talks take place in MNO, on the ground floor or first floor.
+<p>In weeks without an external speaker we will sometimes set up <a href="#internal-seminar">internal events</a>,
+besides the ongoing reading groups, which are not explictly mentioned on this page.
+<dl class="schedule">
+  <dt>December 11 (11h00)
+  <dd>Junyu Meng
+  <dd>Derived category of a fine quiver moduli space
+  <dd><p>I will talk about the derived category of a fine quiver moduli space, which is the moduli space of quiver representations of dimension vector $(2,3)$ for the 3-Kronecker quiver. I will first recall several interesting constructions related to this moduli space, e.g., it is a blow down of $\operatorname{Hilb}^3(\mathbb{P}^2)$. With these constructions, Teleman quantization and the covering trick, I will construct an explicit full exceptional Lefschetz collection for its derived category.  This is based on a joint work with Svetlana Makarova.
+
+  <dt>November 13 (11h00)
+  <dd>Chiara Sava
+  <dd>∞-Dold-Kan correspondence via representation theory.
+  <dd><p>In this talk we give a purely derivator theoretical reformulation and proof of a classic result of Happel and Ladkani, showing that it occurs uniformly across stable derivators and it is then independent of coefficients. The resulting equivalence provides a bridge between homotopy theory and representation theory: indeed, we explain how our result is a derivator-theoretic version of the ∞-Dold-Kan correspondence for bounded cochain complexes.
+
+  <dt>November 6 (11h00)
+  <dd>Claudio Bartocci
+  <dd><em>Moduli spaces of quiver representations</em>
+  <dd><p>I will recall some results about quiver varieties representing moduli spaces of framed sheaves on algebraic surfaces, with special attention to Hirzebruch surfaces. Some results concerning the existence of Poisson structures on these varieties will be discussed.
+
+  <dt>October 30 (13h00)
+  <dd>Paolo Tomasini
+  <dd><em>Equivariant elliptic cohomology and mapping stacks</em>
+  <dd><p>In this talk we will present a new construction of equivariant elliptic cohomology via mapping stacks. All necessary background on elliptic cohomology will be given throughout the talk. Then we will introduce a suitable notion of elliptic Hochschild homology in terms of functions on a stack of quasi-constant maps from an elliptic curve, which allows to compute (rationalized) equivariant elliptic cohomology.
+  <dd><p>
+
+  <dt>May 23 (16h30)
+  <dd>Raymond Cheng
+  <dd><em>Double quartic fivefolds</em>
+  <dd><p>Double covers of projective 5-space branched along a quartic fourfold are Fano varieties with a CY3 category for its Kuznetsov component. The purpose of this talk is to examine, in relation to Kuznetsov’s rationality philosophy and also a non-commutative version of Reid’s Fantasy, two special families of such varieties in which the Kuznetsov component is twisted-geometric. This is joint work with Alex Perry and Xiaolei Zhao.
+
+  <dt>April 10 (15h00)
+  <dd>Max Briest
+  <dd><em>On the bounded derived category of coherent sheaves of the orthogonal Grassmannian $\mathrm{OGr}(3,2n+1)$</em>
+  <dd><p>We set the orthogonal Grassmannian $X = \operatorname{OGr}(3,2n+1)$ -- i.e. the $3$-dimensional isotropic subspaces in a $2n+1$-dimensional vector space -- and we are interested in the bounded derived category of coherent sheaves on $X$, namely $\mathbf{D}^{\mathrm{b}}(X)$. This highly interesting geometric invariant $\mathbf{D}^{\mathrm{b}}(X)$ admits two exceptional Lefschetz subcollections which can be merged to a single big collection. We outline the shape of these two subcollections and discuss small cases of $n$; e.g. $X = \operatorname{OGr}(3,9)$.
+
+  <dt>March 6 (16h00)
+  <dd>Sebastian Torres
+  <dd><em>Windows and the BGMN conjecture</em>
+  <dd><p>Let $C$ be a smooth projective curve of genus at least 2, and let $N$ be the moduli space of semistable rank-two vector bundles of odd degree on $C$. We construct a semi-orthogonal decomposition in the derived category of $N$ conjectured by Belmans, Galkin and Mukhopadhyay and by Narasimhan. It has blocks of the form $\mathbf{D}^{\mathrm{b}}(C_d)$ where $C_d$ are $d$-th symmetric powers of $C$, and the semi-orthogonal complement to these blocks is conjecturally trivial. In order to prove our result, we use the moduli spaces of stable pairs over $C$. Such spaces are related to each other via GIT wall crossing, and the method of windows allows us to understand the relationship between the derived categories on either side of a given wall. This is a joint work with J. Tevelev.
+
+  <dt>February 5 (15h30)
+  <dd>Hannah Dell
+  <dd><em>Stability conditions on free abelian quotients</em>
+  <dd><p>The space of Bridgeland stability conditions on a given triangulated category is a complex manifold. This gives us a way to extract geometry from homological algebra. In this talk, I will describe how stability conditions behave under actions of finite abelian groups. We will apply this to derived categories of surfaces that are free quotients by finite abelian groups. When the cover has finite Albanese morphism, this produces a connected component of so-called geometric stability conditions inside the stability manifold of the quotient. A consequence of this is a disproof of the expectation that surfaces with irregularity 0 always admit a wall of the geometric chamber. If time permits, I will discuss joint work in progress with Edmund Heng and Tony Licata to extend this to non-abelian group actions.
+
+  <dt>November 15 (15h00)
+  <dd>Sebastian Schlegel Mejia
+  <dd><em>BPS Algebras and Generalised Kac—Moody algebras from 2-Calabi—Yau categories</em>
+  <dd><p>Associated to a 2-Calabi–Yau (2CY) abelian category – informally, a noncommutative symplectic surface – is its cohomological Hall algebra (CoHA), an algebra with underlying vector space given by the Borel–Moore homology of the moduli of objects in the category. CoHAs were originally defined by Kontsevich and Soibelman as a mathematical incarnations of Harvey and Moore’s algebras of BPS states. Following the approach of Davison and Meinhardt, BPS Lie algebras are supposed to be smaller and manageable objects which “control” the CoHA. From the moduli theorist's point of view, BPS Lie algebras tell you how to compute the Borel—Moore homology of moduli stacks in the presence of strictly semistables, in terms of cohomological invariants of the stable loci.
+    <p>Making this precise, I will present a Poincaré–Birkhoff–Witt type theorem for the CoHA of a 2CY category in terms of the BPS Lie algebra. A crucial step is to identify the BPS algebra as (the positive half of) a generalised Kac–Moody Lie algebra modelled on the intersection cohomology of moduli spaces. This could be interpreted as a mathematical incarnation of observations made by Harvey and Moore relating algebras of BPS states to generalised Kac–Moody algebras. Time permitting, I will mention applications to the cohomology of Nakajima quiver varieties.
+    <p>The talk is based on joint work with Ben Davison and Lucien Hennecart.
+
+  <dt>October 18 (15h00)
+  <dd>Augustinas Jacovskis
+  <dd><em>Categorical Torelli for $X_2$</em>
+  <dd><p>Consider a threefold double cover $X$ of projective space, ramified in a general type surface $Z$. In this talk I'll describe a semiorthogonal decomposition of the $\mathbb{Z}/2\mathbb{Z}$-equivariant Kuznetsov component of $X$, and show that it contains a copy of $\mathbf{D}^{\mathrm{b}}(Z)$. This gives a relationship between the K-theory of the equivariant Kuznetsov component, and the primitive cohomology of $Z$. Using this relationship and classical Torelli theorems for hypersurfaces in projective space, I'll show that an equivalence of Kuznetsov components of Picard rank 1, index 1, genus 2 Fano threefolds implies that they're isomorphic. This is joint work with Hannah Dell and Franco Rota.
+
+  <dt>May 10 (14h00)
+  <dd>S. Paul Smith
+  <dd><em>The symplectic leaves for the elliptic Poisson bracket on projective space defined by Feigin-Odesskii and Polishchuk</em>
+  <dd><p>In 1998, Feigin and Odesskii, and independently Polishchuk, defined a Poisson structure on the complex projective space of dimension $n-1$. Given a Poisson manifold $(M,\Pi)$ there is a unique decomposition of $M$ into symplectic leaves, the leaves being the submanifolds on which the 2-form $\Pi$ restricts to a symplectic form. This talk, based on joint work with Alex Chirvasitu and Ryo Kanda (arXiv 2210.13042), describes the symplectic leaves.
+    <p>The Poisson bracket is determined by a degree-$n$ holomorphic line bundle on a complex elliptic curve (a 1-dimensional complex torus, or compact Riemann surface of genus one) and can be thought of as being determined by the elliptic curve alone (because the choice of line bundle does not matter). Equivalently, the Poisson structure is determined by an elliptic curve embedded in the projective space as a degree-$n$ normal curve, i.e., the curve does not lie on any hyperplane. A formula for the Poisson bracket involves theta functions. The geometry of such embedded elliptic curves has been studied since the early 1800's, and is extraordinarily rich. The symplectic leaves can be described in terms of the secant varieties for (i.e., linear subspaces spanned by points on) the embedded elliptic curve.
+
+  <dt>April 26, 2023 (14h00)
+  <dd>Severin Barmeier
+  <dd><em>A<sub>∞</sub> deformations of extended Khovanov arc algebras and Stroppel's conjecture</em>
+  <dd>Extended Khovanov arc algebras are finite-dimensional graded algebras which naturally appear in a variety of contexts such as link homology, representation theory and symplectic geometry. These algebras are defined via a diagrammatic calculus obtained from a 2d TQFT which lies at the heart Khovanov's categorification of the Jones polynomial of knots and links. After reviewing the diagrammatic description, I will explain how to describe these algebras and their Koszul duals via quivers with relations which allows us to compute their Hochschild cohomology groups, settling a conjecture by C. Stroppel. As a consequence we obtain explicit A<sub>∞</sub> deformations of extended Khovanov arc algebras which can also be viewed as A<sub>∞</sub> deformations of Fukaya-Seidel categories associated to Hilbert schemes of points on type A Milnor fibres. This talk is based on <a href="https://arxiv.org/abs/2211.03354">arxiv:2211.03354</a>.
+
+  <dt>April 20, 2023 (10h00)
+  <dd>Hans Franzen
+  <dd><em>Towards a degree formula for quiver moduli</em>
+  <dd>It is known that the Chow ring of a quiver moduli space is generated by Chern classes of universal bundles and presented by tautological relations. This allows to find a linear basis of the Chow ring in terms of monomials in Chern classes. In order to compute the degree of a line bundle, it is necessary to express the class of a point as a linear combination of these monomials. We express the point class as a degeneracy locus of a bundle. This determines a recursive procedure for obtaining the degree. We present some solutions which were obtained with the help of SAGE. The talk is based on ongoing joint work with Pieter Belmans.
+
+  <dt>April 13, 2023 (10h00)
+  <dd>Louis Ioos
+  <dd><em>A Riemann-Roch formula for singular symplectic reductions</em>
+  <dd>Given a Hamiltonian action of a Lie group G on a symplectic manifold, the quantization commutes with reduction principle ([Q,R]=0) of Guillemin-Sternberg states that the space of $G$-invariants of the quantization of this manifold coincides with the quantization of its symplectic reduction by $G$. This principle provides in particular a geometric approach to the study of the representation theory of $G$. In this talk, I will consider the case where $G$ is a circle and where the symplectic reduction is a compact singular symplectic space, then present an approach to establish this principle based on the Berline-Vergne formula and the asymptotics of the Witten integral. This talk is based on a joint work in collaboration with Benjamin Delarue and Pablo Ramacher.
+
+  <dt>March 22, 2023 (15h30)
+  <dd>Pedro Núñez
+  <dd><em>Adapted differentials on Campana orbifolds</em>
+  <dd>In this talk we introduce Campana orbifolds and discuss differential forms on them. A common way to define these differentials is by passing to a suitably ramified cover of the underlying variety. We explain how to give a choice-free definition as a presheaf on the category of schemes over the underlying variety, and show that this presheaf is a sheaf with respect to Voevodsky's qfh-topology. In particular it is an étale sheaf with transfers, and we briefly discuss the relevance of these notions and their relation to motivic cohomology.
+
+  <dt>March 22, 2023 (17h00)
+  <dd>Andreas Demleitner
+  <dd><em>Rigidity and classifying hyperelliptic manifolds</em>
+  <dd>Hyperelliptic surfaces occur in the Enriques-Kodaira classification of compact complex surfaces and were classified by the Italian geometers in the beginning of the 20th century. In the talk, we will introduce higher-dimensional analogs called "hyperelliptic manifolds". Using the classical theorems of Bieberbach, we explain how to classify hyperelliptic manifolds in higher dimensions. Applying the classification algorithm in a special case, we obtain the existence of diffeomorphic rigid hyperelliptic fourfolds, which are not biholomorphic. Joint work with Christian Gleissner.
+  <dd>
+
+  <dt>March 15, 2023 (exceptionally in MNO 0.010)
+  <dd>Nicolas Perrin
+  <dd><em>Cohomology of hyperplane sections of adjoint varieties</em>
+  <dd>Given a reductive group $G$, I will first classify all pairs $(X,V)$ where $V$ is a $G$-representation and $X$ is a projective rational homogeneous $G$-variety with Picard rank 1 equivariantly embedded in $\mathbb{P}(V)$ for which the general hyperplane section $Y$ is stable under a maximal torus of $G$.
+    <p>For these hyperplane sections $Y$, I will then describe some aspects of the geometry of $Y$ with a special focus on cohomology and quantum cohomology. (joint work with Vladimiro Benedetti)
+  <dd>
+
+  <dt>November 30, 2022
+  <dd>Raf Bocklandt
+  <dd><em>Local systems of derived categories of gentle algebras</em>
+  <dd>We will show how you can construct local systems of  derived categories of gentle algebras by viewing them as Fukaya categories of surfaces and explore the connection with the work of Spenko and Van den Bergh on perverse schobers coming from noncommutative crepant resolutions of toric quotients.
+
+  <dt>November 9, 2022
+  <dd>Shengxuan Liu
+  <dd><em>Kernels of categorical resolutions of nodal singularities</em>
+  <dd>Resolution of singularities is a central topic of algebraic geometry. Hironaka showed that the resolution of singularities exists over $\mathbb{C}$. An analogous definition in derived categories was proposed by Lunts and the existence of categorical resolutions was shown by Kuznetsov and Lunts. One thus considers whether there is a link between categorical resolutions and classical resolutions of singularities. In this talk, I will discuss the case of nodal singularities. I will start with basic definitions and notations in derived categories and singularities.  Then I will show how to use the Lefschetz decomposition of a quadric to give a categorical resolution of a nodal variety and the property of the kernel generator of this categorical resolution. If time permits, I will describe a categorical resolution of the Kuznetsov component of a nodal cubic fourfold. This is joint work with W. Cattani, F. Giovenzana, P. Magni, L. Martinelli, L. Pertusi, and J. Song.
+
+  <dt>October 26, 2022
+  <dd>Fei Xie
+  <dd><em>Residual categories of quadric surface bundles</em>
+  <dd>I will discuss the relation between the relative Hilbert scheme of lines of a quadric surface bundle and its residual category, the non-trivial semiorthogonal component in its derived category. For a smooth 4-fold with the structure of a quadric surface bundle over a smooth surface, there is a finite number of fibres that are quadrics of corank 2 (unions of two projective planes). This relation can be used to give a nice description of the derived category of the smooth 4-fold. This result applies to cubic 4-folds containing a plane and even-dimensional Fano varieties of dimension at most 10 that are smooth complete intersections of three quadrics. Time permitting, I will also discuss how this result can be generalised to quadric surface bundles over a general base.
+
+  <dt>October 5, 2022
+  <dd>Andreas Krug
+  <dd><em>Compactified Jacobians of non-integral curves and Lagrangian fibrations</em>
+  <dd>I report on joint work with Adam Czaplinski, Manfred Lehn, and Sönke Rollenske. We describe moduli spaces of stable sheaves, which are generically line bundles, on a certain class of non-integral curves, which we call extended ADE curves. This class  of curves generalises the non-integral fibres of elliptic fibrations. The main motivation is that our moduli spaces occur as general singular fibres of Lagrangian fibrations.
+
+  <dt>September 28, 2022
+  <dd>Maxim Smirnov
+  <dd><em>Quantum cohomology and derived categories of coadjoint varieties</em>
+  <dd>We will discuss properties of quantum cohomology, both small and big, of coadjoint varieties of simple algebraic groups and how they relate to the structure of Lefschetz collections in the derived categories of these varieties. Some general conjectures pertaining to this will be formulated. The talk is based on the joint works with Alexander Kuznetsov and Nicolas Perrin.
+
+  <dt>November 4, 2021
+  <dd>Hans Franzen
+  <dd><em>Positivity properties of moduli spaces of quiver representations</em>
+  <dd>I will report on joint work in progress with P. Belmans, C. Damiolini, V. Hoskins, S. Makarova, and T. Tajakka.
+    <p>The talk will be about (parts of) a geometric proof, using dimension estimates, that a certain line bundle on a moduli space of semi-stable quiver representations is ample, provided that the quiver is acyclic. This re-proves a known result on semi-invariants of quivers. We believe that our approach can be used to provide estimates for the lowest degree in which semi-invariant functions exist.
+</dl>
+
+<h3>Internal seminar</h3>
+<dl class="schedule" id="internal-seminar">
+  <dt>October 16, 2024</dt>
+  <dd>group afternoon, with expository talks or talks on what currently interests us
+    <ol>
+      <li>Thilo Baumann: Noncommutative plane curves
+      <li>Pieter Belmans: Albanese morphisms of hyperelliptic varieties
+      <li>Augustinas Jacovskis: The Debarre&ndash;Iliev&ndash;Manivel conjecture
+      <li>Gianni Petrella: Exceptional collections for quiver moduli
+      <li>Nicolò Sibilla: Mirror symmetry, local systems and categorification
+      <li>Paolo Tomasini: Constructing topological invariants from algebraic geometry
+    </ol>
+
+  <dt>February 28, 2024</dt>
+  <dd>group afternoon, with expository talks or talks on what currently interests us
+    <ol>
+      <li>Thilo Baumann: Categorical absorption of noncommutative singular points
+      <li>Pieter Belmans: Brauer groups of resolved quiver moduli
+      <li>Augustinas Jacovskis: Ghostly categorical Torelli theorems
+      <li>Gianni Petrella: Tilting objects for quiver moduli
+      <li>Sebastian Torres: Windows and geometric invariant theory
+      <li>Okke van Garderen: An unlinking formula for quiver CoHAs
+    </ol>
+
+  <dt>September 20, 2023<dd>
+  <dd>group afternoon, with expository talks or talks on what currently interests us
+    <ol>
+      <li>Thilo Baumann: Blow-ups and Brauer—Severi varieties of orders over curves
+      <li>Pieter Belmans: Vector fields for quiver moduli
+      <li>Augustinas Jacovskis: Categorical Torelli for double covers
+      <li>Gianni Petrella: Rigidity for quiver moduli
+    </ol>
+
+  <dt>February 22, 2023
+  <dd>group afternoon, with expository talks or talks on what currently interests us
+    <ol>
+      <li>Thilo Baumann: Orders and the Artin model
+      <li>Pieter Belmans: Turning on the twist for orbifold Hochschild homology
+      <li>David Fernandez: Wild character varieties and noncommutative geometry
+      <li>Gianni Petrella: Examples of Kronecker quiver moduli
+      <li>Okke van Garderen: The potential of local volume forms
+    </ol>
+
+  <dt>October 12, 2022
+  <dd>Gianni Petrella
+  <dd><em>Models of trigonal elliptic K3 surfaces</em>
+
+  <dt>September 21, 2022
+  <dd>group afternoon, with expository talks or talks on what currently interests us
+    <ol>
+      <li>Thilo Baumann: Semiorthogonal decompositions of Brauer&ndash;Severi schemes
+      <li>Pieter Belmans: 3-dimensional Sklyanin algebras
+      <li>David Fernandez Alvarez: Double derivations and Cartan identities
+      <li>Nina Morishige: Conjectures on genus-zero Gopakumar&ndash;Vafa invariants
+      <li>Alessandro Nobile: LCI morphisms for adic morphisms
+      <li>Okke van Garderen: GV invariants and root systems
+    </ol>
+</dl>
+
+<h2>In Bonn</h2>
+<p>I co-organised the Representation Theory Oberseminar at the University of Bonn. For other seminars related to the algebras and representation theory group, see the <a href="http://www.math.uni-bonn.de/ag/schrstro/">group's website</a>.
+<p>I also organised several graduate student seminars.
+
+<h2>In Antwerp</h2>
+<p>I co-organised the <a href="https://www.uantwerpen.be/en/rg/fundamental-mathematics/research/seminars/">weekly departmental seminar</a>, for which there is a <a href="http://sympa.ua.ac.be/sympa/info/antwerp-algebra-seminar">mailing list</a>.
+<p>I also organised <a href="https://anagrams-seminar.github.io">ANAGRAMS</a>, a graduate student seminar, centered around the topics of (noncommutative) algebra and algebraic geometry.
+
+
+
+      </div>
+    </div>
+
+    <footer>
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        contact me:
+        <br>
+        <a href="mailto:p.belmans@uu.nl" style="margin-left: 1em">p.belmans@uu.nl</a>
+        <br><br>
+        address:
+        <address style="margin-left: 1em">
+          Mathematical Institute<br>
+          Utrecht University<br>
+          Budapestlaan 6<br>
+          3584 CD Utrecht<br>
+          The Netherlands
+        </address>
+        <br>
+        office:
+        <address style="margin-left: 1em; font-style: normal">room 702</address>
+      </div>
+
+      <div class="footer-col footer-col-1">
+        I maintain the websites
+        <ul class="social-media-list" style="font-size: 90%">
+          <li><a href="https://stacks.math.columbia.edu"><span class="icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(0,16)">
+<g transform="scale(0.5,-0.5)">
+
+<polygon points="2,2 24,2 24,7 21,7 21,5 5,5 5,21 7,21 7,24 2,24" />
+<polygon points="8,8 29,8 29,13 26,13 26,11 11,11 11,26 13,26 13,29 8,29" />
+<polygon points="14,14 31,14 31,31 14,31" />
+<polygon points="17,17 28,17 28,28 17,28" style="fill: white;" />
+
+</g>
+</g>
+</svg>
+</span><span class="username"><code class="url">stacks.math.columbia.edu</code></span></a>
+</li>
+          <li><a href="https://ncag.info"><span class="icon"><img width="16" height="16" src="/assets/favicon-ncag.png"></span> <span class="username"><code class="url">ncag.info</code></span></a>
+</li>
+          <li><a href="https://kerodon.net"><span class="icon"><img width="16" height="16" src="/assets/favicon-kerodon.png"></span> <span class="username"><code class="url">kerodon.net</code></span></a>
+</li>
+          <li><a href="https://fanography.info"><span class="icon"><img width="16" height="16" src="/assets/favicon-fanography.png"></span> <span class="username"><code class="url">fanography.info</code></span></a>
+
+</li>
+          <li><a href="http://www.hyperkaehler.info"><span class="icon"><img width="16" height="16" src="/assets/favicon-hyperkaehler.png"></span> <span class="username"><code class="url">hyperkaehler.info</code></span></a>
+
+</li>
+          <li><a href="http://grassmannian.info"><span class="icon"><img width="16" height="16" src="/assets/favicon-grassmannian.png"></span> <span class="username"><code class="url">grassmannian.info</code></span></a>
+
+</li>
+          <li><a href="https://mgnbar.info"><span class="icon"><img width="16" height="16" src="/assets/favicon-mgnbar.png"></span> <span class="username"><code class="url">mgnbar.info</code></span></a>
+</li>
+          <li><a href="https://superficie.info"><span class="icon"><img width="16" height="16" src="/assets/favicon-superficie.png"></span> <span class="username"><code class="url">superficie.info</code></span></a>
+
+
+</li>
+        </ul>
+        I maintain the tools
+        <ul class="social-media-list" style="font-size: 90%">
+          <li><a href="https://cutter.ncag.info"><span class="icon"><img width="16" height="16" src="/assets/favicon-hodge.png"></span> <span class="username">Hodge diamond cutter</span></a>
+
+</li>
+          <li><a href="https://quiver.tools"><span class="icon"><img width="16" height="16" src="/assets/favicon-quivertools.png"></span> <span class="username">QuiverTools</span></a>
+
+</li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-1">
+        you can also find me on
+        <ul class="social-media-list">
+          <li><a href="https://github.com/pbelmans"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#000000" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">GitHub</span></a>
+</li>
+          <li><a href="http://mathoverflow.net/users/6263/pbelmans"><img width="16" height="16" src="/assets/favicon-mathoverflow.png"> <span class="username">MathOverflow</span></a>
+</li>
+          <li><a href="https://orcid.org/0000-0002-0140-2824"><span class="icon icon-orcid"><svg width="72px" height="72px" viewBox="0 0 72 72" version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+    <title>Orcid logo</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hero" transform="translate(-924.000000, -72.000000)" fill-rule="nonzero">
+            <g id="Group-4">
+                <g id="vector_iD_icon" transform="translate(924.000000, 72.000000)">
+                    <path d="M72,36 C72,55.884375 55.884375,72 36,72 C16.115625,72 0,55.884375 0,36 C0,16.115625 16.115625,0 36,0 C55.884375,0 72,16.115625 72,36 Z" id="Path" fill="#A6CE39"></path>
+                    <g id="Group" transform="translate(18.868966, 12.910345)" fill="#FFFFFF">
+                        <polygon id="Path" points="5.03734929 39.1250878 0.695429861 39.1250878 0.695429861 9.14431787 5.03734929 9.14431787 5.03734929 22.6930505 5.03734929 39.1250878"></polygon>
+                        <path d="M11.409257,9.14431787 L23.1380784,9.14431787 C34.303014,9.14431787 39.2088191,17.0664074 39.2088191,24.1486995 C39.2088191,31.846843 33.1470485,39.1530811 23.1944669,39.1530811 L11.409257,39.1530811 L11.409257,9.14431787 Z M15.7511765,35.2620194 L22.6587756,35.2620194 C32.49858,35.2620194 34.7541226,27.8438084 34.7541226,24.1486995 C34.7541226,18.1301509 30.8915059,13.0353795 22.4332213,13.0353795 L15.7511765,13.0353795 L15.7511765,35.2620194 Z" id="Shape"></path>
+                        <path d="M5.71401206,2.90182329 C5.71401206,4.441452 4.44526937,5.72914146 2.86638958,5.72914146 C1.28750978,5.72914146 0.0187670918,4.441452 0.0187670918,2.90182329 C0.0187670918,1.33420133 1.28750978,0.0745051096 2.86638958,0.0745051096 C4.44526937,0.0745051096 5.71401206,1.36219458 5.71401206,2.90182329 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+</span> <span class="username">ORCID</span></a>
+</li>
+          <li><a href="https://scholar.google.com/citations?user%3ddX7G0o4AAAAJ"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="96px" height="96px"><path fill="#1e88e5" d="M24,4C12.954,4,4,12.954,4,24s8.954,20,20,20s20-8.954,20-20S35.046,4,24,4z"/><path fill="#1565c0" d="M35,16.592v-3.878L37,11H27l0.917,1.833c-1.236,0-2.265,0-2.265,0S19.095,13,19.095,18.748	c0,5.752,5.732,5.088,5.732,5.088s0,0.865,0,1.453c0,0.594,0.77,0.391,0.864,1.583c-0.388,0-7.964-0.208-7.964,4.998	s6.679,4.959,6.679,4.959s7.722,0.365,7.722-6.104c0-3.871-4.405-5.121-4.405-6.686c0-1.563,3.319-2.012,3.319-5.684	c0-0.823-0.028-1.524-0.149-2.12L34,13.571v3.02c-0.581,0.207-1,0.756-1,1.408v4.5c0,0.829,0.672,1.5,1.5,1.5s1.5-0.671,1.5-1.5V18	C36,17.348,35.581,16.799,35,16.592z M30.047,31.169c0.131,2.024-1.929,3.811-4.603,3.998c-2.671,0.188-4.946-1.295-5.077-3.316	c-0.133-2.016,1.927-3.805,4.6-3.996C27.641,27.667,29.914,29.152,30.047,31.169z M26.109,22.453	c-1.592,0.451-3.375-1.062-3.982-3.367c-0.604-2.312,0.195-4.543,1.786-4.992c1.593-0.453,3.374,1.059,3.981,3.367	C28.499,19.77,27.702,22.004,26.109,22.453z"/><path fill="#e8eaf6" d="M34,16.592V12c0-0.051-0.015-0.097-0.029-0.143L35,11H21l-9,8h5.383	c0.174,5.466,5.715,4.836,5.715,4.836s0,0.865,0,1.453c0,0.594,0.771,0.391,0.865,1.583c-0.388,0-7.964-0.208-7.964,4.998	s6.679,4.959,6.679,4.959s7.721,0.365,7.721-6.104c0-3.871-4.404-5.121-4.404-6.686c0-1.563,3.318-2.012,3.318-5.684	c0-0.971-0.047-1.763-0.232-2.422L33,12.667v3.925c-0.581,0.207-1,0.756-1,1.408v4.5c0,0.829,0.672,1.5,1.5,1.5s1.5-0.671,1.5-1.5	V18C35,17.348,34.581,16.799,34,16.592z M28.319,31.169c0.131,2.024-1.928,3.811-4.602,3.998c-2.671,0.188-4.946-1.295-5.077-3.316	c-0.133-2.016,1.927-3.805,4.599-3.996C25.914,27.667,28.187,29.152,28.319,31.169z M24.38,22.453	c-1.591,0.451-3.373-1.062-3.981-3.367c-0.604-2.312,0.194-4.543,1.785-4.992c1.593-0.453,3.374,1.059,3.982,3.367	C26.77,19.77,25.973,22.004,24.38,22.453z"/></svg></span> Google Scholar</a>
+</li>
+          <li><a href="https://www.genealogy.ams.org/id.php?id=219852"><span class="icon icon-"><img width="16" height="16" src="/assets/mgp.png"></span> <span class="username">Math Genealogy</span></a>
+
+</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>

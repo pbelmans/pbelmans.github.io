@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algebraic Geometry on Pieter Belmans</title>
+    <link>https://pbelmans.ncag.info/categories/algebraic-geometry/</link>
+    <description>Recent content in Algebraic Geometry on Pieter Belmans</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 30 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://pbelmans.ncag.info/categories/algebraic-geometry/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Noncommutative algebraic geometry summer school in Antwerp</title>
+      <link>https://pbelmans.ncag.info/blog/2025/01/30/ncag-summer-school/</link>
+      <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2025/01/30/ncag-summer-school/</guid>
+      <description>&lt;p&gt;This summer we are organizing a summer school in Antwerp, on noncommutative algebraic geometry&#xA;(more precisely: homological mirror symmetry, and the formalism of $\mathrm{A}_\infty$-categories).&#xA;It is organized with the help of SLMath, as an offshoot of last year&#39;s research semester on noncommutative algebraic geometry.&#xA;The application form for non-US citizens is now available,&#xA;and all information can be found on the &lt;a href=&#34;https://www.uantwerpen.be/en/summer-winter-schools/non-commutative-algebraic-geometry/&#34;&gt;workshop&#39;s website&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Please share this with interested students.&#xA;The target audience is master students and early PhD students&#xA;with some background in the topic.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Upper-Rhine and Tributaries Algebraic Geometry Seminar</title>
+      <link>https://pbelmans.ncag.info/blog/2024/05/29/urtags/</link>
+      <pubDate>Wed, 29 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2024/05/29/urtags/</guid>
+      <description>&lt;p&gt;I am really happy to announce &lt;strong&gt;&lt;a href=&#34;https://urtags.info&#34;&gt;URTAGS: the Upper-Rhine and Tributaries Algebraic Geometry Seminar&lt;/a&gt;&lt;/strong&gt;,&#xA;a joint seminar with the universities of of Basel, Freiburg, Lorraine, Luxembourg, Saarbrücken, Strasbourg, Stuttgart, and Tübingen.&lt;/p&gt;&#xA;&lt;p&gt;The first edition is scheduled for &lt;strong&gt;June 25&lt;/strong&gt;,&#xA;and 2 or 3 editions per year (twice in the centrally located Strasbourg, once on location) are planned.&lt;/p&gt;&#xA;&lt;p&gt;I hope to see some of you there!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Statistics for the Stacks project (2)</title>
+      <link>https://pbelmans.ncag.info/blog/2023/08/16/new-stats-stacks-project/</link>
+      <pubDate>Wed, 16 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2023/08/16/new-stats-stacks-project/</guid>
+      <description>&lt;p&gt;For the Stacks project workshop last week&#xA;I crunched the numbers again&#xA;&lt;a href=&#34;https://pbelmans.ncag.info/blog/2020/04/09/view-stats-stacks-project/&#34;&gt;like I did back in 2020 to come up with some statistics&lt;/a&gt;.&#xA;Here&#39;s the updated graph.&#xA;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;What is the conclusion?&#xA;That the number of algebraic geometers seems to grow linearly over the years?&#xA;A scary thought!&#xA;&lt;/p&gt;&#xA;&#xA;&lt;script src=&#34;https://d3js.org/d3.v4.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&lt;div style=&#34;text-align: center&#34; id=&#34;unique&#34;&gt;&lt;/div&gt;&#xA;&#xA;&#xA;&lt;div style=&#34;display: none&#34; id=&#34;visits&#34;&gt;&lt;/div&gt;&#xA;&lt;div style=&#34;display: none&#34; id=&#34;pages&#34;&gt;&lt;/div&gt;&#xA;&#xA;&lt;script&gt;&#xA;// set the dimensions and margins of the graph&#xA;var margin = {top: 10, right: 30, bottom: 30, left: 60},&#xA;    width = 460 - margin.left - margin.right,&#xA;    height = 400 - margin.top - margin.bottom;&#xA;&#xA;// append the svg object to the body of the page&#xA;var unique = d3.select(&#34;#unique&#34;)&#xA;  .append(&#34;svg&#34;)&#xA;    .attr(&#34;width&#34;, width + margin.left + margin.right)&#xA;    .attr(&#34;height&#34;, height + margin.top + margin.bottom)&#xA;  .append(&#34;g&#34;)&#xA;    .attr(&#34;transform&#34;,&#xA;          &#34;translate(&#34; + margin.left + &#34;,&#34; + margin.top + &#34;)&#34;);&#xA;&#xA;var visits = d3.select(&#34;#visits&#34;)&#xA;  .append(&#34;svg&#34;)&#xA;    .attr(&#34;width&#34;, width + margin.left + margin.right)&#xA;    .attr(&#34;height&#34;, height + margin.top + margin.bottom)&#xA;  .append(&#34;g&#34;)&#xA;    .attr(&#34;transform&#34;,&#xA;          &#34;translate(&#34; + margin.left + &#34;,&#34; + margin.top + &#34;)&#34;);&#xA;&#xA;var pages = d3.select(&#34;#pages&#34;)&#xA;  .append(&#34;svg&#34;)&#xA;    .attr(&#34;width&#34;, width + margin.left + margin.right)&#xA;    .attr(&#34;height&#34;, height + margin.top + margin.bottom)&#xA;  .append(&#34;g&#34;)&#xA;    .attr(&#34;transform&#34;,&#xA;          &#34;translate(&#34; + margin.left + &#34;,&#34; + margin.top + &#34;)&#34;);&#xA;&#xA;//Read the data&#xA;d3.csv(&#34;/assets/stacks-data-2023.csv&#34;,&#xA;&#xA;  // When reading the csv, I must format variables:&#xA;  function(d){&#xA;    return { date : d3.timeParse(&#34;%Y-%m&#34;)(d.month), unique : d.visitors, visits : d.visits, pages : d.pages }&#xA;  },&#xA;&#xA;  // Now I can use this dataset:&#xA;  function(data) {&#xA;&#xA;    // x axis&#xA;    var x = d3.scaleTime()&#xA;      .domain(d3.extent(data, function(d) { return d.date; }))&#xA;      .range([ 0, width ]);&#xA;    unique.append(&#34;g&#34;)&#xA;      .attr(&#34;transform&#34;, &#34;translate(0,&#34; + height + &#34;)&#34;)&#xA;      .call(d3.axisBottom(x));&#xA;    visits.append(&#34;g&#34;)&#xA;      .attr(&#34;transform&#34;, &#34;translate(0,&#34; + height + &#34;)&#34;)&#xA;      .call(d3.axisBottom(x));&#xA;    pages.append(&#34;g&#34;)&#xA;      .attr(&#34;transform&#34;, &#34;translate(0,&#34; + height + &#34;)&#34;)&#xA;      .call(d3.axisBottom(x));&#xA;&#xA;    // y axes&#xA;    var uniqueY = d3.scaleLinear()&#xA;      .domain([0, d3.max(data, function(d) { return +d.unique; })])&#xA;      .range([ height, 0 ]);&#xA;    unique.append(&#34;g&#34;)&#xA;      .call(d3.axisLeft(uniqueY));&#xA;    var visitsY = d3.scaleLinear()&#xA;      .domain([0, d3.max(data, function(d) { return +d.visits; })])&#xA;      .range([ height, 0 ]);&#xA;    visits.append(&#34;g&#34;)&#xA;      .call(d3.axisLeft(visitsY));&#xA;    var pagesY = d3.scaleLinear()&#xA;      .domain([0, d3.max(data, function(d) { return +d.pages; })])&#xA;      .range([ height, 0 ]);&#xA;    pages.append(&#34;g&#34;)&#xA;      .call(d3.axisLeft(pagesY));&#xA;&#xA;    // add the lines&#xA;    unique.append(&#34;path&#34;)&#xA;      .datum(data)&#xA;      .attr(&#34;fill&#34;, &#34;none&#34;)&#xA;      .attr(&#34;stroke&#34;, &#34;steelblue&#34;)&#xA;      .attr(&#34;stroke-width&#34;, 1.5)&#xA;      .attr(&#34;d&#34;, d3.line()&#xA;        .x(function(d) { return x(d.date) })&#xA;        .y(function(d) { return uniqueY(d.unique) })&#xA;      )&#xA;    visits.append(&#34;path&#34;)&#xA;      .datum(data)&#xA;      .attr(&#34;fill&#34;, &#34;none&#34;)&#xA;      .attr(&#34;stroke&#34;, &#34;steelblue&#34;)&#xA;      .attr(&#34;stroke-width&#34;, 1.5)&#xA;      .attr(&#34;d&#34;, d3.line()&#xA;        .x(function(d) { return x(d.date) })&#xA;        .y(function(d) { return visitsY(d.visits) })&#xA;      )&#xA;    pages.append(&#34;path&#34;)&#xA;      .datum(data)&#xA;      .attr(&#34;fill&#34;, &#34;none&#34;)&#xA;      .attr(&#34;stroke&#34;, &#34;steelblue&#34;)&#xA;      .attr(&#34;stroke-width&#34;, 1.5)&#xA;      .attr(&#34;d&#34;, d3.line()&#xA;        .x(function(d) { return x(d.date) })&#xA;        .y(function(d) { return pagesY(d.pages) })&#xA;      )&#xA;&#xA;    // add axis labels&#xA;    unique.append(&#34;text&#34;)&#xA;        .attr(&#34;transform&#34;, &#34;rotate(-90)&#34;)&#xA;        .attr(&#34;y&#34;, 0 - margin.left)&#xA;        .attr(&#34;x&#34;,0 - (height / 2))&#xA;        .attr(&#34;dy&#34;, &#34;1em&#34;)&#xA;        .style(&#34;text-anchor&#34;, &#34;middle&#34;)&#xA;        .text(&#34;Number of unique visitors per month&#34;);&#xA;    visits.append(&#34;text&#34;)&#xA;        .attr(&#34;transform&#34;, &#34;rotate(-90)&#34;)&#xA;        .attr(&#34;y&#34;, 0 - margin.left)&#xA;        .attr(&#34;x&#34;,0 - (height / 2))&#xA;        .attr(&#34;dy&#34;, &#34;1em&#34;)&#xA;        .style(&#34;text-anchor&#34;, &#34;middle&#34;)&#xA;        .text(&#34;Number of visits&#34;);&#xA;    pages.append(&#34;text&#34;)&#xA;        .attr(&#34;transform&#34;, &#34;rotate(-90)&#34;)&#xA;        .attr(&#34;y&#34;, 0 - margin.left)&#xA;        .attr(&#34;x&#34;,0 - (height / 2))&#xA;        .attr(&#34;dy&#34;, &#34;1em&#34;)&#xA;        .style(&#34;text-anchor&#34;, &#34;middle&#34;)&#xA;        .text(&#34;Number of pageviews&#34;);&#xA;&#xA;})&#xA;&lt;/script&gt;</description>
+    </item>
+    <item>
+      <title>Stacks Project Workshop 2023</title>
+      <link>https://pbelmans.ncag.info/blog/2022/12/08/spw-registration/</link>
+      <pubDate>Thu, 08 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2022/12/08/spw-registration/</guid>
+      <description>&lt;p&gt;Great news! There will be another Stacks Project Workshop in 2023, again in Ann Arbor like the 2017 edition.&lt;/p&gt;&#xA;&lt;p&gt;All information can be &lt;a href=&#34;https://stacks.github.io/&#34;&gt;found on the website&lt;/a&gt;, including the registration, which is open until &lt;strong&gt;February 15, 2023&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Stacks Project Expository Collection</title>
+      <link>https://pbelmans.ncag.info/blog/2022/07/24/spec/</link>
+      <pubDate>Sun, 24 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2022/07/24/spec/</guid>
+      <description>&lt;img src=&#34;https://pbelmans.ncag.info/assets/spec-cover.png&#34; style=&#34;float: right; margin: 0 0 5px 5px&#34; width=&#34;300&#34;&gt;&#xA;&lt;p&gt;Earlier this week we (= &lt;a href=&#34;http://www-personal.umich.edu/~weiho/&#34;&gt;Wei Ho&lt;/a&gt;, &lt;a href=&#34;https://www.math.columbia.edu/~dejong/&#34;&gt;Johan de Jong&lt;/a&gt; and I) sent the final version of &lt;strong&gt;&lt;a href=&#34;https://www.cambridge.org/core/books/stacks-project-expository-collection/433A8B918FB8FD11AA0E82C3E24E5B2D&#34;&gt;Stacks Project Expository Collection&lt;/a&gt;&lt;/strong&gt; to the publisher.&#xA;It is a collection of expository articles on modern topics in algebraic geometry (often featuring something stacky)&#xA;written by groups participating in the Stacks project workshops in 2017 and 2020.&#xA;It will be published by Cambridge University Press in the London Mathematical Society Lecture Note Series, number 480.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Interpreting skew conics</title>
+      <link>https://pbelmans.ncag.info/blog/2020/09/29/interpreting-skew-quadrics/</link>
+      <pubDate>Tue, 29 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/09/29/interpreting-skew-quadrics/</guid>
+      <description>&lt;p style=&#34;background-color: rgb(255, 243, 205); border: 1px solid rgb(255, 238, 186); padding: 10px;&#34;&gt;&#xA;  For a followup on the speculation in this post,&#xA;  see &lt;a href=&#34;https://pbelmans.ncag.info/blog/2024/10/11/new-paper-central-curves/&#34;&gt;New paper: Central curves on noncommutative surfaces&lt;/a&gt;.&#xA;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;In &lt;a href=&#34;https://pbelmans.ncag.info/blog/2020/08/11/fortnightly-links-111/&#34;&gt;the 111th installment of fortnightly links&lt;/a&gt; I mentioned &lt;a href=&#34;https://arxiv.org/abs/2008.02255v1&#34;&gt;Derived categories of skew quadric hypersurfaces&lt;/a&gt; by Kenta Ueyama. In this paper he discusses a class of noncommutative objects whose definition mimicks that of the usual quadrics, but the ambient space is now a certain skew noncommutative projective space. For this reason he calls them &lt;em&gt;skew quadrics&lt;/em&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New preprint: Graph potentials and moduli spaces of rank two bundles on a curve</title>
+      <link>https://pbelmans.ncag.info/blog/2020/09/14/new-preprint-graph-potentials/</link>
+      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/09/14/new-preprint-graph-potentials/</guid>
+      <description>&lt;p&gt;On Friday &lt;a href=&#34;https://users.mccme.ru/galkin/&#34;&gt;Sergey Galkin&lt;/a&gt;, &lt;a href=&#34;http://www.math.tifr.res.in/~swarnava/&#34;&gt;Swarnava Mukhopadhyay&lt;/a&gt; and I uploaded a preprint to the arXiv, titled &lt;a href=&#34;https://arxiv.org/abs/2009.05568&#34;&gt;Graph potentials and moduli spaces of rank two bundles on a curve&lt;/a&gt;. It&#39;s been in the works since 2018, so it&#39;s great to have it finally out!&lt;/p&gt;&#xA;&#xA;&lt;p&gt;The paper discusses aspects of mirror symmetry for an interesting class of Fano varieties: moduli of rank 2 bundles on curves of genus $g\geq 2$. As you can tell from the page count, this takes some work: we introduce a class of Laurent polynomials (the &lt;em&gt;graph potentials&lt;/em&gt; from the title), show that they have many interesting properties and that they are related to these Fano varieties via toric degenerations. This then allows us to conclude enumerative mirror symmetry in this case. Then we also use graph potentials to further study a conjecture on semiorthogonal decompositions for the derived categories of these Fano varieties, and give alternative geometric evidence for this conjecture.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Stacks project in Nieuw Archief voor Wiskunde</title>
+      <link>https://pbelmans.ncag.info/blog/2020/09/09/naw-stacks/</link>
+      <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/09/09/naw-stacks/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.math.columbia.edu/~dejong/&#34;&gt;Johan&lt;/a&gt; and I were invited to contribute an article about the Stacks project to &lt;a href=&#34;http://www.nieuwarchief.nl/&#34;&gt;Nieuw Archief voor Wiskunde&lt;/a&gt;, the journal of the Koninklijk Wiskundig Genootschap (Royal Mathematical Society), describing the project, its history, technical aspects and outlook. The article is not freely available on the webpage yet (all articles eventually become free for the public though), but I am allowed to share it on my webpage.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;So if you can read Dutch and want to learn more about the Stacks project, or if your Google Translate skills are on point, click on &lt;a href=&#34;https://pbelmans.ncag.info/assets/naw5-2020-21-3-167.pdf&#34;&gt;Het Stacks project&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New preprint: Indecomposability of derived categories in families</title>
+      <link>https://pbelmans.ncag.info/blog/2020/07/03/new-preprint-indecomposability/</link>
+      <pubDate>Fri, 03 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/07/03/new-preprint-indecomposability/</guid>
+      <description>&lt;p&gt;Yesterday &lt;a href=&#34;https://sites.google.com/site/francescobastianelli/home&#34;&gt;Francesco Bastianelli&lt;/a&gt;, &lt;a href=&#34;http://www4.math.sci.osaka-u.ac.jp/~okawa/&#34;&gt;Shinnosuke Okawa&lt;/a&gt;, &lt;a href=&#34;https://atricolfi.github.io/&#34;&gt;Andrea Ricolfi&lt;/a&gt; and I uploaded a preprint to the arXiv, titled &lt;a href=&#34;https://arxiv.org/abs/2007.00994&#34;&gt;Indecomposability of derived categories in families&lt;/a&gt;. In it we discuss how to check that a derived category of a smooth projective variety does not admit any semiorthogonal decompositions. Such varieties are &#34;atomic&#34; in a certain sense, and knowing when (not) to look for semiorthogonal decompositions is an important question.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;The main idea here is that decomposability is a property which can be extended (based on the ideas from &lt;a href=&#34;https://arxiv.org/abs/2002.03303&#34;&gt;arXiv:2002.03303&lt;/a&gt;, with a subset of the authors), so if you have a family of varieties which is indecomposable in a dense subset, then you know all members must be indecomposable.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New preprint: Derived categories of the Cayley plane and the coadjoint Grassmannian of type F</title>
+      <link>https://pbelmans.ncag.info/blog/2020/05/06/new-article-cayley-plane/</link>
+      <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/05/06/new-article-cayley-plane/</guid>
+      <description>&lt;p&gt;Yesterday &lt;a href=&#34;http://www.mi-ras.ru/~akuznet&#34;&gt;Sasha Kuznetsov&lt;/a&gt;, &lt;a href=&#34;https://msmirnov18.github.io&#34;&gt;Maxim Smirnov&lt;/a&gt; and I uploaded a preprint to the arXiv, titled &lt;a href=&#34;https://arxiv.org/abs/2005.01989&#34;&gt;Derived categories of the Cayley plane and the coadjoint Grassmannian of type F&lt;/a&gt;. In it we discuss the derived categories of two homogeneous varieties (in exceptional type): the Cayley plane $\mathrm{E}_6/\mathrm{P}_1$ and the coadjoint Grassmannian in type F, i.e. $\mathrm{F}_4/\mathrm{P}_4$. Here I am referring to Dynkin types, and maximal parabolic subgroups in the Bourbaki labelling.&lt;/p&gt;&#xA;&lt;p&gt;The variety $\mathrm{E}_6/\mathrm{P}_1$ is a smooth projective Fano variety of dimension 16 and index 12. The variety $\mathrm{F}_4/\mathrm{P}_4$ is a smooth projective Fano variety of dimension 15 and index 11. Conjecturally, every $G/P$ (of which these are 2 exceptional cases) has a full exceptional collection in its derived category.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Statistics for the Stacks project</title>
+      <link>https://pbelmans.ncag.info/blog/2020/04/09/view-stats-stacks-project/</link>
+      <pubDate>Thu, 09 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/04/09/view-stats-stacks-project/</guid>
+      <description>&lt;p&gt;A few weeks ago someone who shall not be named asked me about the viewer statistics for the Stacks project. When plotting these results, I realised that (aside from a major ego trip) it is also remarkably pleasant to look at graphs which somehow do not feature logarithmic scales and / or impending doom, so I decided to have 5 minutes of fun in &lt;a href=&#34;https://d3js.org/&#34;&gt;D3.js&lt;/a&gt; and share them.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;The most interesting one I think is the number of unique visitors (i.e. the number of unique IP&#39;s in the Apache access logs, which is as good as we can get the data). The growth is remarkably linear it seems, I actually expected the growth rate to have gone down over the years.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Belgian&amp;ndash;Dutch algebraic geometry day in Antwerp</title>
+      <link>https://pbelmans.ncag.info/blog/2019/10/07/bdag-antwerp/</link>
+      <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2019/10/07/bdag-antwerp/</guid>
+      <description>&lt;p&gt;The next edition of the Belgian&amp;ndash;Dutch algebraic geometry day will take place at my alma mater, the University of Antwerp, on November 8. The speakers are:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;Lie Fu, Université de Lyon and Radboud University&lt;/li&gt;&#xA;  &lt;li&gt;Špela Špenko, Université Libre de Bruxelles&lt;/li&gt;&#xA;  &lt;li&gt;Stefan Kebekus, Universität Freiburg&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;For all other information, check &lt;a href=&#34;https://www.math.ru.nl/~bmoonen/BNL.html&#34;&gt;the official webpage&lt;/a&gt;.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;small&gt;In fact, I have a 50% FWO appointment at the University of Antwerp starting October 1. This footnote serves as the public announcement of that I guess.&lt;/small&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Registration for the Stacks Project Workshop 2020</title>
+      <link>https://pbelmans.ncag.info/blog/2019/08/09/workshop-registration/</link>
+      <pubDate>Fri, 09 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2019/08/09/workshop-registration/</guid>
+      <description>&lt;p&gt;Quick update: the &lt;a href=&#34;https://stacks.github.io/&#34;&gt;registration for next year&#39;s Stacks Project Workshop&lt;/a&gt; is now open.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Stacks Project Workshop 2020: website</title>
+      <link>https://pbelmans.ncag.info/blog/2019/06/21/stacks-project-workshop-2020/</link>
+      <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2019/06/21/stacks-project-workshop-2020/</guid>
+      <description>&lt;p&gt;For those of you eagerly awaiting more information on the new Stacks Project Workshop, we&#39;ve put up &lt;a href=&#34;https://stacks.github.io/&#34;&gt;a new website&lt;/a&gt;.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;There&#39;s not much information yet, except a date, location and a preliminary list of mentors.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Stacks Project Workshop 2</title>
+      <link>https://pbelmans.ncag.info/blog/2019/05/24/stacks-project-workshop-2/</link>
+      <pubDate>Fri, 24 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2019/05/24/stacks-project-workshop-2/</guid>
+      <description>&lt;p&gt;In July or August 2020 &lt;a href=&#34;http://www.math.columbia.edu/~dejong/&#34;&gt;Johan de Jong&lt;/a&gt;, &lt;a href=&#34;http://math.lsa.umich.edu/~weiho/&#34;&gt;Wei Ho&lt;/a&gt;, and I will organise a workshop on algebraic geometry and the Stacks project, similar to the one we organised in 2017.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;See also &lt;a href=&#34;https://www.math.columbia.edu/~dejong/wordpress/?p=4410&#34;&gt;Johan&#39;s announcement&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Stacks project now uses HTTPS</title>
+      <link>https://pbelmans.ncag.info/blog/2017/09/11/https-stacks/</link>
+      <pubDate>Mon, 11 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2017/09/11/https-stacks/</guid>
+      <description>&lt;p&gt;Google has announced that it will &lt;a href=&#34;https://developers.google.com/web/updates/2016/10/avoid-not-secure-warn#long_term_-_use_https_everywhere&#34;&gt;display security warnings for all pages containing input forms&lt;/a&gt;. They already do this for input fields meant for passwords or credit card details, but in October it will apply to all possible input forms, and we have quite a few of those.&lt;/p&gt;&#xA;&lt;p&gt;To prevent Chrome from displaying warnings, we have now moved everything to HTTPS. There shouldn&#39;t be anything different, except that you see your browser stating that the website is served over a secure connection. Everything automatically redirects, so you don&#39;t have to do anything special.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Stacks project workshop: the aftermath</title>
+      <link>https://pbelmans.ncag.info/blog/2017/08/09/stacks-project-workshop-discussion/</link>
+      <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2017/08/09/stacks-project-workshop-discussion/</guid>
+      <description>&lt;p&gt;So, last week we had the &lt;a href=&#34;http://stacks.github.io&#34;&gt;Stacks project workshop&lt;/a&gt;. And it was fun!&lt;/p&gt;&#xA;&#xA;&lt;h3&gt;Mathematically&lt;/h3&gt;&#xA;&lt;p&gt;I think that participants enjoyed the setup of working in small groups on a specific topic, with the possibility that they could write up what they have learnt and put this in the Stacks project. Most of the topics were chosen with a somewhat easy inclusion in the Stacks project in mind, and at least two groups are publicly sharing their progress on this:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Summer school: Quadratic forms and local-global principles</title>
+      <link>https://pbelmans.ncag.info/blog/2017/02/27/algar/</link>
+      <pubDate>Mon, 27 Feb 2017 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2017/02/27/algar/</guid>
+      <description>&lt;p&gt;There will be an &lt;a href=&#34;https://www.uantwerpen.be/en/summer-schools/algar-2017/&#34;&gt;interesting summer school at the University of Antwerp, on quadratic forms and local-global principles&lt;/a&gt;. What is relevant to know, and which is not yet on the website (but it&#39;s on the poster in our hallway so I guess the information is neither secret nor unconfirmed) is the list of speakers:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;Asher Auel (Yale)&lt;/li&gt;&#xA;  &lt;li&gt;Raman Parimala (Emory)&lt;/li&gt;&#xA;  &lt;li&gt;Suresh Venapally (Emory)&lt;/li&gt;&#xA;  &lt;li&gt;Karim Johannes Becher (University of Antwerp)&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>One week left to register for the Stacks project workshop</title>
+      <link>https://pbelmans.ncag.info/blog/2017/01/25/registration-stacks-project-workshop/</link>
+      <pubDate>Wed, 25 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2017/01/25/registration-stacks-project-workshop/</guid>
+      <description>&lt;p&gt;If you are interested in attending the &lt;a href=&#34;https://stacks.github.io/&#34;&gt;Stacks project workshop&lt;/a&gt;, don&#39;t forget to register before January 31.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Registration for the Stacks Project Workshop</title>
+      <link>https://pbelmans.ncag.info/blog/2016/11/08/workshop-registration/</link>
+      <pubDate>Tue, 08 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/11/08/workshop-registration/</guid>
+      <description>&lt;p&gt;Another quick update: you can now apply for the &lt;a href=&#34;https://stacks.github.io&#34;&gt;Stacks Project Workshop&lt;/a&gt;!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>List of mentors for Stacks Project Workshop</title>
+      <link>https://pbelmans.ncag.info/blog/2016/10/05/speakers-for-stacks-project-workshop/</link>
+      <pubDate>Wed, 05 Oct 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/10/05/speakers-for-stacks-project-workshop/</guid>
+      <description>&lt;p&gt;Just a quick update: there is now a (preliminary) list of mentors available on the &lt;a href=&#34;https://stacks.github.io/&#34;&gt;website for the Stacks Project Workshop&lt;/a&gt;. It looks awesome, and if you are interested in attending you can still let us know what you would like to see at the workshop, by filling out the form on the website.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Stacks Project Workshop</title>
+      <link>https://pbelmans.ncag.info/blog/2016/09/06/stacks-project-workshop/</link>
+      <pubDate>Tue, 06 Sep 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/09/06/stacks-project-workshop/</guid>
+      <description>&lt;p&gt;Next summer sometime in July or August &lt;a href=&#34;http://www.math.columbia.edu/~dejong/&#34;&gt;Johan de Jong&lt;/a&gt;, &lt;a href=&#34;http://math.lsa.umich.edu/~weiho/&#34;&gt;Wei Ho&lt;/a&gt;, and I will organise a workshop on algebraic geometry and the Stacks project. Please go to the &lt;a href=&#34;https://stacks.github.io/&#34;&gt;workshop webpage&lt;/a&gt; for more information (not a lot there yet) and to pre-register.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;See also &lt;a href=&#34;http://math.columbia.edu/~dejong/wordpress/?p=4143&#34;&gt;Johan&#39;s announcement&lt;/a&gt;, which is exactly the same as this except for a permutation of the organisers.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

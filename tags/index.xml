@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Pieter Belmans</title>
+    <link>https://pbelmans.ncag.info/tags/</link>
+    <description>Recent content in Tags on Pieter Belmans</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 17 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://pbelmans.ncag.info/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Algebraic Geometry</title>
+      <link>https://pbelmans.ncag.info/tags/algebraic-geometry/</link>
+      <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/tags/algebraic-geometry/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programming</title>
+      <link>https://pbelmans.ncag.info/tags/programming/</link>
+      <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/tags/programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fortnightly Links</title>
+      <link>https://pbelmans.ncag.info/tags/fortnightly-links/</link>
+      <pubDate>Tue, 05 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/tags/fortnightly-links/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Stacks Project</title>
+      <link>https://pbelmans.ncag.info/tags/Stacks-project/</link>
+      <pubDate>Wed, 16 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/tags/Stacks-project/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Teaching</title>
+      <link>https://pbelmans.ncag.info/tags/teaching/</link>
+      <pubDate>Mon, 09 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/tags/teaching/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fano</title>
+      <link>https://pbelmans.ncag.info/tags/Fano/</link>
+      <pubDate>Sun, 18 Mar 2018 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/tags/Fano/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fugue</title>
+      <link>https://pbelmans.ncag.info/tags/fugue/</link>
+      <pubDate>Sat, 20 May 2017 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/tags/fugue/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Meta</title>
+      <link>https://pbelmans.ncag.info/tags/meta/</link>
+      <pubDate>Mon, 27 Feb 2017 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/tags/meta/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ANAGRAMS</title>
+      <link>https://pbelmans.ncag.info/tags/ANAGRAMS/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/tags/ANAGRAMS/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

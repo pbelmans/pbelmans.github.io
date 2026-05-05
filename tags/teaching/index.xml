@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Teaching on Pieter Belmans</title>
+    <link>https://pbelmans.ncag.info/tags/teaching/</link>
+    <description>Recent content in Teaching on Pieter Belmans</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 09 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://pbelmans.ncag.info/tags/teaching/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My course on Hochschild (co)homology starts tomorrow</title>
+      <link>https://pbelmans.ncag.info/blog/2018/04/09/start-of-course/</link>
+      <pubDate>Mon, 09 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2018/04/09/start-of-course/</guid>
+      <description>&lt;p&gt;If you happen to be in the Bonn area, and you want to learn a thing or two about Hochschild (co)homology, let me remind you that &lt;a href=&#34;https://pbelmans.ncag.info/teaching/hh-2018&#34;&gt;my course&lt;/a&gt; is starting tomorrow.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;If you don&#39;t happen to be in the Bonn area, or there is some reason why you cannot be in the lectures, there will be lecture notes. The first part of these should be online in a few days&#39; time.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Course announcement: Hochschild (co)homology</title>
+      <link>https://pbelmans.ncag.info/blog/2018/02/01/course-announcement/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2018/02/01/course-announcement/</guid>
+      <description>&lt;p&gt;I will be teaching a course on Hochschild (co)homology next semester, which in the German system means from April to July. It&#39;ll run for 15 weeks, with 1.5 hour lectures on Tuesday and Wednesday. For more information I created a &lt;a href=&#34;https://pbelmans.ncag.info/teaching/hh-2018&#34;&gt;dedicated page&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;I might discuss certain things regarding the course on my blog. In any case, I will write lecture notes, which I will post here.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LaTeX on Pieter Belmans</title>
+    <link>https://pbelmans.ncag.info/categories/LaTeX/</link>
+    <description>Recent content in LaTeX on Pieter Belmans</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 14 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://pbelmans.ncag.info/categories/LaTeX/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A new version of bibgetter</title>
+      <link>https://pbelmans.ncag.info/blog/2025/01/14/bibgetter-v2/</link>
+      <pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2025/01/14/bibgetter-v2/</guid>
+      <description>&lt;p&gt;More than 8 years ago &lt;a href=&#34;https://pbelmans.ncag.info/blog/2016/11/05/bibgetter/&#34;&gt;I created bibgetter&lt;/a&gt;,&#xA;a tool that fitted perfectly in my workflow of dealing with bibliographies in LaTeX,&#xA;which is a combination of citing arXiv preprints, papers with MathSciNet entries, and a few other things.&#xA;I imagine that your workflow might be very different,&#xA;and maybe you are looking for something like &lt;a href=&#34;https://github.com/alexrutar/mathbib-py&#34;&gt;mathbib&lt;/a&gt; instead.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;So, about bibgetter.&#xA;After the MathSciNet update a few years back it stopped working.&#xA;I had some fun earlier this month, and now:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Introducing The Moduli Space</title>
+      <link>https://pbelmans.ncag.info/blog/2021/01/13/themodulispace/</link>
+      <pubDate>Wed, 13 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2021/01/13/themodulispace/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://as.cornell.edu/daniel-halpern-leistner&#34;&gt;Dan Halpern-Leistner&lt;/a&gt; is now also using the Gerby framework, to make his lecture notes on moduli theory available.&lt;/p&gt;&#xA;&lt;p&gt;Go read &lt;a href=&#34;https://book.themoduli.space&#34;&gt;The Moduli Space&lt;/a&gt;, it&#39;s exciting stuff!&lt;/p&gt;&#xA;&lt;p&gt;&lt;small&gt;Let me know if you find any website-related issues.&lt;/small&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Recent CTAN additions: dynkin-diagrams, rank-2-roots</title>
+      <link>https://pbelmans.ncag.info/blog/2018/12/05/recent-ctan-additions-1/</link>
+      <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2018/12/05/recent-ctan-additions-1/</guid>
+      <description>&lt;p&gt;I just ran into 2 very interesting new LaTeX packages:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;&lt;a href=&#34;https://ctan.org/pkg/dynkin-diagrams&#34;&gt;&lt;var&gt;dynkin-diagrams&lt;/var&gt;&lt;/a&gt;&lt;/li&gt;&#xA;  &lt;li&gt;&lt;a href=&#34;https://ctan.org/pkg/rank-2-roots&#34;&gt;&lt;var&gt;rank-2-roots&lt;/var&gt;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Both are by Ben McKay, and make writing something involving root systems or Dynkin diagrams &lt;strong&gt;much&lt;/strong&gt; easier. The first package allows one to systematically draw all kinds of variations on Dynkin diagrams using a very powerful syntax, whilst the other makes drawing rank 2 root diagrams a walk in the park. I strongly suggest you take a look at the examples in the documentation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Introducing Kerodon</title>
+      <link>https://pbelmans.ncag.info/blog/2018/10/17/kerodon/</link>
+      <pubDate>Wed, 17 Oct 2018 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2018/10/17/kerodon/</guid>
+      <description>&lt;p&gt;For the new Stacks project website I created &lt;a href=&#34;https://gerby-project.github.io/&#34;&gt;Gerby&lt;/a&gt;, a combination of a plasTeX fork and a Flask website to create online views for large LaTeX documents with a permanent reference system (also known as tags). From the beginning we intended it to be applicable to at least 1 other project: an online view for the works of &lt;a href=&#34;http://www.math.harvard.edu/~lurie/&#34;&gt;Jacob Lurie&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;This is now live, as &lt;strong&gt;&lt;a href=&#34;https://kerodon.net&#34;&gt;Kerodon&lt;/a&gt;&lt;/strong&gt;. Currently it contains 1 chapter: &lt;a href=&#34;https://kerodon.net/tag/0001&#34;&gt;The Language of $\infty$-Categories&lt;/a&gt;. Gradually this will increase, as more material is prepared to be included in Kerodon.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A new website for the Stacks project (2)</title>
+      <link>https://pbelmans.ncag.info/blog/2018/05/21/new-stacks-project/</link>
+      <pubDate>Mon, 21 May 2018 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2018/05/21/new-stacks-project/</guid>
+      <description>&lt;p&gt;Almost 6 years ago, I wrote a blogpost &lt;a href=&#34;https://pbelmans.ncag.info/blog/2012/07/19/a-new-website-for-the-stacks-project/&#34;&gt;A new website for the Stacks project&lt;/a&gt; announcing the first version of the Stacks project website. Today v2 has been released, see &lt;a href=&#34;https://stacks.math.columbia.edu&#34;&gt;&lt;var&gt;stacks.math.columbia.edu&lt;/var&gt;&lt;/a&gt;.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;I would like to thank &lt;a href=&#34;http://chngr.github.io&#34;&gt;Raymond Cheng&lt;/a&gt; and &lt;a href=&#34;http://www.math.columbia.edu/~dejong/&#34;&gt;Johan de Jong&lt;/a&gt; for the hard work we&#39;ve done together, and &lt;a href=&#34;http://www.math.columbia.edu/~woit/wordpress/&#34;&gt;Peter Woit&lt;/a&gt; for helping us with the server administration.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;The main point of the new website as a user is that it is &lt;em&gt;mobile-friendly&lt;/em&gt;. It should look good on tablets and smartphones, and if it doesn&#39;t, please tell us.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Improved open and closed immersions in tikz-cd</title>
+      <link>https://pbelmans.ncag.info/blog/2016/11/30/improved-open-and-closed-immersions-in-tikz-cd/</link>
+      <pubDate>Wed, 30 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/11/30/improved-open-and-closed-immersions-in-tikz-cd/</guid>
+      <description>&lt;p&gt;A long time ago, &lt;a href=&#34;https://pbelmans.ncag.info/blog/2013/03/13/open-and-closed-immersions-in-tikz-cd/&#34;&gt;I explained how to draw arrows for open and closed immersions in &lt;code&gt;tikz-cd&lt;/code&gt;&lt;/a&gt;. Back then I already mentioned that my solution is not completely satisfactory. &lt;a href=&#34;http://haoyun.github.io/&#34;&gt;Yun Hao&lt;/a&gt; took up the challenge, and significantly improved my implementation.&lt;/p&gt;&#xA;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;\usetikzlibrary&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;decorations.markings&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;\makeatletter&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;\tikzcdset&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  open/.code     = &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\tikzcdset&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;hook, circled&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  closed/.code   = &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\tikzcdset&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;hook, slashed&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  open&amp;#39;/.code    = &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\tikzcdset&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;hook&amp;#39;, circled&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  closed&amp;#39;/.code  = &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\tikzcdset&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;hook&amp;#39;, slashed&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  circled/.code  = &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\tikzcdset&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;markwith = &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\draw&lt;/span&gt; (0,0) circle (.375ex);&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt;;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  slashed/.code  = &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\tikzcdset&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;markwith = &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\draw&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[-]&lt;/span&gt; (-.4ex,-.4ex) -- (.4ex,.4ex);&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt;;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  markwith/.code =&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;\pgfutil&lt;/span&gt;@ifundefined&lt;span class=&#34;c&#34;&gt;%&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tikz@library@decorations.markings@loaded&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;%&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\pgfutil&lt;/span&gt;@packageerror&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tikz-cd&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;You need to say &lt;span class=&#34;c&#34;&gt;%&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;k&#34;&gt;\string\usetikzlibrary&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;decorations.markings&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; to use arrows with markings&lt;span class=&#34;nb&#34;&gt;}{}}{}&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;%&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;\pgfkeysalso&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;/tikz/postaction = &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      /tikz/decorate,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      /tikz/decoration=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;markings, mark = at position 0.5 with &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;#1&lt;span class=&#34;nb&#34;&gt;}}}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;\makeatother&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xA;&#xA;&lt;p&gt;&lt;a href=&#34;https://gist.github.com/pbelmans/20feef4708b72736187c1deef724cd9c&#34;&gt;His example&lt;/a&gt; produces the following result.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Announcing bibgetter</title>
+      <link>https://pbelmans.ncag.info/blog/2016/11/05/bibgetter/</link>
+      <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/11/05/bibgetter/</guid>
+      <description>&lt;p&gt;The weather is turning grim, hence a good way of spending Saturday afternoons is by programming. I just created a new tool: &lt;a href=&#34;https://bibgetter.github.io/&#34;&gt;&lt;code&gt;bibgetter&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;I don&#39;t like managing references, for many reasons. Because of this I created &lt;a href=&#34;https://github.com/pbelmans/mscget&#34;&gt;a tool to fetch BibTeX entries from MathSciNet&lt;/a&gt; a little while ago. It seems like I never really announced it on my blog, but I found it to be very convenient even if it was only quickly hacked together. I&#39;m not sure where it stood on the &lt;a href=&#34;https://xkcd.com/1205/&#34;&gt;xkcd: is it worth your time?&lt;/a&gt; table, but I liked using this first version.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Aligning table columns on a mathematical operator</title>
+      <link>https://pbelmans.ncag.info/blog/2016/10/24/aligning-tables-mathematical-operators/</link>
+      <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/10/24/aligning-tables-mathematical-operators/</guid>
+      <description>&lt;p&gt;This is a little LaTeX hack that I would like to document. For something that I am writing right now I have a big table, where one column contains a certain abelian group. All these groups are direct sums of two other abelian groups. Wouldn&#39;t it be nice if the column was aligned on the $\oplus$? At the end of this post there is a comparison to see what I mean in practice.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>texloganalyser</title>
+      <link>https://pbelmans.ncag.info/blog/2015/12/22/texloganalyser/</link>
+      <pubDate>Tue, 22 Dec 2015 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2015/12/22/texloganalyser/</guid>
+      <description>&lt;p&gt;I was doing a bit of LaTeX this morning, and whilst fixing broken references I thought that there should be a better way to navigate the log files that &lt;var&gt;pdflatex&lt;/var&gt; creates. And luckily some smart people have already implemented various tools to do so. Browsing CTAN I came across &lt;a href=&#34;https://www.ctan.org/tex-archive/support/texloganalyser&#34;&gt;&lt;var&gt;texloganalyser&lt;/var&gt;&lt;/a&gt;, which does a pretty good job at what I had in mind. Go check it out!&lt;/p&gt;&#xA;&lt;p&gt;tl;dr: Run &lt;code&gt;texloganalyser -ahouvw&lt;/code&gt; on your log file. These are the options I find the most relevant.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>On &#34;Towards MathJax 3.0&#34;</title>
+      <link>https://pbelmans.ncag.info/blog/2015/12/21/on-towards-mathjax-3-0/</link>
+      <pubDate>Mon, 21 Dec 2015 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2015/12/21/on-towards-mathjax-3-0/</guid>
+      <description>&lt;p&gt;A few days ago the MathJax consortium &lt;a href=&#34;https://www.mathjax.org/whitepaper-towards-mathjax-v3/&#34;&gt;released&lt;/a&gt; a white paper called &#34;&lt;a href=&#34;http://mathjax.github.io/papers/towards-v3/towards-mathjax-v3.html&#34;&gt;Towards MathJax 3.0&lt;/a&gt;&#34; (&lt;a href=&#34;http://mathjax.github.io/papers/towards-v3/towards-mathjax-v3.pdf&#34;&gt;pdf&lt;/a&gt;). With my sinuses again in a reasonable condition I decided to read it, and see what it means for the average user. If you are an average user but don&#39;t care about why things are the way they are, you can skip to the &lt;a href=&#34;#changes&#34;&gt;changes&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h2&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;The question that is answered is:&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;&#34;What do we expect from MathJax 3.0?&#34;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New feature for the Stacks project: detailed tag edits</title>
+      <link>https://pbelmans.ncag.info/blog/2015/07/01/new-feature-for-the-stacks-project-detailed-tag-edits/</link>
+      <pubDate>Wed, 01 Jul 2015 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2015/07/01/new-feature-for-the-stacks-project-detailed-tag-edits/</guid>
+      <description>&lt;p&gt;Because of the heat wave currently keeping Belgium in its grip (preventing me from doing research...) I decided to finally make the last fixes for a new feature for the Stacks project that has been in the make now for a while: detailed tag edits.&lt;/p&gt;&#xA;&lt;p&gt;Git has a feature called &lt;a href=&#34;http://git-scm.com/docs/git-blame&#34;&gt;&lt;code&gt;git blame&lt;/code&gt;&lt;/a&gt;, that tells you when a certain line in a file was last edited and by whom. Starting from this idea Johan has built &lt;a href=&#34;https://github.com/stacks/stacks-history&#34;&gt;&lt;code&gt;stacks-history&lt;/code&gt;&lt;/a&gt; that collects all this information throughout the lifetime of the Stacks project for all tags. If you add a little processing code to get this in the database in a meaningful format and some new website code, and you can check exactly when a tag has been changed!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Nitpicking on Čech cohomology notation</title>
+      <link>https://pbelmans.ncag.info/blog/2014/11/24/nitpicking-cech-cohomology/</link>
+      <pubDate>Mon, 24 Nov 2014 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2014/11/24/nitpicking-cech-cohomology/</guid>
+      <description>&lt;p&gt;A long time ago I wrote about how to &lt;a href=&#34;https://pbelmans.ncag.info/blog/2012/03/29/how-to-write-cech-cohomology-groups-in-latex/&#34;&gt;produce Čech cohomology groups in LaTeX&lt;/a&gt;, while in the &lt;a href=&#34;https://pbelmans.wordpress.com/2014/11/23/adding-an-equation-to-the-table-of-contents/&#34;&gt;previous post&lt;/a&gt; there is the Čech-to-derived spectral sequence making an appearance, and when I took the first screenshot in that blogpost I realised there was something wrong with the positioning of the exponent. Compare:&lt;/p&gt;&#xA;&#xA;&lt;p style=&#34;text-align: center;&#34;&gt;&lt;img src=&#34;https://pbelmans.ncag.info/assets/cech-bad.png&#34; alt=&#34;Positioning of the exponent in Cech cohomology: bad&#34;&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;to&lt;/p&gt;&#xA;&#xA;&lt;p style=&#34;text-align: center;&#34;&gt;&lt;img src=&#34;https://pbelmans.ncag.info/assets/cech-good.png&#34; alt=&#34;Positioning of the exponent in Cech cohomology: good&#34;&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;The first one is the naive approach, obtained by using&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Adding an equation to the table of contents</title>
+      <link>https://pbelmans.ncag.info/blog/2014/11/23/adding-an-equation-to-the-table-of-contents/</link>
+      <pubDate>Sun, 23 Nov 2014 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2014/11/23/adding-an-equation-to-the-table-of-contents/</guid>
+      <description>&lt;p&gt;Next week I&#39;ll be giving a lecture on spectral sequences in algebraic geometry, and in the notes I&#39;m preparing I wanted to put the spectral sequence below the title of the corresponding section in the table of contents. The &lt;code&gt;\addcontentsline&lt;/code&gt; command was known to me, but &lt;code&gt;\addtocontents&lt;/code&gt; wasn&#39;t, and there is one caveat in using it: you need to make sure you put &lt;code&gt;\par&lt;/code&gt; at the end of the what you are adding (if it is actual text), forcing the next item to get its own paragraph.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How do I properly cite a preprint in `biblatex`?</title>
+      <link>https://pbelmans.ncag.info/blog/2014/11/11/how-do-i-properly-cite-a-preprint-in-biblatex/</link>
+      <pubDate>Tue, 11 Nov 2014 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2014/11/11/how-do-i-properly-cite-a-preprint-in-biblatex/</guid>
+      <description>&lt;p&gt;This question has been nagging me for a while, and thanks to TeX - LaTeX Stack Exchange I have found an answer: &lt;a href=&#34;http://tex.stackexchange.com/a/50039&#34;&gt;Audrey&#39;s answer to the question &lt;q&gt;What should BibTeX for arXiv entries look like?&lt;/q&gt;&lt;/a&gt; references the file &lt;a href=&#34;http://archive.cs.uu.nl/mirror/CTAN/macros/latex/contrib/biblatex/doc/examples/biblatex-examples.bib&#34;&gt;&lt;code&gt;biblatex-examples.bib&lt;/code&gt;&lt;/a&gt; where the entries &lt;code&gt;baez/article&lt;/code&gt; and &lt;code&gt;baez/online&lt;/code&gt; indicate how it should be done. If you are referencing an article, which also has a preprint, it should be like (this part I knew)&lt;/p&gt;&#xA;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bibtex&#34; data-lang=&#34;bibtex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nc&#34;&gt;@article&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;baez/article&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;author&lt;/span&gt;       &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{Baez, John C. and Lauda, Aaron D.}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;title&lt;/span&gt;        &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{Higher-Dimensional Algebra V: 2-Groups}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;journaltitle&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{Theory and Applications of Categories}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;date&lt;/span&gt;         &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2004&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;volume&lt;/span&gt;       &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;pages&lt;/span&gt;        &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{423-491}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;version&lt;/span&gt;      &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;eprint&lt;/span&gt;       &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{math/0307200v3}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;eprinttype&lt;/span&gt;   &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{arxiv}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;langid&lt;/span&gt;       &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{english}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;langidopts&lt;/span&gt;   &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{variant=american}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;annotation&lt;/span&gt;   &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{An \texttt{article} with \texttt{eprint} and&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;                  \texttt{eprinttype} fields. Note that the arXiv reference is&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;                  transformed into a clickable link if \texttt{hyperref} support&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;                  has been enabled.  Compare \texttt{baez\slash online}, which&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;                  is the same item given as an \texttt{online} entry}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xA;&#xA;&lt;p&gt;and if it&#39;s only a preprint without a published version (and not occurring in some conference proceedings or something), one uses the &lt;code&gt;@online&lt;/code&gt; field (which settles my questions)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>TikZ workshop: the slides</title>
+      <link>https://pbelmans.ncag.info/blog/2014/04/25/tikz-workshop-the-slides/</link>
+      <pubDate>Fri, 25 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2014/04/25/tikz-workshop-the-slides/</guid>
+      <description>&lt;p&gt;Yesterday I gave the TikZ workshop &lt;a href=&#34;https://pbelmans.ncag.info/blog/2014/04/24/announcement-tikz-workshop/&#34;&gt;announced in the previous post&lt;/a&gt;. I liked it, I hope the same applies to the people in the audience. It certainly wasn&#39;t intended as a thorough introduction to the intricacies of the TikZ syntax, more a &#34;learn to use these resources&#34;, a show-off of what is possible, and a freewheeling through some examples allowing me to explain some of the important things in creating TikZ / pgfplots figures.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Announcement: TikZ workshop</title>
+      <link>https://pbelmans.ncag.info/blog/2014/04/24/announcement-tikz-workshop/</link>
+      <pubDate>Thu, 24 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2014/04/24/announcement-tikz-workshop/</guid>
+      <description>&lt;p&gt;I should&#39;ve made this announcement sooner, but today I am giving an introductory workshop to TikZ (and friends). It is organised by my friends of &lt;a href=&#34;http://prime.ugent.be/&#34;&gt;PRIME&lt;/a&gt; and takes place today (Thursday, April 24) at 17h30 in room Turing, of building S9 on the Sterre campus of Ghent University. Everyone can attend, but it will be in Dutch. Afterwards I will post the slides online.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New feature for the Stacks project: references</title>
+      <link>https://pbelmans.ncag.info/blog/2014/04/03/new-feature-for-the-stacks-project-references/</link>
+      <pubDate>Thu, 03 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2014/04/03/new-feature-for-the-stacks-project-references/</guid>
+      <description>&lt;p&gt;I accidentally published a draft of a post, so in case you are confused about where it has gone, you will see it soon.&lt;/p&gt;&#xA;&lt;p&gt;More interesting news is that we have developed &lt;a href=&#34;http://math.columbia.edu/~dejong/wordpress/?p=3669&#34;&gt;a new feature for the Stacks project&lt;/a&gt;. It is now possible to add references to the literature, as outlined in &lt;a href=&#34;http://math.columbia.edu/~dejong/wordpress/?p=3643&#34;&gt;References, slogans and history&lt;/a&gt;. You will see it live later today. With this functionality in place, implementing slogans and history is a piece of cake. To see it in action, check out &lt;a href=&#34;http://stacks.math.columbia.edu/tag/001P&#34;&gt;tag 001P&lt;/a&gt; (also called Nakayama&#39;s lemma).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A new website for the Stacks project: the sequel</title>
+      <link>https://pbelmans.ncag.info/blog/2013/07/30/a-new-website-for-the-stacks-project-the-sequel/</link>
+      <pubDate>Tue, 30 Jul 2013 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2013/07/30/a-new-website-for-the-stacks-project-the-sequel/</guid>
+      <description>&lt;p&gt;If you think it has been awfully quiet on my weblog, you are correct. Three reasons: graduating, and sheer laziness. The third? Our new baby!&lt;/p&gt;&#xA;&lt;p&gt;Little over a year ago I wrote a post with a remarkably similar title: &lt;a href=&#39;https://pbelmans.ncag.info/blog/2012/07/19/a-new-website-for-the-stacks-project/&#39;&gt;A new website for the Stacks project&lt;/a&gt;. The last couple of months Johan and I have been working on a new version of the Stacks project website, and this morning we have finally released it!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Open and closed immersions in tikz-cd</title>
+      <link>https://pbelmans.ncag.info/blog/2013/03/13/open-and-closed-immersions-in-tikz-cd/</link>
+      <pubDate>Wed, 13 Mar 2013 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2013/03/13/open-and-closed-immersions-in-tikz-cd/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;&lt;ins&gt;&lt;a href=&#34;https://pbelmans.ncag.info/blog/2016/11/30/improved-open-and-closed-immersions-in-tikz-cd/&#34;&gt;Yun Hao has provided a prettier solution&lt;/a&gt;. Go check it out!&lt;/ins&gt;&lt;/strong&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;I don&#39;t know whether it&#39;s common in other parts of the world, but in France one often (or rather: always) denotes an open or closed immersion by drawing a circle or a slash on the hooked arrow. A bad impression hacked together in plain LaTeX would be $\hookrightarrow\!\!\!\!\!\circ$ and $\hookrightarrow\!\!\!\!\!/$.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;Now to define the six functors formalism we have a scheme $X$, a closed subscheme $Z$ and an open subscheme $U$ such that on the level of the underlying sets our big scheme is the disjoint union. In order to write this using &lt;a href=&#34;http://ctan.org/pkg/tikz-cd&#34;&gt;&lt;code&gt;tikz-cd&lt;/code&gt;&lt;/a&gt;, which is an excellent package to write commutative diagrams, a bit of effort is needed. We define the appropriate arrow styles by&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Categories for todos</title>
+      <link>https://pbelmans.ncag.info/blog/2013/02/04/categories-for-todos/</link>
+      <pubDate>Mon, 04 Feb 2013 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2013/02/04/categories-for-todos/</guid>
+      <description>&lt;p&gt;It has been a while since I actively used TeX and encountered interesting issues, but as the work on my Master thesis has finally started I am again TeX&#39;ing. It feels great!&lt;/p&gt;&#xA;&lt;p&gt;The &lt;code&gt;&lt;a href=&#34;http://ctan.org/pkg/todonotes&#34;&gt;todonotes&lt;/a&gt;&lt;/code&gt; package is a great tool if you&#39;re as disorganized as I am, whenever I have a random idea, or don&#39;t feel like finishing something or don&#39;t want to add the correct citation, etc. I add a &lt;code&gt;\todo{}&lt;/code&gt; and postpone the work. Postponing is good.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>An online bibliography for the Stacks project</title>
+      <link>https://pbelmans.ncag.info/blog/2013/01/07/an-online-bibliography-for-the-stacks-project/</link>
+      <pubDate>Mon, 07 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2013/01/07/an-online-bibliography-for-the-stacks-project/</guid>
+      <description>&lt;p&gt;Ever found yourself browsing the &lt;a href=&#34;http://stacks.math.columbia.edu&#34;&gt;Stacks project&lt;/a&gt; and encountering a citation? I did, and I found it quite annoying that I couldn&#39;t get any information, unless I opened the bibliography file and started looking for the reference. Not really user-friendly... So I decided to implement an online bibliography :).&lt;/p&gt;&#xA;&lt;p&gt;The &lt;a href=&#34;http://stacks.math.columbia.edu/bibliography&#34;&gt;bibliography overview page&lt;/a&gt; contains all items from the bibliography, and whenever a work is cited in the text, see for instance &lt;a href=&#34;http://stacks.math.columbia.edu/tag/03B3&#34;&gt;tag 03B3&lt;/a&gt; you get a link to the page of that particular item.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Online view for the Stacks project</title>
+      <link>https://pbelmans.ncag.info/blog/2012/12/15/online-view-for-the-stacks-project/</link>
+      <pubDate>Sat, 15 Dec 2012 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2012/12/15/online-view-for-the-stacks-project/</guid>
+      <description>&lt;p&gt;First I am silent for exactly 3 months, now 2 blog posts in two days. But I can make the interesting announcement I promised yesterday.&lt;/p&gt;&#xA;&lt;p&gt;During the summer I created a new website for the &lt;a href=&#34;http://stacks.math.columbia.edu/&#34;&gt;Stacks project&lt;/a&gt; (&lt;a href=&#34;https://pbelmans.ncag.info/blog/2012/07/19/a-new-website-for-the-stacks-project/&#34;&gt;my announcement&lt;/a&gt;, &lt;a href=&#34;http://math.columbia.edu/~dejong/wordpress/?p=2641&#34;&gt;official announcement&lt;/a&gt;). At that moment we&#39;ve toyed with the idea of making a full-fledged online view, but the lack of a good &lt;code&gt;xypic&lt;/code&gt; parser made this impossible. And what would the Stacks project be without commutative diagrams? At that point &lt;a href=&#34;https://github.com/sonoisa/XyJax&#34;&gt;XyJax&lt;/a&gt; was already around, but it was incapable of rendering commutative diagrams, and it was inactive. Yet a few months ago it became active again, and after a request the developer implemented commutative diagrams (thank you!).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A new website for the Stacks project</title>
+      <link>https://pbelmans.ncag.info/blog/2012/07/19/a-new-website-for-the-stacks-project/</link>
+      <pubDate>Thu, 19 Jul 2012 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2012/07/19/a-new-website-for-the-stacks-project/</guid>
+      <description>&lt;p&gt;I am happy to announce you the &lt;a href=&#34;http://stacks.math.columbia.edu/&#34;&gt;new website for the Stacks project&lt;/a&gt;. For those of you who are not familiar the Stacks project:&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;It is an open source textbook and reference work on algebraic stacks and the algebraic geometry needed to define them.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://pbelmans.ncag.info/blog/2010/11/08/the-stacks-project/&#34;&gt;A long time ago I wrote about the Stacks project&lt;/a&gt;, when I just discovered it. Back then I didn&#39;t know what a scheme is let alone a stack. And right now I still don&#39;t know what a stack is. But as you might guess my contribution is the new website, not some chapter on those &lt;a href=&#34;http://stacks.math.columbia.edu/chapter/64&#34;&gt;mysterious algebraic stacks&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why should I be using TeX for graphics?</title>
+      <link>https://pbelmans.ncag.info/blog/2012/06/19/why-should-i-be-using-tex-for-graphics/</link>
+      <pubDate>Tue, 19 Jun 2012 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2012/06/19/why-should-i-be-using-tex-for-graphics/</guid>
+      <description>&lt;p&gt;As part of the &lt;a href=&#34;http://latex-community.org/component/content/article/92-contests/431-gnuplot-book&#34;&gt;LaTeX and Graphics contest&lt;/a&gt; currently active at &lt;a href=&#34;http://latex-community.org&#34;&gt;LaTeX-Community&lt;/a&gt; I have written an article about my view on the current state of TeX and graphics. Maybe I will eventually crosspost it to my weblog in one form or another, but for the moment you can read it there: &lt;a href=&#34;http://latex-community.org/component/content/article/50-latex-graphics-figures-tables/436-graphics-tools&#34;&gt;Why should I be using TeX for graphics?&lt;/a&gt; Check out the others too, an overview is given at the bottom of the &lt;a href=&#34;http://latex-community.org/component/content/article/92-contests/431-gnuplot-book&#34;&gt;overview post&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A Pygments lexer for GAP</title>
+      <link>https://pbelmans.ncag.info/blog/2012/04/20/a-pygments-lexer-for-gap/</link>
+      <pubDate>Fri, 20 Apr 2012 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2012/04/20/a-pygments-lexer-for-gap/</guid>
+      <description>&lt;p&gt;In case you haven&#39;t heard of one of the most awesome LaTeX packages ever, let me introduce to you: &lt;a href=&#34;http://ctan.org/pkg/minted&#34;&gt;minted&lt;/a&gt;. It&#39;s a package to create listings (code snippets, preferably with highlighting, line numbering etc.), but it goes much further than the more well-known package &lt;a href=&#34;http://ctan.org/pkg/listings&#34;&gt;listings&lt;/a&gt;. A small example:&lt;br&gt;&#xA;&lt;img src=&#34;https://pbelmans.ncag.info/assets/7sGrC.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;&#xA;Its awesomeness comes at a cost though, it relies heavily on an external Python program called &lt;a href=&#34;http://pygments.org&#34;&gt;Pygments&lt;/a&gt;. This is a generic tool for highlighting, regardless of output format. It can produce &lt;a href=&#34;http://pygments.org/docs/formatters/&#34;&gt;TeX, HTML, images, ...&lt;/a&gt;. And it comes equipped with a load of &lt;a href=&#34;http://pygments.org/languages/&#34;&gt;supported languages&lt;/a&gt;. And if you&#39;ve read the title you might guess what this post is about: a language that wasn&#39;t supported yet.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to write Čech cohomology groups in LaTeX</title>
+      <link>https://pbelmans.ncag.info/blog/2012/03/29/how-to-write-cech-cohomology-groups-in-latex/</link>
+      <pubDate>Thu, 29 Mar 2012 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2012/03/29/how-to-write-cech-cohomology-groups-in-latex/</guid>
+      <description>&lt;p&gt;Just like &lt;a href=&#34;https://pbelmans.ncag.info/blog/2010/10/02/direct-and-inverse-limit-in-latex//&#34;&gt;writing direct and inverse limits in TeX&lt;/a&gt;, the way to write &lt;a href=&#34;http://en.wikipedia.org/wiki/%C4%8Cech_cohomology&#34;&gt;Čech cohomology&lt;/a&gt; groups in TeX is something that doesn&#39;t come up easily in Google unless you know what to look for (basically a &lt;a href=&#34;http://en.wikibooks.org/wiki/LaTeX/Accents#Math_mode&#34;&gt;list of math mode accents&lt;/a&gt;, but I am not the only person obstinately searching with the wrong keywords, right?).&lt;/p&gt;&#xA;&lt;p&gt;So in text mode you write &lt;code&gt;\v{C}ech&lt;/code&gt;, and in case you wish to write down the $n$-th Čech cohomology group $\check{\mathrm{H}}^n(X,\mathcal{F})$ of a topological space $X$ and the sheaf $\mathcal{F}$ you use &lt;code&gt;\check{\mathrm{H}}^n(X,\mathcal{F})&lt;/code&gt;. Notice the use of &lt;code&gt;\mathrm{H}&lt;/code&gt; for the actual (co)homology object, you could/should do this too!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A beamer theme for the University of Ghent</title>
+      <link>https://pbelmans.ncag.info/blog/2012/02/09/a-beamer-theme-for-the-university-of-ghent/</link>
+      <pubDate>Thu, 09 Feb 2012 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2012/02/09/a-beamer-theme-for-the-university-of-ghent/</guid>
+      <description>&lt;p&gt;I have created a &lt;a href=&#34;https://github.com/pbelmans/ugent-beamer&#34;&gt;beamer theme for the University of Ghent&lt;/a&gt; (as the title already suggests), inspired by the excellent &lt;a href=&#34;https://github.com/nschloe/ua-beamer&#34;&gt;beamer theme for the University of Antwerp&lt;/a&gt; created by &lt;a href=&#34;http://win.ua.ac.be/~nschloe/&#34;&gt;Nico Schlömer&lt;/a&gt;. There is already &lt;a href=&#34;http://latex.ugent.be/node/52&#34;&gt;an implementation&lt;/a&gt;, but it doesn&#39;t meet the &lt;a href=&#34;http://www.ugent.be/nl/werken/organisatie/huisstijl&#34;&gt;style guide&lt;/a&gt; and it is only available out-of-the-box for the Faculty of Engineering and Architecture.&lt;/p&gt;&#xA;&lt;p&gt;So I have decided to implement a UGent beamer theme myself, adhering to the style guide and following the philosophy set out by Nico. The implementation is available at GitHub, by means of the &lt;a href=&#34;https://github.com/pbelmans/ugent-beamer/downloads&#34;&gt;ugent-beamer project&lt;/a&gt;. I have rewritten Nico&#39;s documentation to match my personal view on the subject of beamer themes, the result is available as a &lt;a href=&#34;https://github.com/downloads/pbelmans/ugent-beamer/documentation.pdf&#34;&gt;separate download&lt;/a&gt;. In case you wish to use the theme and you&#39;re not that git-savvy, you can download the &lt;a href=&#34;https://github.com/downloads/pbelmans/ugent-beamer/ugent-beamer.tar&#34;&gt;archive&lt;/a&gt; at the &lt;a href=&#34;https://github.com/pbelmans/ugent-beamer/downloads&#34;&gt;Downloads page&lt;/a&gt;. It contains all the necessary files, including the documentation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Changing \href{}{} to produce footnotes</title>
+      <link>https://pbelmans.ncag.info/blog/2011/12/14/changing-href-to-produce-footnotes/</link>
+      <pubDate>Wed, 14 Dec 2011 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2011/12/14/changing-href-to-produce-footnotes/</guid>
+      <description>&lt;p&gt;While preparing a document with lots of links for both online and offline viewing, I wanted the offline (i.e. printable) version to contain fulltext hyperlinks in the footnote. So whenever LaTeX comes across a &lt;code&gt;\href{http://example.org}{Example website}&lt;/code&gt; I want it converted to something like &lt;code&gt;Example website\footnote{\url{http://example.org}}&lt;/code&gt;. Inspired by &lt;a href=&#34;http://tex.stackexchange.com/a/13147/210&#34;&gt;this answer&lt;/a&gt; to the &lt;a href=&#34;http://tex.stackexchange.com/questions/12774/changing-hrefs-to-footnotes&#34;&gt;related TeX.SX question&lt;/a&gt; I came up with&lt;/p&gt;&#xA;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;\makeatletter&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;\newcommand\href&lt;/span&gt;@footnote[2]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;#2&lt;span class=&#34;k&#34;&gt;\footnote&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\url&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;#1&lt;span class=&#34;nb&#34;&gt;}}}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;\DeclareRobustCommand&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\href&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\hyper&lt;/span&gt;@normalise&lt;span class=&#34;k&#34;&gt;\href&lt;/span&gt;@footnote&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;\makeatother&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xA;&#xA;&lt;p&gt;This code properly handles active characters in url&#39;s. Which is exactly what I want :).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Dutch LaTeX course</title>
+      <link>https://pbelmans.ncag.info/blog/2011/12/05/latex-course/</link>
+      <pubDate>Mon, 05 Dec 2011 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2011/12/05/latex-course/</guid>
+      <description>&lt;p&gt;Just like last year I gave a LaTeX course in Dutch, for students at the University of Antwerp. Now it&#39;s time to share my material with the world. Remark that it is explicitly tailored at the student population: I&#39;ve used the (non-optimal) configuration of the computers there as the starting point of my classes. And as the target population consists of students at the Faculty of Sciences (and by extension the Faculty of Economy), the main focus lies on their core activities: math, code, beamer, a little bit of chemistry. A course especially written for humanities students would be an interesting thing to make, but that&#39;s out of the question now :). The slides aren&#39;t perfect, but I&#39;m quite satisfied with them.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>\uparrow and its variations are variable-sized delimiters</title>
+      <link>https://pbelmans.ncag.info/blog/2011/11/04/uparrow-and-its-variations-are-variable-sized-delimiters/</link>
+      <pubDate>Fri, 04 Nov 2011 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2011/11/04/uparrow-and-its-variations-are-variable-sized-delimiters/</guid>
+      <description>&lt;p&gt;While preparing a commutative diagram to be used in a &lt;a href=&#34;http://mathjax.org&#34;&gt;MathJax&lt;/a&gt; environment I discovered the little gem that is already given away in the title. Basically I needed to draw a relatively complex commutative diagram (see below) without using extra packages like &lt;code&gt;&lt;a href=&#34;http://ctan.org/pkg/xypic&#34;&gt;xypic&lt;/a&gt;&lt;/code&gt; or (my favourite) &lt;a href=&#34;http://ctan.org/pkg/pgf&#34;&gt;PGF/TikZ&lt;/a&gt;. Only stuff from &lt;code&gt;amsmath&lt;/code&gt; (and its extended family) is allowed. That means hacking something together using &lt;code&gt;array&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;You know variable-sized delimiters: they are either the &lt;code&gt;\left(&lt;/code&gt;, &lt;code&gt;\right)&lt;/code&gt; combo or variations on &lt;code&gt;\big)&lt;/code&gt; making all your delimiters look good in LaTeX. But &lt;code&gt;\uparrow&lt;/code&gt; and its related arrows &lt;code&gt;\downarrow&lt;/code&gt;, &lt;code&gt;\Downarrow&lt;/code&gt;, &lt;code&gt;\Uparrow&lt;/code&gt;, &lt;code&gt;\updownarrow&lt;/code&gt; and &lt;code&gt;\Updownarrow&lt;/code&gt; are variable-sized delimiters too! Which means they can be used to spice up your commutative diagram a little.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>An update to dutch.lbx in babelbib</title>
+      <link>https://pbelmans.ncag.info/blog/2011/08/27/an-update-to-dutch-lbx-in-babelbib/</link>
+      <pubDate>Sat, 27 Aug 2011 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2011/08/27/an-update-to-dutch-lbx-in-babelbib/</guid>
+      <description>&lt;p&gt;This afternoon I decided to check out &lt;a href=&#34;http://ctan.org/pkg/biber&#34;&gt;&lt;code&gt;biber&lt;/code&gt;&lt;/a&gt; and &lt;a href=&#34;http://ctan.org/pkg/biblatex&#34;&gt;&lt;code&gt;babelbib&lt;/code&gt;&lt;/a&gt;, transforming some of my projects I&#39;ve done to this combination. But as most of my writing is done in Dutch I quickly encountered some issues with the current version (i.e., &lt;a href=&#34;https://sourceforge.net/projects/biblatex/files/biblatex-1.6/&#34;&gt;version 1.6 of &lt;code&gt;biblatex&lt;/code&gt;&lt;/a&gt;):&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;spelling mistakes&lt;/li&gt;&#xA;&lt;li&gt;inconsistencies&lt;/li&gt;&#xA;&lt;li&gt;there are still English words in the translated text&lt;/li&gt;&#xA;&lt;li&gt;incomplete translations (although the parts that were missing won&#39;t show up in your every day scenario, it&#39;s rather nit-picky)&lt;/li&gt;&#xA;&lt;li&gt;boring implementation of ordinal numbers (1e and 19e instead of 1ste and 19de)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;As I&#39;ve done before in &lt;a href=&#34;https://pbelmans.ncag.info/blog/2011/03/15/a-correct-implementation-of-the-dutch-language-in-babelbib/&#34; title=&#34;A correct implementation of the Dutch language in babelbib&#34;&gt;A correct implementation of the Dutch language in &lt;code&gt;babelbib&lt;/code&gt;&lt;/a&gt;, I have updated the necessary files. And in my current GitHub mania, I have uploaded this little project to &lt;a href=&#34;https://github.com/pbelmans/dutch.lbx&#34;&gt;github.com/pbelmans/dutch.lbx&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to use \thanks in memoir&#39;s titlingpage</title>
+      <link>https://pbelmans.ncag.info/blog/2011/08/24/how-to-use-thanks-in-memoirs-titlingpage/</link>
+      <pubDate>Wed, 24 Aug 2011 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2011/08/24/how-to-use-thanks-in-memoirs-titlingpage/</guid>
+      <description>&lt;p&gt;I was fiddling with &lt;code&gt;memoir&lt;/code&gt;&#39;s &lt;code&gt;titlingpage&lt;/code&gt; and wanted functionality for the &lt;code&gt;\thanks&lt;/code&gt; macro. This is normally handled by &lt;code&gt;\maketitle&lt;/code&gt;, but we&#39;re bypassing this construction. Section 4.2 of the (otherwise excellent) &lt;code&gt;memoir&lt;/code&gt; manual doesn&#39;t state anything on how to actually implement this behaviour yourself.&lt;/p&gt;&#xA;&lt;p&gt;After a bit of fiddling with &lt;code&gt;memoir.dtx&lt;/code&gt; (any &lt;code&gt;.dtx&lt;/code&gt; file is the &lt;em&gt;documented source&lt;/em&gt; of a LaTeX package or class) I hacked together the desired result. A bit of &lt;code&gt;\makeatletter&lt;/code&gt; magic and calling the correct macros did what I wanted.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Adding ~/.texmf to TeX Live 2011&#39;s directories, or installing beamer themes</title>
+      <link>https://pbelmans.ncag.info/blog/2011/07/23/adding-texmf-to-tex-live-2011s-directories-or-installing-beamer-themes/</link>
+      <pubDate>Sat, 23 Jul 2011 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2011/07/23/adding-texmf-to-tex-live-2011s-directories-or-installing-beamer-themes/</guid>
+      <description>&lt;p&gt;While trying to install the &lt;a href=&#34;https://github.com/nschloe/ua-beamer&#34;&gt;UA &lt;code&gt;beamer&lt;/code&gt; theme&lt;/a&gt; in the most appropriate way, I stumbled for the umpteenth time on this issue. Where and how to install a &lt;code&gt;beamer&lt;/code&gt; theme, or by extension any non-TeX Live package, without resorting to &lt;code&gt;sudo mv&lt;/code&gt;&#39;ing it into &lt;code&gt;/usr/local/texlive20xx/...&lt;/code&gt;? I don&#39;t remember going through this process the last time I installed some packages myself, but as I recently installed TeX Live 2011 and decided to do things &lt;em&gt;the proper way&lt;/em&gt; (at least in my opinion) I decided to write this post.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Guest post: Inheritance in Pygments&#39; LatexFormatter</title>
+      <link>https://pbelmans.ncag.info/blog/2011/07/05/guest-blog-inheritance-in-pygments-latexformatter/</link>
+      <pubDate>Tue, 05 Jul 2011 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2011/07/05/guest-blog-inheritance-in-pygments-latexformatter/</guid>
+      <description>&lt;p&gt;This is a guest post by &lt;cite&gt;Pieter Goetschalckx&lt;/cite&gt;. As a fellow classmate of mine we&#39;ve been working together for most of our projects this year, resulting in some LaTeX-related results like the &lt;a href=&#34;https://pbelmans.ncag.info/blog/2011/03/06/how-to-change-pygments-styles-and-a-university-of-antwerp-style/&#34; title=&#34;How to change Pygments styles and a University of Antwerp&amp;nbsp;style&#34;&gt;UAStyle&lt;/a&gt; and (unpublished) software for automated Enigma deciphering or numerical continuation of n-dimensional manifolds.&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;&lt;a href=&#34;http://pygments.org/&#34;&gt;Pygments&lt;/a&gt; in combination with the &lt;a href=&#34;http://minted.googlecode.com/&#34;&gt;minted package&lt;/a&gt; is a very powerful syntax highlighter for LaTeX, with the possibility to use colored, bold and italic text. Unfortunately, the Computer Modern Typewriter font includes no bold shapes. Latin Modern does, but the difference is almost unnoticeable. Therefore I prefer &lt;a href=&#34;http://www.tug.dk/FontCatalogue/beramono/&#34;&gt;Beramono&lt;/a&gt;, which in addition is a nice combination with &lt;a href=&#34;http://www.tug.dk/FontCatalogue/charter/&#34;&gt;Bitstream Charter&lt;/a&gt;. So far my personal taste.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A LaTeX version of Mumford&#39;s impression of Spec Z[x], or some TikZ tricks</title>
+      <link>https://pbelmans.ncag.info/blog/2011/05/25/a-latex-version-of-mumfords-impression-of-spec-zx-or-some-tikz-tricks/</link>
+      <pubDate>Wed, 25 May 2011 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2011/05/25/a-latex-version-of-mumfords-impression-of-spec-zx-or-some-tikz-tricks/</guid>
+      <description>&lt;p&gt;&lt;ins datetime=&#34;2012-12-14T21:57:26+00:00&#34; style=&#34;text-decoration:none;&#34;&gt;&lt;strong&gt;Notice:&lt;/strong&gt; The post &lt;a href=&#34;https://pbelmans.ncag.info/blog/2012/12/14/an-atlas-of-the-affine-line-over-the-integer/&#34;&gt;An atlas of the affine line over the integers&lt;/a&gt; and the page &lt;a href=&#34;https://pbelmans.ncag.info/blog/atlas&#34;&gt;An atlas for $\mathrm{Spec}\,\mathbb{Z}[x]$&lt;/a&gt; might be interesting if you came here by your favourite search engine.&lt;/ins&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;As promised on Twitter I decided to draw a TeX version of Mumford&#39;s drawing of an elusive object: $\mathrm{Spec}\,\mathbb{Z}[x]$&lt;/p&gt;&#xA;&lt;p&gt;This can be considered as the first non-trivial example in scheme theory. Mumford&#39;s treasure map tries to depict how we could (but we can&#39;t or shouldn&#39;t for a myriad of reasons) visualize its geometry. The meaning behind it, as found in the mimeographed notes named The Red Book, is discussed thoroughly at &lt;a href=&#34;http://www.neverendingbooks.org/mumfords-treasure-map&#34;&gt;neverendingbooks.org&#39;s series on Brave New Geometries&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A correct implementation of the Dutch language in babelbib</title>
+      <link>https://pbelmans.ncag.info/blog/2011/03/15/a-correct-implementation-of-the-dutch-language-in-babelbib/</link>
+      <pubDate>Tue, 15 Mar 2011 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2011/03/15/a-correct-implementation-of-the-dutch-language-in-babelbib/</guid>
+      <description>&lt;p&gt;When preparing slides for my (Dutch) LaTeX course I decided to mention &lt;a href=&#34;http://ctan.org/pkg/babelbib&#34;&gt;&lt;code&gt;babelbib&lt;/code&gt;&lt;/a&gt;: this is a package for &lt;em&gt;localizing your bibliographies&lt;/em&gt;. Maybe you&#39;ve never given much thought to languages in bibliographies, but the main issue that the title of the work that&#39;s being referenced often is in a language that is not the document&#39;s language and needs another hyphenation. And you probably want your bibliographical information such as version numbers, visited on dates, months of publication or words as &lt;cite&gt;editor&lt;/cite&gt; in that same document&#39;s language. No problem if both the works you&#39;re referencing and your own documents are in English, but when writing a (in our case) Dutch document it rarely happens all your sources are in Dutch. At least in mathematics and computer science it does :).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to change Pygments styles and a University of Antwerp style</title>
+      <link>https://pbelmans.ncag.info/blog/2011/03/06/how-to-change-pygments-styles-and-a-university-of-antwerp-style/</link>
+      <pubDate>Sun, 06 Mar 2011 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2011/03/06/how-to-change-pygments-styles-and-a-university-of-antwerp-style/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://pygments.org/docs/styles/&#34;&gt;The documentation of Pygments on creating your own style&lt;/a&gt; is not entirely complete (at least, I had to perform some steps that were not discussed and a comment suggests them too). So I&#39;ll discuss what extra steps are necessary (in my experience) and my own implementation of a style with &lt;a href=&#34;http://www.ua.ac.be&#34;&gt;my University&lt;/a&gt;&#39;s color scheme.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;First of all, locate the Pygments style folder. I don&#39;t know any more how I installed Pygments, but mine is located at &lt;code&gt;/usr/local/lib/python2.6/dist-packages/Pygments-1.3.1-py2.6.egg/pygments/styles&lt;/code&gt;. You could also perform a &lt;code&gt;locate autumn.py&lt;/code&gt; command as that should be one of the default styles. My &lt;a href=&#34;http://sagemath.org&#34;&gt;Sage&lt;/a&gt; install also contains this folder, but you don&#39;t need that one.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Relative paths in multiple documents</title>
+      <link>https://pbelmans.ncag.info/blog/2011/02/26/relative-paths-in-multiple-documents/</link>
+      <pubDate>Sat, 26 Feb 2011 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2011/02/26/relative-paths-in-multiple-documents/</guid>
+      <description>&lt;p&gt;Background: I&#39;m writing 3 small &#39;papers&#39; for my B.Sc. thesis, which have to be submitted both separately and in a single document. And I wanted both 3 single documents and 1 overview, all with matching bibliographies and tables of contents. There is a common preamble, title pages for each document separately and chapter titles for the overview are automatically generated with the corresponding information, all was working perfectly. The document structure is like this (not all files and directories are shown, only those important for this post):&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why LaTeX beamer needs fragile when using verbatim</title>
+      <link>https://pbelmans.ncag.info/blog/2011/02/20/why-latex-beamer-needs-fragile-when-using-verbatim/</link>
+      <pubDate>Sun, 20 Feb 2011 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2011/02/20/why-latex-beamer-needs-fragile-when-using-verbatim/</guid>
+      <description>&lt;p&gt;While preparing my slides for the upcoming Dutch LaTeX course I&#39;ll be giving (if you&#39;re interested, contact me) for our &lt;a href=&#34;http://acmantwerp.acm.org&#34;&gt;ACM Student Chapter&lt;/a&gt; I got puzzled by the fact &lt;code&gt;beamer&lt;/code&gt; requires me to use &lt;code&gt;[fragile]&lt;/code&gt; as the option to every slide containing verbatim text. I decided to figure it out.&lt;/p&gt;&#xA;&lt;p&gt;First, &lt;em&gt;what does fragile mean&lt;/em&gt;? It has to do with expansion and execution: TeX does these at the same time, first it reads an token, expands it so that only low-level tokens are left and then executes it. But this cycle isn&#39;t always followed: for instance when moving text around this behaviour changes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lessons learned from blogging</title>
+      <link>https://pbelmans.ncag.info/blog/2010/12/30/lessons-learned-from-blogging/</link>
+      <pubDate>Thu, 30 Dec 2010 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2010/12/30/lessons-learned-from-blogging/</guid>
+      <description>&lt;p&gt;Some people may have realized it by looking at their aggregators and more specifically the date I posted on. I followed a &#34;one post in three days&#34; schedule for December. I wrote some short snippets in between but all my &#34;real&#34; posts were scheduled 3 days from each other. This way I could build up a backlog of material when I felt inspired :).&lt;/p&gt;&#xA;&lt;p&gt;Some conclusions:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;there are &lt;em&gt;many&lt;/em&gt; things to blog about;&lt;/li&gt;&#xA;&lt;li&gt;it is amazing how fast a post gets body, &lt;em&gt;i.e.&lt;/em&gt; gets long enough to be more than a side note;&lt;/li&gt;&#xA;&lt;li&gt;scheduling posts is the best invention in WordPress ever;&lt;/li&gt;&#xA;&lt;li&gt;I actually use my own posts on LaTeX when I need the topic I wrote about, they provide a good overview of what I deemed useful about that little part of LaTeX :-).&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;But for now, my publishing rate will diminish greatly: I&#39;m studying for my exams and I&#39;ve got more of them than I want. But as &lt;a href=&#34;http://texhacks.blogspot.com/&#34;&gt;TeX Hacks&lt;/a&gt; is on a posting spree with 4 interesting posts on 5 days I&#39;d suggest you all move there for one month. And I&#39;d like to thank &lt;a href=&#34;http://texample.net&#34;&gt;TeXample.net&lt;/a&gt; for adding me to their aggregator, I can now reach a much broader audience.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>An H-tree in TikZ</title>
+      <link>https://pbelmans.ncag.info/blog/2010/12/27/an-h-tree-in-tikz/</link>
+      <pubDate>Mon, 27 Dec 2010 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2010/12/27/an-h-tree-in-tikz/</guid>
+      <description>&lt;p&gt;Via &lt;a href=&#34;http://www.walkingrandomly.com&#34;&gt;Walking Randomly&lt;/a&gt;&#39;s post &lt;a href=&#34;http://www.walkingrandomly.com/?p=3073&#34;&gt;Fractals on Wolfram Alpha – an update&lt;/a&gt; I stumbled upon his previous post &lt;a href=&#34;http://www.walkingrandomly.com/?p=1290&#34;&gt;Plotting Fractals with Wolfram Alpha&lt;/a&gt;. And something struck me, I invented / discovered those &lt;a href=&#34;http://en.wikipedia.org/wiki/H_tree&#34;&gt;H-trees&lt;/a&gt; when I was a little kid! I remember drawing them when I was in second grade (you&#39;re 7 years old then, at least in Belgium), enjoying the laborious yet beautiful nature of them. I also drew gigantic heaps of blocks in &lt;a href=&#34;http://en.wikipedia.org/wiki/Oblique_projection&#34;&gt;oblique projection&lt;/a&gt;, oh, how many sheets of grid paper (5 by 5 millimetre) I have filled that way... I guess I was the weird kid of our class.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>An extension to our \function macro: injective and surjective functions using optional parameters</title>
+      <link>https://pbelmans.ncag.info/blog/2010/12/24/an-extension-to-our-function-macro-injective-and-surjective-functions/</link>
+      <pubDate>Fri, 24 Dec 2010 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2010/12/24/an-extension-to-our-function-macro-injective-and-surjective-functions/</guid>
+      <description>&lt;p&gt;Remember from a while ago that I&#39;ve explained &lt;code&gt;\mathchoice&lt;/code&gt; and discussed a macro for flexible function notation. If you don&#39;t, I refer you to &lt;a href=&#34;https://pbelmans.ncag.info/blog/2010/12/15/how-to-let-a-command-automatically-adapt-to-the-current-mathematical-style/&#34;&gt;How to let a command automatically adapt to the current mathematical style&lt;/a&gt;? Today I&#39;m going to extend its functionality. When using the macro in real life I felt the need to display injective and surjective maps. And I needed both a function and a map macro. The first only mentions the name, domain and codomain while the latter displays how elements are mapped. I&#39;ll solve both issues (not that the second is an issue though).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>thmtools: a rant</title>
+      <link>https://pbelmans.ncag.info/blog/2010/12/21/thmtools-a-rant/</link>
+      <pubDate>Tue, 21 Dec 2010 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2010/12/21/thmtools-a-rant/</guid>
+      <description>&lt;p&gt;First some preliminary statements:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;this is a rant about how I had to get &lt;code&gt;thmtools&lt;/code&gt; working, it&#39;s not about the package itself (which is great)&lt;/li&gt;&#xA;&lt;li&gt;I &lt;strong&gt;hate&lt;/strong&gt; Ubuntu&#39;s TeX Live, it&#39;s outdated as hell and there&#39;s no way to update it&lt;/li&gt;&#xA;&lt;li&gt;I should&#39;ve been studying my algebraic geometry exam, but I got so angry about what was going wrong I decided to get it working regardless of how long it would take (which was almost three senseless and long hours of swearing and messing around)&lt;/li&gt;&#xA;&lt;li&gt;this post discusses how to do it using Ubuntu&#39;s sucky TeX Live, I hope you don&#39;t suffer from the same problems as I did&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;I only wanted &lt;code&gt;\listoftheorems&lt;/code&gt;-ish functionality. That&#39;s all. Seems like a reasonable wish, right? :-)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My good practice concerning inline mathematical formulas</title>
+      <link>https://pbelmans.ncag.info/blog/2010/12/18/my-good-practice-concerning-inline-mathematical-formulas/</link>
+      <pubDate>Sat, 18 Dec 2010 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2010/12/18/my-good-practice-concerning-inline-mathematical-formulas/</guid>
+      <description>&lt;p&gt;I am not sure whether this is common practice, but I do feel there is a benefit from what I&#39;m going to discuss next. If you feel otherwise about this particular good practice I tend to use in my documents, do not hesitate and tell me why :-).&lt;/p&gt;&#xA;&lt;h2&gt;Problem sketch&lt;/h2&gt;&#xA;&lt;p&gt;When typing a mathematical text you use inline mathematical formulas. When doing this without much thought, &lt;em&gt;i.e.&lt;/em&gt;, not caring about non-breakable spaces (or ties), also known as &lt;code&gt;~&lt;/code&gt; you end up with nasty results.. Exercise 18.10 of the TeXbook tries to make you aware of these so-called &lt;em&gt;bad line breaks&lt;/em&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>\twoheadrightarrow is in amssymb</title>
+      <link>https://pbelmans.ncag.info/blog/2010/12/15/twoheadrightarrow-is-in-amssymb/</link>
+      <pubDate>Wed, 15 Dec 2010 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2010/12/15/twoheadrightarrow-is-in-amssymb/</guid>
+      <description>&lt;p&gt;I repeat, &lt;code&gt;\twoheadrightarrow&lt;/code&gt; is in &lt;code&gt;amssymb&lt;/code&gt;. Just so you know, this isn&#39;t obvious (to me) from the &lt;a href=&#34;http://mirror.ctan.org/info/symbols/comprehensive/symbols-a4.pdf&#34;&gt;symbols list&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;ins datetime=&#34;2011-01-03T16:19:04+00:00&#34;&gt;Apparently &lt;a href=&#34;http://detexify.kirelabs.org&#34;&gt;Detexify&lt;/a&gt; can interpret my awful drawing skills nowadays, but I tell you, back then it didn&#39;t know the symbol! :)&lt;/ins&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to let a command automatically adapt to the current mathematical style</title>
+      <link>https://pbelmans.ncag.info/blog/2010/12/15/how-to-let-a-command-automatically-adapt-to-the-current-mathematical-style/</link>
+      <pubDate>Wed, 15 Dec 2010 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2010/12/15/how-to-let-a-command-automatically-adapt-to-the-current-mathematical-style/</guid>
+      <description>&lt;p&gt;Maybe you know, maybe you don&#39;t, but LaTeX offers 4 different mathematical styles. There&#39;s &lt;code&gt;displaystyle&lt;/code&gt;, &lt;code&gt;textstyle&lt;/code&gt;, &lt;code&gt;scriptstyle&lt;/code&gt; and &lt;code&gt;scriptscriptstyle&lt;/code&gt;. The first corresponds to math in block environments, &lt;em&gt;i.e.&lt;/em&gt;, in display mode such as in an &lt;code&gt;equation&lt;/code&gt; or &lt;code&gt;displaymath&lt;/code&gt; environment, the second occurs when typesetting inline math as is the case with &lt;code&gt;$...$&lt;/code&gt; and the third and fourth occur in superscript and multiple superscript. You&#39;ve (hopefully) noticed that for instance &lt;code&gt;\sum&lt;/code&gt; gets expanded differently depending on the current style: in displaystyle the super- and subscript are added above and below of the sum symbol while in textstyle they are placed to the right of it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A Turing machine in LaTeX: the follow-up</title>
+      <link>https://pbelmans.ncag.info/blog/2010/12/12/a-turing-machine-in-latex-follow-u/</link>
+      <pubDate>Sun, 12 Dec 2010 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2010/12/12/a-turing-machine-in-latex-follow-u/</guid>
+      <description>&lt;p&gt;Over a month ago I gave a talk about Turing machines in LaTeX at one of our &lt;a href=&#34;http://acmantwerp.acm.org&#34;&gt;ACM Student Chapter&lt;/a&gt;&#39;s TechTalks. When spreading the word about it, some people thought I was going to discuss how to draw Turing machines in LaTeX. At first that idea seemed so silly I wondered why they would think so. But apparently me live TeX&#39;ing finite state automata and Turing machines in class made an impact on people, which made me known as &#34;the guy who does Turing machines in TeX&#34;. Ahh, those days are gone forever, and quite frankly I&#39;m happy they are, there are packages more fun to play with than &lt;a href=&#34;http://www.lsv.ens-cachan.fr/~gastin/gastex/gastex.html&#34;&gt;&lt;code&gt;gastex&lt;/code&gt;&lt;/a&gt; *shivers*.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The power of \mathclap (and \substack)</title>
+      <link>https://pbelmans.ncag.info/blog/2010/12/06/the-power-of-mathclap-and-substack/</link>
+      <pubDate>Mon, 06 Dec 2010 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2010/12/06/the-power-of-mathclap-and-substack/</guid>
+      <description>&lt;p&gt;In my Differential geometry course there is a section on tensor products and they can get quite messy. Notation-wise that is. One of our professors is convinced the current generation of students is unable to grasp tensor products due to some intoxication in the water or something similar, but here I am speaking only about notation :).&lt;/p&gt;&#xA;&lt;p&gt;An example, the notes contain a formula depicting the expression of a tensor in a certain basis&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Wiggly text marker lines in TeX</title>
+      <link>https://pbelmans.ncag.info/blog/2010/11/28/wiggly-text-marker-lines-in-tex/</link>
+      <pubDate>Sun, 28 Nov 2010 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2010/11/28/wiggly-text-marker-lines-in-tex/</guid>
+      <description>&lt;p&gt;Just when you think TeX and TikZ have reached their respective limit, there is someone pushing its boundaries. &lt;a href=&#34;http://tex.stackexchange.com/questions/5959/cool-text-highlighting-in-latex/6029#6029&#34;&gt;Antal S-Z&#39;s answer to Cool Text Highlighting in LaTeX&lt;/a&gt; (one of the lesser titles on &lt;a href=&#34;http://tex.stackexchange.com&#34;&gt;TeX.se&lt;/a&gt; in my opinion) is just sheer awesomeness.&lt;/p&gt;&#xA;&lt;p&gt;What they basically want to achieve is the visual effect of a person highlighting text using a text marker. And as humans are not that good in drawing straight lines, the highlighting is wiggly. So to give a document a more natural look, one could opt for these wiggly marker lines instead of &lt;a href=&#34;http://pkg.ctan.org/soul&#34;&gt;&lt;code&gt;soul&lt;/code&gt;&lt;/a&gt;&#39;s squarish output.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>LaTeX in Vim just got a little more awesome</title>
+      <link>https://pbelmans.ncag.info/blog/2010/11/23/latex-in-vim-just-got-a-little-more-awesome/</link>
+      <pubDate>Tue, 23 Nov 2010 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2010/11/23/latex-in-vim-just-got-a-little-more-awesome/</guid>
+      <description>&lt;p&gt;Yes, it&#39;s quite unbelievable, yet true. Please look at the announcing blog post: &lt;a href=&#34;http://b4winckler.wordpress.com/2010/08/07/using-the-conceal-vim-feature-with-latex/&#34;&gt;Using the conceal Vim feature with LaTeX&lt;/a&gt; by the person responsible for &lt;a href=&#34;http://code.google.com/p/macvim/&#34;&gt;MacVim&lt;/a&gt;. To give credit where credit&#39;s due: &lt;a href=&#34;http://www.charlietanksley.net/philtex/vim-latex-conceal/&#34;&gt;Vim, LaTeX and &#39;conceal&#39;&lt;/a&gt; made me aware of this.&lt;/p&gt;&#xA;&lt;p&gt;It basically gives you a preview, but not via a build using &lt;code&gt;pdflatex&lt;/code&gt; or similar, it happens on the spot using Unicode. I&#39;m not saying I will be using this feature often (I have yet to install Vim 7.3), but I feel this might be interesting when editing a document: when you&#39;re writing complex formulas you are aware of everything you&#39;re doing at that moment, but afterwards that knowledge is gone.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A note on fontenc</title>
+      <link>https://pbelmans.ncag.info/blog/2010/11/22/a-note-on-fontenc/</link>
+      <pubDate>Mon, 22 Nov 2010 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2010/11/22/a-note-on-fontenc/</guid>
+      <description>&lt;p&gt;Even when I&#39;m not typing LaTeX but e.g. an e-mail I automatically write &lt;code&gt;\&#34;&lt;/code&gt; for trema&#39;s and similar for other diacritics, but most people want to type the actual characters directly in their source document, i.e., &lt;code&gt;Gödel&lt;/code&gt; instead of &lt;code&gt;G\&#34;odel&lt;/code&gt;. Fair enough, that&#39;s why we have &lt;code&gt;\usepackage[T1]{fontenc}&lt;/code&gt;. Just one little thing to remember: it doesn&#39;t work out of the box with regular Computer Modern, also known as &lt;em&gt;the&lt;/em&gt; LaTeX font (&lt;em&gt;the&lt;/em&gt; dead give-away to a document being typeset using LaTeX) and most people don&#39;t know how to use (non-bitmap) fonts, let alone know it is possible.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Caveat: correct spacing in quotient</title>
+      <link>https://pbelmans.ncag.info/blog/2010/11/16/caveat-correct-spacing-in-quotient/</link>
+      <pubDate>Tue, 16 Nov 2010 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2010/11/16/caveat-correct-spacing-in-quotient/</guid>
+      <description>&lt;p&gt;When taking a quotient with respect to a given equivalence relation, make sure to get the correct spacing. That is, &lt;code&gt;S/\sim&lt;/code&gt; is not correct because &lt;code&gt;\sim&lt;/code&gt; is acting like an operator here. It results in&lt;/p&gt;&#xA;&#xA;$$S/\sim$$&#xA;&#xA;while the correct result would be&#xA;&#xA;$$S/{\sim}$$&#xA;&#xA;&lt;p&gt;This is easily achieved by enclosing the operator in braces, &lt;em&gt;i.e.&lt;/em&gt;, just write &lt;code&gt;S/{\sim}&lt;/code&gt; and all is well. This stuff can be found in the TeXbook of course, but you have to put it in practice.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Automated handling of whitespace in commands using xspace</title>
+      <link>https://pbelmans.ncag.info/blog/2010/11/13/automated-handling-of-whitespace-in-commands-using-xspace/</link>
+      <pubDate>Sat, 13 Nov 2010 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2010/11/13/automated-handling-of-whitespace-in-commands-using-xspace/</guid>
+      <description>&lt;p&gt;I keep getting surprised of these little yet amazing packages. I just stumbled upon &lt;a href=&#34;http://ctan.org/pkg/xspace&#34;&gt;&lt;code&gt;xspace&lt;/code&gt;&lt;/a&gt;. Nowadays, I often use commands to abbreviate certain phrases, or make stuff consistent. For instance, after reading &lt;a href=&#34;http://tug.org/pracjourn/2006-3/robertson/robertson.pdf&#34;&gt;this PracTeX article on Productivity with macros and packages&lt;/a&gt; I started using commands like &lt;code&gt;\ie&lt;/code&gt; to get my abbrevations straight. And for my bachelor&#39;s theses, I am using &lt;code&gt;\matlab&lt;/code&gt; because I&#39;m not yet sure how I want it to be written: small-caps, all caps, only the first letter caps?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Howto: Draw algebraic curves using PGF/TikZ</title>
+      <link>https://pbelmans.ncag.info/blog/2010/11/11/howto-draw-algebraic-curves-using-pgftikz/</link>
+      <pubDate>Thu, 11 Nov 2010 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2010/11/11/howto-draw-algebraic-curves-using-pgftikz/</guid>
+      <description>&lt;h2&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;As one could deduce from my previous posts, I was trying to draw algebraic curves directly in LaTeX using PGF/TikZ and &lt;code&gt;gnuplot&lt;/code&gt;. I&#39;ll present a short overview of how one can do this, hoping it will get as popular as &lt;a href=&#34;https://pbelmans.ncag.info/blog/2010/10/02/direct-and-inverse-limit-in-latex/&#34;&gt;my post on direct and inverse limits&lt;/a&gt;. Which is according to Wordpress&#39; statistics good for one daily search hit.&lt;/p&gt;&#xA;&lt;p&gt;So, what is an algebraic curve? For an extensive overview, I refer you to &lt;a href=&#34;http://en.wikipedia.org/wiki/Algebraic_curve&#34;&gt;the Wikipedia article about them&lt;/a&gt;. In this post, it just boils down to an implicit function in 2 variables over the real field. That is, just take any polynomial&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How not to read the source of pgfplots</title>
+      <link>https://pbelmans.ncag.info/blog/2010/11/01/how-not-to-read-the-source-of-pgfplots/</link>
+      <pubDate>Mon, 01 Nov 2010 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2010/11/01/how-not-to-read-the-source-of-pgfplots/</guid>
+      <description>&lt;p&gt;Because of my fiddling with implicit functions in order to draw algebraic curves (see &lt;a href=&#34;http://tex.stackexchange.com/questions/4738/plotting-an-implicit-function-using-tikz&#34;&gt;Plotting an implicit function using TikZ&lt;/a&gt; and &lt;a href=&#34;http://tex.stackexchange.com/questions/4745/how-to-use-the-results-of-raw-output-to-create-a-smooth-plot&#34;&gt;How to use the results of &lt;code&gt;raw output&lt;/code&gt; to create a smooth plot&lt;/a&gt;), I&#39;m wandering though the source code of &lt;code&gt;pgfplots&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;My main concern is the file &lt;code&gt;/texmf/tex/generic/pgf/modules/pgfmoduleplot.code.tex&lt;/code&gt; which contains a definition of &lt;code&gt;\pgf@parsexyline&lt;/code&gt;. Trust me, after a few minutes you start believing Till Tantau built PGF/TikZ on sexy lines.&lt;/p&gt;&#xA;&lt;p&gt;&lt;ins&gt;For people looking at how to draw implicit functions using &lt;code&gt;pgfplots&lt;/code&gt;, I refer you to &lt;a href=&#34;https://pbelmans.ncag.info/blog/2010/11/11/howto-draw-algebraic-curves-using-pgftikz/&#34;&gt;Howto: Draw Algebraic curves using TikZ&lt;/a&gt;.&lt;/ins&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to make the TikZ option raw output aware of segments</title>
+      <link>https://pbelmans.ncag.info/blog/2010/11/01/how-to-make-the-tikz-option-raw-output-aware-of-segments/</link>
+      <pubDate>Mon, 01 Nov 2010 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2010/11/01/how-to-make-the-tikz-option-raw-output-aware-of-segments/</guid>
+      <description>&lt;p&gt;As my previous post suggested, I was tweaking the &lt;code&gt;pgfplots&lt;/code&gt; code a little, to produce a nice algebraic curve from &lt;code&gt;gnuplot&lt;/code&gt; data. The current behaviour just connects all the dots in the automatically produced &lt;code&gt;.table&lt;/code&gt; file. But as the calculation of an implicit function in &lt;code&gt;gnuplot&lt;/code&gt; involves the creation of a surface and intersecting it with the &lt;em&gt;z=0&lt;/em&gt; plane, the output is not as good as it would be in the case of a regular function.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Antwerp ACM Student Chapter and Te(ch/X)Talks</title>
+      <link>https://pbelmans.ncag.info/blog/2010/10/14/antwerp-acm-student-chapter-and-techxtalks/</link>
+      <pubDate>Thu, 14 Oct 2010 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2010/10/14/antwerp-acm-student-chapter-and-techxtalks/</guid>
+      <description>&lt;p&gt;At the University of Antwerp we (a group of 4 students) started a Student Chapter, in order to facilitate computer science-related activities. And last week we had our first TechTalk, in which I gave a little TeXTalk. I gave a quick overview of TeX&#39;s and LaTeX&#39;s history and tried to make clear the distinction between stuff like &lt;code&gt;pdftex&lt;/code&gt; and the pdfLaTeX macro set. For archiving purposes it (and all the other talks) is listed at the &lt;a href=&#34;http://visiepc16.cde.ua.ac.be/acmantwerp/past-events/&#34;&gt;official website&lt;/a&gt; which is due to move in a few days or weeks to the ACM webspace so expect this link to go down (unless I fix it when due).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Literate programming</title>
+      <link>https://pbelmans.ncag.info/blog/2010/10/14/literate-programming/</link>
+      <pubDate>Thu, 14 Oct 2010 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2010/10/14/literate-programming/</guid>
+      <description>&lt;p&gt;Last week I gave a talk on the history of TeX and LaTeX (more on this later) and I talked about WEB, the programming language used by Knuth in creating TeX. It follows a paradigm called &lt;em&gt;literate programming&lt;/em&gt; and in my opinion it never really took a hold. But if you look at the &lt;a href=&#34;http://backbonejs.org/docs/backbone.html&#34;&gt;Backbone documentation&lt;/a&gt; you get a beautiful of where it actually did. If only the myriads of underdocumented C++ libraries there are out there had such nice documentation...&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Direct and inverse limit in LaTeX</title>
+      <link>https://pbelmans.ncag.info/blog/2010/10/02/direct-and-inverse-limit-in-latex/</link>
+      <pubDate>Sat, 02 Oct 2010 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2010/10/02/direct-and-inverse-limit-in-latex/</guid>
+      <description>&lt;p&gt;Apparently this fact isn&#39;t mentioned anywhere on the Internet. At least not in a straight-forward manner, I had to discover it by inspecting the corresponding articles on Wikipedia.&lt;/p&gt;&#xA;&lt;p&gt;The code to produce a &lt;em&gt;direct limit&lt;/em&gt; and an &lt;em&gt;inverse limit&lt;/em&gt; is &lt;code&gt;\varinjlim&lt;/code&gt; respectively &lt;code&gt;\varprojlim&lt;/code&gt;. This is the result:&lt;/p&gt;&#xA;$$\varinjlim, \varprojlim$$&#xA;&lt;p&gt;Let this fact be known.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>PhilTeX</title>
+      <link>https://pbelmans.ncag.info/blog/2010/09/13/philtex/</link>
+      <pubDate>Mon, 13 Sep 2010 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2010/09/13/philtex/</guid>
+      <description>&lt;p&gt;What they write, how they write it and how they present it. It&#39;s a complete package: &lt;a href=&#34;http://www.charlietanksley.net/philtex/&#34;&gt;PhilTeX&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

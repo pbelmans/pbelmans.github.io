@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Pieter Belmans</title>
+    <link>https://pbelmans.ncag.info/categories/</link>
+    <description>Recent content in Categories on Pieter Belmans</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 05 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://pbelmans.ncag.info/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Meta</title>
+      <link>https://pbelmans.ncag.info/categories/meta/</link>
+      <pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/categories/meta/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mathematics</title>
+      <link>https://pbelmans.ncag.info/categories/mathematics/</link>
+      <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/categories/mathematics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Algebraic Geometry</title>
+      <link>https://pbelmans.ncag.info/categories/algebraic-geometry/</link>
+      <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/categories/algebraic-geometry/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LaTeX</title>
+      <link>https://pbelmans.ncag.info/categories/LaTeX/</link>
+      <pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/categories/LaTeX/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Random</title>
+      <link>https://pbelmans.ncag.info/categories/random/</link>
+      <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/categories/random/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Computer Science</title>
+      <link>https://pbelmans.ncag.info/categories/computer-science/</link>
+      <pubDate>Sat, 21 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/categories/computer-science/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Music</title>
+      <link>https://pbelmans.ncag.info/categories/music/</link>
+      <pubDate>Sat, 20 May 2017 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/categories/music/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programming</title>
+      <link>https://pbelmans.ncag.info/categories/programming/</link>
+      <pubDate>Sun, 09 Apr 2017 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/categories/programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Literature</title>
+      <link>https://pbelmans.ncag.info/categories/literature/</link>
+      <pubDate>Sun, 30 Dec 2012 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/categories/literature/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Random on Pieter Belmans</title>
+    <link>https://pbelmans.ncag.info/categories/random/</link>
+    <description>Recent content in Random on Pieter Belmans</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 23 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://pbelmans.ncag.info/categories/random/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ida Belmans</title>
+      <link>https://pbelmans.ncag.info/blog/2021/04/23/ida/</link>
+      <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2021/04/23/ida/</guid>
+      <description>&lt;p&gt;Here&#39;s an important real-life update: last week our daughter Ida was born. All is well with her, and with the two (slightly sleep-deprived) people who do their best to keep her in good health.&lt;/p&gt;&#xA;&lt;p&gt;There will be slightly less blog activity (and programming in particular), but the fortnightly links will return this Sunday. Given how little space is otherwise dedicated to personal updates on this blog I think I&#39;ll just leave it at this :).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Stacks project website bug fixing</title>
+      <link>https://pbelmans.ncag.info/blog/2016/07/07/stacks-project-website-bug-fixing/</link>
+      <pubDate>Thu, 07 Jul 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/07/07/stacks-project-website-bug-fixing/</guid>
+      <description>&lt;p&gt;Today I decided to spend some time improving the website for the Stacks project, fixing bugs and implementing some small improvements. I &lt;a href=&#34;https://github.com/stacks/stacks-website/milestone/3&#34;&gt;grouped the issues in the GitHub issue tracker&lt;/a&gt; that I wanted to address. Here are two highlights, not because the bugfix was interesting, but because you might learn something about how to use the website.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/stacks/stacks-website/issues/119&#34;&gt;the search now works better with quotes&lt;/a&gt;&lt;/strong&gt;: If you want to learn about quasicoherent sheaves in the Stacks project, you should first of all know that the spelling quasi-coherent is used. Then it is important to know that if you want to use the search function to find results about quasi-coherent sheaves, you should enclose it with quotes. I.e. the following would be a way of looking for tags mentioning quasi-coherent sheaves on a stack:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Stacks project citations</title>
+      <link>https://pbelmans.ncag.info/blog/2016/07/02/stacks-project-citations/</link>
+      <pubDate>Sat, 02 Jul 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/07/02/stacks-project-citations/</guid>
+      <description>&lt;p&gt;I was wondering how often the Stacks project gets cited nowadays. I wanted to check this both on arXiv and MathSciNet, but the fulltext search of arXiv only returns its results in a way not suitable for easy processing (and also not all of the results it seems, because the oldest preprint is from 2014), so I had to stick to MathSciNet.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;So what I did is look at how often &#34;stacks project&#34; appears in the references on MathSciNet, and after some parsing (and with the sample being taken today) this gives the following results, broken down by year:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Stacks project has 5000 pages</title>
+      <link>https://pbelmans.ncag.info/blog/2016/02/03/the-stacks-project-has-5000-pages/</link>
+      <pubDate>Wed, 03 Feb 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/02/03/the-stacks-project-has-5000-pages/</guid>
+      <description>&lt;p&gt;We are now at 5003 pages, hurray! &lt;a href=&#34;http://math.columbia.edu/~dejong/wordpress/?p=4079&#34;&gt;There will be a party&lt;/a&gt; at Johan&#39;s place, if you can make it to New York in time :).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Today I learned...</title>
+      <link>https://pbelmans.ncag.info/blog/2015/11/09/today-i-learned/</link>
+      <pubDate>Mon, 09 Nov 2015 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2015/11/09/today-i-learned/</guid>
+      <description>&lt;p&gt;that manifolds have a Wikipedia &lt;a href=&#34;https://en.wikipedia.org/wiki/Manifold_(disambiguation)&#34;&gt;disambiguation page&lt;/a&gt;. Apparently it also means &lt;a href=&#34;https://en.wikipedia.org/wiki/Manifold_(fluid_mechanics)&#34;&gt;something in fluid mechanics&lt;/a&gt;:&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;A manifold is a wide and/or bigger pipe, or channel, into which smaller pipes or channels lead.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;The Dutch translation for this word is &lt;em&gt;spruitstuk&lt;/em&gt;. This word sounds like total gibberish (unless you are a car mechanic or engineer, I guess). I assume that non-mathematicians think exactly the same when we use words like sheaf, blow-up or formality.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Math joke</title>
+      <link>https://pbelmans.ncag.info/blog/2011/05/29/math-joke/</link>
+      <pubDate>Sun, 29 May 2011 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2011/05/29/math-joke/</guid>
+      <description>&lt;p&gt;A mathematician&#39;s view on true love:&lt;/p&gt;&#xA;&lt;blockquote&gt;I don&#39;t believe in true love. But I do believe in local optima and the social undesirability of a shotgun hill climbing approach.&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>Ska comics</title>
+      <link>https://pbelmans.ncag.info/blog/2011/01/05/ska/</link>
+      <pubDate>Wed, 05 Jan 2011 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2011/01/05/ska/</guid>
+      <description>&lt;p&gt;Such a silly but amazing idea: &lt;a href=&#34;http://www.lefthandedtoons.com&#34;&gt;Left-Handed Toons&lt;/a&gt;. I&#39;ve been following them for a while now and they vary from absolutely horrendous to brilliant. Maybe brilliant in the I-want-to-kick-myself-in-the-head way, but brilliant. As I consider myself expert of the web comics (having built a web comic aggregator for a database course once, forcing me to read through feeds and feeds of comics to check everything (yeah right, I was just procrastinating)) I should spread the word about this one.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lessons learned from blogging</title>
+      <link>https://pbelmans.ncag.info/blog/2010/12/30/lessons-learned-from-blogging/</link>
+      <pubDate>Thu, 30 Dec 2010 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2010/12/30/lessons-learned-from-blogging/</guid>
+      <description>&lt;p&gt;Some people may have realized it by looking at their aggregators and more specifically the date I posted on. I followed a &#34;one post in three days&#34; schedule for December. I wrote some short snippets in between but all my &#34;real&#34; posts were scheduled 3 days from each other. This way I could build up a backlog of material when I felt inspired :).&lt;/p&gt;&#xA;&lt;p&gt;Some conclusions:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;there are &lt;em&gt;many&lt;/em&gt; things to blog about;&lt;/li&gt;&#xA;&lt;li&gt;it is amazing how fast a post gets body, &lt;em&gt;i.e.&lt;/em&gt; gets long enough to be more than a side note;&lt;/li&gt;&#xA;&lt;li&gt;scheduling posts is the best invention in WordPress ever;&lt;/li&gt;&#xA;&lt;li&gt;I actually use my own posts on LaTeX when I need the topic I wrote about, they provide a good overview of what I deemed useful about that little part of LaTeX :-).&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;But for now, my publishing rate will diminish greatly: I&#39;m studying for my exams and I&#39;ve got more of them than I want. But as &lt;a href=&#34;http://texhacks.blogspot.com/&#34;&gt;TeX Hacks&lt;/a&gt; is on a posting spree with 4 interesting posts on 5 days I&#39;d suggest you all move there for one month. And I&#39;d like to thank &lt;a href=&#34;http://texample.net&#34;&gt;TeXample.net&lt;/a&gt; for adding me to their aggregator, I can now reach a much broader audience.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Photographs of the Paris metro</title>
+      <link>https://pbelmans.ncag.info/blog/2010/12/25/photographs-of-the-paris-metro/</link>
+      <pubDate>Sat, 25 Dec 2010 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2010/12/25/photographs-of-the-paris-metro/</guid>
+      <description>&lt;p&gt;As I opened this blog with a (rather silly) description of my trip to Paris, almost 4 months ago, I guess this is a nice sequel to it. &lt;a href=&#34;http://www.sleepycity.net/&#34;&gt;Some urban photographers&lt;/a&gt; have taken pictures in the unused parts of the Paris metro, see &lt;a href=&#34;http://www.sleepycity.net/posts/252/Demolition_of_the_Paris_Metro&#34;&gt;Demolition of the Paris Metro&lt;/a&gt;. I don&#39;t know what it is, but urban photography is such an interesting concept. I don&#39;t know whether it is cheap and easy as a subject or not, but I like it. My personal favourite for sightseeing (I&#39;m no photographer) is the unused canal in a village nearby and any excavation for a large building. Please don&#39;t laugh at me when you see me drooling over an excavation (which I feel is a lousy translation for the Dutch &#39;bouwput&#39; which literally translates to &#39;building pit&#39;, any suggestions?).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>This is how I feel nowadays</title>
+      <link>https://pbelmans.ncag.info/blog/2010/12/09/this-is-how-i-feel/</link>
+      <pubDate>Thu, 09 Dec 2010 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2010/12/09/this-is-how-i-feel/</guid>
+      <description>&lt;p&gt;The web comic &lt;a href=&#34;http://http://spikedmath.com&#34;&gt;Spided Math&lt;/a&gt; has written my biography.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://spikedmath.com/350.html&#34;&gt;&lt;img src=&#34;https://pbelmans.ncag.info/assets/350-worst-supehero-ever.png&#34; alt=&#34;LaTeXman&#34;&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;By the way, I&#39;ve been typing the course notes for my Commutative algebra course. And the draft is finished now! Hurray!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A mathematical joke</title>
+      <link>https://pbelmans.ncag.info/blog/2010/12/03/a-mathematical-joke/</link>
+      <pubDate>Fri, 03 Dec 2010 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2010/12/03/a-mathematical-joke/</guid>
+      <description>&lt;blockquote&gt;Why did Benjamin, son of Jacob, join the Tea Party movement? Because Jacobson&#39;s radical.&lt;/blockquote&gt;&#xA;&lt;p&gt;Hopefully not the best math joke around.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Paris</title>
+      <link>https://pbelmans.ncag.info/blog/2010/08/27/paris/</link>
+      <pubDate>Fri, 27 Aug 2010 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2010/08/27/paris/</guid>
+      <description>&lt;p&gt;Apparently, Paris:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;provides its inhabitants with an amazing metro network, the people using it are very polite too;&lt;/li&gt;&#xA;&lt;li&gt;is the most beige city I ever hope to see, beautiful but beige in every view;&lt;/li&gt;&#xA;&lt;li&gt;contains the wonderful &lt;a href=&#34;http://citedelamusique.fr&#34;&gt;Cité de la Musique&lt;/a&gt; with the astounding &lt;a href=&#34;http://www.citedelamusique.fr/francais/musee/presentation.aspx&#34;&gt;Musée de la Musique&lt;/a&gt;, I hope they will expand their collection (after the pop music extension already that&#39;s in the make) with a section devoted to tuning experiments as I&#39;d love to see real life quarter-tone pianos &lt;em&gt;etc.&lt;/em&gt; and seeing the UPIC system on which Xenakis composed Mycènes Alpha was a wonderful thing to do apart from the amazing guitar and variants thereupon collection;&lt;/li&gt;&#xA;&lt;li&gt;has other characteristics apart from the ones listed above.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Too bad &lt;a href=&#34;http://wordpress.com&#34;&gt;Wordpress.com&lt;/a&gt; does not let me provide a &lt;code&gt;lang&lt;/code&gt; or &lt;code&gt;xml:lang&lt;/code&gt; attribute on the links.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

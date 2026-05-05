@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pieter Belmans</title>
+    <description></description>
+    <link>https://pbelmans.ncag.info/</link>
+    <atom:link href="https://pbelmans.ncag.info/blog/feed/" rel="self" type="application/rss+xml" />
+    <pubDate>Tue, 05 May 2026 14:27:35 &#43;0000</pubDate>
+    <lastBuildDate>Tue, 05 May 2026 14:27:35 &#43;0000</lastBuildDate>
+    <generator>Hugo</generator>
+    
+    <item>
+      <title>Moving from Jekyll to Hugo</title>
+      <description>
+&lt;p&gt;
+  Almost ten years ago, I
+  &lt;a href=&#34;https://pbelmans.ncag.info/blog/2016/08/26/moving-from-wordpress-to-jekyll/&#34;&gt;moved from WordPress to Jekyll&lt;/a&gt;. It felt like time for another change, so I have now moved the site to Hugo. There was no particular need for it, build times weren&#39;t too bad, but it is nice to see how much faster Hugo is in building my website.
+&lt;/p&gt;
+
+&lt;p&gt;The migration is complete, and I have tried to make sure everything still works as intended. Let me know if something &lt;em&gt;did&lt;/em&gt; break!&lt;/p&gt;
+</description>
+      <pubDate>Tue, 05 May 2026 00:00:00 &#43;0000</pubDate>
+      <link>https://pbelmans.ncag.info/blog/2026/05/05/moving-from-jekyll-to-hugo/</link>
+      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/05/05/moving-from-jekyll-to-hugo/</guid>
+      
+      <category>meta</category>
+    </item>
+    
+    <item>
+      <title>Intersection theory in OSCAR</title>
+      <description>
+&lt;p&gt;5 years ago, Jieao Song wrote
+&lt;a href=&#34;https://github.com/jieaosong/IntersectionTheory&#34;&gt;a really nice intersection theory package&lt;/a&gt; in Julia,
+my new favourite programming language.
+It is similar to the famous &lt;a href=&#34;https://macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/Schubert2/html/index.html&#34;&gt;Schubert2&lt;/a&gt; package
+in Macaulay2,
+and other, lesser-known packages,
+like &lt;a href=&#34;https://www.math.sciences.univ-nantes.fr/~sorger/en/chow/&#34;&gt;Chow&lt;/a&gt; for SageMath.
+It is extremely efficient (being significantly faster than Schubert2).&lt;/p&gt;
+&lt;p&gt;One plan that had been around for almost 5 years
+&lt;a href=&#34;https://github.com/jieaosong/IntersectionTheory/issues/4&#34;&gt;was to integrate it into OSCAR&lt;/a&gt;,
+the Julia analogue of what SageMath is in Python,
+so that it becomes part of a stable ecosystem.&lt;/p&gt;
+&lt;p&gt;I&#39;m happy to say that &lt;a href=&#34;https://github.com/oscar-system/Oscar.jl/pull/5865/changes&#34;&gt;&lt;strong&gt;this integration is now done&lt;/strong&gt;&lt;/a&gt;!
+This was a joint effort of &lt;a href=&#34;https://math.rptu.de/en/decker&#34;&gt;Wolfram Decker&lt;/a&gt; and myself.
+I want to thank Wolfram for the great help (and patience).
+Aside from simply integrating the infrastructure,
+we have added lots of documentation, examples, tests, and some minor features.
+That said, it cannot be overstated how great the foundation laid by Jieao was.
+I feel like standing on the shoulder of a giant here, and I hope that this will be a great tool for many people in the future.&lt;/p&gt;
+&lt;p&gt;It is not yet in the latest version (which is 1.7.0 at the time of writing) of OSCAR,
+but you can use the &lt;a href=&#34;https://docs.oscar-system.org/dev/DeveloperDocumentation/new_developers/&#34;&gt;development version per these instructions&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you want to see what it is capable of,
+see &lt;a href=&#34;https://docs.oscar-system.org/dev/Experimental/IntersectionTheory/intro/&#34;&gt;the documentation&lt;/a&gt;
+(which for now still refers to the development branch; in the latest branch it is still the older version),
+e.g., check out:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&#34;https://docs.oscar-system.org/dev/Experimental/IntersectionTheory/AbstractVarieties/&#34;&gt;the different constructions and properties&lt;/a&gt;, or&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://docs.oscar-system.org/dev/Experimental/IntersectionTheory/examples/&#34;&gt;one of the many examples&lt;/a&gt; it can work with.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It is still in the experimental phase,
+and we are eager to hear your feedback and comments!&lt;/p&gt;
+</description>
+      <pubDate>Tue, 17 Mar 2026 00:00:00 &#43;0000</pubDate>
+      <link>https://pbelmans.ncag.info/blog/2026/03/17/intersectiontheory/</link>
+      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/03/17/intersectiontheory/</guid>
+      <category>algebraic geometry</category><category>programming</category>
+      <category>mathematics</category>
+    </item>
+    
+    <item>
+      <title>Hyperkaehler.info: an update</title>
+      <description>
+&lt;p&gt;Last week I updated &lt;a href=&#34;https://hyperkaehler.info&#34;&gt;Hyperkaehler.info&lt;/a&gt; a bit,
+and now it also contains information on:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&#34;https://www.hyperkaehler.info/monodromy&#34;&gt;monodromy groups&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://www.hyperkaehler.info/riemann-roch&#34;&gt;Riemann&amp;ndash;Roch polynomials&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://www.hyperkaehler.info/llv&#34;&gt;Looijenga–Lunts–Verbitsky (LLV) decompositions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Especially the latter is really cool,
+it is a refinement of the Hodge decomposition using the representation theory of a finite-dimensional Lie algebra attached to a hyperkähler variety.
+&lt;a href=&#34;https://jieaosong.github.io&#34;&gt;Jieao Song&lt;/a&gt; created an interactive visualization of this decomposition,
+and this is now integrated into the website.
+You can explore it for &lt;a href=&#34;https://www.hyperkaehler.info/K3-4&#34;&gt;type K3&lt;sup&gt;[4]&lt;/sup&gt;&lt;/a&gt;.
+Notice how each type now also has its own canonical URL!&lt;/p&gt;
+
+&lt;hr&gt;
+&lt;p&gt;Full disclosure: I have used LLMs (more precisely, Claude Opus and Sonnet, via GitHub Copilot)
+to implement these additions.
+What would probably have taken me more than a day of work (including various unrelated fixes) ended up taking only one or two hours,
+split between some implementation work of my own and a larger amount of reviewing LLM-generated code.&lt;/p&gt;
+&lt;p&gt;It seems that LLMs have reached sufficient maturity to be useful for these things
+(but one has to carefully review things! they are basically very good autocomplete machines behaving like slot machines, or vice versa)
+and I&#39;ll be describing some more successful use cases later.&lt;/p&gt;
+</description>
+      <pubDate>Mon, 09 Mar 2026 00:00:00 &#43;0000</pubDate>
+      <link>https://pbelmans.ncag.info/blog/2026/03/09/hyperkaehler-update/</link>
+      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/03/09/hyperkaehler-update/</guid>
+      <category>algebraic geometry</category><category>programming</category>
+      <category>mathematics</category>
+    </item>
+    
+    <item>
+      <title>Welcome to the new members of the research group</title>
+      <description>
+&lt;p&gt;It is all good to post job announcements,
+but I&#39;ve come to realize that it is also good to actually publicly welcome the people who have joined the research group!&lt;/p&gt;
+&lt;p&gt;I am really glad to say that I&#39;m being joined by&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;dr. &lt;strong&gt;&lt;a href=&#34;https://yuki-mizuno728.github.io/homepage/&#34;&gt;Yuki Mizuno&lt;/a&gt;&lt;/strong&gt;, who is joining me as a postdoc for 3 years,
+    working on noncommutative algebraic geometry&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Matthijs Holstege&lt;/strong&gt;, who is joining me as a PhD student,
+    working on quiver moduli and noncommutative algebraic geometry&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Javier Fernández Piriz&lt;/strong&gt;, who is joining Karin Melnick and me as a PhD student (so joint with the University of Luxembourg),
+    working on partial flag varieties&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I&#39;m looking forward to all the interesting mathematics that we will do together!&lt;/p&gt;
+</description>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 &#43;0000</pubDate>
+      <link>https://pbelmans.ncag.info/blog/2026/02/06/welcome-new-team-members/</link>
+      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/02/06/welcome-new-team-members/</guid>
+      
+      <category>mathematics</category>
+    </item>
+    
+    <item>
+      <title>Postdoc position in algebraic geometry</title>
+      <description>
+&lt;p&gt;I am excited to announce
+&lt;a href=&#34;https://www.uu.nl/en/organisation/working-at-utrecht-university/jobs/postdoc-position-in-algebraic-geometry&#34;&gt;
+  a postdoc position in algebraic geometry
+&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The summary:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;starting date is &lt;strong&gt;October 1 2026&lt;/strong&gt; (or as soon as possible thereafter)&lt;/li&gt;
+  &lt;li&gt;it is for 3 years (with a 1-year probation)&lt;/li&gt;
+  &lt;li&gt;the focus is (derived categories of) Hilbert schemes of points on surfaces,
+    so some experience with these or topics closely related to it
+    is required&lt;/li&gt;
+  &lt;li&gt;it is part of a &lt;a href=&#34;https://pbelmans.ncag.info/projects/hilbertmovies&#34;&gt;joint grant&lt;/a&gt;
+    between &lt;a href=&#34;https://sites.google.com/site/andkrugmath/&#34;&gt;Andreas Krug&lt;/a&gt;
+    and myself, and regular visits to Hannover are anticipated&lt;/li&gt;
+  &lt;li&gt;we will start reviewing and interviewing candidates after the application deadline of &lt;strong&gt;February 22&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There is a really active research group on algebraic geometry in Utrecht,
+and the Netherlands is a great place in general for algebraic geometry, with many interesting activities.&lt;/p&gt;
+
+&lt;p&gt;The position is funded by the &lt;a href=&#34;https://nwo.nl&#34;&gt;NWO&lt;/a&gt;,
+through the &lt;a href=&#34;https://pbelmans.ncag.info/projects/hilbertmovies&#34;&gt;NWO+DFG Weave project HilbertMoVieS&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;All information on how to apply can be found on the Utrecht University job portal.
+If you have any questions, please get in touch!&lt;/p&gt;
+</description>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 &#43;0000</pubDate>
+      <link>https://pbelmans.ncag.info/blog/2026/02/05/postdoc-hilbertmovies/</link>
+      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/02/05/postdoc-hilbertmovies/</guid>
+      
+      <category>mathematics</category>
+    </item>
+    
+    <item>
+      <title>An assistant professorship at Utrecht University</title>
+      <description>
+&lt;p&gt;The previous such post is only a few months old,
+but here is another position!&lt;/p&gt;
+&lt;p&gt;Utrecht University is hiring an &lt;a href=&#34;https://www.uu.nl/en/organisation/working-at-utrecht-university/jobs/assistant-professor-in-pure-mathematics&#34;&gt;&lt;strong&gt;assistant professor in pure mathematics&lt;/strong&gt;&lt;/a&gt;, not tied to specific area.
+I can attest it is a great place to work, so if you fit the (broad) profile, and would like to work at Utrecht University,
+please consider applying!&lt;/p&gt;
+&lt;p&gt;If you have questions, you can ask me, or in case of more official questions, the head of the committee, which is &lt;a href=&#34;https://sites.google.com/site/gijsheuts/home&#34;&gt;Gijs Heuts&lt;/a&gt;.&lt;/p&gt;
+</description>
+      <pubDate>Tue, 03 Feb 2026 00:00:00 &#43;0000</pubDate>
+      <link>https://pbelmans.ncag.info/blog/2026/02/03/ud-utrecht-2/</link>
+      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/02/03/ud-utrecht-2/</guid>
+      
+      <category>mathematics</category>
+    </item>
+    
+    <item>
+      <title>Events related to Markus Reineke as Springer Chair</title>
+      <description>
+&lt;p&gt;This academic year,
+the &lt;a href=&#34;https://www.uu.nl/en/research/utrecht-geometry-centre/research/ta-springer-chair&#34;&gt;Springer Chair&lt;/a&gt; (a visiting professorship at Utrecht University) has been given to &lt;a href=&#34;https://math.ruhr-uni-bochum.de/fakultaet/arbeitsbereiche/algebra/research-team-reineke/team/prof-dr-markus-reineke/&#34;&gt;Markus Reineke&lt;/a&gt;.
+He will be visiting us in February,
+and in this context we are organizing several events:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;a &lt;a href=&#34;https://www.uu.nl/en/research/utrecht-geometry-centre/activities/ugc-colloquium&#34;&gt;colloquium talk&lt;/a&gt;
+    on Tuesday, February 3, from 16 to 17, in Minaert 201&lt;/li&gt;
+  &lt;li&gt;a &lt;a href=&#34;https://www.uu.nl/en/events/quiver-moduli-and-their-geometry&#34;&gt;lecture series&lt;/a&gt;
+    on February 4, 9, and 10
+    (see the webpage for more details)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://www.uu.nl/en/events/open-problems-discussion-quivers&#34;&gt;a problem session&lt;/a&gt;
+    on Wednesday, February 11, from 13h15 to 15h00, in HFG 611&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://quivers-2026.ncag.info&#34;&gt;a 2-day workshop&lt;/a&gt;
+    on February 23 and 24
+    (see the webpage for more details, note that capacity is very limited)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Everyone is cordially invited to the colloquium,
+lecture series,
+and problem session!&lt;/p&gt;
+&lt;p&gt;Whilst the workshop isn&#39;t invitation-only,
+we could only get a small room,
+so if you plan to attend it,
+please get in touch with me at &lt;a href=&#34;mailto:p.belmans@uu.nl&#34;&gt;p.belmans@uu.nl&lt;/a&gt;.&lt;/p&gt;
+</description>
+      <pubDate>Fri, 16 Jan 2026 00:00:00 &#43;0000</pubDate>
+      <link>https://pbelmans.ncag.info/blog/2026/01/16/markus-events/</link>
+      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/01/16/markus-events/</guid>
+      
+      <category>mathematics</category>
+    </item>
+    
+    <item>
+      <title>Change of host for Hyperkaehler.info</title>
+      <description>
+&lt;p&gt;I&#39;ve been hosting all interactive websites on PythonAnywhere,
+but recently I felt the urge to try and host them on my Synology DS920+.
+Four years ago, I bought it with the possibility in mind
+of starting to self-host various things
+aside from using it as a NAS.
+After a failed attempt a few weeks ago
+(despite port forwarding being set up in a seemingly correct fashion,
+my ISP was blocking communication with the Let&#39;s Encrypt servers)
+I figured out that I could use CloudFlare Tunnels instead.&lt;/p&gt;
+&lt;p&gt;I have now done this for &lt;a href=&#34;https://hyperkaehler.info&#34;&gt;Hyperkaehler.info&lt;/a&gt;,
+as a little experiment.
+You shouldn&#39;t notice anything different,
+except that response times might even be a little quicker,
+and the SSL certificate comes from somewhere else.
+But in case it does go down for a prolonged period,
+now you know why.&lt;/p&gt;
+&lt;p&gt;If this approach works well for the next few months,
+I&#39;ll probably move my other interactive websites over as well
+(the static ones can simply continue running via GitHub Pages for the time being)&lt;/p&gt;
+</description>
+      <pubDate>Sun, 28 Dec 2025 00:00:00 &#43;0000</pubDate>
+      <link>https://pbelmans.ncag.info/blog/2025/12/28/change-of-host-hyperkaehler/</link>
+      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2025/12/28/change-of-host-hyperkaehler/</guid>
+      <category>algebraic geometry</category><category>programming</category>
+      <category>mathematics</category>
+    </item>
+    
+    <item>
+      <title>New paper: Generic non-semisimplicity of small quantum cohomology of Kronecker moduli</title>
+      <description>
+&lt;p&gt;It&#39;s not quite a new paper,
+rather it is a new &lt;em&gt;appendix&lt;/em&gt; (&lt;a href=&#34;https://pbelmans.ncag.info/assets/appendix-non-semisimple-kronecker-moduli.pdf&#34;&gt;&lt;strong&gt;pdf of a standalone version&lt;/strong&gt;&lt;/a&gt;),
+to be included in &lt;a href=&#34;https://arxiv.org/abs/2509.01101&#34;&gt;A-D-E diagrams, Hodge&amp;ndash;Tate hyperplane sections and semisimple quantum cohomology&lt;/a&gt;
+by Sergey Galkin, Naichung Conan Leung, Changzheng Li, and Rui Xiong.&lt;/p&gt;
+&lt;p&gt;It is a short appendix,
+in which we observe that one of the main results in the Galkin&amp;ndash;Leung&amp;ndash;Li&amp;ndash;Xiong paper
+is also sufficiently strong to deduce that
+the small quantum cohomology of certain Kronecker moduli is &lt;em&gt;not&lt;/em&gt; semisimple.
+Here, Kronecker moduli is shorthand for
+moduli spaces of stable quiver representations of the Kronecker quiver;
+this class of smooth projective varieties has many extremely nice properties,
+and many strong tools to study them.&lt;/p&gt;
+&lt;p&gt;I refer to the introduction of the main paper for additional context
+motivating the study of quantum cohomology.
+Let me just point out that&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;combining the Schofield and Dubrovin conjectures
+    predicts that the big quantum cohomology should be generically semisimple;&lt;/li&gt;
+  &lt;li&gt;special cases of Kronecker moduli are Grassmannians,
+    for which the small quantum cohomology is generically semisimple;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2412.15987&#34;&gt;Meng has shown&lt;/a&gt; that the small quantum cohomology for the Kronecker moduli space
+    for the 3-Kronecker quiver and dimension vector $(2,3)$
+    (the smallest case which is not a Grassmannian)
+    has generically simple quantum cohomology.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;One can experimentally (using &lt;a href=&#34;https://quiver.tools&#34;&gt;QuiverTools&lt;/a&gt;)
+check that the obstruction from Galkin&amp;ndash;Leung&amp;ndash;Li&amp;ndash;Xiong&#39;s Theorem 1.2
+vanishes for many examples of Kronecker moduli.
+But Markus and I noticed that it does &lt;em&gt;not&lt;/em&gt; vanish for the following infinite family of Kronecker moduli:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Theorem&lt;/strong&gt;
+&lt;em&gt;Let $\mathrm{M}_{(2,m)}^m$ be the Kronecker moduli space
+for the $m$-Kronecker quiver and dimension vector $(2,m)$, and $m\geq 5$ odd.
+Then the small quantum cohomology of $\mathrm{M}_{(2,m)}^m$ is &lt;strong&gt;not&lt;/strong&gt; generically semisimple.&lt;/em&gt;
+&lt;/p&gt;
+&lt;p&gt;It&#39;s a fun, combinatorial proof, that fits in 1.5 page, so I won&#39;t comment further on it.&lt;/p&gt;
+</description>
+      <pubDate>Wed, 26 Nov 2025 00:00:00 &#43;0000</pubDate>
+      <link>https://pbelmans.ncag.info/blog/2025/11/26/new-paper-non-semisimplicity/</link>
+      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2025/11/26/new-paper-non-semisimplicity/</guid>
+      <category>algebraic geometry</category><category>programming</category>
+      <category>mathematics</category>
+    </item>
+    
+    <item>
+      <title>Updated paper: Moduli spaces of semiorthogonal decompositions in families</title>
+      <description>
+&lt;p&gt;This update is concerned with
+&lt;strong&gt;&lt;a href=&#34;https://arxiv.org/abs/2002.03303&#34;&gt;Moduli spaces of semiorthogonal decompositions in families&lt;/a&gt;&lt;/strong&gt;,
+written together with Shinnosuke Okawa, and Andrea Ricolfi.
+I already alluded to it in the previous post:
+this paper has seen a significant update.&lt;/p&gt;
+
+&lt;h3&gt;What&#39;s new?&lt;/h3&gt;
+&lt;p&gt;Following a very useful referee report,
+we have:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;streamlined the entire paper;&lt;/li&gt;
+  &lt;li&gt;referred to the literature for étale descent of semiorthogonal decompositions,
+    thereby getting rid of a characteristic-zero assumption;&lt;/li&gt;
+  &lt;li&gt;included a second proof of the functor being limit-preserving,
+    following a suggestion by the referee;&lt;/li&gt;
+  &lt;li&gt;included the referee&#39;s proof for uniqueness of deformations
+    (with the original proof moved to a separated paper);&lt;/li&gt;
+  &lt;li&gt;everything now works in a general smooth and proper setting,
+    so the standing assumptions are always the same;&lt;/li&gt;
+  &lt;li&gt;we have expanded the discussion on our conjecture
+    regarding the subspace of non-trivial semiorthogonal decompositions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I believe the paper is much improved now,
+so if you didn&#39;t like the previous version, you can give this one a shot!&lt;/p&gt;
+</description>
+      <pubDate>Mon, 17 Nov 2025 00:00:00 &#43;0000</pubDate>
+      <link>https://pbelmans.ncag.info/blog/2025/11/17/updated-paper-sod-f/</link>
+      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2025/11/17/updated-paper-sod-f/</guid>
+      <category>algebraic geometry</category>
+      <category>mathematics</category>
+    </item>
+    
+  </channel>
+</rss>

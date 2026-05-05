@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stacks Project on Pieter Belmans</title>
+    <link>https://pbelmans.ncag.info/tags/Stacks-project/</link>
+    <description>Recent content in Stacks Project on Pieter Belmans</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 16 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://pbelmans.ncag.info/tags/Stacks-project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Statistics for the Stacks project (2)</title>
+      <link>https://pbelmans.ncag.info/blog/2023/08/16/new-stats-stacks-project/</link>
+      <pubDate>Wed, 16 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2023/08/16/new-stats-stacks-project/</guid>
+      <description>&lt;p&gt;For the Stacks project workshop last week&#xA;I crunched the numbers again&#xA;&lt;a href=&#34;https://pbelmans.ncag.info/blog/2020/04/09/view-stats-stacks-project/&#34;&gt;like I did back in 2020 to come up with some statistics&lt;/a&gt;.&#xA;Here&#39;s the updated graph.&#xA;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;What is the conclusion?&#xA;That the number of algebraic geometers seems to grow linearly over the years?&#xA;A scary thought!&#xA;&lt;/p&gt;&#xA;&#xA;&lt;script src=&#34;https://d3js.org/d3.v4.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&lt;div style=&#34;text-align: center&#34; id=&#34;unique&#34;&gt;&lt;/div&gt;&#xA;&#xA;&#xA;&lt;div style=&#34;display: none&#34; id=&#34;visits&#34;&gt;&lt;/div&gt;&#xA;&lt;div style=&#34;display: none&#34; id=&#34;pages&#34;&gt;&lt;/div&gt;&#xA;&#xA;&lt;script&gt;&#xA;// set the dimensions and margins of the graph&#xA;var margin = {top: 10, right: 30, bottom: 30, left: 60},&#xA;    width = 460 - margin.left - margin.right,&#xA;    height = 400 - margin.top - margin.bottom;&#xA;&#xA;// append the svg object to the body of the page&#xA;var unique = d3.select(&#34;#unique&#34;)&#xA;  .append(&#34;svg&#34;)&#xA;    .attr(&#34;width&#34;, width + margin.left + margin.right)&#xA;    .attr(&#34;height&#34;, height + margin.top + margin.bottom)&#xA;  .append(&#34;g&#34;)&#xA;    .attr(&#34;transform&#34;,&#xA;          &#34;translate(&#34; + margin.left + &#34;,&#34; + margin.top + &#34;)&#34;);&#xA;&#xA;var visits = d3.select(&#34;#visits&#34;)&#xA;  .append(&#34;svg&#34;)&#xA;    .attr(&#34;width&#34;, width + margin.left + margin.right)&#xA;    .attr(&#34;height&#34;, height + margin.top + margin.bottom)&#xA;  .append(&#34;g&#34;)&#xA;    .attr(&#34;transform&#34;,&#xA;          &#34;translate(&#34; + margin.left + &#34;,&#34; + margin.top + &#34;)&#34;);&#xA;&#xA;var pages = d3.select(&#34;#pages&#34;)&#xA;  .append(&#34;svg&#34;)&#xA;    .attr(&#34;width&#34;, width + margin.left + margin.right)&#xA;    .attr(&#34;height&#34;, height + margin.top + margin.bottom)&#xA;  .append(&#34;g&#34;)&#xA;    .attr(&#34;transform&#34;,&#xA;          &#34;translate(&#34; + margin.left + &#34;,&#34; + margin.top + &#34;)&#34;);&#xA;&#xA;//Read the data&#xA;d3.csv(&#34;/assets/stacks-data-2023.csv&#34;,&#xA;&#xA;  // When reading the csv, I must format variables:&#xA;  function(d){&#xA;    return { date : d3.timeParse(&#34;%Y-%m&#34;)(d.month), unique : d.visitors, visits : d.visits, pages : d.pages }&#xA;  },&#xA;&#xA;  // Now I can use this dataset:&#xA;  function(data) {&#xA;&#xA;    // x axis&#xA;    var x = d3.scaleTime()&#xA;      .domain(d3.extent(data, function(d) { return d.date; }))&#xA;      .range([ 0, width ]);&#xA;    unique.append(&#34;g&#34;)&#xA;      .attr(&#34;transform&#34;, &#34;translate(0,&#34; + height + &#34;)&#34;)&#xA;      .call(d3.axisBottom(x));&#xA;    visits.append(&#34;g&#34;)&#xA;      .attr(&#34;transform&#34;, &#34;translate(0,&#34; + height + &#34;)&#34;)&#xA;      .call(d3.axisBottom(x));&#xA;    pages.append(&#34;g&#34;)&#xA;      .attr(&#34;transform&#34;, &#34;translate(0,&#34; + height + &#34;)&#34;)&#xA;      .call(d3.axisBottom(x));&#xA;&#xA;    // y axes&#xA;    var uniqueY = d3.scaleLinear()&#xA;      .domain([0, d3.max(data, function(d) { return +d.unique; })])&#xA;      .range([ height, 0 ]);&#xA;    unique.append(&#34;g&#34;)&#xA;      .call(d3.axisLeft(uniqueY));&#xA;    var visitsY = d3.scaleLinear()&#xA;      .domain([0, d3.max(data, function(d) { return +d.visits; })])&#xA;      .range([ height, 0 ]);&#xA;    visits.append(&#34;g&#34;)&#xA;      .call(d3.axisLeft(visitsY));&#xA;    var pagesY = d3.scaleLinear()&#xA;      .domain([0, d3.max(data, function(d) { return +d.pages; })])&#xA;      .range([ height, 0 ]);&#xA;    pages.append(&#34;g&#34;)&#xA;      .call(d3.axisLeft(pagesY));&#xA;&#xA;    // add the lines&#xA;    unique.append(&#34;path&#34;)&#xA;      .datum(data)&#xA;      .attr(&#34;fill&#34;, &#34;none&#34;)&#xA;      .attr(&#34;stroke&#34;, &#34;steelblue&#34;)&#xA;      .attr(&#34;stroke-width&#34;, 1.5)&#xA;      .attr(&#34;d&#34;, d3.line()&#xA;        .x(function(d) { return x(d.date) })&#xA;        .y(function(d) { return uniqueY(d.unique) })&#xA;      )&#xA;    visits.append(&#34;path&#34;)&#xA;      .datum(data)&#xA;      .attr(&#34;fill&#34;, &#34;none&#34;)&#xA;      .attr(&#34;stroke&#34;, &#34;steelblue&#34;)&#xA;      .attr(&#34;stroke-width&#34;, 1.5)&#xA;      .attr(&#34;d&#34;, d3.line()&#xA;        .x(function(d) { return x(d.date) })&#xA;        .y(function(d) { return visitsY(d.visits) })&#xA;      )&#xA;    pages.append(&#34;path&#34;)&#xA;      .datum(data)&#xA;      .attr(&#34;fill&#34;, &#34;none&#34;)&#xA;      .attr(&#34;stroke&#34;, &#34;steelblue&#34;)&#xA;      .attr(&#34;stroke-width&#34;, 1.5)&#xA;      .attr(&#34;d&#34;, d3.line()&#xA;        .x(function(d) { return x(d.date) })&#xA;        .y(function(d) { return pagesY(d.pages) })&#xA;      )&#xA;&#xA;    // add axis labels&#xA;    unique.append(&#34;text&#34;)&#xA;        .attr(&#34;transform&#34;, &#34;rotate(-90)&#34;)&#xA;        .attr(&#34;y&#34;, 0 - margin.left)&#xA;        .attr(&#34;x&#34;,0 - (height / 2))&#xA;        .attr(&#34;dy&#34;, &#34;1em&#34;)&#xA;        .style(&#34;text-anchor&#34;, &#34;middle&#34;)&#xA;        .text(&#34;Number of unique visitors per month&#34;);&#xA;    visits.append(&#34;text&#34;)&#xA;        .attr(&#34;transform&#34;, &#34;rotate(-90)&#34;)&#xA;        .attr(&#34;y&#34;, 0 - margin.left)&#xA;        .attr(&#34;x&#34;,0 - (height / 2))&#xA;        .attr(&#34;dy&#34;, &#34;1em&#34;)&#xA;        .style(&#34;text-anchor&#34;, &#34;middle&#34;)&#xA;        .text(&#34;Number of visits&#34;);&#xA;    pages.append(&#34;text&#34;)&#xA;        .attr(&#34;transform&#34;, &#34;rotate(-90)&#34;)&#xA;        .attr(&#34;y&#34;, 0 - margin.left)&#xA;        .attr(&#34;x&#34;,0 - (height / 2))&#xA;        .attr(&#34;dy&#34;, &#34;1em&#34;)&#xA;        .style(&#34;text-anchor&#34;, &#34;middle&#34;)&#xA;        .text(&#34;Number of pageviews&#34;);&#xA;&#xA;})&#xA;&lt;/script&gt;</description>
+    </item>
+    <item>
+      <title>Stacks Project Workshop 2023</title>
+      <link>https://pbelmans.ncag.info/blog/2022/12/08/spw-registration/</link>
+      <pubDate>Thu, 08 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2022/12/08/spw-registration/</guid>
+      <description>&lt;p&gt;Great news! There will be another Stacks Project Workshop in 2023, again in Ann Arbor like the 2017 edition.&lt;/p&gt;&#xA;&lt;p&gt;All information can be &lt;a href=&#34;https://stacks.github.io/&#34;&gt;found on the website&lt;/a&gt;, including the registration, which is open until &lt;strong&gt;February 15, 2023&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Stacks Project Expository Collection</title>
+      <link>https://pbelmans.ncag.info/blog/2022/07/24/spec/</link>
+      <pubDate>Sun, 24 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2022/07/24/spec/</guid>
+      <description>&lt;img src=&#34;https://pbelmans.ncag.info/assets/spec-cover.png&#34; style=&#34;float: right; margin: 0 0 5px 5px&#34; width=&#34;300&#34;&gt;&#xA;&lt;p&gt;Earlier this week we (= &lt;a href=&#34;http://www-personal.umich.edu/~weiho/&#34;&gt;Wei Ho&lt;/a&gt;, &lt;a href=&#34;https://www.math.columbia.edu/~dejong/&#34;&gt;Johan de Jong&lt;/a&gt; and I) sent the final version of &lt;strong&gt;&lt;a href=&#34;https://www.cambridge.org/core/books/stacks-project-expository-collection/433A8B918FB8FD11AA0E82C3E24E5B2D&#34;&gt;Stacks Project Expository Collection&lt;/a&gt;&lt;/strong&gt; to the publisher.&#xA;It is a collection of expository articles on modern topics in algebraic geometry (often featuring something stacky)&#xA;written by groups participating in the Stacks project workshops in 2017 and 2020.&#xA;It will be published by Cambridge University Press in the London Mathematical Society Lecture Note Series, number 480.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Introducing The Moduli Space</title>
+      <link>https://pbelmans.ncag.info/blog/2021/01/13/themodulispace/</link>
+      <pubDate>Wed, 13 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2021/01/13/themodulispace/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://as.cornell.edu/daniel-halpern-leistner&#34;&gt;Dan Halpern-Leistner&lt;/a&gt; is now also using the Gerby framework, to make his lecture notes on moduli theory available.&lt;/p&gt;&#xA;&lt;p&gt;Go read &lt;a href=&#34;https://book.themoduli.space&#34;&gt;The Moduli Space&lt;/a&gt;, it&#39;s exciting stuff!&lt;/p&gt;&#xA;&lt;p&gt;&lt;small&gt;Let me know if you find any website-related issues.&lt;/small&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Stacks project in Nieuw Archief voor Wiskunde</title>
+      <link>https://pbelmans.ncag.info/blog/2020/09/09/naw-stacks/</link>
+      <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/09/09/naw-stacks/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.math.columbia.edu/~dejong/&#34;&gt;Johan&lt;/a&gt; and I were invited to contribute an article about the Stacks project to &lt;a href=&#34;http://www.nieuwarchief.nl/&#34;&gt;Nieuw Archief voor Wiskunde&lt;/a&gt;, the journal of the Koninklijk Wiskundig Genootschap (Royal Mathematical Society), describing the project, its history, technical aspects and outlook. The article is not freely available on the webpage yet (all articles eventually become free for the public though), but I am allowed to share it on my webpage.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;So if you can read Dutch and want to learn more about the Stacks project, or if your Google Translate skills are on point, click on &lt;a href=&#34;https://pbelmans.ncag.info/assets/naw5-2020-21-3-167.pdf&#34;&gt;Het Stacks project&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Statistics for the Stacks project</title>
+      <link>https://pbelmans.ncag.info/blog/2020/04/09/view-stats-stacks-project/</link>
+      <pubDate>Thu, 09 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/04/09/view-stats-stacks-project/</guid>
+      <description>&lt;p&gt;A few weeks ago someone who shall not be named asked me about the viewer statistics for the Stacks project. When plotting these results, I realised that (aside from a major ego trip) it is also remarkably pleasant to look at graphs which somehow do not feature logarithmic scales and / or impending doom, so I decided to have 5 minutes of fun in &lt;a href=&#34;https://d3js.org/&#34;&gt;D3.js&lt;/a&gt; and share them.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;The most interesting one I think is the number of unique visitors (i.e. the number of unique IP&#39;s in the Apache access logs, which is as good as we can get the data). The growth is remarkably linear it seems, I actually expected the growth rate to have gone down over the years.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Registration for the Stacks Project Workshop 2020</title>
+      <link>https://pbelmans.ncag.info/blog/2019/08/09/workshop-registration/</link>
+      <pubDate>Fri, 09 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2019/08/09/workshop-registration/</guid>
+      <description>&lt;p&gt;Quick update: the &lt;a href=&#34;https://stacks.github.io/&#34;&gt;registration for next year&#39;s Stacks Project Workshop&lt;/a&gt; is now open.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A minimal working example to use Gerby</title>
+      <link>https://pbelmans.ncag.info/blog/2019/07/16/minimal-working-gerby/</link>
+      <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2019/07/16/minimal-working-gerby/</guid>
+      <description>&lt;p&gt;If you are interested in setting up a website similar to &lt;a href=&#34;https://stacks.math.columbia.edu&#34;&gt;The Stacks project&lt;/a&gt; or &lt;a href=&#34;https://kerodon.net&#34;&gt;Kerodon&lt;/a&gt;, you can do this using the same framework that powers these websites: &lt;a href=&#34;https://gerby-project.github.io&#34;&gt;Gerby&lt;/a&gt;. Unfortunately, until now the instructions to use this were pretty annoyingly only available for the Stacks project, so setting things up correctly was painful and very specific.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;We have now created &lt;a href=&#34;https://github.com/gerby-project/hello-world&#34;&gt;&lt;strong&gt;a minimal working example&lt;/strong&gt;&lt;/a&gt; which lists the relevant steps to set up Gerby for a minimal Hello world project. Doing this you&#39;ll get an instance of the Gerby with the Stacks project layout, containing just a few tags. This repository is basically a Travis script which performs all the steps required for the installation of plasTeX and Gerby, and then goes through what should be the usual update process for an actual instance.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Stacks Project Workshop 2020: website</title>
+      <link>https://pbelmans.ncag.info/blog/2019/06/21/stacks-project-workshop-2020/</link>
+      <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2019/06/21/stacks-project-workshop-2020/</guid>
+      <description>&lt;p&gt;For those of you eagerly awaiting more information on the new Stacks Project Workshop, we&#39;ve put up &lt;a href=&#34;https://stacks.github.io/&#34;&gt;a new website&lt;/a&gt;.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;There&#39;s not much information yet, except a date, location and a preliminary list of mentors.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Stacks Project Workshop 2</title>
+      <link>https://pbelmans.ncag.info/blog/2019/05/24/stacks-project-workshop-2/</link>
+      <pubDate>Fri, 24 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2019/05/24/stacks-project-workshop-2/</guid>
+      <description>&lt;p&gt;In July or August 2020 &lt;a href=&#34;http://www.math.columbia.edu/~dejong/&#34;&gt;Johan de Jong&lt;/a&gt;, &lt;a href=&#34;http://math.lsa.umich.edu/~weiho/&#34;&gt;Wei Ho&lt;/a&gt;, and I will organise a workshop on algebraic geometry and the Stacks project, similar to the one we organised in 2017.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;See also &lt;a href=&#34;https://www.math.columbia.edu/~dejong/wordpress/?p=4410&#34;&gt;Johan&#39;s announcement&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Introducing Kerodon</title>
+      <link>https://pbelmans.ncag.info/blog/2018/10/17/kerodon/</link>
+      <pubDate>Wed, 17 Oct 2018 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2018/10/17/kerodon/</guid>
+      <description>&lt;p&gt;For the new Stacks project website I created &lt;a href=&#34;https://gerby-project.github.io/&#34;&gt;Gerby&lt;/a&gt;, a combination of a plasTeX fork and a Flask website to create online views for large LaTeX documents with a permanent reference system (also known as tags). From the beginning we intended it to be applicable to at least 1 other project: an online view for the works of &lt;a href=&#34;http://www.math.harvard.edu/~lurie/&#34;&gt;Jacob Lurie&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;This is now live, as &lt;strong&gt;&lt;a href=&#34;https://kerodon.net&#34;&gt;Kerodon&lt;/a&gt;&lt;/strong&gt;. Currently it contains 1 chapter: &lt;a href=&#34;https://kerodon.net/tag/0001&#34;&gt;The Language of $\infty$-Categories&lt;/a&gt;. Gradually this will increase, as more material is prepared to be included in Kerodon.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A new website for the Stacks project (2)</title>
+      <link>https://pbelmans.ncag.info/blog/2018/05/21/new-stacks-project/</link>
+      <pubDate>Mon, 21 May 2018 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2018/05/21/new-stacks-project/</guid>
+      <description>&lt;p&gt;Almost 6 years ago, I wrote a blogpost &lt;a href=&#34;https://pbelmans.ncag.info/blog/2012/07/19/a-new-website-for-the-stacks-project/&#34;&gt;A new website for the Stacks project&lt;/a&gt; announcing the first version of the Stacks project website. Today v2 has been released, see &lt;a href=&#34;https://stacks.math.columbia.edu&#34;&gt;&lt;var&gt;stacks.math.columbia.edu&lt;/var&gt;&lt;/a&gt;.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;I would like to thank &lt;a href=&#34;http://chngr.github.io&#34;&gt;Raymond Cheng&lt;/a&gt; and &lt;a href=&#34;http://www.math.columbia.edu/~dejong/&#34;&gt;Johan de Jong&lt;/a&gt; for the hard work we&#39;ve done together, and &lt;a href=&#34;http://www.math.columbia.edu/~woit/wordpress/&#34;&gt;Peter Woit&lt;/a&gt; for helping us with the server administration.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;The main point of the new website as a user is that it is &lt;em&gt;mobile-friendly&lt;/em&gt;. It should look good on tablets and smartphones, and if it doesn&#39;t, please tell us.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A website for Gerby</title>
+      <link>https://pbelmans.ncag.info/blog/2018/05/20/gerby/</link>
+      <pubDate>Sun, 20 May 2018 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2018/05/20/gerby/</guid>
+      <description>&lt;p&gt;By now it&#39;s no secret that we are working on a new version of the Stacks project website (see &lt;a href=&#34;https://pbelmans.ncag.info/blog/2017/08/27/introduction-gerby-plastex/&#34;&gt;1&lt;/a&gt; and &lt;a href=&#34;https://pbelmans.ncag.info/blog/2018/01/05/introducing-gerby-tools/&#34;&gt;2&lt;/a&gt;). We have been working on a system called &lt;em&gt;Gerby&lt;/em&gt; for almost a year now, as a replacement for the Stacks project website. In fact, it will go live &lt;em&gt;tomorrow&lt;/em&gt;.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;In case you are interested in knowing more about the new system, you want to run your local copy of the Stacks project website, or you are interested in testing the system for your own project, I have put up &lt;a href=&#34;https://gerby-project.github.io/&#34;&gt;a page describing the system&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Introducing Gerby: the tools and website</title>
+      <link>https://pbelmans.ncag.info/blog/2018/01/05/introducing-gerby-tools/</link>
+      <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2018/01/05/introducing-gerby-tools/</guid>
+      <description>&lt;p&gt;A little while ago I explained &lt;a href=&#34;https://pbelmans.ncag.info/blog/2017/08/27/introduction-gerby-plastex/&#34;&gt;how to take the Stacks project and convert it to a bunch of small HTML files&lt;/a&gt;, which is the first step in setting up the new website for the Stacks project. In this post I&#39;ll explain the next two steps: creating the database behind the website, and setting up the website. For now, this part is not as streamlined as we&#39;d want it to be, but in any case, it&#39;s not too hard.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Stacks project now uses HTTPS</title>
+      <link>https://pbelmans.ncag.info/blog/2017/09/11/https-stacks/</link>
+      <pubDate>Mon, 11 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2017/09/11/https-stacks/</guid>
+      <description>&lt;p&gt;Google has announced that it will &lt;a href=&#34;https://developers.google.com/web/updates/2016/10/avoid-not-secure-warn#long_term_-_use_https_everywhere&#34;&gt;display security warnings for all pages containing input forms&lt;/a&gt;. They already do this for input fields meant for passwords or credit card details, but in October it will apply to all possible input forms, and we have quite a few of those.&lt;/p&gt;&#xA;&lt;p&gt;To prevent Chrome from displaying warnings, we have now moved everything to HTTPS. There shouldn&#39;t be anything different, except that you see your browser stating that the website is served over a secure connection. Everything automatically redirects, so you don&#39;t have to do anything special.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Introducing Gerby: plasTeX</title>
+      <link>https://pbelmans.ncag.info/blog/2017/08/27/introduction-gerby-plastex/</link>
+      <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2017/08/27/introduction-gerby-plastex/</guid>
+      <description>&lt;p&gt;So, we are currently working on a new version of the Stacks project website. If you have any suggestions for the new website, please get in touch: you can email me, or &lt;a href=&#34;https://github.com/pbelmans/gerby-website&#34;&gt;use the issue tracker for the website on GitHub&lt;/a&gt;. The project is called &lt;strong&gt;Gerby&lt;/strong&gt;, as a silly reference to the Stacks project. It consists of several parts, and this blog post explains you how to use one of them: the &lt;a href=&#34;https://github.com/pbelmans/plastex/tree/gerby&#34;&gt;Gerby renderer in plasTeX&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Stacks project workshop: the aftermath</title>
+      <link>https://pbelmans.ncag.info/blog/2017/08/09/stacks-project-workshop-discussion/</link>
+      <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2017/08/09/stacks-project-workshop-discussion/</guid>
+      <description>&lt;p&gt;So, last week we had the &lt;a href=&#34;http://stacks.github.io&#34;&gt;Stacks project workshop&lt;/a&gt;. And it was fun!&lt;/p&gt;&#xA;&#xA;&lt;h3&gt;Mathematically&lt;/h3&gt;&#xA;&lt;p&gt;I think that participants enjoyed the setup of working in small groups on a specific topic, with the possibility that they could write up what they have learnt and put this in the Stacks project. Most of the topics were chosen with a somewhat easy inclusion in the Stacks project in mind, and at least two groups are publicly sharing their progress on this:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>One week left to register for the Stacks project workshop</title>
+      <link>https://pbelmans.ncag.info/blog/2017/01/25/registration-stacks-project-workshop/</link>
+      <pubDate>Wed, 25 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2017/01/25/registration-stacks-project-workshop/</guid>
+      <description>&lt;p&gt;If you are interested in attending the &lt;a href=&#34;https://stacks.github.io/&#34;&gt;Stacks project workshop&lt;/a&gt;, don&#39;t forget to register before January 31.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Registration for the Stacks Project Workshop</title>
+      <link>https://pbelmans.ncag.info/blog/2016/11/08/workshop-registration/</link>
+      <pubDate>Tue, 08 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/11/08/workshop-registration/</guid>
+      <description>&lt;p&gt;Another quick update: you can now apply for the &lt;a href=&#34;https://stacks.github.io&#34;&gt;Stacks Project Workshop&lt;/a&gt;!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>List of mentors for Stacks Project Workshop</title>
+      <link>https://pbelmans.ncag.info/blog/2016/10/05/speakers-for-stacks-project-workshop/</link>
+      <pubDate>Wed, 05 Oct 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/10/05/speakers-for-stacks-project-workshop/</guid>
+      <description>&lt;p&gt;Just a quick update: there is now a (preliminary) list of mentors available on the &lt;a href=&#34;https://stacks.github.io/&#34;&gt;website for the Stacks Project Workshop&lt;/a&gt;. It looks awesome, and if you are interested in attending you can still let us know what you would like to see at the workshop, by filling out the form on the website.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Stacks Project Workshop</title>
+      <link>https://pbelmans.ncag.info/blog/2016/09/06/stacks-project-workshop/</link>
+      <pubDate>Tue, 06 Sep 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/09/06/stacks-project-workshop/</guid>
+      <description>&lt;p&gt;Next summer sometime in July or August &lt;a href=&#34;http://www.math.columbia.edu/~dejong/&#34;&gt;Johan de Jong&lt;/a&gt;, &lt;a href=&#34;http://math.lsa.umich.edu/~weiho/&#34;&gt;Wei Ho&lt;/a&gt;, and I will organise a workshop on algebraic geometry and the Stacks project. Please go to the &lt;a href=&#34;https://stacks.github.io/&#34;&gt;workshop webpage&lt;/a&gt; for more information (not a lot there yet) and to pre-register.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;See also &lt;a href=&#34;http://math.columbia.edu/~dejong/wordpress/?p=4143&#34;&gt;Johan&#39;s announcement&lt;/a&gt;, which is exactly the same as this except for a permutation of the organisers.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Stacks project website bug fixing</title>
+      <link>https://pbelmans.ncag.info/blog/2016/07/07/stacks-project-website-bug-fixing/</link>
+      <pubDate>Thu, 07 Jul 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/07/07/stacks-project-website-bug-fixing/</guid>
+      <description>&lt;p&gt;Today I decided to spend some time improving the website for the Stacks project, fixing bugs and implementing some small improvements. I &lt;a href=&#34;https://github.com/stacks/stacks-website/milestone/3&#34;&gt;grouped the issues in the GitHub issue tracker&lt;/a&gt; that I wanted to address. Here are two highlights, not because the bugfix was interesting, but because you might learn something about how to use the website.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/stacks/stacks-website/issues/119&#34;&gt;the search now works better with quotes&lt;/a&gt;&lt;/strong&gt;: If you want to learn about quasicoherent sheaves in the Stacks project, you should first of all know that the spelling quasi-coherent is used. Then it is important to know that if you want to use the search function to find results about quasi-coherent sheaves, you should enclose it with quotes. I.e. the following would be a way of looking for tags mentioning quasi-coherent sheaves on a stack:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Stacks project citations</title>
+      <link>https://pbelmans.ncag.info/blog/2016/07/02/stacks-project-citations/</link>
+      <pubDate>Sat, 02 Jul 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/07/02/stacks-project-citations/</guid>
+      <description>&lt;p&gt;I was wondering how often the Stacks project gets cited nowadays. I wanted to check this both on arXiv and MathSciNet, but the fulltext search of arXiv only returns its results in a way not suitable for easy processing (and also not all of the results it seems, because the oldest preprint is from 2014), so I had to stick to MathSciNet.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;So what I did is look at how often &#34;stacks project&#34; appears in the references on MathSciNet, and after some parsing (and with the sample being taken today) this gives the following results, broken down by year:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Alternative visualisation of the structure of the Stacks project</title>
+      <link>https://pbelmans.ncag.info/blog/2016/05/26/alternative-visualisation-of-the-structure-of-the-stacks-project/</link>
+      <pubDate>Thu, 26 May 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/05/26/alternative-visualisation-of-the-structure-of-the-stacks-project/</guid>
+      <description>&lt;p&gt;It turns out that someone independently made &lt;a href=&#34;http://tietom.me/2016/04/30/stacksvis/&#34;&gt;visualisations of the structure of the Stacks project&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;He or she also performed some statistical analysis, but I&#39;m not sure the metrics of how important a result is are chosen appropriately. For instance &lt;a href=&#34;http://stacks.math.columbia.edu/tag/07FJ&#34;&gt;tag 07FJ&lt;/a&gt; appears in the top 10 list, just because it refers to so many other tags in its proof. That does not necessarily mean it is important because it heavily depends on how a statement and its proof are written: if a statement is a long list of substatements, or its proof does not contain any interesting sublemmas (at first sight) then by this metric it will become important just because it refers to many other tags. The metric confounds importance and difficulty I think. Although in this case it actually &lt;em&gt;is&lt;/em&gt; an important result because it forms the main technical part of the proof of &lt;a href=&#34;http://stacks.math.columbia.edu/tag/07GC&#34;&gt;Popescu&#39;s theorem&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Stacks project has 5000 pages</title>
+      <link>https://pbelmans.ncag.info/blog/2016/02/03/the-stacks-project-has-5000-pages/</link>
+      <pubDate>Wed, 03 Feb 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/02/03/the-stacks-project-has-5000-pages/</guid>
+      <description>&lt;p&gt;We are now at 5003 pages, hurray! &lt;a href=&#34;http://math.columbia.edu/~dejong/wordpress/?p=4079&#34;&gt;There will be a party&lt;/a&gt; at Johan&#39;s place, if you can make it to New York in time :).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>On &#34;Towards MathJax 3.0&#34;</title>
+      <link>https://pbelmans.ncag.info/blog/2015/12/21/on-towards-mathjax-3-0/</link>
+      <pubDate>Mon, 21 Dec 2015 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2015/12/21/on-towards-mathjax-3-0/</guid>
+      <description>&lt;p&gt;A few days ago the MathJax consortium &lt;a href=&#34;https://www.mathjax.org/whitepaper-towards-mathjax-v3/&#34;&gt;released&lt;/a&gt; a white paper called &#34;&lt;a href=&#34;http://mathjax.github.io/papers/towards-v3/towards-mathjax-v3.html&#34;&gt;Towards MathJax 3.0&lt;/a&gt;&#34; (&lt;a href=&#34;http://mathjax.github.io/papers/towards-v3/towards-mathjax-v3.pdf&#34;&gt;pdf&lt;/a&gt;). With my sinuses again in a reasonable condition I decided to read it, and see what it means for the average user. If you are an average user but don&#39;t care about why things are the way they are, you can skip to the &lt;a href=&#34;#changes&#34;&gt;changes&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h2&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;The question that is answered is:&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;&#34;What do we expect from MathJax 3.0?&#34;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New feature for the Stacks project: detailed tag edits</title>
+      <link>https://pbelmans.ncag.info/blog/2015/07/01/new-feature-for-the-stacks-project-detailed-tag-edits/</link>
+      <pubDate>Wed, 01 Jul 2015 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2015/07/01/new-feature-for-the-stacks-project-detailed-tag-edits/</guid>
+      <description>&lt;p&gt;Because of the heat wave currently keeping Belgium in its grip (preventing me from doing research...) I decided to finally make the last fixes for a new feature for the Stacks project that has been in the make now for a while: detailed tag edits.&lt;/p&gt;&#xA;&lt;p&gt;Git has a feature called &lt;a href=&#34;http://git-scm.com/docs/git-blame&#34;&gt;&lt;code&gt;git blame&lt;/code&gt;&lt;/a&gt;, that tells you when a certain line in a file was last edited and by whom. Starting from this idea Johan has built &lt;a href=&#34;https://github.com/stacks/stacks-history&#34;&gt;&lt;code&gt;stacks-history&lt;/code&gt;&lt;/a&gt; that collects all this information throughout the lifetime of the Stacks project for all tags. If you add a little processing code to get this in the database in a meaningful format and some new website code, and you can check exactly when a tag has been changed!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New feature for the Stacks project: slogans</title>
+      <link>https://pbelmans.ncag.info/blog/2014/07/24/new-feature-for-the-stacks-project-slogans/</link>
+      <pubDate>Thu, 24 Jul 2014 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2014/07/24/new-feature-for-the-stacks-project-slogans/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://math.columbia.edu/~dejong/wordpress/?p=3815&#34;&gt;Update from the Stacks project&lt;/a&gt;: there is a new feature, namely slogans. Johan de Jong has &lt;a href=&#34;http://math.columbia.edu/~dejong/wordpress/?p=3643&#34;&gt;discussed this idea before&lt;/a&gt;, and right now they are implemented on the website *and* there is a nice web page (compatible with your smartphone, I hope) to &lt;a href=&#34;http://stacks.math.columbia.edu/slogans&#34;&gt;suggest slogan&lt;/a&gt;s. Moreover, there are numerous small bug fixes (and hopefully not too many new bugs).&lt;/p&gt;&#xA;&lt;p&gt;Hence: first &lt;a href=&#34;http://stacks.math.columbia.edu/slogans&#34;&gt;suggest slogans&lt;/a&gt; and then see them appear on the Stacks project website.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New feature for the Stacks project: references</title>
+      <link>https://pbelmans.ncag.info/blog/2014/04/03/new-feature-for-the-stacks-project-references/</link>
+      <pubDate>Thu, 03 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2014/04/03/new-feature-for-the-stacks-project-references/</guid>
+      <description>&lt;p&gt;I accidentally published a draft of a post, so in case you are confused about where it has gone, you will see it soon.&lt;/p&gt;&#xA;&lt;p&gt;More interesting news is that we have developed &lt;a href=&#34;http://math.columbia.edu/~dejong/wordpress/?p=3669&#34;&gt;a new feature for the Stacks project&lt;/a&gt;. It is now possible to add references to the literature, as outlined in &lt;a href=&#34;http://math.columbia.edu/~dejong/wordpress/?p=3643&#34;&gt;References, slogans and history&lt;/a&gt;. You will see it live later today. With this functionality in place, implementing slogans and history is a piece of cake. To see it in action, check out &lt;a href=&#34;http://stacks.math.columbia.edu/tag/001P&#34;&gt;tag 001P&lt;/a&gt; (also called Nakayama&#39;s lemma).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A new website for the Stacks project: the sequel</title>
+      <link>https://pbelmans.ncag.info/blog/2013/07/30/a-new-website-for-the-stacks-project-the-sequel/</link>
+      <pubDate>Tue, 30 Jul 2013 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2013/07/30/a-new-website-for-the-stacks-project-the-sequel/</guid>
+      <description>&lt;p&gt;If you think it has been awfully quiet on my weblog, you are correct. Three reasons: graduating, and sheer laziness. The third? Our new baby!&lt;/p&gt;&#xA;&lt;p&gt;Little over a year ago I wrote a post with a remarkably similar title: &lt;a href=&#39;https://pbelmans.ncag.info/blog/2012/07/19/a-new-website-for-the-stacks-project/&#39;&gt;A new website for the Stacks project&lt;/a&gt;. The last couple of months Johan and I have been working on a new version of the Stacks project website, and this morning we have finally released it!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>An online bibliography for the Stacks project</title>
+      <link>https://pbelmans.ncag.info/blog/2013/01/07/an-online-bibliography-for-the-stacks-project/</link>
+      <pubDate>Mon, 07 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2013/01/07/an-online-bibliography-for-the-stacks-project/</guid>
+      <description>&lt;p&gt;Ever found yourself browsing the &lt;a href=&#34;http://stacks.math.columbia.edu&#34;&gt;Stacks project&lt;/a&gt; and encountering a citation? I did, and I found it quite annoying that I couldn&#39;t get any information, unless I opened the bibliography file and started looking for the reference. Not really user-friendly... So I decided to implement an online bibliography :).&lt;/p&gt;&#xA;&lt;p&gt;The &lt;a href=&#34;http://stacks.math.columbia.edu/bibliography&#34;&gt;bibliography overview page&lt;/a&gt; contains all items from the bibliography, and whenever a work is cited in the text, see for instance &lt;a href=&#34;http://stacks.math.columbia.edu/tag/03B3&#34;&gt;tag 03B3&lt;/a&gt; you get a link to the page of that particular item.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Online view for the Stacks project</title>
+      <link>https://pbelmans.ncag.info/blog/2012/12/15/online-view-for-the-stacks-project/</link>
+      <pubDate>Sat, 15 Dec 2012 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2012/12/15/online-view-for-the-stacks-project/</guid>
+      <description>&lt;p&gt;First I am silent for exactly 3 months, now 2 blog posts in two days. But I can make the interesting announcement I promised yesterday.&lt;/p&gt;&#xA;&lt;p&gt;During the summer I created a new website for the &lt;a href=&#34;http://stacks.math.columbia.edu/&#34;&gt;Stacks project&lt;/a&gt; (&lt;a href=&#34;https://pbelmans.ncag.info/blog/2012/07/19/a-new-website-for-the-stacks-project/&#34;&gt;my announcement&lt;/a&gt;, &lt;a href=&#34;http://math.columbia.edu/~dejong/wordpress/?p=2641&#34;&gt;official announcement&lt;/a&gt;). At that moment we&#39;ve toyed with the idea of making a full-fledged online view, but the lack of a good &lt;code&gt;xypic&lt;/code&gt; parser made this impossible. And what would the Stacks project be without commutative diagrams? At that point &lt;a href=&#34;https://github.com/sonoisa/XyJax&#34;&gt;XyJax&lt;/a&gt; was already around, but it was incapable of rendering commutative diagrams, and it was inactive. Yet a few months ago it became active again, and after a request the developer implemented commutative diagrams (thank you!).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A new website for the Stacks project</title>
+      <link>https://pbelmans.ncag.info/blog/2012/07/19/a-new-website-for-the-stacks-project/</link>
+      <pubDate>Thu, 19 Jul 2012 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2012/07/19/a-new-website-for-the-stacks-project/</guid>
+      <description>&lt;p&gt;I am happy to announce you the &lt;a href=&#34;http://stacks.math.columbia.edu/&#34;&gt;new website for the Stacks project&lt;/a&gt;. For those of you who are not familiar the Stacks project:&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;It is an open source textbook and reference work on algebraic stacks and the algebraic geometry needed to define them.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://pbelmans.ncag.info/blog/2010/11/08/the-stacks-project/&#34;&gt;A long time ago I wrote about the Stacks project&lt;/a&gt;, when I just discovered it. Back then I didn&#39;t know what a scheme is let alone a stack. And right now I still don&#39;t know what a stack is. But as you might guess my contribution is the new website, not some chapter on those &lt;a href=&#34;http://stacks.math.columbia.edu/chapter/64&#34;&gt;mysterious algebraic stacks&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Stacks Project</title>
+      <link>https://pbelmans.ncag.info/blog/2010/11/08/the-stacks-project/</link>
+      <pubDate>Mon, 08 Nov 2010 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2010/11/08/the-stacks-project/</guid>
+      <description>&lt;p&gt;This is a resource I cannot keep for myself. &lt;a href=&#34;http://www.math.columbia.edu/algebraic_geometry/stacks-git/&#34;&gt;The Stacks Project&lt;/a&gt; is a massive collaborative effort to create a reference for algebra and algebraic geometry. Ever wanted to read a &lt;a href=&#34;http://www.math.columbia.edu/algebraic_geometry/stacks-git/book.pdf&#34;&gt;2236 page document on sheaves, schemes and much more&lt;/a&gt;? Now is your chance!&lt;/p&gt;&#xA;&lt;p&gt;An interesting feature is that it&#39;s possible to create &lt;a href=&#34;http://math.columbia.edu/~dejong/&#34;&gt;dependency graphs&lt;/a&gt; from the project, visualizing what is necessary for a certain result. I feel frightened now.&lt;/p&gt;&#xA;&lt;p&gt;And another nice resource: &lt;a href=&#34;http://math.stanford.edu/~vakil/216blog/&#34;&gt;Math 216 (Foundations Of Algebraic Geometry) Notes&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

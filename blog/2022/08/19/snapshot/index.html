@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" type="image/png" href="/favicon.png" size="256x256">
+
+  <title>Pieter Belmans&mdash;The periodic tables of algebraic geometry: introduction</title>
+  <meta name="description" content=" The Snapshots of modern mathematics from Oberwolfach is a series of outreach articles. Last month I attended a workshop there and I was asked to write …">
+
+  
+  <link rel="stylesheet" href="/css/main.css">
+
+  <link rel="canonical" href="https://pbelmans.ncag.info/blog/2022/08/19/snapshot/">
+  <link rel="alternate" type="application/rss+xml" title="Pieter Belmans" href="https://pbelmans.ncag.info/blog/feed/">
+
+  <script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    packages: ['base', 'ams', 'mathtools', 'color', 'newcommand']
+  },
+  loader: {
+    load: ['[tex]/ams', '[tex]/mathtools', '[tex]/color']
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+  
+  
+
+  <script defer data-domain="pbelmans.ncag.info" src="https://plausible.io/js/script.js"></script>
+</head>
+
+  <body>
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Pieter Belmans</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        <a class="page-link" href="/about">about me</a>
+        <a class="page-link" href="/activities">interactive</a>
+        <a class="page-link" href="/blog">blog</a>
+        <a class="page-link" href="/talks">talks</a>
+        <a class="page-link" href="/uu.nl">uu.nl</a>
+        <a class="page-link" href="/writing">writing</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">The periodic tables of algebraic geometry: introduction</h1>
+
+    <p class="post-meta">
+      <time datetime="2022-08-19T00:00:00Z" itemprop="datePublished">Aug 19, 2022</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Pieter Belmans</span></span>
+    </p>
+
+    
+    
+    <div class="post-meta">
+      posted in:
+      <ul class="categories-list">
+        
+          <li><a href="/blog/categories#mathematics">mathematics</a></li>
+        
+      </ul>
+    </div>
+    
+
+    
+    
+    <div class="post-meta">
+      tags:
+      <ul class="tags-list">
+        
+          <li><a href="/blog/tags#algebraic-geometry">algebraic geometry</a></li>
+        
+      </ul>
+    </div>
+    
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    
+<div style="background-color: rgb(255, 243, 205); border: 1px solid rgb(255, 238, 186); padding: 10px;">
+  <p>The <a href="https://www.mfo.de/outreach-media/snapshots">Snapshots of modern mathematics from Oberwolfach</a> is a series of outreach articles. Last month I attended <a href="https://www.mfo.de/occasion/2228/www_view">a workshop there</a> and I was asked to write something for it. Long story short, if you are impatient, you can <a href="/assets/snapshot.pdf">read the result all in one go</a>. But in the spirit of magazine science fiction I will also be posting it in installments on my blog.</p>
+  <ol>
+    <li><a href="/blog/2022/08/19/snapshot/">The periodic tables of algebraic geometry: introduction</a></li>
+    <li><a href="/blog/2022/08/20/snapshot-2/">The periodic tables of algebraic geometry: curves and surfaces</a></li>
+    <li><a href="/blog/2022/08/21/snapshot-3/">The periodic tables of algebraic geometry: 3-folds and beyond</a></li>
+  </ol>
+  <div>Mind you, this is still the preprint version technically speaking.</div>
+</div>
+
+<h2>The periodic tables of algebraic geometry</h2>
+
+<p>To get a grip on the complexity of the world around us and the objects—such as animals, or chemical elements, or stars—appearing in it, we want to classify these objects. This allows us to describe the relationships, similarities, and differences between things we might be interested in, and thus further understand our world.</p>
+<p>An early, and somewhat cruel, effort to understand a class of living creatures lead to <em>lepidopterology</em>: the study of butterflies and moths, most famously performed by sticking needles through them and displaying them in nice wooden cases, cf. <a href="#figure-lepidoptery" data-reference-type="autoref" data-reference="figure-lepidoptery">Figure 1</a>. From the 17th century onwards this was an important feature of humanity’s interest in biology, and it serves as a prime example of classification in biology. Another important example is Darwin’s description and classification of the beaks of the finches on the Galápagos islands, which led him to formulate the theory of evolution.</p>
+<figure style="margin: 20px auto; width: 70%; text-align: center;">
+<img src="/assets/butterflies-min.jpg" id="figure-lepidoptery" alt="The work of a lepidopterist">
+<figcaption aria-hidden="true">Figure 1: The work of a lepidopterist</figcaption>
+</figure>
+<p>In this snapshot I want to introduce you to the idea that <em>classification is an essential aspect of mathematics</em>, just like it is for biology (and other sciences). The mathematical objects we will discuss are truly as pretty as the butterflies from <a href="#figure-lepidoptery" data-reference-type="autoref" data-reference="figure-lepidoptery">Figure 1</a>. And whilst in some cases it takes a bit of training as a mathematician to fully grasp their beauty, at least no living creatures need to be harmed to study them.</p>
+<p>In §<a href="#section-periodic" data-reference-type="ref" data-reference="section-periodic">1</a> we will recall the <em>periodic table of elements</em>: an essential tool in modern chemistry, and the result of a lengthy classification effort. The organisation of elements like hydrogen, carbon, and uranium is similar to how mathematical objects are catalogued and have their properties described in a systematic way. Luckily, the study of these mathematical objects requires less interaction with dangerous chemicals.</p>
+<p>An important feature is that these classification efforts are an <em>ongoing process</em>: when mathematicians complete one classification, they will move on to the next and more challenging one. That is why we will discuss periodic tables in algebraic geometry, going from the 19th to the 21st century, and from completely known settings to cutting-edge research.</p>
+<h3 id="section-periodic">1. The periodic table of elements</h3>
+<p>Every time one enters a chemistry classroom one is presented with a large poster, listing all the 118 known chemical elements together with their properties. This is the famous <em>periodic table</em>, and a very basic version is given in <a href="#figure-periodic" data-reference-type="autoref" data-reference="figure-periodic">Figure 2</a>. It lists elements like hydrogen, helium, and nitrogen in a specific shape which was essential for the development of chemistry in the 19th and 20th century, and continues to be used to explore and explain chemical elements.</p>
+<figure style="margin: 20px auto; width: 90%; text-align: center;">
+<img src="/assets/periodic.png" id="figure-periodic">
+<figcaption aria-hidden="true">Figure 2: The periodic table of elements</figcaption>
+</figure>
+<p>The name periodic table refers to an experimentally observed periodicity in the chemical behavior of elements: certain elements tend to exhibit similar behavior. For example the atomic radius has a periodicity: decreasing from left to right, and going up when going down in the table. In <a href="#figure-periodic" data-reference-type="autoref" data-reference="figure-periodic">Figure 2</a>, the inert noble gases are listed on the very right in light green, with the halogens as main building blocks for salts next to them, and the alkali metals in the first column all being soft and reactive metals. These observations are what chemists tried to formalise into a system. In 1869 Mendeleev catalogued the then-known elements in terms of atomic mass, obtaining the periodic table we now know.</p>
+<p>Originally there were gaps in the table: elements that were predicted to exist, but which were not yet discovered. The periodicity of the periodic table also predicted some of the properties that these elements were required to have. For example, Mendeleev predicted the existence of an element with atomic mass <span class="math inline">\(\pm72.5\)</span>, a high melting point, and a gray color. This was element was subsequently found in 1887, and called <em>germanium</em>, in order to fill the gap which existed at position 32.</p>
+<h4 id="invariants-of-elements">Invariants of elements</h4>
+<p>The periodic table in <a href="#figure-periodic" data-reference-type="autoref" data-reference="figure-periodic">Figure 2</a> is a simplification of the periodic table as you usually see it. For space reasons we only list the chemical symbol and its atomic number. But usually a periodic table contains <em>lots</em> more data, such as the atomic weight, the melting and boiling point, the electron configuration, etc. There exists <a href="https://ptable.com">a beautiful interactive version</a> too.</p>
+<p>These are all examples of <em>invariants</em> of the objects being classified: properties of the chemical elements that do not change over time, and that do not depend on who measures them. By measuring invariants we can identify which chemical element we are looking at, and distinguish different elements. This is an important idea in mathematics too: mathematicians love to study invariants of objects, and then use them to distinguish between different objects.</p>
+<h4 id="stars-and-the-hertzsprungrussell-diagram">Stars and the Hertzsprung–Russell diagram</h4>
+<p>In the first paragraph we also mentioned that one can try to classify the stars in the sky. To better understand an important aspect of classifications in mathematics we need to discuss how classifying stars is different from classifying chemical elements.</p>
+<p>Astronomers observed that not all stars are equal: some are brighter than others (even when accounting for the distance), and some are hotter than others. Back in the early 1910s Hertzsprung and Russell made a plot of those two properties of stars, and they noticed that some types of stars are impossible. There are no super-bright cold stars, nor are there very faint hot stars. And there are many stars like our Sun: they all have roughly the same brightness and the same temperature. The interested reader is invited to read up more on the Hertzsprung–Russell diagram.</p>
+<p>The main takeaway is that it is possible to <em>vary the parameters</em> of a star, subject to certain rules imposed by physics. This is a feature not present in the periodic table, but something similar will happen in mathematics, so one better keep this behavior in mind.</p>
+<h3 id="section-classifications">2. Classifications in algebraic geometry</h3>
+<p>We now turn to classifications in mathematics. One famous instance of such a result in mathematics is the <em>Classification of Finite Simple Groups</em> (CFSG). A group describes the symmetries of an object, and group theory is a fundamental subject in modern mathematics. Just like molecules are built using atoms, Jordan showed in 1870 that every finite group is built using simple groups.</p>
+<p>The first (interesting) simple groups were already discovered by Galois in 1831, when he was studying solutions of polynomials of degree <span class="math inline">\(\geq 5\)</span>. The first example contains 60 elements. The last group to be discovered (in 1981) was the Monster group, and it has approximately <span class="math inline">\(8\cdot 10^{53}\)</span> elements. Through a large effort of many mathematicians the CFSG was obtained, stating that all simple groups had been found in those 150 years. For more on this see, e.g., <a href="https://publications.mfo.de/handle/mfo/3935">Searching for the Monster in the Trees</a> and <a href="https://publications.mfo.de/handle/mfo/460">Symmetry and characters of finite groups</a> in this very Snapshots series.</p>
+<p>We will instead focus on classifications in <em>algebraic geometry</em>, because the author is an algebraic geometer and not a group theorist, and because the story of classifications in algebraic geometry is less well-known than the CFSG. Algebraic geometry is the study of shapes described by polynomial equations. The shapes we will be interested in are <em>smooth projective varieties</em>, defined over the complex numbers. Let us unpack what this means.</p>
+<h4 id="smooth-projective-varieties">Smooth projective varieties</h4>
+
+<p>First of all, working over the <em>complex numbers</em> is a necessity to make things tractable, but it also makes it harder to make drawings. Usually we visualise the complex numbers as the complex plane, with one real axis and one imaginary axis. But from the point-of-view of an algebraic geometer the complex numbers are really a one-dimensional object! That is why an algebraic geometer will often draw an impression of an object when considered over the real numbers. More concretely, <a href="#subfigure-elliptic" data-reference-type="autoref" data-reference="subfigure-elliptic">Figure 3a</a> is what an algebraic geometer would draw when drawing a curve, whilst <a href="/blog/2022/08/20/snapshot-2/#subfigure:genus-1" data-reference-type="autoref" data-reference="subfigure:genus-1">Figure 4b</a> is what a complex geometer would think of, but they really are manifestations of the same object.</p>
+<p>Now, what does it mean to describe a shape <em>using polynomials</em>? If <span class="math inline">\(f\in\mathbb{C}[x]\)</span> is a polynomial, so <span class="math inline">\(f(x)=a_dx^d+a_{d-1}x^{d-1}+\dots+a_1x+a_0\)</span>, we define the variety associated to it as <span class="math display">\[\mathbb{V}(f)=\{\alpha\in\mathbb{C}\mid f(\alpha)=0\},\]</span> the set of zeroes of <span class="math inline">\(f\)</span> in the complex plane. This set is always finite if the polynomial is not constant zero and consists of at most <span class="math inline">\(d\)</span> points if it is not constant. Over the complex numbers it consists of exactly <span class="math inline">\(d\)</span> points counted with multiplicities. In general we will consider a finite collection of polynomials in <span class="math inline">\(n\)</span> variables <span class="math inline">\(f_1,\ldots,f_r\in\mathbb{C}[x_1,\ldots,x_n]\)</span>, and define <span class="math display">\[\mathbb{V}(f_1,\ldots,f_r)=\{(\alpha_1,\ldots,\alpha_n)\in\mathbb{C}^n\mid \forall i=1,\ldots,r\colon f_i(\alpha_1,\ldots,\alpha_n)=0\},\]</span> the set of points (inside the <em>affine space</em> <span class="math inline">\(\mathbb{C}^n\)</span>), or zero locus, satisfying all polynomial equations simultaneously. These subsets are called <em>affine varieties</em>.</p>
+<p>Instead of affine varieties we will be interested in <em>projective varieties</em>. In the affine plane two lines can be parallel, but this causes annoying situations in which we have to say that two distinct lines intersect in precisely one point unless they are parallel. That is why we extend our affine geometry: to make statements like the one on intersections of distinct lines more uniform, and get rid of the exceptions. In the projective world we have that our initial two parallel lines now intersect in a point at infinity, so any two distinct lines now always intersect.</p>
+<p>For this we need to replace the affine space in which affine varieties live, by <em>projective space</em> <span class="math inline">\(\mathbb{P}^n(\mathbb{C})\)</span>. It is defined by considering the set <span class="math inline">\(\mathbb{C}^{n+1}\setminus\{(0,\ldots,0)\}\)</span> of all points except the origin in the affine space one dimension up, up to the equivalence relation which says that <span class="math inline">\((\alpha_0,\ldots,\alpha_n)\sim(\beta_0,\ldots,\beta_n)\)</span> if there exists some <span class="math inline">\(\lambda\in\mathbb{C}\setminus\{0\}\)</span> such that <span class="math inline">\(\alpha_i=\lambda\beta_i\)</span> for all <span class="math inline">\(i=0,\ldots,n\)</span>.</p>
+
+<p>To work with projective varieties using polynomials, we will only consider <em>homogeneous</em> polynomials: a polynomial in which every term has the same degree. For example <span class="math inline">\(x^2+y^2+z^2\)</span> is a homogeneous polynomial of degree 2, in 3 variables. The <em>projective variety</em> associated to a collection of homogeneous polynomials <span class="math inline">\(f_1,\ldots,f_r\in\mathbb{C}[x_0,\ldots,x_n]\)</span> is <span class="math display">\[\mathbb{V}(f_1,\ldots,f_r)=\{(\alpha_0,\ldots,\alpha_n)\in\mathbb{P}^n(\mathbb{C})\mid\forall i=1,\ldots,r\colon f_i(\alpha_0,\ldots,\alpha_n)=0\}.\]</span> This is well-defined because we restricted our attention to homogeneous polynomials, so that asking whether a polynomial is (non-)zero is independent of the scaling in the equivalence relation. The example <span class="math inline">\(x^2+y^2+z^2\)</span> thus defines a curve in <span class="math inline">\(\mathbb{P}^2(\mathbb{C})\)</span>—a conic—corresponding to <a href="/blog/2022/08/20/snapshot-2/#subfigure:genus-0" data-reference-type="autoref" data-reference="subfigure:genus-0">Figure 4a</a>.</p>
+
+<p>To work with projective varieties using polynomials, we will only consider <em>homogeneous</em> polynomials: a polynomial in which every term has the same degree. For example <span class="math inline">\(x^2+y^2+z^2\)</span> is a homogeneous polynomial of degree 2, in 3 variables. The <em>projective variety</em> associated to a collection of homogeneous polynomials <span class="math inline">\(f_1,\ldots,f_r\in\mathbb{C}[x_0,\ldots,x_n]\)</span> is <span class="math display">\[\mathbb{V}(f_1,\ldots,f_r)=\{(\alpha_0,\ldots,\alpha_n)\in\mathbb{P}^n(\mathbb{C})\mid\forall i=1,\ldots,r\colon f_i(\alpha_0,\ldots,\alpha_n)=0\}.\]</span> This is well-defined because we restricted our attention to homogeneous polynomials, so that asking whether a polynomial is (non-)zero is independent of the scaling in the equivalence relation. The example <span class="math inline">\(x^2+y^2+z^2\)</span> thus defines a curve in <span class="math inline">\(\mathbb{P}^2(\mathbb{C})\)</span>—a conic—corresponding to <a href="/blog/2022/08/20/snapshot-2/#subfigure:genus-0" data-reference-type="autoref" data-reference="subfigure:genus-0">Figure 4a</a>.</p>
+<div style="margin: 20px auto; width: 90%; text-align: center;" id="figure-cubics">
+<figure style="float: left; width: 45%; text-align: center;">
+<img src="/assets/elliptic-curve.png" id="subfigure-elliptic">
+<figcaption aria-hidden="true">Figure 3a: Real points of the cubic curve<br>
+<span class="math inline">\(y^2 = x^3 - 2x\)</span></figcaption>
+</figure>
+<figure style="float: right; width: 45%; text-align: center;">
+<img src="/assets/nodal-curve.png" id="subfigure-nodal">
+<figcaption aria-hidden="true">Figure 3b: Real points of the singular cubic curve<br>
+<span class="math inline">\(y^2 = x^3 + x^2\)</span></figcaption>
+</figure>
+</div>
+<br style="clear: both">
+<p>The final ingredient in order to describe the objects we are interested in is <em>smoothness</em>. This is best explained through an example: consider the following degree 3 polynomials <span class="math display">\[\begin{aligned}
+    f&amp;=-y^2+x^3-2x \\
+    g&amp;=-y^2+x^3+x^2
+\end{aligned}\]</span> describing affine curves living in <span class="math inline">\(\mathbb{C}^2\)</span>. If we draw these curves inside <span class="math inline">\(\mathbb{R}^2\subset\mathbb{C}^2\)</span> we get the pictures as in <a href="#figure-cubics" data-reference-type="autoref" data-reference="figure-cubics">Figures 3a and 3b</a>. We immediately see that on the right there is something funny happening at the origin: there is a <em>singularity</em>. For more on singularities we refer to another Snapshot: <a href="https://publications.mfo.de/handle/mfo/433">Swallowtail on the shore</a>.</p>
+<h4 id="classifying-smooth-projective-varieties">Classifying smooth projective varieties?</h4>
+<p>In what follows next we discuss examples of classifications of smooth projective varieties. This will illustrate how the life of an algebraic geometer can be very similar to that of someone sticking needles through unsuspecting butterflies, or that of an experimental chemist inhaling noxious fumes in order to isolate an unknown chemical element.</p>
+<p>Before we embark on our journey we need to point out that to an algebraic geometer classification can mean different things. Certainly, we are not just classifying polynomials, rather we are interested in classifying varieties independently of their realisation. This gives rise to classification we will mostly be talking about: that of varieties <em>up to isomorphism</em>, i.e. up to their realisation inside some projective space.</p>
+<p>It turns out that already in dimension 2 this becomes impossible, so that we will only try to classify certain well-chosen objects. There is an entire branch of algebraic geometry, called birational geometry, devoted to understanding the precise relationships between smooth projective varieties which are different but nevertheless almost the same: we say that they are <em>birational</em>, but we will not discuss this further.</p>
+
+<script>
+  (() => {
+    const legacyTargets = {
+      '#figure:lepidoptery': 'figure-lepidoptery',
+      '#section:periodic': 'section-periodic',
+      '#figure:periodic': 'figure-periodic',
+      '#section:classifications': 'section-classifications',
+      '#figure:cubics': 'figure-cubics',
+      '#subfigure:elliptic': 'subfigure-elliptic',
+      '#subfigure:nodal': 'subfigure-nodal',
+    };
+
+    const scrollToLegacyTarget = () => {
+      const targetId = legacyTargets[window.location.hash];
+      if (!targetId) {
+        return;
+      }
+
+      const target = document.getElementById(targetId);
+      if (target) {
+        target.scrollIntoView();
+      }
+    };
+
+    window.addEventListener('hashchange', scrollToLegacyTarget);
+    scrollToLegacyTarget();
+  })();
+</script>
+
+  </div>
+
+  <ul class="pagination">
+    
+      <li class="previous"><a href="/blog/2022/08/18/twisted-hodge-update/">previous post</a></li>
+    
+
+    
+      <li class="next"><a href="/blog/2022/08/20/snapshot-2/">next post</a></li>
+    
+  </ul>
+</article>
+
+      </div>
+    </div>
+
+    <footer>
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        contact me:
+        <br>
+        <a href="mailto:p.belmans@uu.nl" style="margin-left: 1em">p.belmans@uu.nl</a>
+        <br><br>
+        address:
+        <address style="margin-left: 1em">
+          Mathematical Institute<br>
+          Utrecht University<br>
+          Budapestlaan 6<br>
+          3584 CD Utrecht<br>
+          The Netherlands
+        </address>
+        <br>
+        office:
+        <address style="margin-left: 1em; font-style: normal">room 702</address>
+      </div>
+
+      <div class="footer-col footer-col-1">
+        I maintain the websites
+        <ul class="social-media-list" style="font-size: 90%">
+          <li><a href="https://stacks.math.columbia.edu"><span class="icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(0,16)">
+<g transform="scale(0.5,-0.5)">
+
+<polygon points="2,2 24,2 24,7 21,7 21,5 5,5 5,21 7,21 7,24 2,24" />
+<polygon points="8,8 29,8 29,13 26,13 26,11 11,11 11,26 13,26 13,29 8,29" />
+<polygon points="14,14 31,14 31,31 14,31" />
+<polygon points="17,17 28,17 28,28 17,28" style="fill: white;" />
+
+</g>
+</g>
+</svg>
+</span><span class="username"><code class="url">stacks.math.columbia.edu</code></span></a>
+</li>
+          <li><a href="https://ncag.info"><span class="icon"><img width="16" height="16" src="/assets/favicon-ncag.png"></span> <span class="username"><code class="url">ncag.info</code></span></a>
+</li>
+          <li><a href="https://kerodon.net"><span class="icon"><img width="16" height="16" src="/assets/favicon-kerodon.png"></span> <span class="username"><code class="url">kerodon.net</code></span></a>
+</li>
+          <li><a href="https://fanography.info"><span class="icon"><img width="16" height="16" src="/assets/favicon-fanography.png"></span> <span class="username"><code class="url">fanography.info</code></span></a>
+
+</li>
+          <li><a href="http://www.hyperkaehler.info"><span class="icon"><img width="16" height="16" src="/assets/favicon-hyperkaehler.png"></span> <span class="username"><code class="url">hyperkaehler.info</code></span></a>
+
+</li>
+          <li><a href="http://grassmannian.info"><span class="icon"><img width="16" height="16" src="/assets/favicon-grassmannian.png"></span> <span class="username"><code class="url">grassmannian.info</code></span></a>
+
+</li>
+          <li><a href="https://mgnbar.info"><span class="icon"><img width="16" height="16" src="/assets/favicon-mgnbar.png"></span> <span class="username"><code class="url">mgnbar.info</code></span></a>
+</li>
+          <li><a href="https://superficie.info"><span class="icon"><img width="16" height="16" src="/assets/favicon-superficie.png"></span> <span class="username"><code class="url">superficie.info</code></span></a>
+
+
+</li>
+        </ul>
+        I maintain the tools
+        <ul class="social-media-list" style="font-size: 90%">
+          <li><a href="https://cutter.ncag.info"><span class="icon"><img width="16" height="16" src="/assets/favicon-hodge.png"></span> <span class="username">Hodge diamond cutter</span></a>
+
+</li>
+          <li><a href="https://quiver.tools"><span class="icon"><img width="16" height="16" src="/assets/favicon-quivertools.png"></span> <span class="username">QuiverTools</span></a>
+
+</li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-1">
+        you can also find me on
+        <ul class="social-media-list">
+          <li><a href="https://github.com/pbelmans"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#000000" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">GitHub</span></a>
+</li>
+          <li><a href="http://mathoverflow.net/users/6263/pbelmans"><img width="16" height="16" src="/assets/favicon-mathoverflow.png"> <span class="username">MathOverflow</span></a>
+</li>
+          <li><a href="https://orcid.org/0000-0002-0140-2824"><span class="icon icon-orcid"><svg width="72px" height="72px" viewBox="0 0 72 72" version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+    <title>Orcid logo</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hero" transform="translate(-924.000000, -72.000000)" fill-rule="nonzero">
+            <g id="Group-4">
+                <g id="vector_iD_icon" transform="translate(924.000000, 72.000000)">
+                    <path d="M72,36 C72,55.884375 55.884375,72 36,72 C16.115625,72 0,55.884375 0,36 C0,16.115625 16.115625,0 36,0 C55.884375,0 72,16.115625 72,36 Z" id="Path" fill="#A6CE39"></path>
+                    <g id="Group" transform="translate(18.868966, 12.910345)" fill="#FFFFFF">
+                        <polygon id="Path" points="5.03734929 39.1250878 0.695429861 39.1250878 0.695429861 9.14431787 5.03734929 9.14431787 5.03734929 22.6930505 5.03734929 39.1250878"></polygon>
+                        <path d="M11.409257,9.14431787 L23.1380784,9.14431787 C34.303014,9.14431787 39.2088191,17.0664074 39.2088191,24.1486995 C39.2088191,31.846843 33.1470485,39.1530811 23.1944669,39.1530811 L11.409257,39.1530811 L11.409257,9.14431787 Z M15.7511765,35.2620194 L22.6587756,35.2620194 C32.49858,35.2620194 34.7541226,27.8438084 34.7541226,24.1486995 C34.7541226,18.1301509 30.8915059,13.0353795 22.4332213,13.0353795 L15.7511765,13.0353795 L15.7511765,35.2620194 Z" id="Shape"></path>
+                        <path d="M5.71401206,2.90182329 C5.71401206,4.441452 4.44526937,5.72914146 2.86638958,5.72914146 C1.28750978,5.72914146 0.0187670918,4.441452 0.0187670918,2.90182329 C0.0187670918,1.33420133 1.28750978,0.0745051096 2.86638958,0.0745051096 C4.44526937,0.0745051096 5.71401206,1.36219458 5.71401206,2.90182329 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+</span> <span class="username">ORCID</span></a>
+</li>
+          <li><a href="https://scholar.google.com/citations?user%3ddX7G0o4AAAAJ"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="96px" height="96px"><path fill="#1e88e5" d="M24,4C12.954,4,4,12.954,4,24s8.954,20,20,20s20-8.954,20-20S35.046,4,24,4z"/><path fill="#1565c0" d="M35,16.592v-3.878L37,11H27l0.917,1.833c-1.236,0-2.265,0-2.265,0S19.095,13,19.095,18.748	c0,5.752,5.732,5.088,5.732,5.088s0,0.865,0,1.453c0,0.594,0.77,0.391,0.864,1.583c-0.388,0-7.964-0.208-7.964,4.998	s6.679,4.959,6.679,4.959s7.722,0.365,7.722-6.104c0-3.871-4.405-5.121-4.405-6.686c0-1.563,3.319-2.012,3.319-5.684	c0-0.823-0.028-1.524-0.149-2.12L34,13.571v3.02c-0.581,0.207-1,0.756-1,1.408v4.5c0,0.829,0.672,1.5,1.5,1.5s1.5-0.671,1.5-1.5V18	C36,17.348,35.581,16.799,35,16.592z M30.047,31.169c0.131,2.024-1.929,3.811-4.603,3.998c-2.671,0.188-4.946-1.295-5.077-3.316	c-0.133-2.016,1.927-3.805,4.6-3.996C27.641,27.667,29.914,29.152,30.047,31.169z M26.109,22.453	c-1.592,0.451-3.375-1.062-3.982-3.367c-0.604-2.312,0.195-4.543,1.786-4.992c1.593-0.453,3.374,1.059,3.981,3.367	C28.499,19.77,27.702,22.004,26.109,22.453z"/><path fill="#e8eaf6" d="M34,16.592V12c0-0.051-0.015-0.097-0.029-0.143L35,11H21l-9,8h5.383	c0.174,5.466,5.715,4.836,5.715,4.836s0,0.865,0,1.453c0,0.594,0.771,0.391,0.865,1.583c-0.388,0-7.964-0.208-7.964,4.998	s6.679,4.959,6.679,4.959s7.721,0.365,7.721-6.104c0-3.871-4.404-5.121-4.404-6.686c0-1.563,3.318-2.012,3.318-5.684	c0-0.971-0.047-1.763-0.232-2.422L33,12.667v3.925c-0.581,0.207-1,0.756-1,1.408v4.5c0,0.829,0.672,1.5,1.5,1.5s1.5-0.671,1.5-1.5	V18C35,17.348,34.581,16.799,34,16.592z M28.319,31.169c0.131,2.024-1.928,3.811-4.602,3.998c-2.671,0.188-4.946-1.295-5.077-3.316	c-0.133-2.016,1.927-3.805,4.599-3.996C25.914,27.667,28.187,29.152,28.319,31.169z M24.38,22.453	c-1.591,0.451-3.373-1.062-3.981-3.367c-0.604-2.312,0.194-4.543,1.785-4.992c1.593-0.453,3.374,1.059,3.982,3.367	C26.77,19.77,25.973,22.004,24.38,22.453z"/></svg></span> Google Scholar</a>
+</li>
+          <li><a href="https://www.genealogy.ams.org/id.php?id=219852"><span class="icon icon-"><img width="16" height="16" src="/assets/mgp.png"></span> <span class="username">Math Genealogy</span></a>
+
+</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>

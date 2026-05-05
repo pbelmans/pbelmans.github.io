@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ANAGRAMS on Pieter Belmans</title>
+    <link>https://pbelmans.ncag.info/tags/ANAGRAMS/</link>
+    <description>Recent content in ANAGRAMS on Pieter Belmans</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://pbelmans.ncag.info/tags/ANAGRAMS/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Brauer group of Brauer-Severi varieties</title>
+      <link>https://pbelmans.ncag.info/blog/2016/04/20/the-brauer-group-of-brauer-severi-varieties/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/04/20/the-brauer-group-of-brauer-severi-varieties/</guid>
+      <description>&lt;p&gt;One result I really like about Brauer groups is that $\mathrm{Br}(\mathbb{P}_k^n)\cong\mathrm{Br}(k)$ for every possible field $k$. So the Azumaya algebras on projective space are not too wild, and completely controlled by the base field.&lt;/p&gt;&#xA;&lt;p&gt;Yesterday I started wondering about how this result is actually proved (my knowledge of proofs of arithmetic nature is abysmal), and what would happen for &lt;em&gt;twisted&lt;/em&gt; forms of projective space, also known as Brauer-Severi varieties. This is a very silly question, in the sense that you take a representative $A$ of an element $[A]$ of the Brauer group of the base field, construct its Brauer-Severi variety $\mathrm{BS}(A)$, and then take its Brauer group $\mathrm{Br}(\mathrm{BS}(A))$. &lt;a href=&#34;http://knowyourmeme.com/memes/xzibit-yo-dawg&#34;&gt;It is like Xzibit became a mathematician and said something silly involving dogs and Brauer groups&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Announcement for a seminar</title>
+      <link>https://pbelmans.ncag.info/blog/2015/02/24/announcement-for-a-seminar/</link>
+      <pubDate>Tue, 24 Feb 2015 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2015/02/24/announcement-for-a-seminar/</guid>
+      <description>&lt;p&gt;Yes, I am still alive. Today I would like to announce a new series of lectures in our &lt;a href=&#34;http://win.ua.ac.be/~pbelmans/seminar/&#34;&gt;graduate student seminar&lt;/a&gt;. We are going to talk about &lt;a href=&#34;http://win.ua.ac.be/~pbelmans/seminar/hdr.html&#34;&gt;Hodge-to-de Rham degeneration&lt;/a&gt;, and the proof of Deligne--Illusie of this. Feel free to join in if you are interested, and somewhere in the neighbourhood of Antwerp.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Examples of spectral sequences in algebra and algebraic geometry</title>
+      <link>https://pbelmans.ncag.info/blog/2014/11/27/examples-of-spectral-sequences-in-algebra-and-algebraic-geometry/</link>
+      <pubDate>Thu, 27 Nov 2014 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2014/11/27/examples-of-spectral-sequences-in-algebra-and-algebraic-geometry/</guid>
+      <description>&lt;p&gt;I just gave a lecture on examples of spectral sequences in algebra and algebraic geometry for the &lt;a href=&#34;http://win.ua.ac.be/~pbelmans/seminar/&#34;&gt;ANAGRAMS seminar&lt;/a&gt; and without further ado, here are the &lt;a href=&#34;http://win.ua.ac.be/~pbelmans/seminar/ss/examples-ag.pdf&#34;&gt;notes&lt;/a&gt;. Nothing new or insightful in there, just some facts and examples taken together to help me during the lecture.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Visualisation of Schubert classes in Gr(2,4) and Gr(2,5)</title>
+      <link>https://pbelmans.ncag.info/blog/2014/10/30/visualisation-of-schubert-classes-in-gr24-and-gr25/</link>
+      <pubDate>Thu, 30 Oct 2014 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2014/10/30/visualisation-of-schubert-classes-in-gr24-and-gr25/</guid>
+      <description>&lt;p&gt;We are still doing &lt;a href=&#34;https://pbelmans.ncag.info/blog/2014/10/09/what-are-chern-classes/&#34;&gt;Chern classes&lt;/a&gt; in the &lt;a href=&#34;http://win.ua.ac.be/~pbelmans/seminar/&#34;&gt;seminar&lt;/a&gt;, and today I&#39;m speaking about the multiplicative structure of the Chow ring of a Grassmannian. It&#39;ll include some example computations, for which I prepared a little handout. Without further ado, &lt;a href=&#34;http://win.ua.ac.be/~pbelmans/seminar/chern/schubert.pdf&#34;&gt;here it is&lt;/a&gt;. It&#39;s not that spectacular, and certainly not original (it is based on the visualisation I found in 3264 and all that).&lt;/p&gt;&#xA;&lt;p&gt;The actual weekly blogpost will go online tonight, and it will feature rational surface singularities.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Three filtrations on the Grothendieck ring of a scheme</title>
+      <link>https://pbelmans.ncag.info/blog/2014/10/23/three-filtrations-on-the-grothendieck-ring-of-a-scheme/</link>
+      <pubDate>Thu, 23 Oct 2014 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2014/10/23/three-filtrations-on-the-grothendieck-ring-of-a-scheme/</guid>
+      <description>&lt;p&gt;Today&#39;s blog post is inspired by the &lt;a href=&#34;https://pbelmans.ncag.info/blog/2014/10/09/what-are-chern-classes/&#34;&gt;Chern classes seminar that we are conducting&lt;/a&gt;, but it takes a rather big leap from where I left off. Everything I say is based on SGA6 and Fulton--Lang&#39;s Riemann--Roch algebra (which is a true gem I discovered).&lt;/p&gt;&#xA;&#xA;&lt;h2&gt;The lambda-ring associated to a scheme&lt;/h2&gt;&#xA;&lt;p&gt;If you have a sufficiently nice scheme $X$ (the buzzwords are connected, noetherian and having an ample line bundle) and let&#39;s even assume that $\dim(X)=d$. Then we have a &lt;em&gt;Grothendieck group&lt;/em&gt; $\mathrm{K}^0(X)$, obtained by considering the category of locally free sheaves on $X$ and modding out exact sequences of locally free sheaves. Or, as is explained in SGA6 IV, one can take the (triangulated) category of perfect complexes and mod out triangles, where SGA6 II addresses the issues of being globally (and not just locally) isomorphic to a complex of locally free sheaves.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What are Chern classes?</title>
+      <link>https://pbelmans.ncag.info/blog/2014/10/09/what-are-chern-classes/</link>
+      <pubDate>Thu, 09 Oct 2014 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2014/10/09/what-are-chern-classes/</guid>
+      <description>&lt;p&gt;This year we are continuing &lt;a href=&#34;http://win.ua.ac.be/~pbelmans/seminar/&#34;&gt;ANAGRAMS&lt;/a&gt;, the local student seminar (&lt;a href=&#34;https://pbelmans.ncag.info/blog/2014/01/29/announcing-a-seminar/&#34;&gt;previously announced on my weblog&lt;/a&gt;). The first series of lectures we are starting with will be about Chern classes, and I will try to blog more regularly about the things we discuss. Hence in this post I will outline the motivation and interpretation of Chern classes (the gory details will not be discussed here).&lt;/p&gt;&#xA;&#xA;&lt;h2&gt;Characteristic classes&lt;/h2&gt;&#xA;&lt;p&gt;People like vector bundles. They are easy-to-understand coherent sheaves, we have some obvious candidates (tangent and cotangent bundles, line bundles) and there are many interesting constructions for them (duals, direct sums, tensor products, symmetric products, exterior products, ...), but nevertheless they carry significant amounts of geometric information. Even if you don&#39;t like vector bundles as such, some seemingly totally non-vector bundleish questions such as &#34;how many lines lie on a cubic surface&#34; can be rephrased in terms of vector bundles and then we can actually solve them!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Notes on depth and updates</title>
+      <link>https://pbelmans.ncag.info/blog/2014/02/23/notes-on-depth-and-updates/</link>
+      <pubDate>Sun, 23 Feb 2014 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2014/02/23/notes-on-depth-and-updates/</guid>
+      <description>&lt;p&gt;Time for an update on &lt;a href=&#34;http://win.ua.ac.be/~pbelmans/seminar/&#34;&gt;ANAGRAMS&lt;/a&gt;, our student seminar at the University of Antwerp. The first two weeks of February we had short talks on &lt;a href=&#34;http://win.ua.ac.be/~pbelmans/seminar/dimension-functions.html&#34;&gt;dimension functions&lt;/a&gt;. See the web page for some of the notes people had prepared. I gave a lecture about &lt;a href=&#34;http://win.ua.ac.be/~pbelmans/seminar/dimension-functions/depth.pdf&#34;&gt;depth and singularities&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The next topic is &lt;a href=&#34;http://win.ua.ac.be/~pbelmans/seminar/git.html&#34;&gt;geometric invariant theory&lt;/a&gt;, we will dedicate 6 lectures for it. The schedule is not completely fixed yet, but we will start Friday, at 10 o&#39;clock. Feel free to attend.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Announcing a seminar</title>
+      <link>https://pbelmans.ncag.info/blog/2014/01/29/announcing-a-seminar/</link>
+      <pubDate>Wed, 29 Jan 2014 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2014/01/29/announcing-a-seminar/</guid>
+      <description>&lt;p&gt;To make sense of the next post, and potentially attract more attendees, I want to announce a student seminar on algebra and algebraic geometry at the University of Antwerp. It&#39;s called &lt;a href=&#34;http://win.ua.ac.be/~pbelmans/seminar/&#34;&gt;ANAGRAMS&lt;/a&gt;, which is an acronym for &#34;Antwerp algebraic geometry, rings and more seminar&#34;.&lt;/p&gt;&#xA;&lt;p&gt;All the interesting information can be found on the website, to summarise: PhD students give lectures for PhD students on subjects related to algebraic geometry and algebra (based on the research areas we are active in). We pick a subject, work on it for a few weeks, then take another one. It&#39;s about learning things, it&#39;s not a research seminar.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Notes on Riemann-Roch, Serre duality and Grothendieck duality</title>
+      <link>https://pbelmans.ncag.info/blog/2014/01/29/notes-on-riemann-roch-serre-duality-and-grothendieck-duality/</link>
+      <pubDate>Wed, 29 Jan 2014 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2014/01/29/notes-on-riemann-roch-serre-duality-and-grothendieck-duality/</guid>
+      <description>&lt;p&gt;See &lt;a href=&#34;https://pbelmans.ncag.info/blog/2014/01/29/announcing-a-seminar/&#34;&gt;Announcing a seminar&lt;/a&gt; for a little context.&lt;/p&gt;&#xA;&lt;p&gt;The past four weeks I&#39;ve given lectures on Grothendieck duality for the ANAGRAMS seminar (yes, this is a redundancy). The goal was to tell people something about Riemann-Roch and Serre duality first, then go on to Grothendieck duality and discuss some of the proofs. I changed the schedule a little while I was giving the lectures (originally I planned more on Grothendieck duality, but the down-to-earth geometric applications were more appropriate for the audience, I think). I have prepared notes for each of these lectures, which are now available at the &lt;a href=&#34;http://win.ua.ac.be/~pbelmans/seminar/grothendieck-duality.html&#34;&gt;seminar webpage&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A visualisation of Serre duality and Hodge diamonds</title>
+      <link>https://pbelmans.ncag.info/blog/2014/01/16/a-visualisation-of-serre-duality-and-hodge-diamonds/</link>
+      <pubDate>Thu, 16 Jan 2014 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2014/01/16/a-visualisation-of-serre-duality-and-hodge-diamonds/</guid>
+      <description>&lt;p style=&#34;background-color: rgb(255, 243, 205); border: 1px solid rgb(255, 238, 186); padding: 10px;&#34;&gt;&#xA;  The functionality outlined below, and much more, is implemented in &lt;a href=&#34;https://github.com/pbelmans/hodge-diamond-cutter&#34;&gt;&lt;strong&gt;Hodge diamond cutter&lt;/strong&gt;&lt;/a&gt;, which can be used in Sage.&#xA;  If you use it for your research, please cite it using &lt;a href=&#34;https://doi.org/10.5281/zenodo.3893509&#34; rel=&#34;nofollow&#34;&gt;&lt;img src=&#34;https://zenodo.org/badge/DOI/10.5281/zenodo.3893509.svg&#34; alt=&#34;DOI&#34; data-canonical-src=&#34;https://zenodo.org/badge/DOI/10.5281/zenodo.3893509.svg&#34; style=&#34;max-width:100%;&#34;&gt;&lt;/a&gt;.&#xA;&lt;/p&gt;&#xA;&#xA;&#xA;&lt;p&gt;&lt;em&gt;Summary:&lt;/em&gt; look at &lt;a href=&#34;http://win.ua.ac.be/~pbelmans/cohomology-tables/index.html&#34;&gt;the page &lt;code&gt;cohomology-tables/index.html&lt;/code&gt;&lt;/a&gt;, it gives you numbers if you move the sliders. It&#39;s fun. If you wish to understand what the numbers mean, read on. If you want to take a look at the code: see &lt;a href=&#34;http://github.com/pbelmans/cohomology-tables&#34;&gt;pbelmans/cohomology-tables&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fano on Pieter Belmans</title>
+    <link>https://pbelmans.ncag.info/tags/Fano/</link>
+    <description>Recent content in Fano on Pieter Belmans</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 18 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://pbelmans.ncag.info/tags/Fano/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Golyshev&#39;s periodic table for Fano 3-folds of rank 1</title>
+      <link>https://pbelmans.ncag.info/blog/2018/03/18/golyshev-periodic-table/</link>
+      <pubDate>Sun, 18 Mar 2018 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2018/03/18/golyshev-periodic-table/</guid>
+      <description>&lt;p&gt;A few weeks ago &lt;a href=&#34;https://www.mccme.ru/~galkin/&#34;&gt;Sergey Galkin&lt;/a&gt; explained a funny fact about the classification of Fano 3-folds of rank 1, due to Golyshev (the fact that is, not the classification, which is due to Mori&amp;ndash;Mukai). Namely, if you make a table of these Fano 3-folds as follows,&lt;/p&gt;&#xA;&#xA;&lt;table style=&#34;margin: 0 auto; text-align: center;&#34;&gt;&#xA;  &lt;tr&gt;&#xA;    &lt;td&gt;&lt;/td&gt;&#xA;    &lt;th&gt;1&lt;/th&gt;&#xA;    &lt;th&gt;2&lt;/th&gt;&#xA;    &lt;th&gt;3&lt;/th&gt;&#xA;    &lt;th&gt;4&lt;/th&gt;&#xA;    &lt;th&gt;5&lt;/th&gt;&#xA;    &lt;th&gt;6&lt;/th&gt;&#xA;    &lt;th&gt;7&lt;/th&gt;&#xA;    &lt;th&gt;8&lt;/th&gt;&#xA;    &lt;th&gt;9&lt;/th&gt;&#xA;    &lt;th&gt;11&lt;/th&gt;&#xA;  &lt;/tr&gt;&#xA;  &lt;tr&gt;&#xA;    &lt;th&gt;1&lt;/th&gt;&#xA;    &lt;td&gt;$\mathrm{V}_2$&lt;/td&gt;&#xA;    &lt;td&gt;$\mathrm{V}_4$&lt;/td&gt;&#xA;    &lt;td&gt;$\mathrm{V}_6$&lt;/td&gt;&#xA;    &lt;td&gt;$\mathrm{V}_8$&lt;/td&gt;&#xA;    &lt;td&gt;$\mathrm{V}_{10}$&lt;/td&gt;&#xA;    &lt;td&gt;$\mathrm{V}_{12}$&lt;/td&gt;&#xA;    &lt;td&gt;$\mathrm{V}_{14}$&lt;/td&gt;&#xA;    &lt;td&gt;$\mathrm{V}_{16}$&lt;/td&gt;&#xA;    &lt;td&gt;$\mathrm{V}_{18}$&lt;/td&gt;&#xA;    &lt;td&gt;$\mathrm{V}_{22}$&lt;/td&gt;&#xA;  &lt;/tr&gt;&#xA;  &lt;tr&gt;&#xA;    &lt;th&gt;2&lt;/th&gt;&#xA;    &lt;td&gt;$\mathrm{B}_1$&lt;/td&gt;&#xA;    &lt;td&gt;$\mathrm{B}_2$&lt;/td&gt;&#xA;    &lt;td&gt;$\mathrm{B}_3$&lt;/td&gt;&#xA;    &lt;td&gt;$\mathrm{B}_4$&lt;/td&gt;&#xA;    &lt;td&gt;$\mathrm{B}_5$&lt;/td&gt;&#xA;  &lt;/tr&gt;&#xA;  &lt;tr&gt;&#xA;    &lt;th&gt;3&lt;/th&gt;&#xA;    &lt;td&gt;&lt;/td&gt;&#xA;    &lt;td&gt;&lt;/td&gt;&#xA;    &lt;td&gt;$Q$&lt;/td&gt;&#xA;  &lt;/tr&gt;&#xA;  &lt;tr&gt;&#xA;    &lt;th&gt;4&lt;/th&gt;&#xA;    &lt;td&gt;&lt;/td&gt;&#xA;    &lt;td&gt;$\mathbb{P}^3$&lt;/td&gt;&#xA;  &lt;/tr&gt;&#xA;&lt;/table&gt;&#xA;&#xA;&lt;p&gt;where the rows are indexed by the Fano index $r$, and the columns by the integer $N$, then&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
