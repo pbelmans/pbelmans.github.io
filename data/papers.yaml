@@ -226,7 +226,8 @@ published:
     arxiv: "2210.00033"
     journal: Algebra & Number Theory
     information: volume 20 (2026), no. 4, pages 747&ndash;800
-    doi:  10.2140/ant.2026.20.747
+    doi: 10.2140/ant.2026.20.747
+    mathscinet: "5066465"
     coauthors:
       - damiolini
       - franzen
