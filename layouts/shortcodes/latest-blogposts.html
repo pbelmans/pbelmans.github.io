@@ -1,0 +1,6 @@
+<ul class="posts-list">
+{{ $posts := where .Page.Site.RegularPages "Section" "posts" }}
+{{ range first 7 $posts.ByDate.Reverse }}
+  <li><span class="date">{{ .Date.Format "Jan 02, 2006" }}</span> <a href="{{ .RelPermalink }}">{{ .Title | htmlUnescape }}</a>{{ if .Draft }} (draft){{ end }}</li>
+{{ end }}
+</ul>
