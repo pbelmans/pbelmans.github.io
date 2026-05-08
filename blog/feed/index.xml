@@ -5,9 +5,32 @@
     <description></description>
     <link>https://pbelmans.ncag.info/</link>
     <atom:link href="https://pbelmans.ncag.info/blog/feed/" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 06 May 2026 10:02:46 &#43;0000</pubDate>
-    <lastBuildDate>Wed, 06 May 2026 10:02:46 &#43;0000</lastBuildDate>
+    <pubDate>Fri, 08 May 2026 10:00:07 &#43;0000</pubDate>
+    <lastBuildDate>Fri, 08 May 2026 10:00:07 &#43;0000</lastBuildDate>
     <generator>Hugo</generator>
+    
+    <item>
+      <title>HomogeneousTools website</title>
+      <description>&lt;p&gt;Together with Javier Fernández Píriz,
+a PhD student at the University of Luxembourg,
+we are working on HomogeneousTools,
+a collection of packages meant to efficiently deal with homogeneous varieties
+and bundles on them.&lt;/p&gt;
+&lt;p&gt;For now, our main joint project isn&amp;rsquo;t live yet
+(more on that in a few weeks),
+but&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the &lt;a href=&#34;https://homogeneous.tools&#34;&gt;project&amp;rsquo;s website is now live&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;two preliminary packages I created for our main work are also live&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;More on those already live packages soon!&lt;/p&gt;
+</description>
+      <pubDate>Fri, 08 May 2026 00:00:00 &#43;0000</pubDate>
+      <link>https://pbelmans.ncag.info/blog/2026/05/08/HomogeneousTools-website/</link>
+      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/05/08/HomogeneousTools-website/</guid>
+      
+      
+    </item>
     
     <item>
       <title>Moving from Jekyll to Hugo</title>
@@ -283,41 +306,6 @@ Then the small quantum cohomology of $\mathrm{M}_{(2,m)}^m$ is &lt;strong&gt;not
       <link>https://pbelmans.ncag.info/blog/2025/11/26/new-paper-non-semisimplicity/</link>
       <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2025/11/26/new-paper-non-semisimplicity/</guid>
       <category>algebraic geometry</category><category>programming</category>
-      <category>mathematics</category>
-    </item>
-    
-    <item>
-      <title>Updated paper: Moduli spaces of semiorthogonal decompositions in families</title>
-      <description>
-&lt;p&gt;This update is concerned with
-&lt;strong&gt;&lt;a href=&#34;https://arxiv.org/abs/2002.03303&#34;&gt;Moduli spaces of semiorthogonal decompositions in families&lt;/a&gt;&lt;/strong&gt;,
-written together with Shinnosuke Okawa, and Andrea Ricolfi.
-I already alluded to it in the previous post:
-this paper has seen a significant update.&lt;/p&gt;
-
-&lt;h3&gt;What&#39;s new?&lt;/h3&gt;
-&lt;p&gt;Following a very useful referee report,
-we have:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;streamlined the entire paper;&lt;/li&gt;
-  &lt;li&gt;referred to the literature for étale descent of semiorthogonal decompositions,
-    thereby getting rid of a characteristic-zero assumption;&lt;/li&gt;
-  &lt;li&gt;included a second proof of the functor being limit-preserving,
-    following a suggestion by the referee;&lt;/li&gt;
-  &lt;li&gt;included the referee&#39;s proof for uniqueness of deformations
-    (with the original proof moved to a separated paper);&lt;/li&gt;
-  &lt;li&gt;everything now works in a general smooth and proper setting,
-    so the standing assumptions are always the same;&lt;/li&gt;
-  &lt;li&gt;we have expanded the discussion on our conjecture
-    regarding the subspace of non-trivial semiorthogonal decompositions.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;I believe the paper is much improved now,
-so if you didn&#39;t like the previous version, you can give this one a shot!&lt;/p&gt;
-</description>
-      <pubDate>Mon, 17 Nov 2025 00:00:00 &#43;0000</pubDate>
-      <link>https://pbelmans.ncag.info/blog/2025/11/17/updated-paper-sod-f/</link>
-      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2025/11/17/updated-paper-sod-f/</guid>
-      <category>algebraic geometry</category>
       <category>mathematics</category>
     </item>
     

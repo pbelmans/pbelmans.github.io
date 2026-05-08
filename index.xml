@@ -6,8 +6,15 @@
     <description>Recent content on Pieter Belmans</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 05 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 08 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://pbelmans.ncag.info/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HomogeneousTools website</title>
+      <link>https://pbelmans.ncag.info/blog/2026/05/08/HomogeneousTools-website/</link>
+      <pubDate>Fri, 08 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2026/05/08/HomogeneousTools-website/</guid>
+      <description>&lt;p&gt;Together with Javier Fernández Píriz,&#xA;a PhD student at the University of Luxembourg,&#xA;we are working on HomogeneousTools,&#xA;a collection of packages meant to efficiently deal with homogeneous varieties&#xA;and bundles on them.&lt;/p&gt;&#xA;&lt;p&gt;For now, our main joint project isn&amp;rsquo;t live yet&#xA;(more on that in a few weeks),&#xA;but&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;the &lt;a href=&#34;https://homogeneous.tools&#34;&gt;project&amp;rsquo;s website is now live&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;two preliminary packages I created for our main work are also live&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;More on those already live packages soon!&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Moving from Jekyll to Hugo</title>
       <link>https://pbelmans.ncag.info/blog/2026/05/05/moving-from-jekyll-to-hugo/</link>
