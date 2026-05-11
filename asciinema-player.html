@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>asciinema player</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/asciinema-player@3.10.0/dist/bundle/asciinema-player.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+    }
+
+    #player {
+      width: 100%;
+      min-height: 380px;
+    }
+  </style>
+</head>
+<body>
+  <div id="player"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/asciinema-player@3.10.0/dist/bundle/asciinema-player.min.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const cast = params.get("cast");
+    const player = document.getElementById("player");
+
+    if (cast) {
+      AsciinemaPlayer.create(cast, player, {
+        fit: "width",
+        autoPlay: false,
+        preload: true
+      });
+    } else {
+      player.textContent = "Missing cast.";
+    }
+  </script>
+</body>
+</html>

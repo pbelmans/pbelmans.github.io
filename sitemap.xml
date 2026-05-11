@@ -3,16 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://pbelmans.ncag.info/</loc>
-    <lastmod>2026-05-08T00:00:00+00:00</lastmod>
+    <lastmod>2026-05-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://pbelmans.ncag.info/tags/algebraic-geometry/</loc>
+    <lastmod>2026-05-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://pbelmans.ncag.info/blog/</loc>
-    <lastmod>2026-05-08T00:00:00+00:00</lastmod>
+    <lastmod>2026-05-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://pbelmans.ncag.info/categories/</loc>
+    <lastmod>2026-05-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://pbelmans.ncag.info/blog/2026/05/11/lie-jl-1-0-0/</loc>
+    <lastmod>2026-05-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://pbelmans.ncag.info/categories/mathematics/</loc>
+    <lastmod>2026-05-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://pbelmans.ncag.info/tags/programming/</loc>
+    <lastmod>2026-05-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://pbelmans.ncag.info/tags/</loc>
+    <lastmod>2026-05-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://pbelmans.ncag.info/blog/2026/05/08/HomogeneousTools-website/</loc>
     <lastmod>2026-05-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://pbelmans.ncag.info/categories/</loc>
-    <lastmod>2026-05-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://pbelmans.ncag.info/categories/meta/</loc>
     <lastmod>2026-05-05T00:00:00+00:00</lastmod>
@@ -20,19 +35,7 @@
     <loc>https://pbelmans.ncag.info/blog/2026/05/05/moving-from-jekyll-to-hugo/</loc>
     <lastmod>2026-05-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://pbelmans.ncag.info/tags/algebraic-geometry/</loc>
-    <lastmod>2026-03-17T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://pbelmans.ncag.info/blog/2026/03/17/intersectiontheory/</loc>
-    <lastmod>2026-03-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://pbelmans.ncag.info/categories/mathematics/</loc>
-    <lastmod>2026-03-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://pbelmans.ncag.info/tags/programming/</loc>
-    <lastmod>2026-03-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://pbelmans.ncag.info/tags/</loc>
     <lastmod>2026-03-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://pbelmans.ncag.info/blog/2026/03/09/hyperkaehler-update/</loc>

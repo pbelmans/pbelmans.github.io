@@ -5,9 +5,52 @@
     <description></description>
     <link>https://pbelmans.ncag.info/</link>
     <atom:link href="https://pbelmans.ncag.info/blog/feed/" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 08 May 2026 10:00:07 &#43;0000</pubDate>
-    <lastBuildDate>Fri, 08 May 2026 10:00:07 &#43;0000</lastBuildDate>
+    <pubDate>Mon, 11 May 2026 11:52:26 &#43;0000</pubDate>
+    <lastBuildDate>Mon, 11 May 2026 11:52:26 &#43;0000</lastBuildDate>
     <generator>Hugo</generator>
+    
+    <item>
+      <title>Lie.jl 1.0.0 is now available!</title>
+      <description>
+&lt;p&gt;This is a cross-post from the &lt;a href=&#34;https://homogeneous.tools/blog/2026/05/11/lie-jl-1-0-0/&#34;&gt;HomogeneousTools website&lt;/a&gt;, where package-specific updates about Lie.jl will also appear.&lt;/p&gt;
+&lt;p&gt;I will occasionally post about Lie.jl here, but if you really want to keep up with development, you should head over to &lt;a href=&#34;https://homogeneous.tools&#34;&gt;homogeneous.tools&lt;/a&gt;.
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;p style=&#34;background-color: rgb(255, 243, 205); border: 1px solid rgb(255, 238, 186); padding: 10px;&#34;&gt;
+  This post concerns &lt;a href=&#34;https://github.com/HomogeneousTools/Lie.jl&#34;&gt;&lt;strong&gt;Lie.jl&lt;/strong&gt;&lt;/a&gt;,
+  a Julia package for computations with semisimple Lie algebras.
+  There is &lt;a href=&#34;https://homogeneous.tools/Lie.jl/&#34;&gt;documentation&lt;/a&gt;.
+&lt;/p&gt;
+
+
+&lt;p&gt;This first stable release focuses on efficient computations with semisimple Lie algebras,
+of the type that are most useful to an algebraic geometer
+who wants to do computations for completely reducible vector bundles on partial flag varieties.
+A large part of that efficiency comes from leaning into Julia&#39;s type system and specialization,
+so fairly high-level code can still run very fast.&lt;/p&gt;
+
+&lt;p&gt;Here is a short session:&lt;/p&gt;
+
+
+&lt;iframe
+  class=&#34;asciinema-embed&#34;
+  src=&#34;https://pbelmans.ncag.info/asciinema-player.html?cast=%2Fasciinema%2Flie-a3-representations.cast&#34;
+  title=&#34;Terminal recording&#34;
+  loading=&#34;lazy&#34;
+&gt;&lt;/iframe&gt;
+
+
+&lt;p&gt;It is not yet at feature parity with &lt;a href=&#34;http://www-math.univ-poitiers.fr/~maavl/LiE/&#34;&gt;LiE&lt;/a&gt;, &lt;a href=&#34;https://lieart.hepforge.org/&#34;&gt;LieART&lt;/a&gt;, or the corresponding functionality in &lt;a href=&#34;https://www.sagemath.org/&#34;&gt;SageMath&lt;/a&gt;, but the foundations are now in place.
+Let us know which features you would like to see implemented next!&lt;/p&gt;
+</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 &#43;0000</pubDate>
+      <link>https://pbelmans.ncag.info/blog/2026/05/11/lie-jl-1-0-0/</link>
+      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/05/11/lie-jl-1-0-0/</guid>
+      <category>algebraic geometry</category><category>programming</category>
+      <category>mathematics</category>
+    </item>
     
     <item>
       <title>HomogeneousTools website</title>
@@ -259,52 +302,6 @@ I&#39;ll probably move my other interactive websites over as well
       <pubDate>Sun, 28 Dec 2025 00:00:00 &#43;0000</pubDate>
       <link>https://pbelmans.ncag.info/blog/2025/12/28/change-of-host-hyperkaehler/</link>
       <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2025/12/28/change-of-host-hyperkaehler/</guid>
-      <category>algebraic geometry</category><category>programming</category>
-      <category>mathematics</category>
-    </item>
-    
-    <item>
-      <title>New paper: Generic non-semisimplicity of small quantum cohomology of Kronecker moduli</title>
-      <description>
-&lt;p&gt;It&#39;s not quite a new paper,
-rather it is a new &lt;em&gt;appendix&lt;/em&gt; (&lt;a href=&#34;https://pbelmans.ncag.info/assets/appendix-non-semisimple-kronecker-moduli.pdf&#34;&gt;&lt;strong&gt;pdf of a standalone version&lt;/strong&gt;&lt;/a&gt;),
-to be included in &lt;a href=&#34;https://arxiv.org/abs/2509.01101&#34;&gt;A-D-E diagrams, Hodge&amp;ndash;Tate hyperplane sections and semisimple quantum cohomology&lt;/a&gt;
-by Sergey Galkin, Naichung Conan Leung, Changzheng Li, and Rui Xiong.&lt;/p&gt;
-&lt;p&gt;It is a short appendix,
-in which we observe that one of the main results in the Galkin&amp;ndash;Leung&amp;ndash;Li&amp;ndash;Xiong paper
-is also sufficiently strong to deduce that
-the small quantum cohomology of certain Kronecker moduli is &lt;em&gt;not&lt;/em&gt; semisimple.
-Here, Kronecker moduli is shorthand for
-moduli spaces of stable quiver representations of the Kronecker quiver;
-this class of smooth projective varieties has many extremely nice properties,
-and many strong tools to study them.&lt;/p&gt;
-&lt;p&gt;I refer to the introduction of the main paper for additional context
-motivating the study of quantum cohomology.
-Let me just point out that&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;combining the Schofield and Dubrovin conjectures
-    predicts that the big quantum cohomology should be generically semisimple;&lt;/li&gt;
-  &lt;li&gt;special cases of Kronecker moduli are Grassmannians,
-    for which the small quantum cohomology is generically semisimple;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2412.15987&#34;&gt;Meng has shown&lt;/a&gt; that the small quantum cohomology for the Kronecker moduli space
-    for the 3-Kronecker quiver and dimension vector $(2,3)$
-    (the smallest case which is not a Grassmannian)
-    has generically simple quantum cohomology.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;One can experimentally (using &lt;a href=&#34;https://quiver.tools&#34;&gt;QuiverTools&lt;/a&gt;)
-check that the obstruction from Galkin&amp;ndash;Leung&amp;ndash;Li&amp;ndash;Xiong&#39;s Theorem 1.2
-vanishes for many examples of Kronecker moduli.
-But Markus and I noticed that it does &lt;em&gt;not&lt;/em&gt; vanish for the following infinite family of Kronecker moduli:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Theorem&lt;/strong&gt;
-&lt;em&gt;Let $\mathrm{M}_{(2,m)}^m$ be the Kronecker moduli space
-for the $m$-Kronecker quiver and dimension vector $(2,m)$, and $m\geq 5$ odd.
-Then the small quantum cohomology of $\mathrm{M}_{(2,m)}^m$ is &lt;strong&gt;not&lt;/strong&gt; generically semisimple.&lt;/em&gt;
-&lt;/p&gt;
-&lt;p&gt;It&#39;s a fun, combinatorial proof, that fits in 1.5 page, so I won&#39;t comment further on it.&lt;/p&gt;
-</description>
-      <pubDate>Wed, 26 Nov 2025 00:00:00 &#43;0000</pubDate>
-      <link>https://pbelmans.ncag.info/blog/2025/11/26/new-paper-non-semisimplicity/</link>
-      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2025/11/26/new-paper-non-semisimplicity/</guid>
       <category>algebraic geometry</category><category>programming</category>
       <category>mathematics</category>
     </item>
