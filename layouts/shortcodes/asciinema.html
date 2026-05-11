@@ -1,0 +1,7 @@
+{{ $cast := .Get 0 }}
+<iframe
+  class="asciinema-embed"
+  src="/asciinema-player.html?cast={{ $cast | urlquery }}"
+  title="Terminal recording"
+  loading="lazy"
+></iframe>

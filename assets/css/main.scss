@@ -94,17 +94,26 @@ $on-laptop:        800px;
  /**
   * Figures
   */
- figure > img {
-     display: block;
- }
+figure > img {
+    display: block;
+}
 
- figcaption {
-     font-size: $small-font-size;
- }
+figcaption {
+    font-size: $small-font-size;
+}
+
+.asciinema-embed {
+    display: block;
+    width: 100%;
+    max-width: 720px;
+    height: 420px;
+    margin: 1em auto;
+    border: 0;
+}
 
 
 
- /**
+/**
   * Lists
   */
  ul, ol {

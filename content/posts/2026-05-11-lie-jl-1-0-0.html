@@ -1,0 +1,33 @@
+---
+date: 2026-05-11
+slug: lie-jl-1-0-0
+title: "Lie.jl 1.0.0 is now available!"
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+- programming
+author: Pieter Belmans
+---
+
+<p>This is a cross-post from the <a href="https://homogeneous.tools/blog/2026/05/11/lie-jl-1-0-0/">HomogeneousTools website</a>, where package-specific updates about Lie.jl will also appear.</p>
+<p>I will occasionally post about Lie.jl here, but if you really want to keep up with development, you should head over to <a href="https://homogeneous.tools">homogeneous.tools</a>.
+
+<hr>
+<br>
+
+{{< lie >}}
+
+<p>This first stable release focuses on efficient computations with semisimple Lie algebras,
+of the type that are most useful to an algebraic geometer
+who wants to do computations for completely reducible vector bundles on partial flag varieties.
+A large part of that efficiency comes from leaning into Julia's type system and specialization,
+so fairly high-level code can still run very fast.</p>
+
+<p>Here is a short session:</p>
+
+{{< asciinema "/asciinema/lie-a3-representations.cast" >}}
+
+<p>It is not yet at feature parity with <a href="http://www-math.univ-poitiers.fr/~maavl/LiE/">LiE</a>, <a href="https://lieart.hepforge.org/">LieART</a>, or the corresponding functionality in <a href="https://www.sagemath.org/">SageMath</a>, but the foundations are now in place.
+Let us know which features you would like to see implemented next!</p>
