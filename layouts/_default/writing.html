@@ -9,6 +9,10 @@
 {{ $three := add $two $preprints }}
 {{ $four := add $three $needingrevision }}
 {{ $five := add $four $inprogress }}
+{{ $appendices := len $papers.appendices }}
+{{ $six := add $five $appendices }}
+{{ $other := len $papers.other }}
+{{ $seven := add $six $other }}
 
 <article class="post">
   {{ with .Title }}
@@ -72,14 +76,14 @@
     </ol>
 
     <h3>Not peer-reviewed</h3>
-    <ol class="publications">
+    <ol class="publications" style="counter-reset: publications {{ $six }}">
     {{ range $papers.other }}
       {{ partial "publication.html" (dict "page" $ "paper" .) }}
     {{ end }}
     </ol>
 
     <h3 id="broader">For a broader audience</h3>
-    <ol class="publications">
+    <ol class="publications" style="counter-reset: publications {{ $seven }}">
     {{ range $papers.broad }}
       {{ partial "publication.html" (dict "page" $ "paper" .) }}
     {{ end }}
