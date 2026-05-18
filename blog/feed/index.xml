@@ -5,8 +5,8 @@
     <description></description>
     <link>https://pbelmans.ncag.info/</link>
     <atom:link href="https://pbelmans.ncag.info/blog/feed/" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 18 May 2026 07:12:37 &#43;0000</pubDate>
-    <lastBuildDate>Mon, 18 May 2026 07:12:37 &#43;0000</lastBuildDate>
+    <pubDate>Mon, 18 May 2026 07:22:44 &#43;0000</pubDate>
+    <lastBuildDate>Mon, 18 May 2026 07:22:44 &#43;0000</lastBuildDate>
     <generator>Hugo</generator>
     
     <item>
@@ -24,6 +24,7 @@
 &lt;br&gt;
 
 &lt;p style=&#34;background-color: rgb(255, 243, 205); border: 1px solid rgb(255, 238, 186); padding: 10px;&#34;&gt;
+  &lt;img src=&#34;https://pbelmans.ncag.info/assets/favicon-semisimple.svg&#34; width=&#34;48&#34; height=&#34;48&#34; alt=&#34;&#34;&gt;
   This post concerns &lt;a href=&#34;https://github.com/HomogeneousTools/Semisimple.jl&#34;&gt;&lt;strong&gt;Semisimple.jl&lt;/strong&gt;&lt;/a&gt;,
   a Julia package for computations with semisimple Lie algebras.
   There is &lt;a href=&#34;https://homogeneous.tools/Semisimple.jl/&#34;&gt;documentation&lt;/a&gt;.
