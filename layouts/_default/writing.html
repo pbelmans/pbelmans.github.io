@@ -48,7 +48,7 @@
     </ol>
 
     <h3 id="published">Published</h3>
-    <ol class="publications reverse">
+    <ol class="publications reverse" style="counter-reset: publications 0">
     {{ range $papers.published }}
       {{ partial "publication.html" (dict "page" $ "paper" .) }}
     {{ end }}
