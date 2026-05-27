@@ -1,4 +1,13 @@
-{{ define "main" }}
+---
+title: categories
+url: /blog/categories
+aliases:
+  - /blog/categories.html
+exclude: true
+bare_content: true
+---
+
+{{< blog-categories.inline >}}
 <ul>
   {{ range $term, $taxonomy := .Site.Taxonomies.categories }}
     <li><a href="#{{ $term | urlize }}">{{ $term }} ({{ len $taxonomy.Pages }})</a></li>
@@ -13,4 +22,4 @@
     {{ end }}
   </ul>
 {{ end }}
-{{ end }}
+{{< /blog-categories.inline >}}

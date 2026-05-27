@@ -1,4 +1,13 @@
-{{ define "main" }}
+---
+title: tags
+url: /blog/tags
+aliases:
+  - /blog/tags.html
+exclude: true
+bare_content: true
+---
+
+{{< blog-tags.inline >}}
 <ul>
   {{ range $term, $taxonomy := .Site.Taxonomies.tags }}
     <li><a href="#{{ $term | urlize }}">{{ $term }} ({{ len $taxonomy.Pages }})</a></li>
@@ -13,4 +22,4 @@
     {{ end }}
   </ul>
 {{ end }}
-{{ end }}
+{{< /blog-tags.inline >}}

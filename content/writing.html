@@ -1,4 +1,12 @@
-{{ define "main" }}
+---
+title: writing
+url: /writing
+aliases:
+  - /writing.html
+bare_content: true
+---
+
+{{< writing.inline >}}
 {{ $papers := hugo.Data.papers }}
 {{ $published := len $papers.published }}
 {{ $accepted := len $papers.accepted }}
@@ -15,7 +23,7 @@
 {{ $seven := add $six $other }}
 
 <article class="post">
-  {{ with .Title }}
+  {{ with .Page.Title }}
   <header class="post-header">
     <h1 class="post-title">{{ . | htmlUnescape }}</h1>
   </header>
@@ -182,4 +190,4 @@
     </ul>
   </div>
 </article>
-{{ end }}
+{{< /writing.inline >}}

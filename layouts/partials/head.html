@@ -16,7 +16,7 @@
 
   {{ partial "mathjax.html" . }}
   {{ block "extra_head" . }}{{ end }}
-  {{ if or (eq .Layout "writing") (eq .RelPermalink "/writing") }}
+  {{ if eq .RelPermalink "/writing/" }}
   {{ partial "writing-head.html" . }}
   {{ end }}
 
