@@ -5,9 +5,31 @@
     <description></description>
     <link>https://pbelmans.ncag.info/</link>
     <atom:link href="https://pbelmans.ncag.info/blog/feed/" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 27 May 2026 07:59:26 &#43;0000</pubDate>
-    <lastBuildDate>Wed, 27 May 2026 07:59:26 &#43;0000</lastBuildDate>
+    <pubDate>Fri, 29 May 2026 08:51:35 &#43;0000</pubDate>
+    <lastBuildDate>Fri, 29 May 2026 08:51:35 &#43;0000</lastBuildDate>
     <generator>Hugo</generator>
+    
+    <item>
+      <title>Verifying Kostant&#39;s conjecture using Semisimple.jl</title>
+      <description>
+&lt;p style=&#34;background-color: rgb(255, 243, 205); border: 1px solid rgb(255, 238, 186); padding: 10px; overflow: hidden;&#34;&gt;
+  &lt;img src=&#34;https://pbelmans.ncag.info/assets/favicon-semisimple.svg&#34; width=&#34;48&#34; height=&#34;48&#34; alt=&#34;&#34; style=&#34;float: left; margin-right: 10px;&#34;&gt;
+  This post concerns &lt;a href=&#34;https://github.com/HomogeneousTools/Semisimple.jl&#34;&gt;&lt;strong&gt;Semisimple.jl&lt;/strong&gt;&lt;/a&gt;,
+  a Julia package for computations with semisimple Lie algebras.
+  There is &lt;a href=&#34;https://homogeneous.tools/Semisimple.jl/&#34;&gt;documentation&lt;/a&gt;.
+&lt;/p&gt;
+
+
+&lt;p&gt;Over on the &lt;a href=&#34;https://homogeneous.tools/blog/&#34;&gt;HomogeneousTools blog&lt;/a&gt;
+I wrote &lt;a href=&#34;https://homogeneous.tools/blog/2026/05/29/verifying-kostants-conjecture/&#34;&gt;a post titled Verifying Kostant’s conjecture using Semisimple.jl&lt;/a&gt;,
+which describes a fun way to use computer algebra to experiment with conjectures.
+</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 &#43;0000</pubDate>
+      <link>https://pbelmans.ncag.info/blog/2026/05/11/verifying-kostants-conjecture/</link>
+      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/05/11/verifying-kostants-conjecture/</guid>
+      <category>algebraic geometry</category><category>programming</category>
+      <category>mathematics</category>
+    </item>
     
     <item>
       <title>Semisimple.jl 1.0.0 is now available!</title>
@@ -23,8 +45,8 @@
 &lt;hr&gt;
 &lt;br&gt;
 
-&lt;p style=&#34;background-color: rgb(255, 243, 205); border: 1px solid rgb(255, 238, 186); padding: 10px;&#34;&gt;
-  &lt;img src=&#34;https://pbelmans.ncag.info/assets/favicon-semisimple.svg&#34; width=&#34;48&#34; height=&#34;48&#34; alt=&#34;&#34;&gt;
+&lt;p style=&#34;background-color: rgb(255, 243, 205); border: 1px solid rgb(255, 238, 186); padding: 10px; overflow: hidden;&#34;&gt;
+  &lt;img src=&#34;https://pbelmans.ncag.info/assets/favicon-semisimple.svg&#34; width=&#34;48&#34; height=&#34;48&#34; alt=&#34;&#34; style=&#34;float: left; margin-right: 10px;&#34;&gt;
   This post concerns &lt;a href=&#34;https://github.com/HomogeneousTools/Semisimple.jl&#34;&gt;&lt;strong&gt;Semisimple.jl&lt;/strong&gt;&lt;/a&gt;,
   a Julia package for computations with semisimple Lie algebras.
   There is &lt;a href=&#34;https://homogeneous.tools/Semisimple.jl/&#34;&gt;documentation&lt;/a&gt;.
@@ -279,36 +301,6 @@ please get in touch with me at &lt;a href=&#34;mailto:p.belmans@uu.nl&#34;&gt;p.
       <link>https://pbelmans.ncag.info/blog/2026/01/16/markus-events/</link>
       <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/01/16/markus-events/</guid>
       
-      <category>mathematics</category>
-    </item>
-    
-    <item>
-      <title>Change of host for Hyperkaehler.info</title>
-      <description>
-&lt;p&gt;I&#39;ve been hosting all interactive websites on PythonAnywhere,
-but recently I felt the urge to try and host them on my Synology DS920+.
-Four years ago, I bought it with the possibility in mind
-of starting to self-host various things
-aside from using it as a NAS.
-After a failed attempt a few weeks ago
-(despite port forwarding being set up in a seemingly correct fashion,
-my ISP was blocking communication with the Let&#39;s Encrypt servers)
-I figured out that I could use CloudFlare Tunnels instead.&lt;/p&gt;
-&lt;p&gt;I have now done this for &lt;a href=&#34;https://hyperkaehler.info&#34;&gt;Hyperkaehler.info&lt;/a&gt;,
-as a little experiment.
-You shouldn&#39;t notice anything different,
-except that response times might even be a little quicker,
-and the SSL certificate comes from somewhere else.
-But in case it does go down for a prolonged period,
-now you know why.&lt;/p&gt;
-&lt;p&gt;If this approach works well for the next few months,
-I&#39;ll probably move my other interactive websites over as well
-(the static ones can simply continue running via GitHub Pages for the time being)&lt;/p&gt;
-</description>
-      <pubDate>Sun, 28 Dec 2025 00:00:00 &#43;0000</pubDate>
-      <link>https://pbelmans.ncag.info/blog/2025/12/28/change-of-host-hyperkaehler/</link>
-      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2025/12/28/change-of-host-hyperkaehler/</guid>
-      <category>algebraic geometry</category><category>programming</category>
       <category>mathematics</category>
     </item>
     
