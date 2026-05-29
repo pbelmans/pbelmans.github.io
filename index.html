@@ -153,6 +153,69 @@ You can reach me at <a href="mailto:p.belmans@uu.nl">p.belmans@uu.nl</a>.</p>
 </ul>
 
 
+<h2>Latest from homogeneous.tools</h2>
+<ul class="posts-list" id="homogeneous-feed">
+  <li><a href="https://homogeneous.tools/blog/">Loading&hellip;</a></li>
+</ul>
+<script>
+(function () {
+  var FEED = "https://homogeneous.tools/blog/index.xml";
+  var LIMIT = 5;
+  var target = document.getElementById("homogeneous-feed");
+
+  function fmt(d) {
+    var months = ["Jan","Feb","Mar","Apr","May","Jun",
+                  "Jul","Aug","Sep","Oct","Nov","Dec"];
+    return months[d.getMonth()] + " " +
+           ("0" + d.getDate()).slice(-2) + ", " + d.getFullYear();
+  }
+
+  function render(entries) {
+    target.innerHTML = "";
+    entries.slice(0, LIMIT).forEach(function (e) {
+      var li = document.createElement("li");
+      var date = document.createElement("span");
+      date.className = "date";
+      date.textContent = fmt(e.date);
+      var a = document.createElement("a");
+      a.href = e.url;
+      a.textContent = e.title;
+      li.appendChild(date);
+      li.appendChild(document.createTextNode(" "));
+      li.appendChild(a);
+      target.appendChild(li);
+    });
+  }
+
+  function parse(xml) {
+    var doc = new DOMParser().parseFromString(xml, "application/xml");
+    var isAtom = doc.documentElement.localName === "feed";
+    var nodes = doc.querySelectorAll(isAtom ? "entry" : "item");
+    return Array.prototype.map.call(nodes, function (n) {
+      var title = n.querySelector("title");
+      var link  = isAtom
+        ? n.querySelector("link[rel='alternate'], link")
+        : n.querySelector("link");
+      var date  = n.querySelector(isAtom ? "updated, published" : "pubDate");
+      return {
+        title: title ? title.textContent.trim() : "(untitled)",
+        url:   isAtom ? (link && link.getAttribute("href")) : (link && link.textContent.trim()),
+        date:  date ? new Date(date.textContent) : new Date(0)
+      };
+    });
+  }
+
+  fetch(FEED)
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
+    .then(parse)
+    .then(render)
+    .catch(function () {
+      target.innerHTML =
+        '<li><a href="https://homogeneous.tools/blog/">Visit the homogeneous.tools blog</a></li>';
+    });
+})();
+</script>
+
 <h2 id="conferences">Conference organisation</h2>
 <ul>
   <li><a href="">GQT School &amp; Colloquium</a>, Nijmegen, August 24&ndash;28, 2026</li>
