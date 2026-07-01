@@ -5,9 +5,177 @@
     <description></description>
     <link>https://pbelmans.ncag.info/</link>
     <atom:link href="https://pbelmans.ncag.info/blog/feed/" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 29 May 2026 09:04:00 &#43;0000</pubDate>
-    <lastBuildDate>Fri, 29 May 2026 09:04:00 &#43;0000</lastBuildDate>
+    <pubDate>Wed, 01 Jul 2026 07:22:35 &#43;0000</pubDate>
+    <lastBuildDate>Wed, 01 Jul 2026 07:22:35 &#43;0000</lastBuildDate>
     <generator>Hugo</generator>
+    
+    <item>
+      <title>The Mori–Mukai determinant</title>
+      <description>
+&lt;p&gt;I like Fano 3-folds.
+I like them so much that I created &lt;a href=&#34;https://fanography.info&#34;&gt;Fanography&lt;/a&gt;!
+&lt;p&gt;One thing which I found intriguing in the story
+one aspect of the details of the Mori&amp;ndash;Mukai classification
+that is not often mentioned.
+Namely,
+at the &lt;em&gt;very end&lt;/em&gt; of their &lt;a href=&#34;https://www.kurims.kyoto-u.ac.jp/~mukai/paper/Fano1985.pdf&#34;&gt;Classification of Fano threefolds with $\mathrm{b}_2\geq 2$, I&lt;/a&gt;,
+in paragraph (7.33),
+they introduce an invariant
+that they need to distinguish between various Fano 3-folds
+with otherwise the same numerical invariants.
+&lt;p&gt;For instance,
+the families
+&lt;a href=&#34;https://www.fanography.info/2-22&#34;&gt;2.22&lt;/a&gt; and
+&lt;a href=&#34;https://www.fanography.info/2-24&#34;&gt;2.24&lt;/a&gt;
+have the same Hodge numbers and volume (the invariants that were most easily computed from their birational description),
+so, a priori, they could be the same family (or one a subfamily of the other).
+They needed a numerical deformation invariant to distinguish these families,
+and I found it frustrating that I could not find this invariant
+computed for &lt;em&gt;all&lt;/em&gt; Fano 3-folds
+(Mori&amp;ndash;Mukai only give it for the cases they need to distinguish),
+so that I could include it in Fanography.
+But this frustration is now gone!
+
+&lt;h2&gt;The invariant&lt;/h2&gt;
+&lt;p&gt;For a smooth Fano 3-fold $X$ with $\operatorname{Pic}(X)$ of rank $\rho$ and a
+$\mathbb{Z}$-basis $D_1, \dots, D_\rho$, Mori and Mukai define&lt;/p&gt;
+
+\[
+  d(X) = \det\bigl( -\mathrm{K}_X \cdot D_i \cdot D_j \bigr)_{1 \le i, j \le \rho}.
+\]
+
+&lt;p&gt;It is basis-independent and a deformation invariant,
+and its sign is $(-1)^{\rho-1}$.
+I like to call it the &lt;em&gt;Mori&amp;ndash;Mukai determinant&lt;/em&gt;.
+
+
+&lt;h2&gt;Computing it with OSCAR&lt;/h2&gt;
+&lt;p&gt;Mori and Mukai give a lemma (their Lemma 7.34)
+which describes how to compute the determinant for a Fano 3-fold $Y$,
+if $Y=\mathop{\rm Bl}_CX$ or $Y=\mathop{\rm Bl}_pX$.
+However,
+I decided to have a little fun,
+and use &lt;a href=&#34;https://docs.oscar-system.org/stable/Experimental/IntersectionTheory/intro/&#34;&gt;IntersectionTheory in OSCAR&lt;/a&gt;
+(see also my earlier post &lt;a href=&#34;https://pbelmans.ncag.info/blog/2026/03/17/intersectiontheory/&#34;&gt;Intersection theory in OSCAR&lt;/a&gt;).
+That way,
+I could test the package a bit more,
+and also use it to compute the determinant for primitive cases of higher Picard rank.
+&lt;p&gt;The code is in
+  &lt;a href=&#34;https://github.com/pbelmans/FanoThreefoldMoriMukaiDeterminant.jl&#34;&gt;&lt;code&gt;FanoThreefoldMoriMukaiDeterminant.jl&lt;/code&gt;&lt;/a&gt;.
+It encodes all the primitive Fano 3-folds using IntersectionTheory
+(except for a few of Picard rank 1 where no construction is available,
+e.g., because they involve weighted projective spaces)
+and then encodes all the imprimitive ones as blowups.
+This is all data that was already in Fanography.
+
+&lt;h2&gt;Using it&lt;/h2&gt;
+&lt;p&gt;Using the code is not very hard.
+It suffices to do
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-julia&#34; data-lang=&#34;julia&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FanoThreefoldMoriMukaiDeterminant&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;mori_mukai_determinant&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2-22&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;   &lt;span class=&#34;c&#34;&gt;# d(X) for one family&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;determinants&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;                   &lt;span class=&#34;c&#34;&gt;# Dict id =&amp;gt; d(X) for all 105 families&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Julia has a high precompilation cost,
+if you disregard that,
+the computation itself finishes in 10 seconds or so on my machine
+(and I have not tried to improve it whatsoever).
+A &lt;a href=&#34;https://github.com/pbelmans/FanoThreefoldMoriMukaiDeterminant.jl/actions/runs/28456124812&#34;&gt;full CI run&lt;/a&gt;,
+installing Julia and Oscar from scratch,
+took 15 minutes.
+
+
+&lt;h2&gt;All the values&lt;/h2&gt;
+&lt;p&gt;For completeness, here is $d(X)$ for all 105 deformation families,
+organised by Picard rank $\rho$.
+The entry in row $k$ and column $\rho$ is the determinant of the family $\rho.k$
+(in Mori&amp;ndash;Mukai&#39;s numbering, as used on &lt;a href=&#34;https://www.fanography.info&#34;&gt;Fanography&lt;/a&gt;, with 4.13 the case missing from their classification).
+
+&lt;style&gt;
+.mmd-table {
+  overflow-x: auto;
+  margin: 1em 0;
+}
+.mmd-table table {
+  border-collapse: collapse;
+  line-height: 1.4;
+}
+.mmd-table th,
+.mmd-table td {
+  border: 1px solid #ddd;
+  padding: 0.25em 0.6em;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.mmd-table thead th {
+  text-align: center;
+  white-space: nowrap;
+}
+.mmd-table tbody th {
+  text-align: center;
+  font-weight: normal;
+  color: #888;
+}
+.mmd-table td:empty {
+  border: 0;
+}
+&lt;/style&gt;
+
+&lt;div class=&#34;mmd-table&#34;&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th&gt;№&lt;/th&gt;&lt;th&gt;&amp;rho; = 1&lt;/th&gt;&lt;th&gt;&amp;rho; = 2&lt;/th&gt;&lt;th&gt;&amp;rho; = 3&lt;/th&gt;&lt;th&gt;&amp;rho; = 4&lt;/th&gt;&lt;th&gt;&amp;rho; = 5&lt;/th&gt;&lt;th&gt;&amp;rho; = 6&lt;/th&gt;&lt;th&gt;&amp;rho; = 7&lt;/th&gt;&lt;th&gt;&amp;rho; = 8&lt;/th&gt;&lt;th&gt;&amp;rho; = 9&lt;/th&gt;&lt;th&gt;&amp;rho; = 10&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;th&gt;1&lt;/th&gt;&lt;td&gt;2&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-1&lt;/td&gt;&lt;td&gt;16&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-48&lt;/td&gt;&lt;td&gt;56&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-80&lt;/td&gt;&lt;td&gt;128&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-192&lt;/td&gt;&lt;td&gt;256&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-256&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;2&lt;/th&gt;&lt;td&gt;4&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-4&lt;/td&gt;&lt;td&gt;16&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-32&lt;/td&gt;&lt;td&gt;44&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;3&lt;/th&gt;&lt;td&gt;6&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-4&lt;/td&gt;&lt;td&gt;28&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-48&lt;/td&gt;&lt;td&gt;48&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;4&lt;/th&gt;&lt;td&gt;8&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-9&lt;/td&gt;&lt;td&gt;24&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-40&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;5&lt;/th&gt;&lt;td&gt;10&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-9&lt;/td&gt;&lt;td&gt;28&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-39&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;6&lt;/th&gt;&lt;td&gt;12&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-12&lt;/td&gt;&lt;td&gt;32&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-44&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;7&lt;/th&gt;&lt;td&gt;14&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-16&lt;/td&gt;&lt;td&gt;36&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-39&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;8&lt;/th&gt;&lt;td&gt;16&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-8&lt;/td&gt;&lt;td&gt;34&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-32&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;9&lt;/th&gt;&lt;td&gt;18&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-17&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-31&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;10&lt;/th&gt;&lt;td&gt;22&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-16&lt;/td&gt;&lt;td&gt;40&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-28&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;11&lt;/th&gt;&lt;td&gt;2&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-13&lt;/td&gt;&lt;td&gt;28&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-23&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;12&lt;/th&gt;&lt;td&gt;4&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-20&lt;/td&gt;&lt;td&gt;36&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-20&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;13&lt;/th&gt;&lt;td&gt;6&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-24&lt;/td&gt;&lt;td&gt;40&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-44&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;14&lt;/th&gt;&lt;td&gt;8&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-25&lt;/td&gt;&lt;td&gt;18&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;15&lt;/th&gt;&lt;td&gt;10&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-12&lt;/td&gt;&lt;td&gt;34&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;16&lt;/th&gt;&lt;td&gt;6&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-20&lt;/td&gt;&lt;td&gt;30&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;17&lt;/th&gt;&lt;td&gt;4&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-25&lt;/td&gt;&lt;td&gt;28&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;18&lt;/th&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-16&lt;/td&gt;&lt;td&gt;26&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;19&lt;/th&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-17&lt;/td&gt;&lt;td&gt;24&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;20&lt;/th&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-29&lt;/td&gt;&lt;td&gt;28&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;21&lt;/th&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-28&lt;/td&gt;&lt;td&gt;22&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;22&lt;/th&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-24&lt;/td&gt;&lt;td&gt;18&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;23&lt;/th&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-16&lt;/td&gt;&lt;td&gt;20&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;24&lt;/th&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-21&lt;/td&gt;&lt;td&gt;22&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;25&lt;/th&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-16&lt;/td&gt;&lt;td&gt;20&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;26&lt;/th&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-21&lt;/td&gt;&lt;td&gt;18&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;27&lt;/th&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-17&lt;/td&gt;&lt;td&gt;16&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;28&lt;/th&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-9&lt;/td&gt;&lt;td&gt;16&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;29&lt;/th&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-16&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;30&lt;/th&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-12&lt;/td&gt;&lt;td&gt;14&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;31&lt;/th&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-13&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;32&lt;/th&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-12&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;33&lt;/th&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-9&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;34&lt;/th&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-9&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;35&lt;/th&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-8&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;36&lt;/th&gt;&lt;td&gt;&lt;/td&gt;&lt;td class=&#34;neg&#34;&gt;-5&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The data will appear very soon on Fanography too!
+But that is for another blogpost,
+where I discuss some other changes and improvements to Fanography.
+</description>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 &#43;0000</pubDate>
+      <link>https://pbelmans.ncag.info/blog/2026/07/01/mori-mukai-determinant/</link>
+      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/07/01/mori-mukai-determinant/</guid>
+      
+      
+    </item>
     
     <item>
       <title>Verifying Kostant&#39;s conjecture using Semisimple.jl</title>
@@ -266,40 +434,6 @@ please consider applying!&lt;/p&gt;
       <pubDate>Tue, 03 Feb 2026 00:00:00 &#43;0000</pubDate>
       <link>https://pbelmans.ncag.info/blog/2026/02/03/ud-utrecht-2/</link>
       <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/02/03/ud-utrecht-2/</guid>
-      
-      <category>mathematics</category>
-    </item>
-    
-    <item>
-      <title>Events related to Markus Reineke as Springer Chair</title>
-      <description>
-&lt;p&gt;This academic year,
-the &lt;a href=&#34;https://www.uu.nl/en/research/utrecht-geometry-centre/research/ta-springer-chair&#34;&gt;Springer Chair&lt;/a&gt; (a visiting professorship at Utrecht University) has been given to &lt;a href=&#34;https://math.ruhr-uni-bochum.de/fakultaet/arbeitsbereiche/algebra/research-team-reineke/team/prof-dr-markus-reineke/&#34;&gt;Markus Reineke&lt;/a&gt;.
-He will be visiting us in February,
-and in this context we are organizing several events:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;a &lt;a href=&#34;https://www.uu.nl/en/research/utrecht-geometry-centre/activities/ugc-colloquium&#34;&gt;colloquium talk&lt;/a&gt;
-    on Tuesday, February 3, from 16 to 17, in Minaert 201&lt;/li&gt;
-  &lt;li&gt;a &lt;a href=&#34;https://www.uu.nl/en/events/quiver-moduli-and-their-geometry&#34;&gt;lecture series&lt;/a&gt;
-    on February 4, 9, and 10
-    (see the webpage for more details)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&#34;https://www.uu.nl/en/events/open-problems-discussion-quivers&#34;&gt;a problem session&lt;/a&gt;
-    on Wednesday, February 11, from 13h15 to 15h00, in HFG 611&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&#34;https://quivers-2026.ncag.info&#34;&gt;a 2-day workshop&lt;/a&gt;
-    on February 23 and 24
-    (see the webpage for more details, note that capacity is very limited)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Everyone is cordially invited to the colloquium,
-lecture series,
-and problem session!&lt;/p&gt;
-&lt;p&gt;Whilst the workshop isn&#39;t invitation-only,
-we could only get a small room,
-so if you plan to attend it,
-please get in touch with me at &lt;a href=&#34;mailto:p.belmans@uu.nl&#34;&gt;p.belmans@uu.nl&lt;/a&gt;.&lt;/p&gt;
-</description>
-      <pubDate>Fri, 16 Jan 2026 00:00:00 &#43;0000</pubDate>
-      <link>https://pbelmans.ncag.info/blog/2026/01/16/markus-events/</link>
-      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/01/16/markus-events/</guid>
       
       <category>mathematics</category>
     </item>

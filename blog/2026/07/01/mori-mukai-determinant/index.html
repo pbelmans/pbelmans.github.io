@@ -7,13 +7,13 @@
 
   <link rel="icon" type="image/png" href="/favicon.png" size="256x256">
 
-  <title>Pieter Belmans&mdash;Archive</title>
-  
+  <title>Pieter Belmans&mdash;The Mori–Mukai determinant</title>
+  <meta name="description" content="I like Fano 3-folds. I like them so much that I created Fanography! One thing which I found intriguing in the story one aspect of the details of the Mori–Mukai …">
 
   
   <link rel="stylesheet" href="/css/main.css">
 
-  <link rel="canonical" href="https://pbelmans.ncag.info/archive/">
+  <link rel="canonical" href="https://pbelmans.ncag.info/blog/2026/07/01/mori-mukai-determinant/">
   <link rel="alternate" type="application/rss+xml" title="Pieter Belmans" href="https://pbelmans.ncag.info/blog/feed/">
 
   <script>
@@ -65,53 +65,191 @@ window.MathJax = {
     <div class="page-content">
       <div class="wrapper">
         
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">The Mori–Mukai determinant</h1>
 
+    <p class="post-meta">
+      <time datetime="2026-07-01T00:00:00Z" itemprop="datePublished">Jul 1, 2026</time>
+    </p>
 
-
-  <article>
-  <h3><a href="/blog/2015/11/11/simons-collaboration-on-homological-mirror-symmetry/">Simons Collaboration on Homological Mirror Symmetry</a></h3>
-  <p class="post-meta"><time datetime="2015-11-11T00:00:00Z">Nov 11, 2015</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2015/11/09/today-i-learned/">Today I learned...</a></h3>
-  <p class="post-meta"><time datetime="2015-11-09T00:00:00Z">Nov 9, 2015</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2015/09/26/a-cheat-sheet-on-recollements/">A cheat sheet on recollements</a></h3>
-  <p class="post-meta"><time datetime="2015-09-26T00:00:00Z">Sep 26, 2015</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2015/09/13/interactive-analysis-of-bachs-das-wohltemperierte-klavier/">Interactive analysis of Bach&#39;s Das Wohltemperierte Klavier</a></h3>
-  <p class="post-meta"><time datetime="2015-09-13T00:00:00Z">Sep 13, 2015</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2015/09/12/linkdump-alpof/">Linkdump: alpof</a></h3>
-  <p class="post-meta"><time datetime="2015-09-12T00:00:00Z">Sep 12, 2015</time></p>
-</article>
-
-
-
-
-<ul class="pagination">
-  
     
-    <li class="previous"><a href="/archive/78/">previous page</a></li>
-  
 
-  
     
-    <li class="next"><a href="/archive/80/">next page</a></li>
-  
-</ul>
+  </header>
 
+  <div class="post-content" itemprop="articleBody">
+    
+<p>I like Fano 3-folds.
+I like them so much that I created <a href="https://fanography.info">Fanography</a>!
+<p>One thing which I found intriguing in the story
+one aspect of the details of the Mori&ndash;Mukai classification
+that is not often mentioned.
+Namely,
+at the <em>very end</em> of their <a href="https://www.kurims.kyoto-u.ac.jp/~mukai/paper/Fano1985.pdf">Classification of Fano threefolds with $\mathrm{b}_2\geq 2$, I</a>,
+in paragraph (7.33),
+they introduce an invariant
+that they need to distinguish between various Fano 3-folds
+with otherwise the same numerical invariants.
+<p>For instance,
+the families
+<a href="https://www.fanography.info/2-22">2.22</a> and
+<a href="https://www.fanography.info/2-24">2.24</a>
+have the same Hodge numbers and volume (the invariants that were most easily computed from their birational description),
+so, a priori, they could be the same family (or one a subfamily of the other).
+They needed a numerical deformation invariant to distinguish these families,
+and I found it frustrating that I could not find this invariant
+computed for <em>all</em> Fano 3-folds
+(Mori&ndash;Mukai only give it for the cases they need to distinguish),
+so that I could include it in Fanography.
+But this frustration is now gone!
+
+<h2>The invariant</h2>
+<p>For a smooth Fano 3-fold $X$ with $\operatorname{Pic}(X)$ of rank $\rho$ and a
+$\mathbb{Z}$-basis $D_1, \dots, D_\rho$, Mori and Mukai define</p>
+
+\[
+  d(X) = \det\bigl( -\mathrm{K}_X \cdot D_i \cdot D_j \bigr)_{1 \le i, j \le \rho}.
+\]
+
+<p>It is basis-independent and a deformation invariant,
+and its sign is $(-1)^{\rho-1}$.
+I like to call it the <em>Mori&ndash;Mukai determinant</em>.
+
+
+<h2>Computing it with OSCAR</h2>
+<p>Mori and Mukai give a lemma (their Lemma 7.34)
+which describes how to compute the determinant for a Fano 3-fold $Y$,
+if $Y=\mathop{\rm Bl}_CX$ or $Y=\mathop{\rm Bl}_pX$.
+However,
+I decided to have a little fun,
+and use <a href="https://docs.oscar-system.org/stable/Experimental/IntersectionTheory/intro/">IntersectionTheory in OSCAR</a>
+(see also my earlier post <a href="/blog/2026/03/17/intersectiontheory/">Intersection theory in OSCAR</a>).
+That way,
+I could test the package a bit more,
+and also use it to compute the determinant for primitive cases of higher Picard rank.
+<p>The code is in
+  <a href="https://github.com/pbelmans/FanoThreefoldMoriMukaiDeterminant.jl"><code>FanoThreefoldMoriMukaiDeterminant.jl</code></a>.
+It encodes all the primitive Fano 3-folds using IntersectionTheory
+(except for a few of Picard rank 1 where no construction is available,
+e.g., because they involve weighted projective spaces)
+and then encodes all the imprimitive ones as blowups.
+This is all data that was already in Fanography.
+
+<h2>Using it</h2>
+<p>Using the code is not very hard.
+It suffices to do
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-julia" data-lang="julia"><span class="line"><span class="cl"><span class="k">using</span> <span class="n">FanoThreefoldMoriMukaiDeterminant</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">mori_mukai_determinant</span><span class="p">(</span><span class="s">&#34;2-22&#34;</span><span class="p">)</span>   <span class="c"># d(X) for one family</span>
+</span></span><span class="line"><span class="cl"><span class="n">determinants</span><span class="p">()</span>                   <span class="c"># Dict id =&gt; d(X) for all 105 families</span></span></span></code></pre></div>
+<p>Julia has a high precompilation cost,
+if you disregard that,
+the computation itself finishes in 10 seconds or so on my machine
+(and I have not tried to improve it whatsoever).
+A <a href="https://github.com/pbelmans/FanoThreefoldMoriMukaiDeterminant.jl/actions/runs/28456124812">full CI run</a>,
+installing Julia and Oscar from scratch,
+took 15 minutes.
+
+
+<h2>All the values</h2>
+<p>For completeness, here is $d(X)$ for all 105 deformation families,
+organised by Picard rank $\rho$.
+The entry in row $k$ and column $\rho$ is the determinant of the family $\rho.k$
+(in Mori&ndash;Mukai's numbering, as used on <a href="https://www.fanography.info">Fanography</a>, with 4.13 the case missing from their classification).
+
+<style>
+.mmd-table {
+  overflow-x: auto;
+  margin: 1em 0;
+}
+.mmd-table table {
+  border-collapse: collapse;
+  line-height: 1.4;
+}
+.mmd-table th,
+.mmd-table td {
+  border: 1px solid #ddd;
+  padding: 0.25em 0.6em;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.mmd-table thead th {
+  text-align: center;
+  white-space: nowrap;
+}
+.mmd-table tbody th {
+  text-align: center;
+  font-weight: normal;
+  color: #888;
+}
+.mmd-table td:empty {
+  border: 0;
+}
+</style>
+
+<div class="mmd-table">
+<table>
+  <thead>
+    <tr><th>№</th><th>&rho; = 1</th><th>&rho; = 2</th><th>&rho; = 3</th><th>&rho; = 4</th><th>&rho; = 5</th><th>&rho; = 6</th><th>&rho; = 7</th><th>&rho; = 8</th><th>&rho; = 9</th><th>&rho; = 10</th></tr>
+  </thead>
+  <tbody>
+    <tr><th>1</th><td>2</td><td class="neg">-1</td><td>16</td><td class="neg">-48</td><td>56</td><td class="neg">-80</td><td>128</td><td class="neg">-192</td><td>256</td><td class="neg">-256</td></tr>
+    <tr><th>2</th><td>4</td><td class="neg">-4</td><td>16</td><td class="neg">-32</td><td>44</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>3</th><td>6</td><td class="neg">-4</td><td>28</td><td class="neg">-48</td><td>48</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>4</th><td>8</td><td class="neg">-9</td><td>24</td><td class="neg">-40</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>5</th><td>10</td><td class="neg">-9</td><td>28</td><td class="neg">-39</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>6</th><td>12</td><td class="neg">-12</td><td>32</td><td class="neg">-44</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>7</th><td>14</td><td class="neg">-16</td><td>36</td><td class="neg">-39</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>8</th><td>16</td><td class="neg">-8</td><td>34</td><td class="neg">-32</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>9</th><td>18</td><td class="neg">-17</td><td>12</td><td class="neg">-31</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>10</th><td>22</td><td class="neg">-16</td><td>40</td><td class="neg">-28</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>11</th><td>2</td><td class="neg">-13</td><td>28</td><td class="neg">-23</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>12</th><td>4</td><td class="neg">-20</td><td>36</td><td class="neg">-20</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>13</th><td>6</td><td class="neg">-24</td><td>40</td><td class="neg">-44</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>14</th><td>8</td><td class="neg">-25</td><td>18</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>15</th><td>10</td><td class="neg">-12</td><td>34</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>16</th><td>6</td><td class="neg">-20</td><td>30</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>17</th><td>4</td><td class="neg">-25</td><td>28</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>18</th><td></td><td class="neg">-16</td><td>26</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>19</th><td></td><td class="neg">-17</td><td>24</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>20</th><td></td><td class="neg">-29</td><td>28</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>21</th><td></td><td class="neg">-28</td><td>22</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>22</th><td></td><td class="neg">-24</td><td>18</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>23</th><td></td><td class="neg">-16</td><td>20</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>24</th><td></td><td class="neg">-21</td><td>22</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>25</th><td></td><td class="neg">-16</td><td>20</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>26</th><td></td><td class="neg">-21</td><td>18</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>27</th><td></td><td class="neg">-17</td><td>16</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>28</th><td></td><td class="neg">-9</td><td>16</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>29</th><td></td><td class="neg">-16</td><td>12</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>30</th><td></td><td class="neg">-12</td><td>14</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>31</th><td></td><td class="neg">-13</td><td>12</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>32</th><td></td><td class="neg">-12</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>33</th><td></td><td class="neg">-9</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>34</th><td></td><td class="neg">-9</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>35</th><td></td><td class="neg">-8</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>36</th><td></td><td class="neg">-5</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>The data will appear very soon on Fanography too!
+But that is for another blogpost,
+where I discuss some other changes and improvements to Fanography.
+
+  </div>
+
+  <ul class="pagination">
+    
+      <li class="previous"><a href="/blog/2026/05/29/verifying-kostants-conjecture/">previous post</a></li>
+    
+
+    
+      <li class="disabled next"><a href="#">next post</a></li>
+    
+  </ul>
+</article>
 
       </div>
     </div>

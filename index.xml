@@ -6,8 +6,15 @@
     <description>Recent content on Pieter Belmans</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 29 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://pbelmans.ncag.info/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Mori–Mukai determinant</title>
+      <link>https://pbelmans.ncag.info/blog/2026/07/01/mori-mukai-determinant/</link>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2026/07/01/mori-mukai-determinant/</guid>
+      <description>&lt;p&gt;I like Fano 3-folds.&#xA;I like them so much that I created &lt;a href=&#34;https://fanography.info&#34;&gt;Fanography&lt;/a&gt;!&#xA;&lt;p&gt;One thing which I found intriguing in the story&#xA;one aspect of the details of the Mori&amp;ndash;Mukai classification&#xA;that is not often mentioned.&#xA;Namely,&#xA;at the &lt;em&gt;very end&lt;/em&gt; of their &lt;a href=&#34;https://www.kurims.kyoto-u.ac.jp/~mukai/paper/Fano1985.pdf&#34;&gt;Classification of Fano threefolds with $\mathrm{b}_2\geq 2$, I&lt;/a&gt;,&#xA;in paragraph (7.33),&#xA;they introduce an invariant&#xA;that they need to distinguish between various Fano 3-folds&#xA;with otherwise the same numerical invariants.&#xA;&lt;p&gt;For instance,&#xA;the families&#xA;&lt;a href=&#34;https://www.fanography.info/2-22&#34;&gt;2.22&lt;/a&gt; and&#xA;&lt;a href=&#34;https://www.fanography.info/2-24&#34;&gt;2.24&lt;/a&gt;&#xA;have the same Hodge numbers and volume (the invariants that were most easily computed from their birational description),&#xA;so, a priori, they could be the same family (or one a subfamily of the other).&#xA;They needed a numerical deformation invariant to distinguish these families,&#xA;and I found it frustrating that I could not find this invariant&#xA;computed for &lt;em&gt;all&lt;/em&gt; Fano 3-folds&#xA;(Mori&amp;ndash;Mukai only give it for the cases they need to distinguish),&#xA;so that I could include it in Fanography.&#xA;But this frustration is now gone!&#xA;&#xA;&lt;h2&gt;The invariant&lt;/h2&gt;&#xA;&lt;p&gt;For a smooth Fano 3-fold $X$ with $\operatorname{Pic}(X)$ of rank $\rho$ and a&#xA;$\mathbb{Z}$-basis $D_1, \dots, D_\rho$, Mori and Mukai define&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Verifying Kostant&#39;s conjecture using Semisimple.jl</title>
       <link>https://pbelmans.ncag.info/blog/2026/05/29/verifying-kostants-conjecture/</link>
