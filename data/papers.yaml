@@ -18,6 +18,13 @@ accepted:
     journal: accepted for publication in Mathematical Research Letters
     comment: 'see also the related repository <a href="https://github.com/pbelmans/bott-non-vanishing"><span style="font-family: monospace">bott-non-vanishing</span></a>'
 
+  - title: Hochschild cohomology of Hilbert schemes of points on surfaces
+    coauthors:
+      - fu
+      - krug
+    arxiv: "2309.06244"
+    journal: accepted for publication in Crelle
+
 
 published:
   - title: Embeddings of algebras in derived categories of surfaces
@@ -314,11 +321,6 @@ preprints:
       - ricolfi
     arxiv: "2002.03303"
 
-  - title: Hochschild cohomology of Hilbert schemes of points on surfaces
-    coauthors:
-      - fu
-      - krug
-    arxiv: "2309.06244"
   - title: Deformation theory for a morphism in the derived category with fixed lift of the codomain
     coauthors:
       - lowen
