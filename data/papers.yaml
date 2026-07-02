@@ -18,6 +18,14 @@ accepted:
     journal: accepted for publication in Mathematical Research Letters
     comment: 'see also the related repository <a href="https://github.com/pbelmans/bott-non-vanishing"><span style="font-family: monospace">bott-non-vanishing</span></a>'
 
+  - title: Deformation theory for a morphism in the derived category with fixed lift of the codomain
+    coauthors:
+      - lowen
+      - okawa
+      - ricolfi
+    arxiv: "2511.10312"
+    journal: accepted for publication in IMRN
+
   - title: Hochschild cohomology of Hilbert schemes of points on surfaces
     coauthors:
       - fu
@@ -320,13 +328,6 @@ preprints:
       - okawa
       - ricolfi
     arxiv: "2002.03303"
-
-  - title: Deformation theory for a morphism in the derived category with fixed lift of the codomain
-    coauthors:
-      - lowen
-      - okawa
-      - ricolfi
-    arxiv: "2511.10312"
 
   - title: Brauer groups of resolved quiver moduli via gerbes
     coauthors:
