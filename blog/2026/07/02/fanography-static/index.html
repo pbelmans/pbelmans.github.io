@@ -7,13 +7,13 @@
 
   <link rel="icon" type="image/png" href="/favicon.png" size="256x256">
 
-  <title>Pieter Belmans&mdash;Archive</title>
-  
+  <title>Pieter Belmans&mdash;Fanography is now a static website (and other improvements)</title>
+  <meta name="description" content="Almost eight years ago I launched Fanography. It has just received its biggest technical overhaul since then: fanography.info is now a static website, generated …">
 
   
   <link rel="stylesheet" href="/css/main.css">
 
-  <link rel="canonical" href="https://pbelmans.ncag.info/archive/">
+  <link rel="canonical" href="https://pbelmans.ncag.info/blog/2026/07/02/fanography-static/">
   <link rel="alternate" type="application/rss+xml" title="Pieter Belmans" href="https://pbelmans.ncag.info/blog/feed/">
 
   <script>
@@ -65,53 +65,115 @@ window.MathJax = {
     <div class="page-content">
       <div class="wrapper">
         
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Fanography is now a static website (and other improvements)</h1>
 
+    <p class="post-meta">
+      <time datetime="2026-07-02T00:00:00Z" itemprop="datePublished">Jul 2, 2026</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Pieter Belmans</span></span>
+    </p>
 
-
-  <article>
-  <h3><a href="/blog/2017/02/19/fortnightly-links-30/">Fortnightly links (30)</a></h3>
-  <p class="post-meta"><time datetime="2017-02-19T00:00:00Z">Feb 19, 2017</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2017/02/05/fortnightly-links-29/">Fortnightly links (29)</a></h3>
-  <p class="post-meta"><time datetime="2017-02-05T00:00:00Z">Feb 5, 2017</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2017/01/25/registration-stacks-project-workshop/">One week left to register for the Stacks project workshop</a></h3>
-  <p class="post-meta"><time datetime="2017-01-25T00:00:00Z">Jan 25, 2017</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2017/01/22/fortnightly-links-28/">Fortnightly links (28)</a></h3>
-  <p class="post-meta"><time datetime="2017-01-22T00:00:00Z">Jan 22, 2017</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2017/01/08/fortnightly-links-27/">Fortnightly links (27)</a></h3>
-  <p class="post-meta"><time datetime="2017-01-08T00:00:00Z">Jan 8, 2017</time></p>
-</article>
-
-
-
-
-<ul class="pagination">
-  
     
-    <li class="previous"><a href="/archive/63/">previous page</a></li>
-  
-
-  
     
-    <li class="next"><a href="/archive/65/">next page</a></li>
-  
+    <div class="post-meta">
+      posted in:
+      <ul class="categories-list">
+        
+          <li><a href="/blog/categories#mathematics">mathematics</a></li>
+        
+      </ul>
+    </div>
+    
+
+    
+    
+    <div class="post-meta">
+      tags:
+      <ul class="tags-list">
+        
+          <li><a href="/blog/tags#algebraic-geometry">algebraic geometry</a>, </li>
+        
+          <li><a href="/blog/tags#programming">programming</a>, </li>
+        
+          <li><a href="/blog/tags#Fano-3-folds">Fano 3-folds</a></li>
+        
+      </ul>
+    </div>
+    
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    
+<p>Almost eight years ago I launched
+<a href="/blog/2018/10/15/fanography/">Fanography</a>.
+It has just received its biggest <em>technical</em> overhaul since then:
+<a href="https://www.fanography.info">fanography.info</a>
+is now a <em>static</em> website, generated with
+<a href="https://gohugo.io">Hugo</a> and served from GitHub Pages.
+
+<h2>From Flask to Hugo</h2>
+<p>Before, Fanography was a <a href="https://flask.palletsprojects.com">Flask</a> application:
+a little Python server that assembled each page on the fly from the underlying classification data.
+That worked well, but it meant there was always a server that needed to keep running,
+be kept up to date, and be paid for in one way or another.
+So I rebuilt it from scratch with Hugo:
+<p>The old Flask application has been retired.
+As with <a href="/blog/2026/05/05/moving-from-jekyll-to-hugo/">moving my own website to Hugo</a>,
+the migration should be invisible to visitors&mdash;please let me know if something broke!
+
+<h2>New information on Fanography</h2>
+<p>Whilst I was busy with Fanography,
+I decided to add a bit of data that I've wanted to be there for a long time.
+
+<dl>
+  <dt>The Mori&ndash;Mukai determinant</dt>
+  <dd>Each entry page now displays the Mori&ndash;Mukai determinant $d(X)$,
+  and it is included for <em>all</em> 105 families.
+  I wrote about this invariant, and how I computed it for every family, in a
+  <a href="/blog/2026/07/01/mori-mukai-determinant/">separate blogpost</a>.</dd>
+
+  <dt>Holomorphic Poisson structures</dt>
+  <dd>There is a new card recording the holomorphic Poisson structures on $X$,
+  that is, the global sections $\pi$ of $\wedge^2\mathrm{T}_X$
+  for which the Schouten&ndash;Nijenhuis bracket with itself vanishes,
+  i.e., $[\pi,\pi]_{\mathrm{NS}}=0$.
+  For Fano 3-folds of Picard rank 1 these were classified by
+  Loray&ndash;Pereira&ndash;Touzet,
+  and the card lists the irreducible components of
+  $\mathbb{P}\mathrm{H}^0(X,\wedge^2\mathrm{T}_X)$
+  together with their dimensions.
+  For higher Picard rank the classification is, as far as I know, still open.
+  This sounds like a fun challenge!</dd>
+</dl>
+
+<h2>Other improvements</h2>
+<p>A small quality-of-life improvement: you can now use the
+left and right arrow keys to move between consecutive families,
+which makes browsing the classification in order much more pleasant.
+<p>A handful of smaller additions came along for the ride:
+<ul>
+  <li>several rank-1 Fano 3-folds are now referred to by name;
+  <li>del Pezzo surface pages show the number of exceptional lines,
+  and their polyvector parallelogram.
 </ul>
+<p>Maybe more updates to come soon!
+<p>Oh, and <a href="https://hyperkaeher.info">hyperkaehler.info</a>
+is now also a static website!
+But that one didn't get any improvements,
+so no separate blogpost.
 
+  </div>
+
+  <ul class="pagination">
+    
+      <li class="previous"><a href="/blog/2026/07/01/mori-mukai-determinant/">previous post</a></li>
+    
+
+    
+      <li class="disabled next"><a href="#">next post</a></li>
+    
+  </ul>
+</article>
 
       </div>
     </div>

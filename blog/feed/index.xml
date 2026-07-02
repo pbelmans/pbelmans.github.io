@@ -5,9 +5,77 @@
     <description></description>
     <link>https://pbelmans.ncag.info/</link>
     <atom:link href="https://pbelmans.ncag.info/blog/feed/" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 01 Jul 2026 07:22:35 &#43;0000</pubDate>
-    <lastBuildDate>Wed, 01 Jul 2026 07:22:35 &#43;0000</lastBuildDate>
+    <pubDate>Thu, 02 Jul 2026 12:30:38 &#43;0000</pubDate>
+    <lastBuildDate>Thu, 02 Jul 2026 12:30:38 &#43;0000</lastBuildDate>
     <generator>Hugo</generator>
+    
+    <item>
+      <title>Fanography is now a static website (and other improvements)</title>
+      <description>
+&lt;p&gt;Almost eight years ago I launched
+&lt;a href=&#34;https://pbelmans.ncag.info/blog/2018/10/15/fanography/&#34;&gt;Fanography&lt;/a&gt;.
+It has just received its biggest &lt;em&gt;technical&lt;/em&gt; overhaul since then:
+&lt;a href=&#34;https://www.fanography.info&#34;&gt;fanography.info&lt;/a&gt;
+is now a &lt;em&gt;static&lt;/em&gt; website, generated with
+&lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; and served from GitHub Pages.
+
+&lt;h2&gt;From Flask to Hugo&lt;/h2&gt;
+&lt;p&gt;Before, Fanography was a &lt;a href=&#34;https://flask.palletsprojects.com&#34;&gt;Flask&lt;/a&gt; application:
+a little Python server that assembled each page on the fly from the underlying classification data.
+That worked well, but it meant there was always a server that needed to keep running,
+be kept up to date, and be paid for in one way or another.
+So I rebuilt it from scratch with Hugo:
+&lt;p&gt;The old Flask application has been retired.
+As with &lt;a href=&#34;https://pbelmans.ncag.info/blog/2026/05/05/moving-from-jekyll-to-hugo/&#34;&gt;moving my own website to Hugo&lt;/a&gt;,
+the migration should be invisible to visitors&amp;mdash;please let me know if something broke!
+
+&lt;h2&gt;New information on Fanography&lt;/h2&gt;
+&lt;p&gt;Whilst I was busy with Fanography,
+I decided to add a bit of data that I&#39;ve wanted to be there for a long time.
+
+&lt;dl&gt;
+  &lt;dt&gt;The Mori&amp;ndash;Mukai determinant&lt;/dt&gt;
+  &lt;dd&gt;Each entry page now displays the Mori&amp;ndash;Mukai determinant $d(X)$,
+  and it is included for &lt;em&gt;all&lt;/em&gt; 105 families.
+  I wrote about this invariant, and how I computed it for every family, in a
+  &lt;a href=&#34;https://pbelmans.ncag.info/blog/2026/07/01/mori-mukai-determinant/&#34;&gt;separate blogpost&lt;/a&gt;.&lt;/dd&gt;
+
+  &lt;dt&gt;Holomorphic Poisson structures&lt;/dt&gt;
+  &lt;dd&gt;There is a new card recording the holomorphic Poisson structures on $X$,
+  that is, the global sections $\pi$ of $\wedge^2\mathrm{T}_X$
+  for which the Schouten&amp;ndash;Nijenhuis bracket with itself vanishes,
+  i.e., $[\pi,\pi]_{\mathrm{NS}}=0$.
+  For Fano 3-folds of Picard rank 1 these were classified by
+  Loray&amp;ndash;Pereira&amp;ndash;Touzet,
+  and the card lists the irreducible components of
+  $\mathbb{P}\mathrm{H}^0(X,\wedge^2\mathrm{T}_X)$
+  together with their dimensions.
+  For higher Picard rank the classification is, as far as I know, still open.
+  This sounds like a fun challenge!&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;h2&gt;Other improvements&lt;/h2&gt;
+&lt;p&gt;A small quality-of-life improvement: you can now use the
+left and right arrow keys to move between consecutive families,
+which makes browsing the classification in order much more pleasant.
+&lt;p&gt;A handful of smaller additions came along for the ride:
+&lt;ul&gt;
+  &lt;li&gt;several rank-1 Fano 3-folds are now referred to by name;
+  &lt;li&gt;del Pezzo surface pages show the number of exceptional lines,
+  and their polyvector parallelogram.
+&lt;/ul&gt;
+&lt;p&gt;Maybe more updates to come soon!
+&lt;p&gt;Oh, and &lt;a href=&#34;https://hyperkaeher.info&#34;&gt;hyperkaehler.info&lt;/a&gt;
+is now also a static website!
+But that one didn&#39;t get any improvements,
+so no separate blogpost.
+</description>
+      <pubDate>Thu, 02 Jul 2026 00:00:00 &#43;0000</pubDate>
+      <link>https://pbelmans.ncag.info/blog/2026/07/02/fanography-static/</link>
+      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/07/02/fanography-static/</guid>
+      <category>algebraic geometry</category><category>programming</category><category>Fano 3-folds</category>
+      <category>mathematics</category>
+    </item>
     
     <item>
       <title>The Mori–Mukai determinant</title>
@@ -417,23 +485,6 @@ If you have any questions, please get in touch!&lt;/p&gt;
       <pubDate>Thu, 05 Feb 2026 00:00:00 &#43;0000</pubDate>
       <link>https://pbelmans.ncag.info/blog/2026/02/05/postdoc-hilbertmovies/</link>
       <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/02/05/postdoc-hilbertmovies/</guid>
-      
-      <category>mathematics</category>
-    </item>
-    
-    <item>
-      <title>An assistant professorship at Utrecht University</title>
-      <description>
-&lt;p&gt;The previous such post is only a few months old,
-but here is another position!&lt;/p&gt;
-&lt;p&gt;Utrecht University is hiring an &lt;a href=&#34;https://www.uu.nl/en/organisation/working-at-utrecht-university/jobs/assistant-professor-in-pure-mathematics&#34;&gt;&lt;strong&gt;assistant professor in pure mathematics&lt;/strong&gt;&lt;/a&gt;, not tied to specific area.
-I can attest it is a great place to work, so if you fit the (broad) profile, and would like to work at Utrecht University,
-please consider applying!&lt;/p&gt;
-&lt;p&gt;If you have questions, you can ask me, or in case of more official questions, the head of the committee, which is &lt;a href=&#34;https://sites.google.com/site/gijsheuts/home&#34;&gt;Gijs Heuts&lt;/a&gt;.&lt;/p&gt;
-</description>
-      <pubDate>Tue, 03 Feb 2026 00:00:00 &#43;0000</pubDate>
-      <link>https://pbelmans.ncag.info/blog/2026/02/03/ud-utrecht-2/</link>
-      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/02/03/ud-utrecht-2/</guid>
       
       <category>mathematics</category>
     </item>
