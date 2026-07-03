@@ -6,8 +6,15 @@
     <description>Recent content in blog on Pieter Belmans</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 02 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://pbelmans.ncag.info/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Congratulations Dr. Gianni Petrella!</title>
+      <link>https://pbelmans.ncag.info/blog/2026/07/03/gianni-petrella/</link>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2026/07/03/gianni-petrella/</guid>
+      <description>&lt;p&gt;I want to congratulate&#xA;&lt;a href=&#34;https://www.giannipetrella.eu&#34;&gt;Gianni Petrella&lt;/a&gt;,&#xA;for his PhD defense today&#xA;at the University of Luxembourg,&#xA;and the wonderful thesis &lt;em&gt;Windows, walls and invariants of quiver moduli&lt;/em&gt;&#xA;that he has written.&#xA;The thesis will be available online at some point,&#xA;but you can also check out the papers it builds on:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2311.17003&#34;&gt;Rigidity and Schofield&#39;s partial tilting conjecture for quiver moduli&lt;/a&gt;,&#xA;    a joint paper with Ana-Maria Brecan, Hans Franzen, Markus Reineke, and myself,&#xA;    published in the Journal de l&#39;&amp;Eacute;cole Polytechnique&lt;/li&gt;&#xA;  &lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2411.15125&#34;&gt;Partial semiorthogonal decompositions for quiver moduli&lt;/a&gt;,&#xA;    his solo paper,&#xA;    published in the Journal of Symbolic Computation&lt;/li&gt;&#xA;  &lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2506.20568&#34;&gt;Finding the walls for quiver moduli&lt;/a&gt;,&#xA;    a joint paper with Hans Franzen and Rachel Webb,&#xA;    published in the Journal of Pure and Applied Algebra&lt;/li&gt;&#xA;  &lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2506.19432&#34;&gt;The QuiverTools package for SageMath and Julia&lt;/a&gt;,&#xA;    a joint paper with Hans Franzen and myself,&#xA;    published in the Journal of Software for Algebra and Geometry&lt;/li&gt;&#xA;  &lt;li&gt;Brauer groups of resolved quiver moduli via gerbes,&#xA;    a joint paper with Sebastian Torres and myself,&#xA;    which will appear on the arXiv very soon&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Gianni was my PhD student&#xA;(although FNR regulations prevented an official recognition of this fact)&#xA;and I have greatly enjoyed our mathematical conversations.&#xA;I look forward to our future ones,&#xA;as he will take up a postdoc at the University of Amsterdam,&#xA;working with &lt;a href=&#34;https://algebra.hopto.org/wis/website/&#34;&gt;Raf Bocklandt&lt;/a&gt;.&#xA;Congratulations!&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Fanography is now a static website (and other improvements)</title>
       <link>https://pbelmans.ncag.info/blog/2026/07/02/fanography-static/</link>

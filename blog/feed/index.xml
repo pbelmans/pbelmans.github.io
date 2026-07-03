@@ -5,9 +5,52 @@
     <description></description>
     <link>https://pbelmans.ncag.info/</link>
     <atom:link href="https://pbelmans.ncag.info/blog/feed/" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 02 Jul 2026 12:30:38 &#43;0000</pubDate>
-    <lastBuildDate>Thu, 02 Jul 2026 12:30:38 &#43;0000</lastBuildDate>
+    <pubDate>Fri, 03 Jul 2026 12:40:08 &#43;0000</pubDate>
+    <lastBuildDate>Fri, 03 Jul 2026 12:40:08 &#43;0000</lastBuildDate>
     <generator>Hugo</generator>
+    
+    <item>
+      <title>Congratulations Dr. Gianni Petrella!</title>
+      <description>
+&lt;p&gt;I want to congratulate
+&lt;a href=&#34;https://www.giannipetrella.eu&#34;&gt;Gianni Petrella&lt;/a&gt;,
+for his PhD defense today
+at the University of Luxembourg,
+and the wonderful thesis &lt;em&gt;Windows, walls and invariants of quiver moduli&lt;/em&gt;
+that he has written.
+The thesis will be available online at some point,
+but you can also check out the papers it builds on:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2311.17003&#34;&gt;Rigidity and Schofield&#39;s partial tilting conjecture for quiver moduli&lt;/a&gt;,
+    a joint paper with Ana-Maria Brecan, Hans Franzen, Markus Reineke, and myself,
+    published in the Journal de l&#39;&amp;Eacute;cole Polytechnique&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2411.15125&#34;&gt;Partial semiorthogonal decompositions for quiver moduli&lt;/a&gt;,
+    his solo paper,
+    published in the Journal of Symbolic Computation&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2506.20568&#34;&gt;Finding the walls for quiver moduli&lt;/a&gt;,
+    a joint paper with Hans Franzen and Rachel Webb,
+    published in the Journal of Pure and Applied Algebra&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2506.19432&#34;&gt;The QuiverTools package for SageMath and Julia&lt;/a&gt;,
+    a joint paper with Hans Franzen and myself,
+    published in the Journal of Software for Algebra and Geometry&lt;/li&gt;
+  &lt;li&gt;Brauer groups of resolved quiver moduli via gerbes,
+    a joint paper with Sebastian Torres and myself,
+    which will appear on the arXiv very soon&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Gianni was my PhD student
+(although FNR regulations prevented an official recognition of this fact)
+and I have greatly enjoyed our mathematical conversations.
+I look forward to our future ones,
+as he will take up a postdoc at the University of Amsterdam,
+working with &lt;a href=&#34;https://algebra.hopto.org/wis/website/&#34;&gt;Raf Bocklandt&lt;/a&gt;.
+Congratulations!&lt;/p&gt;
+</description>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 &#43;0000</pubDate>
+      <link>https://pbelmans.ncag.info/blog/2026/07/03/gianni-petrella/</link>
+      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/07/03/gianni-petrella/</guid>
+      
+      <category>mathematics</category>
+    </item>
     
     <item>
       <title>Fanography is now a static website (and other improvements)</title>
@@ -450,41 +493,6 @@ but I&#39;ve come to realize that it is also good to actually publicly welcome t
       <pubDate>Fri, 06 Feb 2026 00:00:00 &#43;0000</pubDate>
       <link>https://pbelmans.ncag.info/blog/2026/02/06/welcome-new-team-members/</link>
       <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/02/06/welcome-new-team-members/</guid>
-      
-      <category>mathematics</category>
-    </item>
-    
-    <item>
-      <title>Postdoc position in algebraic geometry</title>
-      <description>
-&lt;p&gt;I am excited to announce
-&lt;a href=&#34;https://www.uu.nl/en/organisation/working-at-utrecht-university/jobs/postdoc-position-in-algebraic-geometry&#34;&gt;
-  a postdoc position in algebraic geometry
-&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The summary:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;starting date is &lt;strong&gt;October 1 2026&lt;/strong&gt; (or as soon as possible thereafter)&lt;/li&gt;
-  &lt;li&gt;it is for 3 years (with a 1-year probation)&lt;/li&gt;
-  &lt;li&gt;the focus is (derived categories of) Hilbert schemes of points on surfaces,
-    so some experience with these or topics closely related to it
-    is required&lt;/li&gt;
-  &lt;li&gt;it is part of a &lt;a href=&#34;https://pbelmans.ncag.info/projects/hilbertmovies&#34;&gt;joint grant&lt;/a&gt;
-    between &lt;a href=&#34;https://sites.google.com/site/andkrugmath/&#34;&gt;Andreas Krug&lt;/a&gt;
-    and myself, and regular visits to Hannover are anticipated&lt;/li&gt;
-  &lt;li&gt;we will start reviewing and interviewing candidates after the application deadline of &lt;strong&gt;February 22&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;There is a really active research group on algebraic geometry in Utrecht,
-and the Netherlands is a great place in general for algebraic geometry, with many interesting activities.&lt;/p&gt;
-
-&lt;p&gt;The position is funded by the &lt;a href=&#34;https://nwo.nl&#34;&gt;NWO&lt;/a&gt;,
-through the &lt;a href=&#34;https://pbelmans.ncag.info/projects/hilbertmovies&#34;&gt;NWO+DFG Weave project HilbertMoVieS&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;All information on how to apply can be found on the Utrecht University job portal.
-If you have any questions, please get in touch!&lt;/p&gt;
-</description>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 &#43;0000</pubDate>
-      <link>https://pbelmans.ncag.info/blog/2026/02/05/postdoc-hilbertmovies/</link>
-      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/02/05/postdoc-hilbertmovies/</guid>
       
       <category>mathematics</category>
     </item>
