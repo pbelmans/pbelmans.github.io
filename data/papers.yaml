@@ -24,6 +24,7 @@ accepted:
       - okawa
       - ricolfi
     arxiv: "2511.10312"
+    doi: "10.1093/imrn/rnag162"
     journal: accepted for publication in IMRN
 
   - title: Hochschild cohomology of Hilbert schemes of points on surfaces
@@ -32,6 +33,7 @@ accepted:
       - krug
     arxiv: "2309.06244"
     journal: accepted for publication in Crelle
+    doi: "10.1515/crelle-2026-0065"
 
 
 published:
