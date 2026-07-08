@@ -6,8 +6,15 @@
     <description>Recent content in Algebraic Geometry on Pieter Belmans</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 02 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://pbelmans.ncag.info/tags/algebraic-geometry/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New paper: Brauer groups of resolved quiver moduli via gerbes</title>
+      <link>https://pbelmans.ncag.info/blog/2026/07/08/new-paper-brauer-groups-gerbes/</link>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2026/07/08/new-paper-brauer-groups-gerbes/</guid>
+      <description>&lt;p&gt;I&#39;m happy to announce a new paper,&#xA;&lt;a href=&#34;https://arxiv.org/abs/2607.06164&#34;&gt;&lt;strong&gt;Brauer groups of resolved quiver moduli via gerbes&lt;/strong&gt;&lt;/a&gt;,&#xA;joint with &lt;a href=&#34;https://www.giannipetrella.eu&#34;&gt;Gianni Petrella&lt;/a&gt;&#xA;and &lt;a href=&#34;https://sites.google.com/view/storresk&#34;&gt;Sebastian Torres&lt;/a&gt;.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;In this paper we give a new and very different proof of an old result due to Le Bruyn and Schofield&#xA;(two mathematicians I admire greatly!),&#xA;by translating a proof (due to Biswas&amp;ndash;Hogadi&amp;ndash;Holla)&#xA;in the context of moduli of vector bundles on curves&#xA;to that of quiver moduli.&#xA;It is no secret that the &lt;em&gt;quiver-curve dictionary&lt;/em&gt;&#xA;is a favourite topic of mine,&#xA;and this paper can be seen as a contribution to this dictionary.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Fanography is now a static website (and other improvements)</title>
       <link>https://pbelmans.ncag.info/blog/2026/07/02/fanography-static/</link>

@@ -3,22 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://pbelmans.ncag.info/</loc>
-    <lastmod>2026-07-03T00:00:00+00:00</lastmod>
+    <lastmod>2026-07-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://pbelmans.ncag.info/tags/algebraic-geometry/</loc>
+    <lastmod>2026-07-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://pbelmans.ncag.info/blog/</loc>
-    <lastmod>2026-07-03T00:00:00+00:00</lastmod>
+    <lastmod>2026-07-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://pbelmans.ncag.info/categories/</loc>
-    <lastmod>2026-07-03T00:00:00+00:00</lastmod>
+    <lastmod>2026-07-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://pbelmans.ncag.info/categories/mathematics/</loc>
+    <lastmod>2026-07-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://pbelmans.ncag.info/blog/2026/07/08/new-paper-brauer-groups-gerbes/</loc>
+    <lastmod>2026-07-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://pbelmans.ncag.info/tags/</loc>
+    <lastmod>2026-07-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://pbelmans.ncag.info/blog/2026/07/03/gianni-petrella/</loc>
     <lastmod>2026-07-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://pbelmans.ncag.info/categories/mathematics/</loc>
-    <lastmod>2026-07-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://pbelmans.ncag.info/tags/algebraic-geometry/</loc>
-    <lastmod>2026-07-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://pbelmans.ncag.info/tags/Fano-3-folds/</loc>
     <lastmod>2026-07-02T00:00:00+00:00</lastmod>
@@ -27,9 +33,6 @@
     <lastmod>2026-07-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://pbelmans.ncag.info/tags/programming/</loc>
-    <lastmod>2026-07-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://pbelmans.ncag.info/tags/</loc>
     <lastmod>2026-07-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://pbelmans.ncag.info/blog/2026/07/01/mori-mukai-determinant/</loc>
