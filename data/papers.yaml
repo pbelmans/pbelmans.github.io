@@ -335,6 +335,7 @@ preprints:
     coauthors:
       - petrella
       - torres
+    arxiv: "2607.06164"
 
   - title: Can you hear the shape of a high-dimensional random walk?
     coauthors:
