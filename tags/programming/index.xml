@@ -6,8 +6,15 @@
     <description>Recent content in Programming on Pieter Belmans</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 02 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://pbelmans.ncag.info/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DOIs for my websites</title>
+      <link>https://pbelmans.ncag.info/blog/2026/07/10/dois-for-my-websites/</link>
+      <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2026/07/10/dois-for-my-websites/</guid>
+      <description>&lt;p&gt;Some quick housekeeping: several of my websites now have a&#xA;&lt;a href=&#34;https://zenodo.org&#34;&gt;Zenodo&lt;/a&gt; DOI, so they are easier to cite.&#xA;This currently covers&#xA;&lt;a href=&#34;https://fanography.info&#34;&gt;fanography.info&lt;/a&gt;,&#xA;&lt;a href=&#34;https://grassmannian.info&#34;&gt;grassmannian.info&lt;/a&gt;,&#xA;&lt;a href=&#34;https://hyperkaehler.info&#34;&gt;hyperkaehler.info&lt;/a&gt; and&#xA;&lt;a href=&#34;https://mgnbar.info&#34;&gt;mgnbar.info&lt;/a&gt;,&#xA;with more to follow.&#xA;Each site&#39;s &#34;how to cite&#34; section now lists the DOI,&#xA;and I use the version-independent one, so it always resolves to the latest release.&#xA;&#xA;&lt;p&gt;If you use any of these in your work, please do cite them:&#xA;it helps me explain to the people who fund my work that building these things is useful.</description>
+    </item>
     <item>
       <title>Fanography is now a static website (and other improvements)</title>
       <link>https://pbelmans.ncag.info/blog/2026/07/02/fanography-static/</link>

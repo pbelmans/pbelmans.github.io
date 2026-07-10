@@ -5,9 +5,33 @@
     <description></description>
     <link>https://pbelmans.ncag.info/</link>
     <atom:link href="https://pbelmans.ncag.info/blog/feed/" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 09 Jul 2026 07:25:29 &#43;0000</pubDate>
-    <lastBuildDate>Thu, 09 Jul 2026 07:25:29 &#43;0000</lastBuildDate>
+    <pubDate>Fri, 10 Jul 2026 13:36:28 &#43;0000</pubDate>
+    <lastBuildDate>Fri, 10 Jul 2026 13:36:28 &#43;0000</lastBuildDate>
     <generator>Hugo</generator>
+    
+    <item>
+      <title>DOIs for my websites</title>
+      <description>
+&lt;p&gt;Some quick housekeeping: several of my websites now have a
+&lt;a href=&#34;https://zenodo.org&#34;&gt;Zenodo&lt;/a&gt; DOI, so they are easier to cite.
+This currently covers
+&lt;a href=&#34;https://fanography.info&#34;&gt;fanography.info&lt;/a&gt;,
+&lt;a href=&#34;https://grassmannian.info&#34;&gt;grassmannian.info&lt;/a&gt;,
+&lt;a href=&#34;https://hyperkaehler.info&#34;&gt;hyperkaehler.info&lt;/a&gt; and
+&lt;a href=&#34;https://mgnbar.info&#34;&gt;mgnbar.info&lt;/a&gt;,
+with more to follow.
+Each site&#39;s &#34;how to cite&#34; section now lists the DOI,
+and I use the version-independent one, so it always resolves to the latest release.
+
+&lt;p&gt;If you use any of these in your work, please do cite them:
+it helps me explain to the people who fund my work that building these things is useful.
+</description>
+      <pubDate>Fri, 10 Jul 2026 00:00:00 &#43;0000</pubDate>
+      <link>https://pbelmans.ncag.info/blog/2026/07/10/dois-for-my-websites/</link>
+      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/07/10/dois-for-my-websites/</guid>
+      <category>programming</category>
+      <category>mathematics</category>
+    </item>
     
     <item>
       <title>Mgnbar.info: two new layers</title>
@@ -483,48 +507,6 @@ but&lt;/p&gt;
       <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/05/05/moving-from-jekyll-to-hugo/</guid>
       
       <category>meta</category>
-    </item>
-    
-    <item>
-      <title>Intersection theory in OSCAR</title>
-      <description>
-&lt;p&gt;5 years ago, Jieao Song wrote
-&lt;a href=&#34;https://github.com/jieaosong/IntersectionTheory&#34;&gt;a really nice intersection theory package&lt;/a&gt; in Julia,
-my new favourite programming language.
-It is similar to the famous &lt;a href=&#34;https://macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/Schubert2/html/index.html&#34;&gt;Schubert2&lt;/a&gt; package
-in Macaulay2,
-and other, lesser-known packages,
-like &lt;a href=&#34;https://www.math.sciences.univ-nantes.fr/~sorger/en/chow/&#34;&gt;Chow&lt;/a&gt; for SageMath.
-It is extremely efficient (being significantly faster than Schubert2).&lt;/p&gt;
-&lt;p&gt;One plan that had been around for almost 5 years
-&lt;a href=&#34;https://github.com/jieaosong/IntersectionTheory/issues/4&#34;&gt;was to integrate it into OSCAR&lt;/a&gt;,
-the Julia analogue of what SageMath is in Python,
-so that it becomes part of a stable ecosystem.&lt;/p&gt;
-&lt;p&gt;I&#39;m happy to say that &lt;a href=&#34;https://github.com/oscar-system/Oscar.jl/pull/5865/changes&#34;&gt;&lt;strong&gt;this integration is now done&lt;/strong&gt;&lt;/a&gt;!
-This was a joint effort of &lt;a href=&#34;https://math.rptu.de/en/decker&#34;&gt;Wolfram Decker&lt;/a&gt; and myself.
-I want to thank Wolfram for the great help (and patience).
-Aside from simply integrating the infrastructure,
-we have added lots of documentation, examples, tests, and some minor features.
-That said, it cannot be overstated how great the foundation laid by Jieao was.
-I feel like standing on the shoulder of a giant here, and I hope that this will be a great tool for many people in the future.&lt;/p&gt;
-&lt;p&gt;It is not yet in the latest version (which is 1.7.0 at the time of writing) of OSCAR,
-but you can use the &lt;a href=&#34;https://docs.oscar-system.org/dev/DeveloperDocumentation/new_developers/&#34;&gt;development version per these instructions&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;If you want to see what it is capable of,
-see &lt;a href=&#34;https://docs.oscar-system.org/dev/Experimental/IntersectionTheory/intro/&#34;&gt;the documentation&lt;/a&gt;
-(which for now still refers to the development branch; in the latest branch it is still the older version),
-e.g., check out:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&#34;https://docs.oscar-system.org/dev/Experimental/IntersectionTheory/AbstractVarieties/&#34;&gt;the different constructions and properties&lt;/a&gt;, or&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&#34;https://docs.oscar-system.org/dev/Experimental/IntersectionTheory/examples/&#34;&gt;one of the many examples&lt;/a&gt; it can work with.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;It is still in the experimental phase,
-and we are eager to hear your feedback and comments!&lt;/p&gt;
-</description>
-      <pubDate>Tue, 17 Mar 2026 00:00:00 &#43;0000</pubDate>
-      <link>https://pbelmans.ncag.info/blog/2026/03/17/intersectiontheory/</link>
-      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/03/17/intersectiontheory/</guid>
-      <category>algebraic geometry</category><category>programming</category>
-      <category>mathematics</category>
     </item>
     
   </channel>
