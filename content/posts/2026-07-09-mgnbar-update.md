@@ -2,6 +2,11 @@
 title: "Mgnbar.info: two new layers"
 slug: mgnbar-update
 date: 2026-07-09
+tags:
+- moduli spaces
+- programming
+categories:
+- mathematics
 ---
 
 Back [in 2023](/blog/2023/02/01/mgnbar-info/), together with

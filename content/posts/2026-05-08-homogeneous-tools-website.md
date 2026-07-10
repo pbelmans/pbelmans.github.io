@@ -1,6 +1,11 @@
 ---
 title: "HomogeneousTools website"
 date: 2026-05-08
+tags:
+- programming
+- homogeneous varieties
+categories:
+- mathematics
 ---
 
 Together with Javier Fernández Píriz,
