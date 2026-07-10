@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hyperkähler Geometry on Pieter Belmans</title>
+    <link>https://pbelmans.ncag.info/tags/hyperk%C3%A4hler-geometry/</link>
+    <description>Recent content in Hyperkähler Geometry on Pieter Belmans</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 09 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://pbelmans.ncag.info/tags/hyperk%C3%A4hler-geometry/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hyperkaehler.info: an update</title>
+      <link>https://pbelmans.ncag.info/blog/2026/03/09/hyperkaehler-update/</link>
+      <pubDate>Mon, 09 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2026/03/09/hyperkaehler-update/</guid>
+      <description>&lt;p&gt;Last week I updated &lt;a href=&#34;https://hyperkaehler.info&#34;&gt;Hyperkaehler.info&lt;/a&gt; a bit,&#xA;and now it also contains information on:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;&lt;a href=&#34;https://www.hyperkaehler.info/monodromy&#34;&gt;monodromy groups&lt;/a&gt;&lt;/li&gt;&#xA;  &lt;li&gt;&lt;a href=&#34;https://www.hyperkaehler.info/riemann-roch&#34;&gt;Riemann&amp;ndash;Roch polynomials&lt;/a&gt;&lt;/li&gt;&#xA;  &lt;li&gt;&lt;a href=&#34;https://www.hyperkaehler.info/llv&#34;&gt;Looijenga–Lunts–Verbitsky (LLV) decompositions&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Especially the latter is really cool,&#xA;it is a refinement of the Hodge decomposition using the representation theory of a finite-dimensional Lie algebra attached to a hyperkähler variety.&#xA;&lt;a href=&#34;https://jieaosong.github.io&#34;&gt;Jieao Song&lt;/a&gt; created an interactive visualization of this decomposition,&#xA;and this is now integrated into the website.&#xA;You can explore it for &lt;a href=&#34;https://www.hyperkaehler.info/K3-4&#34;&gt;type K3&lt;sup&gt;[4]&lt;/sup&gt;&lt;/a&gt;.&#xA;Notice how each type now also has its own canonical URL!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The periodic tables of algebraic geometry: 3-folds and beyond</title>
+      <link>https://pbelmans.ncag.info/blog/2022/08/21/snapshot-3/</link>
+      <pubDate>Sun, 21 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2022/08/21/snapshot-3/</guid>
+      <description>&lt;div style=&#34;background-color: rgb(255, 243, 205); border: 1px solid rgb(255, 238, 186); padding: 10px;&#34;&gt;&#xA;  &lt;p&gt;The &lt;a href=&#34;https://www.mfo.de/outreach-media/snapshots&#34;&gt;Snapshots of modern mathematics from Oberwolfach&lt;/a&gt; is a series of outreach articles. Last month I attended &lt;a href=&#34;https://www.mfo.de/occasion/2228/www_view&#34;&gt;a workshop there&lt;/a&gt; and I was asked to write something for it. Long story short, if you are impatient, you can &lt;a href=&#34;https://pbelmans.ncag.info/assets/snapshot.pdf&#34;&gt;read the result all in one go&lt;/a&gt;. But in the spirit of magazine science fiction I will also be posting it in installments on my blog.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hyperkaehler.info: the geography of irreducible holomorphic symplectic (or hyperkähler) varieties</title>
+      <link>https://pbelmans.ncag.info/blog/2021/09/01/hyperkaehler-info/</link>
+      <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2021/09/01/hyperkaehler-info/</guid>
+      <description>&lt;p&gt;It&#39;s should come as no surprise that I like&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;making websites&lt;/li&gt;&#xA;  &lt;li&gt;classification results&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;In order to learn a bit more about the classification of hyperkähler varieties, I therefore created&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;  &lt;strong&gt;&lt;a href=&#34;http://www.hyperkaehler.info&#34;&gt;&lt;span class=&#34;icon&#34;&gt;&lt;img width=&#34;16&#34; height=&#34;16&#34; src=&#34;https://pbelmans.ncag.info/assets/favicon-hyperkaehler.png&#34;&gt;&lt;/span&gt; &lt;span class=&#34;username&#34;&gt;&lt;code class=&#34;url&#34;&gt;hyperkaehler.info&lt;/code&gt;&lt;/span&gt;&lt;/a&gt;&#xA;&#xA;&#xA;&lt;/strong&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;The interesting thing for me about hyperkähler varieties (for a gentle introduction one is referred elsewhere, e.g. &lt;a href=&#34;https://www.math.ens.fr/~debarre/HKmanifolds.pdf&#34;&gt;Debarre&#39;s notes&lt;/a&gt;, &lt;a href=&#34;https://irma.math.unistra.fr/~pacienza/notes-ogrady.pdf&#34;&gt;O&#39;Grady&#39;s notes&lt;/a&gt;, or &lt;a href=&#34;https://mathscinet.ams.org/mathscinet-getitem?mr=1963562&#34;&gt;Huybrechts&#39; chapter in the book Calabi-Yau manifolds and related geometries&lt;/a&gt;) is that there are&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;very strong structural results one can prove&lt;/li&gt;&#xA;  &lt;li&gt;very few (in some sense) examples known&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Not even the finiteness of the number of deformation families is known for instance! So on the website I&#39;ve collected interesting information about the known deformation types, with some explanation and a reference.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Follow-up on $\int\mathrm{td}_X^{1/2}$ for hyperkähler varieties</title>
+      <link>https://pbelmans.ncag.info/blog/2021/07/08/hyperkahler-integral-followup/</link>
+      <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2021/07/08/hyperkahler-integral-followup/</guid>
+      <description>&lt;p&gt;After my &lt;a href=&#34;https://pbelmans.ncag.info/blog/2021/07/06/hyperkahler-integral/&#34;&gt;previous post on $\int\mathrm{td}_X^{1/2}$ for hyperkähler varieties&lt;/a&gt; in which I naively did an exercise left to the reader in a preprint, Thorsten Beckmann and Jieao Song have told me three really interesting things:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;in Section 3 of &lt;a href=&#34;https://arxiv.org/abs/2103.13382&#34;&gt;Derived categories of hyper-Kähler manifolds: extended Mukai vector and integral structure&lt;/a&gt; (a preprint actually featured in &lt;a href=&#34;https://pbelmans.ncag.info/blog/2021/04/04/fortnightly-links-126/&#34;&gt;fortnightly links #126&lt;/a&gt;) Thorsten already explained how to determine $\int\mathrm{td}_X^{1/2}$ from known invariants explicitly for OG6 and OG10 (and not just implicitly using Chern numbers)&lt;/li&gt;&#xA;&#xA;  &lt;li&gt;whilst no-one of us found the Chern numbers of $\mathrm{K}3^{[5]}$ in the literature, Jieao computed them using the method of &lt;a href=&#34;https://mathscinet.ams.org/mathscinet-getitem?mr=1795551&#34;&gt;On the cobordism class of the Hilbert scheme of a surface&lt;/a&gt; using Bott&#39;s formula and his own Julia library &lt;a href=&#34;https://github.com/8d1h/IntersectionTheory&#34;&gt;IntersectionTheory&lt;/a&gt;&lt;/li&gt;&#xA;&#xA;  &lt;li&gt;all the explicit (and somewhat ad-hoc) work to work with Todd classes and Chern classes can be done in a super-nice way using Manfred Lehn&#39;s and Christoph Sorger&#39;s &lt;a href=&#34;https://www.math.sciences.univ-nantes.fr/~sorger/en/chow/&#34;&gt;Sage library called Chow&lt;/a&gt;, which implements the manipulations I did (and many, many more) in a pretty Sage library&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;With the latter, the code (in case you still want to do the hands-on approach) becomes super-transparent, and is available as &lt;a href=&#34;https://gist.github.com/pbelmans/931580361e84b71789e826935f21d282#file-integral-todd-root-hyperkahler-using-chow-sage&#34;&gt;this gist&lt;/a&gt;. This nicely abstracts away all the explicit implementations I did, but now it becomes easily modifiable and extendable. Great!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>On $\int\mathrm{td}_X^{1/2}$ of O&#39;Grady&#39;s exceptional hyperkähler varieties</title>
+      <link>https://pbelmans.ncag.info/blog/2021/07/06/hyperkahler-integral/</link>
+      <pubDate>Tue, 06 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2021/07/06/hyperkahler-integral/</guid>
+      <description>&lt;p&gt;It&#39;s been a while since there was an honest mathematical blogpost, for &lt;a href=&#34;https://pbelmans.ncag.info/blog/2021/04/23/ida/&#34;&gt;reasons explained in an earlier post&lt;/a&gt;. I should maybe also write something about the preprint we put on the arXiv in April.&lt;/p&gt;&#xA;&lt;p&gt;But today I will share you a fun computation I did involving hyperkähler varieties, as I expect that some of the code used in the computation will be useful to future me, and therefore maybe also to someone else.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hodge numbers for O&#39;Grady 10</title>
+      <link>https://pbelmans.ncag.info/blog/2019/05/09/hodge-numbers-OG10/</link>
+      <pubDate>Thu, 09 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2019/05/09/hodge-numbers-OG10/</guid>
+      <description>&lt;p style=&#34;background-color: rgb(255, 243, 205); border: 1px solid rgb(255, 238, 186); padding: 10px;&#34;&gt;&#xA;  The functionality outlined below, and much more, is implemented in &lt;a href=&#34;https://github.com/pbelmans/hodge-diamond-cutter&#34;&gt;&lt;strong&gt;Hodge diamond cutter&lt;/strong&gt;&lt;/a&gt;, which can be used in Sage.&#xA;  If you use it for your research, please cite it using &lt;a href=&#34;https://doi.org/10.5281/zenodo.3893509&#34; rel=&#34;nofollow&#34;&gt;&lt;img src=&#34;https://zenodo.org/badge/DOI/10.5281/zenodo.3893509.svg&#34; alt=&#34;DOI&#34; data-canonical-src=&#34;https://zenodo.org/badge/DOI/10.5281/zenodo.3893509.svg&#34; style=&#34;max-width:100%;&#34;&gt;&lt;/a&gt;.&#xA;&lt;/p&gt;&#xA;&#xA;&#xA;&lt;p&gt;I could keep it for the fortnightly links, but the Hodge diamond &lt;a href=&#34;https://en.wikipedia.org/wiki/Lepidopterology&#34;&gt;lepidopterist&lt;/a&gt; in me is too excited. The Hodge numbers for O&#39;Grady&#39;s sporadic 10-dimensional example have been computed, by Mark Andrea de Cataldo, Antonio Rapagnetta and Giulia Saccà in their paper &lt;a href=&#34;https://arxiv.org/abs/1905.03217v1&#34;&gt;The Hodge numbers of O&#39;Grady 10 via Ngô strings&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hodge numbers for generalised Kummer varieties</title>
+      <link>https://pbelmans.ncag.info/blog/2018/11/01/hodge-numbers-generalised-kummer-varieties/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2018/11/01/hodge-numbers-generalised-kummer-varieties/</guid>
+      <description>&lt;p style=&#34;background-color: rgb(255, 243, 205); border: 1px solid rgb(255, 238, 186); padding: 10px;&#34;&gt;&#xA;  The functionality outlined below, and much more, is implemented in &lt;a href=&#34;https://github.com/pbelmans/hodge-diamond-cutter&#34;&gt;&lt;strong&gt;Hodge diamond cutter&lt;/strong&gt;&lt;/a&gt;, which can be used in Sage.&#xA;  If you use it for your research, please cite it using &lt;a href=&#34;https://doi.org/10.5281/zenodo.3893509&#34; rel=&#34;nofollow&#34;&gt;&lt;img src=&#34;https://zenodo.org/badge/DOI/10.5281/zenodo.3893509.svg&#34; alt=&#34;DOI&#34; data-canonical-src=&#34;https://zenodo.org/badge/DOI/10.5281/zenodo.3893509.svg&#34; style=&#34;max-width:100%;&#34;&gt;&lt;/a&gt;.&#xA;&lt;/p&gt;&#xA;&#xA;&#xA;&lt;p&gt;For the regular reader of my blog it&#39;s no secret I like numerical invariants of smooth projective varieties. Today I have a new treat for you. At least, if you like Hodge numbers that is.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hilbert squares of higher-dimensional hyperkähler varieties are not hyperkähler</title>
+      <link>https://pbelmans.ncag.info/blog/2018/08/14/hyperkahler-hilbert-squares/</link>
+      <pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2018/08/14/hyperkahler-hilbert-squares/</guid>
+      <description>&lt;p&gt;Of course, the statement in the title should not come as a surprise, otherwise they would already be listed among the extremely short list of known hyperkähler varieties. Recall that a &lt;em&gt;hyperkähler&lt;/em&gt; variety is a variety with a holomorphic symplectic form, and they are one of three building blocks (the others are abelian varieties and Calabi&amp;ndash;Yau varieties) of varieties with trivial canonical bundle. So far, the list of known hyperkähler varieties is rather short:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

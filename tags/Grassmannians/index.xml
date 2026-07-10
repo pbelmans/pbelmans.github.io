@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grassmannians on Pieter Belmans</title>
+    <link>https://pbelmans.ncag.info/tags/Grassmannians/</link>
+    <description>Recent content in Grassmannians on Pieter Belmans</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 12 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://pbelmans.ncag.info/tags/Grassmannians/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New paper: Failure of Bott vanishing for (co)adjoint partial flag varieties</title>
+      <link>https://pbelmans.ncag.info/blog/2025/06/12/bott-non-vanishing/</link>
+      <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2025/06/12/bott-non-vanishing/</guid>
+      <description>&lt;p&gt;This blogpost is about&#xA;&lt;a href=&#34;https://arxiv.org/abs/2506.09811&#34;&gt;&lt;strong&gt;Failure of Bott vanishing for (co)adjoint partial flag varieties&lt;/strong&gt;&lt;/a&gt;.&#xA;If you just want mathematics and not some of the backstory,&#xA;you can click the link to immediately get to the preprint.&#xA;&lt;/p&gt;&#xA;&#xA;&lt;h3&gt;Background&lt;/h3&gt;&#xA;&lt;p&gt;Bott vanishing is a very strong cohomological vanishing property&#xA;for a smooth projective variety $X$,&#xA;which says that&#xA;\[&#xA;\mathrm{H}^p(X,\Omega_X^q\otimes\mathcal{L})=0&#xA;\]&#xA;for $p\geq 1$, $q\geq 0$ and $\mathcal{L}$ an ample line bundle on $X$.&#xA;It is satisfied only for very special varieties.&#xA;Buch&amp;ndash;Thomsen&amp;ndash;Lauritzen&amp;ndash;Mehta showed that&#xA;over fields of positive characteristic&#xA;it is implied by&#xA;liftability of $X$ modulo $p^2$&#xA;&lt;em&gt;including their Frobenius&lt;/em&gt;.&#xA;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The identification of a 6-dimensional Kronecker quiver moduli with a certain zero section</title>
+      <link>https://pbelmans.ncag.info/blog/2023/07/14/identification-of-kronecker-moduli/</link>
+      <pubDate>Fri, 14 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2023/07/14/identification-of-kronecker-moduli/</guid>
+      <description>&lt;p&gt;In the post &lt;a href=&#34;https://pbelmans.ncag.info/blog/2023/07/06/new-paper-chow-rings-quiver-moduli/&#34;&gt;&#39;New paper: On Chow rings of quiver moduli&#39;&lt;/a&gt;&#xA;I explained a conjectural identification between two varieties, for which we used our newly gained understanding of Chow rings to give more evidence.&lt;/p&gt;&#xA;&lt;p&gt;Shortly after posting it to the arXiv I got an email by Laurent Manivel,&#xA;pointing out that the zero section of $\operatorname{Gr}(2,8)$ makes an appearance&#xA;&lt;a href=&#34;https://doi.org/10.1515/crll.2005.2005.585.93&#34;&gt;Atanas Iliev and Laurent Manivel: Severi varieties and their varieties of reductions&lt;/a&gt;,&#xA;and that it might be useful to prove the identification.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>An update for Grassmannian.info: higher Fanoness</title>
+      <link>https://pbelmans.ncag.info/blog/2022/08/22/k-fano-GP/</link>
+      <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2022/08/22/k-fano-GP/</guid>
+      <description>&lt;p&gt;Fano varieties are varieties satisfying a positivity criterion.&#xA;Higher Fano varieties are varieties satisfying a &lt;em&gt;stronger&lt;/em&gt; positivity criterion.&#xA;There is a hierarchy of $k$-Fanoness, with $k=1$ being the usual condition that the anticanonical bundle is ample.&#xA;For general $k$, one asks that $\mathrm{ch}_i(\mathrm{T}_X)\cdot Z&amp;gt;0$ for all effective codimension-$i$ cycles and all $i=1,\ldots,k$.&lt;/p&gt;&#xA;&lt;p&gt;For the wonderful properties that $k$-Fano varieties satisfy I refer you to &lt;a href=&#34;https://arxiv.org/abs/2110.02339&#34;&gt;Carolina Araujo, Roya Beheshti, Ana-Maria Castravet, Kelly Jabbusch, Svetlana Makarova, Enrica Mazzon, Libby Taylor, Nivedita Viswanathan: Higher Fano manifolds&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Some comments on hyperplane sections of generalised Grassmannians</title>
+      <link>https://pbelmans.ncag.info/blog/2021/10/22/hyperplane-comments/</link>
+      <pubDate>Fri, 22 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2021/10/22/hyperplane-comments/</guid>
+      <description>&lt;p&gt;Today in my arXiv reading I came across &lt;a href=&#34;https://arxiv.org/abs/2110.10589&#34;&gt;Bradley Doyle: Homological Projective Duality for the Plücker embedding of the Grassmannian&lt;/a&gt;, and in Section 1.4 there were some comments about the interesting component of a linear section of a Grassmannian that piqued my interest.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;I decided to have some fun with more general cases. In type A the following are low-dimensional and possibly of interest:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;$\operatorname{Gr}(4,8)$ does not give a Calabi&amp;ndash;Yau category in the hyperplane section, but it can be computed that $\dim\operatorname{HH}_{\pm1}=3$.&lt;/li&gt;&#xA;  &lt;li&gt;$\operatorname{Gr}(4,9)$ gives a Calabi&amp;ndash;Yau category of dimension 3 in the hyperplane section, with the middle cohomology of the hyperplane section having dimensions $1,45,45,1$.&lt;/li&gt;&#xA;  &lt;li&gt;$\operatorname{Gr}(3,11)$ gives another Calabi&amp;ndash;Yau category of dimension 3 in the hyperplane section, with the middle cohomology of the hyperplane section having dimensions $1,44,44,1$.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;It turns out that the latter two cases are already mentioned in Section 4.5 of &lt;a href=&#34;https://mathscinet.ams.org/mathscinet-getitem?mr=3987870&#34;&gt;Alexander Kuznetsov: Calabi-Yau and fractional Calabi-Yau categories&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>An overview of what the names Pieri, Giambelli, Chevalley, Monk, Littlewood&amp;ndash;Richardson say about the cohomology of $G/P$</title>
+      <link>https://pbelmans.ncag.info/blog/2021/01/11/lastnames-in-GP-cohomology/</link>
+      <pubDate>Mon, 11 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2021/01/11/lastnames-in-GP-cohomology/</guid>
+      <description>&lt;p&gt;This blog post is inspired by my near-total inability to remember what precisely each of these names refer to in the context of the cohomology of $G/P$. I&#39;ll give a short (and very incomplete) overview of these results (without precise formulas or anything), as a cheat sheet for those like me, including anyone who might be confused by the inconsistent naming conventions in the literature.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;The goal of all the results named in the title is to provide information on the Chow ring (or cohomology ring) of $G/P$ (which are isomorphic as graded rings, after multiplying the degrees in the Chow ring by two). Here $G/P$ is a homogeneous variety, where $G$ is a reductive algebraic group and $P$ is a parabolic subgroup. Unlike for &lt;a href=&#34;https://www.grassmannian.info&#34;&gt;Grassmannian.info&lt;/a&gt; we do not assume $P$ to be a maximal parabolic subgroup.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>An update for Grassmannian.info: more quantum spectra!</title>
+      <link>https://pbelmans.ncag.info/blog/2020/12/03/spectra-on-grassmannian-2/</link>
+      <pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/12/03/spectra-on-grassmannian-2/</guid>
+      <description>&lt;p&gt;This is just a quick update: last time I discussed the &lt;em&gt;quantum spectra&lt;/em&gt; of (generalised) Grassmannians, with the promise of more pictures (in high rank) to come. That promise has now been upheld. For all $G/P$ for which the number of eigenvalues is smaller than 1000 I have computed the spectrum. This includes everything you see on the frontpage, except for some cases in type $\mathrm{E}_7$ and (almost) all in type $\mathrm{E}_8$. But even the (co)adjoint $\mathrm{E}_8$ is now included, having only 240 eigenvalues.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>An update for Grassmannian.info: spectra of quantum multiplication with $\mathrm{c}_1$</title>
+      <link>https://pbelmans.ncag.info/blog/2020/11/29/spectra-on-grassmannian/</link>
+      <pubDate>Sun, 29 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/11/29/spectra-on-grassmannian/</guid>
+      <description>&lt;div id=&#34;eigenvalues&#34; style=&#34;float: right&#34;&gt;&lt;p style=&#34;text-align: center&#34;&gt;&lt;strong&gt;Figure 1&lt;/strong&gt;: Spectrum for $\mathrm{Gr}(3,8)$&lt;/p&gt;&lt;/div&gt;&#xA;&#xA;&lt;p&gt;Here&#39;s another update for &lt;a href=&#34;https://www.grassmannian.info&#34;&gt;Grassmannian.info&lt;/a&gt;: it now contains spectra (as in, the distribution of eigenvalues) of quantum multiplication with $\mathrm{c}_1(G/P)$, for $q=1$. This is interesting for various reasons, but before explaining why, let me tell you that the picture you&#39;re seeing now is giving the eigenvalues for $\mathrm{Gr}(3,8)$. There are 56 eigenvalues, because the (quantum) cohomology is 56-dimensional.&lt;/p&gt;&#xA;&#xA;&lt;h2&gt;Spectral decomposition&lt;/h2&gt;&#xA;&lt;p&gt;The &lt;a href=&#34;https://en.wikipedia.org/wiki/Fukaya_category&#34;&gt;Fukaya category&lt;/a&gt; of a Fano symplectic manifold has a decomposition into orthogonal summands (I&#39;m glancing over many details here). This is the &lt;em&gt;spectral decomposition&lt;/em&gt; from the title, and you can read about it in many places. Let&#39;s rather focus on other aspects of the spectrum.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>An update for Grassmannian.info: semisimplicity of quantum cohomology</title>
+      <link>https://pbelmans.ncag.info/blog/2020/11/06/qh-on-grassmannian-info/</link>
+      <pubDate>Fri, 06 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/11/06/qh-on-grassmannian-info/</guid>
+      <description>&lt;p&gt;This blogpost does not serve as an introduction to Dubrovin&#39;s conjecture, let me just say that it states the equivalence between&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;the existence of a full exceptional collection in $\mathbf{D}^{\mathrm{b}}(G/P)$&lt;/li&gt;&#xA;  &lt;li&gt;the generic semisimplicity of (big) quantum cohomology $\mathrm{BQH}(G/P)$&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;The first is a statement about the algebraic geometry of $G/P$, whilst the second concerns the symplectic geometry of $G/P$, and their equivalence is an amazing prediction motivated by mirror symmetry.&lt;/p&gt;&#xA;&lt;p&gt;One thing we can do is tabulate for which $G/P$ either is known to hold, and &lt;a href=&#34;https://www.grassmannian.info&#34;&gt;Grassmannian.info&lt;/a&gt; now does that. Remark that, whilst the conjecture concerns the generic semisimplicity of big quantum cohomology, there is an easier version called small quantum cohomology, where computations are more tractable. And semisimplicity of the small version implies it for the big version, but it is not equivalent to it as there can be cases where the small quantum cohomology is &lt;em&gt;not&lt;/em&gt; semisimple.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New preprint: Derived categories of the Cayley plane and the coadjoint Grassmannian of type F</title>
+      <link>https://pbelmans.ncag.info/blog/2020/05/06/new-article-cayley-plane/</link>
+      <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/05/06/new-article-cayley-plane/</guid>
+      <description>&lt;p&gt;Yesterday &lt;a href=&#34;http://www.mi-ras.ru/~akuznet&#34;&gt;Sasha Kuznetsov&lt;/a&gt;, &lt;a href=&#34;https://msmirnov18.github.io&#34;&gt;Maxim Smirnov&lt;/a&gt; and I uploaded a preprint to the arXiv, titled &lt;a href=&#34;https://arxiv.org/abs/2005.01989&#34;&gt;Derived categories of the Cayley plane and the coadjoint Grassmannian of type F&lt;/a&gt;. In it we discuss the derived categories of two homogeneous varieties (in exceptional type): the Cayley plane $\mathrm{E}_6/\mathrm{P}_1$ and the coadjoint Grassmannian in type F, i.e. $\mathrm{F}_4/\mathrm{P}_4$. Here I am referring to Dynkin types, and maximal parabolic subgroups in the Bourbaki labelling.&lt;/p&gt;&#xA;&lt;p&gt;The variety $\mathrm{E}_6/\mathrm{P}_1$ is a smooth projective Fano variety of dimension 16 and index 12. The variety $\mathrm{F}_4/\mathrm{P}_4$ is a smooth projective Fano variety of dimension 15 and index 11. Conjecturally, every $G/P$ (of which these are 2 exceptional cases) has a full exceptional collection in its derived category.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Index of partial flag varieties</title>
+      <link>https://pbelmans.ncag.info/blog/2018/08/23/index-partial-flag-varieties/</link>
+      <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2018/08/23/index-partial-flag-varieties/</guid>
+      <description>&lt;p&gt;For the context for this post, see &lt;a href=&#34;https://pbelmans.ncag.info/blog/2018/08/22/rank-flag-varieties/&#34;&gt;yesterday&#39;s&lt;/a&gt;.&lt;/p&gt;&#xA;&#xA;&lt;h3&gt;Index&lt;/h3&gt;&#xA;&lt;p&gt;To compute the index we use lemma 2.19 and remark 2.20 of the Kuznetsov&amp;ndash;Polishchuk paper. Combined they say the following.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Lemma&lt;/strong&gt; Let $\beta$ be the simple root corresponding to the chosen maximal parabolic subgroup $P$, and $\xi$ the associated fundamental weight. Let $\overline{\beta}$ be the maximal root of the same length as $\beta$ such that the coefficient of $\beta$ in the expression of $\overline{\beta}$ is 1. Then the index of $G/P$ equals&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Rank of the Grothendieck group of partial flag varieties</title>
+      <link>https://pbelmans.ncag.info/blog/2018/08/22/rank-flag-varieties/</link>
+      <pubDate>Wed, 22 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2018/08/22/rank-flag-varieties/</guid>
+      <description>&lt;p&gt;More than a year ago I wrote about &lt;a href=&#34;https://pbelmans.ncag.info/blog/2017/06/14/dimensions-of-partial-flag-varieties/&#34;&gt;dimensions of partial flag varieties&lt;/a&gt;, when I was reading &lt;a href=&#34;http://www.ams.org/mathscinet-getitem?mr=3463417&#34;&gt;Kuznetsov–Polishchuk, Exceptional collections on isotropic Grassmannians&lt;/a&gt;. Observe that we always take a maximal parabolic in this setting, as explained in the previous post.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;Yesterday I was talking to &lt;a href=&#34;https://www.math.uni-augsburg.de/prof/alg/Arbeitsgruppe/Smirnov/&#34;&gt;Maxim Smirnov&lt;/a&gt; about these varieties, and we were interested in&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;the &lt;em&gt;rank of the Grothendieck group&lt;/em&gt;, in other words how long exceptional collections are supposed to be&lt;/li&gt;&#xA;  &lt;li&gt;the &lt;em&gt;index&lt;/em&gt;, i.e. as $\operatorname{Pic}G/P\cong\mathbb{Z}\cdot\mathcal{O}_{G/P}(1)$ the index is defined as the integer $i$ such that $\omega_{G/P}^\vee\cong\mathcal{O}_{G/P}(1)^{\otimes i}$&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;One can easily compute these numbers from the representation theory associated to these partial flag varieties, but as these numbers are not readily available, let me explain how to compute them, and collect them in a table. One big table is enough per post, so tomorrow you&#39;ll get the table for the index.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Dimensions of partial flag varieties</title>
+      <link>https://pbelmans.ncag.info/blog/2017/06/14/dimensions-of-partial-flag-varieties/</link>
+      <pubDate>Wed, 14 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2017/06/14/dimensions-of-partial-flag-varieties/</guid>
+      <description>&lt;p&gt;Derived categories of partial flag varieties are interesting, and if you are not yet convinced of this claim, I refer you to &lt;a href=&#34;http://www.ams.org/mathscinet-getitem?mr=3463417&#34;&gt;Kuznetsov&amp;ndash;Polishchuk, Exceptional collections on isotropic Grassmannians&lt;/a&gt;, which is what inspired me to make this statement.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;In this paper they discuss partial flag varieties with respect to a &lt;em&gt;maximal&lt;/em&gt; parabolic subgroup, as these are the cases necessary to understand the derived category of any partial flag variety. One of things I wondered about when I first looked at that paper is: how big are these partial flag varieties? This is just an easy exercise in the representation theory of algebraic groups, but I couldn&#39;t find them explicitly written up.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Visualisation of Schubert classes in Gr(2,4) and Gr(2,5)</title>
+      <link>https://pbelmans.ncag.info/blog/2014/10/30/visualisation-of-schubert-classes-in-gr24-and-gr25/</link>
+      <pubDate>Thu, 30 Oct 2014 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2014/10/30/visualisation-of-schubert-classes-in-gr24-and-gr25/</guid>
+      <description>&lt;p&gt;We are still doing &lt;a href=&#34;https://pbelmans.ncag.info/blog/2014/10/09/what-are-chern-classes/&#34;&gt;Chern classes&lt;/a&gt; in the &lt;a href=&#34;http://win.ua.ac.be/~pbelmans/seminar/&#34;&gt;seminar&lt;/a&gt;, and today I&#39;m speaking about the multiplicative structure of the Chow ring of a Grassmannian. It&#39;ll include some example computations, for which I prepared a little handout. Without further ado, &lt;a href=&#34;http://win.ua.ac.be/~pbelmans/seminar/chern/schubert.pdf&#34;&gt;here it is&lt;/a&gt;. It&#39;s not that spectacular, and certainly not original (it is based on the visualisation I found in 3264 and all that).&lt;/p&gt;&#xA;&lt;p&gt;The actual weekly blogpost will go online tonight, and it will feature rational surface singularities.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Every projective variety is a quiver Grassmannian: the algorithm</title>
+      <link>https://pbelmans.ncag.info/blog/2013/05/24/every-projective-variety-is-a-quiver-grassmannian-the-algorithm/</link>
+      <pubDate>Fri, 24 May 2013 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2013/05/24/every-projective-variety-is-a-quiver-grassmannian-the-algorithm/</guid>
+      <description>&lt;p&gt;Little over a year ago &lt;a href=&#34;http://wmaz.math.uni-wuppertal.de/reineke/&#34;&gt;Markus Reineke&lt;/a&gt; published a note on the arXiv titled &lt;a href=&#34;http://arxiv.org/abs/1204.5730&#34;&gt;Every projective variety is a quiver Grassmannian&lt;/a&gt; about how quiver Grassmannians can be used to describe every possible projective variety. Based on this note Lieven Le Bruyn wrote a blogpost &lt;a href=&#34;http://neverendingbooks.org/quiver-grassmannians-can-be-anything&#34;&gt;Quiver Grassmannians can be anything&lt;/a&gt;, which explains the result using an easy to grasp example. An interesting discussion in the comments section ensued, which was lost in the move to Drupal but apparently restored yesterday (unrelated to my interest in this).&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

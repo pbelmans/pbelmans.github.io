@@ -30,11 +30,11 @@
       <description>&lt;img src=&#34;https://pbelmans.ncag.info/assets/spec-cover.png&#34; style=&#34;float: right; margin: 0 0 5px 5px&#34; width=&#34;300&#34;&gt;&#xA;&lt;p&gt;Earlier this week we (= &lt;a href=&#34;http://www-personal.umich.edu/~weiho/&#34;&gt;Wei Ho&lt;/a&gt;, &lt;a href=&#34;https://www.math.columbia.edu/~dejong/&#34;&gt;Johan de Jong&lt;/a&gt; and I) sent the final version of &lt;strong&gt;&lt;a href=&#34;https://www.cambridge.org/core/books/stacks-project-expository-collection/433A8B918FB8FD11AA0E82C3E24E5B2D&#34;&gt;Stacks Project Expository Collection&lt;/a&gt;&lt;/strong&gt; to the publisher.&#xA;It is a collection of expository articles on modern topics in algebraic geometry (often featuring something stacky)&#xA;written by groups participating in the Stacks project workshops in 2017 and 2020.&#xA;It will be published by Cambridge University Press in the London Mathematical Society Lecture Note Series, number 480.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Introducing The Moduli Space</title>
-      <link>https://pbelmans.ncag.info/blog/2021/01/13/themodulispace/</link>
-      <pubDate>Wed, 13 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://pbelmans.ncag.info/blog/2021/01/13/themodulispace/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://as.cornell.edu/daniel-halpern-leistner&#34;&gt;Dan Halpern-Leistner&lt;/a&gt; is now also using the Gerby framework, to make his lecture notes on moduli theory available.&lt;/p&gt;&#xA;&lt;p&gt;Go read &lt;a href=&#34;https://book.themoduli.space&#34;&gt;The Moduli Space&lt;/a&gt;, it&#39;s exciting stuff!&lt;/p&gt;&#xA;&lt;p&gt;&lt;small&gt;Let me know if you find any website-related issues.&lt;/small&gt;&lt;/p&gt;</description>
+      <title>Aise Johan de Jong wins the Leroy P. Steele Prize for Mathematical Exposition for the Stacks project</title>
+      <link>https://pbelmans.ncag.info/blog/2021/12/13/leroy-steele-johan/</link>
+      <pubDate>Mon, 13 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2021/12/13/leroy-steele-johan/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.ams.org/news?news_id=6894&#34;&gt;Aise Johan de Jong receives 2022 Steele Prize for Mathematical Exposition&lt;/a&gt; for the &lt;a href=&#34;https://stacks.math.columbia.edu&#34;&gt;the Stacks project&lt;/a&gt;. This is wonderful news! Congratulations Johan!&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Stacks project in Nieuw Archief voor Wiskunde</title>
@@ -58,13 +58,6 @@
       <description>&lt;p&gt;Quick update: the &lt;a href=&#34;https://stacks.github.io/&#34;&gt;registration for next year&#39;s Stacks Project Workshop&lt;/a&gt; is now open.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>A minimal working example to use Gerby</title>
-      <link>https://pbelmans.ncag.info/blog/2019/07/16/minimal-working-gerby/</link>
-      <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>https://pbelmans.ncag.info/blog/2019/07/16/minimal-working-gerby/</guid>
-      <description>&lt;p&gt;If you are interested in setting up a website similar to &lt;a href=&#34;https://stacks.math.columbia.edu&#34;&gt;The Stacks project&lt;/a&gt; or &lt;a href=&#34;https://kerodon.net&#34;&gt;Kerodon&lt;/a&gt;, you can do this using the same framework that powers these websites: &lt;a href=&#34;https://gerby-project.github.io&#34;&gt;Gerby&lt;/a&gt;. Unfortunately, until now the instructions to use this were pretty annoyingly only available for the Stacks project, so setting things up correctly was painful and very specific.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;We have now created &lt;a href=&#34;https://github.com/gerby-project/hello-world&#34;&gt;&lt;strong&gt;a minimal working example&lt;/strong&gt;&lt;/a&gt; which lists the relevant steps to set up Gerby for a minimal Hello world project. Doing this you&#39;ll get an instance of the Gerby with the Stacks project layout, containing just a few tags. This repository is basically a Travis script which performs all the steps required for the installation of plasTeX and Gerby, and then goes through what should be the usual update process for an actual instance.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Stacks Project Workshop 2020: website</title>
       <link>https://pbelmans.ncag.info/blog/2019/06/21/stacks-project-workshop-2020/</link>
       <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
@@ -77,13 +70,6 @@
       <pubDate>Fri, 24 May 2019 00:00:00 +0000</pubDate>
       <guid>https://pbelmans.ncag.info/blog/2019/05/24/stacks-project-workshop-2/</guid>
       <description>&lt;p&gt;In July or August 2020 &lt;a href=&#34;http://www.math.columbia.edu/~dejong/&#34;&gt;Johan de Jong&lt;/a&gt;, &lt;a href=&#34;http://math.lsa.umich.edu/~weiho/&#34;&gt;Wei Ho&lt;/a&gt;, and I will organise a workshop on algebraic geometry and the Stacks project, similar to the one we organised in 2017.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;See also &lt;a href=&#34;https://www.math.columbia.edu/~dejong/wordpress/?p=4410&#34;&gt;Johan&#39;s announcement&lt;/a&gt;.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Introducing Kerodon</title>
-      <link>https://pbelmans.ncag.info/blog/2018/10/17/kerodon/</link>
-      <pubDate>Wed, 17 Oct 2018 00:00:00 +0000</pubDate>
-      <guid>https://pbelmans.ncag.info/blog/2018/10/17/kerodon/</guid>
-      <description>&lt;p&gt;For the new Stacks project website I created &lt;a href=&#34;https://gerby-project.github.io/&#34;&gt;Gerby&lt;/a&gt;, a combination of a plasTeX fork and a Flask website to create online views for large LaTeX documents with a permanent reference system (also known as tags). From the beginning we intended it to be applicable to at least 1 other project: an online view for the works of &lt;a href=&#34;http://www.math.harvard.edu/~lurie/&#34;&gt;Jacob Lurie&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;This is now live, as &lt;strong&gt;&lt;a href=&#34;https://kerodon.net&#34;&gt;Kerodon&lt;/a&gt;&lt;/strong&gt;. Currently it contains 1 chapter: &lt;a href=&#34;https://kerodon.net/tag/0001&#34;&gt;The Language of $\infty$-Categories&lt;/a&gt;. Gradually this will increase, as more material is prepared to be included in Kerodon.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A new website for the Stacks project (2)</title>

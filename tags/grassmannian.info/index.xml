@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grassmannian.info on Pieter Belmans</title>
+    <link>https://pbelmans.ncag.info/tags/grassmannian.info/</link>
+    <description>Recent content in Grassmannian.info on Pieter Belmans</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 15 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://pbelmans.ncag.info/tags/grassmannian.info/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>An update for Grassmannian.info: 2 big exceptional quantum spectra</title>
+      <link>https://pbelmans.ncag.info/blog/2024/02/15/two-more-quantum-spectra/</link>
+      <pubDate>Thu, 15 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2024/02/15/two-more-quantum-spectra/</guid>
+      <description>&lt;p&gt;A little while ago I let my computer waste some electricity on computing the quantum spectra&#xA;of two exceptional Grassmannians.&#xA;For more on the quantum spectrum,&#xA;see &lt;a href=&#34;https://pbelmans.ncag.info/blog/2020/11/29/spectra-on-grassmannian/&#34;&gt;this blogpost for more information&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The exceptional Grassmannians are:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;&lt;a href=&#34;https://www.grassmannian.info/E7/3&#34;&gt;E7/P3&lt;/a&gt;, with Euler characteristic 2016&lt;/li&gt;&#xA;  &lt;li&gt;&lt;a href=&#34;https://www.grassmannian.info/E7/5&#34;&gt;E7/P5&lt;/a&gt;, with Euler characteristic 4032&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;I believe slightly larger Grassmannians should also within reach, but the calculation,&#xA;which by no means was optimized,&#xA;did not finish on time.&#xA;Below you can see the largest quantum spectrum currently available on Grassmannian.info:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>An update for Grassmannian.info: higher Fanoness</title>
+      <link>https://pbelmans.ncag.info/blog/2022/08/22/k-fano-GP/</link>
+      <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2022/08/22/k-fano-GP/</guid>
+      <description>&lt;p&gt;Fano varieties are varieties satisfying a positivity criterion.&#xA;Higher Fano varieties are varieties satisfying a &lt;em&gt;stronger&lt;/em&gt; positivity criterion.&#xA;There is a hierarchy of $k$-Fanoness, with $k=1$ being the usual condition that the anticanonical bundle is ample.&#xA;For general $k$, one asks that $\mathrm{ch}_i(\mathrm{T}_X)\cdot Z&amp;gt;0$ for all effective codimension-$i$ cycles and all $i=1,\ldots,k$.&lt;/p&gt;&#xA;&lt;p&gt;For the wonderful properties that $k$-Fano varieties satisfy I refer you to &lt;a href=&#34;https://arxiv.org/abs/2110.02339&#34;&gt;Carolina Araujo, Roya Beheshti, Ana-Maria Castravet, Kelly Jabbusch, Svetlana Makarova, Enrica Mazzon, Libby Taylor, Nivedita Viswanathan: Higher Fano manifolds&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Clean URLs for Grassmannian.info and Fanography</title>
+      <link>https://pbelmans.ncag.info/blog/2021/08/06/urls/</link>
+      <pubDate>Fri, 06 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2021/08/06/urls/</guid>
+      <description>&lt;p&gt;Minor technical message: In case you noticed that until a few days ago&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li style=&#34;margin-bottom: 4px&#34;&gt;&lt;a href=&#34;https://fanography.info&#34;&gt;&lt;span class=&#34;icon&#34;&gt;&lt;img width=&#34;16&#34; height=&#34;16&#34; src=&#34;https://pbelmans.ncag.info/assets/favicon-fanography.png&#34;&gt;&lt;/span&gt; &lt;span class=&#34;username&#34;&gt;&lt;code class=&#34;url&#34;&gt;fanography.info&lt;/code&gt;&lt;/span&gt;&lt;/a&gt;&#xA;&#xA;&#xA;&lt;/li&gt;&#xA;  &lt;li style=&#34;margin-bottom: 4px&#34;&gt;&lt;a href=&#34;http://grassmannian.info&#34;&gt;&lt;span class=&#34;icon&#34;&gt;&lt;img width=&#34;16&#34; height=&#34;16&#34; src=&#34;https://pbelmans.ncag.info/assets/favicon-grassmannian.png&#34;&gt;&lt;/span&gt; &lt;span class=&#34;username&#34;&gt;&lt;code class=&#34;url&#34;&gt;grassmannian.info&lt;/code&gt;&lt;/span&gt;&lt;/a&gt;&#xA;&#xA;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;These used to have &#34;ugly&#34; URLs that referred to the host of those sites, but that is now fixed.&lt;/p&gt;&#xA;&lt;p&gt;If you want to refer to these you can now just copy-paste the URL from your browser and it will be a pretty URL, independent of any future hosting decisions. For the time being the old URLs will redirect properly.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Horospherical varieties on Grassmannian.info</title>
+      <link>https://pbelmans.ncag.info/blog/2021/02/23/horospherical-rank-one/</link>
+      <pubDate>Tue, 23 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2021/02/23/horospherical-rank-one/</guid>
+      <description>&lt;p&gt;Last week I talked about how the Hodge diamond cutter now deals with horospherical varieties of rank 1. Now I&#39;ve also implemented their properties for &lt;a href=&#34;https://www.grassmannian.info&#34;&gt;Grassmannian.info&lt;/a&gt;, see the &lt;a href=&#34;https://www.grassmannian.info/horospherical&#34;&gt;overview table&lt;/a&gt;. Even though they are not homogeneous varieties, their geometry is so close to them that it makes sense to include them.&lt;/p&gt;&#xA;&lt;p&gt;A &lt;em&gt;horospherical&lt;/em&gt; variety $X$ is a variety with an action by a reductive group $G$, such that $X$ has a dense $B$-orbit (where $B$ is a Borel subgroup), and if we let $H$ denote the stabiliser of a point in this dense orbit, then $H$ contains a conjugate of the maximal unipotent subgroup of $G$ inside $B$. In other words: we don&#39;t let $B$ act completely transitively, but &lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>An update for Grassmannian.info: more quantum spectra!</title>
+      <link>https://pbelmans.ncag.info/blog/2020/12/03/spectra-on-grassmannian-2/</link>
+      <pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/12/03/spectra-on-grassmannian-2/</guid>
+      <description>&lt;p&gt;This is just a quick update: last time I discussed the &lt;em&gt;quantum spectra&lt;/em&gt; of (generalised) Grassmannians, with the promise of more pictures (in high rank) to come. That promise has now been upheld. For all $G/P$ for which the number of eigenvalues is smaller than 1000 I have computed the spectrum. This includes everything you see on the frontpage, except for some cases in type $\mathrm{E}_7$ and (almost) all in type $\mathrm{E}_8$. But even the (co)adjoint $\mathrm{E}_8$ is now included, having only 240 eigenvalues.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>An update for Grassmannian.info: spectra of quantum multiplication with $\mathrm{c}_1$</title>
+      <link>https://pbelmans.ncag.info/blog/2020/11/29/spectra-on-grassmannian/</link>
+      <pubDate>Sun, 29 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/11/29/spectra-on-grassmannian/</guid>
+      <description>&lt;div id=&#34;eigenvalues&#34; style=&#34;float: right&#34;&gt;&lt;p style=&#34;text-align: center&#34;&gt;&lt;strong&gt;Figure 1&lt;/strong&gt;: Spectrum for $\mathrm{Gr}(3,8)$&lt;/p&gt;&lt;/div&gt;&#xA;&#xA;&lt;p&gt;Here&#39;s another update for &lt;a href=&#34;https://www.grassmannian.info&#34;&gt;Grassmannian.info&lt;/a&gt;: it now contains spectra (as in, the distribution of eigenvalues) of quantum multiplication with $\mathrm{c}_1(G/P)$, for $q=1$. This is interesting for various reasons, but before explaining why, let me tell you that the picture you&#39;re seeing now is giving the eigenvalues for $\mathrm{Gr}(3,8)$. There are 56 eigenvalues, because the (quantum) cohomology is 56-dimensional.&lt;/p&gt;&#xA;&#xA;&lt;h2&gt;Spectral decomposition&lt;/h2&gt;&#xA;&lt;p&gt;The &lt;a href=&#34;https://en.wikipedia.org/wiki/Fukaya_category&#34;&gt;Fukaya category&lt;/a&gt; of a Fano symplectic manifold has a decomposition into orthogonal summands (I&#39;m glancing over many details here). This is the &lt;em&gt;spectral decomposition&lt;/em&gt; from the title, and you can read about it in many places. Let&#39;s rather focus on other aspects of the spectrum.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>An update for Grassmannian.info: semisimplicity of quantum cohomology</title>
+      <link>https://pbelmans.ncag.info/blog/2020/11/06/qh-on-grassmannian-info/</link>
+      <pubDate>Fri, 06 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/11/06/qh-on-grassmannian-info/</guid>
+      <description>&lt;p&gt;This blogpost does not serve as an introduction to Dubrovin&#39;s conjecture, let me just say that it states the equivalence between&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;the existence of a full exceptional collection in $\mathbf{D}^{\mathrm{b}}(G/P)$&lt;/li&gt;&#xA;  &lt;li&gt;the generic semisimplicity of (big) quantum cohomology $\mathrm{BQH}(G/P)$&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;The first is a statement about the algebraic geometry of $G/P$, whilst the second concerns the symplectic geometry of $G/P$, and their equivalence is an amazing prediction motivated by mirror symmetry.&lt;/p&gt;&#xA;&lt;p&gt;One thing we can do is tabulate for which $G/P$ either is known to hold, and &lt;a href=&#34;https://www.grassmannian.info&#34;&gt;Grassmannian.info&lt;/a&gt; now does that. Remark that, whilst the conjecture concerns the generic semisimplicity of big quantum cohomology, there is an easier version called small quantum cohomology, where computations are more tractable. And semisimplicity of the small version implies it for the big version, but it is not equivalent to it as there can be cases where the small quantum cohomology is &lt;em&gt;not&lt;/em&gt; semisimple.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>An update for Grassmannian.info: exceptional collections</title>
+      <link>https://pbelmans.ncag.info/blog/2020/05/29/update-for-grasmannian-info/</link>
+      <pubDate>Fri, 29 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/05/29/update-for-grasmannian-info/</guid>
+      <description>&lt;p&gt;Lockdown is good for developing mathematical websites, I guess. I&#39;ve pushed another update to &lt;a href=&#34;https://www.grassmannian.info&#34;&gt;&lt;strong&gt;grassmannian.info&lt;/strong&gt;&lt;/a&gt;: it now shows some basic information about the derived categories of generalised Grassmannians, namely when it is known that a full exceptional collection exists. An important folklore conjecture states that this is the case, but as you can see when you enable the coloring in the table, we are still a long way off of settling it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>An update for Grassmannian.info: Freudenthal&#39;s magic square and pages for root system data</title>
+      <link>https://pbelmans.ncag.info/blog/2020/05/22/update-for-grassmannian-info/</link>
+      <pubDate>Fri, 22 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/05/22/update-for-grassmannian-info/</guid>
+      <description>&lt;p&gt;It&#39;s not a secret to anyone reading my blog that I like making mathematical websites, and over the past days I&#39;ve had some more fun on my current project: &lt;strong&gt;&lt;a href=&#34;https://www.grassmannian.info&#34;&gt;Grassmannian.info&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;a page dedicated to Freudenthal&#39;s magic square and its role in projective geometry (see Landsberg&amp;ndash;Manivel, [&lt;a href=&#34;https://mathscinet.ams.org/mathscinet-getitem?mr=1832903&#34;&gt;MR1832903&lt;/a&gt;])&lt;/li&gt;&#xA;  &lt;li&gt;a page for each root system, containing the data found in e.g. Bourbaki&#39;s appendix (this is not yet complete though, I need to sit down and decide how to present some of the data)&lt;/li&gt;&#xA;  &lt;li&gt;all but the data on projective embeddings is generated on the spot, so if for some reason you care about $\mathrm{OGr}(12,32)$ you &lt;em&gt;could&lt;/em&gt; get information on that (but the system is not meant to be 100% robust yet, so you will likely get an error if you try)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;The big thing missing is of course some explanation for all the data which is there. Also, do you have suggestions, requests or comments? Please get in touch!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>An update for Grassmannian.info: pages for each Grassmannian</title>
+      <link>https://pbelmans.ncag.info/blog/2020/05/16/update-for-grassmannian-info/</link>
+      <pubDate>Sat, 16 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/05/16/update-for-grassmannian-info/</guid>
+      <description>&lt;p&gt;A quick update on the fun project &lt;strong&gt;&lt;a href=&#34;https://www.grassmannian.info&#34;&gt;grassmannian.info&lt;/a&gt;&lt;/strong&gt; that I introduced &lt;a href=&#34;https://pbelmans.ncag.info/blog/2020/05/08/grassmannian-info/&#34;&gt;last week&lt;/a&gt;: every Grassmannian now has its own page, with specific information. Some examples:&lt;/p&gt;&#xA;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;&lt;a href=&#34;https://www.grassmannian.info/A3/2&#34;&gt;the Grassmannian $\mathrm{Gr}(2,4)$&lt;/a&gt;&lt;/li&gt;&#xA;  &lt;li&gt;&lt;a href=&#34;https://www.grassmannian.info/D5/5&#34;&gt;the 10-dimensional spinor variety&lt;/a&gt;&lt;/li&gt;&#xA;  &lt;li&gt;&lt;a href=&#34;https://www.grassmannian.info/E6/1&#34;&gt;the Cayley plane&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;p&gt;Of course, this is far from a complete overview of possible information. Some things I have already planned:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;properties of the dual variety (and other aspects of projective duality)&lt;/li&gt;&#xA;  &lt;li&gt;existence of full exceptional collections&lt;/li&gt;&#xA;  &lt;li&gt;structure of Lefschetz collections&lt;/li&gt;&#xA;  &lt;li&gt;properties of the homological projective dual&lt;/li&gt;&#xA;  &lt;li&gt;the Freudenthal magic square&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Aside from this, I should of course improve the interface of the periodic table itself. And write explanations for what is currently on there.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Grassmannian.info: a periodic table for Grassmannians</title>
+      <link>https://pbelmans.ncag.info/blog/2020/05/08/grassmannian-info/</link>
+      <pubDate>Fri, 08 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/05/08/grassmannian-info/</guid>
+      <description>&lt;p&gt;It&#39;s hard to resist a fun programming project when you think of it, so I spent some time over the past 2 days implementing &lt;a href=&#34;https://www.grassmannian.info&#34;&gt;grassmannian.info&lt;/a&gt;. It is still very much work-in-progress, and I plan to add significantly later, but it&#39;s already functional so hopefully someone might already find it useful. It&#39;s a periodic table-like visualisation of Grassmannians (not just in type A). This supersedes some blog posts I made earlier with various invariants of Grassmannians, which I find myself looking up repeatedly, and so hopefully it is also useful to other people.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

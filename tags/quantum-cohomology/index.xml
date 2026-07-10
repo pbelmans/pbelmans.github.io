@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Quantum Cohomology on Pieter Belmans</title>
+    <link>https://pbelmans.ncag.info/tags/quantum-cohomology/</link>
+    <description>Recent content in Quantum Cohomology on Pieter Belmans</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 26 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://pbelmans.ncag.info/tags/quantum-cohomology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New paper: Generic non-semisimplicity of small quantum cohomology of Kronecker moduli</title>
+      <link>https://pbelmans.ncag.info/blog/2025/11/26/new-paper-non-semisimplicity/</link>
+      <pubDate>Wed, 26 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2025/11/26/new-paper-non-semisimplicity/</guid>
+      <description>&lt;p&gt;It&#39;s not quite a new paper,&#xA;rather it is a new &lt;em&gt;appendix&lt;/em&gt; (&lt;a href=&#34;https://pbelmans.ncag.info/assets/appendix-non-semisimple-kronecker-moduli.pdf&#34;&gt;&lt;strong&gt;pdf of a standalone version&lt;/strong&gt;&lt;/a&gt;),&#xA;to be included in &lt;a href=&#34;https://arxiv.org/abs/2509.01101&#34;&gt;A-D-E diagrams, Hodge&amp;ndash;Tate hyperplane sections and semisimple quantum cohomology&lt;/a&gt;&#xA;by Sergey Galkin, Naichung Conan Leung, Changzheng Li, and Rui Xiong.&lt;/p&gt;&#xA;&lt;p&gt;It is a short appendix,&#xA;in which we observe that one of the main results in the Galkin&amp;ndash;Leung&amp;ndash;Li&amp;ndash;Xiong paper&#xA;is also sufficiently strong to deduce that&#xA;the small quantum cohomology of certain Kronecker moduli is &lt;em&gt;not&lt;/em&gt; semisimple.&#xA;Here, Kronecker moduli is shorthand for&#xA;moduli spaces of stable quiver representations of the Kronecker quiver;&#xA;this class of smooth projective varieties has many extremely nice properties,&#xA;and many strong tools to study them.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>An update for Grassmannian.info: 2 big exceptional quantum spectra</title>
+      <link>https://pbelmans.ncag.info/blog/2024/02/15/two-more-quantum-spectra/</link>
+      <pubDate>Thu, 15 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2024/02/15/two-more-quantum-spectra/</guid>
+      <description>&lt;p&gt;A little while ago I let my computer waste some electricity on computing the quantum spectra&#xA;of two exceptional Grassmannians.&#xA;For more on the quantum spectrum,&#xA;see &lt;a href=&#34;https://pbelmans.ncag.info/blog/2020/11/29/spectra-on-grassmannian/&#34;&gt;this blogpost for more information&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The exceptional Grassmannians are:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;&lt;a href=&#34;https://www.grassmannian.info/E7/3&#34;&gt;E7/P3&lt;/a&gt;, with Euler characteristic 2016&lt;/li&gt;&#xA;  &lt;li&gt;&lt;a href=&#34;https://www.grassmannian.info/E7/5&#34;&gt;E7/P5&lt;/a&gt;, with Euler characteristic 4032&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;I believe slightly larger Grassmannians should also within reach, but the calculation,&#xA;which by no means was optimized,&#xA;did not finish on time.&#xA;Below you can see the largest quantum spectrum currently available on Grassmannian.info:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New Oberwolfach report: Mirror symmetry for moduli of rank 2 bundles on a curve</title>
+      <link>https://pbelmans.ncag.info/blog/2022/08/03/new-owr-gp/</link>
+      <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2022/08/03/new-owr-gp/</guid>
+      <description>&lt;p&gt;As already announced in an &lt;a href=&#34;https://pbelmans.ncag.info/blog/2022/07/23/newish-paper-3/&#34;&gt;earlier paper announcement post&lt;/a&gt;, I have written an &lt;a href=&#34;https://pbelmans.ncag.info/assets/owr-2228-belmans.pdf&#34;&gt;&lt;strong&gt;Oberwolfach report&lt;/strong&gt;&lt;/a&gt; on the series of joint papers with Sergey Galkin and Swarnava Mukhopadhyay on graph potentials and mirror symmetry for moduli of rank 2 bundles on a curve.&lt;/p&gt;&#xA;&lt;p&gt;If you are looking for something with more details than a blogpost, but less details than the introductions of the various papers, this might satisfy your needs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New-ish paper: Graph potentials and symplectic geometry of moduli spaces of vector bundles</title>
+      <link>https://pbelmans.ncag.info/blog/2022/07/23/newish-paper-3/</link>
+      <pubDate>Sat, 23 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2022/07/23/newish-paper-3/</guid>
+      <description>&lt;p&gt;There has been 2 earlier posts about new(ish) papers recently, &lt;a href=&#34;https://pbelmans.ncag.info/blog/2022/05/11/newish-paper/&#34;&gt;a first one&lt;/a&gt; and &lt;a href=&#34;https://pbelmans.ncag.info/blog/2022/05/17/newish-paper-2/&#34;&gt;a second one&lt;/a&gt;, where the new(ish) refers to the fact that they are split off and expanded from a preprint from 2 years ago by Sergey Galkin, Swarnava Mukhopadhyay and myself. Now the third installment, called &lt;a href=&#34;https://arxiv.org/abs/2206.11584&#34;&gt;Graph potentials and symplectic geometry of moduli spaces of vector bundles&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;In the first paper we introduced graph potentials, a family of Laurent polynomials with interesting properties.&#xA;In the current paper we explain why we were motivated in the first place to introduce these graph potentials:&#xA;to understand mirror symmetry for moduli spaces of rank 2 bundles on curves.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New-ish paper: Graph potentials and topological quantum field theories</title>
+      <link>https://pbelmans.ncag.info/blog/2022/05/17/newish-paper-2/</link>
+      <pubDate>Tue, 17 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2022/05/17/newish-paper-2/</guid>
+      <description>&lt;p&gt;There is another new-ish paper on the arXiv now: &lt;strong&gt;&lt;a href=&#34;https://arxiv.org/abs/2205.07244&#34;&gt;Graph potentials and topological quantum field theories&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Last week I announced a &lt;a href=&#34;https://pbelmans.ncag.info/blog/2022/05/11/newish-paper/&#34;&gt;new-ish paper&lt;/a&gt; which was split off from a large preprint by Sergey Galkin, Swarnava Mukhopadhyay and myself. The new installment is really the first part, in which we define the novel object (namely graph potentials) whose properties we study.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;The main goal of this paper is to properly define graph potentials, and study their basic properties.&#xA;They are Laurent polynomials in $3g-3$ variables, where $g$ refers to the genus of a trivalent graph used to define them.&#xA;Locally a trivalent graph looks like&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>An update for Grassmannian.info: quantum spectra for horospherical varieties</title>
+      <link>https://pbelmans.ncag.info/blog/2021/02/24/horospherical-quantum-spectra/</link>
+      <pubDate>Wed, 24 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2021/02/24/horospherical-quantum-spectra/</guid>
+      <description>&lt;p&gt;Yesterday I wrote about how I&#39;ve added horospherical varieties of rank one to &lt;a href=&#34;https://www.grassmannian.info&#34;&gt;Grassmannian.info&lt;/a&gt;. I&#39;ve now also computed the quantum spectra (so the eigenvalues of quantum multiplication by the canonical class), at least for those for which I had the tools. Based on the &lt;a href=&#34;https://arxiv.org/abs/1803.05063&#34;&gt;work of Gonzales&amp;ndash;Pech&amp;ndash;Perrin&amp;ndash;Samokhin&lt;/a&gt; these are the sporadic cases $X^2$ and $X^5$ (with $X^4$ still missing) and all odd symplectic Grassmannians $\operatorname{SGr}(m,2n+1)=X^3(n,m)$. The family $X^1(n)$ has no uniform description of quantum cohomology yet, and only $n=3$ is discussed, using the quantum Chevalley formula.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>An update for Grassmannian.info: more quantum spectra!</title>
+      <link>https://pbelmans.ncag.info/blog/2020/12/03/spectra-on-grassmannian-2/</link>
+      <pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/12/03/spectra-on-grassmannian-2/</guid>
+      <description>&lt;p&gt;This is just a quick update: last time I discussed the &lt;em&gt;quantum spectra&lt;/em&gt; of (generalised) Grassmannians, with the promise of more pictures (in high rank) to come. That promise has now been upheld. For all $G/P$ for which the number of eigenvalues is smaller than 1000 I have computed the spectrum. This includes everything you see on the frontpage, except for some cases in type $\mathrm{E}_7$ and (almost) all in type $\mathrm{E}_8$. But even the (co)adjoint $\mathrm{E}_8$ is now included, having only 240 eigenvalues.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>An update for Grassmannian.info: spectra of quantum multiplication with $\mathrm{c}_1$</title>
+      <link>https://pbelmans.ncag.info/blog/2020/11/29/spectra-on-grassmannian/</link>
+      <pubDate>Sun, 29 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/11/29/spectra-on-grassmannian/</guid>
+      <description>&lt;div id=&#34;eigenvalues&#34; style=&#34;float: right&#34;&gt;&lt;p style=&#34;text-align: center&#34;&gt;&lt;strong&gt;Figure 1&lt;/strong&gt;: Spectrum for $\mathrm{Gr}(3,8)$&lt;/p&gt;&lt;/div&gt;&#xA;&#xA;&lt;p&gt;Here&#39;s another update for &lt;a href=&#34;https://www.grassmannian.info&#34;&gt;Grassmannian.info&lt;/a&gt;: it now contains spectra (as in, the distribution of eigenvalues) of quantum multiplication with $\mathrm{c}_1(G/P)$, for $q=1$. This is interesting for various reasons, but before explaining why, let me tell you that the picture you&#39;re seeing now is giving the eigenvalues for $\mathrm{Gr}(3,8)$. There are 56 eigenvalues, because the (quantum) cohomology is 56-dimensional.&lt;/p&gt;&#xA;&#xA;&lt;h2&gt;Spectral decomposition&lt;/h2&gt;&#xA;&lt;p&gt;The &lt;a href=&#34;https://en.wikipedia.org/wiki/Fukaya_category&#34;&gt;Fukaya category&lt;/a&gt; of a Fano symplectic manifold has a decomposition into orthogonal summands (I&#39;m glancing over many details here). This is the &lt;em&gt;spectral decomposition&lt;/em&gt; from the title, and you can read about it in many places. Let&#39;s rather focus on other aspects of the spectrum.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>An update for Fanography.info: semisimplicity of quantum cohomology</title>
+      <link>https://pbelmans.ncag.info/blog/2020/11/20/update-fanography-dubrovin/</link>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/11/20/update-fanography-dubrovin/</guid>
+      <description>&lt;p&gt;Recall that Dubrovin&#39;s conjecture states the equivalence between&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;the existence of a full exceptional collection in $\mathbf{D}^{\mathrm{b}}(X)$&lt;/li&gt;&#xA;  &lt;li&gt;the generic semisimplicity of (big) quantum cohomology $\mathrm{BQH}(X)$&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;for a smooth projective variety $X$. One can study Dubrovin&#39;s conjecture for special classes of varieties, and &lt;a href=&#34;https://pbelmans.ncag.info/blog/2020/11/06/qh-on-grassmannian-info/&#34;&gt;I already added its status for $G/P$&lt;/a&gt; to &lt;a href=&#34;https://www.grassmannian.info&#34;&gt;Grassmannian.info&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The conjecture is particularly interesting (and originally phrased for) Fano varieties, and for del Pezzo surfaces it is known to hold by Bayer&#39;s results. That brings us to Fano 3-folds, where I was wondering how much was known. Whilst figuring this out, I decided to add this information to &lt;a href=&#34;https://www.fanography.info&#34;&gt;Fanography.info&lt;/a&gt;, and here we are.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>An update for Grassmannian.info: semisimplicity of quantum cohomology</title>
+      <link>https://pbelmans.ncag.info/blog/2020/11/06/qh-on-grassmannian-info/</link>
+      <pubDate>Fri, 06 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/11/06/qh-on-grassmannian-info/</guid>
+      <description>&lt;p&gt;This blogpost does not serve as an introduction to Dubrovin&#39;s conjecture, let me just say that it states the equivalence between&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;the existence of a full exceptional collection in $\mathbf{D}^{\mathrm{b}}(G/P)$&lt;/li&gt;&#xA;  &lt;li&gt;the generic semisimplicity of (big) quantum cohomology $\mathrm{BQH}(G/P)$&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;The first is a statement about the algebraic geometry of $G/P$, whilst the second concerns the symplectic geometry of $G/P$, and their equivalence is an amazing prediction motivated by mirror symmetry.&lt;/p&gt;&#xA;&lt;p&gt;One thing we can do is tabulate for which $G/P$ either is known to hold, and &lt;a href=&#34;https://www.grassmannian.info&#34;&gt;Grassmannian.info&lt;/a&gt; now does that. Remark that, whilst the conjecture concerns the generic semisimplicity of big quantum cohomology, there is an easier version called small quantum cohomology, where computations are more tractable. And semisimplicity of the small version implies it for the big version, but it is not equivalent to it as there can be cases where the small quantum cohomology is &lt;em&gt;not&lt;/em&gt; semisimple.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New preprint: Graph potentials and moduli spaces of rank two bundles on a curve</title>
+      <link>https://pbelmans.ncag.info/blog/2020/09/14/new-preprint-graph-potentials/</link>
+      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/09/14/new-preprint-graph-potentials/</guid>
+      <description>&lt;p&gt;On Friday &lt;a href=&#34;https://users.mccme.ru/galkin/&#34;&gt;Sergey Galkin&lt;/a&gt;, &lt;a href=&#34;http://www.math.tifr.res.in/~swarnava/&#34;&gt;Swarnava Mukhopadhyay&lt;/a&gt; and I uploaded a preprint to the arXiv, titled &lt;a href=&#34;https://arxiv.org/abs/2009.05568&#34;&gt;Graph potentials and moduli spaces of rank two bundles on a curve&lt;/a&gt;. It&#39;s been in the works since 2018, so it&#39;s great to have it finally out!&lt;/p&gt;&#xA;&#xA;&lt;p&gt;The paper discusses aspects of mirror symmetry for an interesting class of Fano varieties: moduli of rank 2 bundles on curves of genus $g\geq 2$. As you can tell from the page count, this takes some work: we introduce a class of Laurent polynomials (the &lt;em&gt;graph potentials&lt;/em&gt; from the title), show that they have many interesting properties and that they are related to these Fano varieties via toric degenerations. This then allows us to conclude enumerative mirror symmetry in this case. Then we also use graph potentials to further study a conjecture on semiorthogonal decompositions for the derived categories of these Fano varieties, and give alternative geometric evidence for this conjecture.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

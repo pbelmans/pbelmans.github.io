@@ -5,8 +5,8 @@
     <description></description>
     <link>https://pbelmans.ncag.info/</link>
     <atom:link href="https://pbelmans.ncag.info/blog/feed/" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 10 Jul 2026 13:36:28 &#43;0000</pubDate>
-    <lastBuildDate>Fri, 10 Jul 2026 13:36:28 &#43;0000</lastBuildDate>
+    <pubDate>Fri, 10 Jul 2026 13:59:03 &#43;0000</pubDate>
+    <lastBuildDate>Fri, 10 Jul 2026 13:59:03 &#43;0000</lastBuildDate>
     <generator>Hugo</generator>
     
     <item>
@@ -76,8 +76,8 @@ with &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt;. I&amp;rsquo;m a b
       <pubDate>Thu, 09 Jul 2026 00:00:00 &#43;0000</pubDate>
       <link>https://pbelmans.ncag.info/blog/2026/07/09/mgnbar-update/</link>
       <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/07/09/mgnbar-update/</guid>
-      
-      
+      <category>moduli spaces</category><category>programming</category>
+      <category>mathematics</category>
     </item>
     
     <item>
@@ -115,7 +115,7 @@ which was a lot of fun!
       <pubDate>Wed, 08 Jul 2026 00:00:00 &#43;0000</pubDate>
       <link>https://pbelmans.ncag.info/blog/2026/07/08/new-paper-brauer-groups-gerbes/</link>
       <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/07/08/new-paper-brauer-groups-gerbes/</guid>
-      <category>algebraic geometry</category>
+      <category>quivers</category><category>moduli spaces</category><category>algebraic geometry</category>
       <category>mathematics</category>
     </item>
     
@@ -158,7 +158,7 @@ Congratulations!&lt;/p&gt;
       <pubDate>Fri, 03 Jul 2026 00:00:00 &#43;0000</pubDate>
       <link>https://pbelmans.ncag.info/blog/2026/07/03/gianni-petrella/</link>
       <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/07/03/gianni-petrella/</guid>
-      
+      <category>quivers</category>
       <category>mathematics</category>
     </item>
     
@@ -226,7 +226,7 @@ so no separate blogpost.
       <pubDate>Thu, 02 Jul 2026 00:00:00 &#43;0000</pubDate>
       <link>https://pbelmans.ncag.info/blog/2026/07/02/fanography-static/</link>
       <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/07/02/fanography-static/</guid>
-      <category>algebraic geometry</category><category>programming</category><category>Fano 3-folds</category>
+      <category>fanography</category><category>Fano varieties</category><category>programming</category>
       <category>mathematics</category>
     </item>
     
@@ -394,8 +394,8 @@ where I discuss some other changes and improvements to Fanography.
       <pubDate>Wed, 01 Jul 2026 00:00:00 &#43;0000</pubDate>
       <link>https://pbelmans.ncag.info/blog/2026/07/01/mori-mukai-determinant/</link>
       <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/07/01/mori-mukai-determinant/</guid>
-      
-      
+      <category>Fano varieties</category><category>programming</category><category>intersection theory</category>
+      <category>mathematics</category>
     </item>
     
     <item>
@@ -416,7 +416,7 @@ which describes a fun way to use computer algebra to experiment with conjectures
       <pubDate>Fri, 29 May 2026 00:00:00 &#43;0000</pubDate>
       <link>https://pbelmans.ncag.info/blog/2026/05/29/verifying-kostants-conjecture/</link>
       <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/05/29/verifying-kostants-conjecture/</guid>
-      <category>algebraic geometry</category><category>programming</category>
+      <category>programming</category>
       <category>mathematics</category>
     </item>
     
@@ -465,7 +465,7 @@ Let us know which features you would like to see implemented next!&lt;/p&gt;
       <pubDate>Mon, 11 May 2026 00:00:00 &#43;0000</pubDate>
       <link>https://pbelmans.ncag.info/blog/2026/05/11/lie-jl-1-0-0/</link>
       <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/05/11/lie-jl-1-0-0/</guid>
-      <category>algebraic geometry</category><category>programming</category>
+      <category>programming</category><category>vector bundles</category><category>homogeneous varieties</category>
       <category>mathematics</category>
     </item>
     
@@ -488,8 +488,8 @@ but&lt;/p&gt;
       <pubDate>Fri, 08 May 2026 00:00:00 &#43;0000</pubDate>
       <link>https://pbelmans.ncag.info/blog/2026/05/08/HomogeneousTools-website/</link>
       <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/05/08/HomogeneousTools-website/</guid>
-      
-      
+      <category>programming</category><category>homogeneous varieties</category>
+      <category>mathematics</category>
     </item>
     
     <item>
@@ -505,8 +505,8 @@ but&lt;/p&gt;
       <pubDate>Tue, 05 May 2026 00:00:00 &#43;0000</pubDate>
       <link>https://pbelmans.ncag.info/blog/2026/05/05/moving-from-jekyll-to-hugo/</link>
       <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/05/05/moving-from-jekyll-to-hugo/</guid>
-      
-      <category>meta</category>
+      <category>programming</category>
+      <category>personal</category>
     </item>
     
   </channel>

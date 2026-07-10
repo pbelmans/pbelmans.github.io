@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Horospherical Varieties on Pieter Belmans</title>
+    <link>https://pbelmans.ncag.info/tags/horospherical-varieties/</link>
+    <description>Recent content in Horospherical Varieties on Pieter Belmans</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 24 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://pbelmans.ncag.info/tags/horospherical-varieties/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>An update for Grassmannian.info: quantum spectra for horospherical varieties</title>
+      <link>https://pbelmans.ncag.info/blog/2021/02/24/horospherical-quantum-spectra/</link>
+      <pubDate>Wed, 24 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2021/02/24/horospherical-quantum-spectra/</guid>
+      <description>&lt;p&gt;Yesterday I wrote about how I&#39;ve added horospherical varieties of rank one to &lt;a href=&#34;https://www.grassmannian.info&#34;&gt;Grassmannian.info&lt;/a&gt;. I&#39;ve now also computed the quantum spectra (so the eigenvalues of quantum multiplication by the canonical class), at least for those for which I had the tools. Based on the &lt;a href=&#34;https://arxiv.org/abs/1803.05063&#34;&gt;work of Gonzales&amp;ndash;Pech&amp;ndash;Perrin&amp;ndash;Samokhin&lt;/a&gt; these are the sporadic cases $X^2$ and $X^5$ (with $X^4$ still missing) and all odd symplectic Grassmannians $\operatorname{SGr}(m,2n+1)=X^3(n,m)$. The family $X^1(n)$ has no uniform description of quantum cohomology yet, and only $n=3$ is discussed, using the quantum Chevalley formula.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Horospherical varieties on Grassmannian.info</title>
+      <link>https://pbelmans.ncag.info/blog/2021/02/23/horospherical-rank-one/</link>
+      <pubDate>Tue, 23 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2021/02/23/horospherical-rank-one/</guid>
+      <description>&lt;p&gt;Last week I talked about how the Hodge diamond cutter now deals with horospherical varieties of rank 1. Now I&#39;ve also implemented their properties for &lt;a href=&#34;https://www.grassmannian.info&#34;&gt;Grassmannian.info&lt;/a&gt;, see the &lt;a href=&#34;https://www.grassmannian.info/horospherical&#34;&gt;overview table&lt;/a&gt;. Even though they are not homogeneous varieties, their geometry is so close to them that it makes sense to include them.&lt;/p&gt;&#xA;&lt;p&gt;A &lt;em&gt;horospherical&lt;/em&gt; variety $X$ is a variety with an action by a reductive group $G$, such that $X$ has a dense $B$-orbit (where $B$ is a Borel subgroup), and if we let $H$ denote the stabiliser of a point in this dense orbit, then $H$ contains a conjugate of the maximal unipotent subgroup of $G$ inside $B$. In other words: we don&#39;t let $B$ act completely transitively, but &lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Horospherical varieties in the Hodge diamond cutter</title>
+      <link>https://pbelmans.ncag.info/blog/2021/02/14/horospherical-cutter/</link>
+      <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2021/02/14/horospherical-cutter/</guid>
+      <description>&lt;p style=&#34;background-color: rgb(255, 243, 205); border: 1px solid rgb(255, 238, 186); padding: 10px;&#34;&gt;&#xA;  The functionality outlined below, and much more, is implemented in &lt;a href=&#34;https://github.com/pbelmans/hodge-diamond-cutter&#34;&gt;&lt;strong&gt;Hodge diamond cutter&lt;/strong&gt;&lt;/a&gt;, which can be used in Sage.&#xA;  If you use it for your research, please cite it using &lt;a href=&#34;https://doi.org/10.5281/zenodo.3893509&#34; rel=&#34;nofollow&#34;&gt;&lt;img src=&#34;https://zenodo.org/badge/DOI/10.5281/zenodo.3893509.svg&#34; alt=&#34;DOI&#34; data-canonical-src=&#34;https://zenodo.org/badge/DOI/10.5281/zenodo.3893509.svg&#34; style=&#34;max-width:100%;&#34;&gt;&lt;/a&gt;.&#xA;&lt;/p&gt;&#xA;&#xA;&#xA;&lt;p&gt;Just a quick service announcement: I have now added Hodge diamonds for horospherical varieties, as discussed in &lt;a href=&#34;https://arxiv.org/abs/1803.05063&#34;&gt;Gonzales--Pech--Perrin--Samokhin, Geometry of horospherical varieties of Picard rank one&lt;/a&gt;. Maybe I should spend some time discussing their geometry, but this will be it for now, interested readers are referred to this excellent article.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

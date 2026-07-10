@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homogeneous Varieties on Pieter Belmans</title>
+    <link>https://pbelmans.ncag.info/tags/homogeneous-varieties/</link>
+    <description>Recent content in Homogeneous Varieties on Pieter Belmans</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 11 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://pbelmans.ncag.info/tags/homogeneous-varieties/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Semisimple.jl 1.0.0 is now available!</title>
+      <link>https://pbelmans.ncag.info/blog/2026/05/11/lie-jl-1-0-0/</link>
+      <pubDate>Mon, 11 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2026/05/11/lie-jl-1-0-0/</guid>
+      <description>&lt;p&gt;This is a cross-post from the &lt;a href=&#34;https://homogeneous.tools/blog/2026/05/11/lie-jl-1-0-0/&#34;&gt;HomogeneousTools website&lt;/a&gt;, where package-specific updates about Semisimple.jl will also appear.&lt;/p&gt;&#xA;&lt;p&gt;I will occasionally post about Semisimple.jl here, but if you really want to keep up with development, you should head over to &lt;a href=&#34;https://homogeneous.tools&#34;&gt;homogeneous.tools&lt;/a&gt;.&#xA;&#xA;&lt;hr&gt;&#xA;&lt;br&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; this package was previously known as &lt;strong&gt;Lie.jl&lt;/strong&gt; and has been renamed to &lt;strong&gt;Semisimple.jl&lt;/strong&gt; to adhere to Julia registry naming conventions.&lt;/p&gt;&#xA;&#xA;&lt;hr&gt;&#xA;&lt;br&gt;&#xA;&#xA;&lt;p style=&#34;background-color: rgb(255, 243, 205); border: 1px solid rgb(255, 238, 186); padding: 10px; overflow: hidden;&#34;&gt;&#xA;  &lt;img src=&#34;https://pbelmans.ncag.info/assets/favicon-semisimple.svg&#34; width=&#34;48&#34; height=&#34;48&#34; alt=&#34;&#34; style=&#34;float: left; margin-right: 10px;&#34;&gt;&#xA;  This post concerns &lt;a href=&#34;https://github.com/HomogeneousTools/Semisimple.jl&#34;&gt;&lt;strong&gt;Semisimple.jl&lt;/strong&gt;&lt;/a&gt;,&#xA;  a Julia package for computations with semisimple Lie algebras.&#xA;  There is &lt;a href=&#34;https://homogeneous.tools/Semisimple.jl/&#34;&gt;documentation&lt;/a&gt;.&#xA;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>HomogeneousTools website</title>
+      <link>https://pbelmans.ncag.info/blog/2026/05/08/HomogeneousTools-website/</link>
+      <pubDate>Fri, 08 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2026/05/08/HomogeneousTools-website/</guid>
+      <description>&lt;p&gt;Together with Javier Fernández Píriz,&#xA;a PhD student at the University of Luxembourg,&#xA;we are working on HomogeneousTools,&#xA;a collection of packages meant to efficiently deal with homogeneous varieties&#xA;and bundles on them.&lt;/p&gt;&#xA;&lt;p&gt;For now, our main joint project isn&amp;rsquo;t live yet&#xA;(more on that in a few weeks),&#xA;but&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;the &lt;a href=&#34;https://homogeneous.tools&#34;&gt;project&amp;rsquo;s website is now live&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;two preliminary packages I created for our main work are also live&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;More on those already live packages soon!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

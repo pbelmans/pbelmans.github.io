@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hilbert Schemes on Pieter Belmans</title>
+    <link>https://pbelmans.ncag.info/tags/Hilbert-schemes/</link>
+    <description>Recent content in Hilbert Schemes on Pieter Belmans</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://pbelmans.ncag.info/tags/Hilbert-schemes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Postdoc position in algebraic geometry</title>
+      <link>https://pbelmans.ncag.info/blog/2026/02/05/postdoc-hilbertmovies/</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2026/02/05/postdoc-hilbertmovies/</guid>
+      <description>&lt;p&gt;I am excited to announce&#xA;&lt;a href=&#34;https://www.uu.nl/en/organisation/working-at-utrecht-university/jobs/postdoc-position-in-algebraic-geometry&#34;&gt;&#xA;  a postdoc position in algebraic geometry&#xA;&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The summary:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;starting date is &lt;strong&gt;October 1 2026&lt;/strong&gt; (or as soon as possible thereafter)&lt;/li&gt;&#xA;  &lt;li&gt;it is for 3 years (with a 1-year probation)&lt;/li&gt;&#xA;  &lt;li&gt;the focus is (derived categories of) Hilbert schemes of points on surfaces,&#xA;    so some experience with these or topics closely related to it&#xA;    is required&lt;/li&gt;&#xA;  &lt;li&gt;it is part of a &lt;a href=&#34;https://pbelmans.ncag.info/projects/hilbertmovies&#34;&gt;joint grant&lt;/a&gt;&#xA;    between &lt;a href=&#34;https://sites.google.com/site/andkrugmath/&#34;&gt;Andreas Krug&lt;/a&gt;&#xA;    and myself, and regular visits to Hannover are anticipated&lt;/li&gt;&#xA;  &lt;li&gt;we will start reviewing and interviewing candidates after the application deadline of &lt;strong&gt;February 22&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;There is a really active research group on algebraic geometry in Utrecht,&#xA;and the Netherlands is a great place in general for algebraic geometry, with many interesting activities.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New tool: twisted Hodge diamonds for Hilbert schemes of points</title>
+      <link>https://pbelmans.ncag.info/blog/2024/12/16/twisted-hodge-hilbert/</link>
+      <pubDate>Mon, 16 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2024/12/16/twisted-hodge-hilbert/</guid>
+      <description>&lt;p style=&#34;background-color: rgb(255, 243, 205); border: 1px solid rgb(255, 238, 186); padding: 10px;&#34;&gt;&#xA;  The functionality outlined below is implemented in&#xA;  &lt;a href=&#34;https://github.com/pbelmans/twisted-hodge-hilbert&#34;&gt;&lt;strong&gt;Twisted Hodge numbers for Hilbert schemes of points&lt;/strong&gt;&lt;/a&gt;,&#xA;  which can be used in Sage.&#xA;  There is &lt;a href=&#34;https://twisted-hilbert.ncag.info&#34;&gt;documentation&lt;/a&gt;.&#xA;  &lt;br&gt;&#xA;  If you use it for your research,&#xA;  please cite it using the DOI&#xA;  &lt;a href=&#34;https://doi.org/10.5281/zenodo.14334379&#34;&gt;&#xA;    &lt;img src=&#34;https://zenodo.org/badge/DOI/10.5281/zenodo.14334379.svg&#34; alt=&#34;DOI&#34;&gt;&#xA;  &lt;/a&gt;,&#xA;  &lt;a href=&#34;https://github.com/pbelmans/twisted-hodge-hilbert?tab=readme-ov-file#how-to-cite&#34;&gt;as explained in the README&lt;/a&gt;.&#xA;&lt;/p&gt;&#xA;&#xA;&#xA;&lt;p&gt;Last year I wrote about &lt;a href=&#34;https://pbelmans.ncag.info/blog/2023/09/13/new-paper-hochschild-hilbert/&#34;&gt;a paper Lie Fu, Andreas Krug, and I wrote&lt;/a&gt;,&#xA;about computing the Hochschild cohomology of Hilbert schemes of points.&#xA;In this paper we conjectured that the identity&#xA;\[&#xA;  \sum_{n\geq 0}\sum_{p=0}^{2n}\sum_{q=0}^{2n}\mathrm{h}^{p,q}(\mathop{\rm Hilb}\nolimits^nS,{L}_n)x^py^qt^n&#xA;  =&#xA;  \prod_{k\ge 1}\prod_{p=0}^2\prod_{q=0}^2\left( 1-(-1)^{p+q}x^{p+k-1}y^{q+k-1}t^k\right)^{-(-1)^{p+q}\mathrm{h}^{p,q}(S,{L}^{\otimes k})}.&#xA;\]&#xA;holds.&#xA;It gives an expression of the twisted Hodge numbers of the line bundle $L_n$ on $\mathop{\rm Hilb}^nS$&#xA;induced from a line bundle $L$ on $S$,&#xA;in terms of the twisted Hodge numbers of the line bundles (plural!) $L^{\otimes k}$ on $S$.&#xA;The version without $\otimes k$ was a conjecture of Boissière,&#xA;for which counterexamples had already been found.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New paper: Hochschild cohomology of Hilbert schemes of points on surfaces</title>
+      <link>https://pbelmans.ncag.info/blog/2023/09/13/new-paper-hochschild-hilbert/</link>
+      <pubDate>Wed, 13 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2023/09/13/new-paper-hochschild-hilbert/</guid>
+      <description>&lt;p&gt;I&#39;m really happy and proud to have &lt;a href=&#34;https://arxiv.org/abs/2309.06244&#34;&gt;&lt;strong&gt;Hochschild cohomology of Hilbert schemes of points on surfaces&lt;/strong&gt;&lt;/a&gt;&#xA;on the arXiv now,&#xA;joint with my good friends &lt;a href=&#34;https://irma.math.unistra.fr/~lfu/&#34;&gt;Lie Fu&lt;/a&gt;&#xA;and &lt;a href=&#34;https://sites.google.com/site/andkrugmath/&#34;&gt;Andreas Krug&lt;/a&gt;.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;There is a (to me at least) funny story behind the paper.&#xA;In Huybrechts&#39;s famous book on Fourier&amp;ndash;Mukai transforms,&#xA;he briefly discusses Hochschild (co)homology&#xA;through a &lt;em&gt;larger&lt;/em&gt; and &lt;em&gt;bigraded&lt;/em&gt; algebra which&#xA;contains both Hochschild cohomology and Hochschild homology,&#xA;and also the canonical algebra,&#xA;following Orlov&#39;s presentation in his survey paper.&#xA;It is defined for a smooth projective variety $X$ as&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hodge numbers for Hilbert squares and Hilbert cubes</title>
+      <link>https://pbelmans.ncag.info/blog/2019/01/16/hodge-numbers-for-hilbert-squares-and-cubes/</link>
+      <pubDate>Wed, 16 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2019/01/16/hodge-numbers-for-hilbert-squares-and-cubes/</guid>
+      <description>&lt;p style=&#34;background-color: rgb(255, 243, 205); border: 1px solid rgb(255, 238, 186); padding: 10px;&#34;&gt;&#xA;  The functionality outlined below, and much more, is implemented in &lt;a href=&#34;https://github.com/pbelmans/hodge-diamond-cutter&#34;&gt;&lt;strong&gt;Hodge diamond cutter&lt;/strong&gt;&lt;/a&gt;, which can be used in Sage.&#xA;  If you use it for your research, please cite it using &lt;a href=&#34;https://doi.org/10.5281/zenodo.3893509&#34; rel=&#34;nofollow&#34;&gt;&lt;img src=&#34;https://zenodo.org/badge/DOI/10.5281/zenodo.3893509.svg&#34; alt=&#34;DOI&#34; data-canonical-src=&#34;https://zenodo.org/badge/DOI/10.5281/zenodo.3893509.svg&#34; style=&#34;max-width:100%;&#34;&gt;&lt;/a&gt;.&#xA;&lt;/p&gt;&#xA;&#xA;&#xA;&lt;p&gt;In my ongoing series of posts on implementations to Hodge numbers for interesting smooth projective varieties we have now arrived at Hilbert squares and Hilbert cubes. In &lt;a href=&#34;https://pbelmans.ncag.info/blog/2017/11/18/hodge-numbers-hilb/&#34;&gt;Hodge numbers for $\operatorname{Hilb}^nS$&lt;/a&gt; I explained how to compute these for Hilbert schemes of $n$ points on smooth projective surfaces. When one looks at $\operatorname{Hilb}^nX$ for $X$ a higher-dimensional variety, these are &lt;em&gt;very singular&lt;/em&gt;, &lt;strong&gt;unless&lt;/strong&gt; $n=2,3$. These special cases are then called Hilbert squares (resp. Hilbert cubes).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hilbert squares of higher-dimensional hyperkähler varieties are not hyperkähler</title>
+      <link>https://pbelmans.ncag.info/blog/2018/08/14/hyperkahler-hilbert-squares/</link>
+      <pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2018/08/14/hyperkahler-hilbert-squares/</guid>
+      <description>&lt;p&gt;Of course, the statement in the title should not come as a surprise, otherwise they would already be listed among the extremely short list of known hyperkähler varieties. Recall that a &lt;em&gt;hyperkähler&lt;/em&gt; variety is a variety with a holomorphic symplectic form, and they are one of three building blocks (the others are abelian varieties and Calabi&amp;ndash;Yau varieties) of varieties with trivial canonical bundle. So far, the list of known hyperkähler varieties is rather short:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hodge numbers for $\operatorname{Hilb}^nS$</title>
+      <link>https://pbelmans.ncag.info/blog/2017/11/18/hodge-numbers-hilb/</link>
+      <pubDate>Sat, 18 Nov 2017 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2017/11/18/hodge-numbers-hilb/</guid>
+      <description>&lt;p style=&#34;background-color: rgb(255, 243, 205); border: 1px solid rgb(255, 238, 186); padding: 10px;&#34;&gt;&#xA;  The functionality outlined below, and much more, is implemented in &lt;a href=&#34;https://github.com/pbelmans/hodge-diamond-cutter&#34;&gt;&lt;strong&gt;Hodge diamond cutter&lt;/strong&gt;&lt;/a&gt;, which can be used in Sage.&#xA;  If you use it for your research, please cite it using &lt;a href=&#34;https://doi.org/10.5281/zenodo.3893509&#34; rel=&#34;nofollow&#34;&gt;&lt;img src=&#34;https://zenodo.org/badge/DOI/10.5281/zenodo.3893509.svg&#34; alt=&#34;DOI&#34; data-canonical-src=&#34;https://zenodo.org/badge/DOI/10.5281/zenodo.3893509.svg&#34; style=&#34;max-width:100%;&#34;&gt;&lt;/a&gt;.&#xA;&lt;/p&gt;&#xA;&#xA;&#xA;&lt;p&gt;3 years ago I created a &lt;a href=&#34;https://pbelmans.ncag.info/cohomology-tables&#34;&gt;webpage that computes the Hodge diamond and sheaf cohomology of line bundles for complete intersections&lt;/a&gt; as a tool to illustrate Serre duality in some lectures on Grothendieck duality.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New paper: Noncommutative quadrics and Hilbert schemes of points</title>
+      <link>https://pbelmans.ncag.info/blog/2016/05/11/new-paper-noncommutative-quadrics-and-hilbert-schemes-of-points/</link>
+      <pubDate>Wed, 11 May 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/05/11/new-paper-noncommutative-quadrics-and-hilbert-schemes-of-points/</guid>
+      <description>&lt;p&gt;Theo Raedschelders and I just uploaded our newest preprint: &lt;a href=&#34;http://arxiv.org/abs/1605.02795&#34;&gt;Noncommutative quadrics and Hilbert schemes of points&lt;/a&gt;. The main goal of the paper is to extend the result of Orlov&#39;s paper &lt;a href=&#34;https://arxiv.org/abs/1503.03174&#34;&gt;Geometric realizations of quiver algebras&lt;/a&gt;: we prove that (the derived category of) a noncommutative quadric embeds in (the derived category of) a commutative deformation of the Hilbert scheme of two points on a quadric. Orlov showed this for noncommutative planes (i.e. quadratic Artin--Schelter regular algebras), we now do the cubic Artin--Schelter regular case.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

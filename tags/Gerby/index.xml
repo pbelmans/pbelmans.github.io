@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gerby on Pieter Belmans</title>
+    <link>https://pbelmans.ncag.info/tags/Gerby/</link>
+    <description>Recent content in Gerby on Pieter Belmans</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 13 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://pbelmans.ncag.info/tags/Gerby/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introducing The Moduli Space</title>
+      <link>https://pbelmans.ncag.info/blog/2021/01/13/themodulispace/</link>
+      <pubDate>Wed, 13 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2021/01/13/themodulispace/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://as.cornell.edu/daniel-halpern-leistner&#34;&gt;Dan Halpern-Leistner&lt;/a&gt; is now also using the Gerby framework, to make his lecture notes on moduli theory available.&lt;/p&gt;&#xA;&lt;p&gt;Go read &lt;a href=&#34;https://book.themoduli.space&#34;&gt;The Moduli Space&lt;/a&gt;, it&#39;s exciting stuff!&lt;/p&gt;&#xA;&lt;p&gt;&lt;small&gt;Let me know if you find any website-related issues.&lt;/small&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Gerby supports TikZ now</title>
+      <link>https://pbelmans.ncag.info/blog/2019/12/21/gerby-supports-tikz/</link>
+      <pubDate>Sat, 21 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2019/12/21/gerby-supports-tikz/</guid>
+      <description>&lt;p&gt;One aspect in which &lt;a href=&#34;https://gerby-project.github.io/&#34;&gt;Gerby&lt;/a&gt; (the software which underlies the Stacks project) was lacking was its support for TikZ and commutative diagrams. Luckily both &lt;a href=&#34;https://stacks.math.columbia.edu&#34;&gt;The Stacks project&lt;/a&gt; and &lt;a href=&#34;https://kerodon.net&#34;&gt;Kerodon&lt;/a&gt; are written by people who use &lt;var&gt;xypic&lt;/var&gt; for their commutative diagrams, which allows the use of &lt;a href=&#34;https://sonoisa.github.io/xyjax/xyjax.html&#34;&gt;XyJax&lt;/a&gt;, but this is not a perfect implementation of &lt;var&gt;xypic&lt;/var&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The system on which (part of) Gerby is built is &lt;a href=&#34;http://plastex.github.io/plastex/&#34;&gt;plasTeX&lt;/a&gt;, which contained support for TikZ for a while now, by running &lt;var&gt;pdflatex&lt;/var&gt; on every TikZ environment and then converting the resulting pdf to svg. I have now copied over this implementation (thank you &lt;a href=&#34;https://www.math.u-psud.fr/~pmassot/en/&#34;&gt;Patrick Massot&lt;/a&gt; for implementing it for the HTML5 renderer!) and added a &lt;a href=&#34;https://github.com/gerby-project/hello-world/blob/master/document-tikz.tex&#34;&gt;minimal working example containing TikZ&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A minimal working example to use Gerby</title>
+      <link>https://pbelmans.ncag.info/blog/2019/07/16/minimal-working-gerby/</link>
+      <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2019/07/16/minimal-working-gerby/</guid>
+      <description>&lt;p&gt;If you are interested in setting up a website similar to &lt;a href=&#34;https://stacks.math.columbia.edu&#34;&gt;The Stacks project&lt;/a&gt; or &lt;a href=&#34;https://kerodon.net&#34;&gt;Kerodon&lt;/a&gt;, you can do this using the same framework that powers these websites: &lt;a href=&#34;https://gerby-project.github.io&#34;&gt;Gerby&lt;/a&gt;. Unfortunately, until now the instructions to use this were pretty annoyingly only available for the Stacks project, so setting things up correctly was painful and very specific.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;We have now created &lt;a href=&#34;https://github.com/gerby-project/hello-world&#34;&gt;&lt;strong&gt;a minimal working example&lt;/strong&gt;&lt;/a&gt; which lists the relevant steps to set up Gerby for a minimal Hello world project. Doing this you&#39;ll get an instance of the Gerby with the Stacks project layout, containing just a few tags. This repository is basically a Travis script which performs all the steps required for the installation of plasTeX and Gerby, and then goes through what should be the usual update process for an actual instance.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Introducing Kerodon</title>
+      <link>https://pbelmans.ncag.info/blog/2018/10/17/kerodon/</link>
+      <pubDate>Wed, 17 Oct 2018 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2018/10/17/kerodon/</guid>
+      <description>&lt;p&gt;For the new Stacks project website I created &lt;a href=&#34;https://gerby-project.github.io/&#34;&gt;Gerby&lt;/a&gt;, a combination of a plasTeX fork and a Flask website to create online views for large LaTeX documents with a permanent reference system (also known as tags). From the beginning we intended it to be applicable to at least 1 other project: an online view for the works of &lt;a href=&#34;http://www.math.harvard.edu/~lurie/&#34;&gt;Jacob Lurie&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;This is now live, as &lt;strong&gt;&lt;a href=&#34;https://kerodon.net&#34;&gt;Kerodon&lt;/a&gt;&lt;/strong&gt;. Currently it contains 1 chapter: &lt;a href=&#34;https://kerodon.net/tag/0001&#34;&gt;The Language of $\infty$-Categories&lt;/a&gt;. Gradually this will increase, as more material is prepared to be included in Kerodon.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A new website for the Stacks project (2)</title>
+      <link>https://pbelmans.ncag.info/blog/2018/05/21/new-stacks-project/</link>
+      <pubDate>Mon, 21 May 2018 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2018/05/21/new-stacks-project/</guid>
+      <description>&lt;p&gt;Almost 6 years ago, I wrote a blogpost &lt;a href=&#34;https://pbelmans.ncag.info/blog/2012/07/19/a-new-website-for-the-stacks-project/&#34;&gt;A new website for the Stacks project&lt;/a&gt; announcing the first version of the Stacks project website. Today v2 has been released, see &lt;a href=&#34;https://stacks.math.columbia.edu&#34;&gt;&lt;var&gt;stacks.math.columbia.edu&lt;/var&gt;&lt;/a&gt;.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;I would like to thank &lt;a href=&#34;http://chngr.github.io&#34;&gt;Raymond Cheng&lt;/a&gt; and &lt;a href=&#34;http://www.math.columbia.edu/~dejong/&#34;&gt;Johan de Jong&lt;/a&gt; for the hard work we&#39;ve done together, and &lt;a href=&#34;http://www.math.columbia.edu/~woit/wordpress/&#34;&gt;Peter Woit&lt;/a&gt; for helping us with the server administration.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;The main point of the new website as a user is that it is &lt;em&gt;mobile-friendly&lt;/em&gt;. It should look good on tablets and smartphones, and if it doesn&#39;t, please tell us.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A website for Gerby</title>
+      <link>https://pbelmans.ncag.info/blog/2018/05/20/gerby/</link>
+      <pubDate>Sun, 20 May 2018 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2018/05/20/gerby/</guid>
+      <description>&lt;p&gt;By now it&#39;s no secret that we are working on a new version of the Stacks project website (see &lt;a href=&#34;https://pbelmans.ncag.info/blog/2017/08/27/introduction-gerby-plastex/&#34;&gt;1&lt;/a&gt; and &lt;a href=&#34;https://pbelmans.ncag.info/blog/2018/01/05/introducing-gerby-tools/&#34;&gt;2&lt;/a&gt;). We have been working on a system called &lt;em&gt;Gerby&lt;/em&gt; for almost a year now, as a replacement for the Stacks project website. In fact, it will go live &lt;em&gt;tomorrow&lt;/em&gt;.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;In case you are interested in knowing more about the new system, you want to run your local copy of the Stacks project website, or you are interested in testing the system for your own project, I have put up &lt;a href=&#34;https://gerby-project.github.io/&#34;&gt;a page describing the system&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Introducing Gerby: the tools and website</title>
+      <link>https://pbelmans.ncag.info/blog/2018/01/05/introducing-gerby-tools/</link>
+      <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2018/01/05/introducing-gerby-tools/</guid>
+      <description>&lt;p&gt;A little while ago I explained &lt;a href=&#34;https://pbelmans.ncag.info/blog/2017/08/27/introduction-gerby-plastex/&#34;&gt;how to take the Stacks project and convert it to a bunch of small HTML files&lt;/a&gt;, which is the first step in setting up the new website for the Stacks project. In this post I&#39;ll explain the next two steps: creating the database behind the website, and setting up the website. For now, this part is not as streamlined as we&#39;d want it to be, but in any case, it&#39;s not too hard.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Introducing Gerby: plasTeX</title>
+      <link>https://pbelmans.ncag.info/blog/2017/08/27/introduction-gerby-plastex/</link>
+      <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2017/08/27/introduction-gerby-plastex/</guid>
+      <description>&lt;p&gt;So, we are currently working on a new version of the Stacks project website. If you have any suggestions for the new website, please get in touch: you can email me, or &lt;a href=&#34;https://github.com/pbelmans/gerby-website&#34;&gt;use the issue tracker for the website on GitHub&lt;/a&gt;. The project is called &lt;strong&gt;Gerby&lt;/strong&gt;, as a silly reference to the Stacks project. It consists of several parts, and this blog post explains you how to use one of them: the &lt;a href=&#34;https://github.com/pbelmans/plastex/tree/gerby&#34;&gt;Gerby renderer in plasTeX&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Stacks project workshop: the aftermath</title>
+      <link>https://pbelmans.ncag.info/blog/2017/08/09/stacks-project-workshop-discussion/</link>
+      <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2017/08/09/stacks-project-workshop-discussion/</guid>
+      <description>&lt;p&gt;So, last week we had the &lt;a href=&#34;http://stacks.github.io&#34;&gt;Stacks project workshop&lt;/a&gt;. And it was fun!&lt;/p&gt;&#xA;&#xA;&lt;h3&gt;Mathematically&lt;/h3&gt;&#xA;&lt;p&gt;I think that participants enjoyed the setup of working in small groups on a specific topic, with the possibility that they could write up what they have learnt and put this in the Stacks project. Most of the topics were chosen with a somewhat easy inclusion in the Stacks project in mind, and at least two groups are publicly sharing their progress on this:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

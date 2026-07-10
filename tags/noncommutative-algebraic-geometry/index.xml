@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Noncommutative Algebraic Geometry on Pieter Belmans</title>
+    <link>https://pbelmans.ncag.info/tags/noncommutative-algebraic-geometry/</link>
+    <description>Recent content in Noncommutative Algebraic Geometry on Pieter Belmans</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 24 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://pbelmans.ncag.info/tags/noncommutative-algebraic-geometry/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Congratulations Dr. Thilo Baumann!</title>
+      <link>https://pbelmans.ncag.info/blog/2025/06/24/thilo-baumann/</link>
+      <pubDate>Tue, 24 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2025/06/24/thilo-baumann/</guid>
+      <description>&lt;p&gt;I want to congratulate&#xA;(a little belatedly)&#xA;&lt;a href=&#34;https://tbpi.github.io&#34;&gt;Thilo Baumann&lt;/a&gt;,&#xA;for his PhD defense last week&#xA;at the University of Luxembourg,&#xA;and the wonderful thesis &lt;em&gt;The geometry of hereditary orders and beyond&lt;/em&gt;&#xA;that he has written.&#xA;The thesis will be available online at some point,&#xA;for the time being,&#xA;you can check out:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2505.15230&#34;&gt;Categorical absorption for hereditary orders&lt;/a&gt;,&#xA;    a preprint which implements a really nice idea on&#xA;    how to view the derived category of an hereditary order&#xA;    from the perspective of categorical absorptions&#xA;    (as introduced by Kuznetsov and Shinder)&lt;/li&gt;&#xA;  &lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2410.07620&#34;&gt;Central curves on noncommutative surfaces&lt;/a&gt;,&#xA;    a joint with between Thilo, Okke van Garderen, and myself,&#xA;    accepted for publication in Transactions of the American Mathematical Society&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;The third topic he has studied in his thesis&#xA;are Brauer&amp;ndash;Severi schemes of hereditary orders.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Noncommutative algebraic geometry summer school in Antwerp</title>
+      <link>https://pbelmans.ncag.info/blog/2025/01/30/ncag-summer-school/</link>
+      <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2025/01/30/ncag-summer-school/</guid>
+      <description>&lt;p&gt;This summer we are organizing a summer school in Antwerp, on noncommutative algebraic geometry&#xA;(more precisely: homological mirror symmetry, and the formalism of $\mathrm{A}_\infty$-categories).&#xA;It is organized with the help of SLMath, as an offshoot of last year&#39;s research semester on noncommutative algebraic geometry.&#xA;The application form for non-US citizens is now available,&#xA;and all information can be found on the &lt;a href=&#34;https://www.uantwerpen.be/en/summer-winter-schools/non-commutative-algebraic-geometry/&#34;&gt;workshop&#39;s website&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Please share this with interested students.&#xA;The target audience is master students and early PhD students&#xA;with some background in the topic.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New paper: Central curves on noncommutative surfaces</title>
+      <link>https://pbelmans.ncag.info/blog/2024/10/11/new-paper-central-curves/</link>
+      <pubDate>Fri, 11 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2024/10/11/new-paper-central-curves/</guid>
+      <description>&lt;p&gt;This blogpost is about&#xA;&lt;a href=&#34;https://arxiv.org/abs/2410.07620&#34;&gt;&lt;strong&gt;Central curves on noncommutative surfaces&lt;/strong&gt;&lt;/a&gt;.&#xA;If you just want mathematics and not some of the backstory,&#xA;you can click the link to immediately get to the preprint.&#xA;&lt;/p&gt;&#xA;&#xA;&lt;h3&gt;Background&lt;/h3&gt;&#xA;&lt;p&gt;Almost to the day 4 years ago,&#xA;I wrote &lt;a href=&#34;https://pbelmans.ncag.info/blog/2020/09/29/interpreting-skew-quadrics/&#34;&gt;a blogpost about how to (possibly) interpret a type of noncommutative curve&lt;/a&gt;&#xA;using the geometry of orders on varieties.&#xA;I did so, because I was initially confused by some results in the literature,&#xA;and by using the very different perspective outlined in that blogpost,&#xA;I could make sense of the results in a way that made me really happy.&#xA;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Videos and notes of Noncommutative Shapes</title>
+      <link>https://pbelmans.ncag.info/blog/2022/09/20/videos-and-notes-noncommutative-shapes/</link>
+      <pubDate>Tue, 20 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2022/09/20/videos-and-notes-noncommutative-shapes/</guid>
+      <description>&lt;p&gt;Last week we had &lt;a href=&#34;https://nc-shapes.info&#34;&gt;Noncommutative Shapes&lt;/a&gt;, the birthday conference for Michel Van den Bergh. People seemed to have enjoyed the event a lot, so that makes me really happy as an organiser.&lt;/p&gt;&#xA;&lt;p&gt;I&#39;ve now posted the recordings to the &lt;a href=&#34;https://www.youtube.com/channel/UCMfdlw1N9Ug_FYm6r0g6xPA/videos&#34;&gt;Noncommutative Shapes YouTube channel&lt;/a&gt;, and the notes (whenever available) are also available &lt;a href=&#34;https://nc-shapes.info/schedule&#34;&gt;from the conference website&lt;/a&gt;. So even if you had to miss the event, you can still enjoy the great talks that happened last week, I&#39;m really grateful to the speakers for doing such a wonderful job.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Noncommutative Shapes</title>
+      <link>https://pbelmans.ncag.info/blog/2022/06/09/nc-shapes/</link>
+      <pubDate>Thu, 09 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2022/06/09/nc-shapes/</guid>
+      <description>&lt;p&gt;Postponed by 2 years because of the pandemic, but now it&#39;s finally there: &lt;a href=&#34;https://nc-shapes.info&#34;&gt;&lt;strong&gt;Noncommutative Shapes&lt;/strong&gt;&lt;/a&gt;, a birthday conference for Michel Van den Bergh. I am really stoked for this event, and I hope to see many familiar (and new) faces!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Noncommutative Shapes: a half-way event</title>
+      <link>https://pbelmans.ncag.info/blog/2021/09/15/noncommutative-shapes/</link>
+      <pubDate>Wed, 15 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2021/09/15/noncommutative-shapes/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://hardy.uhasselt.be/personal/vdbergh/Publications/michel_pub.html&#34;&gt;Michel Van den Bergh&lt;/a&gt; turned 60 last year, and as with all birthday conferences they had to be postponed. Because organising a large in-person event still seems very hard, the big conference is meant to take place September 2022, but on Monday next week we will have a &lt;strong&gt;&lt;a href=&#34;https://nc-shapes.info&#34;&gt;halfway-event&lt;/a&gt;&lt;/strong&gt;, with three online speakers:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;Yuri Manin, Quantisation in monoidal categories and quantum operads&lt;/li&gt;&#xA;  &lt;li&gt;Alexander Kuznetsov, Simultaneous categorical resolutions&lt;/li&gt;&#xA;  &lt;li&gt;Marco Gualtieri, From geometric quantization to noncommutative algebraic geometry&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;I&#39;m very glad that we can have this small celebration in honour of Michel and his great work in (noncommutative) algebraic geometry!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Alain Verschoren (1954&amp;ndash;2020)</title>
+      <link>https://pbelmans.ncag.info/blog/2020/11/27/alain-verschoren/</link>
+      <pubDate>Fri, 27 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/11/27/alain-verschoren/</guid>
+      <description>&lt;p&gt;It is with great sadness that I learned of Alain&#39;s passing. Whilst he might not be the most familiar name for the average reader of this blog, he was an important figure in my pre-history and history as a mathematician. He was instrumental in turning the University of Antwerp into the unified institute it is nowadays during his many years as rector, and before that he was an important figure in the Antwerp school of noncommutative algebraic geometry. This is where I grew up, both in the physical and mental sense.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Interpreting skew conics</title>
+      <link>https://pbelmans.ncag.info/blog/2020/09/29/interpreting-skew-quadrics/</link>
+      <pubDate>Tue, 29 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/09/29/interpreting-skew-quadrics/</guid>
+      <description>&lt;p style=&#34;background-color: rgb(255, 243, 205); border: 1px solid rgb(255, 238, 186); padding: 10px;&#34;&gt;&#xA;  For a followup on the speculation in this post,&#xA;  see &lt;a href=&#34;https://pbelmans.ncag.info/blog/2024/10/11/new-paper-central-curves/&#34;&gt;New paper: Central curves on noncommutative surfaces&lt;/a&gt;.&#xA;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;In &lt;a href=&#34;https://pbelmans.ncag.info/blog/2020/08/11/fortnightly-links-111/&#34;&gt;the 111th installment of fortnightly links&lt;/a&gt; I mentioned &lt;a href=&#34;https://arxiv.org/abs/2008.02255v1&#34;&gt;Derived categories of skew quadric hypersurfaces&lt;/a&gt; by Kenta Ueyama. In this paper he discusses a class of noncommutative objects whose definition mimicks that of the usual quadrics, but the ambient space is now a certain skew noncommutative projective space. For this reason he calls them &lt;em&gt;skew quadrics&lt;/em&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Live blogging the Antwerp conference (3)</title>
+      <link>https://pbelmans.ncag.info/blog/2016/09/25/liveblogging-the-antwerp-conference-3/</link>
+      <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/09/25/liveblogging-the-antwerp-conference-3/</guid>
+      <description>&lt;p&gt;It sure was an exciting week! Also, the &lt;a href=&#34;http://antwerp-2016.ncag.info/picture.jpg&#34;&gt;conference picture&lt;/a&gt; is available (thanks to Dennis Presotto&#39;s camera, and Mieke De Mulder&#39;s photography skills). Do not let the picture trick you into thinking that I am as tall as Michael Wemyss, I had the advantage of standing one step higher, and still I&#39;m smaller.&lt;/p&gt;&#xA;&lt;p&gt;Very soon there should be notes made by the participants on the website.&lt;/p&gt;&#xA;&lt;h2&gt;Friday September 23&lt;/h2&gt;&#xA;&lt;p&gt;The topic of &lt;em&gt;Dimitri Kaledin&lt;/em&gt;&#39;s talk was somewhat related to questions I thought about in the beginning of my PhD, but I never got really far. He constructed a formalism for tackling gluing questions for enhanced triangulated categories, avoiding the framework of stable $\infty$-categories (because these are depending on who you ask either trivial, or impossible to work with) and pure dg categories (which is not the most flexible formalism). Using stable model categories, and a variation upon them called stable model pairs, questions concerning gluing should become more tractable. At some point he decided that&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Live blogging the Antwerp conference (2)</title>
+      <link>https://pbelmans.ncag.info/blog/2016/09/22/liveblogging-the-antwerp-conference-2/</link>
+      <pubDate>Thu, 22 Sep 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/09/22/liveblogging-the-antwerp-conference-2/</guid>
+      <description>&lt;h2&gt;Wednesday September 21&lt;/h2&gt;&#xA;&lt;p&gt;&lt;em&gt;Bertrand Toën&lt;/em&gt; talked about his approach to a proof of Bloch&#39;s conjecture, &lt;a href=&#34;https://pbelmans.ncag.info/blog/2016/07/23/fortnightly-links-15/&#34;&gt;mentioned before&lt;/a&gt; on my blog. Back then it was exciting stuff, and after his overview talk it still is very cool to see how it is possible to apply noncommutative algebraic geometry to problems of an arithmetic nature.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;He mentioned that a strong version of resolution of singularities would also settle the conjecture, because of a special case of the conjecture proven by Kato&amp;ndash;Saito that would imply the whole thing provided this mythical result. Using noncommutative algebro-geometric techniques seems like a more fun thing to do from my perspective.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Live blogging the Antwerp conference</title>
+      <link>https://pbelmans.ncag.info/blog/2016/09/20/liveblogging-the-antwerp-conference/</link>
+      <pubDate>Tue, 20 Sep 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/09/20/liveblogging-the-antwerp-conference/</guid>
+      <description>&lt;p&gt;Reading my blog you could&#39;ve figured out that we are having a &lt;a href=&#34;http://antwerp-2016.ncag.info&#34;&gt;big conference in Antwerp&lt;/a&gt;. Yesterday was too hectic to liveblog this, as &lt;a href=&#34;http://neverendingbooks.org&#34;&gt;the neverending author&lt;/a&gt; noticed, so I guess I&#39;ll just do one post every two days.&lt;/p&gt;&#xA;&lt;h2&gt;Monday September 19&lt;/h2&gt;&#xA;&lt;p&gt;&lt;em&gt;Ragnar Buchweitz&lt;/em&gt; quoted the following joke that Matt Satriano (he heard it from Dick Gross) made last week in Banff:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;  A good talk should contain one joke and one proof, and you should be able to tell them apart.&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;I think Ragnar turned the punchline into &lt;q&gt;and they should not be the same&lt;/q&gt;, which works equally well. Taking this advice from Ragnar (or Matt, or Dick) I might focus my discussion a little bit on the jokes the speakers made, rather than give a detailed outline of what they talked about.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Announcing ncag.info</title>
+      <link>https://pbelmans.ncag.info/blog/2016/07/31/announcing-ncag-info/</link>
+      <pubDate>Sun, 31 Jul 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/07/31/announcing-ncag-info/</guid>
+      <description>&lt;p&gt;A while ago I decided to create a website dedicated to noncommutative algebraic geometry. It has been (silently) available for a while now, but I guess it&#39;s time to realise it to the public. You can find it at &lt;a href=&#34;http://ncag.info&#34;&gt;ncag.info&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;So far it is nothing more than a list of conferences that might be interesting for noncommutative algebraic geometers. I&#39;ve been keeping track of these since the beginning of 2016, and I will continue to do so. If I have missed an event that would fit on this list, please tell me. If you have any other suggestions, please say so.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>On a conjecture by Novakovic</title>
+      <link>https://pbelmans.ncag.info/blog/2016/05/22/on-a-conjecture-by-novakovic/</link>
+      <pubDate>Sun, 22 May 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/05/22/on-a-conjecture-by-novakovic/</guid>
+      <description>&lt;p&gt;In his recent preprint &lt;a href=&#34;http://arxiv.org/abs/1603.08373v1&#34;&gt;No full exceptional collections on non-split Brauer&amp;ndash;Severi varieties of dimension $\leq 3$&lt;/a&gt; Sasa Novakovic conjectured the following:&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;Conjecture&lt;/strong&gt; &lt;em&gt;Let $X\neq\mathbb{P}_k^n$ be a Brauer–Severi variety. Then $X$ does not admit a full (strong) exceptional collection consisting of arbitrary objects.&lt;/em&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;In his paper he proves this (as the preprint&#39;s title already suggests) in dimension less than 3, by using the transitivity of the braid group action on the set of exceptional collections. Bondal and Polishchuk conjectured this for arbitrary triangulated categories, but it is only known in very special cases, mainly for the projective line, plane and three-space (over an algebraically closed field). From this he can prove the conjecture in the special cases where the degree of the central simple algebra is at most 4.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New paper: Noncommutative quadrics and Hilbert schemes of points</title>
+      <link>https://pbelmans.ncag.info/blog/2016/05/11/new-paper-noncommutative-quadrics-and-hilbert-schemes-of-points/</link>
+      <pubDate>Wed, 11 May 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/05/11/new-paper-noncommutative-quadrics-and-hilbert-schemes-of-points/</guid>
+      <description>&lt;p&gt;Theo Raedschelders and I just uploaded our newest preprint: &lt;a href=&#34;http://arxiv.org/abs/1605.02795&#34;&gt;Noncommutative quadrics and Hilbert schemes of points&lt;/a&gt;. The main goal of the paper is to extend the result of Orlov&#39;s paper &lt;a href=&#34;https://arxiv.org/abs/1503.03174&#34;&gt;Geometric realizations of quiver algebras&lt;/a&gt;: we prove that (the derived category of) a noncommutative quadric embeds in (the derived category of) a commutative deformation of the Hilbert scheme of two points on a quadric. Orlov showed this for noncommutative planes (i.e. quadratic Artin--Schelter regular algebras), we now do the cubic Artin--Schelter regular case.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Noncommutative geometry on the arXiv</title>
+      <link>https://pbelmans.ncag.info/blog/2014/03/05/noncommutative-geometry-on-the-arxiv/</link>
+      <pubDate>Wed, 05 Mar 2014 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2014/03/05/noncommutative-geometry-on-the-arxiv/</guid>
+      <description>&lt;p&gt;Recall that I have written about &lt;a href=&#34;https://pbelmans.ncag.info/blog/2013/11/14/possible-noncommutative-progress-on-the-standard-conjectures/&#34;&gt;the standard conjectures and noncommutative motives before&lt;/a&gt;. Now there is a follow-up article by Bernardara--Marcolli--Tabuada: &lt;a href=&#34;http://arxiv.org/abs/1403.0876v1&#34;&gt;Some remarks concerning Voevodsky&#39;s nilpotence conjecture&lt;/a&gt;. The conjecture is proved for some previously unknown cases (as far as I can tell, I&#39;m not an expert on the motives literature, or any other literature) using the equivalent formulation in the world of noncommutative motives. In the situations they cover (which are based on quadrics) we have some known semi-orthogonal decompositions, and these allow them to prove the nilpotence conjecture.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Possible noncommutative progress on the standard conjectures</title>
+      <link>https://pbelmans.ncag.info/blog/2013/11/14/possible-noncommutative-progress-on-the-standard-conjectures/</link>
+      <pubDate>Thu, 14 Nov 2013 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2013/11/14/possible-noncommutative-progress-on-the-standard-conjectures/</guid>
+      <description>&lt;p&gt;Two days ago &lt;a href=&#34;http://www.its.caltech.edu/~matilde/&#34;&gt;Matilde Marcolli&lt;/a&gt; and &lt;a href=&#34;http://math.mit.edu/~tabuada/&#34;&gt;Goncalo Tabuada&lt;/a&gt; uploaded a survey article to the arXiv titled &lt;a href=&#34;http://arxiv.org/abs/1311.2867&#34;&gt;Noncommutative motives and their applications&lt;/a&gt;. It is a nice introduction to the notion of noncommutative motives, and taking dg categories as the main player in noncommutative geometry.&lt;/p&gt;&#xA;&lt;p&gt;But one particular paragraph in this article intrigued me, paragraph 5.2 if you can&#39;t wait to read it. Recall that the theory of motives is tightly related to &lt;a href=&#34;http://en.wikipedia.org/wiki/Standard_conjectures_on_algebraic_cycles&#34;&gt;Grothendieck&#39;s standard conjectures on algebraic cycles&lt;/a&gt;. These conjectures are so far unproven, although lots of work have gone into them, mostly in trying to connect these conjectures to possibly easier to tackle problems. But there is hope to prove one of them using noncommutative algebraic geometry.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why Hochschild cohomology is not functorial</title>
+      <link>https://pbelmans.ncag.info/blog/2013/10/25/why-hochschild-cohomology-is-not-functorial/</link>
+      <pubDate>Fri, 25 Oct 2013 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2013/10/25/why-hochschild-cohomology-is-not-functorial/</guid>
+      <description>&lt;p&gt;For instance in Loday&#39;s Cyclic homology, paragraph 1.5.5 it is mentioned that &lt;em&gt;Hochschild cohomology is &lt;strong&gt;not&lt;/strong&gt; functorial&lt;/em&gt;. Compare this to the statement in paragraph 1.1.4 op. cit. that &lt;em&gt;Hochschild homology is functorial&lt;/em&gt;. Why this (at first sight) strange dichotomy? And why does not a single reference (of the ones I have read) addresses this issue explicitly?&lt;/p&gt;&#xA;&lt;p&gt;Remark that this non-functoriality makes computing Hochschild cohomology of algebras a difficult task: it is not possible in general to relate it to the Hochschild cohomology of related but easier algebras.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Derived Categories on Pieter Belmans</title>
+    <link>https://pbelmans.ncag.info/tags/derived-categories/</link>
+    <description>Recent content in Derived Categories on Pieter Belmans</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://pbelmans.ncag.info/tags/derived-categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Postdoc position in algebraic geometry</title>
+      <link>https://pbelmans.ncag.info/blog/2026/02/05/postdoc-hilbertmovies/</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2026/02/05/postdoc-hilbertmovies/</guid>
+      <description>&lt;p&gt;I am excited to announce&#xA;&lt;a href=&#34;https://www.uu.nl/en/organisation/working-at-utrecht-university/jobs/postdoc-position-in-algebraic-geometry&#34;&gt;&#xA;  a postdoc position in algebraic geometry&#xA;&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The summary:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;starting date is &lt;strong&gt;October 1 2026&lt;/strong&gt; (or as soon as possible thereafter)&lt;/li&gt;&#xA;  &lt;li&gt;it is for 3 years (with a 1-year probation)&lt;/li&gt;&#xA;  &lt;li&gt;the focus is (derived categories of) Hilbert schemes of points on surfaces,&#xA;    so some experience with these or topics closely related to it&#xA;    is required&lt;/li&gt;&#xA;  &lt;li&gt;it is part of a &lt;a href=&#34;https://pbelmans.ncag.info/projects/hilbertmovies&#34;&gt;joint grant&lt;/a&gt;&#xA;    between &lt;a href=&#34;https://sites.google.com/site/andkrugmath/&#34;&gt;Andreas Krug&lt;/a&gt;&#xA;    and myself, and regular visits to Hannover are anticipated&lt;/li&gt;&#xA;  &lt;li&gt;we will start reviewing and interviewing candidates after the application deadline of &lt;strong&gt;February 22&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;There is a really active research group on algebraic geometry in Utrecht,&#xA;and the Netherlands is a great place in general for algebraic geometry, with many interesting activities.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Updated paper: Moduli spaces of semiorthogonal decompositions in families</title>
+      <link>https://pbelmans.ncag.info/blog/2025/11/17/updated-paper-sod-f/</link>
+      <pubDate>Mon, 17 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2025/11/17/updated-paper-sod-f/</guid>
+      <description>&lt;p&gt;This update is concerned with&#xA;&lt;strong&gt;&lt;a href=&#34;https://arxiv.org/abs/2002.03303&#34;&gt;Moduli spaces of semiorthogonal decompositions in families&lt;/a&gt;&lt;/strong&gt;,&#xA;written together with Shinnosuke Okawa, and Andrea Ricolfi.&#xA;I already alluded to it in the previous post:&#xA;this paper has seen a significant update.&lt;/p&gt;&#xA;&#xA;&lt;h3&gt;What&#39;s new?&lt;/h3&gt;&#xA;&lt;p&gt;Following a very useful referee report,&#xA;we have:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;streamlined the entire paper;&lt;/li&gt;&#xA;  &lt;li&gt;referred to the literature for étale descent of semiorthogonal decompositions,&#xA;    thereby getting rid of a characteristic-zero assumption;&lt;/li&gt;&#xA;  &lt;li&gt;included a second proof of the functor being limit-preserving,&#xA;    following a suggestion by the referee;&lt;/li&gt;&#xA;  &lt;li&gt;included the referee&#39;s proof for uniqueness of deformations&#xA;    (with the original proof moved to a separated paper);&lt;/li&gt;&#xA;  &lt;li&gt;everything now works in a general smooth and proper setting,&#xA;    so the standing assumptions are always the same;&lt;/li&gt;&#xA;  &lt;li&gt;we have expanded the discussion on our conjecture&#xA;    regarding the subspace of non-trivial semiorthogonal decompositions.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;I believe the paper is much improved now,&#xA;so if you didn&#39;t like the previous version, you can give this one a shot!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New paper: Deformation theory for a morphism in the derived category with fixed lift of the codomain</title>
+      <link>https://pbelmans.ncag.info/blog/2025/11/14/deformation-theory-of-morphisms/</link>
+      <pubDate>Fri, 14 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2025/11/14/deformation-theory-of-morphisms/</guid>
+      <description>&lt;p&gt;This blogpost is concerned with&#xA;&lt;strong&gt;&lt;a href=&#34;https://arxiv.org/abs/2511.10312&#34;&gt;Deformation theory for a morphism in the derived category with fixed lift of the codomain&lt;/a&gt;&lt;/strong&gt;,&#xA;written together with Wendy Lowen, Shinnosuke Okawa, and Andrea Ricolfi.&#xA;If you want to go straight to the details,&#xA;you can directly start reading the paper,&#xA;this blogpost is just to give a bit of background and history.&lt;/p&gt;&#xA;&#xA;&lt;h3&gt;Origin story&lt;/h3&gt;&#xA;&lt;p&gt;Following a referee report and subsequent revision for &lt;a href=&#34;https://arxiv.org/abs/2002.03303&#34;&gt;Moduli spaces of semiorthogonal decompositions in families&lt;/a&gt;,&#xA;we have performed an appendectomy on what was formerly Appendix A in that paper&#xA;(whose v3 will be online on Monday, I&#39;ll describe those significant changes in a separate blogpost),&#xA;turning it into a standalone paper.&#xA;After all,&#xA;the main result proved in this former appendix&#xA;is of independent interest.&#xA;However, it being buried in an appendix was not an ideal situation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New paper: The Albanese morphism for hyperelliptic varieties</title>
+      <link>https://pbelmans.ncag.info/blog/2024/11/25/new-paper-albanese-hyperelliptic/</link>
+      <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2024/11/25/new-paper-albanese-hyperelliptic/</guid>
+      <description>&lt;p&gt;This blogpost is about&#xA;&lt;a href=&#34;https://arxiv.org/abs/2411.14814&#34;&gt;&lt;strong&gt;The Albanese morphism for hyperelliptic varieties&lt;/strong&gt;&lt;/a&gt;.&#xA;If you just want mathematics and not some of the backstory,&#xA;you can click the link to immediately get to the preprint.&lt;/p&gt;&#xA;&#xA;&lt;h3&gt;Background&lt;/h3&gt;&#xA;&lt;p&gt;Back in March 2023,&#xA;&lt;a href=&#34;https://home.mathematik.uni-freiburg.de/demleitner/&#34;&gt;Andreas Demleitner&lt;/a&gt; and &lt;a href=&#34;https://pedro-nunez.github.io/&#34;&gt;Pedro Núñez&lt;/a&gt;&#xA;gave seminar talks at the University of Luxembourg,&#xA;with the talk by Andreas being on hyperelliptic varieties&#xA;(the talk by Pedro, whilst interesting, has no relevance to this story).&#xA;These hyperelliptic varieties were introduced by Lange in 2001,&#xA;as a higher-dimensional version of bielliptic surfaces,&#xA;one of the four classes of K-trivial surfaces.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Updated paper: Moduli spaces of semiorthogonal decompositions in families</title>
+      <link>https://pbelmans.ncag.info/blog/2024/11/19/updated-paper-sodf/</link>
+      <pubDate>Tue, 19 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2024/11/19/updated-paper-sodf/</guid>
+      <description>&lt;p&gt;Before I had the habit of writing a blogpost discussing a new preprint,&#xA;Shinnosuke Okawa, Andrea Ricolfi, and I (together with Wendy Lowen for the appendix)&#xA;uploaded &lt;a href=&#34;https://arxiv.org/abs/2002.03303&#34;&gt;Moduli spaces of semiorthogonal decompositions in families&lt;/a&gt;.&#xA;Shortly afterwards, the pandemic started,&#xA;and we neglected to do anything with the paper.&#xA;At some point we also discovered that there was an issue with the proof of the result in Subsection 8.3.3 (of v1),&#xA;showing that the moduli space of non-trivial semiorthogonal decompositions is an open and closed algebraic subspace.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New paper: On decompositions for Fano schemes of intersections of two quadrics</title>
+      <link>https://pbelmans.ncag.info/blog/2024/03/20/new-paper-mrc/</link>
+      <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2024/03/20/new-paper-mrc/</guid>
+      <description>&lt;p&gt;I&#39;m really happy to announce that we have a new paper on the arXiv: &lt;a href=&#34;https://arxiv.org/abs/2403.12517&#34;&gt;&lt;strong&gt;On decompositions for Fano schemes of intersections of two quadrics&lt;/strong&gt;&lt;/a&gt;.&#xA;The &lt;em&gt;we&lt;/em&gt; here refers to my coauthors Jishnu Bose, Sarah Frei, Ben Gould, James Hotchkiss, Alicia Lamarche, Jack Petok, Cristian Andres Rodriguez Avila, and Saket Shah.&#xA;Here is all of us:&lt;/p&gt;&#xA;&lt;p style=&#34;text-align: center;&#34;&gt;&#xA;  &lt;img src=&#34;https://pbelmans.ncag.info/assets/bundles-group.jpg&#34; width=&#34;600&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;This picture was taken June 2023 in upstate New York,&#xA;because the paper is a collaboration which started at the&#xA;&lt;a href=&#34;https://www.ams.org/programs/research-communities/2023MRC-DerivedCategories&#34;&gt;Mathematics Research Communities: Derived Categories, Arithmetic and Geometry&lt;/a&gt;,&#xA;expertly organized by Matthew Ballard, Katrina Honigs, Daniel Krashen, Alicia Lamarche, and Emanuele Macrì,&#xA;where I led a group of PhD students and postdocs on a week-long adventure ride&#xA;on Fano schemes of intersections of two quadrics.&#xA;One of the projects we were working on has now materialized in the form of this preprint.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New paper: Hochschild cohomology of Hilbert schemes of points on surfaces</title>
+      <link>https://pbelmans.ncag.info/blog/2023/09/13/new-paper-hochschild-hilbert/</link>
+      <pubDate>Wed, 13 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2023/09/13/new-paper-hochschild-hilbert/</guid>
+      <description>&lt;p&gt;I&#39;m really happy and proud to have &lt;a href=&#34;https://arxiv.org/abs/2309.06244&#34;&gt;&lt;strong&gt;Hochschild cohomology of Hilbert schemes of points on surfaces&lt;/strong&gt;&lt;/a&gt;&#xA;on the arXiv now,&#xA;joint with my good friends &lt;a href=&#34;https://irma.math.unistra.fr/~lfu/&#34;&gt;Lie Fu&lt;/a&gt;&#xA;and &lt;a href=&#34;https://sites.google.com/site/andkrugmath/&#34;&gt;Andreas Krug&lt;/a&gt;.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;There is a (to me at least) funny story behind the paper.&#xA;In Huybrechts&#39;s famous book on Fourier&amp;ndash;Mukai transforms,&#xA;he briefly discusses Hochschild (co)homology&#xA;through a &lt;em&gt;larger&lt;/em&gt; and &lt;em&gt;bigraded&lt;/em&gt; algebra which&#xA;contains both Hochschild cohomology and Hochschild homology,&#xA;and also the canonical algebra,&#xA;following Orlov&#39;s presentation in his survey paper.&#xA;It is defined for a smooth projective variety $X$ as&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New-ish paper: Decompositions of moduli spaces of vector bundles and graph potentials</title>
+      <link>https://pbelmans.ncag.info/blog/2022/05/11/newish-paper/</link>
+      <pubDate>Wed, 11 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2022/05/11/newish-paper/</guid>
+      <description>&lt;p&gt;Last week I uploaded a newish paper to the arXiv: &lt;strong&gt;&lt;a href=&#34;https://arxiv.org/abs/2009.05568v3&#34;&gt;Decompositions of moduli spaces of vector bundles and graph potentials&lt;/a&gt;&lt;/strong&gt;.&#xA;Together with Sergey Galkin and Swarnava Mukhopadhyay&#xA;we are in the process of splitting up the rather long preprint &lt;a href=&#34;https://arxiv.org/abs/2009.05568v2&#34;&gt;Graph potentials and moduli spaces of rank two bundles on a curve&lt;/a&gt; into 3 pieces:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;Graph potentials and topological quantum field theories&lt;/li&gt;&#xA;  &lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2009.05568v3&#34;&gt;Decompositions of moduli spaces of vector bundles and graph potentials&lt;/a&gt; (the current new-ish paper)&lt;/li&gt;&#xA;  &lt;li&gt;Graph potentials and symplectic geometry of moduli spaces of vector bundles&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;We have replaced the original arXiv submission with the part concerning decompositions,&#xA;because this is the part most cited so far, so that the arXiv id people have been using stays the same.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New paper: Homological projective duality for the Segre cubic</title>
+      <link>https://pbelmans.ncag.info/blog/2022/02/18/new-paper-hpd-segre-cubic/</link>
+      <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2022/02/18/new-paper-hpd-segre-cubic/</guid>
+      <description>&lt;p&gt;&lt;small&gt;This really should have been a well-established series by now, but so far there was &lt;a href=&#34;https://pbelmans.ncag.info/blog/2016/05/11/new-paper-noncommutative-quadrics-and-hilbert-schemes-of-points/&#34;&gt;only one prior installment&lt;/a&gt;. Should I write some of these retroactively maybe?&lt;/small&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.math.uni-bonn.de/people/beckmann/&#34;&gt;Thorsten Beckmann&lt;/a&gt; and I have a &lt;strong&gt;&lt;a href=&#34;https://arxiv.org/abs/2202.08601&#34;&gt;new paper on the arXiv&lt;/a&gt;&lt;/strong&gt;, titled &lt;strong&gt;&lt;a href=&#34;https://arxiv.org/abs/2202.08601&#34;&gt;Homological projective duality for the Segre cubic&lt;/a&gt;&lt;/strong&gt;, intended as a semi-expository contribution for a proceedings volume. It was great fun writing it, and let me try to informally and with pictures convey some of the things that made writing it great fun, in the hope of convincing you to take a closer look at the paper.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Some comments on hyperplane sections of generalised Grassmannians</title>
+      <link>https://pbelmans.ncag.info/blog/2021/10/22/hyperplane-comments/</link>
+      <pubDate>Fri, 22 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2021/10/22/hyperplane-comments/</guid>
+      <description>&lt;p&gt;Today in my arXiv reading I came across &lt;a href=&#34;https://arxiv.org/abs/2110.10589&#34;&gt;Bradley Doyle: Homological Projective Duality for the Plücker embedding of the Grassmannian&lt;/a&gt;, and in Section 1.4 there were some comments about the interesting component of a linear section of a Grassmannian that piqued my interest.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;I decided to have some fun with more general cases. In type A the following are low-dimensional and possibly of interest:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;$\operatorname{Gr}(4,8)$ does not give a Calabi&amp;ndash;Yau category in the hyperplane section, but it can be computed that $\dim\operatorname{HH}_{\pm1}=3$.&lt;/li&gt;&#xA;  &lt;li&gt;$\operatorname{Gr}(4,9)$ gives a Calabi&amp;ndash;Yau category of dimension 3 in the hyperplane section, with the middle cohomology of the hyperplane section having dimensions $1,45,45,1$.&lt;/li&gt;&#xA;  &lt;li&gt;$\operatorname{Gr}(3,11)$ gives another Calabi&amp;ndash;Yau category of dimension 3 in the hyperplane section, with the middle cohomology of the hyperplane section having dimensions $1,44,44,1$.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;It turns out that the latter two cases are already mentioned in Section 4.5 of &lt;a href=&#34;https://mathscinet.ams.org/mathscinet-getitem?mr=3987870&#34;&gt;Alexander Kuznetsov: Calabi-Yau and fractional Calabi-Yau categories&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Seshadri&#39;s desingularisation in the Hodge diamond cutter, and a bold proposal</title>
+      <link>https://pbelmans.ncag.info/blog/2021/03/21/seshadris-desingularisation-in-hodge-diamond-cutter/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2021/03/21/seshadris-desingularisation-in-hodge-diamond-cutter/</guid>
+      <description>&lt;p style=&#34;background-color: rgb(255, 243, 205); border: 1px solid rgb(255, 238, 186); padding: 10px;&#34;&gt;&#xA;  The functionality outlined below, and much more, is implemented in &lt;a href=&#34;https://github.com/pbelmans/hodge-diamond-cutter&#34;&gt;&lt;strong&gt;Hodge diamond cutter&lt;/strong&gt;&lt;/a&gt;, which can be used in Sage.&#xA;  If you use it for your research, please cite it using &lt;a href=&#34;https://doi.org/10.5281/zenodo.3893509&#34; rel=&#34;nofollow&#34;&gt;&lt;img src=&#34;https://zenodo.org/badge/DOI/10.5281/zenodo.3893509.svg&#34; alt=&#34;DOI&#34; data-canonical-src=&#34;https://zenodo.org/badge/DOI/10.5281/zenodo.3893509.svg&#34; style=&#34;max-width:100%;&#34;&gt;&lt;/a&gt;.&#xA;&lt;/p&gt;&#xA;&#xA;&#xA;&lt;p&gt;As I was cleaning up things I ran into my print-out of &lt;a href=&#34;https://mathscinet.ams.org/mathscinet-getitem?mr=1895918&#34;&gt;del Baño: On the motive of moduli spaces of rank two vector bundles over a curve&lt;/a&gt;, which I apparently printed on December 15, 2017. This marks the start of my interest in these moduli spaces (which have an extremely rich and beautiful history!) and I noticed I never really looked at Section 3. In this section the Hodge numbers for &lt;a href=&#34;https://mathscinet.ams.org/mathscinet-getitem?mr=578858&#34;&gt;Seshadri&#39;s desingularisation&lt;/a&gt; of $\mathrm{M}_C(2,\mathcal{O}_C)$ are computed, and I couldn&#39;t resist having a little fun with this.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>An update for Grassmannian.info: spectra of quantum multiplication with $\mathrm{c}_1$</title>
+      <link>https://pbelmans.ncag.info/blog/2020/11/29/spectra-on-grassmannian/</link>
+      <pubDate>Sun, 29 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/11/29/spectra-on-grassmannian/</guid>
+      <description>&lt;div id=&#34;eigenvalues&#34; style=&#34;float: right&#34;&gt;&lt;p style=&#34;text-align: center&#34;&gt;&lt;strong&gt;Figure 1&lt;/strong&gt;: Spectrum for $\mathrm{Gr}(3,8)$&lt;/p&gt;&lt;/div&gt;&#xA;&#xA;&lt;p&gt;Here&#39;s another update for &lt;a href=&#34;https://www.grassmannian.info&#34;&gt;Grassmannian.info&lt;/a&gt;: it now contains spectra (as in, the distribution of eigenvalues) of quantum multiplication with $\mathrm{c}_1(G/P)$, for $q=1$. This is interesting for various reasons, but before explaining why, let me tell you that the picture you&#39;re seeing now is giving the eigenvalues for $\mathrm{Gr}(3,8)$. There are 56 eigenvalues, because the (quantum) cohomology is 56-dimensional.&lt;/p&gt;&#xA;&#xA;&lt;h2&gt;Spectral decomposition&lt;/h2&gt;&#xA;&lt;p&gt;The &lt;a href=&#34;https://en.wikipedia.org/wiki/Fukaya_category&#34;&gt;Fukaya category&lt;/a&gt; of a Fano symplectic manifold has a decomposition into orthogonal summands (I&#39;m glancing over many details here). This is the &lt;em&gt;spectral decomposition&lt;/em&gt; from the title, and you can read about it in many places. Let&#39;s rather focus on other aspects of the spectrum.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>An update for Fanography.info: semisimplicity of quantum cohomology</title>
+      <link>https://pbelmans.ncag.info/blog/2020/11/20/update-fanography-dubrovin/</link>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/11/20/update-fanography-dubrovin/</guid>
+      <description>&lt;p&gt;Recall that Dubrovin&#39;s conjecture states the equivalence between&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;the existence of a full exceptional collection in $\mathbf{D}^{\mathrm{b}}(X)$&lt;/li&gt;&#xA;  &lt;li&gt;the generic semisimplicity of (big) quantum cohomology $\mathrm{BQH}(X)$&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;for a smooth projective variety $X$. One can study Dubrovin&#39;s conjecture for special classes of varieties, and &lt;a href=&#34;https://pbelmans.ncag.info/blog/2020/11/06/qh-on-grassmannian-info/&#34;&gt;I already added its status for $G/P$&lt;/a&gt; to &lt;a href=&#34;https://www.grassmannian.info&#34;&gt;Grassmannian.info&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The conjecture is particularly interesting (and originally phrased for) Fano varieties, and for del Pezzo surfaces it is known to hold by Bayer&#39;s results. That brings us to Fano 3-folds, where I was wondering how much was known. Whilst figuring this out, I decided to add this information to &lt;a href=&#34;https://www.fanography.info&#34;&gt;Fanography.info&lt;/a&gt;, and here we are.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>An update for Grassmannian.info: semisimplicity of quantum cohomology</title>
+      <link>https://pbelmans.ncag.info/blog/2020/11/06/qh-on-grassmannian-info/</link>
+      <pubDate>Fri, 06 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/11/06/qh-on-grassmannian-info/</guid>
+      <description>&lt;p&gt;This blogpost does not serve as an introduction to Dubrovin&#39;s conjecture, let me just say that it states the equivalence between&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;the existence of a full exceptional collection in $\mathbf{D}^{\mathrm{b}}(G/P)$&lt;/li&gt;&#xA;  &lt;li&gt;the generic semisimplicity of (big) quantum cohomology $\mathrm{BQH}(G/P)$&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;The first is a statement about the algebraic geometry of $G/P$, whilst the second concerns the symplectic geometry of $G/P$, and their equivalence is an amazing prediction motivated by mirror symmetry.&lt;/p&gt;&#xA;&lt;p&gt;One thing we can do is tabulate for which $G/P$ either is known to hold, and &lt;a href=&#34;https://www.grassmannian.info&#34;&gt;Grassmannian.info&lt;/a&gt; now does that. Remark that, whilst the conjecture concerns the generic semisimplicity of big quantum cohomology, there is an easier version called small quantum cohomology, where computations are more tractable. And semisimplicity of the small version implies it for the big version, but it is not equivalent to it as there can be cases where the small quantum cohomology is &lt;em&gt;not&lt;/em&gt; semisimple.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Interpreting skew conics</title>
+      <link>https://pbelmans.ncag.info/blog/2020/09/29/interpreting-skew-quadrics/</link>
+      <pubDate>Tue, 29 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/09/29/interpreting-skew-quadrics/</guid>
+      <description>&lt;p style=&#34;background-color: rgb(255, 243, 205); border: 1px solid rgb(255, 238, 186); padding: 10px;&#34;&gt;&#xA;  For a followup on the speculation in this post,&#xA;  see &lt;a href=&#34;https://pbelmans.ncag.info/blog/2024/10/11/new-paper-central-curves/&#34;&gt;New paper: Central curves on noncommutative surfaces&lt;/a&gt;.&#xA;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;In &lt;a href=&#34;https://pbelmans.ncag.info/blog/2020/08/11/fortnightly-links-111/&#34;&gt;the 111th installment of fortnightly links&lt;/a&gt; I mentioned &lt;a href=&#34;https://arxiv.org/abs/2008.02255v1&#34;&gt;Derived categories of skew quadric hypersurfaces&lt;/a&gt; by Kenta Ueyama. In this paper he discusses a class of noncommutative objects whose definition mimicks that of the usual quadrics, but the ambient space is now a certain skew noncommutative projective space. For this reason he calls them &lt;em&gt;skew quadrics&lt;/em&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New preprint: Indecomposability of derived categories in families</title>
+      <link>https://pbelmans.ncag.info/blog/2020/07/03/new-preprint-indecomposability/</link>
+      <pubDate>Fri, 03 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/07/03/new-preprint-indecomposability/</guid>
+      <description>&lt;p&gt;Yesterday &lt;a href=&#34;https://sites.google.com/site/francescobastianelli/home&#34;&gt;Francesco Bastianelli&lt;/a&gt;, &lt;a href=&#34;http://www4.math.sci.osaka-u.ac.jp/~okawa/&#34;&gt;Shinnosuke Okawa&lt;/a&gt;, &lt;a href=&#34;https://atricolfi.github.io/&#34;&gt;Andrea Ricolfi&lt;/a&gt; and I uploaded a preprint to the arXiv, titled &lt;a href=&#34;https://arxiv.org/abs/2007.00994&#34;&gt;Indecomposability of derived categories in families&lt;/a&gt;. In it we discuss how to check that a derived category of a smooth projective variety does not admit any semiorthogonal decompositions. Such varieties are &#34;atomic&#34; in a certain sense, and knowing when (not) to look for semiorthogonal decompositions is an important question.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;The main idea here is that decomposability is a property which can be extended (based on the ideas from &lt;a href=&#34;https://arxiv.org/abs/2002.03303&#34;&gt;arXiv:2002.03303&lt;/a&gt;, with a subset of the authors), so if you have a family of varieties which is indecomposable in a dense subset, then you know all members must be indecomposable.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>An update for Grassmannian.info: exceptional collections</title>
+      <link>https://pbelmans.ncag.info/blog/2020/05/29/update-for-grasmannian-info/</link>
+      <pubDate>Fri, 29 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/05/29/update-for-grasmannian-info/</guid>
+      <description>&lt;p&gt;Lockdown is good for developing mathematical websites, I guess. I&#39;ve pushed another update to &lt;a href=&#34;https://www.grassmannian.info&#34;&gt;&lt;strong&gt;grassmannian.info&lt;/strong&gt;&lt;/a&gt;: it now shows some basic information about the derived categories of generalised Grassmannians, namely when it is known that a full exceptional collection exists. An important folklore conjecture states that this is the case, but as you can see when you enable the coloring in the table, we are still a long way off of settling it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New preprint: Derived categories of the Cayley plane and the coadjoint Grassmannian of type F</title>
+      <link>https://pbelmans.ncag.info/blog/2020/05/06/new-article-cayley-plane/</link>
+      <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/05/06/new-article-cayley-plane/</guid>
+      <description>&lt;p&gt;Yesterday &lt;a href=&#34;http://www.mi-ras.ru/~akuznet&#34;&gt;Sasha Kuznetsov&lt;/a&gt;, &lt;a href=&#34;https://msmirnov18.github.io&#34;&gt;Maxim Smirnov&lt;/a&gt; and I uploaded a preprint to the arXiv, titled &lt;a href=&#34;https://arxiv.org/abs/2005.01989&#34;&gt;Derived categories of the Cayley plane and the coadjoint Grassmannian of type F&lt;/a&gt;. In it we discuss the derived categories of two homogeneous varieties (in exceptional type): the Cayley plane $\mathrm{E}_6/\mathrm{P}_1$ and the coadjoint Grassmannian in type F, i.e. $\mathrm{F}_4/\mathrm{P}_4$. Here I am referring to Dynkin types, and maximal parabolic subgroups in the Bourbaki labelling.&lt;/p&gt;&#xA;&lt;p&gt;The variety $\mathrm{E}_6/\mathrm{P}_1$ is a smooth projective Fano variety of dimension 16 and index 12. The variety $\mathrm{F}_4/\mathrm{P}_4$ is a smooth projective Fano variety of dimension 15 and index 11. Conjecturally, every $G/P$ (of which these are 2 exceptional cases) has a full exceptional collection in its derived category.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Seminar announcement: exceptional collections on partial flag varieties</title>
+      <link>https://pbelmans.ncag.info/blog/2020/02/03/graduate-seminar/</link>
+      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2020/02/03/graduate-seminar/</guid>
+      <description>&lt;p&gt;Next semester (which in Bonn runs from roughly April to July) we will be running a (graduate) seminar on exceptional collections, with a view towards partial flag varieties. The two main goals are:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;to familiarise ourselves with derived categories of finite-dimensional algebras, and important concepts such as Ringel duality and quasi-hereditary algebras&lt;/li&gt;&#xA;  &lt;li&gt;to familiarise ourselves with the geometry of partial flag varieties, and their derived categories, to understand the existence and structure of exceptional collections&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;We will have an organisational meeting this Wednesday, at 10h15 in room 0.011. If you would like to give a talk but can&#39;t make it on Wednesday, please send me an email, especially if you are a Bonn graduate student.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A caveat on the notion of strongly simple</title>
+      <link>https://pbelmans.ncag.info/blog/2019/10/29/caveat-strongly-simple/</link>
+      <pubDate>Tue, 29 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2019/10/29/caveat-strongly-simple/</guid>
+      <description>&lt;p&gt;I&#39;d like to point out a small caveat in the statement of a particularly useful form of the &lt;strong&gt;Bondal&amp;ndash;Orlov criterion&lt;/strong&gt;, as the literature is a bit sloppy on this it seems. Let&#39;s be overly wordy in our explanation, so that it is clear where the issue lies.&lt;/p&gt;&#xA;&#xA;$\DeclareMathOperator\derived{\mathbf{D}} \newcommand\bounded{\mathrm{b}} \DeclareMathOperator\Hom{Hom} \DeclareMathOperator\Ext{Ext}$&#xA;&#xA;&lt;p&gt;Recall that the &lt;strong&gt;Bondal&amp;ndash;Orlov criterion&lt;/strong&gt; is a very useful criterion to check fully faithfulness of such a functor, by checking it on the spanning class given by skyscraper sheaves at closed points, but &lt;em&gt;omitting&lt;/em&gt; the complicated part where the criterion involving an arbitrary spanning class would require checking that the natural map&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Index of partial flag varieties</title>
+      <link>https://pbelmans.ncag.info/blog/2018/08/23/index-partial-flag-varieties/</link>
+      <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2018/08/23/index-partial-flag-varieties/</guid>
+      <description>&lt;p&gt;For the context for this post, see &lt;a href=&#34;https://pbelmans.ncag.info/blog/2018/08/22/rank-flag-varieties/&#34;&gt;yesterday&#39;s&lt;/a&gt;.&lt;/p&gt;&#xA;&#xA;&lt;h3&gt;Index&lt;/h3&gt;&#xA;&lt;p&gt;To compute the index we use lemma 2.19 and remark 2.20 of the Kuznetsov&amp;ndash;Polishchuk paper. Combined they say the following.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Lemma&lt;/strong&gt; Let $\beta$ be the simple root corresponding to the chosen maximal parabolic subgroup $P$, and $\xi$ the associated fundamental weight. Let $\overline{\beta}$ be the maximal root of the same length as $\beta$ such that the coefficient of $\beta$ in the expression of $\overline{\beta}$ is 1. Then the index of $G/P$ equals&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Rank of the Grothendieck group of partial flag varieties</title>
+      <link>https://pbelmans.ncag.info/blog/2018/08/22/rank-flag-varieties/</link>
+      <pubDate>Wed, 22 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2018/08/22/rank-flag-varieties/</guid>
+      <description>&lt;p&gt;More than a year ago I wrote about &lt;a href=&#34;https://pbelmans.ncag.info/blog/2017/06/14/dimensions-of-partial-flag-varieties/&#34;&gt;dimensions of partial flag varieties&lt;/a&gt;, when I was reading &lt;a href=&#34;http://www.ams.org/mathscinet-getitem?mr=3463417&#34;&gt;Kuznetsov–Polishchuk, Exceptional collections on isotropic Grassmannians&lt;/a&gt;. Observe that we always take a maximal parabolic in this setting, as explained in the previous post.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;Yesterday I was talking to &lt;a href=&#34;https://www.math.uni-augsburg.de/prof/alg/Arbeitsgruppe/Smirnov/&#34;&gt;Maxim Smirnov&lt;/a&gt; about these varieties, and we were interested in&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;the &lt;em&gt;rank of the Grothendieck group&lt;/em&gt;, in other words how long exceptional collections are supposed to be&lt;/li&gt;&#xA;  &lt;li&gt;the &lt;em&gt;index&lt;/em&gt;, i.e. as $\operatorname{Pic}G/P\cong\mathbb{Z}\cdot\mathcal{O}_{G/P}(1)$ the index is defined as the integer $i$ such that $\omega_{G/P}^\vee\cong\mathcal{O}_{G/P}(1)^{\otimes i}$&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;One can easily compute these numbers from the representation theory associated to these partial flag varieties, but as these numbers are not readily available, let me explain how to compute them, and collect them in a table. One big table is enough per post, so tomorrow you&#39;ll get the table for the index.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hilbert squares of higher-dimensional hyperkähler varieties are not hyperkähler</title>
+      <link>https://pbelmans.ncag.info/blog/2018/08/14/hyperkahler-hilbert-squares/</link>
+      <pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2018/08/14/hyperkahler-hilbert-squares/</guid>
+      <description>&lt;p&gt;Of course, the statement in the title should not come as a surprise, otherwise they would already be listed among the extremely short list of known hyperkähler varieties. Recall that a &lt;em&gt;hyperkähler&lt;/em&gt; variety is a variety with a holomorphic symplectic form, and they are one of three building blocks (the others are abelian varieties and Calabi&amp;ndash;Yau varieties) of varieties with trivial canonical bundle. So far, the list of known hyperkähler varieties is rather short:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>On Bondal&#39;s counterexample to the Jordan-Hölder property: non-extendability</title>
+      <link>https://pbelmans.ncag.info/blog/2017/04/09/bondals-example-2/</link>
+      <pubDate>Sun, 09 Apr 2017 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2017/04/09/bondals-example-2/</guid>
+      <description>&lt;p&gt;This post &lt;a href=&#34;https://pbelmans.ncag.info/blog/2017/04/08/bondals-example/&#34;&gt;continues the discussion&lt;/a&gt; of Bondal&#39;s counterexample from &lt;a href=&#34;https://arxiv.org/abs/1304.0903v1&#34;&gt;A simple counterexample to the Jordan-Hölder property for derived categories&lt;/a&gt;. We will reuse the notation.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;Non-extendability&lt;/strong&gt; Now we get to the interesting part. The preprint does not really mention &lt;em&gt;how&lt;/em&gt; one checks that the exceptional object cannot be extended to an exceptional collection. To do this, we will check in the (numerical) Grothendieck group that the left orthogonal of the exceptional object does not contain a numerically exceptional object, hence definitely not an exceptional object. So we consider the semiorthogonal decomposition&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>On Bondal&#39;s counterexample to the Jordan-Hölder property: exceptionality</title>
+      <link>https://pbelmans.ncag.info/blog/2017/04/08/bondals-example/</link>
+      <pubDate>Sat, 08 Apr 2017 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2017/04/08/bondals-example/</guid>
+      <description>&lt;p&gt;In &lt;a href=&#34;https://arxiv.org/abs/1304.0903&#34;&gt;A simple counterexample to the Jordan-Hölder property for derived categories&lt;/a&gt; Alexander Kuznetsov discusses a counterexample to the Jordan-Hölder property for a derived category. The Jordan-Hölder property states that any two semiorthogonal decompositions with indecomposable components are necessarily of the same length, and the components in one decomposition are the same as in the other decomposition up to permutation.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;The counterexample is based on an algebra introduced by Alexey Bondal (and Alexander Polishchuk), and makes its first appearance in &lt;a hrefe=&#34;http://www.ams.org/mathscinet-getitem?mr=1230966&#34;&gt;Bondal&amp;ndash;Polishchuk, Homological properties of associative algebras: the method of helices&lt;/a&gt;, as the algebra $A(2,2,2)$ in example 2.8, where another pathology (non-geometricity) for this algebra is discussed.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Live blogging the Antwerp conference (3)</title>
+      <link>https://pbelmans.ncag.info/blog/2016/09/25/liveblogging-the-antwerp-conference-3/</link>
+      <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/09/25/liveblogging-the-antwerp-conference-3/</guid>
+      <description>&lt;p&gt;It sure was an exciting week! Also, the &lt;a href=&#34;http://antwerp-2016.ncag.info/picture.jpg&#34;&gt;conference picture&lt;/a&gt; is available (thanks to Dennis Presotto&#39;s camera, and Mieke De Mulder&#39;s photography skills). Do not let the picture trick you into thinking that I am as tall as Michael Wemyss, I had the advantage of standing one step higher, and still I&#39;m smaller.&lt;/p&gt;&#xA;&lt;p&gt;Very soon there should be notes made by the participants on the website.&lt;/p&gt;&#xA;&lt;h2&gt;Friday September 23&lt;/h2&gt;&#xA;&lt;p&gt;The topic of &lt;em&gt;Dimitri Kaledin&lt;/em&gt;&#39;s talk was somewhat related to questions I thought about in the beginning of my PhD, but I never got really far. He constructed a formalism for tackling gluing questions for enhanced triangulated categories, avoiding the framework of stable $\infty$-categories (because these are depending on who you ask either trivial, or impossible to work with) and pure dg categories (which is not the most flexible formalism). Using stable model categories, and a variation upon them called stable model pairs, questions concerning gluing should become more tractable. At some point he decided that&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Live blogging the Antwerp conference (2)</title>
+      <link>https://pbelmans.ncag.info/blog/2016/09/22/liveblogging-the-antwerp-conference-2/</link>
+      <pubDate>Thu, 22 Sep 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/09/22/liveblogging-the-antwerp-conference-2/</guid>
+      <description>&lt;h2&gt;Wednesday September 21&lt;/h2&gt;&#xA;&lt;p&gt;&lt;em&gt;Bertrand Toën&lt;/em&gt; talked about his approach to a proof of Bloch&#39;s conjecture, &lt;a href=&#34;https://pbelmans.ncag.info/blog/2016/07/23/fortnightly-links-15/&#34;&gt;mentioned before&lt;/a&gt; on my blog. Back then it was exciting stuff, and after his overview talk it still is very cool to see how it is possible to apply noncommutative algebraic geometry to problems of an arithmetic nature.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;He mentioned that a strong version of resolution of singularities would also settle the conjecture, because of a special case of the conjecture proven by Kato&amp;ndash;Saito that would imply the whole thing provided this mythical result. Using noncommutative algebro-geometric techniques seems like a more fun thing to do from my perspective.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Live blogging the Antwerp conference</title>
+      <link>https://pbelmans.ncag.info/blog/2016/09/20/liveblogging-the-antwerp-conference/</link>
+      <pubDate>Tue, 20 Sep 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/09/20/liveblogging-the-antwerp-conference/</guid>
+      <description>&lt;p&gt;Reading my blog you could&#39;ve figured out that we are having a &lt;a href=&#34;http://antwerp-2016.ncag.info&#34;&gt;big conference in Antwerp&lt;/a&gt;. Yesterday was too hectic to liveblog this, as &lt;a href=&#34;http://neverendingbooks.org&#34;&gt;the neverending author&lt;/a&gt; noticed, so I guess I&#39;ll just do one post every two days.&lt;/p&gt;&#xA;&lt;h2&gt;Monday September 19&lt;/h2&gt;&#xA;&lt;p&gt;&lt;em&gt;Ragnar Buchweitz&lt;/em&gt; quoted the following joke that Matt Satriano (he heard it from Dick Gross) made last week in Banff:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;  A good talk should contain one joke and one proof, and you should be able to tell them apart.&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;I think Ragnar turned the punchline into &lt;q&gt;and they should not be the same&lt;/q&gt;, which works equally well. Taking this advice from Ragnar (or Matt, or Dick) I might focus my discussion a little bit on the jokes the speakers made, rather than give a detailed outline of what they talked about.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>When is an algebraic geometer skilful enough?</title>
+      <link>https://pbelmans.ncag.info/blog/2016/08/14/when-is-an-algebraic-geometer-skilful-enough/</link>
+      <pubDate>Sun, 14 Aug 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/08/14/when-is-an-algebraic-geometer-skilful-enough/</guid>
+      <description>&lt;p&gt;I ran into the following lovely quote by the late Andrei Tyurin:&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;An algebraic geometer is skillful enough if he or she can recognize the geometric person under many guises of different dimensions.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;The reason for this quote (and the quote itself) can be read in his &lt;a href=&#34;http://www.ams.org/mathscinet-getitem?mr=1483334&#34;&gt;1995 lecture notes for the summer school on algebraic geometry in Ankara&lt;/a&gt;. One of the examples that a skilful algebraic geometer must know are the objects:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>When is D(Qcoh X) compactly generated by a single perfect complex?</title>
+      <link>https://pbelmans.ncag.info/blog/2016/07/05/when-is-dqcoh-x-compactly-generated-by-a-single-perfect-complex/</link>
+      <pubDate>Tue, 05 Jul 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/07/05/when-is-dqcoh-x-compactly-generated-by-a-single-perfect-complex/</guid>
+      <description>&lt;p&gt;Because I just keep on forgetting the conditions under which it is known when $\mathbf{D}(\mathop{\mathrm{Qcoh}}X)$ is generated by a single perfect complex (where $X$ is allowed to be an algebraic stack) I decided to write a quick summary post about the state of the art.&lt;/p&gt;&#xA;&lt;p&gt;I phrase the question in a specific way: for the sake of this blogpost I am only interested in $\mathbf{D}(\mathop{\mathrm{Qcoh}}X)$. One can also consider $\mathbf{D}_{\mathrm{qc}}(\mathcal{O}_X)$, the derived category of $\mathcal{O}_X$-modules whose cohomologies are all quasicoherent, which under suitable hypotheses is equivalent to the derived category of quasicoherent sheaves via the natural functor $\mathbf{D}(\mathop{\mathrm{Qcoh}}X)\to\mathbf{D}_{\mathrm{qc}}(\mathcal{O}_X)$. But for the sake of this post, $\mathbf{D}(\mathop{\mathrm{Qcoh}}X)$ is the main player.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>On a conjecture by Novakovic</title>
+      <link>https://pbelmans.ncag.info/blog/2016/05/22/on-a-conjecture-by-novakovic/</link>
+      <pubDate>Sun, 22 May 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/05/22/on-a-conjecture-by-novakovic/</guid>
+      <description>&lt;p&gt;In his recent preprint &lt;a href=&#34;http://arxiv.org/abs/1603.08373v1&#34;&gt;No full exceptional collections on non-split Brauer&amp;ndash;Severi varieties of dimension $\leq 3$&lt;/a&gt; Sasa Novakovic conjectured the following:&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;Conjecture&lt;/strong&gt; &lt;em&gt;Let $X\neq\mathbb{P}_k^n$ be a Brauer–Severi variety. Then $X$ does not admit a full (strong) exceptional collection consisting of arbitrary objects.&lt;/em&gt;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;In his paper he proves this (as the preprint&#39;s title already suggests) in dimension less than 3, by using the transitivity of the braid group action on the set of exceptional collections. Bondal and Polishchuk conjectured this for arbitrary triangulated categories, but it is only known in very special cases, mainly for the projective line, plane and three-space (over an algebraically closed field). From this he can prove the conjecture in the special cases where the degree of the central simple algebra is at most 4.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New paper: Noncommutative quadrics and Hilbert schemes of points</title>
+      <link>https://pbelmans.ncag.info/blog/2016/05/11/new-paper-noncommutative-quadrics-and-hilbert-schemes-of-points/</link>
+      <pubDate>Wed, 11 May 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/05/11/new-paper-noncommutative-quadrics-and-hilbert-schemes-of-points/</guid>
+      <description>&lt;p&gt;Theo Raedschelders and I just uploaded our newest preprint: &lt;a href=&#34;http://arxiv.org/abs/1605.02795&#34;&gt;Noncommutative quadrics and Hilbert schemes of points&lt;/a&gt;. The main goal of the paper is to extend the result of Orlov&#39;s paper &lt;a href=&#34;https://arxiv.org/abs/1503.03174&#34;&gt;Geometric realizations of quiver algebras&lt;/a&gt;: we prove that (the derived category of) a noncommutative quadric embeds in (the derived category of) a commutative deformation of the Hilbert scheme of two points on a quadric. Orlov showed this for noncommutative planes (i.e. quadratic Artin--Schelter regular algebras), we now do the cubic Artin--Schelter regular case.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>More cheat sheets</title>
+      <link>https://pbelmans.ncag.info/blog/2016/04/22/more-cheat-sheets/</link>
+      <pubDate>Fri, 22 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/04/22/more-cheat-sheets/</guid>
+      <description>&lt;p&gt;A while ago I created a &lt;a href=&#34;https://pbelmans.ncag.info/blog/2015/09/26/a-cheat-sheet-on-recollements/&#34;&gt;cheat sheet on recollements&lt;/a&gt;. I haven&#39;t improved at remembering things, hence I created two more cheat sheets:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;&lt;a href=&#34;https://pbelmans.ncag.info/notes/cheat-sheet-simplicial.pdf&#34;&gt;The simplicial indexing category&lt;/a&gt;&lt;/li&gt;&#xA;  &lt;li&gt;&lt;a href=&#34;https://pbelmans.ncag.info/notes/cheat-sheet-mutation.pdf&#34;&gt;Mutation of exceptional pairs&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>&#34;Look ma, no Hodge theory&#34;</title>
+      <link>https://pbelmans.ncag.info/blog/2015/12/23/look-ma-no-hodge-theory/</link>
+      <pubDate>Wed, 23 Dec 2015 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2015/12/23/look-ma-no-hodge-theory/</guid>
+      <description>&lt;p&gt;Max Lieblich has &lt;a href=&#34;http://max.lieblich.us/&#34;&gt;a blog&lt;/a&gt;, and a &lt;a href=&#34;http://arxiv.org/abs/1512.06451&#34;&gt;preprint&lt;/a&gt; together with Martin Olsson, and &lt;a href=&#34;http://max.lieblich.us/research/2015/12/22/derived-Torelli.html&#34;&gt;he discusses the latter on the former&lt;/a&gt;. Go check it out!&lt;/p&gt;&#xA;&lt;p&gt;&lt;small&gt;Maybe I ought to do a similar thing, discussing my own preprints, but I just don&#39;t think there is a sufficiently big audience for it...&lt;/small&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Simons Collaboration on Homological Mirror Symmetry</title>
+      <link>https://pbelmans.ncag.info/blog/2015/11/11/simons-collaboration-on-homological-mirror-symmetry/</link>
+      <pubDate>Wed, 11 Nov 2015 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2015/11/11/simons-collaboration-on-homological-mirror-symmetry/</guid>
+      <description>&lt;p&gt;Besides all the Breakthrough Prize money being thrown around there is a more sensible way of investing in mathematics, such as &lt;a href=&#34;https://schms.math.berkeley.edu/&#34;&gt;the Simons Foundation sponsoring a very interesting collaboration on homological mirror symmetry&lt;/a&gt;. The inaugural event was last week, &lt;a href=&#34;https://schms.math.berkeley.edu/slides-and-videos-from-inaugural-conference/&#34;&gt;slides and videos are now available&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A cheat sheet on recollements</title>
+      <link>https://pbelmans.ncag.info/blog/2015/09/26/a-cheat-sheet-on-recollements/</link>
+      <pubDate>Sat, 26 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2015/09/26/a-cheat-sheet-on-recollements/</guid>
+      <description>&lt;p&gt;If you are anything like me you might sometimes struggle with remembering the fine details of a definition. One example of this for me is the notion of &lt;em&gt;recollement&lt;/em&gt; in the world of triangulated categories: this is a decomposition of a triangulated category in two smaller triangulated categories with properties that are reminiscent of the decomposition of a (deliberately left vague) triangulated category on a topological space into a piece associated to an open set and a piece associated to its complement.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What makes the Kronecker quiver special?</title>
+      <link>https://pbelmans.ncag.info/blog/2015/08/19/what-makes-the-kronecker-quiver-special/</link>
+      <pubDate>Wed, 19 Aug 2015 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2015/08/19/what-makes-the-kronecker-quiver-special/</guid>
+      <description>&lt;p&gt;During the &lt;a href=&#34;https://sites.google.com/site/bragmeeting/1st-brag-meeting&#34;&gt;British Algebraic Geometry meeting&lt;/a&gt; last year in Warwick, &lt;a href=&#34;http://www.srcf.ucam.org/~jvsh2/&#34;&gt;Julian Holstein&lt;/a&gt; asked me an interesting question&lt;sup&gt;*&lt;/sup&gt;:&lt;/p&gt;&#xA;&#xA;&lt;blockquote&gt;&lt;p&gt;What makes the Kronecker quiver special?&lt;/p&gt;&lt;/blockquote&gt;&#xA;&#xA;&lt;p&gt;In the context of our conversation this meant the following: why is the derived category of the Kronecker quiver (with 2 arrows) equivalent to the derived category of the projective line, yet for the generalised Kronecker quiver (with $n$ arrows, for $n\neq 2$) there is no &lt;em&gt;equivalence&lt;/em&gt; with the derived category of any smooth projective variety?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why homotopy colimits in triangulated categories are defined the way they are</title>
+      <link>https://pbelmans.ncag.info/blog/2014/10/02/why-homotopy-colimits-in-triangulated-categories-are-defined-the-way-they-are/</link>
+      <pubDate>Thu, 02 Oct 2014 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2014/10/02/why-homotopy-colimits-in-triangulated-categories-are-defined-the-way-they-are/</guid>
+      <description>&lt;p&gt;This post is one big triviality. But I only realised now why homotopy colimits in triangulated categories are defined &lt;a href=&#34;http://stacks.math.columbia.edu/tag/090Z&#34;&gt;the way they are defined&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Just think of triangulated categories as a bit wonky abelian categories, and in (non-wonky) abelian categories a colimit can be constructed from having coproducts and coequalisers. In a triangulated category you don&#39;t have coequalisers / cokernels, but &lt;em&gt;cones&lt;/em&gt; play this role. Hence one takes a particular cone of a direct sum that simulates a coequaliser, and one is done.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Notes on stratification of triangulated categories</title>
+      <link>https://pbelmans.ncag.info/blog/2014/07/06/notes-on-stratification-of-triangulated-categories/</link>
+      <pubDate>Sun, 06 Jul 2014 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2014/07/06/notes-on-stratification-of-triangulated-categories/</guid>
+      <description>&lt;p&gt;The last week of June I attended a &lt;a href=&#34;http://www.lebesgue.fr/content/sem2014-categories-derivees&#34;&gt;summer school on derived categories&lt;/a&gt; in Nantes. Really interesting summer school, and a truly brilliant city. During the long and boring train ride home I decided to TeX up my notes for &lt;a href=&#34;http://www.math.uni-bielefeld.de/~hkrause/&#34;&gt;Henning Krause&lt;/a&gt;&#39;s lecture series on stratification of triangulated categories. The result of that is now proofread and corrected (thanks Henning!), and can be found on &lt;a href=&#34;http://win.ua.ac.be/~pbelmans/notes/stratification.pdf&#34;&gt;my personal webpage&lt;/a&gt; (or &lt;a href=&#34;http://www.math.uni-bielefeld.de/~hkrause/nantes_notes.pdf&#34;&gt;his&lt;/a&gt;, or hopefully the summer school&#39;s page soon).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Table of contents for Thomason--Trobaugh</title>
+      <link>https://pbelmans.ncag.info/blog/2014/06/13/table-of-contents-for-thomason-trobaugh/</link>
+      <pubDate>Fri, 13 Jun 2014 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2014/06/13/table-of-contents-for-thomason-trobaugh/</guid>
+      <description>&lt;p&gt;Yesterday I got fed up with the lack of a table of contents for Thomason--Trobaugh&#39;s Higher algebraic K-theory of schemes that I decided to make one myself. The result is available as a &lt;a href=&#34;https://pbelmans.files.wordpress.com/2014/06/toc.pdf&#34;&gt;pdf&lt;/a&gt;, or as a table in this blog post for your (and my) convenience:&lt;/p&gt;&#xA;&lt;table&gt;&#xA;&lt;tr&gt;&#xA;&lt;td&gt;1&lt;/td&gt;&#xA;&lt;td&gt;Waldhausen K-theory and K-theory of derived categories&lt;/td&gt;&#xA;&lt;td&gt;250&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td&gt;2&lt;/td&gt;&#xA;&lt;td&gt;Perfect complexes on schemes&lt;/td&gt;&#xA;&lt;td&gt;283&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td&gt;3&lt;/td&gt;&#xA;&lt;td&gt;K-theory of schemes: definition, models, functorialities, excision, limits&lt;/td&gt;&#xA;&lt;td&gt;312&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td&gt;4&lt;/td&gt;&#xA;&lt;td&gt;Projective space bundle theorem&lt;/td&gt;&#xA;&lt;td&gt;329&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td&gt;5&lt;/td&gt;&#xA;&lt;td&gt;Extension of perfect complexes, and the proto-localization theorem&lt;/td&gt;&#xA;&lt;td&gt;337&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td&gt;6&lt;/td&gt;&#xA;&lt;td&gt;Basic fundamental theorem and negative K-groups, K&lt;sup&gt;B&lt;/sup&gt;&lt;/td&gt;&#xA;&lt;td&gt;351&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td&gt;7&lt;/td&gt;&#xA;&lt;td&gt;Basic theorems for K&lt;sup&gt;B&lt;/sup&gt;, including the localization theorem&lt;/td&gt;&#xA;&lt;td&gt;363&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td&gt;8&lt;/td&gt;&#xA;&lt;td&gt;Mayer–Vietoris theorems&lt;/td&gt;&#xA;&lt;td&gt;367&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td&gt;9&lt;/td&gt;&#xA;&lt;td&gt;Reduction to the affine case, and the homotopy, closed Mayer--Vietoris, and invarience-under-infinitesimal-thickenings properties of K-theory with coefficients&lt;/td&gt;&#xA;&lt;td&gt;375&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td&gt;10&lt;/td&gt;&#xA;&lt;td&gt;Brown-Gersten spectral sequences and descent&lt;/td&gt;&#xA;&lt;td&gt;382&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td&gt;11&lt;/td&gt;&#xA;&lt;td&gt;&amp;Eacute;ale cohomological descent and comparison with topological K-theory&lt;/td&gt;&#xA;&lt;td&gt;391&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td&gt;A&lt;/td&gt;&#xA;&lt;td&gt;Exact categories and the Gabriel–Quillen embedding&lt;/td&gt;&#xA;&lt;td&gt;398&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td&gt;B&lt;/td&gt;&#xA;&lt;td&gt;Modules vs. quasicoherent modules&lt;/td&gt;&#xA;&lt;td&gt;409&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td&gt;C&lt;/td&gt;&#xA;&lt;td&gt;Absolute noetherian approximation&lt;/td&gt;&#xA;&lt;td&gt;418&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td&gt;D&lt;/td&gt;&#xA;&lt;td&gt;Hypercohomology with supports&lt;/td&gt;&#xA;&lt;td&gt;424&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td&gt;E&lt;/td&gt;&#xA;&lt;td&gt;The Nisnevich topology&lt;/td&gt;&#xA;&lt;td&gt;427&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td&gt;F&lt;/td&gt;&#xA;&lt;td&gt;Invariance under change of universe&lt;/td&gt;&#xA;&lt;td&gt;431&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;/table&gt;</description>
+    </item>
+    <item>
+      <title>Phantom categories do exist</title>
+      <link>https://pbelmans.ncag.info/blog/2014/06/07/phantom-categories-do-exist/</link>
+      <pubDate>Sat, 07 Jun 2014 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2014/06/07/phantom-categories-do-exist/</guid>
+      <description>&lt;p&gt;In a &lt;a href=&#34;https://pbelmans.ncag.info/blog/2014/04/04/do-phantom-categories-exist/&#34;&gt;previous post&lt;/a&gt; I introduced the notion of (quasi-)phantom categories, and discussed Kuznetsov&#39;s conjecture stating that they should not exist. This post has lain dormant for too long, but I decided to finally finish it this evening. The goal is clear: indicate how we can construct phantom categories, tell how results in classical algebraic geometry help us in doing so and explain what the abstract properties of some of the (quasi)phantom categories indicate about the surface.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Do phantom categories exist?</title>
+      <link>https://pbelmans.ncag.info/blog/2014/04/04/do-phantom-categories-exist/</link>
+      <pubDate>Fri, 04 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2014/04/04/do-phantom-categories-exist/</guid>
+      <description>&lt;p&gt;The short answer: yes.&lt;/p&gt;&#xA;&lt;h2&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;For the longer answer we should first say what a phantom category is. Recall that it is possible to define the Grothendieck group and Hochschild (co)homomology of (an enhancement of) a triangulated category, see for instance the introduction to &lt;a href=&#34;http://arxiv.org/pdf/0904.4330v1.pdf&#34;&gt;Hochschild homology and semiorthogonal decompositions&lt;/a&gt;. Moreover, these agree with the more geometric definition that one can give of Hochschild (co)homology, so everything is as nice as one hopes. This way we get some computational tools to calculate these abstractly defined concepts.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Serre&#39;s diagonal trick</title>
+      <link>https://pbelmans.ncag.info/blog/2014/03/22/serres-diagonal-trick/</link>
+      <pubDate>Sat, 22 Mar 2014 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2014/03/22/serres-diagonal-trick/</guid>
+      <description>&lt;p&gt;A while ago (last summer, I guess) I came across the phrase &lt;em&gt;Serre&#39;s diagonal trick&lt;/em&gt; in the article &lt;a href=&#34;http://arxiv.org/abs/1003.4201&#34;&gt;Hochschild (co)homology of schemes and with tilting object&lt;/a&gt;, by Ragnar Buchweitz and Lutz Hille. This terminology really intrigued me, as I couldn&#39;t understand back then what it actually meant just from the notation, nor did I have the background to know what it was.&lt;/p&gt;&#xA;&lt;p&gt;In the article the trick is described as&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;&#xA;[...] the identification of functors $\mathbf{L}\Delta^*(-\boxtimes-)\cong-\otimes_X^{\mathbf{L}}-$.&#xA;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Noncommutative geometry on the arXiv</title>
+      <link>https://pbelmans.ncag.info/blog/2014/03/05/noncommutative-geometry-on-the-arxiv/</link>
+      <pubDate>Wed, 05 Mar 2014 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2014/03/05/noncommutative-geometry-on-the-arxiv/</guid>
+      <description>&lt;p&gt;Recall that I have written about &lt;a href=&#34;https://pbelmans.ncag.info/blog/2013/11/14/possible-noncommutative-progress-on-the-standard-conjectures/&#34;&gt;the standard conjectures and noncommutative motives before&lt;/a&gt;. Now there is a follow-up article by Bernardara--Marcolli--Tabuada: &lt;a href=&#34;http://arxiv.org/abs/1403.0876v1&#34;&gt;Some remarks concerning Voevodsky&#39;s nilpotence conjecture&lt;/a&gt;. The conjecture is proved for some previously unknown cases (as far as I can tell, I&#39;m not an expert on the motives literature, or any other literature) using the equivalent formulation in the world of noncommutative motives. In the situations they cover (which are based on quadrics) we have some known semi-orthogonal decompositions, and these allow them to prove the nilpotence conjecture.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Autour de la Géométrie Algébrique Dérivée</title>
+      <link>https://pbelmans.ncag.info/blog/2013/04/20/autour-de-la-geometrie-algebrique-derivee/</link>
+      <pubDate>Sat, 20 Apr 2013 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2013/04/20/autour-de-la-geometrie-algebrique-derivee/</guid>
+      <description>&lt;p&gt;Time for a little commercial break. A seminar in which I&#39;ve been participating now has its own &lt;a href=&#34;http://www.math.jussieu.fr/~vezzosi/seminar/&#34;&gt;webpage&lt;/a&gt;, containing the set of &lt;a href=&#34;http://www.math.jussieu.fr/~vezzosi/seminar/notes.pdf&#34;&gt;notes&lt;/a&gt; people have written for this seminar. After April 26 there will be a short break, May 17 it will restart. That day I might or might not give a lecture on derived moduli stacks. Feel free to come if you are interested.&lt;/p&gt;&#xA;&lt;p&gt;&lt;small&gt;All remarks on the layout of the webpage (which I realize is rather bare, but I wasn&#39;t feeling inspired and I&#39;m a lousy webdesigner anyway) and the notes are appreciated.&lt;/small&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

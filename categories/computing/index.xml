@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Computing on Pieter Belmans</title>
+    <link>https://pbelmans.ncag.info/categories/computing/</link>
+    <description>Recent content in Computing on Pieter Belmans</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 21 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://pbelmans.ncag.info/categories/computing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gerby supports TikZ now</title>
+      <link>https://pbelmans.ncag.info/blog/2019/12/21/gerby-supports-tikz/</link>
+      <pubDate>Sat, 21 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2019/12/21/gerby-supports-tikz/</guid>
+      <description>&lt;p&gt;One aspect in which &lt;a href=&#34;https://gerby-project.github.io/&#34;&gt;Gerby&lt;/a&gt; (the software which underlies the Stacks project) was lacking was its support for TikZ and commutative diagrams. Luckily both &lt;a href=&#34;https://stacks.math.columbia.edu&#34;&gt;The Stacks project&lt;/a&gt; and &lt;a href=&#34;https://kerodon.net&#34;&gt;Kerodon&lt;/a&gt; are written by people who use &lt;var&gt;xypic&lt;/var&gt; for their commutative diagrams, which allows the use of &lt;a href=&#34;https://sonoisa.github.io/xyjax/xyjax.html&#34;&gt;XyJax&lt;/a&gt;, but this is not a perfect implementation of &lt;var&gt;xypic&lt;/var&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The system on which (part of) Gerby is built is &lt;a href=&#34;http://plastex.github.io/plastex/&#34;&gt;plasTeX&lt;/a&gt;, which contained support for TikZ for a while now, by running &lt;var&gt;pdflatex&lt;/var&gt; on every TikZ environment and then converting the resulting pdf to svg. I have now copied over this implementation (thank you &lt;a href=&#34;https://www.math.u-psud.fr/~pmassot/en/&#34;&gt;Patrick Massot&lt;/a&gt; for implementing it for the HTML5 renderer!) and added a &lt;a href=&#34;https://github.com/gerby-project/hello-world/blob/master/document-tikz.tex&#34;&gt;minimal working example containing TikZ&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A minimal working example to use Gerby</title>
+      <link>https://pbelmans.ncag.info/blog/2019/07/16/minimal-working-gerby/</link>
+      <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2019/07/16/minimal-working-gerby/</guid>
+      <description>&lt;p&gt;If you are interested in setting up a website similar to &lt;a href=&#34;https://stacks.math.columbia.edu&#34;&gt;The Stacks project&lt;/a&gt; or &lt;a href=&#34;https://kerodon.net&#34;&gt;Kerodon&lt;/a&gt;, you can do this using the same framework that powers these websites: &lt;a href=&#34;https://gerby-project.github.io&#34;&gt;Gerby&lt;/a&gt;. Unfortunately, until now the instructions to use this were pretty annoyingly only available for the Stacks project, so setting things up correctly was painful and very specific.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;We have now created &lt;a href=&#34;https://github.com/gerby-project/hello-world&#34;&gt;&lt;strong&gt;a minimal working example&lt;/strong&gt;&lt;/a&gt; which lists the relevant steps to set up Gerby for a minimal Hello world project. Doing this you&#39;ll get an instance of the Gerby with the Stacks project layout, containing just a few tags. This repository is basically a Travis script which performs all the steps required for the installation of plasTeX and Gerby, and then goes through what should be the usual update process for an actual instance.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A website for Gerby</title>
+      <link>https://pbelmans.ncag.info/blog/2018/05/20/gerby/</link>
+      <pubDate>Sun, 20 May 2018 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2018/05/20/gerby/</guid>
+      <description>&lt;p&gt;By now it&#39;s no secret that we are working on a new version of the Stacks project website (see &lt;a href=&#34;https://pbelmans.ncag.info/blog/2017/08/27/introduction-gerby-plastex/&#34;&gt;1&lt;/a&gt; and &lt;a href=&#34;https://pbelmans.ncag.info/blog/2018/01/05/introducing-gerby-tools/&#34;&gt;2&lt;/a&gt;). We have been working on a system called &lt;em&gt;Gerby&lt;/em&gt; for almost a year now, as a replacement for the Stacks project website. In fact, it will go live &lt;em&gt;tomorrow&lt;/em&gt;.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;In case you are interested in knowing more about the new system, you want to run your local copy of the Stacks project website, or you are interested in testing the system for your own project, I have put up &lt;a href=&#34;https://gerby-project.github.io/&#34;&gt;a page describing the system&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Introducing Gerby: the tools and website</title>
+      <link>https://pbelmans.ncag.info/blog/2018/01/05/introducing-gerby-tools/</link>
+      <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2018/01/05/introducing-gerby-tools/</guid>
+      <description>&lt;p&gt;A little while ago I explained &lt;a href=&#34;https://pbelmans.ncag.info/blog/2017/08/27/introduction-gerby-plastex/&#34;&gt;how to take the Stacks project and convert it to a bunch of small HTML files&lt;/a&gt;, which is the first step in setting up the new website for the Stacks project. In this post I&#39;ll explain the next two steps: creating the database behind the website, and setting up the website. For now, this part is not as streamlined as we&#39;d want it to be, but in any case, it&#39;s not too hard.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Introducing Gerby: plasTeX</title>
+      <link>https://pbelmans.ncag.info/blog/2017/08/27/introduction-gerby-plastex/</link>
+      <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2017/08/27/introduction-gerby-plastex/</guid>
+      <description>&lt;p&gt;So, we are currently working on a new version of the Stacks project website. If you have any suggestions for the new website, please get in touch: you can email me, or &lt;a href=&#34;https://github.com/pbelmans/gerby-website&#34;&gt;use the issue tracker for the website on GitHub&lt;/a&gt;. The project is called &lt;strong&gt;Gerby&lt;/strong&gt;, as a silly reference to the Stacks project. It consists of several parts, and this blog post explains you how to use one of them: the &lt;a href=&#34;https://github.com/pbelmans/plastex/tree/gerby&#34;&gt;Gerby renderer in plasTeX&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>On Bondal&#39;s counterexample to the Jordan-Hölder property: non-extendability</title>
+      <link>https://pbelmans.ncag.info/blog/2017/04/09/bondals-example-2/</link>
+      <pubDate>Sun, 09 Apr 2017 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2017/04/09/bondals-example-2/</guid>
+      <description>&lt;p&gt;This post &lt;a href=&#34;https://pbelmans.ncag.info/blog/2017/04/08/bondals-example/&#34;&gt;continues the discussion&lt;/a&gt; of Bondal&#39;s counterexample from &lt;a href=&#34;https://arxiv.org/abs/1304.0903v1&#34;&gt;A simple counterexample to the Jordan-Hölder property for derived categories&lt;/a&gt;. We will reuse the notation.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;Non-extendability&lt;/strong&gt; Now we get to the interesting part. The preprint does not really mention &lt;em&gt;how&lt;/em&gt; one checks that the exceptional object cannot be extended to an exceptional collection. To do this, we will check in the (numerical) Grothendieck group that the left orthogonal of the exceptional object does not contain a numerically exceptional object, hence definitely not an exceptional object. So we consider the semiorthogonal decomposition&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Alternative visualisation of the structure of the Stacks project</title>
+      <link>https://pbelmans.ncag.info/blog/2016/05/26/alternative-visualisation-of-the-structure-of-the-stacks-project/</link>
+      <pubDate>Thu, 26 May 2016 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2016/05/26/alternative-visualisation-of-the-structure-of-the-stacks-project/</guid>
+      <description>&lt;p&gt;It turns out that someone independently made &lt;a href=&#34;http://tietom.me/2016/04/30/stacksvis/&#34;&gt;visualisations of the structure of the Stacks project&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;He or she also performed some statistical analysis, but I&#39;m not sure the metrics of how important a result is are chosen appropriately. For instance &lt;a href=&#34;http://stacks.math.columbia.edu/tag/07FJ&#34;&gt;tag 07FJ&lt;/a&gt; appears in the top 10 list, just because it refers to so many other tags in its proof. That does not necessarily mean it is important because it heavily depends on how a statement and its proof are written: if a statement is a long list of substatements, or its proof does not contain any interesting sublemmas (at first sight) then by this metric it will become important just because it refers to many other tags. The metric confounds importance and difficulty I think. Although in this case it actually &lt;em&gt;is&lt;/em&gt; an important result because it forms the main technical part of the proof of &lt;a href=&#34;http://stacks.math.columbia.edu/tag/07GC&#34;&gt;Popescu&#39;s theorem&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Software for computations in algebraic geometry</title>
+      <link>https://pbelmans.ncag.info/blog/2014/11/06/software-for-computations-in-algebraic-geometry/</link>
+      <pubDate>Thu, 06 Nov 2014 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2014/11/06/software-for-computations-in-algebraic-geometry/</guid>
+      <description>&lt;p&gt;Because somehow I ended up with a degree in computer science people sometimes ask me how to do certain computations in algebra or algebraic geometry on a computer (not that I ever learnt such a thing in my computer science degree to be honest). In this blog post I try to give a summary of the tools (together with direct links to documentation, libraries, extra packages, ... so I never have to look for them again myself and don&#39;t forget to consider one when someone asks a question) that I am aware of for these computations, and which one is the most suited for which type of problems.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -16,17 +16,10 @@
       <description></description>
     </item>
     <item>
-      <title>Meta</title>
-      <link>https://pbelmans.ncag.info/categories/meta/</link>
+      <title>Personal</title>
+      <link>https://pbelmans.ncag.info/categories/personal/</link>
       <pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://pbelmans.ncag.info/categories/meta/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Algebraic Geometry</title>
-      <link>https://pbelmans.ncag.info/categories/algebraic-geometry/</link>
-      <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://pbelmans.ncag.info/categories/algebraic-geometry/</guid>
+      <guid>https://pbelmans.ncag.info/categories/personal/</guid>
       <description></description>
     </item>
     <item>
@@ -37,17 +30,10 @@
       <description></description>
     </item>
     <item>
-      <title>Random</title>
-      <link>https://pbelmans.ncag.info/categories/random/</link>
-      <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
-      <guid>https://pbelmans.ncag.info/categories/random/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Computer Science</title>
-      <link>https://pbelmans.ncag.info/categories/computer-science/</link>
+      <title>Computing</title>
+      <link>https://pbelmans.ncag.info/categories/computing/</link>
       <pubDate>Sat, 21 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>https://pbelmans.ncag.info/categories/computer-science/</guid>
+      <guid>https://pbelmans.ncag.info/categories/computing/</guid>
       <description></description>
     </item>
     <item>
@@ -55,20 +41,6 @@
       <link>https://pbelmans.ncag.info/categories/music/</link>
       <pubDate>Sat, 20 May 2017 00:00:00 +0000</pubDate>
       <guid>https://pbelmans.ncag.info/categories/music/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Programming</title>
-      <link>https://pbelmans.ncag.info/categories/programming/</link>
-      <pubDate>Sun, 09 Apr 2017 00:00:00 +0000</pubDate>
-      <guid>https://pbelmans.ncag.info/categories/programming/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Literature</title>
-      <link>https://pbelmans.ncag.info/categories/literature/</link>
-      <pubDate>Sun, 30 Dec 2012 00:00:00 +0000</pubDate>
-      <guid>https://pbelmans.ncag.info/categories/literature/</guid>
       <description></description>
     </item>
   </channel>

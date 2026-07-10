@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MathJax on Pieter Belmans</title>
+    <link>https://pbelmans.ncag.info/tags/MathJax/</link>
+    <description>Recent content in MathJax on Pieter Belmans</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 21 Dec 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://pbelmans.ncag.info/tags/MathJax/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>On &#34;Towards MathJax 3.0&#34;</title>
+      <link>https://pbelmans.ncag.info/blog/2015/12/21/on-towards-mathjax-3-0/</link>
+      <pubDate>Mon, 21 Dec 2015 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2015/12/21/on-towards-mathjax-3-0/</guid>
+      <description>&lt;p&gt;A few days ago the MathJax consortium &lt;a href=&#34;https://www.mathjax.org/whitepaper-towards-mathjax-v3/&#34;&gt;released&lt;/a&gt; a white paper called &#34;&lt;a href=&#34;http://mathjax.github.io/papers/towards-v3/towards-mathjax-v3.html&#34;&gt;Towards MathJax 3.0&lt;/a&gt;&#34; (&lt;a href=&#34;http://mathjax.github.io/papers/towards-v3/towards-mathjax-v3.pdf&#34;&gt;pdf&lt;/a&gt;). With my sinuses again in a reasonable condition I decided to read it, and see what it means for the average user. If you are an average user but don&#39;t care about why things are the way they are, you can skip to the &lt;a href=&#34;#changes&#34;&gt;changes&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h2&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;The question that is answered is:&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;&#34;What do we expect from MathJax 3.0?&#34;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Online view for the Stacks project</title>
+      <link>https://pbelmans.ncag.info/blog/2012/12/15/online-view-for-the-stacks-project/</link>
+      <pubDate>Sat, 15 Dec 2012 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2012/12/15/online-view-for-the-stacks-project/</guid>
+      <description>&lt;p&gt;First I am silent for exactly 3 months, now 2 blog posts in two days. But I can make the interesting announcement I promised yesterday.&lt;/p&gt;&#xA;&lt;p&gt;During the summer I created a new website for the &lt;a href=&#34;http://stacks.math.columbia.edu/&#34;&gt;Stacks project&lt;/a&gt; (&lt;a href=&#34;https://pbelmans.ncag.info/blog/2012/07/19/a-new-website-for-the-stacks-project/&#34;&gt;my announcement&lt;/a&gt;, &lt;a href=&#34;http://math.columbia.edu/~dejong/wordpress/?p=2641&#34;&gt;official announcement&lt;/a&gt;). At that moment we&#39;ve toyed with the idea of making a full-fledged online view, but the lack of a good &lt;code&gt;xypic&lt;/code&gt; parser made this impossible. And what would the Stacks project be without commutative diagrams? At that point &lt;a href=&#34;https://github.com/sonoisa/XyJax&#34;&gt;XyJax&lt;/a&gt; was already around, but it was incapable of rendering commutative diagrams, and it was inactive. Yet a few months ago it became active again, and after a request the developer implemented commutative diagrams (thank you!).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>\uparrow and its variations are variable-sized delimiters</title>
+      <link>https://pbelmans.ncag.info/blog/2011/11/04/uparrow-and-its-variations-are-variable-sized-delimiters/</link>
+      <pubDate>Fri, 04 Nov 2011 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2011/11/04/uparrow-and-its-variations-are-variable-sized-delimiters/</guid>
+      <description>&lt;p&gt;While preparing a commutative diagram to be used in a &lt;a href=&#34;http://mathjax.org&#34;&gt;MathJax&lt;/a&gt; environment I discovered the little gem that is already given away in the title. Basically I needed to draw a relatively complex commutative diagram (see below) without using extra packages like &lt;code&gt;&lt;a href=&#34;http://ctan.org/pkg/xypic&#34;&gt;xypic&lt;/a&gt;&lt;/code&gt; or (my favourite) &lt;a href=&#34;http://ctan.org/pkg/pgf&#34;&gt;PGF/TikZ&lt;/a&gt;. Only stuff from &lt;code&gt;amsmath&lt;/code&gt; (and its extended family) is allowed. That means hacking something together using &lt;code&gt;array&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;You know variable-sized delimiters: they are either the &lt;code&gt;\left(&lt;/code&gt;, &lt;code&gt;\right)&lt;/code&gt; combo or variations on &lt;code&gt;\big)&lt;/code&gt; making all your delimiters look good in LaTeX. But &lt;code&gt;\uparrow&lt;/code&gt; and its related arrows &lt;code&gt;\downarrow&lt;/code&gt;, &lt;code&gt;\Downarrow&lt;/code&gt;, &lt;code&gt;\Uparrow&lt;/code&gt;, &lt;code&gt;\updownarrow&lt;/code&gt; and &lt;code&gt;\Updownarrow&lt;/code&gt; are variable-sized delimiters too! Which means they can be used to spice up your commutative diagram a little.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
