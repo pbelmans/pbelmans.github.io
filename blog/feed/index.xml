@@ -5,9 +5,52 @@
     <description></description>
     <link>https://pbelmans.ncag.info/</link>
     <atom:link href="https://pbelmans.ncag.info/blog/feed/" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 10 Jul 2026 13:59:03 &#43;0000</pubDate>
-    <lastBuildDate>Fri, 10 Jul 2026 13:59:03 &#43;0000</lastBuildDate>
+    <pubDate>Sun, 12 Jul 2026 14:24:31 &#43;0000</pubDate>
+    <lastBuildDate>Sun, 12 Jul 2026 14:24:31 &#43;0000</lastBuildDate>
     <generator>Hugo</generator>
+    
+    <item>
+      <title>le superficie algebriche: a table and more surfaces</title>
+      <description>&lt;p&gt;Back in 2015, &lt;a href=&#34;https://math.commelin.net&#34;&gt;Johan Commelin&lt;/a&gt; and I made
+&lt;strong&gt;&lt;a href=&#34;https://superficie.info&#34;&gt;le superficie algebriche&lt;/a&gt;&lt;/strong&gt;, an interactive picture of
+the geography of minimal complex algebraic surfaces, plotted by their Chern
+numbers $\mathrm{c}_1^2$ and $\mathrm{c}_2$ (see the
+&lt;a href=&#34;https://pbelmans.ncag.info/blog/2015/07/15/le-superficie-algebriche/&#34;&gt;original post&lt;/a&gt; and a
+&lt;a href=&#34;https://pbelmans.ncag.info/blog/2019/12/12/update-to-superficie-algebriche/&#34;&gt;2019 update&lt;/a&gt;). It has just had
+its biggest update since.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A table.&lt;/strong&gt; Next to the plane of Chern numbers there is now a
+&lt;a href=&#34;https://superficie.info/table/&#34;&gt;table&lt;/a&gt;: every class of surface in the database
+with its Kodaira dimension and numerical invariants, sortable by any column,
+searchable by name, and with descriptions you can unfold in place.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;More surfaces, with descriptions and references.&lt;/strong&gt; A literature sweep added a
+long list of named classes, from fake quadrics and the ball quotients on the
+Bogomolov–Miyaoka–Yau line (Ishida, Cartwright–Steger, Yeung&amp;rsquo;s surface of maximal
+canonical degree) to product-quotient and Beauville-type surfaces. Each now comes
+with a short description, what it is and why it is interesting, and full citations
+resolved to MathSciNet, arXiv or DOI, using the same bibliography machinery I built
+for &lt;a href=&#34;https://pbelmans.ncag.info/blog/2026/07/09/mgnbar-update/&#34;&gt;mgnbar&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The map, filled in.&lt;/strong&gt; The whole interior between the Noether line and the
+signature-zero line is now populated (following Persson), so the picture genuinely
+shows which Chern numbers occur and, just as clearly, the thin strip below the
+Bogomolov–Miyaoka–Yau line that is still an open problem.&lt;/p&gt;
+&lt;p&gt;Smaller things: the holomorphic Euler characteristic of the tangent bundle
+$\chi(\mathrm{T}_S)$ is shown too, and every surface now has its own URL, so you
+can link straight to one, like
+&lt;a href=&#34;https://superficie.info/2/4-8/fake-quadrics&#34;&gt;superficie.info/2/4-8/fake-quadrics&lt;/a&gt;.
+As with my other websites it is now a static site built with
+&lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Corrections and, especially, more surfaces are very welcome, on
+&lt;a href=&#34;https://github.com/superficie/superficie-algebriche/issues&#34;&gt;GitHub&lt;/a&gt; or by email.
+If you know a surface that belongs on the map, it is easy to add.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;LLMs were used to build this, which made the whole process &lt;em&gt;much&lt;/em&gt; faster.&lt;/p&gt;
+</description>
+      <pubDate>Sun, 12 Jul 2026 00:00:00 &#43;0000</pubDate>
+      <link>https://pbelmans.ncag.info/blog/2026/07/12/superficie-update/</link>
+      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/07/12/superficie-update/</guid>
+      <category>algebraic geometry</category><category>programming</category>
+      <category>mathematics</category>
+    </item>
     
     <item>
       <title>DOIs for my websites</title>
@@ -490,23 +533,6 @@ but&lt;/p&gt;
       <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/05/08/HomogeneousTools-website/</guid>
       <category>programming</category><category>homogeneous varieties</category>
       <category>mathematics</category>
-    </item>
-    
-    <item>
-      <title>Moving from Jekyll to Hugo</title>
-      <description>
-&lt;p&gt;
-  Almost ten years ago, I
-  &lt;a href=&#34;https://pbelmans.ncag.info/blog/2016/08/26/moving-from-wordpress-to-jekyll/&#34;&gt;moved from WordPress to Jekyll&lt;/a&gt;. It felt like time for another change, so I have now moved the site to Hugo. There was no particular need for it, build times weren&#39;t too bad, but it is nice to see how much faster Hugo is in building my website.
-&lt;/p&gt;
-
-&lt;p&gt;The migration is complete, and I have tried to make sure everything still works as intended. Let me know if something &lt;em&gt;did&lt;/em&gt; break!&lt;/p&gt;
-</description>
-      <pubDate>Tue, 05 May 2026 00:00:00 &#43;0000</pubDate>
-      <link>https://pbelmans.ncag.info/blog/2026/05/05/moving-from-jekyll-to-hugo/</link>
-      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/05/05/moving-from-jekyll-to-hugo/</guid>
-      <category>programming</category>
-      <category>personal</category>
     </item>
     
   </channel>

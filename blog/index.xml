@@ -6,8 +6,15 @@
     <description>Recent content in blog on Pieter Belmans</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://pbelmans.ncag.info/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>le superficie algebriche: a table and more surfaces</title>
+      <link>https://pbelmans.ncag.info/blog/2026/07/12/superficie-update/</link>
+      <pubDate>Sun, 12 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2026/07/12/superficie-update/</guid>
+      <description>&lt;p&gt;Back in 2015, &lt;a href=&#34;https://math.commelin.net&#34;&gt;Johan Commelin&lt;/a&gt; and I made&#xA;&lt;strong&gt;&lt;a href=&#34;https://superficie.info&#34;&gt;le superficie algebriche&lt;/a&gt;&lt;/strong&gt;, an interactive picture of&#xA;the geography of minimal complex algebraic surfaces, plotted by their Chern&#xA;numbers $\mathrm{c}_1^2$ and $\mathrm{c}_2$ (see the&#xA;&lt;a href=&#34;https://pbelmans.ncag.info/blog/2015/07/15/le-superficie-algebriche/&#34;&gt;original post&lt;/a&gt; and a&#xA;&lt;a href=&#34;https://pbelmans.ncag.info/blog/2019/12/12/update-to-superficie-algebriche/&#34;&gt;2019 update&lt;/a&gt;). It has just had&#xA;its biggest update since.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;A table.&lt;/strong&gt; Next to the plane of Chern numbers there is now a&#xA;&lt;a href=&#34;https://superficie.info/table/&#34;&gt;table&lt;/a&gt;: every class of surface in the database&#xA;with its Kodaira dimension and numerical invariants, sortable by any column,&#xA;searchable by name, and with descriptions you can unfold in place.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>DOIs for my websites</title>
       <link>https://pbelmans.ncag.info/blog/2026/07/10/dois-for-my-websites/</link>

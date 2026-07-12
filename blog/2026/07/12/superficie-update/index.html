@@ -7,13 +7,13 @@
 
   <link rel="icon" type="image/png" href="/favicon.png" size="256x256">
 
-  <title>Pieter Belmans&mdash;Archive</title>
-  
+  <title>Pieter Belmans&mdash;le superficie algebriche: a table and more surfaces</title>
+  <meta name="description" content="Back in 2015, Johan Commelin and I made le superficie algebriche, an interactive picture of the geography of minimal complex algebraic surfaces, plotted by …">
 
   
   <link rel="stylesheet" href="/css/main.css">
 
-  <link rel="canonical" href="https://pbelmans.ncag.info/archive/">
+  <link rel="canonical" href="https://pbelmans.ncag.info/blog/2026/07/12/superficie-update/">
   <link rel="alternate" type="application/rss+xml" title="Pieter Belmans" href="https://pbelmans.ncag.info/blog/feed/">
 
   <script>
@@ -65,53 +65,88 @@ window.MathJax = {
     <div class="page-content">
       <div class="wrapper">
         
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">le superficie algebriche: a table and more surfaces</h1>
 
+    <p class="post-meta">
+      <time datetime="2026-07-12T00:00:00Z" itemprop="datePublished">Jul 12, 2026</time>
+    </p>
 
-
-  <article>
-  <h3><a href="/blog/2017/09/17/fortnightly-links-45/">Fortnightly links (45)</a></h3>
-  <p class="post-meta"><time datetime="2017-09-17T00:00:00Z">Sep 17, 2017</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2017/09/13/open-access-journals-in-ag/">Open access journals in algebraic geometry</a></h3>
-  <p class="post-meta"><time datetime="2017-09-13T00:00:00Z">Sep 13, 2017</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2017/09/11/https-stacks/">The Stacks project now uses HTTPS</a></h3>
-  <p class="post-meta"><time datetime="2017-09-11T00:00:00Z">Sep 11, 2017</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2017/09/03/fortnightly-links-44/">Fortnightly links (44)</a></h3>
-  <p class="post-meta"><time datetime="2017-09-03T00:00:00Z">Sep 3, 2017</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2017/08/27/introduction-gerby-plastex/">Introducing Gerby: plasTeX</a></h3>
-  <p class="post-meta"><time datetime="2017-08-27T00:00:00Z">Aug 27, 2017</time></p>
-</article>
-
-
-
-
-<ul class="pagination">
-  
     
-    <li class="previous"><a href="/archive/59/">previous page</a></li>
-  
-
-  
     
-    <li class="next"><a href="/archive/61/">next page</a></li>
-  
-</ul>
+    <div class="post-meta">
+      posted in:
+      <ul class="categories-list">
+        
+          <li><a href="/blog/categories#mathematics">mathematics</a></li>
+        
+      </ul>
+    </div>
+    
 
+    
+    
+    <div class="post-meta">
+      tags:
+      <ul class="tags-list">
+        
+          <li><a href="/blog/tags#algebraic-geometry">algebraic geometry</a>, </li>
+        
+          <li><a href="/blog/tags#programming">programming</a></li>
+        
+      </ul>
+    </div>
+    
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Back in 2015, <a href="https://math.commelin.net">Johan Commelin</a> and I made
+<strong><a href="https://superficie.info">le superficie algebriche</a></strong>, an interactive picture of
+the geography of minimal complex algebraic surfaces, plotted by their Chern
+numbers $\mathrm{c}_1^2$ and $\mathrm{c}_2$ (see the
+<a href="/blog/2015/07/15/le-superficie-algebriche/">original post</a> and a
+<a href="/blog/2019/12/12/update-to-superficie-algebriche/">2019 update</a>). It has just had
+its biggest update since.</p>
+<p><strong>A table.</strong> Next to the plane of Chern numbers there is now a
+<a href="https://superficie.info/table/">table</a>: every class of surface in the database
+with its Kodaira dimension and numerical invariants, sortable by any column,
+searchable by name, and with descriptions you can unfold in place.</p>
+<p><strong>More surfaces, with descriptions and references.</strong> A literature sweep added a
+long list of named classes, from fake quadrics and the ball quotients on the
+Bogomolov–Miyaoka–Yau line (Ishida, Cartwright–Steger, Yeung&rsquo;s surface of maximal
+canonical degree) to product-quotient and Beauville-type surfaces. Each now comes
+with a short description, what it is and why it is interesting, and full citations
+resolved to MathSciNet, arXiv or DOI, using the same bibliography machinery I built
+for <a href="/blog/2026/07/09/mgnbar-update/">mgnbar</a>.</p>
+<p><strong>The map, filled in.</strong> The whole interior between the Noether line and the
+signature-zero line is now populated (following Persson), so the picture genuinely
+shows which Chern numbers occur and, just as clearly, the thin strip below the
+Bogomolov–Miyaoka–Yau line that is still an open problem.</p>
+<p>Smaller things: the holomorphic Euler characteristic of the tangent bundle
+$\chi(\mathrm{T}_S)$ is shown too, and every surface now has its own URL, so you
+can link straight to one, like
+<a href="https://superficie.info/2/4-8/fake-quadrics">superficie.info/2/4-8/fake-quadrics</a>.
+As with my other websites it is now a static site built with
+<a href="https://gohugo.io">Hugo</a>.</p>
+<p>Corrections and, especially, more surfaces are very welcome, on
+<a href="https://github.com/superficie/superficie-algebriche/issues">GitHub</a> or by email.
+If you know a surface that belongs on the map, it is easy to add.</p>
+<hr>
+<p>LLMs were used to build this, which made the whole process <em>much</em> faster.</p>
+
+  </div>
+
+  <ul class="pagination">
+    
+      <li class="previous"><a href="/blog/2026/07/10/dois-for-my-websites/">previous post</a></li>
+    
+
+    
+      <li class="disabled next"><a href="#">next post</a></li>
+    
+  </ul>
+</article>
 
       </div>
     </div>
