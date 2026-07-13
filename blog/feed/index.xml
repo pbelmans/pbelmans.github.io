@@ -5,9 +5,42 @@
     <description></description>
     <link>https://pbelmans.ncag.info/</link>
     <atom:link href="https://pbelmans.ncag.info/blog/feed/" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 12 Jul 2026 14:24:31 &#43;0000</pubDate>
-    <lastBuildDate>Sun, 12 Jul 2026 14:24:31 &#43;0000</lastBuildDate>
+    <pubDate>Mon, 13 Jul 2026 07:12:04 &#43;0000</pubDate>
+    <lastBuildDate>Mon, 13 Jul 2026 07:12:04 &#43;0000</lastBuildDate>
     <generator>Hugo</generator>
+    
+    <item>
+      <title>Cubic 4-folds: special cubic fourfolds and their K3 surfaces</title>
+      <description>&lt;p&gt;Since early 2023 there has been a website at
+&lt;strong&gt;&lt;a href=&#34;https://cubics.fanography.info&#34;&gt;cubics.fanography.info&lt;/a&gt;&lt;/strong&gt; on the
+relationship between cubic fourfolds and K3 surfaces, but I never announced it I think:
+a first draft version was written in just 2 days and I didn&amp;rsquo;t know what to do next.
+I&amp;rsquo;m not sure it is in any state or form &amp;ldquo;finished&amp;rdquo;, but given that I&amp;rsquo;m on a website spree lately,
+I might as well get this one out too. So this is that announcement, three years late.&lt;/p&gt;
+&lt;h2 id=&#34;hassett-divisors&#34;&gt;Hassett divisors&lt;/h2&gt;
+&lt;p&gt;A smooth cubic fourfold $X\subseteq\mathbb{P}^5$ is &lt;em&gt;special&lt;/em&gt; if it contains a
+surface not homologous to a complete intersection; these form the Hassett
+divisors $\mathcal{C}_d$ in the moduli space of cubic fourfolds.&lt;/p&gt;
+&lt;p&gt;The website is a table with one row for every discriminant $d$,
+collecting some things that are known about $\mathcal{C}_d$:
+the various notions of an associated (twisted) K3 surface,
+rationality, the Kodaira dimension, Fourier–Mukai partners,
+and which surfaces the generic member contains, with clickable references.
+It goes back to a chart of &lt;a href=&#34;https://pages.uoregon.edu/adding/&#34;&gt;Nicolas Addington&lt;/a&gt;,
+whose comments shaped the website.&lt;/p&gt;
+&lt;p&gt;As with my other websites it is a static site built with
+&lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt;. Feature requests, corrections and contributions are
+very welcome, on &lt;a href=&#34;https://github.com/pbelmans/cubic-4-folds&#34;&gt;GitHub&lt;/a&gt; or by
+email.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;LLMs were used to build this, which made the whole process &lt;em&gt;much&lt;/em&gt; faster.&lt;/p&gt;
+</description>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 &#43;0000</pubDate>
+      <link>https://pbelmans.ncag.info/blog/2026/07/13/cubic-4-folds/</link>
+      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/07/13/cubic-4-folds/</guid>
+      <category>algebraic geometry</category><category>programming</category>
+      <category>mathematics</category>
+    </item>
     
     <item>
       <title>le superficie algebriche: a table and more surfaces</title>
@@ -509,29 +542,6 @@ Let us know which features you would like to see implemented next!&lt;/p&gt;
       <link>https://pbelmans.ncag.info/blog/2026/05/11/lie-jl-1-0-0/</link>
       <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/05/11/lie-jl-1-0-0/</guid>
       <category>programming</category><category>vector bundles</category><category>homogeneous varieties</category>
-      <category>mathematics</category>
-    </item>
-    
-    <item>
-      <title>HomogeneousTools website</title>
-      <description>&lt;p&gt;Together with Javier Fernández Píriz,
-a PhD student at the University of Luxembourg,
-we are working on HomogeneousTools,
-a collection of packages meant to efficiently deal with homogeneous varieties
-and bundles on them.&lt;/p&gt;
-&lt;p&gt;For now, our main joint project isn&amp;rsquo;t live yet
-(more on that in a few weeks),
-but&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;the &lt;a href=&#34;https://homogeneous.tools&#34;&gt;project&amp;rsquo;s website is now live&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;two preliminary packages I created for our main work are also live&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;More on those already live packages soon!&lt;/p&gt;
-</description>
-      <pubDate>Fri, 08 May 2026 00:00:00 &#43;0000</pubDate>
-      <link>https://pbelmans.ncag.info/blog/2026/05/08/HomogeneousTools-website/</link>
-      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/05/08/HomogeneousTools-website/</guid>
-      <category>programming</category><category>homogeneous varieties</category>
       <category>mathematics</category>
     </item>
     

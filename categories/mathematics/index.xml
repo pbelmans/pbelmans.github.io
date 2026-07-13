@@ -6,8 +6,15 @@
     <description>Recent content in Mathematics on Pieter Belmans</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 12 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://pbelmans.ncag.info/categories/mathematics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cubic 4-folds: special cubic fourfolds and their K3 surfaces</title>
+      <link>https://pbelmans.ncag.info/blog/2026/07/13/cubic-4-folds/</link>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2026/07/13/cubic-4-folds/</guid>
+      <description>&lt;p&gt;Since early 2023 there has been a website at&#xA;&lt;strong&gt;&lt;a href=&#34;https://cubics.fanography.info&#34;&gt;cubics.fanography.info&lt;/a&gt;&lt;/strong&gt; on the&#xA;relationship between cubic fourfolds and K3 surfaces, but I never announced it I think:&#xA;a first draft version was written in just 2 days and I didn&amp;rsquo;t know what to do next.&#xA;I&amp;rsquo;m not sure it is in any state or form &amp;ldquo;finished&amp;rdquo;, but given that I&amp;rsquo;m on a website spree lately,&#xA;I might as well get this one out too. So this is that announcement, three years late.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>le superficie algebriche: a table and more surfaces</title>
       <link>https://pbelmans.ncag.info/blog/2026/07/12/superficie-update/</link>
