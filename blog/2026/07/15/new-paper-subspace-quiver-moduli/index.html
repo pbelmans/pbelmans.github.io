@@ -7,13 +7,13 @@
 
   <link rel="icon" type="image/png" href="/favicon.png" size="256x256">
 
-  <title>Pieter Belmans&mdash;Archive</title>
-  
+  <title>Pieter Belmans&mdash;New paper: Fano 4-fold quiver moduli from subspace quivers</title>
+  <meta name="description" content="Whilst it might look like I am hyperproductive these few weeks, with a new blogpost coming up almost every day about something I have done, I am mostly just …">
 
   
   <link rel="stylesheet" href="/css/main.css">
 
-  <link rel="canonical" href="https://pbelmans.ncag.info/archive/">
+  <link rel="canonical" href="https://pbelmans.ncag.info/blog/2026/07/15/new-paper-subspace-quiver-moduli/">
   <link rel="alternate" type="application/rss+xml" title="Pieter Belmans" href="https://pbelmans.ncag.info/blog/feed/">
 
   <script>
@@ -65,53 +65,131 @@ window.MathJax = {
     <div class="page-content">
       <div class="wrapper">
         
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">New paper: Fano 4-fold quiver moduli from subspace quivers</h1>
 
+    <p class="post-meta">
+      <time datetime="2026-07-15T00:00:00Z" itemprop="datePublished">Jul 15, 2026</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Pieter Belmans</span></span>
+    </p>
 
-
-  <article>
-  <h3><a href="/blog/2023/09/13/new-paper-hochschild-hilbert/">New paper: Hochschild cohomology of Hilbert schemes of points on surfaces</a></h3>
-  <p class="post-meta"><time datetime="2023-09-13T00:00:00Z">Sep 13, 2023</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2023/09/04/fortnighty-links-172/">Fortnightly links (172)</a></h3>
-  <p class="post-meta"><time datetime="2023-09-04T00:00:00Z">Sep 4, 2023</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2023/08/17/github-latex-template/">GitHub LaTeX template</a></h3>
-  <p class="post-meta"><time datetime="2023-08-17T00:00:00Z">Aug 17, 2023</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2023/08/16/new-stats-stacks-project/">Statistics for the Stacks project (2)</a></h3>
-  <p class="post-meta"><time datetime="2023-08-16T00:00:00Z">Aug 16, 2023</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2023/08/06/fortnightly-links-171/">Fortnightly links (171)</a></h3>
-  <p class="post-meta"><time datetime="2023-08-06T00:00:00Z">Aug 6, 2023</time></p>
-</article>
-
-
-
-
-<ul class="pagination">
-  
     
-    <li class="previous"><a href="/archive/11/">previous page</a></li>
-  
-
-  
     
-    <li class="next"><a href="/archive/13/">next page</a></li>
-  
-</ul>
+    <div class="post-meta">
+      posted in:
+      <ul class="categories-list">
+        
+          <li><a href="/blog/categories#mathematics">mathematics</a></li>
+        
+      </ul>
+    </div>
+    
 
+    
+    
+    <div class="post-meta">
+      tags:
+      <ul class="tags-list">
+        
+          <li><a href="/blog/tags#quivers">quivers</a>, </li>
+        
+          <li><a href="/blog/tags#moduli-spaces">moduli spaces</a>, </li>
+        
+          <li><a href="/blog/tags#algebraic-geometry">algebraic geometry</a></li>
+        
+      </ul>
+    </div>
+    
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    
+<p><small>Whilst it might look like I am hyperproductive these few weeks,
+with a new blogpost coming up almost every day about something I have done,
+I am mostly just putting things online that were finished before,
+in preparation of the summer holidays.</small>
+
+<p>This post is about <a href="https://arxiv.org/abs/2607.12895"><strong>Fano 4-fold quiver moduli from subspace quivers</strong></a>,
+a new paper joint with Markus Reineke.
+Let's discuss the origin story of this paper in a way that is not appropriate for the paper's introduction,
+but that is perfect for a blog post.
+
+<h3>Origin</h3>
+<p>It all started from Laurent Manivel's <a href="https://arxiv.org/abs/2211.16154">A four-dimensional cousin of the Segre cubic</a>.
+In this paper, he studies a Fano fourfold, defined as the zero locus of a vector bundle on the product of two Grassmannians.
+Looking at the properties he finds for this Fano fourfold,
+my mind was applying the <a href="https://en.wikipedia.org/wiki/Duck_test">duck test</a> in the following form:
+<blockquote>
+  <p>If it looks like a quiver moduli space, swims like a quiver moduli space, and quacks like a quiver moduli space, then it probably <em>is</em> a quiver moduli space.
+</blockquote>
+<p>Quiver moduli are after all very special varieties: rational, Hodge&ndash;Tate, rigid.
+Laurent's Segre cubic cousin had all these properties.
+Through its relation to the Segre cubic, I also quickly guessed the quiver and dimension vector that should do the trick:
+the 6-subspace quiver, and $\mathbf{d}=(1,1,1,1,1,2;3)$.
+However, I couldn't pin down an isomorphism.
+<p>Then in February <a href="/blog/2026/01/16/markus-events/">Markus came to Utrecht as the Springer visiting chair</a>.
+Markus realized there is actually a fun classification problem hiding here:
+which other subspace quivers give rise to Fano 4-folds?
+The reason to be interested in subspace quivers is that,
+besides their moduli spaces being rigid,
+their moduli spaces also have no infinitesimal automorphisms,
+making them extra special.
+<p>It turns out that up to natural identifications,
+there are precisely 4 such Fano 4-fold subspace quiver moduli:
+one being the (expected) Segre cousin,
+another being the Fano model of $\mathop{\rm Bl}_6\mathbb{P}^4$,
+which is also $(\mathbb{P}^1)^7//\mathrm{PGL}_2$,
+the moduli space of 7 points on $\mathbb{P}^1$ (let's not spell out stability).
+<p>The other two are also very interesting:
+one admits a natural map to $\mathbb{P}^2$,
+exhibiting it as something called an involution surface bundle
+(the first time I encountered one in the wild),
+and another which looks <em>a lot</em> like the Segre cubic cousin.
+<p>And in the end, we also managed to prove that
+Manivel's Segre cubic cousin was indeed the subspace quiver moduli space
+we expected it to be all along.
+All's well that ends well.
+
+<h3>Working with quiver moduli</h3>
+<p>What I like about this paper is that it is so very explicit with quiver moduli,
+and applies so many of the tools that have been developed for them.
+I consider it a bit of an advertisement,
+and I hope that it gets picked up by people who,
+a priori,
+would not work with quiver moduli,
+but now realize how useful this perspective can be!
+
+<p>Related to this is also the use of <a href="https://quiver.tools">QuiverTools</a>,
+which makes it possible to compute many invariants of quiver moduli.
+For the 4 cases in this paper,
+the code is available as <a href="https://github.com/pbelmans/FanoFourfoldSubspaceQuiverModuli.jl">FanoFourfoldSubspaceQuiverModuli.jl</a>.
+And the tools we have used in this paper
+were also the inspiration for some of the new features for QuiverTools,
+more about those later.
+
+<p>Note that the duck test for quiver moduli doesn't always work so well!
+We are also working on a paper that explains how well the duck test works for Fano 3-folds.
+Stay tuned for that.
+<p>Also note that there is another work-in-progress (don't expect either of them before the start of my summer break, though!)
+where we take the involution surface bundle Fano 4-fold subspace quiver moduli,
+and take its connection to the extended Dynkin quiver $\widetilde{\mathrm{D}}_4$,
+to find 5 infinite series of even-dimensional Fano varieties
+attached to extended Dynkin quivers,
+with lots of interesting properties.
+Stay tuned for that too!
+
+  </div>
+
+  <ul class="pagination">
+    
+      <li class="previous"><a href="/blog/2026/07/13/cubic-4-folds/">previous post</a></li>
+    
+
+    
+      <li class="disabled next"><a href="#">next post</a></li>
+    
+  </ul>
+</article>
 
       </div>
     </div>

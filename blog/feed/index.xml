@@ -5,9 +5,93 @@
     <description></description>
     <link>https://pbelmans.ncag.info/</link>
     <atom:link href="https://pbelmans.ncag.info/blog/feed/" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 13 Jul 2026 07:12:04 &#43;0000</pubDate>
-    <lastBuildDate>Mon, 13 Jul 2026 07:12:04 &#43;0000</lastBuildDate>
+    <pubDate>Wed, 15 Jul 2026 05:43:56 &#43;0000</pubDate>
+    <lastBuildDate>Wed, 15 Jul 2026 05:43:56 &#43;0000</lastBuildDate>
     <generator>Hugo</generator>
+    
+    <item>
+      <title>New paper: Fano 4-fold quiver moduli from subspace quivers</title>
+      <description>
+&lt;p&gt;&lt;small&gt;Whilst it might look like I am hyperproductive these few weeks,
+with a new blogpost coming up almost every day about something I have done,
+I am mostly just putting things online that were finished before,
+in preparation of the summer holidays.&lt;/small&gt;
+
+&lt;p&gt;This post is about &lt;a href=&#34;https://arxiv.org/abs/2607.12895&#34;&gt;&lt;strong&gt;Fano 4-fold quiver moduli from subspace quivers&lt;/strong&gt;&lt;/a&gt;,
+a new paper joint with Markus Reineke.
+Let&#39;s discuss the origin story of this paper in a way that is not appropriate for the paper&#39;s introduction,
+but that is perfect for a blog post.
+
+&lt;h3&gt;Origin&lt;/h3&gt;
+&lt;p&gt;It all started from Laurent Manivel&#39;s &lt;a href=&#34;https://arxiv.org/abs/2211.16154&#34;&gt;A four-dimensional cousin of the Segre cubic&lt;/a&gt;.
+In this paper, he studies a Fano fourfold, defined as the zero locus of a vector bundle on the product of two Grassmannians.
+Looking at the properties he finds for this Fano fourfold,
+my mind was applying the &lt;a href=&#34;https://en.wikipedia.org/wiki/Duck_test&#34;&gt;duck test&lt;/a&gt; in the following form:
+&lt;blockquote&gt;
+  &lt;p&gt;If it looks like a quiver moduli space, swims like a quiver moduli space, and quacks like a quiver moduli space, then it probably &lt;em&gt;is&lt;/em&gt; a quiver moduli space.
+&lt;/blockquote&gt;
+&lt;p&gt;Quiver moduli are after all very special varieties: rational, Hodge&amp;ndash;Tate, rigid.
+Laurent&#39;s Segre cubic cousin had all these properties.
+Through its relation to the Segre cubic, I also quickly guessed the quiver and dimension vector that should do the trick:
+the 6-subspace quiver, and $\mathbf{d}=(1,1,1,1,1,2;3)$.
+However, I couldn&#39;t pin down an isomorphism.
+&lt;p&gt;Then in February &lt;a href=&#34;https://pbelmans.ncag.info/blog/2026/01/16/markus-events/&#34;&gt;Markus came to Utrecht as the Springer visiting chair&lt;/a&gt;.
+Markus realized there is actually a fun classification problem hiding here:
+which other subspace quivers give rise to Fano 4-folds?
+The reason to be interested in subspace quivers is that,
+besides their moduli spaces being rigid,
+their moduli spaces also have no infinitesimal automorphisms,
+making them extra special.
+&lt;p&gt;It turns out that up to natural identifications,
+there are precisely 4 such Fano 4-fold subspace quiver moduli:
+one being the (expected) Segre cousin,
+another being the Fano model of $\mathop{\rm Bl}_6\mathbb{P}^4$,
+which is also $(\mathbb{P}^1)^7//\mathrm{PGL}_2$,
+the moduli space of 7 points on $\mathbb{P}^1$ (let&#39;s not spell out stability).
+&lt;p&gt;The other two are also very interesting:
+one admits a natural map to $\mathbb{P}^2$,
+exhibiting it as something called an involution surface bundle
+(the first time I encountered one in the wild),
+and another which looks &lt;em&gt;a lot&lt;/em&gt; like the Segre cubic cousin.
+&lt;p&gt;And in the end, we also managed to prove that
+Manivel&#39;s Segre cubic cousin was indeed the subspace quiver moduli space
+we expected it to be all along.
+All&#39;s well that ends well.
+
+&lt;h3&gt;Working with quiver moduli&lt;/h3&gt;
+&lt;p&gt;What I like about this paper is that it is so very explicit with quiver moduli,
+and applies so many of the tools that have been developed for them.
+I consider it a bit of an advertisement,
+and I hope that it gets picked up by people who,
+a priori,
+would not work with quiver moduli,
+but now realize how useful this perspective can be!
+
+&lt;p&gt;Related to this is also the use of &lt;a href=&#34;https://quiver.tools&#34;&gt;QuiverTools&lt;/a&gt;,
+which makes it possible to compute many invariants of quiver moduli.
+For the 4 cases in this paper,
+the code is available as &lt;a href=&#34;https://github.com/pbelmans/FanoFourfoldSubspaceQuiverModuli.jl&#34;&gt;FanoFourfoldSubspaceQuiverModuli.jl&lt;/a&gt;.
+And the tools we have used in this paper
+were also the inspiration for some of the new features for QuiverTools,
+more about those later.
+
+&lt;p&gt;Note that the duck test for quiver moduli doesn&#39;t always work so well!
+We are also working on a paper that explains how well the duck test works for Fano 3-folds.
+Stay tuned for that.
+&lt;p&gt;Also note that there is another work-in-progress (don&#39;t expect either of them before the start of my summer break, though!)
+where we take the involution surface bundle Fano 4-fold subspace quiver moduli,
+and take its connection to the extended Dynkin quiver $\widetilde{\mathrm{D}}_4$,
+to find 5 infinite series of even-dimensional Fano varieties
+attached to extended Dynkin quivers,
+with lots of interesting properties.
+Stay tuned for that too!
+</description>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 &#43;0000</pubDate>
+      <link>https://pbelmans.ncag.info/blog/2026/07/15/new-paper-subspace-quiver-moduli/</link>
+      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/07/15/new-paper-subspace-quiver-moduli/</guid>
+      <category>quivers</category><category>moduli spaces</category><category>algebraic geometry</category>
+      <category>mathematics</category>
+    </item>
     
     <item>
       <title>Cubic 4-folds: special cubic fourfolds and their K3 surfaces</title>
@@ -493,55 +577,6 @@ which describes a fun way to use computer algebra to experiment with conjectures
       <link>https://pbelmans.ncag.info/blog/2026/05/29/verifying-kostants-conjecture/</link>
       <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/05/29/verifying-kostants-conjecture/</guid>
       <category>programming</category>
-      <category>mathematics</category>
-    </item>
-    
-    <item>
-      <title>Semisimple.jl 1.0.0 is now available!</title>
-      <description>
-&lt;p&gt;This is a cross-post from the &lt;a href=&#34;https://homogeneous.tools/blog/2026/05/11/lie-jl-1-0-0/&#34;&gt;HomogeneousTools website&lt;/a&gt;, where package-specific updates about Semisimple.jl will also appear.&lt;/p&gt;
-&lt;p&gt;I will occasionally post about Semisimple.jl here, but if you really want to keep up with development, you should head over to &lt;a href=&#34;https://homogeneous.tools&#34;&gt;homogeneous.tools&lt;/a&gt;.
-
-&lt;hr&gt;
-&lt;br&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; this package was previously known as &lt;strong&gt;Lie.jl&lt;/strong&gt; and has been renamed to &lt;strong&gt;Semisimple.jl&lt;/strong&gt; to adhere to Julia registry naming conventions.&lt;/p&gt;
-
-&lt;hr&gt;
-&lt;br&gt;
-
-&lt;p style=&#34;background-color: rgb(255, 243, 205); border: 1px solid rgb(255, 238, 186); padding: 10px; overflow: hidden;&#34;&gt;
-  &lt;img src=&#34;https://pbelmans.ncag.info/assets/favicon-semisimple.svg&#34; width=&#34;48&#34; height=&#34;48&#34; alt=&#34;&#34; style=&#34;float: left; margin-right: 10px;&#34;&gt;
-  This post concerns &lt;a href=&#34;https://github.com/HomogeneousTools/Semisimple.jl&#34;&gt;&lt;strong&gt;Semisimple.jl&lt;/strong&gt;&lt;/a&gt;,
-  a Julia package for computations with semisimple Lie algebras.
-  There is &lt;a href=&#34;https://homogeneous.tools/Semisimple.jl/&#34;&gt;documentation&lt;/a&gt;.
-&lt;/p&gt;
-
-
-&lt;p&gt;This first stable release focuses on efficient computations with semisimple Lie algebras,
-of the type that are most useful to an algebraic geometer
-who wants to do computations for completely reducible vector bundles on partial flag varieties.
-A large part of that efficiency comes from leaning into Julia&#39;s type system and specialization,
-so fairly high-level code can still run very fast.&lt;/p&gt;
-
-&lt;p&gt;Here is a short session:&lt;/p&gt;
-
-
-&lt;iframe
-  class=&#34;asciinema-embed&#34;
-  src=&#34;https://pbelmans.ncag.info/asciinema-player.html?cast=%2Fasciinema%2Flie-a3-representations.cast&#34;
-  title=&#34;Terminal recording&#34;
-  loading=&#34;lazy&#34;
-&gt;&lt;/iframe&gt;
-
-
-&lt;p&gt;It is not yet at feature parity with &lt;a href=&#34;http://www-math.univ-poitiers.fr/~maavl/LiE/&#34;&gt;LiE&lt;/a&gt;, &lt;a href=&#34;https://lieart.hepforge.org/&#34;&gt;LieART&lt;/a&gt;, or the corresponding functionality in &lt;a href=&#34;https://www.sagemath.org/&#34;&gt;SageMath&lt;/a&gt;, but the foundations are now in place.
-Let us know which features you would like to see implemented next!&lt;/p&gt;
-</description>
-      <pubDate>Mon, 11 May 2026 00:00:00 &#43;0000</pubDate>
-      <link>https://pbelmans.ncag.info/blog/2026/05/11/lie-jl-1-0-0/</link>
-      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/05/11/lie-jl-1-0-0/</guid>
-      <category>programming</category><category>vector bundles</category><category>homogeneous varieties</category>
       <category>mathematics</category>
     </item>
     
