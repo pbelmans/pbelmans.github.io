@@ -5,14 +5,6 @@ accepted:
     journal: accepted for publication in Proceedings of Nottingham Algebraic Geometry Seminar
     arxiv: "2202.08601"
 
-  - title: The Albanese morphism for hyperelliptic varieties
-    coauthors:
-      - demleitner
-      - nunez
-    arxiv: "2411.14814"
-    journal: published online ahead of print in Indagationes Mathematicae
-    doi: 10.1016/j.indag.2025.10.004
-
   - title: Failure of Bott vanishing for (co)adjoint partial flag varieties
     arxiv: "2506.09811"
     journal: accepted for publication in Mathematical Research Letters
@@ -313,6 +305,15 @@ published:
     information: volume 379 (2026), pages 3537&ndash;3589
     doi: 10.1090/tran/9571
     mathscinet: "5060440"
+
+  - title: The Albanese morphism for hyperelliptic varieties
+    coauthors:
+      - demleitner
+      - nunez
+    arxiv: "2411.14814"
+    journal: Indagationes Mathematicae
+    information: volume 37 (2026), issue 4, pages 1450&ndash;1475
+    doi: 10.1016/j.indag.2025.10.004
 
   - title: The QuiverTools package for Sage and Julia
     arxiv: "2506.19432"
