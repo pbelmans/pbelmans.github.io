@@ -419,6 +419,10 @@ appendices:
     pdf: https://pbelmans.ncag.info/assets/appendix-non-semisimple-kronecker-moduli.pdf
 
 
+ai:
+  - title: "IMProofBench: Benchmarking AI on Research-Level Mathematical Proof Generation"
+    arxiv: "2509.26076"
+    comment: 'a large collaboration led by Johannes Schmitt'
 other:
   - title: Semiorthogonal decompositions for moduli of sheaves on curves
     journal: Oberwolfach Reports 24/2018

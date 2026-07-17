@@ -13,14 +13,16 @@ bare_content: true
 {{ $preprints := len $papers.preprints }}
 {{ $needingrevision := len $papers.needingrevision }}
 {{ $inprogress := len $papers.inprogress }}
-{{ $two := add $published $accepted }}
-{{ $three := add $two $preprints }}
-{{ $four := add $three $needingrevision }}
-{{ $five := add $four $inprogress }}
 {{ $appendices := len $papers.appendices }}
-{{ $six := add $five $appendices }}
+{{ $ai := len $papers.ai }}
 {{ $other := len $papers.other }}
-{{ $seven := add $six $other }}
+{{ $beforePreprints := add $published $accepted }}
+{{ $beforeNeedingrevision := add $beforePreprints $preprints }}
+{{ $beforeInprogress := add $beforeNeedingrevision $needingrevision }}
+{{ $beforeAppendices := add $beforeInprogress $inprogress }}
+{{ $beforeAI := add $beforeAppendices $appendices }}
+{{ $beforeOther := add $beforeAI $ai }}
+{{ $beforeBroad := add $beforeOther $other }}
 
 <article class="post">
   {{ with .Page.Title }}
@@ -42,7 +44,7 @@ bare_content: true
     </ul>
 
     <h3 id="preprints">Preprints</h3>
-    <ol class="publications reverse" style="counter-reset: publications {{ $two }}">
+    <ol class="publications reverse" style="counter-reset: publications {{ $beforePreprints }}">
     {{ range $papers.preprints }}
       {{ partial "publication.html" (dict "page" $ "paper" .) }}
     {{ end }}
@@ -63,35 +65,43 @@ bare_content: true
     </ol>
 
     <h3>Preprints needing revision</h3>
-    <ol class="publications" style="counter-reset: publications {{ $three }}">
+    <ol class="publications" style="counter-reset: publications {{ $beforeNeedingrevision }}">
     {{ range $papers.needingrevision }}
       {{ partial "publication.html" (dict "page" $ "paper" .) }}
     {{ end }}
     </ol>
 
     <h3>Preprints nearing completion</h3>
-    <ol class="publications" style="counter-reset: publications {{ $four }}">
+    <ol class="publications" style="counter-reset: publications {{ $beforeInprogress }}">
     {{ range $papers.inprogress }}
       {{ partial "publication.html" (dict "page" $ "paper" .) }}
     {{ end }}
     </ol>
 
     <h3 id="other">Appendices</h3>
-    <ol class="publications" style="counter-reset: publications {{ $five }}">
+    <ol class="publications" style="counter-reset: publications {{ $beforeAppendices }}">
     {{ range $papers.appendices }}
       {{ partial "publication.html" (dict "page" $ "paper" .) }}
     {{ end }}
     </ol>
 
-    <h3>Not peer-reviewed</h3>
-    <ol class="publications" style="counter-reset: publications {{ $six }}">
+    <h3>Mathematics and artificial intelligence</h3>
+    <p>Here I collect papers which are related to the use of artificial intelligence in mathematics, or that are mostly the result of LLM-assisted writing.</p>
+    <ol class="publications" style="counter-reset: publications {{ $beforeAI }}">
+    {{ range $papers.ai }}
+      {{ partial "publication.html" (dict "page" $ "paper" .) }}
+    {{ end }}
+    </ol>
+
+    <h3>Conference proceedings</h3>
+    <ol class="publications" style="counter-reset: publications {{ $beforeOther }}">
     {{ range $papers.other }}
       {{ partial "publication.html" (dict "page" $ "paper" .) }}
     {{ end }}
     </ol>
 
     <h3 id="broader">For a broader audience</h3>
-    <ol class="publications" style="counter-reset: publications {{ $seven }}">
+    <ol class="publications" style="counter-reset: publications {{ $beforeBroad }}">
     {{ range $papers.broad }}
       {{ partial "publication.html" (dict "page" $ "paper" .) }}
     {{ end }}
