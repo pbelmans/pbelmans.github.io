@@ -7,13 +7,13 @@
 
   <link rel="icon" type="image/png" href="/favicon.png" size="256x256">
 
-  <title>Pieter Belmans&mdash;Archive</title>
-  
+  <title>Pieter Belmans&mdash;Hyperelliptic varieties: quotients of complex tori by finite groups</title>
+  <meta name="description" content="There is a new website, hyperelliptic.ncag.info, on the classification of hyperelliptic (or generalized hyperelliptic) varieties in complex dimensions 2, 3 and …">
 
   
   <link rel="stylesheet" href="/css/main.css">
 
-  <link rel="canonical" href="https://pbelmans.ncag.info/archive/">
+  <link rel="canonical" href="https://pbelmans.ncag.info/blog/2026/07/21/hyperelliptic/">
   <link rel="alternate" type="application/rss+xml" title="Pieter Belmans" href="https://pbelmans.ncag.info/blog/feed/">
 
   <script>
@@ -65,53 +65,81 @@ window.MathJax = {
     <div class="page-content">
       <div class="wrapper">
         
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Hyperelliptic varieties: quotients of complex tori by finite groups</h1>
 
+    <p class="post-meta">
+      <time datetime="2026-07-21T00:00:00Z" itemprop="datePublished">Jul 21, 2026</time>
+    </p>
 
-
-  <article>
-  <h3><a href="/blog/2026/07/09/mgnbar-update/">Mgnbar.info: two new layers</a></h3>
-  <p class="post-meta"><time datetime="2026-07-09T00:00:00Z">Jul 9, 2026</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2026/07/08/new-paper-brauer-groups-gerbes/">New paper: Brauer groups of resolved quiver moduli via gerbes</a></h3>
-  <p class="post-meta"><time datetime="2026-07-08T00:00:00Z">Jul 8, 2026</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2026/07/03/gianni-petrella/">Congratulations Dr. Gianni Petrella!</a></h3>
-  <p class="post-meta"><time datetime="2026-07-03T00:00:00Z">Jul 3, 2026</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2026/07/02/fanography-static/">Fanography is now a static website (and other improvements)</a></h3>
-  <p class="post-meta"><time datetime="2026-07-02T00:00:00Z">Jul 2, 2026</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2026/07/01/mori-mukai-determinant/">The Mori–Mukai determinant</a></h3>
-  <p class="post-meta"><time datetime="2026-07-01T00:00:00Z">Jul 1, 2026</time></p>
-</article>
-
-
-
-
-<ul class="pagination">
-  
     
-    <li class="previous"><a href="/archive/">previous page</a></li>
-  
-
-  
     
-    <li class="next"><a href="/archive/3/">next page</a></li>
-  
-</ul>
+    <div class="post-meta">
+      posted in:
+      <ul class="categories-list">
+        
+          <li><a href="/blog/categories#mathematics">mathematics</a></li>
+        
+      </ul>
+    </div>
+    
 
+    
+    
+    <div class="post-meta">
+      tags:
+      <ul class="tags-list">
+        
+          <li><a href="/blog/tags#algebraic-geometry">algebraic geometry</a>, </li>
+        
+          <li><a href="/blog/tags#programming">programming</a></li>
+        
+      </ul>
+    </div>
+    
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>There is a new website, <strong><a href="https://hyperelliptic.ncag.info">hyperelliptic.ncag.info</a></strong>,
+on the classification of hyperelliptic (or <em>generalized hyperelliptic</em>) varieties
+in complex dimensions 2, 3 and 4. For now it lives as a subdomain of ncag.info.</p>
+<p>A hyperelliptic variety is a quotient $X = T/G$ of a complex torus $T$ by a finite
+group $G$ acting freely and without translations. In dimension 1 these are the
+elliptic curves, in dimension 2 the seven bielliptic surfaces of Bagnera and De
+Franchis; the word has nothing to do with hyperelliptic <em>curves</em>. The remarkable
+thing is that all the numerical invariants (the Hodge diamond, the order of the
+canonical bundle, the number of moduli, the irregularity, the polyvector fields,
+the twisted Hodge numbers, the Hochschild cohomology) depend only on the tangent
+representation $\rho\colon G \to \mathrm{GL}(V)$, and can be read off from its
+character theory. The website computes them all with
+<a href="https://www.oscar-system.org/">OSCAR</a>, for every group in the classifications of
+Uchida–Yoshihara, Lange and Catanese–Demleitner (dimension 3) and of Demleitner
+(the 79 groups in dimension 4).</p>
+<p>This all started from a collaboration with
+<a href="https://www.math.uni-bielefeld.de/~ademleitner/">Andreas Demleitner</a> and Pedro
+Núñez on <a href="https://arxiv.org/abs/2411.14814">the Albanese morphism for these varieties</a>.
+Working on that paper I learned a great many things about hyperelliptic varieties
+from Andreas, and this website is in a sense a place to keep all of it: the
+invariants we computed by hand, and many more, now generated automatically and
+cross-checked against the literature.</p>
+<p>As with my other websites it is a static site built (using LLMs) with
+<a href="https://gohugo.io">Hugo</a>. Feature requests, corrections and contributions are
+very welcome, on <a href="https://github.com/pbelmans/hyperelliptic.info">GitHub</a> or by
+email.</p>
+
+  </div>
+
+  <ul class="pagination">
+    
+      <li class="previous"><a href="/blog/2026/07/15/new-paper-subspace-quiver-moduli/">previous post</a></li>
+    
+
+    
+      <li class="disabled next"><a href="#">next post</a></li>
+    
+  </ul>
+</article>
 
       </div>
     </div>

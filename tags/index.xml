@@ -6,13 +6,20 @@
     <description>Recent content in Tags on Pieter Belmans</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 15 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://pbelmans.ncag.info/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Algebraic Geometry</title>
       <link>https://pbelmans.ncag.info/tags/algebraic-geometry/</link>
-      <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
       <guid>https://pbelmans.ncag.info/tags/algebraic-geometry/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programming</title>
+      <link>https://pbelmans.ncag.info/tags/programming/</link>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/tags/programming/</guid>
       <description></description>
     </item>
     <item>
@@ -27,13 +34,6 @@
       <link>https://pbelmans.ncag.info/tags/quivers/</link>
       <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
       <guid>https://pbelmans.ncag.info/tags/quivers/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Programming</title>
-      <link>https://pbelmans.ncag.info/tags/programming/</link>
-      <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>https://pbelmans.ncag.info/tags/programming/</guid>
       <description></description>
     </item>
     <item>

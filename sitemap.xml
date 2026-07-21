@@ -3,19 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://pbelmans.ncag.info/</loc>
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
+    <lastmod>2026-07-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://pbelmans.ncag.info/tags/algebraic-geometry/</loc>
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
+    <lastmod>2026-07-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://pbelmans.ncag.info/blog/</loc>
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
+    <lastmod>2026-07-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://pbelmans.ncag.info/categories/</loc>
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
+    <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://pbelmans.ncag.info/blog/2026/07/21/hyperelliptic/</loc>
+    <lastmod>2026-07-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://pbelmans.ncag.info/categories/mathematics/</loc>
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
+    <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://pbelmans.ncag.info/tags/programming/</loc>
+    <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://pbelmans.ncag.info/tags/</loc>
+    <lastmod>2026-07-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://pbelmans.ncag.info/tags/moduli-spaces/</loc>
     <lastmod>2026-07-15T00:00:00+00:00</lastmod>
@@ -26,13 +35,7 @@
     <loc>https://pbelmans.ncag.info/tags/quivers/</loc>
     <lastmod>2026-07-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://pbelmans.ncag.info/tags/</loc>
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://pbelmans.ncag.info/blog/2026/07/13/cubic-4-folds/</loc>
-    <lastmod>2026-07-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://pbelmans.ncag.info/tags/programming/</loc>
     <lastmod>2026-07-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://pbelmans.ncag.info/blog/2026/07/12/superficie-update/</loc>

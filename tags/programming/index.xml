@@ -6,8 +6,15 @@
     <description>Recent content in Programming on Pieter Belmans</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 13 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://pbelmans.ncag.info/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hyperelliptic varieties: quotients of complex tori by finite groups</title>
+      <link>https://pbelmans.ncag.info/blog/2026/07/21/hyperelliptic/</link>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2026/07/21/hyperelliptic/</guid>
+      <description>&lt;p&gt;There is a new website, &lt;strong&gt;&lt;a href=&#34;https://hyperelliptic.ncag.info&#34;&gt;hyperelliptic.ncag.info&lt;/a&gt;&lt;/strong&gt;,&#xA;on the classification of hyperelliptic (or &lt;em&gt;generalized hyperelliptic&lt;/em&gt;) varieties&#xA;in complex dimensions 2, 3 and 4. For now it lives as a subdomain of ncag.info.&lt;/p&gt;&#xA;&lt;p&gt;A hyperelliptic variety is a quotient $X = T/G$ of a complex torus $T$ by a finite&#xA;group $G$ acting freely and without translations. In dimension 1 these are the&#xA;elliptic curves, in dimension 2 the seven bielliptic surfaces of Bagnera and De&#xA;Franchis; the word has nothing to do with hyperelliptic &lt;em&gt;curves&lt;/em&gt;. The remarkable&#xA;thing is that all the numerical invariants (the Hodge diamond, the order of the&#xA;canonical bundle, the number of moduli, the irregularity, the polyvector fields,&#xA;the twisted Hodge numbers, the Hochschild cohomology) depend only on the tangent&#xA;representation $\rho\colon G \to \mathrm{GL}(V)$, and can be read off from its&#xA;character theory. The website computes them all with&#xA;&lt;a href=&#34;https://www.oscar-system.org/&#34;&gt;OSCAR&lt;/a&gt;, for every group in the classifications of&#xA;Uchida–Yoshihara, Lange and Catanese–Demleitner (dimension 3) and of Demleitner&#xA;(the 79 groups in dimension 4).&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Cubic 4-folds: special cubic fourfolds and their K3 surfaces</title>
       <link>https://pbelmans.ncag.info/blog/2026/07/13/cubic-4-folds/</link>
