@@ -168,7 +168,7 @@ figcaption {
  blockquote {
      color: $grey-color;
      border-left: 4px solid $grey-color-light;
-     padding-left: calc($spacing-unit / 2);
+     padding-left: calc(#{$spacing-unit} / 2);
      font-size: 106%;
      letter-spacing: -.4px;
      font-style: italic;
@@ -229,8 +229,8 @@ figcaption {
      @include media-query($on-laptop) {
          max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
          max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-         padding-right: calc($spacing-unit / 2);
-         padding-left: calc($spacing-unit / 2);
+         padding-right: calc(#{$spacing-unit} / 2);
+         padding-left: calc(#{$spacing-unit} / 2);
      }
  }
 
@@ -312,7 +312,7 @@ figcaption {
     @include media-query($on-palm) {
         position: absolute;
         top: 9px;
-        right: calc($spacing-unit / 2);
+        right: calc(#{$spacing-unit} / 2);
         background-color: $background-color;
         border: 1px solid $grey-color-light;
         border-radius: 5px;
@@ -371,7 +371,7 @@ figcaption {
 
 .footer-heading {
     font-size: 18px;
-    margin-bottom: calc($spacing-unit / 2);
+    margin-bottom: calc(#{$spacing-unit} / 2);
 }
 
 .contact-list,
@@ -383,14 +383,14 @@ figcaption {
 .footer-col-wrapper {
     font-size: 15px;
     color: $grey-color;
-    margin-left: calc($spacing-unit / -2);
+    margin-left: calc(#{$spacing-unit} / -2);
     @extend %clearfix;
 }
 
 .footer-col {
     float: left;
-    margin-bottom: calc($spacing-unit / 2);
-    padding-left: calc($spacing-unit / 2);
+    margin-bottom: calc(#{$spacing-unit} / 2);
+    padding-left: calc(#{$spacing-unit} / 2);
 }
 
 .footer-col-1 {
