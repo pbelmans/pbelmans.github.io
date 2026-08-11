@@ -1,0 +1,110 @@
+---
+date: 2026-08-11
+slug: new-paper-hyperkaehler-period-index
+title: "New paper: The hyperkähler period-index conjecture is false"
+type: post
+categories:
+- mathematics
+tags:
+- algebraic geometry
+author: Pieter Belmans
+---
+
+<p>This post is about <a href="https://arxiv.org/abs/2608.09436"><strong>The hyperkähler period-index conjecture is false</strong></a>,
+joint with James Hotchkiss.
+
+<p>If I were still posting fortnightly links,
+<a href="https://arxiv.org/abs/2608.03684">Alexander Perry: The period-index conjecture is false</a>
+would have prominently featured,
+because it disproves (as the title suggests) the period-index conjecture,
+which is famously a theorem due to de Jong in dimension 2,
+with a beautiful proof.
+But Alex found counterexamples in every dimension at least 3,
+with some assistance from an LLM.
+<h3>The period-index conjecture</h3>
+<p>To understand the statement of the period-index conjecture,
+let us consider a field $K$ of transcendence degree $d$
+over an algebraically closed field $k$.
+We attach two integers to a Brauer class $\alpha\in\mathop{\rm Br}(K)$:
+<ul>
+  <li>the <em>index</em> $\mathop{\rm ind}(\alpha)$ (which measures the size of the unique division algebra in the Brauer class)
+  <li>the <em>period</em> $\mathop{\rm per}(\alpha)$ (which is the order of $\alpha$ in the torsion abelian group $\mathop{\rm Br}(K)$)
+</ul>
+<p>The <strong>period-index conjecture</strong>,
+attributed to Colliot-Th&eacute;l&egrave;ne,
+then predicts that
+\[
+  \mathop{\rm ind}(\alpha)\mid\mathop{\rm per}(\alpha)^{d-1}.
+\]
+<p>Using a bit of Galois cohomology, one can prove that
+<ul>
+  <li>$\mathop{\rm per}(\alpha)\mid\mathop{\rm ind}(\alpha)$
+  <li>the period and the index have the same prime factors
+</ul>
+<p>so certainly for every individual $\alpha$ there is <em>some</em> exponent for which the index divides the corresponding power of the period.
+The conjecture claims there is a uniform bound, which is moreover given in terms of the transcendence degree.
+<p>As a special case of this we can consider
+a smooth projective variety $X$
+together with its function field $k(X)$,
+for which $\mathop{\rm Br}(X)\hookrightarrow\mathop{\rm Br}(k(X))$.
+Johan de Jong proved that it suffices to prove the period-index conjecture for $k(X)$
+for the classes in the image of this inclusion,
+the <em>unramified</em> classes.
+<p>Alex constructed unramified classes in every dimension at least 3 which violate the period-index conjecture.
+
+<h3>The hyperkähler period-index conjecture</h3>
+<p>Hyperkähler varieties
+(see also <a href="https://hyperkaehler.info">hyperkaehler.info</a>)
+are a special kind of variety.
+They have rich geometry, strong constraints, and many tools to study them.
+In particular, their geometry is controlled to a large extent by $\mathrm{H}^2(X,\mathbb{Z})$,
+together with its <a href="https://hyperkaehler.info/bbf">Beauville&ndash;Bogomolov&ndash;Fujiki form</a>.
+<p>Because of this, and various pieces of evidence,
+<a href="https://arxiv.org/abs/2411.17604">Huybrechts conjectured</a> the <em>stronger</em>
+<strong>hyperkähler period-index conjecture</strong>,
+predicting that
+\[
+  \mathop{\rm ind}(\alpha)\mid\mathop{\rm per}(\alpha)^{(\dim X)/2}
+\]
+for unramified Brauer classes on smooth projective hyperkähler varieties.
+<p>Given that Alex started from an incorrect LLM-assisted counterexample,
+James and I independently tried constructing an LLM-assisted counterexample for the hyperkähler period-index conjecture,
+ending up with examples in different deformation types of hyperkähler fourfolds.
+Given the similarity in tools used (namely James's Hodge-theoretic index),
+it felt natural to write a joint paper.
+<p>So what are the counterexamples?
+First, observe that for the fourfolds we consider (whose integral cohomology is torsion-free)
+it is possible to write <em>every</em> Brauer class
+in terms of $\mathrm{H}^2(X,\mathbb{Z})$,
+as $\mathop{\rm Br}(X)\cong(\mathrm{H}^2(X,\mathbb{Z})/\mathop{\rm NS}(X))\otimes\mathbb{Q}/\mathbb{Z}$.
+<p>Then it becomes a matter of writing down classes in the lattice,
+giving us the polarization,
+the Brauer class,
+and a way to check the conditions for our two obstruction lemmas.
+For more details one is referred to the paper.
+<p>The results are
+<ul>
+  <li>a period-2 Brauer class on certain hyperkähler fourfolds of type $\mathrm{Kum}^2$,
+    whose index is divisible by 8
+  <li>a period-2 Brauer class on certain hyperkähler fourfolds of type $\mathrm{K3}^{[2]}$,
+    whose index is divisible by 8
+  <li>a period-5 Brauer class on certain hyperkähler fourfolds of type $\mathrm{K3}^{[2]}$,
+    whose index is divisible by 125
+</ul>
+<p>In each case the index is one factor too big:
+the conjecture predicts $\mathop{\rm ind}(\alpha)\mid 4$ resp. $\mathop{\rm ind}(\alpha)\mid 25$.
+The classical period-index conjecture only predicts $\mathop{\rm ind}(\alpha)\mid\mathop{\rm per}(\alpha)^3$,
+so these are not, as far as we know, counterexamples to it.
+<p>This construction lives just outside the known cases of the hyperkähler period-index conjecture:
+<ul>
+  <li>Huybrechts proved it for $X$ admitting a Lagrangian fibration,
+    for classes whose period is coprime to an integer depending on $X$.
+  <li>Huybrechts proved it for $X$ the Hilbert scheme of points on a K3 surface,
+    for <em>all</em> classes,
+    with a variant for generalised Kummer varieties.
+  <li><a href="https://arxiv.org/abs/2502.09774">Hotchkiss&ndash;Maulik&ndash;Shen&ndash;Yin&ndash;Zhang</a> proved it
+    for $X$ of $\mathrm{K3}^{[n]}$-type of Picard rank at least 2,
+    for non-special coprime classes.
+  <li><a href="https://arxiv.org/abs/2512.15131">Bottini&ndash;Huybrechts</a> removed the condition on the Picard rank,
+    and also cover the special coprime classes whose period is squarefree.
+</ul>

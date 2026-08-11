@@ -355,6 +355,11 @@ preprints:
     coauthors:
       - petrella
 
+  - title: The hyperkähler period-index conjecture is false
+    coauthors:
+      - hotchkiss
+    arxiv: "2608.09436"
+
 
 needingrevision:
   - title: Comparison of two constructions of noncommutative surfaces with exceptional collections of length 4
