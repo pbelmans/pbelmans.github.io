@@ -3,24 +3,30 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://pbelmans.ncag.info/</loc>
-    <lastmod>2026-08-11T00:00:00+00:00</lastmod>
+    <lastmod>2026-09-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://pbelmans.ncag.info/blog/</loc>
+    <lastmod>2026-09-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://pbelmans.ncag.info/blog/2026/09/02/brauer-fano-threefolds/</loc>
+    <lastmod>2026-09-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://pbelmans.ncag.info/categories/</loc>
+    <lastmod>2026-09-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://pbelmans.ncag.info/tags/Fano-varieties/</loc>
+    <lastmod>2026-09-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://pbelmans.ncag.info/categories/mathematics/</loc>
+    <lastmod>2026-09-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://pbelmans.ncag.info/tags/</loc>
+    <lastmod>2026-09-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://pbelmans.ncag.info/tags/algebraic-geometry/</loc>
     <lastmod>2026-08-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://pbelmans.ncag.info/blog/</loc>
-    <lastmod>2026-08-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://pbelmans.ncag.info/categories/</loc>
-    <lastmod>2026-08-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://pbelmans.ncag.info/categories/mathematics/</loc>
-    <lastmod>2026-08-11T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://pbelmans.ncag.info/blog/2026/08/11/new-paper-hyperkaehler-period-index/</loc>
-    <lastmod>2026-08-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://pbelmans.ncag.info/tags/</loc>
     <lastmod>2026-08-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://pbelmans.ncag.info/blog/2026/07/21/hyperelliptic/</loc>
@@ -55,9 +61,6 @@
   </url><url>
     <loc>https://pbelmans.ncag.info/blog/2026/07/03/gianni-petrella/</loc>
     <lastmod>2026-07-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://pbelmans.ncag.info/tags/Fano-varieties/</loc>
-    <lastmod>2026-07-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://pbelmans.ncag.info/tags/fanography/</loc>
     <lastmod>2026-07-02T00:00:00+00:00</lastmod>

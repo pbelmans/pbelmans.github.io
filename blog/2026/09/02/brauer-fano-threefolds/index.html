@@ -7,13 +7,13 @@
 
   <link rel="icon" type="image/png" href="/favicon.png" size="256x256">
 
-  <title>Pieter Belmans&mdash;Archive</title>
-  
+  <title>Pieter Belmans&mdash;Brauer groups of Fano 3-folds</title>
+  <meta name="description" content="After returning from holidays earlier this summer, I organized all the stuff on my desk a bit, and I ran into various half-finished computations and notes. …">
 
   
   <link rel="stylesheet" href="/css/main.css">
 
-  <link rel="canonical" href="https://pbelmans.ncag.info/archive/">
+  <link rel="canonical" href="https://pbelmans.ncag.info/blog/2026/09/02/brauer-fano-threefolds/">
   <link rel="alternate" type="application/rss+xml" title="Pieter Belmans" href="https://pbelmans.ncag.info/blog/feed/">
 
   <script>
@@ -65,53 +65,241 @@ window.MathJax = {
     <div class="page-content">
       <div class="wrapper">
         
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Brauer groups of Fano 3-folds</h1>
 
+    <p class="post-meta">
+      <time datetime="2026-09-02T00:00:00Z" itemprop="datePublished">Sep 2, 2026</time>
+    </p>
 
-
-  <article>
-  <h3><a href="/blog/2015/12/26/algebraic-geometry-fun-facts-for-the-festivities-direct-products-of-quasicoherent-sheaves-are-not-exact/">Algebraic geometry fun facts for the festivities: direct products of quasicoherent sheaves are not exact</a></h3>
-  <p class="post-meta"><time datetime="2015-12-26T00:00:00Z">Dec 26, 2015</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2015/12/25/algebraic-geometry-fun-facts-for-the-festivities-absolute-flatification/">Algebraic geometry fun facts for the festivities: absolute flatification</a></h3>
-  <p class="post-meta"><time datetime="2015-12-25T00:00:00Z">Dec 25, 2015</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2015/12/24/algebraic-geometry-fun-facts-for-the-festivities-cohomology-vanishing/">Algebraic geometry fun facts for the festivities: cohomology vanishing</a></h3>
-  <p class="post-meta"><time datetime="2015-12-24T00:00:00Z">Dec 24, 2015</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2015/12/23/look-ma-no-hodge-theory/">&#34;Look ma, no Hodge theory&#34;</a></h3>
-  <p class="post-meta"><time datetime="2015-12-23T00:00:00Z">Dec 23, 2015</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2015/12/22/texloganalyser/">texloganalyser</a></h3>
-  <p class="post-meta"><time datetime="2015-12-22T00:00:00Z">Dec 22, 2015</time></p>
-</article>
-
-
-
-
-<ul class="pagination">
-  
     
-    <li class="previous"><a href="/archive/79/">previous page</a></li>
-  
-
-  
     
-    <li class="next"><a href="/archive/81/">next page</a></li>
-  
+    <div class="post-meta">
+      posted in:
+      <ul class="categories-list">
+        
+          <li><a href="/blog/categories#mathematics">mathematics</a></li>
+        
+      </ul>
+    </div>
+    
+
+    
+    
+    <div class="post-meta">
+      tags:
+      <ul class="tags-list">
+        
+          <li><a href="/blog/tags#Fano-varieties">Fano varieties</a></li>
+        
+      </ul>
+    </div>
+    
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    
+<p>After returning from holidays earlier this summer,
+I organized all the stuff on my desk a bit,
+and I ran into various half-finished computations and notes.
+Whilst some might eventually become (short) papers,
+most of them will (at least initially) just be fun blog posts.
+<p>The first topic I want to tackle is
+the Brauer group of Fano 3-folds.
+In the wonderful paper
+<a href="https://doi.org/10.1515/crelle-2024-0020">Fano varieties with torsion in the third cohomology group</a>
+by John Christian Ottem and Jørgen Vold Rennemo,
+they construct even-dimensional Fano varieties (from dimension 4 onwards)
+for which $\mathrm{H}^3(X,\mathbb{Z})\cong\mathbb{Z}/2\mathbb{Z}$.
+For a Fano variety,
+the torsion subgroup of $\mathrm{H}^3(X,\mathbb{Z})$ is its cohomological Brauer group.
+<p>For a del Pezzo surface there is nothing to be said about (torsion in) $\mathrm{H}^3(X,\mathbb{Z})$:
+we have that $\mathrm{H}^3(X,\mathbb{Z})=0$.
+But a priori there could be something interesting happening in dimension 3,
+as $\mathrm{H}^3(X,\mathbb{Z})$ can certainly be non-zero.
+The introduction of the Ottem&ndash;Rennemo paper states the following:
+<blockquote>
+  <p>In dimension 3, there are 105 deformation classes of Fano varieties,
+  and direct inspection shows that, in each class, the group $\mathrm{H}^3(X,\mathbb{Z})$ is torsion-free.
+</blockquote>
+<p>When asked about the case of Fano 3-folds during a talk,
+one of the authors suggested that they had not written down the details of the direct inspection,
+and certainly the paper does not contain these details.
+So let's just do it here!
+After all,
+to paraphrase <a href="https://en.wikipedia.org/wiki/Sir_Mix-a-Lot">Sir Mix-a-Lot</a>:
+I like Fano 3-folds and I cannot lie.
+
+<h3>A first reduction</h3>
+<p>We will do a case-by-case analysis to show that $\mathrm{H}^3(X,\mathbb{Z})$ is torsion-free.
+Kodaira vanishing and the exponential sequence give
+\[
+  \operatorname{Br}(X)
+  \cong \mathrm{H}^3(X,\mathbb{Z})_{\mathrm{tors}}.
+\]
+On the other hand,
+the universal coefficient theorem gives
+\[
+  \mathrm{H}^3(X,\mathbb{Z})_{\mathrm{tors}}
+  \cong
+  \operatorname{Hom}\left(
+    \mathrm{H}_2(X,\mathbb{Z})_{\mathrm{tors}},
+    \mathbb{Q}/\mathbb{Z}
+  \right).
+\]
+In particular,
+$\operatorname{Br}(X)=0$ if and only if $\mathrm{H}_2(X,\mathbb{Z})$ is torsion-free.
+I guess it is a matter of taste and preference which of these groups is the most familiar to you.
+We will freely use these different perspectives.
+<p>We will also use that this torsion is constant in a smooth proper family.
+Indeed,
+by Ehresmann's theorem such a family is locally trivial in the differentiable category,
+so its integral cohomology groups, including their torsion subgroups, form a local system.
+It therefore suffices to check one convenient representative of each deformation family.
+<p>Our first goal is to significantly reduce the number of families to consider,
+using the following facts:
+<ul>
+  <li>the Brauer group of $\mathbb{P}^3$ is trivial;</li>
+  <li>the Brauer group is a stable birational invariant of smooth projective varieties.</li>
 </ul>
+<p>The birational links in the Iskovskikh&ndash;Mori&ndash;Mukai classification first reduce the problem
+from 105 deformation families to the 30 primitive ones.
+Of these primitive families, 17 are rational.
+Using the descriptions and rationality results collected in
+<a href="https://fanography.info">Fanography</a>,
+we are thus left with the following 13 families:
+<table style="width: auto; margin: 0 auto; border-collapse: collapse;">
+  <thead>
+    <tr>
+      <th scope="col" style="white-space: nowrap; padding-right: 2rem; border-bottom: 1px solid currentColor;">ID</th>
+      <th scope="col" style="border-bottom: 1px solid currentColor;">description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="white-space: nowrap; padding-right: 2rem;"><a href="https://fanography.info/1-1">1&ndash;1</a></td>
+      <td>a double cover of $\mathbb{P}^3$ branched along a smooth sextic surface</td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap; padding-right: 2rem;"><a href="https://fanography.info/1-2">1&ndash;2</a></td>
+      <td>a quartic hypersurface $X_4\subset\mathbb{P}^4$</td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap; padding-right: 2rem;"><a href="https://fanography.info/1-3">1&ndash;3</a></td>
+      <td>a complete intersection $X_{2,3}\subset\mathbb{P}^5$ of a quadric and a cubic</td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap; padding-right: 2rem;"><a href="https://fanography.info/1-4">1&ndash;4</a></td>
+      <td>a complete intersection $X_{2,2,2}\subset\mathbb{P}^6$ of three quadrics</td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap; padding-right: 2rem;"><a href="https://fanography.info/1-5">1&ndash;5</a></td>
+      <td>a Gushel&ndash;Mukai 3-fold: a section of $\operatorname{Gr}(2,5)$ by a codimension-2 linear subspace and a quadric</td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap; padding-right: 2rem;"><a href="https://fanography.info/1-7">1&ndash;7</a></td>
+      <td>a codimension-5 linear section of $\operatorname{Gr}(2,6)$ in its Plücker embedding</td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap; padding-right: 2rem;"><a href="https://fanography.info/1-11">1&ndash;11</a></td>
+      <td>the double Veronese cone $V_1=X_6\subset\mathbb{P}(1,1,1,2,3)$</td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap; padding-right: 2rem;"><a href="https://fanography.info/1-12">1&ndash;12</a></td>
+      <td>the quartic double solid: a double cover of $\mathbb{P}^3$ branched along a smooth quartic surface</td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap; padding-right: 2rem;"><a href="https://fanography.info/1-13">1&ndash;13</a></td>
+      <td>a cubic hypersurface $V_3\subset\mathbb{P}^4$</td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap; padding-right: 2rem;"><a href="https://fanography.info/2-2">2&ndash;2</a></td>
+      <td>a double cover of $\mathbb{P}^1\times\mathbb{P}^2$ branched along a smooth divisor of bidegree $(2,4)$</td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap; padding-right: 2rem;"><a href="https://fanography.info/2-6">2&ndash;6</a></td>
+      <td>a Verra 3-fold: a double cover of the $(1,1)$-divisor $W_6\subset\mathbb{P}^2\times\mathbb{P}^2$, branched along a smooth anticanonical divisor</td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap; padding-right: 2rem;"><a href="https://fanography.info/2-8">2&ndash;8</a></td>
+      <td>a double cover of $V_7=\operatorname{Bl}_p\mathbb{P}^3$, branched along a smooth anticanonical divisor meeting the exceptional divisor smoothly</td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap; padding-right: 2rem;"><a href="https://fanography.info/3-1">3&ndash;1</a></td>
+      <td>a double cover of $(\mathbb{P}^1)^3$ branched along a smooth divisor of tridegree $(2,2,2)$</td>
+    </tr>
+  </tbody>
+</table>
+<p>Awesome! Only 13 cases to consider.
 
+<h3>Tools for the remaining cases</h3>
+<p>Let's tackle those remaining cases. Our first tool is the following.
+<p><strong>Lefschetz in degree 2 for complete intersections.</strong>
+<em>Let $M$ be a smooth projective variety,
+and let $X\subset M$ be obtained by successively taking smooth ample divisors,
+with $\dim X\geq 3$.
+Then $\mathrm{H}_2(X,\mathbb{Z})\cong\mathrm{H}_2(M,\mathbb{Z})$.</em>
+<p>This is the integral Lefschetz hyperplane theorem applied successively;
+see, for instance,
+Theorem 3.1.17 in <a href="https://doi.org/10.1007/978-3-642-18808-4"><em>Positivity in Algebraic Geometry I</em></a>.
+<p>Looking at our table,
+we see that quite a few of the interesting cases admit such a description,
+where $M$ is a partial flag variety.
+Such varieties have a Schubert cell decomposition and therefore torsion-free integral homology in every degree.
+In particular, this applies to 1&ndash;2, 1&ndash;3, 1&ndash;4, 1&ndash;5, 1&ndash;7, and 1&ndash;13.
+
+<p>There are now 7 families of Fano 3-folds we still have to deal with.
+A significant portion of them can be dealt with using the following variation of Lefschetz.
+<p><strong>Lefschetz in degree 2 for cyclic covers.</strong>
+<em>Let $X\to Y$ be a cyclic cover of smooth projective varieties of dimension at least 3,
+branched along a smooth ample divisor.
+ Then $\mathrm{H}_2(X,\mathbb{Z})\cong\mathrm{H}_2(Y,\mathbb{Z})$.</em>
+<p>This variation of the Lefschetz theorem for complete intersections
+is Proposition 1.11 in <a href="https://doi.org/10.4153/CJM-1989-021-3"><em>Topological properties of cyclic coverings branched along an ample divisor</em></a>.
+<p>Again looking at our table,
+we see that quite a few of the remaining cases admit such a description.
+Namely, this tool applies to 1&ndash;1, 1&ndash;12, 2&ndash;2, 2&ndash;6, 2&ndash;8, and 3&ndash;1.
+We are left only with 1&ndash;11.
+
+<p>To deal with this remaining case,
+we want to have a version of Lefschetz that works for weighted complete intersections.
+Luckily, there is one!
+<p><strong>Lefschetz in degree 2 for weighted complete intersections.</strong>
+<em>Let $X\subset\mathbb{P}(a_0,\ldots,a_N)$ be a strongly smooth weighted complete intersection of dimension at least 3.
+Then
+\[
+  \mathrm{H}_2(X,\mathbb{Z})\cong\mathbb{Z}.
+\]
+</em>
+Here strongly smooth means that
+$X$ is quasismooth and 
+the greatest common divisor of the weights corresponding to the nonzero coordinates of a point is independent of the point.
+<p>This variation of the Lefschetz theorem for complete intersections
+is Proposition 6(i)&ndash;(ii) in
+<a href="https://doi.org/10.1016/0040-9383(85)90009-6"><em>Monodromy and Betti numbers of weighted complete intersections</em></a>.
+<p>This applies to 1&ndash;11:
+if one of the weight-one coordinates is non-zero,
+the relevant greatest common divisor is 1;
+if they all vanish,
+the weight-two and weight-three coordinates are both non-zero and their weights are coprime.
+
+<h3>Conclusion</h3>
+<p>We have thus proved that the Brauer group of a Fano threefold vanishes!
+It was indeed a direct inspection, but one must know which tools to use for the inspection.
+
+  </div>
+
+  <ul class="pagination">
+    
+      <li class="previous"><a href="/blog/2026/08/11/new-paper-hyperkaehler-period-index/">previous post</a></li>
+    
+
+    
+      <li class="disabled next"><a href="#">next post</a></li>
+    
+  </ul>
+</article>
 
       </div>
     </div>

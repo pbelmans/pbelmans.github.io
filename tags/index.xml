@@ -6,8 +6,15 @@
     <description>Recent content in Tags on Pieter Belmans</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 11 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://pbelmans.ncag.info/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fano Varieties</title>
+      <link>https://pbelmans.ncag.info/tags/Fano-varieties/</link>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/tags/Fano-varieties/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Algebraic Geometry</title>
       <link>https://pbelmans.ncag.info/tags/algebraic-geometry/</link>
@@ -34,13 +41,6 @@
       <link>https://pbelmans.ncag.info/tags/quivers/</link>
       <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
       <guid>https://pbelmans.ncag.info/tags/quivers/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Fano Varieties</title>
-      <link>https://pbelmans.ncag.info/tags/Fano-varieties/</link>
-      <pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>https://pbelmans.ncag.info/tags/Fano-varieties/</guid>
       <description></description>
     </item>
     <item>
