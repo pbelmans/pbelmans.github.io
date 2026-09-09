@@ -7,13 +7,13 @@
 
   <link rel="icon" type="image/png" href="/favicon.png" size="256x256">
 
-  <title>Pieter Belmans&mdash;Archive</title>
-  
+  <title>Pieter Belmans&mdash;A noncommutatively rigid Fano fivefold</title>
+  <meta name="description" content="Here&#39;s a question I have had for a while, ever since reading Noncommutative rigidity of the moduli stack of stable pointed curves by Shinnosuke Okawa and Taro …">
 
   
   <link rel="stylesheet" href="/css/main.css">
 
-  <link rel="canonical" href="https://pbelmans.ncag.info/archive/">
+  <link rel="canonical" href="https://pbelmans.ncag.info/blog/2026/09/09/completely-rigid-fanos/">
   <link rel="alternate" type="application/rss+xml" title="Pieter Belmans" href="https://pbelmans.ncag.info/blog/feed/">
 
   <script>
@@ -65,52 +65,114 @@ window.MathJax = {
     <div class="page-content">
       <div class="wrapper">
         
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">A noncommutatively rigid Fano fivefold</h1>
 
+    <p class="post-meta">
+      <time datetime="2026-09-09T00:00:00Z" itemprop="datePublished">Sep 9, 2026</time>
+    </p>
 
-
-  <article>
-  <h3><a href="/blog/2026/09/09/completely-rigid-fanos/">A noncommutatively rigid Fano fivefold</a></h3>
-  <p class="post-meta"><time datetime="2026-09-09T00:00:00Z">Sep 9, 2026</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2026/09/02/brauer-fano-threefolds/">Brauer groups of Fano 3-folds</a></h3>
-  <p class="post-meta"><time datetime="2026-09-02T00:00:00Z">Sep 2, 2026</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2026/08/11/new-paper-hyperkaehler-period-index/">New paper: The hyperkähler period-index conjecture is false</a></h3>
-  <p class="post-meta"><time datetime="2026-08-11T00:00:00Z">Aug 11, 2026</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2026/07/21/hyperelliptic/">Hyperelliptic varieties: quotients of complex tori by finite groups</a></h3>
-  <p class="post-meta"><time datetime="2026-07-21T00:00:00Z">Jul 21, 2026</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2026/07/15/new-paper-subspace-quiver-moduli/">New paper: Fano 4-fold quiver moduli from subspace quivers</a></h3>
-  <p class="post-meta"><time datetime="2026-07-15T00:00:00Z">Jul 15, 2026</time></p>
-</article>
-
-
-
-
-<ul class="pagination">
-  
-    <li class="disabled previous"><a href="#">previous page</a></li>
-  
-
-  
     
-    <li class="next"><a href="/archive/2/">next page</a></li>
-  
-</ul>
+    
+    <div class="post-meta">
+      posted in:
+      <ul class="categories-list">
+        
+          <li><a href="/blog/categories#mathematics">mathematics</a></li>
+        
+      </ul>
+    </div>
+    
 
+    
+    
+    <div class="post-meta">
+      tags:
+      <ul class="tags-list">
+        
+          <li><a href="/blog/tags#Fano-varieties">Fano varieties</a></li>
+        
+      </ul>
+    </div>
+    
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    
+<p>Here's a question I have had for a while,
+ever since reading <a href="https://arxiv.org/abs/1412.7060">Noncommutative rigidity of the moduli stack of stable pointed curves</a>
+by Shinnosuke Okawa and Taro Sano.
+<p>They prove the cool result that $\mathrm{HH}^2(\overline{\mathcal{M}}_{g,n})=0$
+(except when $(g,n)=(0,5)$, and possibly when $(g,n)=(4, 0), (3, 1), (3, 0), (2, 2), (2, 1), (2, 0), (1, 3), (1, 2)$).
+Here $\mathrm{HH}^2$ is the second Hochschild cohomology,
+and it measures the deformations of the category of coherent sheaves.
+This is the <em>noncommutative rigidity</em> in the title of their paper.
+Note that they are considering a smooth projective Deligne&ndash;Mumford stack whenever $g\geq 1$.
+
+<h3>Finding noncommutatively rigid varieties</h3>
+<p>Because I like Fano varieties so much,
+I was wondering whether we can find a Fano variety $X$
+for which the second Hochschild cohomology vanishes,
+i.e., <em>does there exist a noncommutatively rigid Fano variety</em>?
+<p>Note that it is in fact easy to find a non-Fano example of a noncommutatively rigid smooth projective surface:
+a <a href="https://superficie.info/2/3-9/fake-projective-planes"><em>fake projective plane</em></a>
+is of this shape.
+But I wanted a Fano variety!
+
+<h3>Finding noncommutatively rigid Fano varieties</h3>
+<p>In dimension 2,
+we have that $\overline{\mathcal{M}}_{0,5}$ is the del Pezzo surface of degree 5,
+and whilst it is rigid as a variety,
+it has a 6-dimensional space of Poisson structures,
+and thus lots of interesting noncommutative deformations.
+The same holds for the other rigid del Pezzo surfaces:
+lots of interesting noncommutative deformations,
+which are truly at the heart of noncommutative algebraic geometry.
+<p>In dimension 3,
+we can use <a href="https://fanography.info">Fanography</a>,
+which contains the data from the paper
+<a href="https://doi.org/10.1007/s00209-023-03261-2">Polyvector fields for Fano 3-folds</a>
+that I wrote a few years ago with Enrico Fatighenti and Fabio Tanturri,
+to conclude that there are also no noncommutatively rigid Fano 3-folds.
+<p>In an ongoing project with many people on classifying Fano 4-folds
+we are also computing polyvector cohomology,
+but none of the cases studied so far seem to satisfy the required vanishings.
+
+<h3>The example</h3>
+<p>Now, to dimension 5!
+<a href="https://homogeneous.tools">PartialFlagVarieties.jl</a> is a useful first selection mechanism,
+as it makes it possible to consider many zero loci in partial flag varieties at once
+when looking for candidates.
+This is how I found a complete intersection in $\mathbb{P}^2\times\mathbb{P}^2\times\mathbb{P}^2\times\mathbb{P}^3$,
+of degrees $(1,1,0,0)$, $(0,1,0,1)$, $(0,0,1,1)$, $(0,0,1,1)$,
+which had the potential of being an example.
+With a little help from an LLM,
+I could translate the remainder of the problem into a Macaulay2 computation,
+which confirmed that it is indeed an example.
+<p>I was originally writing this up as a blogpost,
+but it got longer and longer,
+so I felt like a pdf was more appropriate:
+<strong><a href="/notes/noncommutatively-rigid-fano-fivefold.pdf">A noncommutatively rigid Fano fivefold</a></strong>.
+It contains all the Julia and Macaulay2 code needed to verify the claims,
+so that you can check them yourself,
+and the code is also available in the repository
+<a href="https://github.com/pbelmans/noncommutatively-rigid-fano-fivefold">noncommutatively-rigid-fano-fivefold</a>.
+For now I have no plans to submit it for publication anywhere,
+but feel free to convince me otherwise.
+
+  </div>
+
+  <ul class="pagination">
+    
+      <li class="previous"><a href="/blog/2026/09/02/brauer-fano-threefolds/">previous post</a></li>
+    
+
+    
+      <li class="disabled next"><a href="#">next post</a></li>
+    
+  </ul>
+</article>
 
       </div>
     </div>

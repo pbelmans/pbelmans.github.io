@@ -5,9 +5,80 @@
     <description></description>
     <link>https://pbelmans.ncag.info/</link>
     <atom:link href="https://pbelmans.ncag.info/blog/feed/" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 07 Sep 2026 11:40:06 &#43;0000</pubDate>
-    <lastBuildDate>Mon, 07 Sep 2026 11:40:06 &#43;0000</lastBuildDate>
+    <pubDate>Wed, 09 Sep 2026 15:40:24 &#43;0000</pubDate>
+    <lastBuildDate>Wed, 09 Sep 2026 15:40:24 &#43;0000</lastBuildDate>
     <generator>Hugo</generator>
+    
+    <item>
+      <title>A noncommutatively rigid Fano fivefold</title>
+      <description>
+&lt;p&gt;Here&#39;s a question I have had for a while,
+ever since reading &lt;a href=&#34;https://arxiv.org/abs/1412.7060&#34;&gt;Noncommutative rigidity of the moduli stack of stable pointed curves&lt;/a&gt;
+by Shinnosuke Okawa and Taro Sano.
+&lt;p&gt;They prove the cool result that $\mathrm{HH}^2(\overline{\mathcal{M}}_{g,n})=0$
+(except when $(g,n)=(0,5)$, and possibly when $(g,n)=(4, 0), (3, 1), (3, 0), (2, 2), (2, 1), (2, 0), (1, 3), (1, 2)$).
+Here $\mathrm{HH}^2$ is the second Hochschild cohomology,
+and it measures the deformations of the category of coherent sheaves.
+This is the &lt;em&gt;noncommutative rigidity&lt;/em&gt; in the title of their paper.
+Note that they are considering a smooth projective Deligne&amp;ndash;Mumford stack whenever $g\geq 1$.
+
+&lt;h3&gt;Finding noncommutatively rigid varieties&lt;/h3&gt;
+&lt;p&gt;Because I like Fano varieties so much,
+I was wondering whether we can find a Fano variety $X$
+for which the second Hochschild cohomology vanishes,
+i.e., &lt;em&gt;does there exist a noncommutatively rigid Fano variety&lt;/em&gt;?
+&lt;p&gt;Note that it is in fact easy to find a non-Fano example of a noncommutatively rigid smooth projective surface:
+a &lt;a href=&#34;https://superficie.info/2/3-9/fake-projective-planes&#34;&gt;&lt;em&gt;fake projective plane&lt;/em&gt;&lt;/a&gt;
+is of this shape.
+But I wanted a Fano variety!
+
+&lt;h3&gt;Finding noncommutatively rigid Fano varieties&lt;/h3&gt;
+&lt;p&gt;In dimension 2,
+we have that $\overline{\mathcal{M}}_{0,5}$ is the del Pezzo surface of degree 5,
+and whilst it is rigid as a variety,
+it has a 6-dimensional space of Poisson structures,
+and thus lots of interesting noncommutative deformations.
+The same holds for the other rigid del Pezzo surfaces:
+lots of interesting noncommutative deformations,
+which are truly at the heart of noncommutative algebraic geometry.
+&lt;p&gt;In dimension 3,
+we can use &lt;a href=&#34;https://fanography.info&#34;&gt;Fanography&lt;/a&gt;,
+which contains the data from the paper
+&lt;a href=&#34;https://doi.org/10.1007/s00209-023-03261-2&#34;&gt;Polyvector fields for Fano 3-folds&lt;/a&gt;
+that I wrote a few years ago with Enrico Fatighenti and Fabio Tanturri,
+to conclude that there are also no noncommutatively rigid Fano 3-folds.
+&lt;p&gt;In an ongoing project with many people on classifying Fano 4-folds
+we are also computing polyvector cohomology,
+but none of the cases studied so far seem to satisfy the required vanishings.
+
+&lt;h3&gt;The example&lt;/h3&gt;
+&lt;p&gt;Now, to dimension 5!
+&lt;a href=&#34;https://homogeneous.tools&#34;&gt;PartialFlagVarieties.jl&lt;/a&gt; is a useful first selection mechanism,
+as it makes it possible to consider many zero loci in partial flag varieties at once
+when looking for candidates.
+This is how I found a complete intersection in $\mathbb{P}^2\times\mathbb{P}^2\times\mathbb{P}^2\times\mathbb{P}^3$,
+of degrees $(1,1,0,0)$, $(0,1,0,1)$, $(0,0,1,1)$, $(0,0,1,1)$,
+which had the potential of being an example.
+With a little help from an LLM,
+I could translate the remainder of the problem into a Macaulay2 computation,
+which confirmed that it is indeed an example.
+&lt;p&gt;I was originally writing this up as a blogpost,
+but it got longer and longer,
+so I felt like a pdf was more appropriate:
+&lt;strong&gt;&lt;a href=&#34;https://pbelmans.ncag.info/notes/noncommutatively-rigid-fano-fivefold.pdf&#34;&gt;A noncommutatively rigid Fano fivefold&lt;/a&gt;&lt;/strong&gt;.
+It contains all the Julia and Macaulay2 code needed to verify the claims,
+so that you can check them yourself,
+and the code is also available in the repository
+&lt;a href=&#34;https://github.com/pbelmans/noncommutatively-rigid-fano-fivefold&#34;&gt;noncommutatively-rigid-fano-fivefold&lt;/a&gt;.
+For now I have no plans to submit it for publication anywhere,
+but feel free to convince me otherwise.
+</description>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 &#43;0000</pubDate>
+      <link>https://pbelmans.ncag.info/blog/2026/09/09/completely-rigid-fanos/</link>
+      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/09/09/completely-rigid-fanos/</guid>
+      <category>Fano varieties</category>
+      <category>mathematics</category>
+    </item>
     
     <item>
       <title>Brauer groups of Fano 3-folds</title>
@@ -619,49 +690,6 @@ which was a lot of fun!
       <link>https://pbelmans.ncag.info/blog/2026/07/08/new-paper-brauer-groups-gerbes/</link>
       <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/07/08/new-paper-brauer-groups-gerbes/</guid>
       <category>quivers</category><category>moduli spaces</category><category>algebraic geometry</category>
-      <category>mathematics</category>
-    </item>
-    
-    <item>
-      <title>Congratulations Dr. Gianni Petrella!</title>
-      <description>
-&lt;p&gt;I want to congratulate
-&lt;a href=&#34;https://www.giannipetrella.eu&#34;&gt;Gianni Petrella&lt;/a&gt;,
-for his PhD defense today
-at the University of Luxembourg,
-and the wonderful thesis &lt;em&gt;Windows, walls and invariants of quiver moduli&lt;/em&gt;
-that he has written.
-The thesis will be available online at some point,
-but you can also check out the papers it builds on:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2311.17003&#34;&gt;Rigidity and Schofield&#39;s partial tilting conjecture for quiver moduli&lt;/a&gt;,
-    a joint paper with Ana-Maria Brecan, Hans Franzen, Markus Reineke, and myself,
-    published in the Journal de l&#39;&amp;Eacute;cole Polytechnique&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2411.15125&#34;&gt;Partial semiorthogonal decompositions for quiver moduli&lt;/a&gt;,
-    his solo paper,
-    published in the Journal of Symbolic Computation&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2506.20568&#34;&gt;Finding the walls for quiver moduli&lt;/a&gt;,
-    a joint paper with Hans Franzen and Rachel Webb,
-    published in the Journal of Pure and Applied Algebra&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2506.19432&#34;&gt;The QuiverTools package for SageMath and Julia&lt;/a&gt;,
-    a joint paper with Hans Franzen and myself,
-    published in the Journal of Software for Algebra and Geometry&lt;/li&gt;
-  &lt;li&gt;Brauer groups of resolved quiver moduli via gerbes,
-    a joint paper with Sebastian Torres and myself,
-    which will appear on the arXiv very soon&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Gianni was my PhD student
-(although FNR regulations prevented an official recognition of this fact)
-and I have greatly enjoyed our mathematical conversations.
-I look forward to our future ones,
-as he will take up a postdoc at the University of Amsterdam,
-working with &lt;a href=&#34;https://algebra.hopto.org/wis/website/&#34;&gt;Raf Bocklandt&lt;/a&gt;.
-Congratulations!&lt;/p&gt;
-</description>
-      <pubDate>Fri, 03 Jul 2026 00:00:00 &#43;0000</pubDate>
-      <link>https://pbelmans.ncag.info/blog/2026/07/03/gianni-petrella/</link>
-      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/07/03/gianni-petrella/</guid>
-      <category>quivers</category>
       <category>mathematics</category>
     </item>
     
