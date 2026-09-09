@@ -510,6 +510,10 @@ not-for-publication:
     comment: short note, possibly to be extended at some point
     pdf: /assets/non-quad-4-dim-as-regular.pdf
 
+  - title: A noncommutatively rigid Fano fivefold
+    comment: 'short note constructing a Fano fivefold with vanishing first and second Hochschild cohomology, see also the <a href="/blog/2026/09/09/completely-rigid-fanos/">blogpost</a> and the related repository <a href="https://github.com/pbelmans/noncommutatively-rigid-fano-fivefold"><span style="font-family: monospace">noncommutatively-rigid-fano-fivefold</span></a>'
+    pdf: /notes/noncommutatively-rigid-fano-fivefold.pdf
+
 
 not-math:
   - title: The fugue and the guitar
