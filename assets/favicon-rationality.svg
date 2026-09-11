@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="10" fill="#eee"/>
+  <text x="27" y="43" text-anchor="middle" fill="#000"
+        font-family="Georgia, 'Times New Roman', serif" font-size="38" font-style="italic">X</text>
+  <text x="44" y="22" text-anchor="middle" fill="#000"
+        font-family="Georgia, 'Times New Roman', serif" font-size="17" font-style="italic">n</text>
+  <text x="44" y="52" text-anchor="middle" fill="#000"
+        font-family="Georgia, 'Times New Roman', serif" font-size="17" font-style="italic">d</text>
+</svg>

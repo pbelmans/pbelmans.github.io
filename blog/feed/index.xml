@@ -5,9 +5,34 @@
     <description></description>
     <link>https://pbelmans.ncag.info/</link>
     <atom:link href="https://pbelmans.ncag.info/blog/feed/" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 11 Sep 2026 08:59:33 &#43;0000</pubDate>
-    <lastBuildDate>Fri, 11 Sep 2026 08:59:33 &#43;0000</lastBuildDate>
+    <pubDate>Fri, 11 Sep 2026 12:56:38 &#43;0000</pubDate>
+    <lastBuildDate>Fri, 11 Sep 2026 12:56:38 &#43;0000</lastBuildDate>
     <generator>Hugo</generator>
+    
+    <item>
+      <title>Rationality of hypersurfaces: a new website</title>
+      <description>&lt;p&gt;After seeing &lt;a href=&#34;https://arxiv.org/abs/2609.10231&#34;&gt;John Christian Ottem, &lt;em&gt;Stable irrationality of quartic sixfolds&lt;/em&gt;&lt;/a&gt;
+on the arXiv yesterday,
+I was reminded of my plans a little while ago
+to make a website like &lt;a href=&#34;mgnbar.info&#34;&gt;mgnbar.info&lt;/a&gt;
+surveying the state of the art on a precise question.
+Inspiration for this I found in&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.impan.pl/~pragacz/russo.pdf#page=4&#34;&gt;Francesco Russo, &lt;em&gt;Rationality of cubic fourfolds via Trisecant Flops&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doi.org/10.4171/EMSS/83&#34;&gt;Olivier Debarre, &lt;em&gt;On rationality problems&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Without further ado, see &lt;a href=&#34;https://rationality.fanography.info&#34;&gt;rationality.fanography.info&lt;/a&gt;.
+It is just a single page,
+with features very much like &lt;a href=&#34;mgnbar.info&#34;&gt;mgnbar.info&lt;/a&gt;.
+I&amp;rsquo;m not sure I like the methods overview,
+maybe I will get rid of it at some point.&lt;/p&gt;
+</description>
+      <pubDate>Fri, 11 Sep 2026 00:00:00 &#43;0000</pubDate>
+      <link>https://pbelmans.ncag.info/blog/2026/09/11/rationality-hypersurfaces/</link>
+      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/09/11/rationality-hypersurfaces/</guid>
+      <category>algebraic geometry</category>
+      <category>mathematics</category>
+    </item>
     
     <item>
       <title>A noncommutatively rigid Fano fivefold</title>
@@ -651,45 +676,6 @@ with &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt;. I&amp;rsquo;m a b
       <link>https://pbelmans.ncag.info/blog/2026/07/09/mgnbar-update/</link>
       <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/07/09/mgnbar-update/</guid>
       <category>moduli spaces</category><category>programming</category>
-      <category>mathematics</category>
-    </item>
-    
-    <item>
-      <title>New paper: Brauer groups of resolved quiver moduli via gerbes</title>
-      <description>
-&lt;p&gt;I&#39;m happy to announce a new paper,
-&lt;a href=&#34;https://arxiv.org/abs/2607.06164&#34;&gt;&lt;strong&gt;Brauer groups of resolved quiver moduli via gerbes&lt;/strong&gt;&lt;/a&gt;,
-joint with &lt;a href=&#34;https://www.giannipetrella.eu&#34;&gt;Gianni Petrella&lt;/a&gt;
-and &lt;a href=&#34;https://sites.google.com/view/storresk&#34;&gt;Sebastian Torres&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;In this paper we give a new and very different proof of an old result due to Le Bruyn and Schofield
-(two mathematicians I admire greatly!),
-by translating a proof (due to Biswas&amp;ndash;Hogadi&amp;ndash;Holla)
-in the context of moduli of vector bundles on curves
-to that of quiver moduli.
-It is no secret that the &lt;em&gt;quiver-curve dictionary&lt;/em&gt;
-is a favourite topic of mine,
-and this paper can be seen as a contribution to this dictionary.&lt;/p&gt;
-
-&lt;p&gt;The result in question says that the Brauer group of a resolution of
-any moduli space of quiver representations
-vanishes.
-If you believe that all quiver moduli
-(and moduli of vector bundles)
-are rational,
-then certainly this Brauer group has to vanish.
-Along the way of (re)proving this vanishing,
-we explain some interesting properties of quiver moduli,
-highlighting parallels (and differences)
-between the curve and quiver case.&lt;/p&gt;
-
-&lt;p&gt;This project was the result of a working group back in Luxembourg,
-which was a lot of fun!
-</description>
-      <pubDate>Wed, 08 Jul 2026 00:00:00 &#43;0000</pubDate>
-      <link>https://pbelmans.ncag.info/blog/2026/07/08/new-paper-brauer-groups-gerbes/</link>
-      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/07/08/new-paper-brauer-groups-gerbes/</guid>
-      <category>quivers</category><category>moduli spaces</category><category>algebraic geometry</category>
       <category>mathematics</category>
     </item>
     

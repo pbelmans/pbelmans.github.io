@@ -6,8 +6,15 @@
     <description>Recent content in Mathematics on Pieter Belmans</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 09 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://pbelmans.ncag.info/categories/mathematics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rationality of hypersurfaces: a new website</title>
+      <link>https://pbelmans.ncag.info/blog/2026/09/11/rationality-hypersurfaces/</link>
+      <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2026/09/11/rationality-hypersurfaces/</guid>
+      <description>&lt;p&gt;After seeing &lt;a href=&#34;https://arxiv.org/abs/2609.10231&#34;&gt;John Christian Ottem, &lt;em&gt;Stable irrationality of quartic sixfolds&lt;/em&gt;&lt;/a&gt;&#xA;on the arXiv yesterday,&#xA;I was reminded of my plans a little while ago&#xA;to make a website like &lt;a href=&#34;mgnbar.info&#34;&gt;mgnbar.info&lt;/a&gt;&#xA;surveying the state of the art on a precise question.&#xA;Inspiration for this I found in&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.impan.pl/~pragacz/russo.pdf#page=4&#34;&gt;Francesco Russo, &lt;em&gt;Rationality of cubic fourfolds via Trisecant Flops&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://doi.org/10.4171/EMSS/83&#34;&gt;Olivier Debarre, &lt;em&gt;On rationality problems&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Without further ado, see &lt;a href=&#34;https://rationality.fanography.info&#34;&gt;rationality.fanography.info&lt;/a&gt;.&#xA;It is just a single page,&#xA;with features very much like &lt;a href=&#34;mgnbar.info&#34;&gt;mgnbar.info&lt;/a&gt;.&#xA;I&amp;rsquo;m not sure I like the methods overview,&#xA;maybe I will get rid of it at some point.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>A noncommutatively rigid Fano fivefold</title>
       <link>https://pbelmans.ncag.info/blog/2026/09/09/completely-rigid-fanos/</link>
