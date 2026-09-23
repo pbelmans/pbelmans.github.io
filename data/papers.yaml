@@ -146,7 +146,7 @@ published:
     mathscinet: "4524222"
     zbmath: "1520.14029"
 
-  - title: Derived categories of the Cayley plane and the coadjoint Grassmannian in type F
+  - title: Derived categories of the Cayley plane and the coadjoint Grassmannian of type F
     coauthors:
       - kuznetsov
       - smirnov
@@ -199,7 +199,8 @@ published:
     arxiv: "2205.07244"
     doi: 10.1112/plms.70156
     mathscinet: "5061218"
-    journal: volume 132, issue 4, April 2026, e70156
+    journal: Proceedings of the London Mathematical Society
+    information: volume 132 (2026), issue 4, e70156
     comment: 'see also the related repository <a href="https://github.com/pbelmans/graph-potential-tqft"><span style="font-family: monospace">graph-potential-tqft</span></a>'
 
   - title: Projectivity of the moduli space of vector bundles on a curve
@@ -307,7 +308,7 @@ published:
     information: volume 37 (2026), issue 4, pages 1450&ndash;1475
     doi: 10.1016/j.indag.2025.10.004
 
-  - title: The QuiverTools package for Sage and Julia
+  - title: The QuiverTools package for SageMath and Julia
     arxiv: "2506.19432"
     coauthors:
       - franzen
@@ -445,7 +446,7 @@ other:
     pdf: https://pbelmans.ncag.info/assets/owr-2029-belmans.pdf
 
   - title: Projectivity of good moduli spaces of semistable quiver representations and vector bundles
-    journal: Oberwolfach Reports 22/2022
+    journal: Oberwolfach Reports 23/2022
     doi: 10.14760/OWR-2022-23
     information: Interactions between Algebraic Geometry and Noncommutative Algebra
     pdf: https://pbelmans.ncag.info/assets/owr-2218-belmans.pdf
@@ -479,7 +480,7 @@ broad:
 
   - title: Curating Online Mathematical Resources
     journal: Notices of the American Mathematical Society
-    information: volume 69 (9), 2021, pages 1524&ndash;1527
+    information: volume 68 (9), 2021, pages 1524&ndash;1527
     pdf: https://www.ams.org/journals/notices/202109/rnoti-p1524.pdf
     doi: 10.1090/noti2344
 
