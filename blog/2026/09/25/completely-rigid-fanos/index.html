@@ -7,13 +7,13 @@
 
   <link rel="icon" type="image/png" href="/favicon.png" size="256x256">
 
-  <title>Pieter Belmans&mdash;Archive</title>
-  
+  <title>Pieter Belmans&mdash;An exceptional object for the irregular Waldron--Witaszek Fano fourfold</title>
+  <meta name="description" content="Today&#39;s arXiv update includes Joe Waldron and Jakub Witaszek&#39;s paper, “An irregular smooth Fano fourfold in positive characteristic”. Here, irregular means that …">
 
   
   <link rel="stylesheet" href="/css/main.css">
 
-  <link rel="canonical" href="https://pbelmans.ncag.info/archive/">
+  <link rel="canonical" href="https://pbelmans.ncag.info/blog/2026/09/25/completely-rigid-fanos/">
   <link rel="alternate" type="application/rss+xml" title="Pieter Belmans" href="https://pbelmans.ncag.info/blog/feed/">
 
   <script>
@@ -65,53 +65,153 @@ window.MathJax = {
     <div class="page-content">
       <div class="wrapper">
         
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">An exceptional object for the irregular Waldron--Witaszek Fano fourfold</h1>
 
+    <p class="post-meta">
+      <time datetime="2026-09-25T00:00:00Z" itemprop="datePublished">Sep 25, 2026</time>
+    </p>
 
-
-  <article>
-  <h3><a href="/blog/2011/12/18/alternating-semi-quavers-in-lilypond/">Alternating beams for semi-quavers in Lilypond</a></h3>
-  <p class="post-meta"><time datetime="2011-12-18T00:00:00Z">Dec 18, 2011</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2011/12/14/changing-href-to-produce-footnotes/">Changing \href{}{} to produce footnotes</a></h3>
-  <p class="post-meta"><time datetime="2011-12-14T00:00:00Z">Dec 14, 2011</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2011/12/05/latex-course/">Dutch LaTeX course</a></h3>
-  <p class="post-meta"><time datetime="2011-12-05T00:00:00Z">Dec 5, 2011</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2011/11/04/uparrow-and-its-variations-are-variable-sized-delimiters/">\uparrow and its variations are variable-sized delimiters</a></h3>
-  <p class="post-meta"><time datetime="2011-11-04T00:00:00Z">Nov 4, 2011</time></p>
-</article>
-
-
-  <article>
-  <h3><a href="/blog/2011/10/30/meanwhile-at-angst-angs/">Meanwhile at #angs@t / angs&#43;</a></h3>
-  <p class="post-meta"><time datetime="2011-10-30T00:00:00Z">Oct 30, 2011</time></p>
-</article>
-
-
-
-
-<ul class="pagination">
-  
     
-    <li class="previous"><a href="/archive/95/">previous page</a></li>
-  
-
-  
     
-    <li class="next"><a href="/archive/97/">next page</a></li>
-  
+    <div class="post-meta">
+      posted in:
+      <ul class="categories-list">
+        
+          <li><a href="/blog/categories#mathematics">mathematics</a></li>
+        
+      </ul>
+    </div>
+    
+
+    
+    
+    <div class="post-meta">
+      tags:
+      <ul class="tags-list">
+        
+          <li><a href="/blog/tags#Fano-varieties">Fano varieties</a></li>
+        
+      </ul>
+    </div>
+    
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    
+<p>Today's arXiv update includes <a href="https://arxiv.org/pdf/2609.29924">Joe Waldron and Jakub Witaszek's paper, “An irregular smooth Fano fourfold in positive characteristic”</a>.
+Here, irregular means that $\mathrm{H}^1(X,\mathcal{O}_X)\neq 0$.
+This is not possible for Fano varieties in characteristic zero, by Kodaira vanishing.
+But the authors construct a Fano fourfold over the algebraic closure of $\mathbb{F}_2$
+with $\mathrm{H}^1(X,\mathcal{O}_X)\cong\overline{\mathbb{F}}_2$.
+
+<p>Whilst this is very interesting for questions about rationality,
+I am always thinking about derived categories.
+And, unlike for Fano varieties in characteristic zero,
+the isomorphism $\mathrm{H}^1(X,\mathcal{O}_X)\cong\overline{\mathbb{F}}_2$
+implies that $\mathcal{O}_X$ (or for that matter, any line bundle!)
+is <em>not</em> an exceptional object.
+This is unfortunate because we like to start decomposing
+derived categories of Fano varieties
+by considering an exceptional sequence of line bundles
+and then continuing from there.
+
+<p>So what's up with the derived category of this Fano fourfold?
+It turns out there <em>is</em> an exceptional object,
+and the verification is almost done by the authors already!
+Line bundles are out,
+but there is a rank-2 vector bundle in their writeup that we can consider.
+Let's recall their setup a bit,
+although I will omit the precise construction,
+as I do not feel qualified to talk about regular foliations in characteristic two.
+
+<h3>An exceptional rank-2 bundle</h3>
+
+<p>In Proposition 3.4 they consider
+a finite flat morphism $\pi\colon H\to X$ of degree 2,
+where $H$ is a complete intersection of a quadric and a cubic in $\mathbb{P}^6$
+with 63 singular points.
+In Lemma 4.2 they construct a short exact sequence
+\[
+  0\to\mathcal{O}_X\to\pi_*\mathcal{O}_H\to K\to 0
+\]
+where $K$ is defined as $\ker(\pi_*\mathcal{O}_H(1)\to\pi_*\mathcal{O}_H(2))$,
+for a derivation that arises from their construction.
+The final ingredient for us is Proposition 4.5,
+which gives the isomorphism $\pi^*K\cong\mathcal{O}_H(1)$.
+We have now seen the main player for our observation.
+<p><strong>Claim</strong> <em>$\pi_*\mathcal{O}_H$ is exceptional.</em>
+<p><em>Proof.</em>
+Let us write $E=\pi_*\mathcal{O}_H$.
+Because $E$ has rank two,
+we have
+\[
+  E^\vee\cong E\otimes\det(E)^\vee\cong\pi_*\mathcal{O}_H\otimes K^\vee\cong\pi_*(\mathcal{O}_H\otimes\mathcal{O}_H(-1))\cong\pi_*\mathcal{O}_H(-1)
+\]
+by the usual pairing for vector bundles,
+the projection formula,
+and the properties recalled above.
+This gives us
+\[
+  \mathrm{H}^\bullet(X,E^\vee)\cong\mathrm{H}^\bullet(H,\mathcal{O}_H(-1))\cong 0
+\]
+because $H$ is a complete intersection,
+so we can use the Koszul resolution.
+Note that, as in the proof of Lemma 4.1,
+this also gives us that
+\[
+  \mathrm{H}^\bullet(X,E)\cong\mathrm{H}^\bullet(H,\mathcal{O}_H)\cong\overline{\mathbb{F}}_2[0].
+\]
+<p>Now, consider the defining short exact sequence for $E$ and tensor it with $E^\vee$ to get
+\[
+  0\to E^\vee\to E^\vee\otimes E\to E^\vee\otimes K\to 0.
+\]
+Again, because $E$ has rank two,
+we have $E^\vee\otimes K\cong E$.
+We have computed the cohomology of the outer terms,
+and we thus get
+\[
+  \mathrm{H}^\bullet(X,E^\vee\otimes E)\cong\overline{\mathbb{F}}_2[0],
+\]
+which proves the claim. <span style="float:right">$\square$</span>
+<p>Hence, we have
+\[
+  \mathbf{D}^{\mathrm{b}}(X)
+  =
+  \langle E^\perp,E\rangle
+\]
+where $E^\perp=\{F\in\mathbf{D}^{\mathrm{b}}(X)\mid\mathbf{R}\mathrm{Hom}(E,F)=0\}$.
+Note that,
+by the acyclicity used above,
+we have $\mathcal{O}_X\in E^\perp$.
+<h3>Questions</h3>
+<p>I need to start preparing my lecture for next week,
+so I'm leaving you (and myself) with the following questions:
+<ul>
+  <li>What are the Hodge numbers of this Fano fourfold?
+    Note that using Proposition 5.1,
+    we can actually compute that $\mathrm{h}^0(X,\Omega_X^1)\geq 6$,
+    e.g., using <a href="https://pbelmans.ncag.info/cohomology-tables/6/3-2">my cohomology tables for complete intersections</a>;
+  <li>Does the Hochschild&ndash;Kostant&ndash;Rosenberg decomposition for Hochschild homology hold for this variety?
+    It is not automatic for fourfolds in characteristic 2!
+  <li>How can we decompose the derived category further?
+    Note that $E^\vee$ is also exceptional,
+    but we cannot fit it in a sequence together with $E$.
 </ul>
 
+  </div>
+
+  <ul class="pagination">
+    
+      <li class="previous"><a href="/blog/2026/09/11/rationality-hypersurfaces/">previous post</a></li>
+    
+
+    
+      <li class="disabled next"><a href="#">next post</a></li>
+    
+  </ul>
+</article>
 
       </div>
     </div>

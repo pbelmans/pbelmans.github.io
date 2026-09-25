@@ -5,9 +5,119 @@
     <description></description>
     <link>https://pbelmans.ncag.info/</link>
     <atom:link href="https://pbelmans.ncag.info/blog/feed/" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 24 Sep 2026 13:21:27 &#43;0000</pubDate>
-    <lastBuildDate>Thu, 24 Sep 2026 13:21:27 &#43;0000</lastBuildDate>
+    <pubDate>Fri, 25 Sep 2026 08:26:35 &#43;0000</pubDate>
+    <lastBuildDate>Fri, 25 Sep 2026 08:26:35 &#43;0000</lastBuildDate>
     <generator>Hugo</generator>
+    
+    <item>
+      <title>An exceptional object for the irregular Waldron--Witaszek Fano fourfold</title>
+      <description>
+&lt;p&gt;Today&#39;s arXiv update includes &lt;a href=&#34;https://arxiv.org/pdf/2609.29924&#34;&gt;Joe Waldron and Jakub Witaszek&#39;s paper, “An irregular smooth Fano fourfold in positive characteristic”&lt;/a&gt;.
+Here, irregular means that $\mathrm{H}^1(X,\mathcal{O}_X)\neq 0$.
+This is not possible for Fano varieties in characteristic zero, by Kodaira vanishing.
+But the authors construct a Fano fourfold over the algebraic closure of $\mathbb{F}_2$
+with $\mathrm{H}^1(X,\mathcal{O}_X)\cong\overline{\mathbb{F}}_2$.
+
+&lt;p&gt;Whilst this is very interesting for questions about rationality,
+I am always thinking about derived categories.
+And, unlike for Fano varieties in characteristic zero,
+the isomorphism $\mathrm{H}^1(X,\mathcal{O}_X)\cong\overline{\mathbb{F}}_2$
+implies that $\mathcal{O}_X$ (or for that matter, any line bundle!)
+is &lt;em&gt;not&lt;/em&gt; an exceptional object.
+This is unfortunate because we like to start decomposing
+derived categories of Fano varieties
+by considering an exceptional sequence of line bundles
+and then continuing from there.
+
+&lt;p&gt;So what&#39;s up with the derived category of this Fano fourfold?
+It turns out there &lt;em&gt;is&lt;/em&gt; an exceptional object,
+and the verification is almost done by the authors already!
+Line bundles are out,
+but there is a rank-2 vector bundle in their writeup that we can consider.
+Let&#39;s recall their setup a bit,
+although I will omit the precise construction,
+as I do not feel qualified to talk about regular foliations in characteristic two.
+
+&lt;h3&gt;An exceptional rank-2 bundle&lt;/h3&gt;
+
+&lt;p&gt;In Proposition 3.4 they consider
+a finite flat morphism $\pi\colon H\to X$ of degree 2,
+where $H$ is a complete intersection of a quadric and a cubic in $\mathbb{P}^6$
+with 63 singular points.
+In Lemma 4.2 they construct a short exact sequence
+\[
+  0\to\mathcal{O}_X\to\pi_*\mathcal{O}_H\to K\to 0
+\]
+where $K$ is defined as $\ker(\pi_*\mathcal{O}_H(1)\to\pi_*\mathcal{O}_H(2))$,
+for a derivation that arises from their construction.
+The final ingredient for us is Proposition 4.5,
+which gives the isomorphism $\pi^*K\cong\mathcal{O}_H(1)$.
+We have now seen the main player for our observation.
+&lt;p&gt;&lt;strong&gt;Claim&lt;/strong&gt; &lt;em&gt;$\pi_*\mathcal{O}_H$ is exceptional.&lt;/em&gt;
+&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt;
+Let us write $E=\pi_*\mathcal{O}_H$.
+Because $E$ has rank two,
+we have
+\[
+  E^\vee\cong E\otimes\det(E)^\vee\cong\pi_*\mathcal{O}_H\otimes K^\vee\cong\pi_*(\mathcal{O}_H\otimes\mathcal{O}_H(-1))\cong\pi_*\mathcal{O}_H(-1)
+\]
+by the usual pairing for vector bundles,
+the projection formula,
+and the properties recalled above.
+This gives us
+\[
+  \mathrm{H}^\bullet(X,E^\vee)\cong\mathrm{H}^\bullet(H,\mathcal{O}_H(-1))\cong 0
+\]
+because $H$ is a complete intersection,
+so we can use the Koszul resolution.
+Note that, as in the proof of Lemma 4.1,
+this also gives us that
+\[
+  \mathrm{H}^\bullet(X,E)\cong\mathrm{H}^\bullet(H,\mathcal{O}_H)\cong\overline{\mathbb{F}}_2[0].
+\]
+&lt;p&gt;Now, consider the defining short exact sequence for $E$ and tensor it with $E^\vee$ to get
+\[
+  0\to E^\vee\to E^\vee\otimes E\to E^\vee\otimes K\to 0.
+\]
+Again, because $E$ has rank two,
+we have $E^\vee\otimes K\cong E$.
+We have computed the cohomology of the outer terms,
+and we thus get
+\[
+  \mathrm{H}^\bullet(X,E^\vee\otimes E)\cong\overline{\mathbb{F}}_2[0],
+\]
+which proves the claim. &lt;span style=&#34;float:right&#34;&gt;$\square$&lt;/span&gt;
+&lt;p&gt;Hence, we have
+\[
+  \mathbf{D}^{\mathrm{b}}(X)
+  =
+  \langle E^\perp,E\rangle
+\]
+where $E^\perp=\{F\in\mathbf{D}^{\mathrm{b}}(X)\mid\mathbf{R}\mathrm{Hom}(E,F)=0\}$.
+Note that,
+by the acyclicity used above,
+we have $\mathcal{O}_X\in E^\perp$.
+&lt;h3&gt;Questions&lt;/h3&gt;
+&lt;p&gt;I need to start preparing my lecture for next week,
+so I&#39;m leaving you (and myself) with the following questions:
+&lt;ul&gt;
+  &lt;li&gt;What are the Hodge numbers of this Fano fourfold?
+    Note that using Proposition 5.1,
+    we can actually compute that $\mathrm{h}^0(X,\Omega_X^1)\geq 6$,
+    e.g., using &lt;a href=&#34;https://pbelmans.ncag.info/cohomology-tables/6/3-2&#34;&gt;my cohomology tables for complete intersections&lt;/a&gt;;
+  &lt;li&gt;Does the Hochschild&amp;ndash;Kostant&amp;ndash;Rosenberg decomposition for Hochschild homology hold for this variety?
+    It is not automatic for fourfolds in characteristic 2!
+  &lt;li&gt;How can we decompose the derived category further?
+    Note that $E^\vee$ is also exceptional,
+    but we cannot fit it in a sequence together with $E$.
+&lt;/ul&gt;
+</description>
+      <pubDate>Fri, 25 Sep 2026 00:00:00 &#43;0000</pubDate>
+      <link>https://pbelmans.ncag.info/blog/2026/09/25/completely-rigid-fanos/</link>
+      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/09/25/completely-rigid-fanos/</guid>
+      <category>Fano varieties</category>
+      <category>mathematics</category>
+    </item>
     
     <item>
       <title>Rationality of hypersurfaces: a new website</title>
@@ -629,53 +739,6 @@ it helps me explain to the people who fund my work that building these things is
       <link>https://pbelmans.ncag.info/blog/2026/07/10/dois-for-my-websites/</link>
       <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/07/10/dois-for-my-websites/</guid>
       <category>programming</category>
-      <category>mathematics</category>
-    </item>
-    
-    <item>
-      <title>Mgnbar.info: two new layers</title>
-      <description>&lt;p&gt;Back &lt;a href=&#34;https://pbelmans.ncag.info/blog/2023/02/01/mgnbar-info/&#34;&gt;in 2023&lt;/a&gt;, together with
-&lt;a href=&#34;https://sites.google.com/view/ibarros/&#34;&gt;Ignacio Barros&lt;/a&gt;, I made
-&lt;strong&gt;&lt;a href=&#34;https://mgnbar.info&#34;&gt;Mgnbar.info&lt;/a&gt;&lt;/strong&gt;, a website about the geometry of
-$\overline{\mathrm{M}}_{g,n}$, the moduli space of stable $n$-pointed genus $g$
-curves. For a long time it showed a single invariant, the Kodaira dimension.
-It now has two more layers, which you can pick from the selector above the
-table, and the Kodaira dimension layer itself has gained some extra information.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;The tautological ring.&lt;/strong&gt; For each $(g,n)$ the table records whether the Chow
-ring of $\overline{\mathrm{M}}_{g,n}$, and of the open $\mathrm{M}_{g,n}$, is
-generated by the tautological classes, the natural $\psi$- and $\kappa$-classes
-and boundary strata, or whether there are genuinely more mysterious cycles.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Point counts.&lt;/strong&gt; Whether the number of points of $\overline{\mathrm{M}}_{g,n}$
-and $\mathrm{M}_{g,n}$ over a finite field $\mathbb{F}_q$ is a polynomial in
-$q$. The first place where this fails is $\overline{\mathrm{M}}_{1,11}$, where
-the culprit is the Ramanujan $\tau$-function, the coefficients of the weight-12
-cusp form.&lt;/p&gt;
-&lt;p&gt;Both layers are transcribed from Hannah Larson&amp;rsquo;s recent survey
-&lt;a href=&#34;https://arxiv.org/abs/2606.29656&#34;&gt;arXiv:2606.29656&lt;/a&gt;, which collects the state
-of the art on precisely these questions. It is a wonderful read, and any errors
-in the transcription are of course mine.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;More on the Kodaira dimension.&lt;/strong&gt; Kodaira dimension $-\infty$ is only the
-coarsest sign that a moduli space is not of general type. The finer notions
-rational $\Rightarrow$ unirational $\Rightarrow$ rationally connected
-$\Rightarrow$ uniruled all imply it, and are now shown, as shaded blues, on the
-cells where the Kodaira dimension is $-\infty$. The baseline is Benzo&amp;rsquo;s 2014
-survey table, extended with the more recent results of Agostini–Barros,
-Keneshlou–Tanturri, and (for genus 11-15) Verra and Bruno–Verra.&lt;/p&gt;
-&lt;p&gt;Along the way each layer got its own URL, and clicking a cell now updates the
-address bar too, so you can link straight to a single entry like
-&lt;a href=&#34;https://mgnbar.info/tautological/#9,4&#34;&gt;mgnbar.info/tautological/#9,4&lt;/a&gt;. There is
-a small &lt;a href=&#34;https://mgnbar.info/about/&#34;&gt;about page&lt;/a&gt; explaining how to cite the
-website, and, as with my other websites, Mgnbar.info is now a static site built
-with &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt;. I&amp;rsquo;m a big fan of Hugo nowadays, can you tell?&lt;/p&gt;
-&lt;p&gt;Suggestions and corrections are very welcome, on
-&lt;a href=&#34;https://github.com/pbelmans/mgnbar/issues&#34;&gt;GitHub&lt;/a&gt; or by email.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;LLMs were used to build this, which made the whole process &lt;em&gt;much&lt;/em&gt; faster.&lt;/p&gt;
-</description>
-      <pubDate>Thu, 09 Jul 2026 00:00:00 &#43;0000</pubDate>
-      <link>https://pbelmans.ncag.info/blog/2026/07/09/mgnbar-update/</link>
-      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/07/09/mgnbar-update/</guid>
-      <category>moduli spaces</category><category>programming</category>
       <category>mathematics</category>
     </item>
     
