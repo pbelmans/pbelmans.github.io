@@ -51,7 +51,23 @@ The final ingredient for us is Proposition 4.5,
 which gives the isomorphism $\pi^*K\cong\mathcal{O}_H(1)$.
 We have now seen the main player for our observation.
 <p><strong>Claim</strong> <em>$\pi_*\mathcal{O}_H$ is exceptional.</em>
-<p><em>Proof.</em>
+<p><ins>Whilst munching on my lunch, I realized that there is a shorter proof.</ins>
+<p><em>New and shorter proof.</em>
+Let us write $E=\pi_*\mathcal{O}_H$.
+We have, using that $\pi$ is both finite and flat, that
+\[
+  \mathrm{Ext}_X^\bullet(E,E)
+  =\mathrm{Ext}_X^\bullet(E,\pi_*\mathcal{O}_H)
+  \cong\mathrm{Ext}_H^\bullet(\pi^*E,\mathcal{O}_H)
+  \cong\mathrm{Ext}_H^\bullet(\mathcal{O}_H,\pi^*E^\vee).
+\]
+The long exact sequence in cohomology attached to the dual of the sequence defining $E$
+pulled back to $H$ (again using that $\pi$ is flat),
+together with $\mathrm{H}^\bullet(H,\mathcal{O}_H)\cong\overline{\mathbb{F}}_2[0]$
+and $\mathrm{H}^\bullet(H,\mathcal{O}_H(-1))=0$
+(using that $H$ is a complete intersection)
+gives us the sought-after exceptionality.<span style="float:right">$\square$</span>
+<small><p><em>Original proof.</em>
 Let us write $E=\pi_*\mathcal{O}_H$.
 Because $E$ has rank two,
 we have
@@ -83,7 +99,7 @@ and we thus get
 \[
   \mathrm{H}^\bullet(X,E^\vee\otimes E)\cong\overline{\mathbb{F}}_2[0],
 \]
-which proves the claim. <span style="float:right">$\square$</span>
+which proves the claim. <span style="float:right">$\square$</span></small>
 <p>Hence, we have
 \[
   \mathbf{D}^{\mathrm{b}}(X)
@@ -94,6 +110,7 @@ where $E^\perp=\{F\in\mathbf{D}^{\mathrm{b}}(X)\mid\mathbf{R}\mathrm{Hom}(E,F)=0
 Note that,
 by the acyclicity used above,
 we have $\mathcal{O}_X\in E^\perp$.
+
 <h3>Questions</h3>
 <p>I need to start preparing my lecture for next week,
 so I'm leaving you (and myself) with the following questions:
