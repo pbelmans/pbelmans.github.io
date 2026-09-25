@@ -5,8 +5,8 @@
     <description></description>
     <link>https://pbelmans.ncag.info/</link>
     <atom:link href="https://pbelmans.ncag.info/blog/feed/" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 25 Sep 2026 08:26:35 &#43;0000</pubDate>
-    <lastBuildDate>Fri, 25 Sep 2026 08:26:35 &#43;0000</lastBuildDate>
+    <pubDate>Fri, 25 Sep 2026 11:02:12 &#43;0000</pubDate>
+    <lastBuildDate>Fri, 25 Sep 2026 11:02:12 &#43;0000</lastBuildDate>
     <generator>Hugo</generator>
     
     <item>
@@ -54,7 +54,23 @@ The final ingredient for us is Proposition 4.5,
 which gives the isomorphism $\pi^*K\cong\mathcal{O}_H(1)$.
 We have now seen the main player for our observation.
 &lt;p&gt;&lt;strong&gt;Claim&lt;/strong&gt; &lt;em&gt;$\pi_*\mathcal{O}_H$ is exceptional.&lt;/em&gt;
-&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt;
+&lt;p&gt;&lt;ins&gt;Whilst munching on my lunch, I realized that there is a shorter proof.&lt;/ins&gt;
+&lt;p&gt;&lt;em&gt;New and shorter proof.&lt;/em&gt;
+Let us write $E=\pi_*\mathcal{O}_H$.
+We have, using that $\pi$ is both finite and flat, that
+\[
+  \mathrm{Ext}_X^\bullet(E,E)
+  =\mathrm{Ext}_X^\bullet(E,\pi_*\mathcal{O}_H)
+  \cong\mathrm{Ext}_H^\bullet(\pi^*E,\mathcal{O}_H)
+  \cong\mathrm{Ext}_H^\bullet(\mathcal{O}_H,\pi^*E^\vee).
+\]
+The long exact sequence in cohomology attached to the dual of the sequence defining $E$
+pulled back to $H$ (again using that $\pi$ is flat),
+together with $\mathrm{H}^\bullet(H,\mathcal{O}_H)\cong\overline{\mathbb{F}}_2[0]$
+and $\mathrm{H}^\bullet(H,\mathcal{O}_H(-1))=0$
+(using that $H$ is a complete intersection)
+gives us the sought-after exceptionality.&lt;span style=&#34;float:right&#34;&gt;$\square$&lt;/span&gt;
+&lt;small&gt;&lt;p&gt;&lt;em&gt;Original proof.&lt;/em&gt;
 Let us write $E=\pi_*\mathcal{O}_H$.
 Because $E$ has rank two,
 we have
@@ -86,7 +102,7 @@ and we thus get
 \[
   \mathrm{H}^\bullet(X,E^\vee\otimes E)\cong\overline{\mathbb{F}}_2[0],
 \]
-which proves the claim. &lt;span style=&#34;float:right&#34;&gt;$\square$&lt;/span&gt;
+which proves the claim. &lt;span style=&#34;float:right&#34;&gt;$\square$&lt;/span&gt;&lt;/small&gt;
 &lt;p&gt;Hence, we have
 \[
   \mathbf{D}^{\mathrm{b}}(X)
@@ -97,6 +113,7 @@ where $E^\perp=\{F\in\mathbf{D}^{\mathrm{b}}(X)\mid\mathbf{R}\mathrm{Hom}(E,F)=0
 Note that,
 by the acyclicity used above,
 we have $\mathcal{O}_X\in E^\perp$.
+
 &lt;h3&gt;Questions&lt;/h3&gt;
 &lt;p&gt;I need to start preparing my lecture for next week,
 so I&#39;m leaving you (and myself) with the following questions:
