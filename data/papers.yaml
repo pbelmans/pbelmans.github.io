@@ -425,7 +425,12 @@ appendices:
       - reineke
     arxiv: 2509.01101v2
     comment: 'appendix to <span class="font-weight: 500">A-D-E diagrams, Hodge&ndash;Tate hyperplane sections and semisimple quantum cohomology</span>, by Sergey Galkin, Naichung Conan Leung, Changzheng Li, and Rui Xiong'
-    pdf: https://pbelmans.ncag.info/assets/appendix-non-semisimple-kronecker-moduli.pdf
+    pdf: /assets/appendix-non-semisimple-kronecker-moduli.pdf
+
+  - title: "An effective expression for the decomposition of Fano schemes of intersections of two quadrics"
+    arxiv: 2609.36233v1
+    comment: 'appendix to <span class="font-weight: 500">Motivic classes of Fano schemes of lines on intersections of two quadrics</span>, by Lena Ji and Fumiaki Suzuki'
+    pdf: /assets/appendix-fano-scheme-effectivity.pdf
 
 
 ai:
