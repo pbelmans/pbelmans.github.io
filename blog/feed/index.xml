@@ -5,9 +5,294 @@
     <description></description>
     <link>https://pbelmans.ncag.info/</link>
     <atom:link href="https://pbelmans.ncag.info/blog/feed/" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 30 Sep 2026 07:21:55 &#43;0000</pubDate>
-    <lastBuildDate>Wed, 30 Sep 2026 07:21:55 &#43;0000</lastBuildDate>
+    <pubDate>Fri, 02 Oct 2026 13:50:34 &#43;0000</pubDate>
+    <lastBuildDate>Fri, 02 Oct 2026 13:50:34 &#43;0000</lastBuildDate>
     <generator>Hugo</generator>
+    
+    <item>
+      <title>New appendix: An effective expression for the decomposition of Fano schemes of intersections of two quadrics</title>
+      <description>
+&lt;p&gt;This post concerns
+ &lt;strong&gt;&lt;a href=&#34;https://pbelmans.ncag.info/assets/appendix-fano-scheme-effectivity.pdf&#34;&gt;the appendix&lt;/a&gt;&lt;/strong&gt;
+(in its standalone version, written by me)
+to &lt;a href=&#34;https://arxiv.org/abs/2609.36233&#34;&gt;Lena Ji and Fumiaki Suzuki&#39;s paper on motivic classes of Fano schemes of lines&lt;/a&gt;.
+&lt;br&gt;
+
+&lt;p&gt;A few years ago we wrote a paper on
+&lt;a href=&#34;https://arxiv.org/abs/2403.12517&#34;&gt;decompositions of Fano schemes of linear subspaces on intersections of two quadrics&lt;/a&gt;.
+For&amp;nbsp;$g\ge 2$ and&amp;nbsp;$0\le k\le g-2$,
+consider a smooth intersection&amp;nbsp;$Q_1\cap Q_2\subset\mathbb{P}^{2g+1}$
+with associated hyperelliptic curve&amp;nbsp;$C$.
+One of our conjectures predicts the following identity in&amp;nbsp;$\mathrm{K}_0(\mathrm{Var})$:
+\begin{equation}
+[\mathrm{F}_k(Q_1\cap Q_2)]
+=
+\sum_{i=0}^{k+1}\mathrm{M}_{g,k,i}(\mathbb{L})[\operatorname{Sym}^i C],
+\end{equation}
+where
+&lt;ul&gt;
+  &lt;li&gt;$\mathbb{L}=[\mathbb{A}^1]$,
+  &lt;li&gt;$\operatorname{Sym}^i C$ is the&amp;nbsp;$i$th symmetric power of&amp;nbsp;$C$, and
+  &lt;li&gt;for&amp;nbsp;$0\le i\le k+1$,
+    the coefficient is
+    \begin{equation}
+      \begin{aligned}
+        \mathrm{M}_{g,k,i}(\mathbb{L})
+        ={}&amp;\mathbb{L}^{i(g-k-1)}\Biggl(
+        \binom{2g-k-i}{k+1-i}_{\mathbb{L}}\\
+        &amp;-\bigl(\mathbb{L}^{g-k-1}+\mathbb{L}^{g+2k-3i}\bigr)
+        \binom{2g-k-i-4}{k-i}_{\mathbb{L}}\\
+        &amp;-\bigl(
+        \mathbb{L}^{g-k}+\mathbb{L}^{g-i}+\mathbb{L}^{g+k-2i}
+        +\mathbb{L}^{3g-3k-4}+\mathbb{L}^{3g-2k-i-4}+\mathbb{L}^{3g-k-2i-4}
+        \bigr)\binom{2g-k-i-4}{k-i-1}_{\mathbb{L}}\\
+        &amp;-\bigl(
+        \mathbb{L}^{3(g-k-1)}+\mathbb{L}^{3(g-k-1)+1}
+        +\mathbb{L}^{3g-2k-i-3}+\mathbb{L}^{3g-2k-i-2}
+        \bigr)\binom{2g-k-i-4}{k-i-2}_{\mathbb{L}}\\
+        &amp;-\mathbb{L}^{4(g-k)-2}
+        \binom{2g-k-i-4}{k-i-3}_{\mathbb{L}}
+        \Biggr).
+      \end{aligned}
+    \end{equation}
+&lt;/ul&gt;
+Here the subscript&amp;nbsp;$\mathbb{L}$ denotes a Gaussian binomial coefficient,
+which is zero when its lower index is negative or exceeds the upper index.
+&lt;p&gt;Important for today&#39;s post is
+that we also conjectured that these polynomials are &lt;em&gt;effective&lt;/em&gt;:
+their coefficients are nonnegative.
+&lt;p&gt;Last year,
+&lt;a href=&#34;https://improofbench.math.ethz.ch/&#34;&gt;IMProofBench&lt;/a&gt;
+was looking for interesting benchmark problems
+(oh, the times have changed)
+and I submitted this effectivity question as something that
+seemed to require expertise beyond what I had in store.
+I did try to solve it myself for some time,
+but none of my (admittedly limited) bag of tricks seemed to work,
+a fact related to me not being a combinatorialist.
+&lt;p&gt;The first attempts by LLMs as part of IMProofBench were utter nonsense.
+However, back in March 2026,
+one LLM managed to produce what looked like a correct proof (reproduced below),
+using an interesting new ingredient!
+When I finally had a look at it in June,
+I wrote up a more human-readable version of the proof,
+at the very least for my own sake to verify the argument.
+I shared it with a few people back then,
+but didn&#39;t settle on what to do with it.
+&lt;p&gt;However,
+when Lena (and Fumiaki) reached out about a preprint they had been working on
+which proves our full conjecture for&amp;nbsp;$k=1$,
+we agreed that it would be good if the LLM-proof of the effectivity conjecture
+became an appendix,
+so that others can use the effectivity part.
+I rewrote the existing writeup,
+making sure that its exposition was as good as I could make it,
+and it is now available as an &lt;a href=&#34;https://pbelmans.ncag.info/assets/appendix-fano-scheme-effectivity.pdf&#34;&gt;appendix&lt;/a&gt; (the link is to an independent PDF)
+to &lt;a href=&#34;https://arxiv.org/abs/2609.36233&#34;&gt;Lena Ji and Fumiaki Suzuki&#39;s paper on motivic classes of Fano schemes of lines&lt;/a&gt;.
+The appendix proves effectivity for all the polynomials in the conjecture;
+the motivic identity itself remains conjectural in general.
+
+&lt;h3&gt;The original answer&lt;/h3&gt;
+&lt;p&gt;For full disclosure,
+here is the original LLM-proof of the conjecture.
+I can imagine that for some mathematicians,
+this abbreviated and terse proof is enough.
+However, if the goal is that &lt;em&gt;I&lt;/em&gt;
+(and maybe other non-combinatorialists)
+understand what&#39;s going on,
+I do think (and hope) that
+&lt;a href=&#34;https://pbelmans.ncag.info/assets/appendix-fano-scheme-effectivity.pdf&#34;&gt;my writeup&lt;/a&gt;
+is more useful.
+&lt;blockquote style=&#34;font-style: normal;&#34;&gt;
+
+&lt;p&gt;Let&amp;nbsp;$a=g-k-1\ge 1$ and&amp;nbsp;$m=k-i\in\{-1,0,\dots,k\}$.
+The polynomial from the conjecture can then be written as
+
+\begin{equation}
+M_{g,k,i}(t)=t^{ia}B_{a,m}(t),
+\end{equation}
+
+where&amp;nbsp;$B_{a,m}(t)$ is the following expression in&amp;nbsp;$a$ and&amp;nbsp;$m$:
+
+\begin{equation}
+\begin{aligned}
+B_{a,m}(t)={}&amp;\binom{2a+m+2}{m+1}_t
+-(t^a+t^{a+1+3m})\binom{2a+m-2}{m}_t\\
+&amp;-(t^{a+1}+t^{a+1+m}+t^{a+1+2m}+t^{3a-1}+t^{3a-1+m}+t^{3a-1+2m})\binom{2a+m-2}{m-1}_t\\
+&amp;-(t^{3a}+t^{3a+1}+t^{3a+m}+t^{3a+m+1})\binom{2a+m-2}{m-2}_t
+-t^{4a+2}\binom{2a+m-2}{m-3}_t.
+\end{aligned}
+\end{equation}
+
+&lt;p&gt;Here&amp;nbsp;$\binom{n}{r}_t$ is the Gaussian binomial coefficient,
+taken to be zero for&amp;nbsp;$r&lt;0$ or&amp;nbsp;$r&gt;n$.
+It is enough to prove that&amp;nbsp;$B_{a,m}(t)\in\mathbb{Z}_{\ge 0}[t]$
+for all&amp;nbsp;$a\ge 1$ and&amp;nbsp;$m\ge -1$.
+
+&lt;h4&gt;1. Generating function of&amp;nbsp;$B_{a,m}$&lt;/h4&gt;
+
+&lt;p&gt;Write
+
+\begin{equation}
+(x;t)_n:=\prod_{r=0}^{n-1}(1-t^r x).
+\end{equation}
+
+&lt;p&gt;We use the standard Gaussian binomial generating series
+
+\begin{equation}
+\sum_{r\ge 0}\binom{n+r}{r}_t y^r=\frac1{(y;t)_{n+1}} \qquad (n\ge 0).
+\end{equation}
+
+&lt;p&gt;Define
+
+\begin{equation}
+F_a(x):=\sum_{m\ge -1} B_{a,m}(t)x^{m+1}.
+\end{equation}
+
+&lt;p&gt;Applying the above identity term by term gives
+
+\begin{equation}
+\begin{aligned}
+F_a(x)={}&amp;\frac1{(x;t)_{2a+2}}
+-\frac{t^a x}{(x;t)_{2a-1}}
+-\frac{t^{a+1}x}{(t^3x;t)_{2a-1}}\\
+&amp;-x^2\left(
+\frac{t^{a+1}+t^{3a-1}}{(x;t)_{2a}}
++\frac{t^{a+2}+t^{3a}}{(tx;t)_{2a}}
++\frac{t^{a+3}+t^{3a+1}}{(t^2x;t)_{2a}}
+\right)\\
+&amp;-x^3\left(
+\frac{t^{3a}+t^{3a+1}}{(x;t)_{2a+1}}
++\frac{t^{3a+2}+t^{3a+3}}{(tx;t)_{2a+1}}
+\right)
+-\frac{t^{4a+2}x^4}{(x;t)_{2a+2}}.
+\end{aligned}
+\end{equation}
+
+&lt;p&gt;Now multiply by&amp;nbsp;$(x;t)_{2a+2}$.
+Using the quotient identities
+
+\begin{equation}
+\frac{(x;t)_{2a+2}}{(x;t)_{2a-1}}=(1-t^{2a-1}x)(1-t^{2a}x)(1-t^{2a+1}x),
+\end{equation}
+\begin{equation}
+\frac{(x;t)_{2a+2}}{(t^3x;t)_{2a-1}}=(1-x)(1-tx)(1-t^2x),
+\end{equation}
+\begin{equation}
+\frac{(x;t)_{2a+2}}{(x;t)_{2a}}=(1-t^{2a}x)(1-t^{2a+1}x),
+\quad
+\frac{(x;t)_{2a+2}}{(tx;t)_{2a}}=(1-x)(1-t^{2a+1}x),
+\end{equation}
+\begin{equation}
+\frac{(x;t)_{2a+2}}{(t^2x;t)_{2a}}=(1-x)(1-tx),
+\quad
+\frac{(x;t)_{2a+2}}{(x;t)_{2a+1}}=1-t^{2a+1}x,
+\quad
+\frac{(x;t)_{2a+2}}{(tx;t)_{2a+1}}=1-x,
+\end{equation}
+
+&lt;p&gt;and collecting coefficients of&amp;nbsp;$x^0,x^1,x^2,x^3,x^4$,
+one gets
+
+\begin{equation}
+(x;t)_{2a+2}F_a(x)
+=(1-t^a x)(1-t^{a+1}x)(1-t^{2a+1}x^2).
+\end{equation}
+
+&lt;p&gt;Hence
+
+\begin{equation}
+F_a(x)
+=\frac{(1-t^a x)(1-t^{a+1}x)(1-t^{2a+1}x^2)}{(x;t)_{2a+2}}
+=\frac{1-t^{2a+1}x^2}{(x;t)_a\,(t^{a+2}x;t)_a}.
+\end{equation}
+
+&lt;p&gt;So we have proved the compact identity
+
+\begin{equation}
+\sum_{m\ge -1} B_{a,m}(t)x^{m+1}
+=\frac{1-t^{2a+1}x^2}{(x;t)_a\,(t^{a+2}x;t)_a}.
+\end{equation}
+
+&lt;h4&gt;2. Manifestly effective form&lt;/h4&gt;
+
+&lt;p&gt;Now use the elementary decomposition
+
+\begin{equation}
+1-t^{2a+1}x^2=(1-t^{a-1}x)+t^{a-1}x(1-t^{a+2}x).
+\end{equation}
+
+&lt;p&gt;Substituting this into the previous formula gives
+
+\begin{equation}
+F_a(x)
+=\frac{1}{(x;t)_{a-1}(t^{a+2}x;t)_a}
++\frac{t^{a-1}x}{(x;t)_a(t^{a+3}x;t)_{a-1}}.
+\end{equation}
+
+&lt;p&gt;This is manifestly positive, because every factor
+
+\begin{equation}
+\frac1{1-t^j x}=\sum_{r\ge 0} t^{jr}x^r
+\end{equation}
+
+&lt;p&gt;has coefficients in&amp;nbsp;$\mathbb{Z}_{\ge 0}[t]$,
+so both summands lie in&amp;nbsp;$\mathbb{Z}_{\ge 0}[t][[x]]$.
+Therefore every coefficient of&amp;nbsp;$F_a(x)$,
+and hence every&amp;nbsp;$B_{a,m}(t)$,
+lies in&amp;nbsp;$\mathbb{Z}_{\ge 0}[t]$.
+Since&amp;nbsp;$M_{g,k,i}(t)=t^{ia}B_{a,m}(t)$ is a monomial multiple,
+its coefficients are nonnegative as well.
+
+&lt;h4&gt;3. The final formula in the original variables&lt;/h4&gt;
+
+&lt;p&gt;Returning to&amp;nbsp;$a=g-k-1$ and&amp;nbsp;$m=k-i$,
+we obtain
+
+\begin{equation}
+\begin{aligned}
+M_{g,k,i}(t)
+=t^{i(g-k-1)}[x^{k+1-i}]\Biggl(&amp;
+\prod_{j=0}^{g-k-3}\frac1{1-t^j x}
+\prod_{j=g-k+1}^{2g-2k-1}\frac1{1-t^j x}\\
+&amp;+t^{g-k-2}x
+\prod_{j=0}^{g-k-2}\frac1{1-t^j x}
+\prod_{j=g-k+2}^{2g-2k-1}\frac1{1-t^j x}
+\Biggr),
+\end{aligned}
+\end{equation}
+
+&lt;p&gt;An empty product equals&amp;nbsp;$1$.
+The formula makes effectivity explicit.
+
+&lt;p&gt;Equivalently, if&amp;nbsp;$h_r$ denotes the complete homogeneous symmetric polynomial,
+then
+
+\begin{equation}
+\begin{aligned}
+M_{g,k,i}(t)=t^{i(g-k-1)}\Bigl(
+&amp;h_{k+1-i}(1,t,\dots,t^{g-k-3},t^{g-k+1},\dots,t^{2g-2k-1})\\
+&amp;+t^{g-k-2}
+ h_{k-i}(1,t,\dots,t^{g-k-2},t^{g-k+2},\dots,t^{2g-2k-1})
+\Bigr),
+\end{aligned}
+\end{equation}
+
+&lt;p&gt;Empty ranges are omitted,
+and&amp;nbsp;$h_r=0$ for&amp;nbsp;$r&lt;0$.
+Each&amp;nbsp;$h_r$ is a sum of monomials with nonnegative integer coefficients.
+Thus&amp;nbsp;$M_{g,k,i}(t)$ is effective for all&amp;nbsp;$g\ge 2$,
+&amp;nbsp;$0\le k\le g-2$,
+and&amp;nbsp;$0\le i\le k+1$.
+
+&lt;/blockquote&gt;
+</description>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 &#43;0000</pubDate>
+      <link>https://pbelmans.ncag.info/blog/2026/10/02/fano-scheme-effectivity/</link>
+      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/10/02/fano-scheme-effectivity/</guid>
+      
+      <category>mathematics</category>
+    </item>
     
     <item>
       <title>An exceptional object for the irregular Waldron--Witaszek Fano fourfold</title>
@@ -732,30 +1017,6 @@ If you know a surface that belongs on the map, it is easy to add.&lt;/p&gt;
       <link>https://pbelmans.ncag.info/blog/2026/07/12/superficie-update/</link>
       <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/07/12/superficie-update/</guid>
       <category>algebraic geometry</category><category>programming</category>
-      <category>mathematics</category>
-    </item>
-    
-    <item>
-      <title>DOIs for my websites</title>
-      <description>
-&lt;p&gt;Some quick housekeeping: several of my websites now have a
-&lt;a href=&#34;https://zenodo.org&#34;&gt;Zenodo&lt;/a&gt; DOI, so they are easier to cite.
-This currently covers
-&lt;a href=&#34;https://fanography.info&#34;&gt;fanography.info&lt;/a&gt;,
-&lt;a href=&#34;https://grassmannian.info&#34;&gt;grassmannian.info&lt;/a&gt;,
-&lt;a href=&#34;https://hyperkaehler.info&#34;&gt;hyperkaehler.info&lt;/a&gt; and
-&lt;a href=&#34;https://mgnbar.info&#34;&gt;mgnbar.info&lt;/a&gt;,
-with more to follow.
-Each site&#39;s &#34;how to cite&#34; section now lists the DOI,
-and I use the version-independent one, so it always resolves to the latest release.
-
-&lt;p&gt;If you use any of these in your work, please do cite them:
-it helps me explain to the people who fund my work that building these things is useful.
-</description>
-      <pubDate>Fri, 10 Jul 2026 00:00:00 &#43;0000</pubDate>
-      <link>https://pbelmans.ncag.info/blog/2026/07/10/dois-for-my-websites/</link>
-      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/07/10/dois-for-my-websites/</guid>
-      <category>programming</category>
       <category>mathematics</category>
     </item>
     
