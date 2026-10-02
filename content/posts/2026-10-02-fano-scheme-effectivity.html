@@ -1,0 +1,286 @@
+---
+date: 2026-10-02
+slug: fano-scheme-effectivity
+title: "New appendix: An effective expression for the decomposition of Fano schemes of intersections of two quadrics"
+mathjax: true
+type: post
+categories:
+- mathematics
+tags:
+author: Pieter Belmans
+---
+
+<p>This post concerns
+ <strong><a href="/assets/appendix-fano-scheme-effectivity.pdf">the appendix</a></strong>
+(in its standalone version, written by me)
+to <a href="https://arxiv.org/abs/2609.36233">Lena Ji and Fumiaki Suzuki's paper on motivic classes of Fano schemes of lines</a>.
+<br>
+
+<p>A few years ago we wrote a paper on
+<a href="https://arxiv.org/abs/2403.12517">decompositions of Fano schemes of linear subspaces on intersections of two quadrics</a>.
+For&nbsp;$g\ge 2$ and&nbsp;$0\le k\le g-2$,
+consider a smooth intersection&nbsp;$Q_1\cap Q_2\subset\mathbb{P}^{2g+1}$
+with associated hyperelliptic curve&nbsp;$C$.
+One of our conjectures predicts the following identity in&nbsp;$\mathrm{K}_0(\mathrm{Var})$:
+\begin{equation}
+[\mathrm{F}_k(Q_1\cap Q_2)]
+=
+\sum_{i=0}^{k+1}\mathrm{M}_{g,k,i}(\mathbb{L})[\operatorname{Sym}^i C],
+\end{equation}
+where
+<ul>
+  <li>$\mathbb{L}=[\mathbb{A}^1]$,
+  <li>$\operatorname{Sym}^i C$ is the&nbsp;$i$th symmetric power of&nbsp;$C$, and
+  <li>for&nbsp;$0\le i\le k+1$,
+    the coefficient is
+    \begin{equation}
+      \begin{aligned}
+        \mathrm{M}_{g,k,i}(\mathbb{L})
+        ={}&\mathbb{L}^{i(g-k-1)}\Biggl(
+        \binom{2g-k-i}{k+1-i}_{\mathbb{L}}\\
+        &-\bigl(\mathbb{L}^{g-k-1}+\mathbb{L}^{g+2k-3i}\bigr)
+        \binom{2g-k-i-4}{k-i}_{\mathbb{L}}\\
+        &-\bigl(
+        \mathbb{L}^{g-k}+\mathbb{L}^{g-i}+\mathbb{L}^{g+k-2i}
+        +\mathbb{L}^{3g-3k-4}+\mathbb{L}^{3g-2k-i-4}+\mathbb{L}^{3g-k-2i-4}
+        \bigr)\binom{2g-k-i-4}{k-i-1}_{\mathbb{L}}\\
+        &-\bigl(
+        \mathbb{L}^{3(g-k-1)}+\mathbb{L}^{3(g-k-1)+1}
+        +\mathbb{L}^{3g-2k-i-3}+\mathbb{L}^{3g-2k-i-2}
+        \bigr)\binom{2g-k-i-4}{k-i-2}_{\mathbb{L}}\\
+        &-\mathbb{L}^{4(g-k)-2}
+        \binom{2g-k-i-4}{k-i-3}_{\mathbb{L}}
+        \Biggr).
+      \end{aligned}
+    \end{equation}
+</ul>
+Here the subscript&nbsp;$\mathbb{L}$ denotes a Gaussian binomial coefficient,
+which is zero when its lower index is negative or exceeds the upper index.
+<p>Important for today's post is
+that we also conjectured that these polynomials are <em>effective</em>:
+their coefficients are nonnegative.
+<p>Last year,
+<a href="https://improofbench.math.ethz.ch/">IMProofBench</a>
+was looking for interesting benchmark problems
+(oh, the times have changed)
+and I submitted this effectivity question as something that
+seemed to require expertise beyond what I had in store.
+I did try to solve it myself for some time,
+but none of my (admittedly limited) bag of tricks seemed to work,
+a fact related to me not being a combinatorialist.
+<p>The first attempts by LLMs as part of IMProofBench were utter nonsense.
+However, back in March 2026,
+one LLM managed to produce what looked like a correct proof (reproduced below),
+using an interesting new ingredient!
+When I finally had a look at it in June,
+I wrote up a more human-readable version of the proof,
+at the very least for my own sake to verify the argument.
+I shared it with a few people back then,
+but didn't settle on what to do with it.
+<p>However,
+when Lena (and Fumiaki) reached out about a preprint they had been working on
+which proves our full conjecture for&nbsp;$k=1$,
+we agreed that it would be good if the LLM-proof of the effectivity conjecture
+became an appendix,
+so that others can use the effectivity part.
+I rewrote the existing writeup,
+making sure that its exposition was as good as I could make it,
+and it is now available as an <a href="/assets/appendix-fano-scheme-effectivity.pdf">appendix</a> (the link is to an independent PDF)
+to <a href="https://arxiv.org/abs/2609.36233">Lena Ji and Fumiaki Suzuki's paper on motivic classes of Fano schemes of lines</a>.
+The appendix proves effectivity for all the polynomials in the conjecture;
+the motivic identity itself remains conjectural in general.
+
+<h3>The original answer</h3>
+<p>For full disclosure,
+here is the original LLM-proof of the conjecture.
+I can imagine that for some mathematicians,
+this abbreviated and terse proof is enough.
+However, if the goal is that <em>I</em>
+(and maybe other non-combinatorialists)
+understand what's going on,
+I do think (and hope) that
+<a href="/assets/appendix-fano-scheme-effectivity.pdf">my writeup</a>
+is more useful.
+<blockquote style="font-style: normal;">
+
+<p>Let&nbsp;$a=g-k-1\ge 1$ and&nbsp;$m=k-i\in\{-1,0,\dots,k\}$.
+The polynomial from the conjecture can then be written as
+
+\begin{equation}
+M_{g,k,i}(t)=t^{ia}B_{a,m}(t),
+\end{equation}
+
+where&nbsp;$B_{a,m}(t)$ is the following expression in&nbsp;$a$ and&nbsp;$m$:
+
+\begin{equation}
+\begin{aligned}
+B_{a,m}(t)={}&\binom{2a+m+2}{m+1}_t
+-(t^a+t^{a+1+3m})\binom{2a+m-2}{m}_t\\
+&-(t^{a+1}+t^{a+1+m}+t^{a+1+2m}+t^{3a-1}+t^{3a-1+m}+t^{3a-1+2m})\binom{2a+m-2}{m-1}_t\\
+&-(t^{3a}+t^{3a+1}+t^{3a+m}+t^{3a+m+1})\binom{2a+m-2}{m-2}_t
+-t^{4a+2}\binom{2a+m-2}{m-3}_t.
+\end{aligned}
+\end{equation}
+
+<p>Here&nbsp;$\binom{n}{r}_t$ is the Gaussian binomial coefficient,
+taken to be zero for&nbsp;$r<0$ or&nbsp;$r>n$.
+It is enough to prove that&nbsp;$B_{a,m}(t)\in\mathbb{Z}_{\ge 0}[t]$
+for all&nbsp;$a\ge 1$ and&nbsp;$m\ge -1$.
+
+<h4>1. Generating function of&nbsp;$B_{a,m}$</h4>
+
+<p>Write
+
+\begin{equation}
+(x;t)_n:=\prod_{r=0}^{n-1}(1-t^r x).
+\end{equation}
+
+<p>We use the standard Gaussian binomial generating series
+
+\begin{equation}
+\sum_{r\ge 0}\binom{n+r}{r}_t y^r=\frac1{(y;t)_{n+1}} \qquad (n\ge 0).
+\end{equation}
+
+<p>Define
+
+\begin{equation}
+F_a(x):=\sum_{m\ge -1} B_{a,m}(t)x^{m+1}.
+\end{equation}
+
+<p>Applying the above identity term by term gives
+
+\begin{equation}
+\begin{aligned}
+F_a(x)={}&\frac1{(x;t)_{2a+2}}
+-\frac{t^a x}{(x;t)_{2a-1}}
+-\frac{t^{a+1}x}{(t^3x;t)_{2a-1}}\\
+&-x^2\left(
+\frac{t^{a+1}+t^{3a-1}}{(x;t)_{2a}}
++\frac{t^{a+2}+t^{3a}}{(tx;t)_{2a}}
++\frac{t^{a+3}+t^{3a+1}}{(t^2x;t)_{2a}}
+\right)\\
+&-x^3\left(
+\frac{t^{3a}+t^{3a+1}}{(x;t)_{2a+1}}
++\frac{t^{3a+2}+t^{3a+3}}{(tx;t)_{2a+1}}
+\right)
+-\frac{t^{4a+2}x^4}{(x;t)_{2a+2}}.
+\end{aligned}
+\end{equation}
+
+<p>Now multiply by&nbsp;$(x;t)_{2a+2}$.
+Using the quotient identities
+
+\begin{equation}
+\frac{(x;t)_{2a+2}}{(x;t)_{2a-1}}=(1-t^{2a-1}x)(1-t^{2a}x)(1-t^{2a+1}x),
+\end{equation}
+\begin{equation}
+\frac{(x;t)_{2a+2}}{(t^3x;t)_{2a-1}}=(1-x)(1-tx)(1-t^2x),
+\end{equation}
+\begin{equation}
+\frac{(x;t)_{2a+2}}{(x;t)_{2a}}=(1-t^{2a}x)(1-t^{2a+1}x),
+\quad
+\frac{(x;t)_{2a+2}}{(tx;t)_{2a}}=(1-x)(1-t^{2a+1}x),
+\end{equation}
+\begin{equation}
+\frac{(x;t)_{2a+2}}{(t^2x;t)_{2a}}=(1-x)(1-tx),
+\quad
+\frac{(x;t)_{2a+2}}{(x;t)_{2a+1}}=1-t^{2a+1}x,
+\quad
+\frac{(x;t)_{2a+2}}{(tx;t)_{2a+1}}=1-x,
+\end{equation}
+
+<p>and collecting coefficients of&nbsp;$x^0,x^1,x^2,x^3,x^4$,
+one gets
+
+\begin{equation}
+(x;t)_{2a+2}F_a(x)
+=(1-t^a x)(1-t^{a+1}x)(1-t^{2a+1}x^2).
+\end{equation}
+
+<p>Hence
+
+\begin{equation}
+F_a(x)
+=\frac{(1-t^a x)(1-t^{a+1}x)(1-t^{2a+1}x^2)}{(x;t)_{2a+2}}
+=\frac{1-t^{2a+1}x^2}{(x;t)_a\,(t^{a+2}x;t)_a}.
+\end{equation}
+
+<p>So we have proved the compact identity
+
+\begin{equation}
+\sum_{m\ge -1} B_{a,m}(t)x^{m+1}
+=\frac{1-t^{2a+1}x^2}{(x;t)_a\,(t^{a+2}x;t)_a}.
+\end{equation}
+
+<h4>2. Manifestly effective form</h4>
+
+<p>Now use the elementary decomposition
+
+\begin{equation}
+1-t^{2a+1}x^2=(1-t^{a-1}x)+t^{a-1}x(1-t^{a+2}x).
+\end{equation}
+
+<p>Substituting this into the previous formula gives
+
+\begin{equation}
+F_a(x)
+=\frac{1}{(x;t)_{a-1}(t^{a+2}x;t)_a}
++\frac{t^{a-1}x}{(x;t)_a(t^{a+3}x;t)_{a-1}}.
+\end{equation}
+
+<p>This is manifestly positive, because every factor
+
+\begin{equation}
+\frac1{1-t^j x}=\sum_{r\ge 0} t^{jr}x^r
+\end{equation}
+
+<p>has coefficients in&nbsp;$\mathbb{Z}_{\ge 0}[t]$,
+so both summands lie in&nbsp;$\mathbb{Z}_{\ge 0}[t][[x]]$.
+Therefore every coefficient of&nbsp;$F_a(x)$,
+and hence every&nbsp;$B_{a,m}(t)$,
+lies in&nbsp;$\mathbb{Z}_{\ge 0}[t]$.
+Since&nbsp;$M_{g,k,i}(t)=t^{ia}B_{a,m}(t)$ is a monomial multiple,
+its coefficients are nonnegative as well.
+
+<h4>3. The final formula in the original variables</h4>
+
+<p>Returning to&nbsp;$a=g-k-1$ and&nbsp;$m=k-i$,
+we obtain
+
+\begin{equation}
+\begin{aligned}
+M_{g,k,i}(t)
+=t^{i(g-k-1)}[x^{k+1-i}]\Biggl(&
+\prod_{j=0}^{g-k-3}\frac1{1-t^j x}
+\prod_{j=g-k+1}^{2g-2k-1}\frac1{1-t^j x}\\
+&+t^{g-k-2}x
+\prod_{j=0}^{g-k-2}\frac1{1-t^j x}
+\prod_{j=g-k+2}^{2g-2k-1}\frac1{1-t^j x}
+\Biggr),
+\end{aligned}
+\end{equation}
+
+<p>An empty product equals&nbsp;$1$.
+The formula makes effectivity explicit.
+
+<p>Equivalently, if&nbsp;$h_r$ denotes the complete homogeneous symmetric polynomial,
+then
+
+\begin{equation}
+\begin{aligned}
+M_{g,k,i}(t)=t^{i(g-k-1)}\Bigl(
+&h_{k+1-i}(1,t,\dots,t^{g-k-3},t^{g-k+1},\dots,t^{2g-2k-1})\\
+&+t^{g-k-2}
+ h_{k-i}(1,t,\dots,t^{g-k-2},t^{g-k+2},\dots,t^{2g-2k-1})
+\Bigr),
+\end{aligned}
+\end{equation}
+
+<p>Empty ranges are omitted,
+and&nbsp;$h_r=0$ for&nbsp;$r<0$.
+Each&nbsp;$h_r$ is a sum of monomials with nonnegative integer coefficients.
+Thus&nbsp;$M_{g,k,i}(t)$ is effective for all&nbsp;$g\ge 2$,
+&nbsp;$0\le k\le g-2$,
+and&nbsp;$0\le i\le k+1$.
+
+</blockquote>
