@@ -355,15 +355,15 @@ preprints:
     arxiv: "2607.12895"
     comment: 'see also the related repository <a href="https://github.com/pbelmans/FanoFourfoldSubspaceQuiverModuli.jl"><span style="font-family: monospace">FanoFourfoldSubspaceQuiverModuli.jl</span></a>'
 
-  - title: Ample stability implies rigidity for quiver moduli
-    coauthors:
-      - petrella
-
   - title: The hyperkähler period-index conjecture is false
     coauthors:
       - hotchkiss
     arxiv: "2608.09436"
 
+  - title: Ample stability implies rigidity for quiver moduli
+    coauthors:
+      - petrella
+    arxiv: "2610.03302"
 
 needingrevision:
   - title: Comparison of two constructions of noncommutative surfaces with exceptional collections of length 4

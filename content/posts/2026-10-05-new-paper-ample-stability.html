@@ -1,0 +1,65 @@
+---
+date: 2026-10-05
+slug: fano-scheme-effectivity
+title: "New paper: Ample stability implies rigidity for quiver moduli"
+mathjax: true
+type: post
+categories:
+- mathematics
+tags:
+author: Pieter Belmans
+---
+
+<p><a href="https://arxiv.org/abs/2610.03302"><strong>Ample stability implies rigidity for quiver moduli</strong></a>
+(with Gianni Petrella)
+is a new paper
+that gets rid of an annoying technical condition
+in our earlier paper <a href="https://doi.org/10.5802/jep.312">Rigidity and Schofield's partial tilting conjecture for quiver moduli</a>
+(and subsequent papers building on the vanising results in this paper).
+<p>Recall that, for a dimension vector $\mathbf{d}$ and a stability parameter $\theta$ with $\theta(\mathbf{d})=0$, we have the following three properties:
+<ol>
+  <li><em>Ample stability</em> means that the complement of the stable locus
+    in the space of representations of dimension $\mathbf{d}$
+    has codimension at least $2$.
+    In this case the moduli space has maximal Picard rank:
+    $\operatorname{rk}\operatorname{Pic}=\#Q_0-1$.</li>
+  <li>The <em>rigidity inequality</em> asks that,
+    for every nontrivial Harder–Narasimhan type $\mathbf{d}^*=(\mathbf{d}^1,\ldots,\mathbf{d}^\ell)$,
+    where $\mu(\mathbf{e})=\theta(\mathbf{e})/|\mathbf{e}|$ denotes the slope,
+    \[
+      \mu(\mathbf{d}^1)-\mu(\mathbf{d}^\ell)
+      \lt
+      \sum_{1\leq m\lt n\leq\ell}
+      \bigl(\mu(\mathbf{d}^m)-\mu(\mathbf{d}^n)\bigr)
+      \bigl(-\langle\mathbf{d}^m,\mathbf{d}^n\rangle\bigr).
+    \]
+    This is precisely what is needed to apply Teleman quantization
+    to the bundle $\mathcal{U}_i\otimes\mathcal{U}_j^\vee$.
+    We would like to be able to apply this as widely as possible!
+  <li><em>Strong ample stability</em> means that for every proper nonzero subdimension vector $\mathbf{e}$
+    with $\theta(\mathbf{e})>0$ we have $\langle\mathbf{e},\mathbf{d}-\mathbf{e}\rangle\leq -2$,
+    where $\langle-,-\rangle$ is the Euler form.
+    Strong ample stability implies ample stability,
+    and in fact also implies the rigidity inequalities.</li>
+</ol>
+
+<p>Thus, in the $\theta$-coprime setting, the previously known implications were
+\begin{equation}
+\text{ample stability}
+\Longleftarrow
+\text{rigidity inequality}
+\Longleftarrow
+\text{strong ample stability}.
+\end{equation}
+Our new paper proves the converse of the first implication:
+ample stability implies the rigidity inequality.
+Consequently, the vanishing results for universal bundles,
+Schofield's partial tilting conjecture,
+and rigidity of quiver moduli
+only require ample stability.
+
+<p>So from now on, strong ample stability is
+a useful explicit criterion to verify ample stability,
+but it (or the tedious to verify rigidity inequalities)
+is no longer needed to apply the results I like to apply.
+This brings me great relief!
