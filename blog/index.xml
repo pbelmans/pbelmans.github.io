@@ -6,8 +6,15 @@
     <description>Recent content in blog on Pieter Belmans</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 05 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://pbelmans.ncag.info/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fanobase: the type A beta release</title>
+      <link>https://pbelmans.ncag.info/blog/2026/11/02/fanobase-beta/</link>
+      <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2026/11/02/fanobase-beta/</guid>
+      <description>&lt;p&gt;As &lt;a href=&#34;https://pbelmans.ncag.info/blog/2018/10/15/fanography/&#34;&gt;previously&lt;/a&gt;&#xA;&lt;a href=&#34;https://pbelmans.ncag.info/blog/2021/09/01/hyperkaehler-info/&#34;&gt;established&lt;/a&gt;, I like&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;making websites&lt;/li&gt;&#xA;  &lt;li&gt;classification results&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;p&gt;Together with several collaborators, we&#39;ve just released a beta version of &lt;strong&gt;Fanobase&lt;/strong&gt;:&#xA;a database of Fano 4-folds constructed as zero loci on products of type A partial flag varieties.&lt;/p&gt;&#xA;&#xA;&lt;p style=&#34;font-size: 180%; text-align: center; margin: 1em 0&#34;&gt;&#xA;  &lt;a href=&#34;https://type-a.fanobase.net/&#34; style=&#34;display: inline-flex; align-items: center; gap: 0.35em&#34;&gt;&#xA;    &lt;img src=&#34;https://pbelmans.ncag.info/assets/favicon-fanobase.svg&#34; width=&#34;32&#34; height=&#34;32&#34; alt=&#34;&#34;&gt;&#xA;    &lt;strong&gt;type-a.fanobase.net&lt;/strong&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;For more on what we are doing, see the&#xA;&lt;a href=&#34;https://blog.fanobase.net/posts/fanobase-beta/&#34;&gt;&lt;strong&gt;announcement blogpost&lt;/strong&gt;&lt;/a&gt;.&#xA;This is very much work in progress:&#xA;we will be releasing more examples and data on a regular basis,&#xA;with updates on the &lt;a href=&#34;https://blog.fanobase.net/&#34;&gt;Fanobase blog&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>New paper: Ample stability implies rigidity for quiver moduli</title>
       <link>https://pbelmans.ncag.info/blog/2026/10/05/fano-scheme-effectivity/</link>
