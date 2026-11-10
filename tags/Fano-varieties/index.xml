@@ -6,8 +6,15 @@
     <description>Recent content in Fano Varieties on Pieter Belmans</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://pbelmans.ncag.info/tags/Fano-varieties/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fanobase: Fano Tuesday</title>
+      <link>https://pbelmans.ncag.info/blog/2026/11/10/fano-tuesday/</link>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2026/11/10/fano-tuesday/</guid>
+      <description>&lt;p&gt;We&#39;ve started &lt;strong&gt;Fano Tuesday&lt;/strong&gt;, a weekly series on the &lt;a href=&#34;https://blog.fanobase.net/&#34;&gt;Fanobase blog&lt;/a&gt;.&#xA;Each week, we&#39;ll discuss something interesting about one or more Fano fourfolds appearing in our project.&lt;/p&gt;&#xA;&#xA;&lt;p&gt;The &lt;a href=&#34;https://blog.fanobase.net/posts/fano-tuesday-fanobase-origin-story/&#34;&gt;first instalment&lt;/a&gt;&#xA;is about Küchle&#39;s list and how it inspired Fanobase.&#xA;In some sense, growing his list of 17 families to as many as possible&#xA;is precisely one of the goals of Fanobase.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Fanobase: the type A beta release</title>
       <link>https://pbelmans.ncag.info/blog/2026/11/02/fanobase-beta/</link>

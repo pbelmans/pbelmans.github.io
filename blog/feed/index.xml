@@ -5,9 +5,27 @@
     <description></description>
     <link>https://pbelmans.ncag.info/</link>
     <atom:link href="https://pbelmans.ncag.info/blog/feed/" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 02 Nov 2026 12:30:55 &#43;0000</pubDate>
-    <lastBuildDate>Mon, 02 Nov 2026 12:30:55 &#43;0000</lastBuildDate>
+    <pubDate>Tue, 10 Nov 2026 05:52:02 &#43;0000</pubDate>
+    <lastBuildDate>Tue, 10 Nov 2026 05:52:02 &#43;0000</lastBuildDate>
     <generator>Hugo</generator>
+    
+    <item>
+      <title>Fanobase: Fano Tuesday</title>
+      <description>
+&lt;p&gt;We&#39;ve started &lt;strong&gt;Fano Tuesday&lt;/strong&gt;, a weekly series on the &lt;a href=&#34;https://blog.fanobase.net/&#34;&gt;Fanobase blog&lt;/a&gt;.
+Each week, we&#39;ll discuss something interesting about one or more Fano fourfolds appearing in our project.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://blog.fanobase.net/posts/fano-tuesday-fanobase-origin-story/&#34;&gt;first instalment&lt;/a&gt;
+is about Küchle&#39;s list and how it inspired Fanobase.
+In some sense, growing his list of 17 families to as many as possible
+is precisely one of the goals of Fanobase.&lt;/p&gt;
+</description>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 &#43;0000</pubDate>
+      <link>https://pbelmans.ncag.info/blog/2026/11/10/fano-tuesday/</link>
+      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/11/10/fano-tuesday/</guid>
+      <category>fanobase</category><category>Fano varieties</category>
+      <category>mathematics</category>
+    </item>
     
     <item>
       <title>Fanobase: the type A beta release</title>
@@ -956,90 +974,6 @@ email.&lt;/p&gt;
       <link>https://pbelmans.ncag.info/blog/2026/07/21/hyperelliptic/</link>
       <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/07/21/hyperelliptic/</guid>
       <category>algebraic geometry</category><category>programming</category>
-      <category>mathematics</category>
-    </item>
-    
-    <item>
-      <title>New paper: Fano 4-fold quiver moduli from subspace quivers</title>
-      <description>
-&lt;p&gt;&lt;small&gt;Whilst it might look like I am hyperproductive these few weeks,
-with a new blogpost coming up almost every day about something I have done,
-I am mostly just putting things online that were finished before,
-in preparation of the summer holidays.&lt;/small&gt;
-
-&lt;p&gt;This post is about &lt;a href=&#34;https://arxiv.org/abs/2607.12895&#34;&gt;&lt;strong&gt;Fano 4-fold quiver moduli from subspace quivers&lt;/strong&gt;&lt;/a&gt;,
-a new paper joint with Markus Reineke.
-Let&#39;s discuss the origin story of this paper in a way that is not appropriate for the paper&#39;s introduction,
-but that is perfect for a blog post.
-
-&lt;h3&gt;Origin&lt;/h3&gt;
-&lt;p&gt;It all started from Laurent Manivel&#39;s &lt;a href=&#34;https://arxiv.org/abs/2211.16154&#34;&gt;A four-dimensional cousin of the Segre cubic&lt;/a&gt;.
-In this paper, he studies a Fano fourfold, defined as the zero locus of a vector bundle on the product of two Grassmannians.
-Looking at the properties he finds for this Fano fourfold,
-my mind was applying the &lt;a href=&#34;https://en.wikipedia.org/wiki/Duck_test&#34;&gt;duck test&lt;/a&gt; in the following form:
-&lt;blockquote&gt;
-  &lt;p&gt;If it looks like a quiver moduli space, swims like a quiver moduli space, and quacks like a quiver moduli space, then it probably &lt;em&gt;is&lt;/em&gt; a quiver moduli space.
-&lt;/blockquote&gt;
-&lt;p&gt;Quiver moduli are after all very special varieties: rational, Hodge&amp;ndash;Tate, rigid.
-Laurent&#39;s Segre cubic cousin had all these properties.
-Through its relation to the Segre cubic, I also quickly guessed the quiver and dimension vector that should do the trick:
-the 6-subspace quiver, and $\mathbf{d}=(1,1,1,1,1,2;3)$.
-However, I couldn&#39;t pin down an isomorphism.
-&lt;p&gt;Then in February &lt;a href=&#34;https://pbelmans.ncag.info/blog/2026/01/16/markus-events/&#34;&gt;Markus came to Utrecht as the Springer visiting chair&lt;/a&gt;.
-Markus realized there is actually a fun classification problem hiding here:
-which other subspace quivers give rise to Fano 4-folds?
-The reason to be interested in subspace quivers is that,
-besides their moduli spaces being rigid,
-their moduli spaces also have no infinitesimal automorphisms,
-making them extra special.
-&lt;p&gt;It turns out that up to natural identifications,
-there are precisely 4 such Fano 4-fold subspace quiver moduli:
-one being the (expected) Segre cousin,
-another being the Fano model of $\mathop{\rm Bl}_6\mathbb{P}^4$,
-which is also $(\mathbb{P}^1)^7//\mathrm{PGL}_2$,
-the moduli space of 7 points on $\mathbb{P}^1$ (let&#39;s not spell out stability).
-&lt;p&gt;The other two are also very interesting:
-one admits a natural map to $\mathbb{P}^2$,
-exhibiting it as something called an involution surface bundle
-(the first time I encountered one in the wild),
-and another which looks &lt;em&gt;a lot&lt;/em&gt; like the Segre cubic cousin.
-&lt;p&gt;And in the end, we also managed to prove that
-Manivel&#39;s Segre cubic cousin was indeed the subspace quiver moduli space
-we expected it to be all along.
-All&#39;s well that ends well.
-
-&lt;h3&gt;Working with quiver moduli&lt;/h3&gt;
-&lt;p&gt;What I like about this paper is that it is so very explicit with quiver moduli,
-and applies so many of the tools that have been developed for them.
-I consider it a bit of an advertisement,
-and I hope that it gets picked up by people who,
-a priori,
-would not work with quiver moduli,
-but now realize how useful this perspective can be!
-
-&lt;p&gt;Related to this is also the use of &lt;a href=&#34;https://quiver.tools&#34;&gt;QuiverTools&lt;/a&gt;,
-which makes it possible to compute many invariants of quiver moduli.
-For the 4 cases in this paper,
-the code is available as &lt;a href=&#34;https://github.com/pbelmans/FanoFourfoldSubspaceQuiverModuli.jl&#34;&gt;FanoFourfoldSubspaceQuiverModuli.jl&lt;/a&gt;.
-And the tools we have used in this paper
-were also the inspiration for some of the new features for QuiverTools,
-more about those later.
-
-&lt;p&gt;Note that the duck test for quiver moduli doesn&#39;t always work so well!
-We are also working on a paper that explains how well the duck test works for Fano 3-folds.
-Stay tuned for that.
-&lt;p&gt;Also note that there is another work-in-progress (don&#39;t expect either of them before the start of my summer break, though!)
-where we take the involution surface bundle Fano 4-fold subspace quiver moduli,
-and take its connection to the extended Dynkin quiver $\widetilde{\mathrm{D}}_4$,
-to find 5 infinite series of even-dimensional Fano varieties
-attached to extended Dynkin quivers,
-with lots of interesting properties.
-Stay tuned for that too!
-</description>
-      <pubDate>Wed, 15 Jul 2026 00:00:00 &#43;0000</pubDate>
-      <link>https://pbelmans.ncag.info/blog/2026/07/15/new-paper-subspace-quiver-moduli/</link>
-      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/07/15/new-paper-subspace-quiver-moduli/</guid>
-      <category>quivers</category><category>moduli spaces</category><category>algebraic geometry</category>
       <category>mathematics</category>
     </item>
     
