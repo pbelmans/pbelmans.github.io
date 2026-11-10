@@ -538,6 +538,27 @@ span.date {
     color: #777;
 }
 
+.aggregated-posts > li {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5em;
+
+    > .date {
+        flex-shrink: 0;
+    }
+
+    .post-favicon {
+        margin-right: 0.3em;
+    }
+}
+
+a.post-source {
+    display: inline-block;
+    color: $grey-color-dark;
+    font-size: $small-font-size;
+    white-space: nowrap;
+}
+
 
 /* taken from bootstrap */
 .pagination {
