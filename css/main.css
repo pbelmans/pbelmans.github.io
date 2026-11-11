@@ -353,6 +353,21 @@ span.date {
   text-align: right;
   color: #777; }
 
+.aggregated-posts > li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5em; }
+  .aggregated-posts > li > .date {
+    flex-shrink: 0; }
+  .aggregated-posts > li .post-favicon {
+    margin-right: 0.3em; }
+
+a.post-source {
+  display: inline-block;
+  color: #424242;
+  font-size: 12.25px;
+  white-space: nowrap; }
+
 /* taken from bootstrap */
 .pagination {
   display: inline-block;

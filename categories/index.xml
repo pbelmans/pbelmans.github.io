@@ -6,20 +6,20 @@
     <description>Recent content in Categories on Pieter Belmans</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://pbelmans.ncag.info/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Personal</title>
+      <link>https://pbelmans.ncag.info/categories/personal/</link>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/categories/personal/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Mathematics</title>
       <link>https://pbelmans.ncag.info/categories/mathematics/</link>
       <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <guid>https://pbelmans.ncag.info/categories/mathematics/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Personal</title>
-      <link>https://pbelmans.ncag.info/categories/personal/</link>
-      <pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://pbelmans.ncag.info/categories/personal/</guid>
       <description></description>
     </item>
     <item>

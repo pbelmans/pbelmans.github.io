@@ -6,8 +6,15 @@
     <description>Recent content in blog on Pieter Belmans</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://pbelmans.ncag.info/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Keeping up with HomogeneousTools and Fanobase</title>
+      <link>https://pbelmans.ncag.info/blog/2026/11/11/feed-aggregator/</link>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>https://pbelmans.ncag.info/blog/2026/11/11/feed-aggregator/</guid>
+      <description>&lt;p&gt;I have added a small feed aggregator to the &lt;a href=&#34;https://pbelmans.ncag.info/&#34;&gt;front page&lt;/a&gt;, under &amp;ldquo;Latest from other blogs&amp;rdquo;.&#xA;It brings together the latest posts from the &lt;a href=&#34;https://homogeneous.tools/blog/&#34;&gt;HomogeneousTools blog&lt;/a&gt;&#xA;and the &lt;a href=&#34;https://blog.fanobase.net/&#34;&gt;Fanobase blog&lt;/a&gt;.&#xA;Both are group blogs where I post regularly.&#xA;The aggregator includes posts by all contributors, with a favicon next to each title to indicate its origin.&#xA;For a taste of what is posted there, check out:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;&lt;a href=&#34;https://blog.fanobase.net/posts/fano-tuesday-fanobase-origin-story/&#34;&gt;&lt;img src=&#34;https://blog.fanobase.net/favicon.svg&#34; width=&#34;16&#34; height=&#34;16&#34; alt=&#34;&#34;&gt; Fano Tuesday: the origin story for Fanobase&lt;/a&gt; on Fanobase,&#xA;    about Küchle&#39;s 1995 list of Fano fourfolds&lt;/li&gt;&#xA;  &lt;li&gt;&lt;a href=&#34;https://homogeneous.tools/blog/2026/11/06/exceptional-collections-catalecticant-sixfold/&#34;&gt;&lt;img src=&#34;https://pbelmans.ncag.info/assets/favicon-homogeneoustools.svg&#34; width=&#34;16&#34; height=&#34;16&#34; alt=&#34;&#34;&gt; Exceptional collections on the catalecticant sixfold&lt;/a&gt; on HomogeneousTools,&#xA;    with computations inspired by &lt;a href=&#34;https://arxiv.org/abs/2611.07079&#34;&gt;Sasha Kuznetsov&#39;s recent preprint&lt;/a&gt;&lt;/li&gt;&#xA;  &lt;li&gt;&lt;a href=&#34;https://homogeneous.tools/blog/2026/06/04/representations-with-the-same-degree/&#34;&gt;&lt;img src=&#34;https://pbelmans.ncag.info/assets/favicon-homogeneoustools.svg&#34; width=&#34;16&#34; height=&#34;16&#34; alt=&#34;&#34;&gt; Representations with the same degree&lt;/a&gt; on HomogeneousTools&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;p&gt;I won&#39;t be announcing every post from these blogs here.&#xA;If you would like to keep up with everything, I highly recommend adding the&#xA;&lt;a href=&#34;https://homogeneous.tools/blog/index.xml&#34;&gt;HomogeneousTools RSS feed&lt;/a&gt;&#xA;and the &lt;a href=&#34;https://blog.fanobase.net/index.xml&#34;&gt;Fanobase RSS feed&lt;/a&gt; to your newsreader!&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Fanobase: Fano Tuesday</title>
       <link>https://pbelmans.ncag.info/blog/2026/11/10/fano-tuesday/</link>

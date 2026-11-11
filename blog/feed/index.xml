@@ -5,9 +5,38 @@
     <description></description>
     <link>https://pbelmans.ncag.info/</link>
     <atom:link href="https://pbelmans.ncag.info/blog/feed/" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 10 Nov 2026 05:52:02 &#43;0000</pubDate>
-    <lastBuildDate>Tue, 10 Nov 2026 05:52:02 &#43;0000</lastBuildDate>
+    <pubDate>Wed, 11 Nov 2026 09:17:44 &#43;0000</pubDate>
+    <lastBuildDate>Wed, 11 Nov 2026 09:17:44 &#43;0000</lastBuildDate>
     <generator>Hugo</generator>
+    
+    <item>
+      <title>Keeping up with HomogeneousTools and Fanobase</title>
+      <description>
+&lt;p&gt;I have added a small feed aggregator to the &lt;a href=&#34;https://pbelmans.ncag.info/&#34;&gt;front page&lt;/a&gt;, under &amp;ldquo;Latest from other blogs&amp;rdquo;.
+It brings together the latest posts from the &lt;a href=&#34;https://homogeneous.tools/blog/&#34;&gt;HomogeneousTools blog&lt;/a&gt;
+and the &lt;a href=&#34;https://blog.fanobase.net/&#34;&gt;Fanobase blog&lt;/a&gt;.
+Both are group blogs where I post regularly.
+The aggregator includes posts by all contributors, with a favicon next to each title to indicate its origin.
+For a taste of what is posted there, check out:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&#34;https://blog.fanobase.net/posts/fano-tuesday-fanobase-origin-story/&#34;&gt;&lt;img src=&#34;https://blog.fanobase.net/favicon.svg&#34; width=&#34;16&#34; height=&#34;16&#34; alt=&#34;&#34;&gt; Fano Tuesday: the origin story for Fanobase&lt;/a&gt; on Fanobase,
+    about Küchle&#39;s 1995 list of Fano fourfolds&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://homogeneous.tools/blog/2026/11/06/exceptional-collections-catalecticant-sixfold/&#34;&gt;&lt;img src=&#34;https://pbelmans.ncag.info/assets/favicon-homogeneoustools.svg&#34; width=&#34;16&#34; height=&#34;16&#34; alt=&#34;&#34;&gt; Exceptional collections on the catalecticant sixfold&lt;/a&gt; on HomogeneousTools,
+    with computations inspired by &lt;a href=&#34;https://arxiv.org/abs/2611.07079&#34;&gt;Sasha Kuznetsov&#39;s recent preprint&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://homogeneous.tools/blog/2026/06/04/representations-with-the-same-degree/&#34;&gt;&lt;img src=&#34;https://pbelmans.ncag.info/assets/favicon-homogeneoustools.svg&#34; width=&#34;16&#34; height=&#34;16&#34; alt=&#34;&#34;&gt; Representations with the same degree&lt;/a&gt; on HomogeneousTools&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I won&#39;t be announcing every post from these blogs here.
+If you would like to keep up with everything, I highly recommend adding the
+&lt;a href=&#34;https://homogeneous.tools/blog/index.xml&#34;&gt;HomogeneousTools RSS feed&lt;/a&gt;
+and the &lt;a href=&#34;https://blog.fanobase.net/index.xml&#34;&gt;Fanobase RSS feed&lt;/a&gt; to your newsreader!&lt;/p&gt;
+</description>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 &#43;0000</pubDate>
+      <link>https://pbelmans.ncag.info/blog/2026/11/11/feed-aggregator/</link>
+      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/11/11/feed-aggregator/</guid>
+      <category>programming</category>
+      <category>personal</category>
+    </item>
     
     <item>
       <title>Fanobase: Fano Tuesday</title>
@@ -938,42 +967,6 @@ so these are not, as far as we know, counterexamples to it.
       <link>https://pbelmans.ncag.info/blog/2026/08/11/new-paper-hyperkaehler-period-index/</link>
       <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/08/11/new-paper-hyperkaehler-period-index/</guid>
       <category>algebraic geometry</category>
-      <category>mathematics</category>
-    </item>
-    
-    <item>
-      <title>Hyperelliptic varieties: quotients of complex tori by finite groups</title>
-      <description>&lt;p&gt;There is a new website, &lt;strong&gt;&lt;a href=&#34;https://hyperelliptic.ncag.info&#34;&gt;hyperelliptic.ncag.info&lt;/a&gt;&lt;/strong&gt;,
-on the classification of hyperelliptic (or &lt;em&gt;generalized hyperelliptic&lt;/em&gt;) varieties
-in complex dimensions 2, 3 and 4. For now it lives as a subdomain of ncag.info.&lt;/p&gt;
-&lt;p&gt;A hyperelliptic variety is a quotient $X = T/G$ of a complex torus $T$ by a finite
-group $G$ acting freely and without translations. In dimension 1 these are the
-elliptic curves, in dimension 2 the seven bielliptic surfaces of Bagnera and De
-Franchis; the word has nothing to do with hyperelliptic &lt;em&gt;curves&lt;/em&gt;. The remarkable
-thing is that all the numerical invariants (the Hodge diamond, the order of the
-canonical bundle, the number of moduli, the irregularity, the polyvector fields,
-the twisted Hodge numbers, the Hochschild cohomology) depend only on the tangent
-representation $\rho\colon G \to \mathrm{GL}(V)$, and can be read off from its
-character theory. The website computes them all with
-&lt;a href=&#34;https://www.oscar-system.org/&#34;&gt;OSCAR&lt;/a&gt;, for every group in the classifications of
-Uchida–Yoshihara, Lange and Catanese–Demleitner (dimension 3) and of Demleitner
-(the 79 groups in dimension 4).&lt;/p&gt;
-&lt;p&gt;This all started from a collaboration with
-&lt;a href=&#34;https://www.math.uni-bielefeld.de/~ademleitner/&#34;&gt;Andreas Demleitner&lt;/a&gt; and Pedro
-Núñez on &lt;a href=&#34;https://arxiv.org/abs/2411.14814&#34;&gt;the Albanese morphism for these varieties&lt;/a&gt;.
-Working on that paper I learned a great many things about hyperelliptic varieties
-from Andreas, and this website is in a sense a place to keep all of it: the
-invariants we computed by hand, and many more, now generated automatically and
-cross-checked against the literature.&lt;/p&gt;
-&lt;p&gt;As with my other websites it is a static site built (using LLMs) with
-&lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt;. Feature requests, corrections and contributions are
-very welcome, on &lt;a href=&#34;https://github.com/pbelmans/hyperelliptic.info&#34;&gt;GitHub&lt;/a&gt; or by
-email.&lt;/p&gt;
-</description>
-      <pubDate>Tue, 21 Jul 2026 00:00:00 &#43;0000</pubDate>
-      <link>https://pbelmans.ncag.info/blog/2026/07/21/hyperelliptic/</link>
-      <guid isPermaLink="true">https://pbelmans.ncag.info/blog/2026/07/21/hyperelliptic/</guid>
-      <category>algebraic geometry</category><category>programming</category>
       <category>mathematics</category>
     </item>
     

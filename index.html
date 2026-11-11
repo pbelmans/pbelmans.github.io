@@ -87,7 +87,7 @@ You can reach me at <a href="mailto:p.belmans@uu.nl">p.belmans@uu.nl</a>.</p>
   <li style="margin-bottom: 4px"><a href="https://docs.oscar-system.org/dev/Experimental/IntersectionTheory/intro/"><span class="icon"><img width="16" height="16" src="/assets/favicon-intersectiontheory.png"></span> <span class="username">IntersectionTheory</span></a>
 
 </li>
-  <li style="margin-bottom: 4px"><a href="https://homogeneous.tools"><span class="username">HomogeneousTools</span></a>
+  <li style="margin-bottom: 4px"><a href="https://homogeneous.tools"><span class="icon"><img width="16" height="16" src="/assets/favicon-homogeneoustools.svg" alt=""></span> <span class="username">HomogeneousTools</span></a>
 
 
     <ul>
@@ -151,6 +151,8 @@ You can reach me at <a href="mailto:p.belmans@uu.nl">p.belmans@uu.nl</a>.</p>
 <ul class="posts-list">
 
 
+  <li><span class="date">Nov 11, 2026</span> <a href="/blog/2026/11/11/feed-aggregator/">Keeping up with HomogeneousTools and Fanobase</a></li>
+
   <li><span class="date">Nov 10, 2026</span> <a href="/blog/2026/11/10/fano-tuesday/">Fanobase: Fano Tuesday</a></li>
 
   <li><span class="date">Nov 02, 2026</span> <a href="/blog/2026/11/02/fanobase-beta/">Fanobase: the type A beta release</a></li>
@@ -163,20 +165,32 @@ You can reach me at <a href="mailto:p.belmans@uu.nl">p.belmans@uu.nl</a>.</p>
 
   <li><span class="date">Sep 11, 2026</span> <a href="/blog/2026/09/11/rationality-hypersurfaces/">Rationality of hypersurfaces: a new website</a></li>
 
-  <li><span class="date">Sep 09, 2026</span> <a href="/blog/2026/09/09/completely-rigid-fanos/">A noncommutatively rigid Fano fivefold</a></li>
-
 </ul>
 
 
-<h2>Latest from homogeneous.tools</h2>
-<ul class="posts-list" id="homogeneous-feed">
-  <li><a href="https://homogeneous.tools/blog/">Loading&hellip;</a></li>
+<h2>Latest from other blogs</h2>
+<ul class="posts-list aggregated-posts" id="other-blogs-feed">
+  <li><a href="https://homogeneous.tools/blog/">Visit the homogeneous.tools blog</a></li>
+  <li><a href="https://blog.fanobase.net/">Visit the Fanobase blog</a></li>
 </ul>
 <script>
 (function () {
-  var FEED = "https://homogeneous.tools/blog/index.xml";
+  var SOURCES = [
+    {
+      name: "homogeneous.tools",
+      url: "https://homogeneous.tools/blog/",
+      feed: "https://homogeneous.tools/blog/index.xml",
+      icon: "/assets/favicon-homogeneoustools.svg"
+    },
+    {
+      name: "blog.fanobase.net",
+      url: "https://blog.fanobase.net/",
+      feed: "https://blog.fanobase.net/index.xml",
+      icon: "https://blog.fanobase.net/favicon.svg"
+    }
+  ];
   var LIMIT = 5;
-  var target = document.getElementById("homogeneous-feed");
+  var target = document.getElementById("other-blogs-feed");
 
   function fmt(d) {
     var months = ["Jan","Feb","Mar","Apr","May","Jun",
@@ -185,25 +199,62 @@ You can reach me at <a href="mailto:p.belmans@uu.nl">p.belmans@uu.nl</a>.</p>
            ("0" + d.getDate()).slice(-2) + ", " + d.getFullYear();
   }
 
-  function render(entries) {
-    target.innerHTML = "";
+  function sourceLink(source) {
+    var a = document.createElement("a");
+    a.className = "post-source";
+    a.href = source.url;
+    a.appendChild(document.createTextNode(source.name));
+    return a;
+  }
+
+  function render(results) {
+    var entries = [];
+    results.forEach(function (result) {
+      entries = entries.concat(result.entries);
+    });
+    entries.sort(function (a, b) { return b.date - a.date; });
+
+    target.textContent = "";
     entries.slice(0, LIMIT).forEach(function (e) {
       var li = document.createElement("li");
       var date = document.createElement("span");
       date.className = "date";
       date.textContent = fmt(e.date);
+      var post = document.createElement("span");
       var a = document.createElement("a");
       a.href = e.url;
-      a.textContent = e.title;
+      if (e.source.icon) {
+        var icon = document.createElement("img");
+        icon.className = "post-favicon";
+        icon.src = e.source.icon;
+        icon.alt = "";
+        icon.width = 16;
+        icon.height = 16;
+        icon.onerror = function () { icon.remove(); };
+        a.appendChild(icon);
+      }
+      a.appendChild(document.createTextNode(e.title));
+      post.appendChild(a);
+      post.appendChild(document.createTextNode(" "));
+      post.appendChild(sourceLink(e.source));
       li.appendChild(date);
-      li.appendChild(document.createTextNode(" "));
+      li.appendChild(post);
+      target.appendChild(li);
+    });
+
+    results.filter(function (result) { return !result.entries.length; }).forEach(function (result) {
+      var li = document.createElement("li");
+      var a = document.createElement("a");
+      a.href = result.source.url;
+      a.textContent = "Visit the " + result.source.name + " blog";
       li.appendChild(a);
       target.appendChild(li);
     });
   }
 
-  function parse(xml) {
+  function parse(xml, source) {
     var doc = new DOMParser().parseFromString(xml, "application/xml");
+    if (doc.querySelector("parsererror")) throw new Error("Invalid feed");
     var isAtom = doc.documentElement.localName === "feed";
     var nodes = doc.querySelectorAll(isAtom ? "entry" : "item");
     return Array.prototype.map.call(nodes, function (n) {
@@ -211,30 +262,33 @@ You can reach me at <a href="mailto:p.belmans@uu.nl">p.belmans@uu.nl</a>.</p>
       var link  = isAtom
         ? n.querySelector("link[rel='alternate'], link")
         : n.querySelector("link");
-      var date  = n.querySelector(isAtom ? "updated, published" : "pubDate");
+      var date  = isAtom
+        ? (n.querySelector("published") || n.querySelector("updated"))
+        : n.querySelector("pubDate");
       return {
         title: title ? title.textContent.trim() : "(untitled)",
         url:   isAtom ? (link && link.getAttribute("href")) : (link && link.textContent.trim()),
-        date:  date ? new Date(date.textContent) : new Date(0)
+        date:  date ? new Date(date.textContent) : new Date(NaN),
+        source: source
       };
+    }).filter(function (entry) {
+      return entry.url && !isNaN(entry.date.getTime());
     });
   }
 
-  fetch(FEED)
-    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
-    .then(parse)
-    .then(render)
-    .catch(function () {
-      target.innerHTML =
-        '<li><a href="https://homogeneous.tools/blog/">Visit the homogeneous.tools blog</a></li>';
-    });
+  Promise.all(SOURCES.map(function (source) {
+    return fetch(source.feed)
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
+      .then(function (xml) { return { source: source, entries: parse(xml, source) }; })
+      .catch(function () { return { source: source, entries: [] }; });
+  })).then(render);
 })();
 </script>
 
 <h2 id="conferences">Conference organisation</h2>
 <ul>
-  <li><a href="">GQT School &amp; Colloquium</a>, Nijmegen, August 24&ndash;28, 2026</li>
   <li><a href="https://springer-100.ncag.info">Springer 100 workshop</a>, Utrecht, November 6, 2026</li>
+  <li><a href="">GQT School &amp; Colloquium</a>, Nijmegen, August 24&ndash;28, 2026</li>
   <li><a href="https://quivers-2026.ncag.info">Geometry of quiver moduli</a>, Utrecht, February 23&ndash;24, 2026</li>
   <li><a href="https://www.slmath.org/summer-schools/1077">Summer school on noncommutative algebraic geometry</a>, Antwerp, June 30&ndash;July 11, 2025</li>
   <li><a href="https://vbac-2025.ncag.info">Vector Bundles on Algebraic Curves &mdash; Quivers and Sheaves</a>, Utrecht, May 14&ndash;15, 2025</li>
